@@ -559,8 +559,6 @@ export default {
     min-height: 2.666667rem;
     float: left;
     padding: 0.4rem;
-    padding-left: 0.666667rem;
-    box-sizing: border-box;
     overflow: hidden;
   }
   .character-item .item_img {
@@ -584,7 +582,7 @@ export default {
     display: block;
     position: relative;
     top: 30px;
-    width: 8.066667rem;
+    width: 100%;
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
