@@ -27,7 +27,7 @@
                 : 'menu-item'
             "
           >
-            Whitepaper
+            Technology
           </li>
           <li
             @click="toBlog"
@@ -67,7 +67,7 @@
     >
       <ul class="menu2">
         <li @click="toFeature">Feature</li>
-        <li @click="toWhitepaper" class="menu-item">Whitepaper</li>
+        <li @click="toWhitepaper" class="menu-item">Technology</li>
         <li @click="toBlog" class="menu-item">Blog</li>
         <li @click="toRoadmap" class="menu-item">Roadmap</li>
       </ul>
