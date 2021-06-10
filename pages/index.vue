@@ -671,6 +671,12 @@ export default {
     margin: 0 auto;
   }
 
+  .block5-item-img {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
   .info-block3 {
     position: relative;
     width: 100%;
