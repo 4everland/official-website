@@ -40,7 +40,11 @@
     <h2 class="subtitle">Developers deploy to Web3.0 with one click</h2>
 
     <div class="info-block2">
-      <div id="container"></div>
+      <div id="container">
+        <div>
+          <div id="globeViz"></div>
+        </div>
+      </div>
     </div>
 
     <div class="feature-view" ref="first">
@@ -380,6 +384,11 @@
 
 <script>
 import Roadmap from "../components/Roadmap";
+const geoJSON = require("../assets/json/geo.json");
+const places = require("../assets/json/ne_110m_populated_places_simple.json");
+const emptyPNG =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADICAYAAADGFbfiAAAC3ElEQVR4nO3VMQHAMAzAsKwsMv5Ai6G+JQh+/O3uPwDw6AgGQGEgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCwLuZud1fAfX9aO5bAAAAAElFTkSuQmCC";
+
 export default {
   components: {
     Roadmap: Roadmap,
@@ -387,48 +396,122 @@ export default {
 
   created() {},
   mounted() {
-    console.log("888");
-    var globe = DAT.Globe(document.getElementById("container"), {
-      colorFn: function (label) {
-        return new THREE.Color(
-          [
-            0xd9d9d9, 0xb6b4b5, 0x9966cc, 0x15adff, 0x3e66a3, 0x216288,
-            0xff7e7e, 0xff1f13, 0xc0120b, 0x5a1301, 0xffcc02, 0xedb113,
-            0x9fce66, 0x0c9a39, 0xfe9872, 0x7f3f98, 0xf26522, 0x2bb673,
-            0xd7df23, 0xe6b23a, 0x7ed3f7,
-          ][label]
-        );
-      },
-    });
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "/search.json", true);
-    xhr.onreadystatechange = function (e) {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          var data = JSON.parse(xhr.responseText);
-          window.data = data;
-          globe.addData(data, { format: "legend" });
-          globe.createPoints();
-          globe.animate();
-          document.body.style.backgroundImage = "none";
-        }
-      }
-    };
-    xhr.send(null);
+    this.initGlobe();
   },
   data() {
     return {
       msg: "Welcom to FirstApp",
     };
   },
-  methods: {},
+  methods: {
+    initGlobe() {
+      var locations = [
+        [120.831693, 30.019926],
+        [116.56352, 40.324982],
+        [114.282256, 22.256955],
+        [139.964882, 36.505153],
+        [127.160363, 36.919906],
+        [107.806407, 34.275691],
+        [107.144104, 29.634919],
+        [120.24298, 36.326711],
+        [144.159466, -40.17175],
+        [10.641084, 51.084096],
+        [0.927311, 47.674532],
+        [-0.323705, 52.633177],
+        [-4.4447, 39.851596],
+        [-4.4447, 39.851596],
+        [-4.4447, 39.851596],
+        [-4.4447, 39.851596],
+        [-76.966844, 38.909266],
+        [-76.966844, 38.909266],
+        [-73.866899, 40.885868],
+        [-81.041845, 34.000322],
+        [-80.232364, 25.788132],
+        [-86.827795, 36.065743],
+        [-122.444962, 37.73531],
+        [-122.444962, 37.73531],
+      ];
+      var colorPink = "rgba(195,134,199,1)";
+      var colorBlue = "RGBA(0, 255, 234, 1)";
+      var colorBlue2 = "rgba(21,144,232,1)";
+      var arcData = locations
+        .map(function (item, index, arr) {
+          var randomIndex = parseInt(Math.random() * (arr.length + 1));
+          return arr[randomIndex] && index != randomIndex
+            ? {
+                startLat: item[1],
+                startLng: item[0],
+                endLat: arr[randomIndex][1],
+                endLng: arr[randomIndex][0],
+                color: index % 2 == 1 ? colorPink : colorBlue,
+              }
+            : null;
+        })
+        .filter(function (item) {
+          return !!item;
+        });
+
+      var world = Globe()
+        .width(777)
+        .height(777)
+        .globeImageUrl(emptyPNG)
+        .backgroundColor("rgba(0,0,0,0)")
+        .showAtmosphere(true)
+        .atmosphereColor("rgba(62,58,206,1)")
+        .atmosphereAltitude(".25")
+        .hexPolygonsData(geoJSON.features)
+        .hexPolygonResolution(3)
+        .hexPolygonMargin(0.3)
+        .hexPolygonColor(function (item) {
+          return "rgba(194,213,255,0.1)";
+        })
+        .labelsData(places.features)
+        .labelLat((d) => d.properties.latitude)
+        .labelLng((d) => d.properties.longitude)
+        .labelText((d) => d.properties.name)
+        .labelSize((d) => Math.sqrt(d.properties.pop_max) * 4e-4)
+        .labelDotRadius((d) => Math.sqrt(d.properties.pop_max) * 4e-4)
+        .labelColor((d) =>
+          d.properties.pop_max > 5000000 ? colorBlue : colorBlue2
+        )
+        .labelResolution(2)
+        .arcsData(arcData)
+        .arcColor("color")
+        .arcStroke(0.6)
+        .arcDashLength(1)
+        .arcDashGap(function () {
+          return Math.random() + 2.5;
+        })
+        .arcDashAnimateTime(function () {
+          return 2000 * Math.random() + 1500;
+        })
+        .pointAltitude("size")
+        .pointColor("color")(document.getElementById("globeViz"));
+      world.controls().autoRotate = true;
+      world.controls().autoRotateSpeed = 1;
+      world.controls().enableZoom = false;
+      world.pointOfView({
+        lat: 50,
+      });
+
+      window.$$world = world;
+    },
+  },
 };
 </script>
 
 <style>
 @import "../assets/style/base.css";
-
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.globe-mask {
+  position: absolute;
+  z-index: -1;
+  transform: scale(0.44);
+}
 @media only screen and (max-width: 1280px) {
   .container {
     position: relative;
@@ -512,12 +595,6 @@ export default {
     background-position-y: 40px;
     background-size: 100%;
     background-repeat: no-repeat;
-  }
-  #container {
-    position: relative;
-    width: 9.066667rem;
-    min-height: 10.666667rem;
-    margin: 0 auto;
   }
 
   .white-line-img {
@@ -991,12 +1068,6 @@ export default {
     background-size: 100%;
     background-repeat: no-repeat;
     margin-top: 80px;
-  }
-  #container {
-    position: relative;
-    width: 1200px;
-    min-height: 800px;
-    margin: 0 auto;
   }
 
   .info-block3 {
