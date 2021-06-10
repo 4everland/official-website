@@ -52,7 +52,7 @@
       <div class="moblie">
         <div
           class="time-line"
-          :style="{ height: 95 * roadmapNum + 'px' }"
+          :style="{ height: 85 * roadmapNum + 'px' }"
         ></div>
 
         <div class="roadmap-list">
@@ -85,63 +85,60 @@ export default {
       roadmap: [
         {
           color: "#c61f51",
-          title: "V1：The Stone Age(2021-2022)",
-          content: "The Paas of web 3.0创世产品，实现最初愿景",
+          title: "V1：Quark（2021-2022）The Paas of Web 3.0",
+          content: "Genesis Product, Realizing the Initial Vision",
         },
         {
           color: "#c95049",
-          title: "2021 Q1",
-          content: "Market research and product prototye discussion",
+          title: "Q1 2021.",
+          content: " Market research and product prototype",
         },
         {
           color: "#c53d43",
-          title: "April 2021",
-          content: "Publish WhitePaper 4everland website is online",
+          title: "March 2021.",
+          content: "Product Design & Technology Development",
         },
         {
           color: "#e95464",
           title: "May 2021",
-          content: "Publish WhitePaper 4everland website is online",
+          content: "Establish 4EVERLAND Foundation and technical community ",
         },
         {
           color: "#c61f51",
           title: "June 2021",
-          content: "Product design and tecnology development",
+          content: "White paper published, 4EVERLAND official website launch",
         },
         {
           color: "#c61f51",
           title: "August 2021",
-          content: "The Paas of web 3.0创世产品，实现最初愿景",
+          content: "ALPHA launch",
         },
         {
           color: "#c61f51",
-          title: "December 2021",
-          content: "The Paas of web 3.0创世产品，实现最初愿景",
+          title: "November 2021",
+          content: "BETA launch",
         },
         {
           color: "#c61f51",
-          title: "2022.Q1",
-          content: "The Paas of web 3.0创世产品，实现最初愿景",
+          title: "Q1 2022",
+          content: "Online bidding system, participate in Genesis node bidding",
         },
         {
           color: "#c61f51",
           title: "2022.Q2",
-          content: "The Paas of web 3.0创世产品，实现最初愿景",
+          content: "Mainnet launch",
         },
         {
           color: "#c61f51",
-          title: "V2：TheBronze Age(2023-2024)",
-          content: "The Paas of web 3.0创世产品，实现最初愿景",
+          title: "V2：Proton（2023-2024）",
+          content:
+            "Enpower Web3.0 developers expand commercialization capability, launch more developer application tools ",
         },
         {
           color: "#c61f51",
-          title: "V2：TheBronze Age(2023-2024)",
-          content: "The Paas of web 3.0创世产品，实现最初愿景",
-        },
-        {
-          color: "#c61f51",
-          title: "V2：TheBronze Age(2023-2024)",
-          content: "The Paas of web 3.0创世产品，实现最初愿景",
+          title: "V3：Atom ( 2025-2026 )",
+          content:
+            "Cloud Computing of Web3.0Launch virtual machine container, acquire capabilities of Web3.0 cloud computing",
         },
       ],
     };

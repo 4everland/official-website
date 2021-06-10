@@ -13,11 +13,36 @@
           <div class="right-btn">Subscribe</div>
         </div>
 
-        <img class="share-img" src="/imgs/share@2x.png" alt="" srcset="" />
+        <!-- <img class="share-img" src="/imgs/share@2x.png" alt="" srcset="" /> -->
+
+        <div class="share-view">
+          <a target="_blank" href="https://github.com/4everland"
+            ><img class="share-icon" src="/imgs/share/icon1.png" alt=""
+          /></a>
+
+          <a target="_blank" href="https://twitter.com/4everland_org"
+            ><img class="share-icon" src="/imgs/share/icon3.png" alt=""
+          /></a>
+          <a target="_blank" href="https://t.me/org_4everland "
+            ><img class="share-icon" src="/imgs/share/icon4.png" alt=""
+          /></a>
+          <a
+            target="_blank"
+            href="https://www.reddit.com/user/4everland_org/ 
+"
+            ><img class="share-icon" src="/imgs/share/icon5.png" alt=""
+          /></a>
+          <a
+            target="_blank"
+            href="mail:info@4everland.org
+"
+            ><img class="share-icon" src="/imgs/share/icon6.png" alt=""
+          /></a>
+        </div>
 
         <div class="bottom-link-view">
-          <div class="link-item">Terms of use</div>
-          <div class="link-item">Privacy Policy</div>
+          <div class="link-item" @click="toTerm">Terms of use</div>
+          <div class="link-item" @click="toPrivacy">Privacy Policy</div>
         </div>
 
         <p class="copyright">©️ 2021 4EVERLAND, Inc</p>
@@ -26,7 +51,30 @@
   </footer>
 </template>
 <script>
-export default {};
+export default {
+  components: {},
+  created() {},
+  mounted() {},
+  data() {
+    return {
+      active: "Feature",
+      drawer: false,
+    };
+  },
+  methods: {
+    toTerm() {
+      this.$router.push({
+        path: "/service",
+      });
+    },
+
+    toPrivacy() {
+      this.$router.push({
+        path: "/privacy",
+      });
+    },
+  },
+};
 </script>
 <style scoped>
 @media only screen and (max-width: 1280px) {
@@ -121,6 +169,22 @@ export default {};
     text-align: center;
     color: #b1b6bb;
     cursor: pointer;
+  }
+
+  .share-view {
+    position: relative;
+    left: 0.266667rem;
+    width: 5.52rem;
+    height: 0.6rem;
+    margin: 20px auto;
+  }
+
+  .share-icon {
+    display: block;
+    position: relative;
+    width: 0.4rem;
+    margin-right: 18px;
+    float: left;
   }
 }
 
@@ -217,6 +281,18 @@ export default {};
     text-align: center;
     color: #b1b6bb;
     cursor: pointer;
+  }
+  .share-view {
+    position: relative;
+    width: 300px;
+    left: 30px;
+    top: 20px;
+    margin: 0px auto;
+  }
+
+  .share-icon {
+    width: 20px;
+    margin-right: 20px;
   }
 }
 </style>

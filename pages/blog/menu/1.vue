@@ -1,0 +1,151 @@
+<template>
+  <div class="content">
+    <div class="menu-content">
+      <div class="left-content">
+        <div class="html-item" v-for="item of article">
+          <h1 class="acticle-title">{{ item.title }}</h1>
+          <p class="article-content">{{ item.content }}</p>
+          <img class="article-img" :src="item.img" alt="" />
+
+          <p class="click-articel">READ MORE</p>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="right-content">
+        <p class="right-title">4 everland Blog</p>
+        <p class="right-content2">
+          4everland is ãlr you need "to büild wesites iand apps on the new Open
+          Web: 'permissionless, censorship resistant, and; 'free of centralized
+          gatekeepers. 'lelcome. .to. the new. internet.
+        </p>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  components: {},
+  created() {},
+  mounted() {},
+  data() {
+    return {
+      article: [
+        {
+          time: "",
+          title: "4EVERLAND: The PaaS of Web3.0",
+          content:
+            "The Internet needs Web 3.0, a new generation of the Internet paradigm that advocates free identity, free contracts, and free assets, and blockchain technology provides a near-perfect solution to Web 3.0 with decentralized addresses as accounts, smart contracts for self-deployment and access, and Tokens that flow autonomously and frictionlessly. The free market creates prosperity and the blockchain business is growing rapidly, with liberal financial experience of DEFI, attracting hundreds of billions of dollars. Moreover, NFT is empowering art, sports and trendy culture has brought millions of incremental users to the blockchain world.",
+          img: "/imgs/blog/blog1@2x.png",
+        },
+        {
+          time: "",
+          title: "The technical architecture design of 4EVERLAND",
+          content:
+            "Based on IPFS and the underlying technology of Ethereum, 4EVERLAND is designed to provide a distributed, highly efficient, self-motivated, and low-cost data hosting gateway. 4EVERLAND has designed a robust architecture to support the stable and efficient operation of the entire network, which mainly includes 4EVER-STORAGE, Proof of storage, 4EVER-GATEWAY, Smart contracts, and 4EVER-HOSTING.",
+          img: "/imgs/blog/blog2@2x.png",
+        },
+        {
+          time: "",
+          title: "4EVERLAND logo and its design meaning ",
+          content:
+            "The 4EVERLAND logo is set on the basis of the cyclotron pattern, which has evolved to form a three-dimensional pattern. The overall image is presented in the form of a fixed star, it also has the shape of an eye. The slim lines of blue and purple gradient are especially geeky.The design of the fixed star comparing 4EVERLAND to a planet in the vast universe, representing eternity and security.",
+          img: "",
+        },
+      ],
+    };
+  },
+  methods: {},
+};
+</script>
+
+<style scoped>
+@media only screen and (max-width: 1280px) {
+  .content {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    min-height: 400px;
+    background-color: #1e2226;
+  }
+
+  .menu-content {
+    position: relative;
+    width: 1200px;
+    min-height: 1600px;
+    margin: 0px auto;
+    background-color: #fff;
+  }
+
+  .html-item {
+    position: relative;
+    width: 820px;
+    min-height: 100px;
+    box-sizing: border-box;
+    padding: 40px;
+  }
+
+  .left-content {
+    position: relative;
+    width: 840px;
+    min-height: 1200px;
+    float: left;
+  }
+  .line {
+    position: relative;
+    top: 30px;
+    width: 1px;
+    height: 359px;
+    border-left: 1px dashed #1e2226;
+    float: left;
+  }
+
+  .acticle-title {
+    position: relative;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .article-content {
+    position: relative;
+    width: 100%;
+    font-szie: 12px;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+  .article-img {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .click-articel {
+    position: relative;
+    font-size: 16px;
+    color: #7db4dc;
+    font-weight: 500;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  .right-content {
+    position: relative;
+    width: 280px;
+    min-height: 600px;
+    box-sizing: border-box;
+    padding: 40px;
+    float: left;
+  }
+
+  .right-title {
+    position: relative;
+    font-size: 20px;
+    color: #1e2226;
+    font-weight: 500;
+  }
+
+  .right-content2 {
+    position: relative;
+    font-size: 12px;
+    color: #000;
+    font-weight: 300;
+  }
+}
+</style>

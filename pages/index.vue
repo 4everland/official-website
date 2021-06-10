@@ -9,11 +9,11 @@
           srcset=""
         />
 
-        <h1 class="website-slogan">4EVERLAND - WEB3.0 INTERFACE</h1>
+        <h1 class="website-slogan">The PaaS of Web3.0</h1>
 
         <p class="website-display">
-          A Web 3.0 Interface with global acceleration , pruvacy protection and
-          links forever.
+          A Web3.0 cloud computing platform with global acceleration, privacy
+          protection, distributed storage and other technical features.
         </p>
 
         <a target="_blank" href="#">
@@ -37,17 +37,14 @@
       </div>
     </div>
 
-    <h2 class="subtitle">
-      Developers deploy with One click in
-      <span style="font-weight: 600">Web 3.0</span>
-    </h2>
+    <h2 class="subtitle">Developers deploy to Web3.0 with one click</h2>
 
     <div class="info-block2">
       <div id="container"></div>
     </div>
 
     <div class="feature-view" ref="first">
-      <a href="#ch"><h3 class="block-title">Feature</h3> </a>
+      <a href="#ch"><h3 class="block-title">Features</h3> </a>
       <div class="security-content">
         <div class="feature-item">
           <div class="feature-item-header">
@@ -57,17 +54,15 @@
               alt=""
               srcset=""
             />
-            <span class="item-header-text"
-              >GLOBAL ACCESS<br />
-              ACCELERATION</span
+            <span class="item-header-text" style="top: 40px; margin-left: 10px"
+              >Global Acceleration</span
             >
           </div>
 
           <p class="feature-content">
-            4EVERLAND unique and innovative incentive mechanism,consensus driven
-            nodes join the network,global gateway for global node acceleration
-            and data synchronization,thousands of nodes massively improve
-            network throughput and high availability.
+            The consensus-driven Swarm network, massively improving network
+            throughput and high availability, providing more efficient and fast
+            Web3.0 access for global developers.
           </p>
 
           <div class="feature-check-list-view">
@@ -78,7 +73,9 @@
                 alt=""
                 srcset=""
               />
-              <span class="check-item-text">Consensus Driven Swarm</span>
+              <span class="check-item-text"
+                >Dynamic Domain Name Service DDNS</span
+              >
             </div>
             <div class="check-item-view">
               <img
@@ -87,7 +84,7 @@
                 alt=""
                 srcset=""
               />
-              <span class="check-item-text">Improve Data I/O Performance</span>
+              <span class="check-item-text">Data I/O optimization</span>
             </div>
             <div class="check-item-view">
               <img
@@ -96,28 +93,13 @@
                 alt=""
                 srcset=""
               />
-              <span class="check-item-text">Random Storage Proof</span>
-            </div>
-            <div class="check-item-view">
-              <img
-                class="check-item-icon"
-                src="/imgs/sggg@2x.png"
-                alt=""
-                srcset=""
-              />
-              <span class="check-item-text">DDNS </span>
-            </div>
-            <div class="check-item-view">
-              <img
-                class="check-item-icon"
-                src="/imgs/sggg@2x.png"
-                alt=""
-                srcset=""
-              />
-              <span class="check-item-text">Token Economy&DAO</span>
+              <span class="check-item-text"
+                >Automatic SSL certificate management</span
+              >
             </div>
           </div>
         </div>
+
         <div class="feature-item">
           <div class="feature-item-header">
             <img
@@ -127,13 +109,13 @@
               srcset=""
             />
             <span style="top: 40px" class="item-header-text"
-              >PREVENT REVIEW</span
+              >Privacy protection</span
             >
           </div>
 
           <p class="feature-content">
-            No need to register,support no account system login,focus on
-            security and data privacy
+            4EVERLAND does not require KYC, ensures user anonymity and data
+            security.
           </p>
 
           <div class="feature-check-list-view">
@@ -144,7 +126,7 @@
                 alt=""
                 srcset=""
               />
-              <span class="check-item-text">Accounnt Free System</span>
+              <span class="check-item-text">Anonymous account system</span>
             </div>
             <div class="check-item-view">
               <img
@@ -153,7 +135,17 @@
                 alt=""
                 srcset=""
               />
-              <span class="check-item-text">Anonymous user</span>
+              <span class="check-item-text">No centralized database</span>
+            </div>
+
+            <div class="check-item-view">
+              <img
+                class="check-item-icon"
+                src="/imgs/sggg@2x.png"
+                alt=""
+                srcset=""
+              />
+              <span class="check-item-text">On-chain payment</span>
             </div>
           </div>
         </div>
@@ -166,12 +158,14 @@
               alt=""
               srcset=""
             />
-            <span style="top: 40px" class="item-header-text">Distributed</span>
+            <span style="top: 40px" class="item-header-text"
+              >Distributed storage</span
+            >
           </div>
 
           <p class="feature-content">
-            No server deloyment,comlete equivalence and true
-            decentralization,data on tje chain, never disppear
+            4EVERLAND built a Swarm distributed storage network for achieve data
+            availability and reliability.
           </p>
 
           <div class="feature-check-list-view">
@@ -182,7 +176,9 @@
                 alt=""
                 srcset=""
               />
-              <span class="check-item-text">Consensus Driven Swarm</span>
+              <span class="check-item-text"
+                >Distributed PIN with global multi-node
+              </span>
             </div>
             <div class="check-item-view">
               <img
@@ -191,7 +187,18 @@
                 alt=""
                 srcset=""
               />
-              <span class="check-item-text">On the basic of IPFS</span>
+              <span class="check-item-text"
+                >TEE-based proof of storage challenge</span
+              >
+            </div>
+            <div class="check-item-view">
+              <img
+                class="check-item-icon"
+                src="/imgs/sggg@2x.png"
+                alt=""
+                srcset=""
+              />
+              <span class="check-item-text">Based on IPFS network</span>
             </div>
           </div>
         </div>
@@ -199,7 +206,7 @@
     </div>
 
     <div class="mainnet-view">
-      <h3 class="block-title">Mainnet</h3>
+      <h3 class="block-title">Technologies</h3>
 
       <div class="security-content">
         <div class="mainnet-line-view">
@@ -210,11 +217,12 @@
               alt=""
               srcset=""
             />
-            <h5 class="mainnet-item-title">Consensus Driven Swarm</h5>
+            <h5 class="mainnet-item-title">4EVER-STORAGE</h5>
             <p class="mainnet-item-content">
-              4Everland nodes cluster by network consensus,driver swarm_keys,and
-              automatically Swarm network via smart contract campaign mechanism
-              for data synchronization and global acceleration
+              4EVERLAND forms nodes into a huge storage network through Swarm
+              technology, relying on node cooperativeness to achieve persistent
+              storage of specific data and supporting horizontal expansion of
+              nodes.
             </p>
           </div>
           <div class="mainnet-item">
@@ -224,15 +232,12 @@
               alt=""
               srcset=""
             />
-            <h5 class="mainnet-item-title">Efficient Data I/O</h5>
+            <h5 class="mainnet-item-title">4EVER-GATEWAY</h5>
             <p class="mainnet-item-content">
-              4EverNode is based on an IPFS gateway,reads data through a
-              specific CID and provides HTTP services.Nodes use DHT table
-              routing to find and share data of different nodes at the remote
-              end,and then exchange data in the form of file blocks through
-              BitSwap system,and improve the transmission performance and
-              bandwidth utilization of network data through caching technology
-              and data compression technology.
+              The gateway nodes contain dynamic DNS, Data I/O, and Cert Manager
+              modules, and developers can quickly realize safe and reliable
+              global acceleration based on 4EVERLAND through simple
+              configuration.
             </p>
           </div>
         </div>
@@ -245,12 +250,11 @@
               alt=""
               srcset=""
             />
-            <h5 class="mainnet-item-title">Random Storage Proof</h5>
+            <h5 class="mainnet-item-title">Storage Proof</h5>
             <p class="mainnet-item-content">
-              4Everland's POC (proof of Data Availability Challenge) requires
-              nodes to provide storage resources and synchronize with the entire
-              network in real time,thereby ensuring node availability to be
-              motivated by tokens
+              4EVERLAND builds Swarm distributed storage network based on IPFS
+              protocol and proposes storage challenge proof PoSC based on TEE
+              technology, to ensure the availability and reliability of data.
             </p>
           </div>
           <div class="mainnet-item">
@@ -260,13 +264,12 @@
               alt=""
               srcset=""
             />
-            <h5 class="mainnet-item-title">DDNS</h5>
+            <h5 class="mainnet-item-title">Smart Contracts</h5>
             <p class="mainnet-item-content">
-              DDNS is a dynamic DNS technology implemented by 4Everland. It
-              detects the running status of nodes in Swarm in real time and
-              resolves the best route for visitors' requests.End users allocate
-              the most 4Ever-Node nodes through DDNS to achieve fast access for
-              users automatically.
+              4EVERLAND's smart contract module mainly includes payment
+              contracts, campaign contracts, lending contracts, control
+              contracts. It achieves open, transparent and free decentralized
+              governance through smart contracts.
             </p>
           </div>
         </div>
@@ -276,20 +279,18 @@
     <img class="white-line-img" src="/imgs/white_img@2x.png" alt="" srcset="" />
     <div class="info-block4">
       <div class="security-content3">
-        <h3 class="block-title">Character</h3>
+        <h3 class="block-title">Characters</h3>
 
         <div class="character-line-view">
           <div class="character-item">
             <img class="item_img" src="/imgs/c_icon1.png" alt="" srcset="" />
             <h5 class="item-title">Gateway Provider</h5>
             <p class="item-content">
-              The gateway node provides access acceleration service for DWeb by
-              deploying the gateway node, verifies data integrity and maintains
-              secure connection between the node and the client through
-              automatic certificate management mechanism. Gateway nodes are
-              acquired through the same bidding method as storage nodes.
-              Successful bidders receive gateway node seats, enjoy network
-              rewards, and also enjoy developer payment for traffic.
+              Gateway nodes provide access acceleration services for DWeb.
+              Gateway nodes are obtained through the same auction as storage
+              nodes, and successful bids will get awarded gateway node seats and
+              network rewards, in addition to enjoy the developer's payment for
+              traffic.
             </p>
           </div>
 
@@ -297,10 +298,10 @@
             <img class="item_img" src="/imgs/c_icon2.png" alt="" srcset="" />
             <h5 class="item-title">Storage Provider</h5>
             <p class="item-content">
-              Storage nodes participate in the construction of global node Swarm
-              by deploying storage node program; By participating in the node
-              auction, you can get the node slot, and the successful auction
-              will get the storage node seat and enjoy the network reward.
+              Participate in global node swarm construction by deploying storage
+              node program; participate in node bidding to get node slots, and
+              get storage node seats if you succeed in bidding and enjoy network
+              rewards.
             </p>
           </div>
         </div>
@@ -310,11 +311,10 @@
             <img class="item_img" src="/imgs/c_icon3.png" alt="" srcset="" />
             <h5 class="item-title">Challenger</h5>
             <p class="item-content">
-              The challenger challenges all nodes to randomly store
-              certificates, waits for the feedback from the challenged nodes,
-              and discloses the response of the challenged nodes to the
-              community, so as to initiate a proposal for sanctions against the
-              non-performing nodes.
+                   The Challenger initiates a storage proof challenge to all
+              nodes randomly, waits for feedback from the challenged nodes, and
+              publicizes the response of the challenged nodes to the community
+              and initiates a sanction proposal for inactive nodes.
             </p>
           </div>
 
@@ -322,10 +322,10 @@
             <img class="item_img" src="/imgs/c_icon1.png" alt="" srcset="" />
             <h5 class="item-title">Developer</h5>
             <p class="item-content">
-              Developers are the core customers of 4Everland. Developers who use
-              4Everland's developer application, such as Hosting the DWeb, or
-              @4Everland/CLI to publish content to the 4Everland network, pay
-              the network for storage and traffic.
+              Developers are the core paid users of 4EVERLAND, who use the
+              4EVERLAND developer application, such as publishing DWeb through
+              Hosting App or publishing content to the 4EVERLAND network through
+              @4everland/cli, and pay storage and traffic fees to the network.
             </p>
           </div>
         </div>
@@ -341,11 +341,11 @@
         </div>
         <div class="block5-item">
           <img class="block5-item-img" src="/imgs/yarn_build@2x.png" alt="" />
-          <span class="block5-text">1.Connect your GitHub</span>
+          <span class="block5-text">2.Add you build setting</span>
         </div>
         <div class="block5-item">
           <img class="block5-item-img" src="/imgs/deploy@2x.png" alt="" />
-          <span class="block5-text">1.Connect your GitHub</span>
+          <span class="block5-text">3.Deploy you site</span>
         </div>
       </div>
     </div>
@@ -365,10 +365,14 @@
     <div class="info-block3">
       <h3 class="info-block3-text1">Where we're going</h3>
       <p class="info-block3-text2">
-        With freedom of identity, freedom of contract, freedom of assets,
-        combined with the freedom of deployment and access provided by
-        4Everland, the blueprint for a Web 3.0 world is bound to become a
-        reality for Internet users around the world more quickly.
+        4EVERLAND is a great place to carry developers' ideal paradigm for Web
+        3.0, releasing them from the shackles of centeredness and create more
+        robust and secure services. We hope that more developers and scholars
+        will join us on this road to build a globally accelerated,
+        forever-linked network service for more users using 4EVERLAND, a
+        distributed, highly efficient, self-motivated, and low-cost cloud
+        computing network. Let us witness this radical change in server
+        architecture based on the Web 3.0 network evolution.
       </p>
     </div>
   </div>
@@ -383,7 +387,7 @@ export default {
 
   created() {},
   mounted() {
-    console.log(888);
+    console.log("888");
     var globe = DAT.Globe(document.getElementById("container"), {
       colorFn: function (label) {
         return new THREE.Color(
@@ -437,6 +441,7 @@ export default {
     position: relative;
     width: 100%;
     min-block-size: 600px;
+    padding-top: 1.133333rem;
     overflow: hidden;
   }
 
@@ -815,7 +820,7 @@ export default {
   }
   .check-item-view {
     position: relative;
-    margin-left: 30px;
+    margin-left: 15px;
     width: 100%;
     height: 30px;
     text-align: left;
@@ -942,8 +947,8 @@ export default {
   .website-display {
     display: block;
     position: relative;
-    top: 167px;
-    width: 457px;
+    top: 67px;
+    width: 657px;
     height: 95px;
     font-size: 30px;
     font-weight: normal;
@@ -1005,7 +1010,7 @@ export default {
   .info-block3-text1 {
     display: block;
     position: relative;
-    top: 2.4rem;
+    top: 1.6rem;
     width: 539px;
     height: 65px;
     font-size: 60px;
@@ -1018,8 +1023,8 @@ export default {
   .info-block3-text2 {
     display: block;
     position: relative;
-    top: 2.4rem;
-    width: 535px;
+    top: 1.6rem;
+    width: 735px;
     height: 137px;
     font-size: 18px;
     font-weight: normal;
@@ -1027,6 +1032,7 @@ export default {
     line-height: 30px;
     color: #fff;
     margin: 0 auto;
+    text-align: center;
   }
 
   .partners {
@@ -1269,7 +1275,7 @@ export default {
   }
   .check-item-view {
     position: relative;
-    margin-left: 30px;
+    margin-left: 15px;
     width: 100%;
     height: 30px;
     text-align: left;
@@ -1348,7 +1354,7 @@ export default {
     position: relative;
     top: 30px;
     left: 15px;
-    width: 458px;
+    width: 560px;
     min-height: 62px;
     font-size: 14px;
     font-weight: normal;

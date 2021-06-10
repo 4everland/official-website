@@ -2,7 +2,13 @@
   <header>
     <div class="header-view">
       <div class="security-content">
-        <img class="logo-img" src="/imgs/logo@2x.png" alt="" srcset="" />
+        <img
+          class="logo-img"
+          @click="toHome"
+          src="/imgs/logo@2x.png"
+          alt=""
+          srcset=""
+        />
         <ul class="menu">
           <li
             @click="toFeature"
@@ -60,10 +66,10 @@
       closed="dclose"
     >
       <ul class="menu2">
-        <li @click="toFeature">Feature</li>
+        <li @click="toFeature2">Feature</li>
         <li @click="toWhitepaper" class="menu-item">Whitepaper</li>
         <li @click="toBlog" class="menu-item">Blog</li>
-        <li @click="toRoadmap" class="menu-item">Roadmap</li>
+        <li @click="toRoadmap2" class="menu-item">Roadmap</li>
       </ul>
     </el-drawer>
   </header>
@@ -84,6 +90,9 @@ export default {
       this.active = "Feature";
       this.$router.push({
         path: "/",
+        params: {
+          jump: 1,
+        },
       });
       window.scrollTo(0, 1500);
     },
@@ -104,7 +113,12 @@ export default {
     toBlog() {
       this.active = "Blog";
       this.$router.push({
-        path: "/blog",
+        path: "/blog/menu/1",
+      });
+    },
+    toHome() {
+      this.$router.push({
+        path: "/",
       });
     },
     openMenu() {
@@ -128,7 +142,11 @@ export default {
     },
 
     toFeature2() {
-      window.scrollTo(0, 1050);
+      window.scrollTo(0, 800);
+      this.drawer = false;
+    },
+    toRoadmap2() {
+      window.scrollTo(0, 6200);
       this.drawer = false;
     },
   },
@@ -137,10 +155,11 @@ export default {
 <style scoped>
 @media only screen and (max-width: 1280px) {
   .header-view {
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 1.333333rem;
     background-color: #1e2226;
+    z-index: 99;
   }
 
   .logo-img {
