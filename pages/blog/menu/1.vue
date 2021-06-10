@@ -59,93 +59,91 @@ export default {
 </script>
 
 <style scoped>
-@media only screen and (max-width: 1280px) {
-  .content {
-    position: relative;
-    top: 100px;
-    width: 100%;
-    min-height: 400px;
-    background-color: #1e2226;
-  }
+.content {
+  position: relative;
+  top: 100px;
+  width: 100%;
+  min-height: 400px;
+  background-color: #1e2226;
+}
 
-  .menu-content {
-    position: relative;
-    width: 1200px;
-    min-height: 1600px;
-    margin: 0px auto;
-    background-color: #fff;
-  }
+.menu-content {
+  position: relative;
+  width: 1200px;
+  min-height: 1600px;
+  margin: 0px auto;
+  background-color: #fff;
+}
 
-  .html-item {
-    position: relative;
-    width: 820px;
-    min-height: 100px;
-    box-sizing: border-box;
-    padding: 40px;
-  }
+.html-item {
+  position: relative;
+  width: 820px;
+  min-height: 100px;
+  box-sizing: border-box;
+  padding: 40px;
+}
 
-  .left-content {
-    position: relative;
-    width: 840px;
-    min-height: 1200px;
-    float: left;
-  }
-  .line {
-    position: relative;
-    top: 30px;
-    width: 1px;
-    height: 359px;
-    border-left: 1px dashed #1e2226;
-    float: left;
-  }
+.left-content {
+  position: relative;
+  width: 840px;
+  min-height: 1200px;
+  float: left;
+}
+.line {
+  position: relative;
+  top: 30px;
+  width: 1px;
+  height: 359px;
+  border-left: 1px dashed #1e2226;
+  float: left;
+}
 
-  .acticle-title {
-    position: relative;
-    font-size: 28px;
-    cursor: pointer;
-  }
-  .article-content {
-    position: relative;
-    width: 100%;
-    font-szie: 12px;
-    font-weight: 300;
-    margin-top: 10px;
-  }
-  .article-img {
-    position: relative;
-    width: 100%;
-    margin-top: 10px;
-  }
-  .click-articel {
-    position: relative;
-    font-size: 16px;
-    color: #7db4dc;
-    font-weight: 500;
-    line-height: 50px;
-    cursor: pointer;
-  }
+.acticle-title {
+  position: relative;
+  font-size: 28px;
+  cursor: pointer;
+}
+.article-content {
+  position: relative;
+  width: 100%;
+  font-szie: 12px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.article-img {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.click-articel {
+  position: relative;
+  font-size: 16px;
+  color: #7db4dc;
+  font-weight: 500;
+  line-height: 50px;
+  cursor: pointer;
+}
 
-  .right-content {
-    position: relative;
-    width: 280px;
-    min-height: 600px;
-    box-sizing: border-box;
-    padding: 40px;
-    float: left;
-  }
+.right-content {
+  position: relative;
+  width: 280px;
+  min-height: 600px;
+  box-sizing: border-box;
+  padding: 40px;
+  float: left;
+}
 
-  .right-title {
-    position: relative;
-    font-size: 20px;
-    color: #1e2226;
-    font-weight: 500;
-  }
+.right-title {
+  position: relative;
+  font-size: 20px;
+  color: #1e2226;
+  font-weight: 500;
+}
 
-  .right-content2 {
-    position: relative;
-    font-size: 12px;
-    color: #000;
-    font-weight: 300;
-  }
+.right-content2 {
+  position: relative;
+  font-size: 12px;
+  color: #000;
+  font-weight: 300;
 }
 </style>
