@@ -426,6 +426,13 @@ export default {
 @import "../assets/style/base.css";
 
 @media only screen and (max-width: 1280px) {
+  .container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+
   .security-content2 {
     position: relative;
     width: 100%;
