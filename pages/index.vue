@@ -680,19 +680,30 @@ export default {
   .info-block3 {
     position: relative;
     width: 100%;
-    min-height: 3.333333rem;
+    min-height: 5.333333rem;
     background-image: url("/imgs/skybg@2x.png");
-    background-size: 100%;
+    background-size: 200%;
+    background-position-x: -40px;
     background-repeat: no-repeat;
     overflow: hidden;
   }
   .info-block3-text1 {
-    display: none;
+    display: block;
+    position: relative;
+    top: 0.6rem;
+    font-size: 0.6rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 0.4rem;
+    color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
   }
   .info-block3-text2 {
     display: block;
     position: relative;
-    top: 0.266667rem;
+    top: 0.866667rem;
     width: 7.133333rem;
     height: 1.826667rem;
     font-size: 0.24rem;
