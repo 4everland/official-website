@@ -16,7 +16,7 @@
           protection, distributed storage and other technical features.
         </p>
 
-        <a target="_blank" href="#">
+        <a target="_blank" href="#" id="whitepaper">
           <div class="down-btn">
             <img
               class="down-left-icon"
@@ -48,7 +48,7 @@
     </div>
 
     <div class="feature-view" ref="first">
-      <a href="#ch"><h3 class="block-title">Features</h3> </a>
+      <a href="#ch"><h3 class="block-title" id="features">Features</h3> </a>
       <div class="security-content">
         <div class="feature-item">
           <div class="feature-item-header">

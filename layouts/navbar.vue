@@ -66,10 +66,10 @@
       closed="dclose"
     >
       <ul class="menu2">
-        <li @click="toFeature2">Feature</li>
+        <li @click="toFeature">Feature</li>
         <li @click="toWhitepaper" class="menu-item">Whitepaper</li>
         <li @click="toBlog" class="menu-item">Blog</li>
-        <li @click="toRoadmap2" class="menu-item">Roadmap</li>
+        <li @click="toRoadmap" class="menu-item">Roadmap</li>
       </ul>
     </el-drawer>
   </header>
@@ -89,7 +89,7 @@ export default {
     toFeature() {
       this.active = "Feature";
       this.$router.push({
-        path: "/",
+        path: "/#features",
         params: {
           jump: 1,
         },
@@ -99,14 +99,14 @@ export default {
     toRoadmap() {
       this.active = "Roadmap";
       this.$router.push({
-        path: "/",
+        path: "/#roadmap",
       });
       window.scrollTo(0, 5500);
     },
     toWhitepaper() {
       this.active = "Whitepaper";
       this.$router.push({
-        path: "/",
+        path: "/#whitepaper",
       });
       window.scrollTo(0, 10);
     },

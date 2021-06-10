@@ -1,7 +1,7 @@
 <template>
   <div class="roadmap-content">
     <div class="security-content">
-      <h3 class="block-title">Roadmap</h3>
+      <h3 class="block-title" id="roadmap">Roadmap</h3>
 
       <div class="pc">
         <img class="left-icon" src="/imgs/left@2x.png" alt="" />
