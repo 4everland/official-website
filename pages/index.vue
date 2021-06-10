@@ -735,8 +735,8 @@ export default {
   .feature-item {
     height: 501px;
     width: 300px;
-    display: inline-block;
-    margin: 30px;
+    display: block;
+    margin: 30px auto;
     line-height: 100px;
     text-align: center;
     flex: auto;

@@ -31,7 +31,7 @@ function fileDisplay(filePath) {
         // console.log('./pages/blog/' + year + path.sep + month + path.sep + date + path.sep + new Date(stats.mtime).getTime() + '.vue')
         // console.log(_this)
 
-        fs.writeFile('./pages/blog/' + year + '/' + month + "/" + date + "/" + new Date(stats.mtime).getTime() + '.vue', `
+        fs.writeFile('./pages/blog/' + 'a' + year + '/' + new Date(stats.mtime).getTime() + '.vue', `
                 <template>
               <div class="content">
                 ` + mdData + `
