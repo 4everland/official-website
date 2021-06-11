@@ -531,60 +531,121 @@ export default {
 </script>
 
 <style scoped>
-.content {
-  position: relative;
-  top: 100px;
-  width: 100%;
-  min-height: 400px;
-  background-color: #1e2226;
-}
-.service-content {
-  position: relative;
-  width: 1200px;
-  min-height: 1320px;
-  background-color: #fff;
-  margin: 0 auto;
-  overflow: hidden;
-  padding-bottom: 60px;
-  box-sizing: content-box;
+@media only screen and (max-width: 1280px) {
+  .content {
+    position: relative;
+    top: 1.333333rem;
+    width: 100%;
+    min-height: 400px;
+    background-color: #1e2226;
+  }
+  .service-content {
+    position: relative;
+    width: 9.066667rem;
+    min-height: 1320px;
+    background-color: #fff;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 60px;
+    box-sizing: content-box;
+  }
+
+  .service-title {
+    position: relative;
+    margin-top: 0.813333rem;
+    width: 100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.64rem;
+    text-align: center;
+  }
+  .service-display {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #1e1d1e;
+  }
+  .tems-address,
+  .tems-date {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #1e1d1e;
+  }
+
+  .acticle-view {
+    position: relative;
+    width: 8.066667rem;
+    height: 960px;
+    background: #f3f3f3;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 5px;
+    padding: 0.533333rem;
+    overflow-y: scroll;
+    font-size: 12px;
+  }
 }
 
-.service-title {
-  position: relative;
-  margin-top: 61px;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  font-size: 48px;
-  text-align: center;
-}
-.service-display {
-  position: relative;
-  margin-top: 20px;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-  color: #1e1d1e;
-}
-.tems-address,
-.tems-date {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-  color: #1e1d1e;
-}
+@media only screen and (min-width: 1280px) {
+  .content {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    min-height: 400px;
+    background-color: #1e2226;
+  }
+  .service-content {
+    position: relative;
+    width: 1200px;
+    min-height: 1320px;
+    background-color: #fff;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 60px;
+    box-sizing: content-box;
+  }
 
-.acticle-view {
-  position: relative;
-  width: 900px;
-  height: 960px;
-  background: #f3f3f3;
-  margin: auto;
-  margin-top: 40px;
-  border-radius: 5px;
-  padding: 40px;
-  overflow-y: scroll;
-  font-size: 12px;
+  .service-title {
+    position: relative;
+    margin-top: 61px;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 48px;
+    text-align: center;
+  }
+  .service-display {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #1e1d1e;
+  }
+  .tems-address,
+  .tems-date {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #1e1d1e;
+  }
+
+  .acticle-view {
+    position: relative;
+    width: 900px;
+    height: 960px;
+    background: #f3f3f3;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 5px;
+    padding: 40px;
+    overflow-y: scroll;
+    font-size: 12px;
+  }
 }
 </style>

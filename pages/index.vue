@@ -986,6 +986,13 @@ export default {
     letter-spacing: 0;
     color: #b1b6bb;
   }
+
+  .info-block1 {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    padding-bottom: 2rem;
+  }
 }
 
 @media only screen and (min-width: 1280px) {

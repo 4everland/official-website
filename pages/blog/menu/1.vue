@@ -8,7 +8,9 @@
           <img class="article-img" :src="item.img" alt="" />
           <p class="article-content">{{ item.content }}</p>
 
-          <p class="click-articel">READ MORE</p>
+          <nuxt-link :to="item.link">
+            <p class="click-articel">READ MORE</p>
+          </nuxt-link>
         </div>
       </div>
       <div class="line"></div>
@@ -37,6 +39,7 @@ export default {
           content:
             "The Internet needs Web 3.0, a new generation of the Internet paradigm that advocates free identity, free contracts, and free assets, and blockchain technology provides a near-perfect solution to Web 3.0 with decentralized addresses as accounts, smart contracts for self-deployment and access, and Tokens that flow autonomously and frictionlessly. The free market creates prosperity and the blockchain business is growing rapidly, with liberal financial experience of DEFI, attracting hundreds of billions of dollars. Moreover, NFT is empowering art, sports and trendy culture has brought millions of incremental users to the blockchain world.",
           img: "/imgs/blog/blog1@2x.png",
+          link: "/blog/2021/6/10/1623293963620",
         },
         {
           time: "April 16th, 2021",
@@ -44,6 +47,7 @@ export default {
           content:
             "Based on IPFS and the underlying technology of Ethereum, 4EVERLAND is designed to provide a distributed, highly efficient, self-motivated, and low-cost data hosting gateway. 4EVERLAND has designed a robust architecture to support the stable and efficient operation of the entire network, which mainly includes 4EVER-STORAGE, Proof of storage, 4EVER-GATEWAY, Smart contracts, and 4EVER-HOSTING.",
           img: "/imgs/blog/blog2@2x.png",
+          link: "/blog/2021/6/10/1623304497527",
         },
         {
           time: "April 16th, 2021",
@@ -51,6 +55,7 @@ export default {
           content:
             "The 4EVERLAND logo is set on the basis of the cyclotron pattern, which has evolved to form a three-dimensional pattern. The overall image is presented in the form of a fixed star, it also has the shape of an eye. The slim lines of blue and purple gradient are especially geeky.The design of the fixed star comparing 4EVERLAND to a planet in the vast universe, representing eternity and security.",
           img: "",
+          link: "/blog/2021/6/10/1623315553148",
         },
       ],
     };
