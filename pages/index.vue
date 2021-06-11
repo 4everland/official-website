@@ -982,7 +982,7 @@ export default {
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
-    line-height: 0.32rem;
+    line-height: 20px;
     letter-spacing: 0;
     color: #b1b6bb;
   }
