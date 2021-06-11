@@ -17,7 +17,7 @@
         <p>
           Welcome to 4EVERLAND. Please read on to learn the rules and
           restrictions that govern your use of our website(s), products,
-          services and applications . If you have any questions, comments, or
+          services and applications.If you have any questions, comments, or
           concerns regarding these terms or the Services, please contact us in
           support@4everland.org.These Terms of Use (the “Terms”) are a binding
           contract between you and 4EVERLAND Labs . You must agree to and accept
@@ -28,6 +28,7 @@
           as those in the Privacy Policy and Copyright Dispute Policy
           (4EVERLAND.org/#/copyright).
         </p>
+
         <p>
           NOTICE: Please read these Terms carefully. They cover important
           information about Services provided to you and any charges, taxes, and
@@ -35,6 +36,7 @@
           to these Terms, limitations of liability, a class action waiver, and
           resolution of disputes by arbitration instead of in court.
         </p>
+
         <p>
           We are constantly trying to improve our Services, so these Terms may
           need to change along with the Services. We reserve the right to change
@@ -46,7 +48,9 @@
           Services in any way after a change to the Terms is effective, that
           means you agree to all of the changes.
         </p>
+
         <p>What are the basics of using 4EVERLAND?</p>
+
         <p>
           You shoul be required to authorized login to your GitHub account.. You
           may not transfer your account to anyone else without our prior written
@@ -69,7 +73,9 @@
           account and your password. You’re responsible for any activity
           associated with your account.
         </p>
+
         <p>Consent to receive periodic message.</p>
+
         <p>
           As part of the Services, you may receive communications through the
           Services, including messages that 4EVERLAND sends you (for example,
@@ -80,41 +86,50 @@
           attorneys’ fees) arising from or in any way related to your breach of
           the foregoing.
         </p>
+
         <p>
           Your use of the Services is subject to the following additional
           restrictions:
         </p>
+
         <p>
           You represent, warrant, and agree that you will not contribute any
           Content or User Submission (each of those terms is defined below) or
           otherwise use the Services or interact with the Services in a manner
           that:
         </p>
+
         <p>
           (a) Infringes or violates the intellectual property rights or any
           other rights of anyone else ;
         </p>
+
         <p>
           (b) Violates any law or regulation, including, without limitation, any
           applicable export control laws;
         </p>
+
         <p>
           (c) Is harmful, fraudulent, deceptive, threatening, harassing,
           defamatory, obscene, or otherwise objectionable;
         </p>
+
         <p>
           (d) Jeopardizes the security of your 4EVERLAND account or anyone
           else’s (such as allowing someone else to log in to the Services as
           you);
         </p>
+
         <p>
           (e) Attempts, in any manner, to obtain the password, account, or other
           security information from any other user;
         </p>
+
         <p>
           (f) Violates the security of any computer network, or cracks any
           passwords or security encryption codes;
         </p>
+
         <p>
           (g) Runs Maillist, Listserv, any form of auto-responder or “spam” on
           the Services, or any processes that run or are activated while you are
@@ -122,22 +137,28 @@
           proper working of the Services (including by placing an unreasonable
           load on the Services’ infrastructure);
         </p>
+
         <p>
           (h) “Crawls,” “scrapes,” or “spiders” any page, data, or portion of or
           relating to the Services or Content (through use of manual or
           automated means);
         </p>
+
         <p>(i) Copies or stores any significant portion of the Content;</p>
+
         <p>
           (j) Decompiles, reverse engineers, or otherwise attempts to obtain the
           source code or underlying ideas or information of or relating to the
           Services.
         </p>
+
         <p>
           A violation of any of the foregoing is grounds for termination of your
           right to use or access the Services.
         </p>
+
         <p>What are my rights in the Services?</p>
+
         <p>
           The materials displayed or performed or available on or through the
           Services, including, but not limited to, text, graphics, data,
@@ -157,9 +178,11 @@
           create derivative works based on, or otherwise exploit any of the
           Services. The Services may allow you to copy or download certain
           Content; please remember that just because this functionality exists,
-          doesn’t mean that all the restrictions above don’t apply – they do
+          doesn’t mean that all the restrictions above don’t apply they do
         </p>
+
         <p>Do I have to grant any licenses to 4EVERLAND or to other users?</p>
+
         <p>
           Anything you post, upload, share, store, or otherwise provide through
           the Services is your “User Submission.” Some User Submissions may be
@@ -167,10 +190,11 @@
           the Services, and to allow other users to enjoy them (where
           applicable), you grant us certain rights in those User Submissions.
           Please note that all of the following licenses are subject to our
-          Privacy Policy 4EVERLAND.org/#/privacy_and_policy to the extent they
-          relate to User Submissions that are also your personally-identifiable
-          information
+          Privacy Policy 4EVERLAND.org/#/privacy<em>and</em>policy to the extent
+          they relate to User Submissions that are also your
+          personally-identifiable information
         </p>
+
         <p>
           For all User Submissions, you hereby grant4EVERLAND a license to
           translate, modify (for technical purposes, for example making sure
@@ -180,6 +204,7 @@
           detail below. This is a license only – your ownership in User
           Submissions is not affected
         </p>
+
         <p>
           If you store a User Submission in your own personal 4EVERLAND account,
           in a manner that is not viewable by any other user except you (a
@@ -189,6 +214,7 @@
           Submission accessible to you and providing the Services necessary to
           do so.
         </p>
+
         <p>
           If you share a User Submission only in a manner that only certain
           specified users can view (for example, a private message to one or
@@ -202,6 +228,7 @@
           and exercise all rights in it, as permitted by the functionality of
           the Services.
         </p>
+
         <p>
           If you share a User Submission publicly on the Services and/or in a
           manner that more than just you or certain specified users can view a
@@ -216,10 +243,12 @@
           license to access that Public User Submission, and to use and exercise
           all rights in it, as permitted by the functionality of the Services.
         </p>
+
         <p>
           You agree that the licenses you grant are royalty-free, perpetual,
           sublicensable, irrevocable, and worldwide.
         </p>
+
         <p>
           Finally, you understand and agree that 4EVERLAND, in performing the
           required technical steps to provide the Services to our users
@@ -228,9 +257,11 @@
           of connection networks, devices, services, or media, and the foregoing
           licenses include the rights to do so.
         </p>
+
         <p>
           What if I see something on the Services that infringes my copyright?
         </p>
+
         <p>
           You may have heard of the Digital Millennium Copyright Act (the
           “DMCA”), as it relates to online service providers, like 4EVERLAND,
@@ -243,7 +274,9 @@
           @4EVERLAND.com/#/copyright. To learn more about the DMCA, click here
           http://www.copyright.gov/legislation/dmca.pdf
         </p>
+
         <p>Who is responsible for what I see and do on the Services?</p>
+
         <p>
           Any information or content publicly posted or privately transmitted
           through the Services is the sole responsibility of the person from
@@ -264,6 +297,7 @@
           current. You are responsible for all your activity in connection with
           the Services.
         </p>
+
         <p>
           The Services may contain links or connections to third party websites
           or services that are not owned or controlled by 4EVERLAND. When you
@@ -274,6 +308,7 @@
           policy of each third party website or service that you visit or
           utilize.
         </p>
+
         <p>
           4EVERLAND has no control over, and assumes no responsibility for, the
           content, accuracy, privacy policies, or practices of or opinions
@@ -284,6 +319,7 @@
           harmless from any and all liability arising from your use of any third
           party website or service.
         </p>
+
         <p>
           Your interactions with organizations and/or individuals found on or
           through the Services, including payment and delivery of goods or
@@ -295,6 +331,7 @@
           agree that 4EVERLAND shall not be responsible or liable for any loss
           or damage of any sort incurred as the result of any such dealings.
         </p>
+
         <p>
           If there is a dispute between participants on this site, or between
           users and any third party, you agree that 4EVERLAND is under no
@@ -305,7 +342,9 @@
           unsuspected, disclosed or undisclosed, arising out of or in any way
           related to such disputes and/or our Services.
         </p>
+
         <p>Will 4EVERLAND ever change the Services?</p>
+
         <p>
           We’re always trying to improve the Services, so they may change over
           time. We may suspend or discontinue any part of the Services, or we
@@ -316,7 +355,9 @@
           that Content in violation of these Terms), in our sole discretion, and
           without notice.
         </p>
+
         <p>Do the Services cost anything?</p>
+
         <p>
           The Services may be free or we may charge a fee for using the
           Services. If you are using a free version of the Services, we will
@@ -328,6 +369,7 @@
           You should consult with your wireless carrier to determine what rates,
           charges, fees or costs may apply to your use of the Services.
         </p>
+
         <p>
           a.Paid Services. Certain of our Services may be subject to payments
           now or in the future (the “Paid Services”). Please see our Paid
@@ -335,6 +377,7 @@
           note that any payment terms presented to you in the process of using
           or signing up for a Paid Service are deemed part of these Terms.
         </p>
+
         <p>
           b. Billing. We use a third-party payment processor (the “Payment
           Processor”) to bill you through a payment account linked to your
@@ -352,6 +395,7 @@
           the Payment Processor makes even if it has already requested or
           received payment
         </p>
+
         <p>
           c. Payment Method. The terms of your payment will be based on your
           Payment Method and may be determined by agreements between you and the
@@ -360,6 +404,7 @@
           receive payment from you, you agree to pay all amounts due on your
           Billing Account upon demand.
         </p>
+
         <p>
           d. Recurring Billing. Some of the Paid Services may consist of an
           initial period, for which there is a one-time charge, followed by
@@ -374,6 +419,7 @@
           REASONABLY COULD ACT. TO TERMINATE YOUR AUTHORIZATION OR CHANGE YOUR
           PAYMENT METHOD, GO TO ACCOUNT SETTINGS.
         </p>
+
         <p>
           e. Current Information Required. YOU MUST PROVIDE CURRENT, COMPLETE
           AND ACCURATE INFORMATION FOR YOUR BILLING ACCOUNT. YOU MUST PROMPTLY
@@ -389,6 +435,7 @@
           UNDER YOUR BILLING ACCOUNT UNLESS YOU HAVE TERMINATED YOUR PAID
           SERVICES AS SET FORTH ABOVE.
         </p>
+
         <p>
           f. Change in Amount Authorized. If the amount to be charged to your
           Billing Account varies from the amount you preauthorized (other than
@@ -400,6 +447,7 @@
           we may accumulate charges incurred and submit them as one or more
           aggregate charges during or at the end of each billing cycle.
         </p>
+
         <p>
           g. Reaffirmation of Authorization. Your non-termination or continued
           use of a Paid Service reaffirms that we are authorized to charge your
@@ -409,6 +457,7 @@
           payable in advance, in arrears, per usage, or as otherwise described
           when you initially selected to use the Paid Service.
         </p>
+
         <p>
           Free Trials and Other Promotions. Any free trial or other promotion
           that provides access to a Paid Service must be used within the
@@ -418,15 +467,17 @@
           are inadvertently charged for a Paid Service, please contact us at
           <a href="mailto:support@4everland.org">support@4everland.org</a>
         </p>
+
         <p>What if I want to stop using the Services?</p>
+
         <p>
           You’re free to do that at any time, by contacting us
           atsupport@4everland.org; please refer to our Privacy Policy
-          4EVERLAND.co/privacy_and_policy, as well as the licenses above, to
-          understand how we treat information you provide to us after you have
-          stopped using our Services.4EVERLAND is also free to terminate (or
-          suspend access to) your use of the Services or your account, for any
-          reason in our discretion, including your breach of these Terms.
+          4EVERLAND.co/privacy<em>and</em>policy, as well as the licenses above,
+          to understand how we treat information you provide to us after you
+          have stopped using our Services.4EVERLAND is also free to terminate
+          (or suspend access to) your use of the Services or your account, for
+          any reason in our discretion, including your breach of these Terms.
           4EVERLAND has the sole right to decide whether you are in violation of
           any of the restrictions set forth in these Terms.Account termination
           may result in destruction of any Content associated with your account,
@@ -439,7 +490,9 @@
           regarding disputes between us, including without limitation the
           arbitration agreement.
         </p>
+
         <p>What else do I need to know?</p>
+
         <p>
           Warranty Disclaimer. Neither 4EVERLAND nor its licensors or suppliers
           make any representations or warranties concerning any content
@@ -456,6 +509,7 @@
           unambiguously in writing by a designated third party for a specific
           product).
         </p>
+
         <p>
           Assignment. You may not assign, delegate or transfer these Terms or
           your rights or obligations hereunder, or your Services account, in any
@@ -463,6 +517,7 @@
           written consent. We may transfer, assign, or delegate these Terms and
           our rights and obligations without consent
         </p>
+
         <p>
           Miscellaneous. You will be responsible for paying, withholding,
           filing, and reporting all taxes, duties, and other governmental

@@ -1,360 +1,519 @@
 <template>
   <div class="content">
     <div class="service-content">
-      <h1 class="service-title">Term of Service</h1>
-      <p class="service-display">
-        PLEASE NOTE THAT YOUR USE OF AND ACCESS TO OUR SERVCES IDEFINED BELOW
-        ARE SUBIECT TO THE <br />
-        FOLLOWING TERMS lE YOU DO NOT AGRE TO AL Of TE FOLOING, YOU AN NOT US OR
-        ACCESS TH <br />
-        SERVICES IN ANY MANNER
-      </p>
-
-      <p class="tems-address">Tems of Use</p>
-      <p class="tems-date">Effective date: 05/01/20</p>
+      <h1 class="service-title">Privacy Policy</h1>
+      <p class="tems-date">Effective date: 06/07/2021</p>
 
       <div class="acticle-view">
-        Welcome to 4EVERLAND. Please read on to learn the rules and restrictions
-        that govern your use of our website(s), products, services and
-        applications . If you have any questions, comments, or concerns
-        regarding these terms or the Services, please contact us in
-        support@4everland.org.These Terms of Use (the “Terms”) are a binding
-        contract between you and 4EVERLAND Labs . You must agree to and accept
-        all of the Terms, or you don’t have the right to use the Services. Your
-        using the Services in any way means that you agree to all of these
-        Terms, and these Terms will remain in effect while you use the Services.
-        These Terms include the provisions in this document, as well as those in
-        the Privacy Policy and Copyright Dispute Policy
-        (4EVERLAND.org/#/copyright). NOTICE: Please read these Terms carefully.
-        They cover important information about Services provided to you and any
-        charges, taxes, and fees we bill you. These Terms include information
-        about future changes to these Terms, limitations of liability, a class
-        action waiver, and resolution of disputes by arbitration instead of in
-        court. We are constantly trying to improve our Services, so these Terms
-        may need to change along with the Services. We reserve the right to
-        change the Terms at any time, but if we do, we will bring it to your
-        attention by placing a notice on the https://4everland.orgwebsite, by
-        sending you an email, and/or by some other means.If you don’t agree with
-        the new Terms, you are free to reject them; unfortunately, that means
-        you will no longer be able to use the Services. If you use the Services
-        in any way after a change to the Terms is effective, that means you
-        agree to all of the changes. What are the basics of using 4EVERLAND? You
-        shoul be required to authorized login to your GitHub account.. You may
-        not transfer your account to anyone else without our prior written
-        permission. You represent and warrant that you are of legal age to form
-        a binding contract (or if not, you’ve received your parent’s or
-        guardian’s permission to use the Services and gotten your parent or
-        guardian to agree to these Terms on your behalf). If you’re agreeing to
-        these Terms on behalf of an organization or entity, you represent and
-        warrant that you are authorized to agree to these Terms on that
-        organization or entity’s behalf and bind them to these Terms (in which
-        case, the references to “you” and “your” in these Terms, except for in
-        this sentence, refer to that organization or entity). You will only use
-        the Services for your own personal use, and not on behalf of or for the
-        benefit of any third party, and only in a manner that complies with all
-        laws that apply to you. If your use of the Services is prohibited by
-        applicable laws, then you aren’t authorized to use the Services. We can’
-        t and won’t be responsible for your using the Services in a way that
-        breaks the law. You will not share your account or password with anyone,
-        and you must protect the security of your account and your password.
-        You’re responsible for any activity associated with your account.
-        Consent to receive periodic message. As part of the Services, you may
-        receive communications through the Services, including messages that
-        4EVERLAND sends you (for example, E-mail) . By subscribing for the
-        services, you agree to receive communications from 4EVERLAND, and you
-        agree to indemnify and hold 4EVERLAND harmless from and against any and
-        all claims, liabilities, damages (actual and consequential), losses and
-        expenses (including attorneys’ fees) arising from or in any way related
-        to your breach of the foregoing. Your use of the Services is subject to
-        the following additional restrictions: You represent, warrant, and agree
-        that you will not contribute any Content or User Submission (each of
-        those terms is defined below) or otherwise use the Services or interact
-        with the Services in a manner that: (a) Infringes or violates the
-        intellectual property rights or any other rights of anyone else ; (b)
-        Violates any law or regulation, including, without limitation, any
-        applicable export control laws; (c) Is harmful, fraudulent, deceptive,
-        threatening, harassing, defamatory, obscene, or otherwise objectionable;
-        (d) Jeopardizes the security of your 4EVERLAND account or anyone else’s
-        (such as allowing someone else to log in to the Services as you); (e)
-        Attempts, in any manner, to obtain the password, account, or other
-        security information from any other user; (f) Violates the security of
-        any computer network, or cracks any passwords or security encryption
-        codes; (g) Runs Maillist, Listserv, any form of auto-responder
-        or“spam”on the Services, or any processes that run or are activated
-        while you are not logged into the Services, or that otherwise interfere
-        with the proper working of the Services (including by placing an
-        unreasonable load on the Services’ infrastructure); (h) “Crawls,”
-        “scrapes,” or “spiders” any page, data, or portion of or relating to the
-        Services or Content (through use of manual or automated means); (i)
-        Copies or stores any significant portion of the Content; (j) Decompiles,
-        reverse engineers, or otherwise attempts to obtain the source code or
-        underlying ideas or information of or relating to the Services. A
-        violation of any of the foregoing is grounds for termination of your
-        right to use or access the Services. What are my rights in the Services?
-        The materials displayed or performed or available on or through the
-        Services, including, but not limited to, text, graphics, data, articles,
-        photos, images, illustrations, User Submissions, and so forth (all of
-        the foregoing, the “Content”) are protected by copyright and/or other
-        intellectual property laws. You promise to abide by all copyright
-        notices, trademark rules, information, and restrictions contained in any
-        Content you access through the Services, and you won’t use, copy,
-        reproduce, modify, translate, publish, broadcast, transmit, distribute,
-        perform, upload, display, license, sell, commercialize or otherwise
-        exploit for any purpose any Content not owned by you, (i) without the
-        prior consent of the owner of that Content or (ii) in a way that
-        violates someone else’s (including Terminal’s) rights. You understand
-        that 4EVERLAND owns the Services. You won’t modify, publish, transmit,
-        participate in the transfer or sale of, reproduce (except as expressly
-        provided in this Section), create derivative works based on, or
-        otherwise exploit any of the Services. The Services may allow you to
-        copy or download certain Content; please remember that just because this
-        functionality exists, doesn’t mean that all the restrictions above don’t
-        apply – they do! Do I have to grant any licenses to 4EVERLAND or to
-        other users? Anything you post, upload, share, store, or otherwise
-        provide through the Services is your “User Submission.” Some User
-        Submissions may be viewable by other users. In order to display your
-        User Submissions on the Services, and to allow other users to enjoy them
-        (where applicable), you grant us certain rights in those User
-        Submissions. Please note that all of the following licenses are subject
-        to our Privacy Policy 4EVERLAND.org/#/privacy_and_policy to the extent
-        they relate to User Submissions that are also your
-        personally-identifiable information. For all User Submissions, you
-        hereby grant4EVERLAND a license to translate, modify (for technical
-        purposes, for example making sure your content is viewable on an iPhone
-        as well as a computer) and reproduce and otherwise act with respect to
-        such User Submissions, in each case to enable us to operate the
-        Services, as described in more detail below. This is a license only –
-        your ownership in User Submissions is not affected. If you store a User
-        Submission in your own personal 4EVERLAND account, in a manner that is
-        not viewable by any other user except you (a “Personal User
-        Submission”), you grant 4EVERLAND the license above, as well as a
-        license to display, perform, and distribute your Personal User
-        Submission for the sole purpose of making that Personal User Submission
-        accessible to you and providing the Services necessary to do so. If you
-        share a User Submission only in a manner that only certain specified
-        users can view (for example, a private message to one or more other
-        users)(a “Limited Audience User Submission”), then you grant 4EVERLAND
-        the licenses above, as well as a license to display, perform, and
-        distribute your Limited Audience User Submission for the sole purpose of
-        making that Limited Audience User Submission accessible to such other
-        specified users, and providing the Services necessary to do so. Also,
-        you grant such other specified users a license to access that Limited
-        Audience User Submission, and to use and exercise all rights in it, as
-        permitted by the functionality of the Services. If you share a User
-        Submission publicly on the Services and/or in a manner that more than
-        just you or certain specified users can view a “Public User
-        Submission”), then you grant 4EVERLAND the licenses above, as well as a
-        license to display, perform, and distribute your Public User Submission
-        for the purpose of making that Public User Submission accessible to all
-        4EVERLAND users and providing the Services necessary to do so, as well
-        as all other rights necessary to use and exercise all rights in that
-        Public User Submission in connection with the Services and/or otherwise
-        in connection with Terminal’s business. Also, you grant all other users
-        of the Services a license to access that Public User Submission, and to
-        use and exercise all rights in it, as permitted by the functionality of
-        the Services. You agree that the licenses you grant are royalty-free,
-        perpetual, sublicensable, irrevocable, and worldwide. Finally, you
-        understand and agree that 4EVERLAND, in performing the required
-        technical steps to provide the Services to our users (including you),
-        may need to make changes to your User Submissions to conform and adapt
-        those User Submissions to the technical requirements of connection
-        networks, devices, services, or media, and the foregoing licenses
-        include the rights to do so. What if I see something on the Services
-        that infringes my copyright? You may have heard of the Digital
-        Millennium Copyright Act (the “DMCA”), as it relates to online service
-        providers, like 4EVERLAND, being asked to remove material that allegedly
-        violates someone’s copyright. We respect others’ intellectual property
-        rights, and we reserve the right to delete or disable Content alleged to
-        be infringing, and to terminate the accounts of repeat alleged
-        infringers; to review our complete Copyright Dispute Policy and learn
-        how to report potentially infringing content, click here
-        @4EVERLAND.com/#/copyright. To learn more about the DMCA, click here
-        http://www.copyright.gov/legislation/dmca.pdf Who is responsible for
-        what I see and do on the Services? Any information or content publicly
-        posted or privately transmitted through the Services is the sole
-        responsibility of the person from whom such content originated, and you
-        access all such information and content at your own risk, and we aren’t
-        liable for any errors or omissions in that information or content or for
-        any damages or loss you might suffer in connection with it. We cannot
-        control and have no duty to take any action regarding how you may
-        interpret and use the Content or what actions you may take as a result
-        of having been exposed to the Content, and you hereby release us from
-        all liability for you having acquired or not acquired Content through
-        the Services. We can’t guarantee the identity of any users with whom you
-        interact in using the Services and are not responsible for which users
-        gain access to the Services. You are responsible for all Content you
-        contribute, in any manner, to the Services, and you represent and
-        warrant you have all rights necessary to do so, in the manner in which
-        you contribute it. You will keep all your registration information
-        accurate and current. You are responsible for all your activity in
-        connection with the Services. The Services may contain links or
-        connections to third party websites or services that are not owned or
-        controlled by 4EVERLAND. When you access third party websites or use
-        third party services, you accept that there are risks in doing so, and
-        that 4EVERLAND is not responsible for such risks. We encourage you to be
-        aware when you leave the Services and to read the terms and conditions
-        and privacy policy of each third party website or service that you visit
-        or utilize. 4EVERLAND has no control over, and assumes no responsibility
-        for, the content, accuracy, privacy policies, or practices of or
-        opinions expressed in any third party websites or by any third party
-        that you interact with through the Services. In addition, 4EVERLAND will
-        not and cannot monitor, verify, censor or edit the content of any third
-        party site or service. By using the Services, you release and hold us
-        harmless from any and all liability arising from your use of any third
-        party website or service. Your interactions with organizations and/or
-        individuals found on or through the Services, including payment and
-        delivery of goods or services, and any other terms, conditions,
-        warranties or representations associated with such dealings, are solely
-        between you and such organizations and/or individuals. You should make
-        whatever investigation you feel necessary or appropriate before
-        proceeding with any online or offline transaction with any of these
-        third parties. You agree that 4EVERLAND shall not be responsible or
-        liable for any loss or damage of any sort incurred as the result of any
-        such dealings. If there is a dispute between participants on this site,
-        or between users and any third party, you agree that 4EVERLAND is under
-        no obligation to become involved. In the event that you have a dispute
-        with one or more other users, you release 4EVERLAND, its directors,
-        officers, employees, agents, and successors from claims, demands, and
-        damages of every kind or nature, known or unknown, suspected or
-        unsuspected, disclosed or undisclosed, arising out of or in any way
-        related to such disputes and/or our Services. Will 4EVERLAND ever change
-        the Services? We’re always trying to improve the Services, so they may
-        change over time. We may suspend or discontinue any part of the
-        Services, or we may introduce new features or impose limits on certain
-        features or restrict access to parts or all of the Services. We reserve
-        the right to remove any Content from the Services at any time, for any
-        reason (including, but not limited to, if someone alleges you
-        contributed that Content in violation of these Terms), in our sole
-        discretion, and without notice. Do the Services cost anything? The
-        Services may be free or we may charge a fee for using the Services. If
-        you are using a free version of the Services, we will notify you before
-        any Services you are then using begin carrying a fee, and if you wish to
-        continue using such Services, you must pay all applicable fees for such
-        Services. Note that if you elect to receive text messages through the
-        Services, data and message rates may apply. Any and all such charges,
-        fees or costs are your sole responsibility. You should consult with your
-        wireless carrier to determine what rates, charges, fees or costs may
-        apply to your use of the Services. a. Paid Services. Certain of our
-        Services may be subject to payments now or in the future (the “Paid
-        Services”). Please see our Paid Services page for a description of the
-        current Paid Services. Please note that any payment terms presented to
-        you in the process of using or signing up for a Paid Service are deemed
-        part of these Terms. b. Billing. We use a third-party payment processor
-        (the “Payment Processor”) to bill you through a payment account linked
-        to your account on the Services (your “Billing Account”) for use of the
-        Paid Services. The processing of payments will be subject to the terms,
-        conditions and privacy policies of the Payment Processor in addition to
-        these Terms. We are not responsible for error by the Payment Processor.
-        By choosing to use Paid Services, you agree to pay us, through the
-        Payment Processor, all charges at the prices then in effect for any use
-        of such Paid Services in accordance with the applicable payment terms
-        and you authorize us, through the Payment Processor, to charge your
-        chosen payment provider (your “Payment Method”). You agree to make
-        payment using that selected Payment Method. We reserve the right to
-        correct any errors or mistakes that the Payment Processor makes even if
-        it has already requested or received payment. c. Payment Method. The
-        terms of your payment will be based on your Payment Method and may be
-        determined by agreements between you and the financial institution,
-        credit card issuer or other provider of your chosen Payment Method. If
-        we, through the Payment Processor, do not receive payment from you, you
-        agree to pay all amounts due on your Billing Account upon demand. d.
-        Recurring Billing. Some of the Paid Services may consist of an initial
-        period, for which there is a one-time charge, followed by recurring
-        period charges as agreed to by you. By choosing a recurring payment
-        plan, you acknowledge that such Services have an initial and recurring
-        payment feature and you accept responsibility for all recurring charges
-        prior to cancellation. WE MAY SUBMIT PERIODIC CHARGES (E.G., MONTHLY)
-        WITHOUT FURTHER AUTHORIZATION FROM YOU, UNTIL YOU PROVIDE PRIOR NOTICE
-        (RECEIPT OF WHICH IS CONFIRMED BY US) THAT YOU HAVE TERMINATED THIS
-        AUTHORIZATION OR WISH TO CHANGE YOUR PAYMENT METHOD. SUCH NOTICE WILL
-        NOT AFFECT CHARGES SUBMITTED BEFORE WE REASONABLY COULD ACT. TO
-        TERMINATE YOUR AUTHORIZATION OR CHANGE YOUR PAYMENT METHOD, GO TO
-        ACCOUNT SETTINGS. e. Current Information Required. YOU MUST PROVIDE
-        CURRENT, COMPLETE AND ACCURATE INFORMATION FOR YOUR BILLING ACCOUNT. YOU
-        MUST PROMPTLY UPDATE ALL INFORMATION TO KEEP YOUR BILLING ACCOUNT
-        CURRENT, COMPLETE AND ACCURATE (SUCH AS A CHANGE IN BILLING ADDRESS,
-        CREDIT CARD NUMBER, OR CREDIT CARD EXPIRATION DATE), AND YOU MUST
-        PROMPTLY NOTIFY US OR OUR PAYMENT PROCESSOR IF YOUR PAYMENT METHOD IS
-        CANCELED (E.G., FOR LOSS OR THEFT) OR IF YOU BECOME AWARE OF A POTENTIAL
-        BREACH OF SECURITY, SUCH AS THE UNAUTHORIZED DISCLOSURE OR USE OF YOUR
-        USER NAME OR PASSWORD. CHANGES TO SUCH INFORMATION CAN BE MADE AT
-        ACCOUNT SETTINGS. IF YOU FAIL TO PROVIDE ANY OF THE FOREGOING
-        INFORMATION, YOU AGREE THAT WE MAY CONTINUE CHARGING YOU FOR ANY USE OF
-        PAID SERVICES UNDER YOUR BILLING ACCOUNT UNLESS YOU HAVE TERMINATED YOUR
-        PAID SERVICES AS SET FORTH ABOVE. f. Change in Amount Authorized. If the
-        amount to be charged to your Billing Account varies from the amount you
-        preauthorized (other than due to the imposition or change in the amount
-        of state sales taxes), you have the right to receive, and we shall
-        provide, notice of the amount to be charged and the date of the charge
-        before the scheduled date of the transaction. Any agreement you have
-        with your payment provider will govern your use of your Payment Method.
-        You agree that we may accumulate charges incurred and submit them as one
-        or more aggregate charges during or at the end of each billing cycle. g.
-        Reaffirmation of Authorization. Your non-termination or continued use of
-        a Paid Service reaffirms that we are authorized to charge your Payment
-        Method for that Paid Service. We may submit those charges for payment
-        and you will be responsible for such charges. This does not waive our
-        right to seek payment directly from you. Your charges may be payable in
-        advance, in arrears, per usage, or as otherwise described when you
-        initially selected to use the Paid Service. Free Trials and Other
-        Promotions. Any free trial or other promotion that provides access to a
-        Paid Service must be used within the specified time of the trial. You
-        must stop using a Paid Service before the end of the trial period in
-        order to avoid being charged for that Paid Service. If you cancel prior
-        to the end of the trial period and are inadvertently charged for a Paid
-        Service, please contact us at support@4everland.org What if I want to
-        stop using the Services? You’re free to do that at any time, by
-        contacting us atsupport@4everland.org; please refer to our Privacy
-        Policy 4EVERLAND.co/privacy_and_policy, as well as the licenses above,
-        to understand how we treat information you provide to us after you have
-        stopped using our Services.4EVERLAND is also free to terminate (or
-        suspend access to) your use of the Services or your account, for any
-        reason in our discretion, including your breach of these Terms.
-        4EVERLAND has the sole right to decide whether you are in violation of
-        any of the restrictions set forth in these Terms.Account termination may
-        result in destruction of any Content associated with your account, so
-        keep that in mind before you decide to terminate your account.Provisions
-        that, by their nature, should survive termination of these Terms shall
-        survive termination. By way of example, all of the following will
-        survive termination: any obligation you have to pay us or indemnify us,
-        any limitations on our liability, any terms regarding ownership or
-        intellectual property rights, and terms regarding disputes between us,
-        including without limitation the arbitration agreement. What else do I
-        need to know? Warranty Disclaimer. Neither 4EVERLAND nor its licensors
-        or suppliers make any representations or warranties concerning any
-        content contained in or accessed through the Services, and we will not
-        be responsible or liable for the accuracy, copyright compliance,
-        legality, or decency of material contained in or accessed through the
-        Services. We (and our licensors and suppliers) make no representations
-        or warranties regarding suggestions or recommendations of services or
-        products offered or purchased through the Services. Products and
-        services purchased or offered (whether or not following such
-        recommendations and suggestions) through the Services are provided “AS
-        IS” and without any warranty of any kind from 4EVERLAND or others
-        (unless, with respect to such others only, provided expressly and
-        unambiguously in writing by a designated third party for a specific
-        product). Assignment. You may not assign, delegate or transfer these
-        Terms or your rights or obligations hereunder, or your Services account,
-        in any way (by operation of law or otherwise) without Terminal’s prior
-        written consent. We may transfer, assign, or delegate these Terms and
-        our rights and obligations without consent. Miscellaneous. You will be
-        responsible for paying, withholding, filing, and reporting all taxes,
-        duties, and other governmental assessments associated with your activity
-        in connection with the Services, provided that the 4EVERLAND may, in its
-        sole discretion, do any of the foregoing on your behalf or for itself as
-        it sees fit. The failure of either you or us to exercise, in any way,
-        any right herein shall not be deemed a waiver of any further rights
-        hereunder. If any provision of these Terms is found to be unenforceable
-        or invalid, that provision will be limited or eliminated, to the minimum
-        extent necessary, so that these Terms shall otherwise remain in full
-        force and effect and enforceable. You and 4EVERLAND agree that these
-        Terms are the complete and exclusive statement of the mutual
-        understanding between you and 4EVERLAND , and that these Terms supersede
-        and cancel all previous written and oral agreements, communications and
-        other understandings relating to the subject matter of these Terms,. You
-        hereby acknowledge and agree that you are not an employee, agent,
-        partner, or joint venture of 4EVERLAND , and you do not have any
-        authority of any kind to bind 4EVERLAND in any respect whatsoever.
+        <p>
+          We at 4EVERLAND Labs know you care about how your personal information
+          is used and shared, and we take your privacy seriously. Please read
+          the following to learn more about our Privacy Policy. By using or
+          accessing the Services in any manner, you acknowledge that you accept
+          the practices and policies outlined in this Privacy Policy, and you
+          hereby consent that we will collect, use, and share your information
+          in the following ways.
+        </p>
+
+        <p>
+          Remember that your use of Terminal’s Services is at all times subject
+          to the Terms of Use, which incorporates this Privacy Policy. Any terms
+          we use in this Policy without defining them have the definitions given
+          to them in the Terms of Use.
+        </p>
+
+        <p>
+          This Privacy Policy covers our treatment of personally identifiable
+          information (“Personal Information”) that we gather when you are
+          accessing or using our Services, but not to the practices of companies
+          we don’t own or control, or people that we don’t manage. We gather
+          various types of Personal Information from our users, as explained in
+          more detail below, and we use this Personal Information internally in
+          connection with our Services, including to personalize, provide, and
+          improve our services, to allow you to set up a user account and
+          profile, to contact you and allow other users to contact you, to
+          fulfill your requests for certain products and services, and to
+          analyze how you use the Services.
+        </p>
+
+        <p>
+          As noted in the Terms of Use, we do not knowingly collect or solicit
+          personal information from anyone under the age of 16. If you are under
+          16, please do not attempt to register for the Services or send any
+          personal information about yourself to us. If we learn that we have
+          collected personal information from a child under age 16, we will
+          delete that information as quickly as possible. If you believe that a
+          child under 16 may have provided us personal information, please
+          contact us at support@4everland.
+        </p>
+
+        <p>
+          We’re constantly trying to improve our Services, so we may need to
+          change this Privacy Policy from time to time as well, but we will
+          alert you to changes by placing a notice on the Services, by sending
+          you an email, and/or by some other means. Please note that if you’ve
+          opted not to receive legal notice emails from us (or you haven’t
+          provided us with your email address), those legal notices will still
+          govern your use of the Services, and you are still responsible for
+          reading and understanding them. If you use the Services after any
+          changes to the Privacy Policy have been posted, that means you agree
+          to all of the changes.
+        </p>
+
+        <p>What Information does 4EVERLAND Collect?</p>
+
+        <p>Information You Provide to Us:</p>
+
+        <ul>
+          <li>First and last name</li>
+          <li>Email address</li>
+          <li>
+            Third-party account credentials (for example, your log-in
+            credentials for GitHub)
+          </li>
+        </ul>
+
+        <p>
+          Certain information may be required to register with us or to take
+          advantage of some of our features.
+        </p>
+
+        <p>
+          We may communicate with you if you’ve provided us the means to do so.
+          For example, if you’ve given us your email address, we may send you
+          promotional email offers on behalf of other businesses, or email you
+          about your use of the Services. Also, we may receive a confirmation
+          when you open an email from us. This confirmation helps us make our
+          communications with you more interesting and improve our services. If
+          you do not want to receive communications from us, please indicate
+          your preference by contacting us at support@4EVERLAND .com.
+        </p>
+
+        <p>Information Collected Automatically.</p>
+
+        <p>
+          Whenever you interact with our Services, we automatically receive and
+          record information on our server logs from your browser or device,
+          which may include your geolocation data, device identification, the
+          type of browser and/or device you’re using to access our Services, and
+          the page or feature you requested. We may use this data to customize
+          content for you that we think you might like, based on your usage
+          patterns. We may also use it to improve the Services , for example,
+          this data can tell us how often users use a particular feature of the
+          Services, and we can use that knowledge to make the Services
+          interesting to as many users as possible.
+        </p>
+
+        <p>Will 4EVERLAND Share Any of the Personal Information it Receives?</p>
+
+        <p>
+          We may share your Personal Information with third parties as described
+          in this section:
+        </p>
+
+        <p>
+          Analytics: We may use third party analytics service providers, such as
+          Google Analytics for our business purposes, including but not limited
+          to improving and developing our Services, monitoring and analyzing use
+          of our Services, and increasing the functionality and
+          user-friendliness of our Services. Google Analytics may collect and
+          retain some information about you by planting a persistent cookie or
+          identifier on your web browser or device. You may opt out of Google
+          Analytics by visiting https://tools.google.com/dlpage/gaoptout/.
+          Google’s ability to use and share information collected by Google
+          Analytics about your use of the Services is restricted by the Google
+          Analytics Terms of Service and the Google Privacy Policy. You may find
+          additional information about Google’s ability to use and share
+          information collected by Google Analytics by visiting
+          http://www.google.com/policies/privacy/partners/
+        </p>
+
+        <p>
+          Protection of 4EVERLAND and Others: We reserve the right to access,
+          read, preserve, and disclose any information that we believe is
+          necessary to comply with applicable law or court order or respond to
+          valid legal process, including from law enforcement or other
+          government agencies; enforce or apply our Terms of Use and other
+          agreements; prevent spam or other unwanted communications and
+          investigate or protect against fraud; protect the rights, property, or
+          safety of 4EVERLAND, our employees, our users, or others; or maintain
+          the security of our products and services.
+        </p>
+
+        <p>Is Personal Information about me secure?</p>
+
+        <p>
+          Your account is protected by a password for your privacy and security.
+          If you access your account via a third party site or service, you may
+          have additional or different sign-on protections via that third party
+          site or service. You must prevent unauthorized access to your account
+          and Personal Information by selecting and protecting your password
+          and/or other sign-on mechanism appropriately and limiting access to
+          your computer or device and browser by signing off after you have
+          finished accessing your account.
+        </p>
+
+        <p>
+          We endeavor to protect the privacy of your account and other Personal
+          Information we hold in our records, but unfortunately, we cannot
+          guarantee complete security. Unauthorized entry or use, hardware or
+          software failure, and other factors, may compromise the security of
+          user information at any time
+        </p>
+
+        <p>What Personal Information can I access?</p>
+
+        <p>
+          Through your account settings, you may access, and, in some cases,
+          edit or delete the following information you’ve provided to us:
+        </p>
+
+        <ul>
+          <li>First and last nam</li>
+          <li>Email address</li>
+        </ul>
+
+        <p>
+          The information you can view, update, and delete may change as the
+          Services change. If you have any questions about viewing or updating
+          information we have on file about you, please contact us at
+          support@4everland.
+        </p>
+
+        <p>What choices do I have?</p>
+
+        <p>
+          You can always opt not to disclose information to us, but keep in mind
+          some information may be needed to register with us or to take
+          advantage of some of our features.
+        </p>
+
+        <p>
+          You may be able to add, update, or delete information as explained
+          above. When you update information, however, we may maintain a copy of
+          the unrevised information in our records. You may request deletion of
+          your account by emailing support@4everland. Some information may
+          remain in our records after your deletion of such information from
+          your account. We may use any aggregated data derived from or
+          incorporating your Personal Information after you update or delete it,
+          but not in a manner that would identify you personally.
+        </p>
+
+        <p>EU Residents</p>
+
+        <p>
+          If you are a resident of the European Union (“EU”), United Kingdom,
+          Lichtenstein, Norway, or Iceland, you may have additional rights under
+          the EU General Data Protection Regulation (the “GDPR”) with respect to
+          your Personal Data, as outlined below.
+        </p>
+
+        <p>
+          For this section, we use the terms “Personal Data” and “processing” as
+          they are defined in the GDPR, but “Personal Data” generally means
+          information that can be used to individually identify a person, and
+          “processing” generally covers actions that can be performed in
+          connection with data such as collection, use, storage and disclosure.
+          4EVERLAND will be the controller of your Personal Data processed in
+          connection with the Services.
+        </p>
+
+        <p>
+          If there are any conflicts between this section and any other
+          provision of this Privacy Policy, the policy or portion that is more
+          protective of Personal Data shall control to the extent of such
+          conflict. If you have any questions about this section or whether any
+          of the following applies to you, please contact us at
+          support@4everland.
+        </p>
+
+        <p>
+          What Personal Data Do We Collect From You? We collect Personal Data
+          about you when you provide such information directly to us, when third
+          parties such as our business partners or service providers provide us
+          with Personal Data about you, or when Personal Data about you is
+          automatically collected in connection with your use of our Services.
+          For more information, please refer to “What Information does 4EVERLAND
+          Collect?”
+        </p>
+
+        <p>
+          How Do We Use Your Personal Data? We process Personal Data to operate,
+          improve, understand and personalize our Services. For example, we use
+          Personal Data to:
+        </p>
+
+        <ul>
+          <li><p>Create and manage user profiles</p></li>
+          <li><p>Communicate with you about the Services</p></li>
+          <li><p>Process order</p></li>
+          <li>
+            <p>Contact you about Service announcements, updates or offers</p>
+          </li>
+          <li><p>Provide support and assistance for the Services</p></li>
+          <li>
+            <p>
+              Personalize website content and communications based on your
+              preferences
+            </p>
+          </li>
+          <li><p>Meet contract or legal obligations</p></li>
+          <li><p>Respond to user inquiries</p></li>
+          <li><p>Fulfill user requests</p></li>
+          <li><p>Comply with our legal or contractual obligations</p></li>
+          <li><p>Resolve disputes</p></li>
+          <li>
+            <p>
+              Protect against or deter fraudulent, illegal or harmful actions
+            </p>
+          </li>
+          <li><p>Enforce our Terms of Service</p></li>
+        </ul>
+
+        <p>
+          We will only process your Personal Data if we have a lawful basis for
+          doing so. Lawful bases for processing include consent, contractual
+          necessity and our “legitimate interests” or the legitimate interest of
+          others, as further described below.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+              Contractual Necessity: We process the following categories of
+              Personal Data as a matter of “contractual necessity”, meaning that
+              we need to process the data to perform under our Terms of Use with
+              you, which enables us to provide you with the Services. When we
+              process data due to contractual necessity, failure to provide such
+              Personal Data will result in your inability to use some or all
+              portions of the Services that require such data.
+            </p>
+            <ul>
+              <li>Your full nam</li>
+              <li><p>Your email address</p></li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              Legitimate Interest: We process the following categories of
+              Personal Data when we believe it furthers the legitimate interest
+              of us or third parties.
+            </p>
+            <ul>
+              <li>Your IP address</li>
+            </ul>
+          </li>
+          <li>
+            Examples of these legitimate interests include:
+            <ul>
+              <li>
+                Operation and improvement of our business, products and services
+              </li>
+              <li>Marketing of our products and services</li>
+              <li>Provision of customer support</li>
+              <li>Protection from fraud or security threats</li>
+              <li>Compliance with legal obligations</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>
+          Consent: In some cases, we process Personal Data based on the consent
+          you expressly grant to us at the time we collect such data. When we
+          process Personal Data based on your consent, it will be expressly
+          indicated to you at the point and time of collection.
+        </p>
+
+        <p>
+          Other Processing Grounds: From time to time we may also need to
+          process Personal Data to comply with a legal obligation, if it is
+          necessary to protect the vital interests of you or other data
+          subjects, or if it is necessary for a task carried out in the public
+          interest.
+        </p>
+
+        <p>
+          How and With Whom Do We Share Your Data? We share Personal Data with
+          vendors, third party service providers and agents who work on our
+          behalf and provide us with services related to the purposes described
+          in this Privacy Policy or our Terms of Service. These parties include
+        </p>
+
+        <ul>
+          <li>Payment processors</li>
+          <li>Fraud prevention service providers</li>
+          <li>Analytics service providers</li>
+          <li>Hosting service providers</li>
+          <li>Telecommunications service providers</li>
+        </ul>
+
+        <p>
+          We also share Personal Data when necessary to complete a transaction
+          initiated or authorized by you or provide you with a product or
+          service you have requested. In addition to those set forth above,
+          these parties also include：
+        </p>
+
+        <ul>
+          <li>Payment processors</li>
+          <li>Fraud prevention service providers</li>
+          <li>Analytics service providers</li>
+          <li>Hosting service providers</li>
+          <li>Telecommunications service providers</li>
+        </ul>
+
+        <p>
+          We also share Personal Data when necessary to complete a transaction
+          initiated or authorized by you or provide you with a product or
+          service you have requested. In addition to those set forth above,
+          these parties also include:
+        </p>
+
+        <ul>
+          <li>
+            Other users (where you post information publicly or as otherwise
+            necessary to effect a transaction initiated or authorized by you
+            through the Services)
+          </li>
+          <li>
+            Third party business partners who you access through the Services
+          </li>
+          <li>Other parties authorized by you</li>
+        </ul>
+
+        <p>
+          We also share information with third parties when you have given us
+          consent to do so (as indicated at the point such information is
+          collected). We also share Personal Data when we believe it is
+          necessary to:
+        </p>
+
+        <ul>
+          <li>
+            Comply with applicable law or respond to valid legal process,
+            including from law enforcement or other government agencies
+          </li>
+          <li>
+            Protect us, our business or our users, for example to enforce our
+            terms of service, prevent spam or other unwanted communications and
+            investigate or protect against frau
+          </li>
+          <li>Maintain the security of our products and services</li>
+        </ul>
+
+        <p>
+          How Long Do We Retain Your Personal Data? We retain Personal Data
+          about you for as long as you have an open account with us and for 6
+          months after you close your account. In some cases we retain Personal
+          Data for longer, if doing so is necessary to comply with our legal
+          obligations, resolve disputes or collect fees owed, or is otherwise
+          permitted or required by applicable law, rule or regulation.
+          Afterwards, we retain some information in a depersonalized or
+          aggregated form but not in a way that would identify you personally.
+        </p>
+
+        <p>
+          What Security Measures Do We Use? We seek to protect Personal Data
+          using appropriate technical and organizational measures based on the
+          type of Personal Data and applicable processing activity. For example,
+          at any point a user can delete his account and remove their associated
+          information from our database.
+        </p>
+
+        <p>
+          Personal Data of Children: As noted in the Terms of Use, we do not
+          knowingly collect or solicit Personal Data from anyone under the age
+          of 16. If you are under 16, please do not attempt to register for the
+          Services or send any Personal Data about yourself to us. If we learn
+          that we have collected Personal Data from a child under age 16, we
+          will delete that information as quickly as possible. If you believe
+          that a child under 16 may have provided us Personal Data, please
+          contact us at support@4everland.org.
+        </p>
+
+        <p>
+          What Rights Do You Have Regarding Your Personal Data? You have certain
+          rights with respect to your Personal Data, including those set forth
+          below. For more information about these rights, or to submit a
+          request, please email support@4everland.org. Please note that in some
+          circumstances, we may not be able to fully comply with your request,
+          such as if it is frivolous or extremely impractical, if it jeopardizes
+          the rights of others, or if it is not required by law, but in those
+          circumstances, we will still respond to notify you of such a decision.
+          In some cases, we may also need to you to provide us with additional
+          information, which may include Personal Data, if necessary to verify
+          your identity and the nature of your request.
+        </p>
+
+        <ul>
+          <li>
+            <p>
+              Access: You can request more information about the Personal Data
+              we hold about you and request a copy of such Personal Data.
+            </p>
+          </li>
+          <li>
+            <p>
+              Rectification: If you believe that any Personal Data we are
+              holding about you is incorrect or incomplete, you can request that
+              we correct or supplement such data. You can also correct some of
+              this information directly by updating your user profile.
+            </p>
+          </li>
+          <li>
+            <p>
+              Erasure: You can request that we erase some or all of your
+              Personal Data from our systems.
+            </p>
+          </li>
+          <li>
+            <p>
+              Withdrawal of Consent: If we are processing your Personal Data
+              based on your consent (as indicated at the time of collection of
+              such data), you have the right to withdraw your consent at any
+              time. Please note, however, that if you exercise this right, you
+              may have to then provide express consent on a case-by-case basis
+              for the use or disclosure of certain of your Personal Data, if
+              such use or disclosure is necessary to enable you to utilize some
+              or all of our Services.
+            </p>
+          </li>
+          <li>
+            <p>
+              Portability: You can ask for a copy of your Personal Data in a
+              machine-readable format. You can also request that we transmit the
+              data to another controller where technically feasible.
+            </p>
+          </li>
+          <li>
+            <p>
+              Objection: You can contact us to let us know that you object to
+              the further use or disclosure of your Personal Data for certain
+              purposes.
+            </p>
+          </li>
+          <li>
+            <p>
+              Restriction of Processing: You can ask us to restrict further
+              processing of your Personal Data.
+            </p>
+          </li>
+          <li>
+            <p>
+              Right to File Complaint: You have the right to lodge a complaint
+              about Terminal’s practices with respect to your Personal Data with
+              the supervisory authority of your country or EU Member State.
+            </p>
+          </li>
+        </ul>
+
+        <p>What if I have questions about this Privacy Policy?</p>
+
+        <p>
+          If you have any questions or concerns regarding our Privacy Policy,
+          please send us a detailed message to support@4everland.org, and we
+          will try to resolve your concerns.
+        </p>
       </div>
     </div>
   </div>
