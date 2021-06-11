@@ -4,14 +4,34 @@
       <div class="security-content">
         <img class="footer-logo" src="/imgs/logo@2x.png" alt="" srcset="" />
 
-        <div class="input-view">
-          <input
-            class="input-box"
-            type="text"
-            placeholder="Enter Your E-mail to sign up for newsletter"
-          />
-          <div class="right-btn">Subscribe</div>
-        </div>
+        <form
+          action="https://4everland.us6.list-manage.com/subscribe/post?u=cbf6df6ae142481d9197b48f8&amp;id=45d9abd319"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="validate"
+          target="_blank"
+          novalidate
+        >
+          <div class="input-view">
+            <input
+              class="input-box"
+              type="email"
+              value=""
+              name="EMAIL"
+              id="mce-EMAIL"
+              placeholder="Enter Your E-mail to sign up for newsletter"
+            />
+            <div class="right-btn">Subscribe</div>
+            <input
+              type="submit"
+              value="Subscribe"
+              name="subscribe"
+              id="mc-embedded-subscribe"
+              class="right-btn"
+            />
+          </div>
+        </form>
 
         <!-- <img class="share-img" src="/imgs/share@2x.png" alt="" srcset="" /> -->
 
@@ -136,6 +156,7 @@ export default {
     float: right;
     cursor: pointer;
     z-index: 98;
+    border: none;
   }
 
   .share-img {
@@ -247,6 +268,7 @@ export default {
     float: right;
     cursor: pointer;
     z-index: 98;
+    border: none;
   }
 
   .share-img {
