@@ -16,7 +16,7 @@
               active == 'Feature' ? 'menu-item-active menu-item' : 'menu-item'
             "
           >
-            Feature
+            Features
           </li>
           <li
             @click="toTechnology"
@@ -27,7 +27,7 @@
                 : 'menu-item'
             "
           >
-            Technology
+            Technologies
           </li>
           <li
             @click="toBlog"
