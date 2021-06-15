@@ -125,14 +125,12 @@ export default {
       this.$router.push({
         path: "/#roadmap",
       });
-      window.scrollTo(0, 5500);
     },
     toTechnology() {
       this.active = "Technology";
       this.$router.push({
         path: "/#technologies",
       });
-      // window.scrollTo(0,10);
     },
     toBlog() {
       this.active = "Blog";

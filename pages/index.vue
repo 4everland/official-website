@@ -48,7 +48,7 @@
     </div>
 
     <div class="feature-view" ref="first">
-      <a href="#ch"><h3 class="block-title" id="features">Features</h3> </a>
+      <h3 class="block-title" id="features">Features</h3>
       <div class="security-content">
         <div class="feature-item">
           <div class="feature-item-header">
