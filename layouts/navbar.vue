@@ -119,7 +119,6 @@ export default {
           jump: 1,
         },
       });
-      window.scrollTo(0, 1500);
     },
     toRoadmap() {
       this.active = "Roadmap";
@@ -263,5 +262,9 @@ export default {
   .open-menu {
     display: none;
   }
+}
+
+.box:target {
+  padding-top: 50px;
 }
 </style>

@@ -292,6 +292,8 @@ export default {
     text-align: center;
     color: #fff;
     font-size: 60px;
+    padding-top: 150px;
+    margin-top: -150px;
   }
 
   .pc {
