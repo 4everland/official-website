@@ -303,9 +303,9 @@ export default {
     width: 220px;
     height: 90px;
     margin-right: 10px;
-    overflow: hidden;
     margin-top: 20px;
     display: inline-block;
+    overflow: hidden;
   }
 
   .roadmap-item .color-line {
@@ -326,13 +326,16 @@ export default {
     font-size: 14px;
   }
   .roadmap-content-text {
+    display: block;
     position: relative;
-    top: 20px;
+    width: 180px;
+    min-height: 30px;
     left: 10px;
     color: #fff;
     font-size: 12px;
     margin-left: 10px;
     font-weight: 300;
+    white-space: normal;
   }
 
   .time-line {

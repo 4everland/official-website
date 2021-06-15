@@ -110,6 +110,7 @@ export default {
     border-radius: 5px;
     overflow-y: scroll;
     font-size: 12px;
+    padding-bottom: 200px;
   }
 
   .back-text {
@@ -192,12 +193,11 @@ export default {
   .acticle-view {
     position: relative;
     width: 900px;
-    height: 960px;
+    min-height: 960px;
     background: #fff;
     margin: auto;
     margin-top: 40px;
     border-radius: 5px;
-    overflow-y: scroll;
     font-size: 12px;
   }
 
