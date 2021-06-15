@@ -50,7 +50,15 @@
     <div class="feature-view" ref="first">
       <h3 class="block-title" id="features">Features</h3>
       <div class="security-content">
+        <img src="/imgs/red@2x.png" class="red-bg" alt="" srcset="" />
+        <img src="/imgs/blue@2x.png" class="blue-bg" alt="" srcset="" />
         <div class="feature-item">
+          <img
+            class="feature-item-bg"
+            src="/imgs/border@2x.png"
+            alt=""
+            srcset=""
+          />
           <div class="feature-item-header">
             <img
               class="item-header-img"
@@ -105,6 +113,12 @@
         </div>
 
         <div class="feature-item">
+          <img
+            class="feature-item-bg"
+            src="/imgs/border@2x.png"
+            alt=""
+            srcset=""
+          />
           <div class="feature-item-header">
             <img
               class="item-header-img"
@@ -155,6 +169,12 @@
         </div>
 
         <div class="feature-item">
+          <img
+            class="feature-item-bg"
+            src="/imgs/border@2x.png"
+            alt=""
+            srcset=""
+          />
           <div class="feature-item-header">
             <img
               class="item-header-img"
@@ -284,7 +304,7 @@
     <img class="white-line-img" src="/imgs/white_img@2x.png" alt="" srcset="" />
     <div class="info-block4">
       <div class="security-content3">
-        <h3 class="block-title">Characters</h3>
+        <h3 class="block-title">Participants</h3>
 
         <div class="character-line-view">
           <div class="character-item">
@@ -403,14 +423,14 @@ export default {
     this.screenHeight = document.body.clientHeight;
     this.initGlobe(this.screenWidth / 1.5);
 
-    window.onresize = () => {
-      return (() => {
-        this.screenWidth = document.body.clientWidth;
-        this.screenHeight = document.body.clientHeight;
-        console.log(this.screenWidth);
-        this.initGlobe(this.screenWidth / 1.5);
-      })();
-    };
+    // window.onresize = () => {
+    //   return (() => {
+    //     this.screenWidth = document.body.clientWidth;
+    //     this.screenHeight = document.body.clientHeight;
+    //     console.log(this.screenWidth);
+    //     this.initGlobe(this.screenWidth / 1.5);
+    //   })();
+    // };
   },
   data() {
     return {
@@ -860,7 +880,7 @@ export default {
     text-align: center;
     flex: auto;
     border-radius: 30px;
-    background-color: #355158;
+    background-color: #3b3b3b;
     overflow: hidden;
   }
 
@@ -907,13 +927,14 @@ export default {
   .feature-check-list-view {
     position: relative;
     top: 40px;
-    width: 100%;
+    width: calc(100% - 20px);
     height: 200px;
+    margin: 0px auto;
   }
   .check-item-view {
     position: relative;
     margin-left: 15px;
-    width: 95%;
+    width: 90%;
     min-height: 30px;
     line-height: 30px;
     text-align: left;
@@ -921,6 +942,9 @@ export default {
     font-weight: normal;
   }
   .check-item-text {
+    display: inline-block;
+    width: 100%;
+    min-height: 30px;
     margin-left: 10px;
     margin-top: -10px;
   }
@@ -1312,6 +1336,7 @@ export default {
   }
 
   .feature-item {
+    position: relative;
     height: 501px;
     width: 300px;
     display: inline-block;
@@ -1320,7 +1345,15 @@ export default {
     text-align: center;
     flex: auto;
     border-radius: 30px;
-    background-color: #355158;
+    background-color: #3b3b3b;
+  }
+
+  .feature-item-bg {
+    position: absolute;
+    width: calc(100% - 20px);
+    bottom: 10px;
+    left: 10px;
+    z-index: 1;
   }
 
   .feature-item-header {
@@ -1329,6 +1362,7 @@ export default {
     height: 100px;
     border-radius: 30px 30px 0 0;
     background-color: #2b85fb;
+    z-index: 2;
   }
 
   .item-header-img {
@@ -1366,9 +1400,11 @@ export default {
   .feature-check-list-view {
     position: relative;
     top: 40px;
-    width: 100%;
+    width: calc(100% - 20px);
     height: 200px;
+    margin: 0px auto;
   }
+
   .check-item-view {
     position: relative;
     margin-left: 15px;
@@ -1379,11 +1415,16 @@ export default {
     color: #fff;
     font-weight: normal;
     font-size: 14px;
+    clear: left;
   }
 
   .check-item-text {
+    display: inline-block;
+    width: 90%;
+    min-height: 30px;
     margin-left: 10px;
-    margin-top: -10px;
+    margin-top: -5px;
+    float: left;
   }
 
   .mainnet-view {
@@ -1454,7 +1495,7 @@ export default {
     position: relative;
     top: 30px;
     left: 15px;
-    width: 560px;
+    width: 450px;
     min-height: 62px;
     font-size: 14px;
     font-weight: normal;
@@ -1462,6 +1503,18 @@ export default {
     line-height: 24px;
     letter-spacing: 0;
     color: #b1b6bb;
+  }
+  .red-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+  .blue-bg {
+    position: absolute;
+    right: 0;
+    bottom: -200px;
+    z-index: 0;
   }
 }
 
@@ -1496,5 +1549,10 @@ export default {
   width: 1px;
   height: 30px;
   border-left: 1px solid #fff;
+}
+
+.check-item-icon {
+  display: inline-block;
+  float: left;
 }
 </style>

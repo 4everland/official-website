@@ -43,9 +43,7 @@
                 style="margin-left: 0px"
               ></span
             ></a>
-            <a target="_blank" href="https://www.facebook.com/4everland.org">
-              <span class="iconfont icon-facebook right-icon"></span
-            ></a>
+
             <a target="_blank" href="https://twitter.com/4everland_org">
               <span class="iconfont icon-changyonglogo44 right-icon"></span
             ></a>

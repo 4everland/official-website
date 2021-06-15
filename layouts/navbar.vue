@@ -16,7 +16,7 @@
               active == 'Feature' ? 'menu-item-active menu-item' : 'menu-item'
             "
           >
-            Features
+            Feature
           </li>
           <li
             @click="toTechnology"
@@ -27,17 +27,9 @@
                 : 'menu-item'
             "
           >
-            Technologies
+            Technology
           </li>
-          <li
-            @click="toBlog"
-            class="menu-item"
-            v-bind:class="
-              active == 'Blog' ? 'menu-item-active menu-item' : 'menu-item'
-            "
-          >
-            Blog
-          </li>
+
           <li
             @click="toRoadmap"
             class="menu-item"
@@ -46,6 +38,16 @@
             "
           >
             Roadmap
+          </li>
+          <li
+            @click="toBlog"
+            class="menu-item"
+            style="margin-left: -30px"
+            v-bind:class="
+              active == 'Blog' ? 'menu-item-active menu-item' : 'menu-item'
+            "
+          >
+            Blog
           </li>
         </ul>
 
@@ -68,8 +70,9 @@
       <ul class="menu2">
         <li @click="toFeature">Feature</li>
         <li @click="toTechnology" class="menu-item">Technology</li>
-        <li @click="toBlog" class="menu-item">Blog</li>
         <li @click="toRoadmap" class="menu-item">Roadmap</li>
+
+        <li @click="toBlog" class="menu-item">Blog</li>
       </ul>
     </el-drawer>
   </header>
@@ -93,7 +96,7 @@ export default {
   },
   data() {
     return {
-      active: "Feature",
+      active: "",
       drawer: false,
       path: "",
     };

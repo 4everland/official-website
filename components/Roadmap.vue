@@ -228,9 +228,9 @@ export default {
     margin-left: 1.333333rem;
     margin-top: 1.666667rem;
     min-height: 0rem;
-    border: 1px solid yellow;
+    border: 1px solid #00cfff;
     float: left;
-    box-shadow: 0 0 10px yellow;
+    box-shadow: 0 0 10px #00cfff;
     z-index: 9;
   }
 
@@ -355,9 +355,9 @@ export default {
     height: 1px;
     border: 1px solid #bababa;
     margin: 0 auto;
-    border: 1px solid yellow;
+    border: 1px solid #00cfff;
     float: left;
-    box-shadow: 0 0 10px yellow;
+    box-shadow: 0 0 10px #00cfff;
     margin-top: -2px;
     z-index: 9;
   }

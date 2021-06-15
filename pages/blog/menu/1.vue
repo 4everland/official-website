@@ -5,7 +5,7 @@
         <div class="html-item" v-for="item of article">
           <p class="acticle-time">{{ item.time }}</p>
           <h1 class="acticle-title">{{ item.title }}</h1>
-          <img class="article-img" :src="item.img" alt="" />
+          <img class="article-img" v-if="item.img" :src="item.img" alt="" />
           <p class="article-content">{{ item.content }}</p>
 
           <nuxt-link :to="item.link">
@@ -31,9 +31,7 @@
               style="margin-left: 0px"
             ></span
           ></a>
-          <a target="_blank" href="https://www.facebook.com/4everland.org">
-            <span class="iconfont icon-facebook right-icon"></span
-          ></a>
+
           <a target="_blank" href="https://twitter.com/4everland_org">
             <span class="iconfont icon-changyonglogo44 right-icon"></span
           ></a>
@@ -153,6 +151,8 @@ export default {
   .article-img {
     position: relative;
     width: 100%;
+    height: 400px;
+    object-fit: cover;
     margin-top: 10px;
   }
   .click-articel {
@@ -246,6 +246,8 @@ export default {
   .article-img {
     position: relative;
     width: 100%;
+    height: 400px;
+    object-fit: cover;
     margin-top: 10px;
   }
   .click-articel {
