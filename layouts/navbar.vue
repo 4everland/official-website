@@ -19,10 +19,10 @@
             Feature
           </li>
           <li
-            @click="toWhitepaper"
+            @click="toTechnology"
             class="menu-item"
             v-bind:class="
-              active == 'Whitepaper'
+              active == 'Technology'
                 ? 'menu-item-active menu-item'
                 : 'menu-item'
             "
@@ -67,7 +67,7 @@
     >
       <ul class="menu2">
         <li @click="toFeature">Feature</li>
-        <li @click="toWhitepaper" class="menu-item">Technology</li>
+        <li @click="toTechnology" class="menu-item">Technology</li>
         <li @click="toBlog" class="menu-item">Blog</li>
         <li @click="toRoadmap" class="menu-item">Roadmap</li>
       </ul>
@@ -78,14 +78,39 @@
 export default {
   components: {},
   created() {},
-  mounted() {},
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  watch: {
+    $route(res) {
+      console.log("路由变化");
+      console.log(res);
+      this.path = res.path;
+      if (res.path != "/" && res.path != "/blog/menu/1") {
+        this.active = "";
+      }
+    },
+  },
   data() {
     return {
       active: "Feature",
       drawer: false,
+      path: "",
     };
   },
+
   methods: {
+    handleScroll() {
+      if (window.scrollY > 1200 && (this.path == "/" || this.path == "")) {
+        this.active = "Feature";
+      }
+      if (window.scrollY > 2300 && (this.path == "/" || this.path == "")) {
+        this.active = "Technology";
+      }
+      if (window.scrollY > 5000 && (this.path == "/" || this.path == "")) {
+        this.active = "Roadmap";
+      }
+    },
     toFeature() {
       this.active = "Feature";
       this.$router.push({
@@ -103,12 +128,12 @@ export default {
       });
       window.scrollTo(0, 5500);
     },
-    toWhitepaper() {
-      this.active = "Whitepaper";
+    toTechnology() {
+      this.active = "Technology";
       this.$router.push({
-        path: "/#whitepaper",
+        path: "/#technologies",
       });
-      window.scrollTo(0, 10);
+      // window.scrollTo(0,10);
     },
     toBlog() {
       this.active = "Blog";

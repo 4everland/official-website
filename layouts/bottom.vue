@@ -36,9 +36,19 @@
         <!-- <img class="share-img" src="/imgs/share@2x.png" alt="" srcset="" /> -->
 
         <div class="share-view">
-          <a target="_blank" href="https://github.com/4everland"
+          <a
+            target="_blank"
+            href="https://github.com/4everland"
+            style="margin-right: 10px"
             ><img class="share-icon" src="/imgs/share/icon1.png" alt=""
           /></a>
+
+          <a target="_blank" href="https://www.facebook.com/4everland.org">
+            <span
+              class="iconfont icon-facebook"
+              style="color: #fff; font-size: 26px; margin-left: -25px"
+            ></span>
+          </a>
 
           <a target="_blank" href="https://twitter.com/4everland_org"
             ><img class="share-icon" src="/imgs/share/icon3.png" alt=""
@@ -315,6 +325,11 @@ export default {
   .share-icon {
     width: 20px;
     margin-right: 20px;
+  }
+
+  .facebook {
+    font-size: 24px !important;
+    color: #fff !important;
   }
 }
 </style>

@@ -17,10 +17,40 @@
       <div class="right-content">
         <p class="right-title">4 everland Blog</p>
         <p class="right-content2">
-          4everland is ãlr you need "to büild wesites iand apps on the new Open
-          Web: 'permissionless, censorship resistant, and; 'free of centralized
-          gatekeepers. 'lelcome. .to. the new. internet.
+          4everland is a cloud computing platform designed to help developers
+          develop Web 3.0 applications efficiently: permissionless, censorship
+          resistant, and free of centralized gatekeepers. Welcome to the new
+          Internet.
         </p>
+        <p class="right-link">4everland.cn Blogs</p>
+
+        <div class="">
+          <a target="_blank" href="https://github.com/4everland">
+            <span
+              class="iconfont icon-github right-icon"
+              style="margin-left: 0px"
+            ></span
+          ></a>
+          <a target="_blank" href="https://www.facebook.com/4everland.org">
+            <span class="iconfont icon-facebook right-icon"></span
+          ></a>
+          <a target="_blank" href="https://twitter.com/4everland_org">
+            <span class="iconfont icon-changyonglogo44 right-icon"></span
+          ></a>
+          <a
+            target="_blank"
+            href="https://t.me/org_4everland 
+"
+          >
+            <span class="iconfont icon-telegram right-icon"></span
+          ></a>
+          <a target="_blank" href="https://www.reddit.com/user/4everland_org/">
+            <span class="iconfont icon-discord-fill right-icon"></span
+          ></a>
+          <a target="_blank" href="mail:info@4everland.org">
+            <span class="iconfont icon-reddit right-icon"></span
+          ></a>
+        </div>
       </div>
     </div>
   </div>
@@ -229,7 +259,7 @@ export default {
 
   .right-content {
     position: relative;
-    width: 280px;
+    width: 320px;
     min-height: 600px;
     box-sizing: border-box;
     padding: 40px;
@@ -256,5 +286,16 @@ export default {
     line-height: 30px;
     color: #989898;
   }
+}
+
+.right-link {
+  position: relative;
+  font-size: 16px;
+  color: #7db4dc;
+  line-height: 40px;
+}
+.right-icon {
+  margin: 5px;
+  color: #000 !important;
 }
 </style>

@@ -4,8 +4,18 @@
       <h3 class="block-title" id="roadmap">Roadmap</h3>
 
       <div class="pc">
-        <img class="left-icon" src="/imgs/left@2x.png" alt="" />
-        <img class="right-icon" src="/imgs/right@2x.png" alt="" />
+        <img
+          class="left-icon"
+          @click="leftChange"
+          src="/imgs/left@2x.png"
+          alt=""
+        />
+        <img
+          class="right-icon"
+          @click="rightChange"
+          src="/imgs/right@2x.png"
+          alt=""
+        />
 
         <div class="roadmap-swpier-view">
           <div class="roadmap-list" style="margin-left: 40px">
@@ -143,7 +153,25 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    leftChange() {
+      let left = document.getElementsByClassName("roadmap-swpier-view")[0]
+        .scrollLeft;
+      if (left > 0) {
+        document.getElementsByClassName("roadmap-swpier-view")[0].scrollLeft =
+          document.getElementsByClassName("roadmap-swpier-view")[0].scrollLeft -
+          400;
+      }
+    },
+
+    rightChange() {
+      let left = document.getElementsByClassName("roadmap-swpier-view")[0]
+        .scrollLeft;
+      document.getElementsByClassName("roadmap-swpier-view")[0].scrollLeft =
+        document.getElementsByClassName("roadmap-swpier-view")[0].scrollLeft +
+        400;
+    },
+  },
 };
 </script>
 <style scoped>
@@ -311,12 +339,14 @@ export default {
   .left-icon {
     position: absolute;
     top: 80px;
+    z-index: 99;
   }
 
   .right-icon {
     position: absolute;
     right: -40px;
     top: 80px;
+    z-index: 99;
   }
   .moblie {
     display: none;

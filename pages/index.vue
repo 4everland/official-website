@@ -210,7 +210,7 @@
     </div>
 
     <div class="mainnet-view">
-      <h3 class="block-title">Technologies</h3>
+      <h3 class="block-title" id="technologies">Technologies</h3>
 
       <div class="security-content">
         <div class="mainnet-line-view">

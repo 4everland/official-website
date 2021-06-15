@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1623722489214') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-changyonglogo44:before {
+  content: "\e726";
+}
+
+.icon-reddit:before {
+  content: "\e698";
+}
+
+.icon-telegram:before {
+  content: "\e8db";
+}
+
+.icon-youjian:before {
+  content: "\e62b";
+}
+
+.icon-github:before {
+  content: "\e64c";
+}
+
+.icon-discord-fill:before {
+  content: "\e75d";
+}
+
+.icon-facebook:before {
+  content: "\e686";
+}
+
+.icon-medium-circle-fill:before {
+  content: "\eabb";
+}
+

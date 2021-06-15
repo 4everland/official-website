@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vHeader></vHeader>
+    <vHeader ref="vheader"></vHeader>
     <Nuxt />
     <vFooter></vFooter>
   </div>
