@@ -2,19 +2,19 @@
   <div class="container bgcolor">
     <div class="security-content2">
       <div class="info-block1">
-        <img
-          class="banner-img"
-          src="/imgs/banner-icon@2x.png"
-          alt=""
-          srcset=""
-        />
-
         <h1 class="website-slogan">The PaaS of Web3.0</h1>
 
         <p class="website-display">
           A Web3.0 cloud computing platform with global acceleration, privacy
           protection, distributed storage and other technical features.
         </p>
+
+        <img
+          class="banner-img"
+          src="/imgs/banner-icon@2x.png"
+          alt=""
+          srcset=""
+        />
 
         <a target="_blank" href="#" id="whitepaper">
           <div class="down-btn">
@@ -181,7 +181,7 @@
                 srcset=""
               />
               <span class="check-item-text"
-                >Distributed PIN with global multi-node
+                >Distributed PIN with global multi-node storage
               </span>
             </div>
             <div class="check-item-view">
@@ -192,7 +192,8 @@
                 srcset=""
               />
               <span class="check-item-text"
-                >TEE-based proof of storage challenge</span
+                >TEE-based proof of storage challenge POSC (Proof of Storage
+                Challenge)</span
               >
             </div>
             <div class="check-item-view">
@@ -388,15 +389,27 @@ const geoJSON = require("../assets/json/geo.json");
 const places = require("../assets/json/ne_110m_populated_places_simple.json");
 const emptyPNG =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADICAYAAADGFbfiAAAC3ElEQVR4nO3VMQHAMAzAsKwsMv5Ai6G+JQh+/O3uPwDw6AgGQGEgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCwLuZud1fAfX9aO5bAAAAAElFTkSuQmCC";
-
 export default {
   components: {
     Roadmap: Roadmap,
+    screenWidth: "",
+    screenHeight: "",
   },
 
   created() {},
   mounted() {
-    this.initGlobe();
+    this.screenWidth = document.body.clientWidth;
+    this.screenHeight = document.body.clientHeight;
+    this.initGlobe(this.screenWidth / 1.5);
+
+    window.onresize = () => {
+      return (() => {
+        this.screenWidth = document.body.clientWidth;
+        this.screenHeight = document.body.clientHeight;
+        console.log(this.screenWidth);
+        this.initGlobe(this.screenWidth / 1.5);
+      })();
+    };
   },
   data() {
     return {
@@ -404,7 +417,7 @@ export default {
     };
   },
   methods: {
-    initGlobe() {
+    initGlobe(size) {
       var locations = [
         [120.831693, 30.019926],
         [116.56352, 40.324982],
@@ -452,8 +465,8 @@ export default {
         });
 
       var world = Globe()
-        .width(777)
-        .height(777)
+        .width(size)
+        .height(size)
         .globeImageUrl(emptyPNG)
         .backgroundColor("rgba(0,0,0,0)")
         .showAtmosphere(true)
@@ -533,7 +546,7 @@ export default {
     position: relative;
     width: 9.066667rem;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 80px;
   }
 
   .website-slogan {
@@ -562,7 +575,6 @@ export default {
     letter-spacing: 0;
     color: #b1b6bb;
     margin: 0 auto;
-    margin-top: 40px;
     text-align: center;
   }
 
@@ -653,10 +665,10 @@ export default {
   .character-item .item-title {
     display: block;
     position: relative;
-    top: 20px;
+    top: 0.766667rem;
     left: 20px;
     width: 8.6rem;
-    font-size: 30px;
+    font-size: 0.4rem;
   }
 
   .character-item .item-content {
@@ -677,7 +689,7 @@ export default {
     position: relative;
     top: 45px;
     width: 9.066667rem;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: normal;
     font-stretch: normal;
     line-height: 0.8rem;
@@ -707,6 +719,8 @@ export default {
     text-align: center;
     color: #7f8489;
     font-size: 18px;
+    height: 50px;
+    line-height: 50px;
   }
 
   .map-view {
@@ -898,10 +912,10 @@ export default {
   .check-item-view {
     position: relative;
     margin-left: 15px;
-    width: 100%;
-    height: 30px;
+    width: 95%;
+    min-height: 30px;
+    line-height: 30px;
     text-align: left;
-    font-size: 14px;
     color: #fff;
     font-weight: normal;
   }
@@ -920,7 +934,7 @@ export default {
     display: block;
     position: relative;
     width: 100%;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: normal;
     font-stretch: normal;
     line-height: 0.8rem;
@@ -970,6 +984,7 @@ export default {
     font-stretch: normal;
     letter-spacing: 0;
     color: #fff;
+    text-align: center;
   }
 
   .mainnet-item-content {
@@ -982,7 +997,7 @@ export default {
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
-    line-height: 20px;
+    line-height: 25px;
     letter-spacing: 0;
     color: #b1b6bb;
   }
@@ -1354,12 +1369,13 @@ export default {
   .check-item-view {
     position: relative;
     margin-left: 15px;
-    width: 100%;
-    height: 30px;
+    width: 95%;
+    min-height: 30px;
+    line-height: 30px;
     text-align: left;
-    font-size: 14px;
     color: #fff;
     font-weight: normal;
+    font-size: 14px;
   }
   .check-item-text {
     margin-left: 10px;

@@ -48,7 +48,7 @@
             <span class="iconfont icon-discord-fill right-icon"></span
           ></a>
           <a target="_blank" href="mail:info@4everland.org">
-            <span class="iconfont icon-reddit right-icon"></span
+            <span class="iconfont icon-youjian right-icon"></span
           ></a>
         </div>
       </div>

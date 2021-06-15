@@ -40,6 +40,11 @@
             :style="{ width: (220 * roadmapNum) / 2 + 240 + 'px' }"
           ></div>
 
+          <div
+            class="time-line2"
+            :style="{ width: (220 * activeNum) / 2 + 'px' }"
+          ></div>
+
           <div class="roadmap-list" style="margin-left: 80px">
             <div
               v-for="(item, index) in roadmap"
@@ -62,7 +67,12 @@
       <div class="moblie">
         <div
           class="time-line"
-          :style="{ height: 85 * roadmapNum + 'px' }"
+          :style="{ height: 90 * roadmapNum + 'px' }"
+        ></div>
+
+        <div
+          class="time-line2"
+          :style="{ height: 90 * activeNum + 'px' }"
         ></div>
 
         <div class="roadmap-list">
@@ -92,6 +102,7 @@ export default {
   data() {
     return {
       roadmapNum: 12,
+      activeNum: 5,
       roadmap: [
         {
           color: "#c61f51",
@@ -211,11 +222,23 @@ export default {
     border: 1px solid #bababa;
     float: left;
   }
+  .time-line2 {
+    position: absolute;
+    width: 1px;
+    margin-left: 1.333333rem;
+    margin-top: 1.666667rem;
+    min-height: 0rem;
+    border: 1px solid yellow;
+    float: left;
+    box-shadow: 0 0 10px yellow;
+    z-index: 9;
+  }
 
   .roadmap-item {
     width: 5.933333rem;
     height: 2.2rem;
     margin-left: 80px;
+    margin-top: 20px;
   }
 
   .roadmap-item .color-line {
@@ -237,7 +260,7 @@ export default {
   }
   .roadmap-content-text {
     position: relative;
-    top: 20px;
+    top: 0px;
     left: 10px;
     color: #fff;
     font-size: 12px;
@@ -321,6 +344,19 @@ export default {
     margin: 0 auto;
   }
 
+  .time-line2 {
+    position: absolute;
+    left: -10%;
+    height: 1px;
+    border: 1px solid #bababa;
+    margin: 0 auto;
+    border: 1px solid yellow;
+    float: left;
+    box-shadow: 0 0 10px yellow;
+    margin-top: -2px;
+    z-index: 9;
+  }
+
   .roadmap-swpier-view {
     position: relative;
     width: 1200px;
@@ -340,6 +376,7 @@ export default {
     position: absolute;
     top: 80px;
     z-index: 99;
+    cursor: pointer;
   }
 
   .right-icon {
@@ -347,6 +384,7 @@ export default {
     right: -40px;
     top: 80px;
     z-index: 99;
+    cursor: pointer;
   }
   .moblie {
     display: none;

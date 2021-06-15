@@ -36,38 +36,36 @@
         <!-- <img class="share-img" src="/imgs/share@2x.png" alt="" srcset="" /> -->
 
         <div class="share-view">
-          <a
-            target="_blank"
-            href="https://github.com/4everland"
-            style="margin-right: 10px"
-            ><img class="share-icon" src="/imgs/share/icon1.png" alt=""
-          /></a>
-
-          <a target="_blank" href="https://www.facebook.com/4everland.org">
-            <span
-              class="iconfont icon-facebook"
-              style="color: #fff; font-size: 26px; margin-left: -25px"
-            ></span>
-          </a>
-
-          <a target="_blank" href="https://twitter.com/4everland_org"
-            ><img class="share-icon" src="/imgs/share/icon3.png" alt=""
-          /></a>
-          <a target="_blank" href="https://t.me/org_4everland "
-            ><img class="share-icon" src="/imgs/share/icon4.png" alt=""
-          /></a>
-          <a
-            target="_blank"
-            href="https://www.reddit.com/user/4everland_org/ 
+          <div class="">
+            <a target="_blank" href="https://github.com/4everland">
+              <span
+                class="iconfont icon-github right-icon"
+                style="margin-left: 0px"
+              ></span
+            ></a>
+            <a target="_blank" href="https://www.facebook.com/4everland.org">
+              <span class="iconfont icon-facebook right-icon"></span
+            ></a>
+            <a target="_blank" href="https://twitter.com/4everland_org">
+              <span class="iconfont icon-changyonglogo44 right-icon"></span
+            ></a>
+            <a
+              target="_blank"
+              href="https://t.me/org_4everland 
 "
-            ><img class="share-icon" src="/imgs/share/icon5.png" alt=""
-          /></a>
-          <a
-            target="_blank"
-            href="mail:info@4everland.org
-"
-            ><img class="share-icon" src="/imgs/share/icon6.png" alt=""
-          /></a>
+            >
+              <span class="iconfont icon-telegram right-icon"></span
+            ></a>
+            <a
+              target="_blank"
+              href="https://www.reddit.com/user/4everland_org/"
+            >
+              <span class="iconfont icon-discord-fill right-icon"></span
+            ></a>
+            <a target="_blank" href="mail:info@4everland.org">
+              <span class="iconfont icon-youjian right-icon"></span
+            ></a>
+          </div>
         </div>
 
         <div class="bottom-link-view">
@@ -181,8 +179,9 @@ export default {
   .copyright {
     position: relative;
     color: #b1b6bb;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
+    margin-top: 30px;
   }
 
   .bottom-link-view {
@@ -200,6 +199,7 @@ export default {
     text-align: center;
     color: #b1b6bb;
     cursor: pointer;
+    font-size: 14px;
   }
 
   .share-view {
@@ -216,6 +216,12 @@ export default {
     width: 0.4rem;
     margin-right: 18px;
     float: left;
+  }
+
+  .right-icon {
+    margin: 10px;
+    font-size: 16px;
+    color: #fff !important;
   }
 }
 
@@ -329,6 +335,12 @@ export default {
 
   .facebook {
     font-size: 24px !important;
+    color: #fff !important;
+  }
+
+  .right-icon {
+    margin: 10px;
+    font-size: 24px;
     color: #fff !important;
   }
 }
