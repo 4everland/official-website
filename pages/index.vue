@@ -850,12 +850,11 @@ export default {
   }
 
   .feature-view .security-content {
-    width: 9.066667rem;
-    min-height: 10.466667rem;
-    margin: auto;
-    margin-top: 1.333333rem;
-    padding: 0 0.133333rem;
-    overflow: hidden;
+    position: relative;
+    width: 8.533333rem;
+    min-height: 9.133333rem;
+    margin: 0px auto;
+    padding: 0 10px;
   }
 
   .feature-view .block-title {
@@ -866,22 +865,30 @@ export default {
     font-size: 0.6rem;
     font-weight: normal;
     font-stretch: normal;
-    line-height: 0.6rem;
+    line-height: 0.8rem;
     color: #fff;
     text-align: center;
+    padding-top: 2rem;
+    margin-top: -2rem;
   }
 
   .feature-item {
+    position: relative;
     height: 501px;
-    width: 300px;
+    width: clac(100% - 0.533333rem);
     display: block;
-    margin: 30px auto;
-    line-height: 100px;
     text-align: center;
-    flex: auto;
     border-radius: 30px;
     background-color: #3b3b3b;
-    overflow: hidden;
+    margin: 30px auto;
+  }
+
+  .feature-item-bg {
+    position: absolute;
+    width: calc(100% - 20px);
+    bottom: 10px;
+    left: 10px;
+    z-index: 1;
   }
 
   .feature-item-header {
@@ -890,6 +897,7 @@ export default {
     height: 100px;
     border-radius: 30px 30px 0 0;
     background-color: #2b85fb;
+    z-index: 2;
   }
 
   .item-header-img {
@@ -911,13 +919,13 @@ export default {
   }
 
   .feature-content {
+    display: block;
     position: relative;
-    top: 40px;
-    width: 276px;
-    height: 122px;
+    top: 0.533333rem;
+    width: 6.533333rem;
+    min-height: 1.626667rem;
     font-size: 14px;
     font-weight: 300;
-    font-stretch: normal;
     line-height: 18px;
     color: #fff;
     margin: 0 auto;
@@ -931,22 +939,27 @@ export default {
     height: 200px;
     margin: 0px auto;
   }
+
   .check-item-view {
     position: relative;
     margin-left: 15px;
-    width: 90%;
+    width: 95%;
     min-height: 30px;
     line-height: 30px;
     text-align: left;
     color: #fff;
     font-weight: normal;
+    font-size: 14px;
+    clear: left;
   }
+
   .check-item-text {
     display: inline-block;
-    width: 100%;
+    width: 80%;
     min-height: 30px;
     margin-left: 10px;
-    margin-top: -10px;
+    margin-top: -5px;
+    float: left;
   }
 
   .mainnet-view {
@@ -1504,20 +1517,19 @@ export default {
     letter-spacing: 0;
     color: #b1b6bb;
   }
-  .red-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-  }
-  .blue-bg {
-    position: absolute;
-    right: 0;
-    bottom: -200px;
-    z-index: 0;
-  }
 }
-
+.red-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+.blue-bg {
+  position: absolute;
+  right: 0;
+  bottom: -200px;
+  z-index: 0;
+}
 .down-left-icon {
   display: block;
   position: relative;

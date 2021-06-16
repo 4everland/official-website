@@ -135,12 +135,12 @@ export default {
           content: "ALPHA launch",
         },
         {
-          color: "#c61f51",
+          color: "#C85179",
           title: "November 2021",
           content: "BETA launch",
         },
         {
-          color: "#c61f51",
+          color: "#2792C3",
           title: "Q1 2022",
           content: "Online bidding system, participate in Genesis node bidding",
         },
@@ -150,13 +150,13 @@ export default {
           content: "Mainnet launch",
         },
         {
-          color: "#c61f51",
+          color: "#CCA6BF",
           title: "V2：Proton（2023-2024）",
           content:
             "Enpower Web3.0 developers expand commercialization capability, launch more developer application tools ",
         },
         {
-          color: "#c61f51",
+          color: "#E7E7EB",
           title: "V3：Atom ( 2025-2026 )",
           content:
             "Cloud Computing of Web3.0Launch virtual machine container, acquire capabilities of Web3.0 cloud computing",

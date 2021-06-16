@@ -312,7 +312,8 @@ export default {
     margin: auto;
     margin-top: 40px;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 24px;
     padding-bottom: 200px;
   }
 

@@ -138,14 +138,15 @@ export default {
 
   .acticle-title {
     position: relative;
-    font-size: 28px;
+    font-size: 30px;
     cursor: pointer;
   }
   .article-content {
     position: relative;
     width: 100%;
-    font-szie: 12px;
+    font-szie: 14px;
     font-weight: 300;
+    line-height: 24px;
     margin-top: 10px;
   }
   .article-img {
@@ -158,7 +159,7 @@ export default {
   .click-articel {
     position: relative;
     font-size: 16px;
-    color: #7db4dc;
+    color: #0397ff;
     font-weight: 500;
     line-height: 50px;
     cursor: pointer;
@@ -184,7 +185,7 @@ export default {
 
   .acticle-time {
     position: relative;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
     color: #989898;
   }
@@ -233,14 +234,15 @@ export default {
 
   .acticle-title {
     position: relative;
-    font-size: 28px;
+    font-size: 30px;
     cursor: pointer;
   }
   .article-content {
     position: relative;
     width: 100%;
-    font-szie: 12px;
+    font-szie: 14px;
     font-weight: 300;
+    line-height: 24px;
     margin-top: 10px;
   }
   .article-img {
