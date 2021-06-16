@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <h2 class="subtitle">Developers deploy to Web3.0 with one click</h2>
+    <h2 class="subtitle">Developers deploy with One click in Web 3.0</h2>
 
     <div class="info-block2">
       <div id="container">
@@ -245,9 +245,9 @@
             <h5 class="mainnet-item-title">4EVER-STORAGE</h5>
             <p class="mainnet-item-content">
               4EVERLAND forms nodes into a huge storage network through Swarm
-              technology, relying on node cooperativeness to achieve persistent
-              storage of specific data and supporting horizontal expansion of
-              nodes.
+              technology, which relies on node cooperativeness to achieve
+              persistent storage of specific data, and supports horizontal
+              expansion of nodes.
             </p>
           </div>
           <div class="mainnet-item">
@@ -260,9 +260,8 @@
             <h5 class="mainnet-item-title">4EVER-GATEWAY</h5>
             <p class="mainnet-item-content">
               The gateway nodes contain dynamic DNS, Data I/O, and Cert Manager
-              modules, and developers can quickly realize safe and reliable
-              global acceleration based on 4EVERLAND through simple
-              configuration.
+              modules. With simple configuration, developers can achieve safe
+              and reliable global acceleration based on 4EVERLAND quickly.
             </p>
           </div>
         </div>
@@ -291,10 +290,10 @@
             />
             <h5 class="mainnet-item-title">Smart Contracts</h5>
             <p class="mainnet-item-content">
-              4EVERLAND's smart contract module mainly includes payment
+              The smart contract module of 4EVERLAND mainly includes payment
               contracts, campaign contracts, lending contracts, control
-              contracts. It achieves open, transparent and free decentralized
-              governance through smart contracts.
+              contracts,etc. It achieves open, transparent and free
+              decentralized governance through smart contracts.
             </p>
           </div>
         </div>
@@ -320,13 +319,19 @@
           </div>
 
           <div class="character-item">
-            <img class="item_img" src="/imgs/c_icon2.png" alt="" srcset="" />
+            <img
+              class="item_img"
+              src="/imgs/c_icon2.png"
+              style="margin-top: 10px"
+              alt=""
+              srcset=""
+            />
             <h5 class="item-title">Storage Provider</h5>
             <p class="item-content">
-              Participate in global node swarm construction by deploying storage
-              node program; participate in node bidding to get node slots, and
-              get storage node seats if you succeed in bidding and enjoy network
-              rewards.
+              Participating in global node swarm construction by deploying
+              storage node program; participating in the node auction to get
+              node slots, and get storage node seats if you can succeed in
+              bidding and enjoy network rewards.
             </p>
           </div>
         </div>
@@ -336,8 +341,8 @@
             <img class="item_img" src="/imgs/c_icon3.png" alt="" srcset="" />
             <h5 class="item-title">Challenger</h5>
             <p class="item-content">
-                   The Challenger initiates a storage proof challenge to all
-              nodes randomly, waits for feedback from the challenged nodes, and
+              The Challenger initiates a storage proof challenge to all nodes
+              randomly, waits for feedback from the challenged nodes, and
               publicizes the response of the challenged nodes to the community
               and initiates a sanction proposal for inactive nodes.
             </p>
@@ -350,7 +355,7 @@
               Developers are the core paid users of 4EVERLAND, who use the
               4EVERLAND developer application, such as publishing DWeb through
               Hosting App or publishing content to the 4EVERLAND network through
-              @4everland/cli, and pay storage and traffic fees to the network.
+              @4everland/cli, and pay the network fee for storage and traffic.
             </p>
           </div>
         </div>
@@ -376,7 +381,7 @@
     </div>
 
     <div class="map-view">
-      <h3 class="map-block-title">Welcome to the <br />new internet!</h3>
+      <h3 class="map-block-title">Welcome to the new internet!</h3>
       <img class="map-img" src="/imgs/map@2x.png" alt="" srcset="" />
     </div>
 
@@ -390,14 +395,14 @@
     <div class="info-block3">
       <h3 class="info-block3-text1">Where we're going</h3>
       <p class="info-block3-text2">
-        4EVERLAND is a great place to carry developers' ideal paradigm for Web
-        3.0, releasing them from the shackles of centeredness and create more
-        robust and secure services. We hope that more developers and scholars
-        will join us on this road to build a globally accelerated,
-        forever-linked network service for more users using 4EVERLAND, a
-        distributed, highly efficient, self-motivated, and low-cost cloud
-        computing network. Let us witness this radical change in server
-        architecture based on the Web 3.0 network evolution.
+        4EVERLAND is the land to pursue developers' ideal paradigm for Web 3.0,
+        releasing them from the shackles of centeredness completely and creating
+        more robust and secure services. We hope that more developers and
+        scholars will join us along the way to build a globally accelerated,
+        forever-linked network service for as many as uers as possible using
+        4EVERLAND, which is a distributed, highly efficient, self-motivated, and
+        low-cost cloud computing network. Witness the radical change in server
+        architecture together and the giant technical leaps in Web3.0.
       </p>
     </div>
   </div>
@@ -1483,12 +1488,14 @@ export default {
     width: 100%;
     min-height: 300px;
     margin-bottom: 96px;
-    overflow: hidden;
   }
 
   .mainnet-item {
+    display: block;
+
     position: relative;
     width: 50%;
+    min-height: 500px;
     float: left;
   }
 
@@ -1518,13 +1525,13 @@ export default {
     top: 30px;
     left: 15px;
     width: 450px;
-    min-height: 62px;
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
     line-height: 24px;
     letter-spacing: 0;
     color: #b1b6bb;
+    box-sizing: border-box;
   }
 }
 .red-bg {

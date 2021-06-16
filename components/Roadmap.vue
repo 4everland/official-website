@@ -127,7 +127,7 @@ export default {
         {
           color: "#c61f51",
           title: "June 2021",
-          content: "White paper published, 4EVERLAND official website launch",
+          content: "Whitepaper published, 4EVERLAND official website launch",
         },
         {
           color: "#c61f51",
@@ -142,7 +142,7 @@ export default {
         {
           color: "#2792C3",
           title: "Q1 2022",
-          content: "Online bidding system, participate in Genesis node bidding",
+          content: "Online auction system, participate in Genesis node bidding",
         },
         {
           color: "#c61f51",
