@@ -3,36 +3,38 @@
     <div class="footer-content">
       <div class="security-content">
         <img class="footer-logo" src="/imgs/logo@2x.png" alt="" srcset="" />
-
-        <form
-          action="https://4everland.us6.list-manage.com/subscribe/post?u=cbf6df6ae142481d9197b48f8&amp;id=45d9abd319"
-          method="post"
-          id="mc-embedded-subscribe-form"
-          name="mc-embedded-subscribe-form"
-          class="validate"
-          target="_blank"
-          novalidate
+        <mailchimp-subscribe
+          url="https://4everland.us6.list-manage.com/subscribe/post-json"
+          user-id="cbf6df6ae142481d9197b48f8"
+          list-id="45d9abd319"
+          @error="onError"
+          @success="onSuccess"
         >
-          <div class="input-view">
-            <input
-              class="input-box"
-              type="email"
-              value=""
-              name="EMAIL"
-              id="mce-EMAIL"
-              placeholder="Enter Your E-mail to sign up for newsletter"
-            />
-            <div class="right-btn">Subscribe</div>
-            <input
-              type="submit"
-              value="Subscribe"
-              name="subscribe"
-              id="mc-embedded-subscribe"
-              class="right-btn"
-            />
-          </div>
-        </form>
-
+          <template v-slot="{ subscribe, setEmail, error, success, loading }">
+            <form
+              class="validate"
+              target="_blank"
+              novalidate
+              @submit.prevent="subscribe"
+            >
+              <div class="input-view">
+                <input
+                  class="input-box"
+                  @input="setEmail($event.target.value)"
+                  type="email"
+                  value=""
+                  name="EMAIL"
+                  id="mce-EMAIL"
+                  placeholder="Enter Your E-mail to sign up for newsletter"
+                />
+                <button class="right-btn" type="submit">Subscribe</button>
+              </div>
+              <p v-if="error">{{ error }}</p>
+              <p v-if="success">Yay!</p>
+              <p v-if="loading">Loading…</p>
+            </form>
+          </template>
+        </mailchimp-subscribe>
         <!-- <img class="share-img" src="/imgs/share@2x.png" alt="" srcset="" /> -->
 
         <div class="share-view">
@@ -49,7 +51,7 @@
             ></a>
             <a
               target="_blank"
-              href="https://t.me/org_4everland 
+              href="https://t.me/org_4everland
 "
             >
               <span class="iconfont icon-telegram right-icon"></span
@@ -80,8 +82,11 @@
   </footer>
 </template>
 <script>
+import MailchimpSubscribe from "vue-mailchimp-subscribe";
 export default {
-  components: {},
+  components: {
+    MailchimpSubscribe,
+  },
   created() {},
   mounted() {},
   data() {
@@ -91,6 +96,12 @@ export default {
     };
   },
   methods: {
+    onSuccess() {
+      console.log(arguments);
+    },
+    onError() {
+      console.log(arguments);
+    },
     toTerm() {
       this.$router.push({
         path: "/service",
