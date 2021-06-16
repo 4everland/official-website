@@ -50,8 +50,8 @@
     <div class="feature-view" ref="first">
       <h3 class="block-title" id="features">Features</h3>
       <div class="security-content">
-        <img src="/imgs/red@2x.png" class="red-bg" alt="" srcset="" />
-        <img src="/imgs/blue@2x.png" class="blue-bg" alt="" srcset="" />
+        <img v-lazy="imgArr[0]" class="red-bg" alt="" srcset="" />
+        <img v-lazy="imgArr[1]" class="blue-bg" alt="" srcset="" />
         <div class="feature-item">
           <img
             class="feature-item-bg"
@@ -435,6 +435,14 @@ export default {
   data() {
     return {
       msg: "Welcom to FirstApp",
+
+      imgArr: [
+        "/imgs/red@2x.png",
+        "/imgs/blue@2x.png",
+        "/imgs/border@2x.png",
+        "/imgs/GLOBAL@2x.png",
+        "/imgs/sggg@2x.png",
+      ],
     };
   },
   methods: {

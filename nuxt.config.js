@@ -51,6 +51,10 @@ export default {
     "@/plugins/element-ui",
     "~/plugins/font-awesome",
     "~/plugins/route",
+    {
+      src: "@/plugins/vue-lazyload",
+      ssr: false
+    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

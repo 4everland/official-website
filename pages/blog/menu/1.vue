@@ -5,7 +5,7 @@
         <div class="html-item" v-for="item of article">
           <p class="acticle-time">{{ item.time }}</p>
           <h1 class="acticle-title">{{ item.title }}</h1>
-          <img class="article-img" v-if="item.img" :src="item.img" alt="" />
+          <img class="article-img" v-if="item.img" v-lazy="item.img" alt="" />
           <p class="article-content">{{ item.content }}</p>
 
           <nuxt-link :to="item.link">
