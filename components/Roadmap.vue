@@ -105,17 +105,17 @@ export default {
       activeNum: 5,
       roadmap: [
         {
-          color: "#c61f51",
+          color: "#E60033",
           title: "V1：Quark（2021-2022）The Paas of Web 3.0",
           content: "Genesis Product, Realizing the Initial Vision",
         },
         {
-          color: "#c95049",
+          color: "#E83929",
           title: "Q1 2021.",
           content: " Market research and product prototype",
         },
         {
-          color: "#c53d43",
+          color: "#E83929",
           title: "March 2021.",
           content: "Product Design & Technology Development",
         },
@@ -125,27 +125,27 @@ export default {
           content: "Establish 4EVERLAND Foundation and technical community ",
         },
         {
-          color: "#c61f51",
+          color: "#E95464",
           title: "June 2021",
           content: "Whitepaper published, 4EVERLAND official website launch",
         },
         {
-          color: "#c61f51",
+          color: "#EB6EA5",
           title: "August 2021",
           content: "ALPHA launch",
         },
         {
-          color: "#C85179",
+          color: "#E198B4",
           title: "November 2021",
           content: "BETA launch",
         },
         {
-          color: "#2792C3",
+          color: "#824880",
           title: "Q1 2022",
           content: "Online auction system, participate in Genesis node bidding",
         },
         {
-          color: "#c61f51",
+          color: "#915C8B",
           title: "2022.Q2",
           content: "Mainnet launch",
         },
@@ -156,7 +156,7 @@ export default {
             "Enpower Web3.0 developers expand commercialization capability, launch more developer application tools ",
         },
         {
-          color: "#E7E7EB",
+          color: "#3E62AD",
           title: "V3：Atom ( 2025-2026 )",
           content:
             "Cloud Computing of Web3.0Launch virtual machine container, acquire capabilities of Web3.0 cloud computing",
