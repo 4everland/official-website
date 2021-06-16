@@ -1112,6 +1112,7 @@ export default {
     top: 247px;
     width: 220px;
     height: 48px;
+    left: 180px;
     background-image: url("/imgs/down-btn@2x.png");
   }
 
