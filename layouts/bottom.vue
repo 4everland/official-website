@@ -60,7 +60,7 @@
             >
               <span class="iconfont icon-discord-fill right-icon"></span
             ></a>
-            <a target="_blank" href="mail:info@4everland.org">
+            <a target="_blank" href="mail:contact@4everland.org">
               <span
                 class="iconfont icon-youjian right-icon"
                 style="margin-right: 0px"

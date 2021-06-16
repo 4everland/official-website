@@ -22,7 +22,7 @@
           resistant, and free of centralized gatekeepers. Welcome to the new
           Internet.
         </p>
-        <div class="">
+        <div style="margin-top: 50px">
           <a target="_blank" href="https://github.com/4everland">
             <span
               class="iconfont icon-github right-icon"
@@ -43,7 +43,7 @@
           <a target="_blank" href="https://www.reddit.com/user/4everland_org/">
             <span class="iconfont icon-discord-fill right-icon"></span
           ></a>
-          <a target="_blank" href="mail:info@4everland.org">
+          <a target="_blank" href="mail:contact@4everland.org">
             <span class="iconfont icon-youjian right-icon"></span
           ></a>
         </div>
@@ -207,7 +207,7 @@ export default {
     top: 104px;
     width: 1px;
     height: 359px;
-    border-left: 1px dashed #1e2226;
+    border-left: 1px dashed #888;
     float: left;
   }
 
