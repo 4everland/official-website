@@ -16,7 +16,7 @@
               active == 'Feature' ? 'menu-item-active menu-item' : 'menu-item'
             "
           >
-            Features
+            Feature
           </li>
           <li
             @click="toTechnology"
@@ -252,6 +252,7 @@ export default {
     position: relative;
     top: 30px;
     float: left;
+    cursor: pointer;
   }
   .menu {
     display: block;

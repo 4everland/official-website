@@ -424,18 +424,11 @@ export default {
 
   created() {},
   mounted() {
-    this.screenWidth = document.body.clientWidth;
-    this.screenHeight = document.body.clientHeight;
-    this.initGlobe(this.screenWidth / 1.5);
-
-    // window.onresize = () => {
-    //   return (() => {
-    //     this.screenWidth = document.body.clientWidth;
-    //     this.screenHeight = document.body.clientHeight;
-    //     console.log(this.screenWidth);
-    //     this.initGlobe(this.screenWidth / 1.5);
-    //   })();
-    // };
+    if (this.isMobile()) {
+      this.initGlobe(320);
+    } else {
+      this.initGlobe(640);
+    }
   },
   data() {
     return {
@@ -451,6 +444,12 @@ export default {
     };
   },
   methods: {
+    isMobile() {
+      let flag = navigator.userAgent.match(
+        /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+      );
+      return flag;
+    },
     initGlobe(size) {
       var locations = [
         [120.831693, 30.019926],
@@ -578,7 +577,7 @@ export default {
   .banner-img {
     display: block;
     position: relative;
-    width: 9.066667rem;
+    width: 6.066667rem;
     margin: 0 auto;
     margin-top: 80px;
   }
@@ -694,6 +693,7 @@ export default {
     position: relative;
     top: 0.266667rem;
     float: left;
+    width: 1rem;
   }
 
   .character-item .item-title {
@@ -834,7 +834,7 @@ export default {
     display: block;
     position: relative;
     top: 0.866667rem;
-    width: 7.133333rem;
+    width: 8.133333rem;
     height: 1.826667rem;
     font-size: 0.24rem;
     font-weight: normal;
@@ -842,6 +842,7 @@ export default {
     line-height: 0.4rem;
     color: #fff;
     margin: 0 auto;
+    text-align: center;
   }
 
   .phone-item {
@@ -1035,7 +1036,6 @@ export default {
     font-stretch: normal;
     letter-spacing: 0;
     color: #fff;
-    text-align: center;
   }
 
   .mainnet-item-content {
@@ -1097,7 +1097,7 @@ export default {
   .website-display {
     display: block;
     position: relative;
-    top: 67px;
+    top: 97px;
     width: 657px;
     height: 95px;
     font-size: 30px;
@@ -1213,7 +1213,6 @@ export default {
     position: relative;
     width: 100%;
     min-height: 8.333333rem;
-    overflow: hidden;
     padding-bottom: 2.066667rem;
   }
 
@@ -1233,10 +1232,9 @@ export default {
   .map-img {
     display: block;
     position: relative;
-    top: 90px;
     width: 980px;
-    height: 530px;
-    margin: 0 auto;
+    margin: 120px auto;
+    margin-bottom: 0px;
   }
 
   .white-line-img {
@@ -1310,6 +1308,9 @@ export default {
     min-height: 400px;
     background-color: #fff;
     margin-top: -0.683333rem;
+  }
+  .info-block5 .block-title {
+    line-height: 120px;
   }
   .info-block5 .security-content3 {
     position: relative;

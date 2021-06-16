@@ -22,7 +22,6 @@
           resistant, and free of centralized gatekeepers. Welcome to the new
           Internet.
         </p>
-        <p class="right-link">4everland.cn Blogs</p>
         <div class="">
           <a target="_blank" href="https://github.com/4everland">
             <span
@@ -104,7 +103,7 @@ export default {
   .menu-content {
     position: relative;
     width: 9.066667rem;
-    min-height: 21.333333rem;
+    min-height: 15.333333rem;
     margin: 0 auto;
     background-color: #fff;
     padding-bottom: 2.666667rem;
@@ -127,12 +126,7 @@ export default {
     float: left;
   }
   .line {
-    position: relative;
-    top: 104px;
-    width: 1px;
-    height: 359px;
-    border-left: 1px dashed #1e2226;
-    float: left;
+    display: none;
   }
 
   .acticle-title {
@@ -151,7 +145,7 @@ export default {
   .article-img {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 320px;
     object-fit: cover;
     margin-top: 10px;
   }
@@ -266,10 +260,11 @@ export default {
 
   .right-content2 {
     position: relative;
-    font-size: 12px;
-    color: #1e1d1e;
+    width: 300px;
     margin-top: 70px;
-    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
   }
   .acticle-time {
     position: relative;

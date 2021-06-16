@@ -614,6 +614,29 @@ export default {
     overflow-y: scroll;
     font-size: 12px;
   }
+
+  .acticle-view img {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .acticle-view h1 {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.533333rem;
+    line-height: 1.066667rem;
+    margin-bottom: 30px;
+  }
+
+  .acticle-view p {
+    line-height: 20px;
+    color: #989898;
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -672,6 +695,29 @@ export default {
     padding: 40px;
     overflow-y: scroll;
     font-size: 12px;
+  }
+
+  .acticle-view img {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .acticle-view h1 {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.533333rem;
+    line-height: 1.066667rem;
+    margin-bottom: 30px;
+  }
+
+  .acticle-view p {
+    line-height: 20px;
+    color: #989898;
+    margin-bottom: 30px;
   }
 }
 </style>
