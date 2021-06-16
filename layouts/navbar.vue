@@ -104,6 +104,9 @@ export default {
 
   methods: {
     handleScroll() {
+      if (this.active == "Blog") {
+        return;
+      }
       this.active = "";
       if (
         Math.abs(

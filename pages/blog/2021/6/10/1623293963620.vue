@@ -317,6 +317,7 @@ export default {
     margin-top: 40px;
     border-radius: 5px;
     font-size: 12px;
+    padding-bottom: 200px;
   }
 
   .back-text {
