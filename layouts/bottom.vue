@@ -61,7 +61,10 @@
               <span class="iconfont icon-discord-fill right-icon"></span
             ></a>
             <a target="_blank" href="mail:info@4everland.org">
-              <span class="iconfont icon-youjian right-icon"></span
+              <span
+                class="iconfont icon-youjian right-icon"
+                style="margin-right: 0px"
+              ></span
             ></a>
           </div>
         </div>
@@ -320,7 +323,7 @@ export default {
   }
   .share-view {
     position: relative;
-    width: 300px;
+    width: 480px;
     left: 30px;
     top: 20px;
     margin: 0px auto;
@@ -340,6 +343,7 @@ export default {
     margin: 10px;
     font-size: 24px;
     color: #fff !important;
+    margin-right: 60px;
   }
 }
 </style>

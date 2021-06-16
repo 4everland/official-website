@@ -16,7 +16,7 @@
               active == 'Feature' ? 'menu-item-active menu-item' : 'menu-item'
             "
           >
-            Feature
+            Features
           </li>
           <li
             @click="toTechnology"
@@ -104,13 +104,28 @@ export default {
 
   methods: {
     handleScroll() {
-      if (window.scrollY > 1200 && (this.path == "/" || this.path == "")) {
+      this.active = "";
+      if (
+        Math.abs(
+          document.getElementById("features").getBoundingClientRect().top
+        ) < 400
+      ) {
         this.active = "Feature";
       }
-      if (window.scrollY > 2300 && (this.path == "/" || this.path == "")) {
+
+      if (
+        Math.abs(
+          document.getElementById("technologies").getBoundingClientRect().top
+        ) < 400
+      ) {
         this.active = "Technology";
       }
-      if (window.scrollY > 5000 && (this.path == "/" || this.path == "")) {
+
+      if (
+        Math.abs(
+          document.getElementById("roadmap").getBoundingClientRect().top
+        ) < 400
+      ) {
         this.active = "Roadmap";
       }
     },

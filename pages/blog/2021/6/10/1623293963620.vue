@@ -225,6 +225,7 @@ export default {
     border-radius: 5px;
     overflow-y: scroll;
     font-size: 12px;
+    padding-bottom: 200px;
   }
 
   .back-text {
@@ -242,6 +243,7 @@ export default {
     position: relative;
     display: block;
     width: 100%;
+    margin-bottom: 30px;
   }
 
   .acticle-view h1 {
@@ -251,11 +253,13 @@ export default {
     text-align: center;
     font-size: 0.533333rem;
     line-height: 1.066667rem;
+    margin-bottom: 30px;
   }
 
   .acticle-view p {
     line-height: 20px;
     color: #989898;
+    margin-bottom: 30px;
   }
 }
 
@@ -312,9 +316,7 @@ export default {
     margin: auto;
     margin-top: 40px;
     border-radius: 5px;
-    font-size: 14px;
-    line-height: 24px;
-    padding-bottom: 200px;
+    font-size: 12px;
   }
 
   .back-text {
@@ -332,6 +334,7 @@ export default {
     position: relative;
     display: block;
     width: 100%;
+    margin-bottom: 30px;
   }
 
   .acticle-view h1 {
@@ -339,13 +342,15 @@ export default {
     display: block;
     width: 100%;
     text-align: center;
-    font-size: 40px;
-    line-height: 80px;
+    font-size: 0.533333rem;
+    line-height: 1.066667rem;
+    margin-bottom: 30px;
   }
 
   .acticle-view p {
-    line-height: 40px;
+    line-height: 20px;
     color: #989898;
+    margin-bottom: 30px;
   }
 }
 </style>

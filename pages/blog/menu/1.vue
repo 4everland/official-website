@@ -15,7 +15,7 @@
       </div>
       <div class="line"></div>
       <div class="right-content">
-        <p class="right-title">4 everland Blog</p>
+        <p class="right-title">4EVERLAND Blog</p>
         <p class="right-content2">
           4everland is a cloud computing platform designed to help developers
           develop Web 3.0 applications efficiently: permissionless, censorship
@@ -23,7 +23,6 @@
           Internet.
         </p>
         <p class="right-link">4everland.cn Blogs</p>
-
         <div class="">
           <a target="_blank" href="https://github.com/4everland">
             <span
@@ -129,7 +128,7 @@ export default {
   }
   .line {
     position: relative;
-    top: 30px;
+    top: 104px;
     width: 1px;
     height: 359px;
     border-left: 1px dashed #1e2226;
@@ -144,10 +143,10 @@ export default {
   .article-content {
     position: relative;
     width: 100%;
-    font-szie: 14px;
-    font-weight: 300;
+    font-size: 14px;
     line-height: 24px;
     margin-top: 10px;
+    color: #666;
   }
   .article-img {
     position: relative;
@@ -169,25 +168,11 @@ export default {
     display: none;
   }
 
-  .right-title {
-    position: relative;
-    font-size: 20px;
-    color: #1e2226;
-    font-weight: 500;
-  }
-
-  .right-content2 {
-    position: relative;
-    font-size: 12px;
-    color: #000;
-    font-weight: 300;
-  }
-
   .acticle-time {
     position: relative;
     font-size: 14px;
     line-height: 30px;
-    color: #989898;
+    color: #666666;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -225,7 +210,7 @@ export default {
   }
   .line {
     position: relative;
-    top: 30px;
+    top: 104px;
     width: 1px;
     height: 359px;
     border-left: 1px dashed #1e2226;
@@ -240,10 +225,10 @@ export default {
   .article-content {
     position: relative;
     width: 100%;
-    font-szie: 14px;
-    font-weight: 300;
+    font-size: 14px;
     line-height: 24px;
     margin-top: 10px;
+    color: #666;
   }
   .article-img {
     position: relative;
@@ -268,11 +253,13 @@ export default {
     box-sizing: border-box;
     padding: 40px;
     float: left;
+    color: #1e1d1e;
   }
 
   .right-title {
     position: relative;
-    font-size: 20px;
+    margin-top: 55px;
+    font-size: 16px;
     color: #1e2226;
     font-weight: 500;
   }
@@ -280,23 +267,24 @@ export default {
   .right-content2 {
     position: relative;
     font-size: 12px;
-    color: #000;
+    color: #1e1d1e;
+    margin-top: 70px;
     font-weight: 300;
   }
-
   .acticle-time {
     position: relative;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
-    color: #989898;
+    color: #666666;
   }
 }
 
 .right-link {
   position: relative;
-  font-size: 16px;
+  font-size: 14px;
   color: #7db4dc;
-  line-height: 40px;
+  line-height: 60px;
+  font-weight: 400;
 }
 .right-icon {
   margin: 5px;
