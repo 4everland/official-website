@@ -48,7 +48,7 @@
     </div>
 
     <div class="feature-view" ref="first">
-      <h3 class="block-title" id="features">Features</h3>
+      <h3 class="block-title" id="features">Feature</h3>
       <div class="security-content">
         <img v-lazy="imgArr[0]" class="red-bg" alt="" srcset="" />
         <img v-lazy="imgArr[1]" class="blue-bg" alt="" srcset="" />
@@ -231,7 +231,7 @@
     </div>
 
     <div class="mainnet-view">
-      <h3 class="block-title" id="technologies">Technologies</h3>
+      <h3 class="block-title" id="technologies">Technology</h3>
 
       <div class="security-content">
         <div class="mainnet-line-view">
@@ -304,7 +304,7 @@
     <img class="white-line-img" src="/imgs/white_img@2x.png" alt="" srcset="" />
     <div class="info-block4">
       <div class="security-content3">
-        <h3 class="block-title">Participants</h3>
+        <h3 class="block-title">Participant</h3>
 
         <div class="character-line-view">
           <div class="character-item">
