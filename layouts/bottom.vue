@@ -90,7 +90,7 @@
           <div class="link-item" @click="toPrivacy">Privacy Policy</div>
         </div>
 
-        <p class="copyright">©️ 2021 4EVERLAND FOUNDATION LTD, Inc</p>
+        <p class="copyright">©️ 2021 4EVERLAND FOUNDATION LTD</p>
       </div>
     </div>
   </footer>
