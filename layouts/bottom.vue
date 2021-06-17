@@ -2,8 +2,13 @@
   <footer>
     <div class="footer-content">
       <div class="security-content">
-        <img class="footer-logo" src="/imgs/logo@2x.png" alt="" srcset="" />
-
+        <img
+          class="logo-img"
+          @click="toHome"
+          src="/imgs/logo.svg"
+          alt=""
+          srcset=""
+        />
         <div :class="eamil_check ? 'input-view' : 'input-view dis-btn'">
           <input
             class="input-box"
@@ -414,5 +419,13 @@ export default {
   .dis-btn {
     background-color: #c1c1c1;
   }
+}
+.logo-img {
+  display: block;
+  position: relative;
+  top: 40px;
+  width: 280px;
+  height: 39px;
+  margin: 0px auto;
 }
 </style>
