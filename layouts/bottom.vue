@@ -48,6 +48,12 @@
               target="_blank"
               href="https://www.reddit.com/user/4everland_org/"
             >
+              <span class="iconfont icon-reddit right-icon"></span
+            ></a>
+            <a target="_blank" href="https://4everland.medium.com/">
+              <span class="iconfont icon-medium-circle-fill right-icon"></span
+            ></a>
+            <a target="_blank" href="https://discord.gg/sxtHDvvpuT">
               <span class="iconfont icon-discord-fill right-icon"></span
             ></a>
             <a target="_blank" href="mailto:contact@4everland.org">

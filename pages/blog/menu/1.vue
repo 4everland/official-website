@@ -35,12 +35,18 @@
           ></a>
           <a
             target="_blank"
-            href="https://t.me/org_4everland 
+            href="https://t.me/org_4everland
 "
           >
             <span class="iconfont icon-telegram right-icon"></span
           ></a>
           <a target="_blank" href="https://www.reddit.com/user/4everland_org/">
+            <span class="iconfont icon-reddit right-icon"></span
+          ></a>
+          <a target="_blank" href="https://4everland.medium.com/">
+            <span class="iconfont icon-medium-circle-fill right-icon"></span
+          ></a>
+          <a target="_blank" href="https://discord.gg/sxtHDvvpuT">
             <span class="iconfont icon-discord-fill right-icon"></span
           ></a>
           <a target="_blank" href="mail:contact@4everland.org">
@@ -245,7 +251,7 @@ export default {
     width: 320px;
     min-height: 600px;
     box-sizing: border-box;
-    padding: 40px;
+    padding-left: 40px;
     float: left;
     color: #1e1d1e;
   }
@@ -261,7 +267,7 @@ export default {
   .right-content2 {
     position: relative;
     width: 300px;
-    margin-top: 70px;
+    margin-top: 40px;
     font-size: 14px;
     line-height: 24px;
     color: #666;
