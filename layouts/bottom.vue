@@ -415,4 +415,12 @@ export default {
     background-color: #c1c1c1;
   }
 }
+.logo-img {
+  display: block;
+  position: relative;
+  top: 40px;
+  width: 280px;
+  height: 39px;
+  margin: 0px auto;
+}
 </style>

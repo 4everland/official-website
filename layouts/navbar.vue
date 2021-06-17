@@ -233,6 +233,7 @@ export default {
     height: 1.066667rem;
     line-height: 1.066667rem;
     text-align: center;
+    color: #b1b6bb;
   }
 }
 
@@ -264,7 +265,7 @@ export default {
     float: left;
     height: 100px;
     line-height: 100px;
-    color: #fff;
+    color: #b1b6bb;
     margin-left: 50px;
   }
   .menu-item {
@@ -274,8 +275,9 @@ export default {
     float: left;
     text-align: center;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     cursor: pointer;
+    color: #b1b6bb;
   }
 
   .menu-item-active {
