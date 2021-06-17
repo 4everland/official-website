@@ -2,14 +2,16 @@
   <div class="content">
     <div class="menu-content">
       <div class="left-content">
-        <div class="html-item" v-for="item of article">
-          <nuxt-link :to="item.link">
-            <p class="acticle-time">{{ item.time }}</p>
-            <h1 class="acticle-title">{{ item.title }}</h1>
-            <img class="article-img" v-if="item.img" v-lazy="item.img" alt="" />
-            <p class="article-content">{{ item.content }}</p>
-            <p class="click-articel">READ MORE</p>
-          </nuxt-link>
+        <div
+          class="html-item"
+          v-for="item of article"
+          @click="toActice(item.link)"
+        >
+          <p class="acticle-time">{{ item.time }}</p>
+          <h1 class="acticle-title">{{ item.title }}</h1>
+          <img class="article-img" v-if="item.img" v-lazy="item.img" alt="" />
+          <p class="article-content">{{ item.content }}</p>
+          <p class="click-articel">READ MORE</p>
         </div>
       </div>
       <div class="line"></div>
@@ -85,11 +87,23 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    toActice(link) {
+      this.$router.push({
+        path: link,
+      });
+    },
+  },
 };
 </script>
 
-<style scoped>
+<style>
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: underline !important;
+}
 @media only screen and (max-width: 1280px) {
   .content {
     position: relative;

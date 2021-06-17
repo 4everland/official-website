@@ -44,7 +44,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["./assets/style/iconfont.css"],
+  css: ["./assets/style/iconfont.css", "./assets/style/reset.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [

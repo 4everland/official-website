@@ -563,6 +563,7 @@ export default {
     width: 100%;
     min-height: 400px;
     background-color: #1e2226;
+    padding-bottom: 50px;
   }
   .service-content {
     position: relative;
@@ -571,7 +572,7 @@ export default {
     background-color: #fff;
     margin: 0 auto;
     overflow: hidden;
-    padding-bottom: 60px;
+    padding: 0.533333rem;
     box-sizing: content-box;
   }
 
@@ -610,7 +611,6 @@ export default {
     margin: auto;
     margin-top: 40px;
     border-radius: 5px;
-    padding: 0.533333rem;
     font-size: 12px;
   }
 
@@ -645,6 +645,7 @@ export default {
     width: 100%;
     min-height: 400px;
     background-color: #1e2226;
+    padding-bottom: 80px;
   }
   .service-content {
     position: relative;
