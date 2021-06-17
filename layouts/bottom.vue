@@ -140,6 +140,10 @@ export default {
         path: "/privacy",
       });
     },
+
+    setEmail(value) {
+      console.log(value);
+    },
   },
 };
 </script>

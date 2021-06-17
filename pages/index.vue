@@ -39,7 +39,10 @@
       </div>
     </div>
 
-    <h2 class="subtitle">Developers deploy with One click in Web 3.0</h2>
+    <h2 class="subtitle">
+      Developers deploy with One click in
+      <span style="font-weight: 600"> Web 3.0</span>
+    </h2>
 
     <div class="info-block2">
       <div id="container">
@@ -1016,6 +1019,7 @@ export default {
   .mainnet-item {
     position: relative;
     width: 100%;
+    min-height: 1.333333rem;
     margin-bottom: 0.833333rem;
   }
 
@@ -1459,6 +1463,7 @@ export default {
     position: relative;
     width: 100%;
     min-height: 785px;
+    padding-bottom: 200px;
   }
 
   .mainnet-view .block-title {
@@ -1478,9 +1483,8 @@ export default {
   .mainnet-view .security-content {
     position: relative;
     width: 1200px;
-    min-height: 785px;
+    min-height: 985px;
     margin: 0 auto;
-    margin-top: 100px;
   }
 
   .mainnet-line-view {
@@ -1488,12 +1492,10 @@ export default {
     position: relative;
     width: 100%;
     min-height: 300px;
-    margin-bottom: 96px;
   }
 
   .mainnet-item {
     display: block;
-
     position: relative;
     width: 50%;
     min-height: 500px;
@@ -1505,6 +1507,8 @@ export default {
     margin: 0;
     padding: 0;
     position: relative;
+    width: 488px;
+    height: 288px;
   }
 
   .mainnet-item-title {
@@ -1552,12 +1556,14 @@ export default {
   left: 0;
   top: 0;
   z-index: 0;
+  width: 400px;
 }
 .blue-bg {
   position: absolute;
   right: 0;
-  bottom: -200px;
+  bottom: 0px;
   z-index: 0;
+  width: 400px;
 }
 .down-left-icon {
   display: block;
