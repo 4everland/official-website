@@ -579,13 +579,12 @@ export default {
   .acticle-view {
     position: relative;
     width: 8.066667rem;
-    height: 960px;
+    min-height: 960px;
     background: #f3f3f3;
     margin: auto;
     margin-top: 40px;
     border-radius: 5px;
     padding: 0.533333rem;
-    overflow-y: scroll;
     font-size: 12px;
   }
 
@@ -636,6 +635,7 @@ export default {
     width: 100%;
     min-height: 400px;
     background-color: #1e2226;
+    padding-bottom: 100px;
   }
   .service-content {
     position: relative;
@@ -677,13 +677,12 @@ export default {
   .acticle-view {
     position: relative;
     width: 900px;
-    height: 960px;
+    min-height: 960px;
     background: #f3f3f3;
     margin: auto;
     margin-top: 40px;
     border-radius: 5px;
     padding: 40px;
-    overflow-y: scroll;
     font-size: 12px;
   }
 
