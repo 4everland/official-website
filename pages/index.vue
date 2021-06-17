@@ -297,7 +297,7 @@
                   alt=""
                   srcset=""
                 />
-                <h5 class="mainnet-item-title">Smart Contracts</h5>
+                <h5 class="mainnet-item-title">Smart Contract</h5>
                 <p class="mainnet-item-content">
                   The smart contract module of 4EVERLAND mainly includes payment
                   contracts, campaign contracts, lending contracts, control
@@ -1267,7 +1267,6 @@ export default {
     display: block;
     position: relative;
     top: 30px;
-    width: 459px;
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
