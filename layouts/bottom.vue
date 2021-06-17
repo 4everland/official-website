@@ -2,7 +2,7 @@
   <footer>
     <div class="footer-content">
       <div class="security-content">
-        <img class="footer-logo" src="/imgs/logo@2x.png" alt="" srcset="" />
+        <img class="footer-logo" src="/imgs/logo.svg" alt="" srcset="" />
 
         <div :class="eamil_check ? 'input-view' : 'input-view dis-btn'">
           <input
