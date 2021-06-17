@@ -395,7 +395,7 @@
     </div>
 
     <div class="map-view">
-      <h3 class="map-block-title">Welcome to the next generation internet</h3>
+      <h3 class="map-block-title">Welcome to the <br/> next generation internet</h3>
       <img class="map-img" src="/imgs/map@2x.png" alt="" srcset="" />
     </div>
 
