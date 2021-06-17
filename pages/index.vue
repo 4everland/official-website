@@ -1443,6 +1443,7 @@ export default {
     width: 1200px;
     min-height: 985px;
     margin: 0 auto;
+    margin-top: 120px;
   }
 
   .mainnet-line-view {

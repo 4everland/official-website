@@ -2,38 +2,27 @@
   <footer>
     <div class="footer-content">
       <div class="security-content">
-        <img class="footer-logo" src="/imgs/logo.svg" alt="" srcset="" />
-        <mailchimp-subscribe
-          url="https://4everland.us6.list-manage.com/subscribe/post-json"
-          user-id="cbf6df6ae142481d9197b48f8"
-          list-id="45d9abd319"
-          @error="onError"
-          @success="onSuccess"
-        >
-          <template v-slot="{ subscribe, setEmail, error, success, loading }">
-            <form
-              class="validate"
-              target="_blank"
-              novalidate
-              @submit.prevent="subscribe"
-            >
-              <div class="input-view">
-                <input
-                  class="input-box"
-                  @input="setEmail($event.target.value)"
-                  type="email"
-                  value=""
-                  name="EMAIL"
-                  id="mce-EMAIL"
-                  placeholder="Enter Your E-mail to sign up for newsletter →"
-                />
-                <button class="right-btn" type="submit">Subscribe</button>
-              </div>
-              <p v-if="error"></p>
-              <p v-if="success"></p>
-            </form>
-          </template>
-        </mailchimp-subscribe>
+        <img class="footer-logo" src="/imgs/logo@2x.png" alt="" srcset="" />
+
+        <div :class="eamil_check ? 'input-view' : 'input-view dis-btn'">
+          <input
+            class="input-box"
+            @input="setEmail()"
+            v-model="email_address"
+            type="email"
+            value=""
+            placeholder="Enter Your E-mail to sign up for newsletter"
+          />
+          <button
+            class="right-btn"
+            type="submit"
+            :disabled="!eamil_check"
+            @click="toSub"
+          >
+            Subscribe
+          </button>
+        </div>
+
         <!-- <img class="share-img" src="/imgs/share@2x.png" alt="" srcset="" /> -->
 
         <div class="share-view">
@@ -108,6 +97,8 @@
 </template>
 <script>
 import MailchimpSubscribe from "vue-mailchimp-subscribe";
+import axios from "axios";
+
 export default {
   components: {
     MailchimpSubscribe,
@@ -120,15 +111,19 @@ export default {
       drawer: false,
       centerDialogVisible: false,
       successDialogVisible: false,
+      email_address: "",
     };
   },
   methods: {
-    onSuccess() {
-      this.successDialogVisible = true;
+    async getData() {
+      let { data } = await axios({
+        withCredentials: true,
+        method: "get",
+        url: "https://mailsubscribe.4everland.org/?email=" + this.email_address,
+      });
+      return data;
     },
-    onError() {
-      this.centerDialogVisible = true;
-    },
+
     toTerm() {
       this.$router.push({
         path: "/service",
@@ -142,7 +137,19 @@ export default {
     },
 
     setEmail(value) {
-      console.log(value);
+      var t =
+        /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+      if (t.test(this.email_address)) {
+        this.eamil_check = true;
+      } else {
+        this.eamil_check = false;
+      }
+    },
+
+    toSub() {
+      this.getData().then((res) => {
+        this.successDialogVisible = true;
+      });
     },
   },
 };
@@ -150,6 +157,10 @@ export default {
 <style>
 .el-dialog__header {
   display: none !important;
+}
+
+.el-dialog {
+  border-radius: 5px;
 }
 @media only screen and (max-width: 1280px) {
   .footer-content {
@@ -193,7 +204,6 @@ export default {
     border: none;
     background-color: #fff;
     float: left;
-    z-index: 99;
     font-size: 0.213333rem;
   }
 
@@ -323,7 +333,6 @@ export default {
     border: none;
     background-color: #fff;
     float: left;
-    z-index: 99;
     font-size: 16px;
   }
 
@@ -394,6 +403,9 @@ export default {
     font-size: 24px;
     color: #fff !important;
     margin-right: 60px;
+  }
+  .dis-btn {
+    background-color: #c1c1c1;
   }
 }
 </style>
