@@ -155,6 +155,7 @@ export default {
     line-height: 24px;
     margin-top: 10px;
     color: #666;
+    cursor: pointer;
   }
   .article-img {
     position: relative;
@@ -162,6 +163,7 @@ export default {
     height: 320px;
     object-fit: cover;
     margin-top: 10px;
+    cursor: pointer;
   }
   .click-articel {
     position: relative;
