@@ -409,7 +409,7 @@ export default {
     margin: 10px;
     font-size: 24px;
     color: #fff !important;
-    margin-right: 60px;
+    margin-right: 45px;
   }
   .dis-btn {
     background-color: #c1c1c1;
