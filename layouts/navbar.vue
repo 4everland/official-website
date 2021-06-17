@@ -5,7 +5,7 @@
         <img
           class="logo-img"
           @click="toHome"
-          src="/imgs/logo@2x.png"
+          src="/imgs/logo.svg"
           alt=""
           srcset=""
         />
@@ -210,7 +210,7 @@ export default {
     position: relative;
     left: 20px;
     top: 0.4rem;
-    width: 3.733333rem;
+    width: 200px;
     float: left;
   }
   .menu {
@@ -251,6 +251,7 @@ export default {
     display: block;
     position: relative;
     top: 30px;
+    width: 280px;
     float: left;
     cursor: pointer;
   }

@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "4EVERLAND",
+    title: "4EVERLAND - The PaaS of Web3.0",
     htmlAttrs: {
       lang: "en",
     },
@@ -53,7 +53,7 @@ export default {
     "~/plugins/route",
     {
       src: "@/plugins/vue-lazyload",
-      ssr: false
+      ssr: false,
     },
   ],
 
@@ -85,8 +85,8 @@ export default {
       {
         set: "@fortawesome/free-brands-svg-icons",
         icons: ["fab"],
-      }
-    ]
+      },
+    ],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

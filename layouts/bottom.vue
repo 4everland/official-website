@@ -2,7 +2,7 @@
   <footer>
     <div class="footer-content">
       <div class="security-content">
-        <img class="footer-logo" src="/imgs/logo@2x.png" alt="" srcset="" />
+        <img class="footer-logo" src="/imgs/logo.svg" alt="" srcset="" />
         <mailchimp-subscribe
           url="https://4everland.us6.list-manage.com/subscribe/post-json"
           user-id="cbf6df6ae142481d9197b48f8"
@@ -165,6 +165,7 @@ export default {
   .footer-logo {
     position: relative;
     display: block;
+    width: 280px;
     margin: 0 auto;
     margin-top: 1.413333rem;
   }
@@ -295,6 +296,7 @@ export default {
   }
   .footer-logo {
     position: relative;
+    width: 280px;
     display: block;
     margin: 0 auto;
     margin-top: 40px;
