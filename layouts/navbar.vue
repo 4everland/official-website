@@ -89,6 +89,9 @@ export default {
       console.log("路由变化");
       console.log(res);
       this.path = res.path;
+      if (res.path == "/") {
+        this.active = "";
+      }
       if (res.path != "/" && res.path != "/blog/menu/1") {
         this.active = "";
       }

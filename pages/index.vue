@@ -1163,7 +1163,6 @@ export default {
     height: 65px;
     font-size: 60px;
     font-weight: normal;
-    font-stretch: normal;
     line-height: 30px;
     color: #fff;
     margin: 0 auto;
@@ -1176,7 +1175,6 @@ export default {
     height: 137px;
     font-size: 18px;
     font-weight: normal;
-    font-stretch: normal;
     line-height: 30px;
     color: #fff;
     margin: 0 auto;
