@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="service-content">
-      <p class="back-text" @click="goback">&lt; Back</p>
+      <span class="back-text" @click="goback">&lt; Back</span>
       <div class="acticle-view">
         <h1>The technical architecture design of 4EVERLAND</h1>
 
@@ -222,6 +222,7 @@ export default {
     line-height: 40px;
     background: #fff;
     margin: auto;
+    cursor: pointer;
   }
   .acticle-view img {
     position: relative;
@@ -332,6 +333,7 @@ export default {
     line-height: 80px;
     background: #fff;
     margin: auto;
+    cursor: pointer;
   }
   .acticle-view img {
     position: relative;

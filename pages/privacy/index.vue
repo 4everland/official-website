@@ -611,6 +611,21 @@ export default {
     color: #989898;
     margin-bottom: 30px;
   }
+
+  .acticle-view h3 {
+    line-height: 20px;
+    color: #989898;
+    font-size: 14px;
+  }
+
+  .acticle-view strong {
+    line-height: 20px;
+    color: #989898;
+    font-size: 14px;
+  }
+  .acticle-view li {
+    line-height: 20px;
+    color: #989898;
 }
 
 @media only screen and (min-width: 1280px) {
@@ -693,5 +708,20 @@ export default {
     color: #989898;
     margin-bottom: 30px;
   }
+    .acticle-view h3 {
+    line-height: 20px;
+    color: #989898;
+    font-size: 14px;
+  }
+
+  .acticle-view strong {
+    line-height: 20px;
+    color: #989898;
+    font-size: 14px;
+  }
+  .acticle-view li {
+    line-height: 20px;
+    color: #989898;
+    font-size: 14px;
 }
 </style>
