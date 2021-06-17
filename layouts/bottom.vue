@@ -2,13 +2,8 @@
   <footer>
     <div class="footer-content">
       <div class="security-content">
-        <img
-          class="logo-img"
-          @click="toHome"
-          src="/imgs/logo.svg"
-          alt=""
-          srcset=""
-        />
+        <img class="footer-logo" src="/imgs/logo.svg" alt="" srcset="" />
+
         <div :class="eamil_check ? 'input-view' : 'input-view dis-btn'">
           <input
             class="input-box"
@@ -414,7 +409,7 @@ export default {
     margin: 10px;
     font-size: 24px;
     color: #fff !important;
-    margin-right: 60px;
+    margin-right: 45px;
   }
   .dis-btn {
     background-color: #c1c1c1;
