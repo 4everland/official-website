@@ -29,9 +29,8 @@
                 />
                 <button class="right-btn" type="submit">Subscribe</button>
               </div>
-              <p v-if="error">{{ error }}</p>
-              <p v-if="success">Yay!</p>
-              <p v-if="loading">Loading…</p>
+              <p v-if="error"></p>
+              <p v-if="success"></p>
             </form>
           </template>
         </mailchimp-subscribe>
@@ -62,7 +61,7 @@
             >
               <span class="iconfont icon-discord-fill right-icon"></span
             ></a>
-            <a target="_blank" href="mail:contact@4everland.org">
+            <a target="_blank" href="mailto:contact@4everland.org">
               <span
                 class="iconfont icon-youjian right-icon"
                 style="margin-right: 0px"
@@ -70,6 +69,32 @@
             ></a>
           </div>
         </div>
+
+        <el-dialog
+          title=""
+          :visible.sync="centerDialogVisible"
+          :show-close="false"
+          width="300px"
+          center
+        >
+          <div class="dialog-view">
+            <img class="error-icon" src="/imgs/error.png" alt="" srcset="" />
+            <span class="error-text">error email address</span>
+          </div>
+        </el-dialog>
+
+        <el-dialog
+          title=""
+          :visible.sync="successDialogVisible"
+          :show-close="false"
+          width="400px"
+          center
+        >
+          <div class="dialog-view">
+            <img class="error-icon" src="/imgs/success.png" alt="" srcset="" />
+            <span class="error-text">Thank you for subscription.</span>
+          </div>
+        </el-dialog>
 
         <div class="bottom-link-view">
           <div class="link-item" @click="toTerm">Terms of use</div>
@@ -93,14 +118,16 @@ export default {
     return {
       active: "Feature",
       drawer: false,
+      centerDialogVisible: false,
+      successDialogVisible: false,
     };
   },
   methods: {
     onSuccess() {
-      console.log(arguments);
+      this.successDialogVisible = true;
     },
     onError() {
-      console.log(arguments);
+      this.centerDialogVisible = true;
     },
     toTerm() {
       this.$router.push({
@@ -116,7 +143,10 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style>
+.el-dialog__header {
+  display: none !important;
+}
 @media only screen and (max-width: 1280px) {
   .footer-content {
     position: relative;
@@ -238,10 +268,20 @@ export default {
 }
 
 @media only screen and (min-width: 1280px) {
+  .error-icon {
+    position: relative;
+    top: 20px;
+    left: 20px;
+  }
+
+  .error-text {
+    position: relative;
+    left: 40px;
+  }
   .footer-content {
     position: relative;
     width: 100%;
-    min-height: 560px;
+    height: 515px;
     background-color: #1e2226;
     overflow: hidden;
   }
@@ -249,14 +289,15 @@ export default {
   .security-content {
     position: relative;
     width: 1200px;
-    min-height: 560px;
+    height: 515px;
     margin: 0 auto;
+    overflow: hidden;
   }
   .footer-logo {
     position: relative;
     display: block;
     margin: 0 auto;
-    margin-top: 106px;
+    margin-top: 40px;
   }
   .input-view {
     position: relative;

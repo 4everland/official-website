@@ -106,8 +106,9 @@ export default {
       roadmap: [
         {
           color: "#E60033",
-          title: "V1：Quark（2021-2022）The Paas of Web 3.0",
-          content: "Genesis Product, Realizing the Initial Vision",
+          title: "V1：Quark（2021-2022）",
+          content:
+            "The Paas of Web 3.0 Genesis Product, Realizing the Initial Vision",
         },
         {
           color: "#E83929",
@@ -303,11 +304,12 @@ export default {
 
   .roadmap-item {
     width: 220px;
-    height: 90px;
+    min-height: 90px;
     margin-right: 10px;
     margin-top: 20px;
     display: inline-block;
     overflow: hidden;
+    white-space: normal;
   }
 
   .roadmap-item .color-line {
@@ -337,6 +339,7 @@ export default {
     font-size: 12px;
     margin-left: 10px;
     font-weight: 300;
+    margin-top: 10px;
     white-space: normal;
   }
 
@@ -375,6 +378,7 @@ export default {
 
   .roadmap-list {
     position: relative;
+    min-height: 120px;
   }
 
   .left-icon {

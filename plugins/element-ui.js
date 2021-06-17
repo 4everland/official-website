@@ -13,6 +13,7 @@ import {
   Row,
   Col,
   Drawer,
+  Dialog,
 } from 'element-ui'
 import locale from 'element-ui/lib/locale/lang/en'
 
@@ -30,6 +31,7 @@ const components = [
   Row,
   Col,
   Drawer,
+  Dialog,
 ]
 
 const Element = {

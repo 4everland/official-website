@@ -10,7 +10,6 @@
         SERVICES IN ANY MANNER
       </p>
 
-      <p class="tems-address">Tems of Use</p>
       <i class="fa fa-github" aria-hidden="true"></i>
 
       <p class="tems-date">Effective date: 05/01/20</p>
@@ -590,7 +589,8 @@ export default {
     margin-top: 20px;
     width: 100%;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 24px;
     color: #1e1d1e;
   }
   .tems-address,
@@ -605,13 +605,12 @@ export default {
   .acticle-view {
     position: relative;
     width: 8.066667rem;
-    height: 960px;
+    min-height: 960px;
     background: #f3f3f3;
     margin: auto;
     margin-top: 40px;
     border-radius: 5px;
     padding: 0.533333rem;
-    overflow-y: scroll;
     font-size: 12px;
   }
 
@@ -672,7 +671,8 @@ export default {
     margin-top: 20px;
     width: 100%;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 24px;
     color: #1e1d1e;
   }
   .tems-address,
@@ -680,20 +680,20 @@ export default {
     position: relative;
     width: 100%;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 24px;
     color: #1e1d1e;
   }
 
   .acticle-view {
     position: relative;
     width: 900px;
-    height: 960px;
+    min-height: 960px;
     background: #f3f3f3;
     margin: auto;
     margin-top: 40px;
     border-radius: 5px;
     padding: 40px;
-    overflow-y: scroll;
     font-size: 12px;
   }
 

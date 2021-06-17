@@ -2,12 +2,33 @@
   <div class="container bgcolor">
     <div class="security-content2">
       <div class="info-block1">
-        <h1 class="website-slogan">The PaaS of Web3.0</h1>
+        <div class="flex-left-box">
+          <h1 class="website-slogan">The PaaS of Web3.0</h1>
 
-        <p class="website-display">
-          A Web3.0 cloud computing platform with global acceleration, privacy
-          protection, distributed storage and other technical features.
-        </p>
+          <p class="website-display">
+            A Web3.0 cloud computing platform with global acceleration, privacy
+            protection, distributed storage and other technical features.
+          </p>
+
+          <a target="_blank" href="#" id="whitepaper">
+            <div class="down-btn">
+              <img
+                class="down-left-icon"
+                src="/imgs/white_paper.png"
+                alt=""
+                srcset=""
+              />
+              <span class="down-text">Whitepaper</span>
+              <div class="down-line"></div>
+              <img
+                class="down-right-icon"
+                src="/imgs/download.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </a>
+        </div>
 
         <img
           class="banner-img"
@@ -15,25 +36,6 @@
           alt=""
           srcset=""
         />
-
-        <a target="_blank" href="#" id="whitepaper">
-          <div class="down-btn">
-            <img
-              class="down-left-icon"
-              src="/imgs/white_paper.png"
-              alt=""
-              srcset=""
-            />
-            <span class="down-text">Whitepaper</span>
-            <div class="down-line"></div>
-            <img
-              class="down-right-icon"
-              src="/imgs/download.png"
-              alt=""
-              srcset=""
-            />
-          </div>
-        </a>
       </div>
     </div>
 
@@ -427,7 +429,7 @@ export default {
     if (this.isMobile()) {
       this.initGlobe(320);
     } else {
-      this.initGlobe(640);
+      this.initGlobe(650);
     }
   },
   data() {
@@ -579,7 +581,7 @@ export default {
     position: relative;
     width: 6.066667rem;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 140px;
   }
 
   .website-slogan {
@@ -613,10 +615,10 @@ export default {
 
   .down-btn {
     position: relative;
-    top: 40px;
+    top: 1.666667rem;
     width: 220px;
     height: 48px;
-    margin: 0 auto;
+    margin: 0.533333rem auto;
     background-image: url("/imgs/down-btn@2x.png");
   }
   .subtitle {
@@ -754,7 +756,7 @@ export default {
     color: #7f8489;
     font-size: 18px;
     height: 50px;
-    line-height: 50px;
+    margin-top: 26px;
   }
 
   .map-view {
@@ -1076,18 +1078,21 @@ export default {
     padding-top: 100px;
   }
 
+  .flex-left-box {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    width: 600px;
+    height: 400px;
+    margin-top: 60px;
+  }
+
   .info-block1 {
     position: relative;
     width: 100%;
     min-height: 600px;
   }
   .website-slogan {
-    display: block;
-    position: relative;
-    top: 80px;
-    width: 667px;
-    height: 118px;
-    line-height: 70px;
     font-size: 60px;
     font-weight: 600;
     font-stretch: normal;
@@ -1095,11 +1100,6 @@ export default {
     color: #fff;
   }
   .website-display {
-    display: block;
-    position: relative;
-    top: 97px;
-    width: 657px;
-    height: 95px;
     font-size: 30px;
     font-weight: normal;
     font-stretch: normal;
@@ -1110,14 +1110,13 @@ export default {
   .banner-img {
     position: absolute;
     right: 0;
-    top: 80px;
+    top: 10px;
   }
   .down-btn {
     position: relative;
-    top: 247px;
     width: 220px;
     height: 48px;
-    left: 180px;
+    margin-left: 180px;
     background-image: url("/imgs/down-btn@2x.png");
   }
 
@@ -1325,6 +1324,7 @@ export default {
     text-align: center;
     color: #7f8489;
     font-size: 18px;
+    margin-top: 13px;
   }
   .block5-item {
     position: relative;
@@ -1533,6 +1533,18 @@ export default {
     letter-spacing: 0;
     color: #b1b6bb;
     box-sizing: border-box;
+  }
+
+  .dialog-view {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+  }
+
+  .error-icon {
+    position: relative;
+    width: 60px;
   }
 }
 .red-bg {
