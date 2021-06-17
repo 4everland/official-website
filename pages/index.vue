@@ -1463,7 +1463,6 @@ export default {
     position: relative;
     width: 100%;
     min-height: 785px;
-    padding-bottom: 200px;
   }
 
   .mainnet-view .block-title {
@@ -1485,6 +1484,7 @@ export default {
     width: 1200px;
     min-height: 985px;
     margin: 0 auto;
+    margin-top: 120px;
   }
 
   .mainnet-line-view {
