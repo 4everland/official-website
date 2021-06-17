@@ -112,6 +112,7 @@ export default {
       centerDialogVisible: false,
       successDialogVisible: false,
       email_address: "",
+      eamil_check: false,
     };
   },
   methods: {

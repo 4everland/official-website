@@ -238,7 +238,7 @@
 
       <div class="security-content">
         <div class="mainnet-line-view">
-          <el-row gutter="40">
+          <el-row :gutter="40">
             <el-col :md="12" :sm="24">
               <div class="mainnet-item">
                 <img
