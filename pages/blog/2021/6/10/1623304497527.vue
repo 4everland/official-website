@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="service-content">
-      <span class="back-text" @click="goback">&lt; Back</span>
+      <p class="back-text" @click="goback">&lt; Back</p>
       <div class="acticle-view">
         <h1>The technical architecture design of 4EVERLAND</h1>
 

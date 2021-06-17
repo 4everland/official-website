@@ -10,7 +10,6 @@
         <p>
           4EVERLAND is designed to solve this problem by providing a
           distributed, highly efficient, self-motivated, and low-cost data
-          hosting gateway based on IPFS and the underlying technology of
           Ethereum. If free accounts, free contracts, and free assets are the
           foundation of Web 3.0, then the development protocol built by
           4EVERLAND will be the access layer protocol of the Web 3.0 world,

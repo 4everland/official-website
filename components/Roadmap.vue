@@ -234,7 +234,7 @@ export default {
 
   .roadmap-item {
     width: 5.933333rem;
-    height: 2.2rem;
+    min-height: 2.2rem;
     margin-left: 80px;
     margin-top: 20px;
   }

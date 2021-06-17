@@ -10,7 +10,11 @@
             protection, distributed storage and other technical features.
           </p>
 
-          <a target="_blank" href="#" id="whitepaper">
+          <a
+            target="_blank"
+            href="/4everland-whitepaper-en(Draft V0.0.1).pdf"
+            id="whitepaper"
+          >
             <div class="down-btn">
               <img
                 class="down-left-icon"
