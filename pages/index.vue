@@ -79,8 +79,8 @@
           </div>
 
           <p class="feature-content">
-            The consensus-driven Swarm network, massively improving network
-            throughput and high availability, providing more efficient and fast
+            The consensus-driven Swarm network, improves network throughput
+            massively and high availability, provides more efficient and fast
             Web3.0 access for global developers.
           </p>
 
@@ -139,7 +139,7 @@
           </div>
 
           <p class="feature-content">
-            4EVERLAND does not require KYC, ensures user anonymity and data
+            4EVERLAND does not require KYC, that ensures user anonymity and data
             security.
           </p>
 
@@ -195,7 +195,7 @@
           </div>
 
           <p class="feature-content">
-            4EVERLAND built a Swarm distributed storage network for achieve data
+            4EVERLAND builds a Swarm distributed storage network to achieve data
             availability and reliability.
           </p>
 
@@ -219,7 +219,7 @@
                 srcset=""
               />
               <span class="check-item-text"
-                >TEE-based proof of storage challenge (PoSC)</span
+                >TEE-based Proof of Storage Challenge (PoSC)</span
               >
             </div>
             <div class="check-item-view">
@@ -303,9 +303,9 @@
                 />
                 <h5 class="mainnet-item-title">Smart Contract</h5>
                 <p class="mainnet-item-content">
-                  The smart contract module of 4EVERLAND mainly includes payment
-                  contracts, campaign contracts, lending contracts, control
-                  contracts,etc. It achieves open, transparent and free
+                  The smart contracts module of 4EVERLAND mainly includes
+                  payment contracts, auction contracts, lending contracts,
+                  control contracts,etc. It achieves open, transparent and free
                   decentralized governance through smart contracts.
                 </p>
               </div>
@@ -325,11 +325,11 @@
             <img class="item_img" src="/imgs/c_icon1.png" alt="" srcset="" />
             <h5 class="item-title">Gateway Provider</h5>
             <p class="item-content">
-              Gateway nodes provide access acceleration services for DWeb.
-              Gateway nodes are obtained through the same auction as storage
-              nodes, and successful bids will get awarded gateway node seats and
-              network rewards, in addition to enjoy the developer's payment for
-              traffic.
+              The gateway provider provides an access acceleration service for
+              DWeb by deploying gateway node.The gateway provider is acquired
+              through the same auction process as the storage provider, and
+              successful bidders are awarded a gateway provider seat and enjoy
+              network rewards, as well as developer payments for traffic.
             </p>
           </div>
 
@@ -343,10 +343,11 @@
             />
             <h5 class="item-title">Storage Provider</h5>
             <p class="item-content">
-              Participating in global node swarm construction by deploying
-              storage node program; participating in the node auction to get
-              node slots, and get storage node seats if you can succeed in
-              bidding and enjoy network rewards.
+              Storage Providers participate in global Swarm construction by
+              deploying Storage Provider programs; they participate in Storage
+              Provider Auctions to obtain Storage Provider Slots. If they
+              succeed in the auctions, they can obtain Storage Provider Slots
+              and enjoy network rewards.
             </p>
           </div>
         </div>
@@ -356,10 +357,10 @@
             <img class="item_img" src="/imgs/c_icon3.png" alt="" srcset="" />
             <h5 class="item-title">Challenger</h5>
             <p class="item-content">
-              The Challenger initiates a storage proof challenge to all nodes
-              randomly, waits for feedback from the challenged nodes, and
-              publicizes the response of the challenged nodes to the community
-              and initiates a sanction proposal for inactive nodes.
+              Challenger challenges all Storage Providers to proofs of storage,
+              wait for feedback from the challenged providers, announce the
+              response of challenged providers to the community, and propose to
+              punish inactive providers.
             </p>
           </div>
 
@@ -367,10 +368,10 @@
             <img class="item_img" src="/imgs/c_icon1.png" alt="" srcset="" />
             <h5 class="item-title">Developer</h5>
             <p class="item-content">
-              Developers are the core paid users of 4EVERLAND, who use the
-              4EVERLAND developer application, such as publishing DWeb through
-              Hosting App or publishing content to the 4EVERLAND network through
-              @4everland/cli, and pay the network fee for storage and traffic.
+              Developers are the core users of 4EVERLAND who use the 4EVERLAND
+              developer applications, such as publishing DWeb through Hosting
+              App or publishing content through @4everland/cli, and pay storage
+              and traffic fees to the network.
             </p>
           </div>
         </div>
@@ -388,17 +389,17 @@
         </div>
         <div class="block5-item">
           <img class="block5-item-img" src="/imgs/yarn_build@2x.png" alt="" />
-          <span class="block5-text">2.Add you build setting</span>
+          <span class="block5-text">2.Add your build setting</span>
         </div>
         <div class="block5-item">
           <img class="block5-item-img" src="/imgs/deploy@2x.png" alt="" />
-          <span class="block5-text">3.Deploy you site</span>
+          <span class="block5-text">3.Deploy your site</span>
         </div>
       </div>
     </div>
 
     <div class="map-view">
-      <h3 class="map-block-title">Welcome to the new internet!</h3>
+      <h3 class="map-block-title">Welcome to the <br/> next generation internet</h3>
       <img class="map-img" src="/imgs/map@2x.png" alt="" srcset="" />
     </div>
 
@@ -413,14 +414,14 @@
       <img src="/imgs/skybg@2x.png" class="skybg" />
       <h3 class="info-block3-text1">Where we're going</h3>
       <p class="info-block3-text2">
-        4EVERLAND is the land to pursue developers' ideal paradigm for Web 3.0,
-        releasing them from the shackles of centeredness completely and creating
-        more robust and secure services. We hope that more developers and
-        scholars will join us along the way to build a globally accelerated,
-        forever-linked network service for as many as uers as possible using
-        4EVERLAND, which is a distributed, highly efficient, self-motivated, and
-        low-cost cloud computing network. Witness the radical change in server
-        architecture together and the giant technical leaps in Web3.0.
+        4EVERLAND is a great place to pursue developers' ideal paradigm for Web
+        3.0, releasing them from the shackles of centeredness completely and
+        creating more robust and secure services. We hope that more developers
+        and scholars will join us along the way to build a globally accelerated,
+        forever-linked network service for more users using 4EVERLAND, which is
+        a distributed, highly efficient, self-motivated, and low-cost cloud
+        computing network. Witness the radical change in server architecture
+        together and the giant technical leaps in Web3.0.
       </p>
     </div>
   </div>
@@ -703,15 +704,17 @@ export default {
     margin-top: 20px;
     overflow: hidden;
   }
+
   .character-item {
     display: block;
     position: relative;
     width: 100%;
     min-height: 2.666667rem;
     float: left;
-    padding: 0.4rem;
+    padding: .4rem .6rem;
     overflow: hidden;
   }
+
   .character-item .item_img {
     display: block;
     position: relative;

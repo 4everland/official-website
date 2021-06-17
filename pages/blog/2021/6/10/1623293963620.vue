@@ -120,9 +120,9 @@
         <ul>
           <li>
             <p>
-              <strong>*Global Acceleration: </strong>* Consensus-driven Swarm
-              network, massively improving network throughput and high
-              availability, providing more efficient and fast Web3.0 access for
+              <strong>*Global Acceleration: </strong>* The consensus-driven
+              Swarm network, improves network throughput massively and high
+              availability, provides more efficient and fast Web3.0 access for
               global developers.
             </p>
           </li>
