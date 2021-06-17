@@ -97,13 +97,7 @@ export default {
 };
 </script>
 
-<style>
-a {
-  text-decoration: none !important;
-}
-a:hover {
-  text-decoration: underline !important;
-}
+<style scoped>
 @media only screen and (max-width: 1280px) {
   .content {
     position: relative;
