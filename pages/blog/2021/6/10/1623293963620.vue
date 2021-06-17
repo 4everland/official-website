@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="service-content">
-      <span class="back-text" @click="goback()">&lt; Back</span>
+      <p class="back-text" @click="goback()">&lt; Back</p>
       <div class="acticle-view">
         <h1>4EVERLAND：The PaaS of Web3.0</h1>
 
