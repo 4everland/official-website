@@ -3,12 +3,11 @@
     <div class="menu-content">
       <div class="left-content">
         <div class="html-item" v-for="item of article">
-          <p class="acticle-time">{{ item.time }}</p>
-          <h1 class="acticle-title">{{ item.title }}</h1>
-          <img class="article-img" v-if="item.img" v-lazy="item.img" alt="" />
-          <p class="article-content">{{ item.content }}</p>
-
           <nuxt-link :to="item.link">
+            <p class="acticle-time">{{ item.time }}</p>
+            <h1 class="acticle-title">{{ item.title }}</h1>
+            <img class="article-img" v-if="item.img" v-lazy="item.img" alt="" />
+            <p class="article-content">{{ item.content }}</p>
             <p class="click-articel">READ MORE</p>
           </nuxt-link>
         </div>
