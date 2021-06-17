@@ -86,7 +86,7 @@
             ></div>
             <div class="roadmap-mini-title">{{ item.title }}</div>
 
-            <div class="roadmap-content-text">{{ item.content }}</div>
+            <div class="roadmap-content-text" v-html="item.content"></div>
           </div>
         </div>
       </div>
