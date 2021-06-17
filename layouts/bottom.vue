@@ -25,7 +25,7 @@
                   value=""
                   name="EMAIL"
                   id="mce-EMAIL"
-                  placeholder="Enter Your E-mail to sign up for newsletter"
+                  placeholder="Enter Your E-mail to sign up for newsletter →"
                 />
                 <button class="right-btn" type="submit">Subscribe</button>
               </div>
@@ -155,7 +155,6 @@ export default {
   .footer-content {
     position: relative;
     width: 100%;
-    min-height: 3.466667rem;
     background-color: #1e2226;
     overflow: hidden;
   }
@@ -174,10 +173,13 @@ export default {
     margin-top: 1.413333rem;
   }
   .input-view {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: #2b85fb;
     position: relative;
     width: 6.933333rem;
     height: 0.853333rem;
-    background-color: #fff;
     border-radius: 0.133333rem;
     margin: 0 auto;
     margin-top: 0.933333rem;
@@ -250,11 +252,9 @@ export default {
   }
 
   .share-view {
-    position: relative;
-    left: 0.266667rem;
-    width: 5.52rem;
-    height: 0.6rem;
-    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
   }
 
   .share-icon {
@@ -286,15 +286,13 @@ export default {
   .footer-content {
     position: relative;
     width: 100%;
-    height: 515px;
     background-color: #1e2226;
-    overflow: hidden;
+    padding-bottom: 30px;
   }
 
   .security-content {
     position: relative;
     width: 1200px;
-    height: 515px;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -303,21 +301,23 @@ export default {
     width: 280px;
     display: block;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 70px;
   }
   .input-view {
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: #2b85fb;
     width: 520px;
     height: 64px;
-    background-color: #fff;
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 70px;
   }
   .input-box {
     position: relative;
-    padding-left: 10px;
-    width: 360px;
+    padding-left: 15px;
+    width: 390px;
     height: 64px;
     border-radius: 10px;
     border: none;
@@ -328,14 +328,8 @@ export default {
   }
 
   .right-btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 150px;
-    height: 64px;
-    line-height: 64px;
     border-radius: 10px;
-    background-color: #2b85fb;
+    background-color: transparent;
     text-align: center;
     color: #fff;
     font-size: 20px;
@@ -343,6 +337,7 @@ export default {
     float: right;
     cursor: pointer;
     z-index: 98;
+    flex: 1;
     border: none;
   }
 
@@ -356,23 +351,22 @@ export default {
   }
 
   .copyright {
-    position: absolute;
-    left: 40px;
-    bottom: 80px;
     color: #b1b6bb;
+    margin-top: 30px;
     font-size: 14px;
   }
 
   .bottom-link-view {
     position: relative;
     width: 400px;
-    height: 50px;
+    height: 45px;
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 45px;
   }
 
   .link-item {
     position: relative;
+    font-size: 14px;
     width: 50%;
     float: left;
     text-align: center;
@@ -380,11 +374,9 @@ export default {
     cursor: pointer;
   }
   .share-view {
-    position: relative;
-    width: 480px;
-    left: 30px;
-    top: 20px;
-    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 37px;
   }
 
   .share-icon {
