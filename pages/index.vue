@@ -399,7 +399,10 @@
     </div>
 
     <div class="map-view">
-      <h3 class="map-block-title">Welcome to the <br/> next generation internet</h3>
+      <h3 class="map-block-title">
+        Welcome to the <br />
+        next generation internet
+      </h3>
       <img class="map-img" src="/imgs/map@2x.png" alt="" srcset="" />
     </div>
 
@@ -711,7 +714,7 @@ export default {
     width: 100%;
     min-height: 2.666667rem;
     float: left;
-    padding: .4rem .6rem;
+    padding: 0.4rem 0.6rem;
     overflow: hidden;
   }
 
@@ -1114,6 +1117,7 @@ export default {
 
   .subtitle {
     display: block;
+    text-align: center;
     position: relative;
     width: 675px;
     height: 118px;
