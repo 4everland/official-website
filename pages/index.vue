@@ -700,15 +700,17 @@ export default {
     margin-top: 20px;
     overflow: hidden;
   }
+
   .character-item {
     display: block;
     position: relative;
     width: 100%;
     min-height: 2.666667rem;
     float: left;
-    padding: 0.4rem;
+    padding: .4rem .6rem;
     overflow: hidden;
   }
+
   .character-item .item_img {
     display: block;
     position: relative;
