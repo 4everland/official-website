@@ -132,12 +132,12 @@ export default {
         {
           color: "#EB6EA5",
           title: "August 2021",
-          content: "<strong>ALPHA launch</strong>",
+          content: "<strong>ALPHA Launch</strong>",
         },
         {
           color: "#E198B4",
           title: "November 2021",
-          content: "<strong>BETA launch</strong>",
+          content: "<strong>BETA Launch</strong>",
         },
         {
           color: "#824880",
