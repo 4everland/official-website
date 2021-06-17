@@ -4,6 +4,7 @@
       <div class="left-content">
         <div
           class="html-item"
+          :key="item.title"
           v-for="item of article"
           @click="toActice(item.link)"
         >
