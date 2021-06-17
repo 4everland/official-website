@@ -30,8 +30,7 @@
                 :style="{ backgroundColor: item.color }"
               ></div>
               <div class="roadmap-mini-title">{{ item.title }}</div>
-
-              <div class="roadmap-content-text">{{ item.content }}</div>
+              <div class="roadmap-content-text" v-html="item.content"></div>
             </div>
           </div>
 
@@ -58,7 +57,7 @@
               ></div>
               <div class="roadmap-mini-title">{{ item.title }}</div>
 
-              <div class="roadmap-content-text">{{ item.content }}</div>
+              <div class="roadmap-content-text" v-html="item.content"></div>
             </div>
           </div>
         </div>
@@ -108,7 +107,7 @@ export default {
           color: "#E60033",
           title: "V1：Quark（2021-2022）",
           content:
-            "The Paas of Web 3.0 Genesis Product, Realizing the Initial Vision",
+            "<strong>The Paas of Web 3.0</strong> &nbsp;&nbsp; Genesis Product, Realizing the Initial Vision",
         },
         {
           color: "#E83929",
@@ -133,12 +132,12 @@ export default {
         {
           color: "#EB6EA5",
           title: "August 2021",
-          content: "ALPHA launch",
+          content: "<strong>ALPHA launch</strong>",
         },
         {
           color: "#E198B4",
           title: "November 2021",
-          content: "BETA launch",
+          content: "<strong>BETA launch</strong>",
         },
         {
           color: "#824880",
@@ -148,19 +147,19 @@ export default {
         {
           color: "#915C8B",
           title: "2022.Q2",
-          content: "Mainnet launch",
+          content: "<strong>Mainnet launch</strong>",
         },
         {
           color: "#CCA6BF",
           title: "V2：Proton（2023-2024）",
           content:
-            "Enpower Web3.0 developers expand commercialization capability, launch more developer application tools ",
+            "<strong> Enpower Web3.0 developers </strong> expand commercialization capability, launch more developer application tools ",
         },
         {
           color: "#3E62AD",
           title: "V3：Atom ( 2025-2026 )",
           content:
-            "Cloud Computing of Web3.0Launch virtual machine container, acquire capabilities of Web3.0 cloud computing",
+            "<strong>Cloud Computing of Web3.0</strong> &nbsp; Launch virtual machine container, acquire capabilities of Web3.0 cloud computing",
         },
       ],
     };
@@ -195,7 +194,6 @@ export default {
   .roadmap-content {
     position: relative;
     width: 100%;
-    min-height: 7.466667rem;
     background-color: #1e2226;
     padding-bottom: 2.666667rem;
     overflow: hidden;
@@ -203,7 +201,6 @@ export default {
   .security-content {
     position: relative;
     width: 9.066667rem;
-    min-height: 7.466667rem;
     margin: 0 auto;
   }
   .block-title {
@@ -245,7 +242,7 @@ export default {
   .roadmap-item .color-line {
     display: block;
     position: relative;
-    width: 8px;
+    width: 6px;
     height: 82px;
     border-radius: 4px;
     background-color: #bbb;
@@ -258,6 +255,7 @@ export default {
     color: #fff;
     margin-left: 10px;
     font-size: 14px;
+    font-weight: 500;
   }
   .roadmap-content-text {
     position: relative;
@@ -265,7 +263,7 @@ export default {
     left: 10px;
     color: #fff;
     font-size: 12px;
-    margin-left: 10px;
+    margin-left: 5px;
     font-weight: 300;
   }
   .roadmap-list {
@@ -278,13 +276,15 @@ export default {
   .roadmap-content {
     position: relative;
     width: 100%;
-    min-height: 560px;
     background-color: #1e2226;
+    padding-bottom: 100px;
+  }
+  .roadmap-content .block-title {
+    padding-top: 160px;
   }
   .security-content {
     position: relative;
     width: 1200px;
-    min-height: 560px;
     margin: 0 auto;
   }
   .block-title {
@@ -299,7 +299,7 @@ export default {
 
   .pc {
     position: relative;
-    margin-top: 120px;
+    margin-top: 80px;
   }
 
   .roadmap-item {
@@ -315,7 +315,7 @@ export default {
   .roadmap-item .color-line {
     display: block;
     position: relative;
-    width: 8px;
+    width: 6px;
     height: 82px;
     border-radius: 4px;
     background-color: #bbb;
@@ -326,6 +326,7 @@ export default {
     position: relative;
     left: 10px;
     color: #fff;
+    font-weight: 500;
     margin-left: 10px;
     font-size: 14px;
   }
@@ -338,8 +339,7 @@ export default {
     color: #fff;
     font-size: 12px;
     margin-left: 10px;
-    font-weight: 300;
-    margin-top: 10px;
+    margin-top: 5px;
     white-space: normal;
   }
 

@@ -5,7 +5,7 @@
         <img
           class="logo-img"
           @click="toHome"
-          src="/imgs/logo@2x.png"
+          src="/imgs/logo.svg"
           alt=""
           srcset=""
         />
@@ -113,7 +113,7 @@ export default {
       this.active = "";
       if (
         Math.abs(
-          document.getElementById("features").getBoundingClientRect().top
+          document.getElementById("feature").getBoundingClientRect().top
         ) < 400
       ) {
         this.active = "Feature";
@@ -121,7 +121,7 @@ export default {
 
       if (
         Math.abs(
-          document.getElementById("technologies").getBoundingClientRect().top
+          document.getElementById("technology").getBoundingClientRect().top
         ) < 400
       ) {
         this.active = "Technology";
@@ -138,7 +138,7 @@ export default {
     toFeature() {
       this.active = "Feature";
       this.$router.push({
-        path: "/#features",
+        path: "/#feature",
         params: {
           jump: 1,
         },
@@ -153,7 +153,7 @@ export default {
     toTechnology() {
       this.active = "Technology";
       this.$router.push({
-        path: "/#technologies",
+        path: "/#technology",
       });
     },
     toBlog() {
@@ -213,7 +213,7 @@ export default {
     position: relative;
     left: 20px;
     top: 0.4rem;
-    width: 3.733333rem;
+    width: 200px;
     float: left;
   }
   .menu {
@@ -254,6 +254,7 @@ export default {
     display: block;
     position: relative;
     top: 30px;
+    width: 280px;
     float: left;
     cursor: pointer;
   }

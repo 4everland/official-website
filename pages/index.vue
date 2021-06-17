@@ -41,7 +41,7 @@
 
     <h2 class="subtitle">
       Developers deploy with One click in
-      <span style="font-weight: 600"> Web 3.0</span>
+      <span style="font-weight: 400"> Web 3.0</span>
     </h2>
 
     <div class="info-block2">
@@ -53,7 +53,7 @@
     </div>
 
     <div class="feature-view" ref="first">
-      <h3 class="block-title" id="features">Feature</h3>
+      <h3 class="block-title" id="feature">Feature</h3>
       <div class="security-content">
         <img v-lazy="imgArr[0]" class="red-bg" alt="" srcset="" />
         <img v-lazy="imgArr[1]" class="blue-bg" alt="" srcset="" />
@@ -71,9 +71,7 @@
               alt=""
               srcset=""
             />
-            <span class="item-header-text" style="top: 40px; margin-left: 10px"
-              >Global Acceleration</span
-            >
+            <span class="item-header-text">Global Acceleration</span>
           </div>
 
           <p class="feature-content">
@@ -236,71 +234,80 @@
     </div>
 
     <div class="mainnet-view">
-      <h3 class="block-title" id="technologies">Technology</h3>
+      <h3 class="block-title" id="technology">Technology</h3>
 
       <div class="security-content">
         <div class="mainnet-line-view">
-          <div class="mainnet-item">
-            <img
-              class="mainnet-item-img"
-              src="/imgs/mainnet1@2x.png"
-              alt=""
-              srcset=""
-            />
-            <h5 class="mainnet-item-title">4EVER-STORAGE</h5>
-            <p class="mainnet-item-content">
-              4EVERLAND forms nodes into a huge storage network through Swarm
-              technology, which relies on node cooperativeness to achieve
-              persistent storage of specific data, and supports horizontal
-              expansion of nodes.
-            </p>
-          </div>
-          <div class="mainnet-item">
-            <img
-              class="mainnet-item-img"
-              src="/imgs/mainnet2@2x.png"
-              alt=""
-              srcset=""
-            />
-            <h5 class="mainnet-item-title">4EVER-GATEWAY</h5>
-            <p class="mainnet-item-content">
-              The gateway nodes contain dynamic DNS, Data I/O, and Cert Manager
-              modules. With simple configuration, developers can achieve safe
-              and reliable global acceleration based on 4EVERLAND quickly.
-            </p>
-          </div>
-        </div>
-
-        <div class="mainnet-line-view">
-          <div class="mainnet-item">
-            <img
-              class="mainnet-item-img"
-              src="/imgs/mainnet3@2x.png"
-              alt=""
-              srcset=""
-            />
-            <h5 class="mainnet-item-title">Storage Proof</h5>
-            <p class="mainnet-item-content">
-              4EVERLAND builds Swarm distributed storage network based on IPFS
-              protocol and proposes storage challenge proof PoSC based on TEE
-              technology, to ensure the availability and reliability of data.
-            </p>
-          </div>
-          <div class="mainnet-item">
-            <img
-              class="mainnet-item-img"
-              src="/imgs/mainnet4@2x.png"
-              alt=""
-              srcset=""
-            />
-            <h5 class="mainnet-item-title">Smart Contracts</h5>
-            <p class="mainnet-item-content">
-              The smart contract module of 4EVERLAND mainly includes payment
-              contracts, campaign contracts, lending contracts, control
-              contracts,etc. It achieves open, transparent and free
-              decentralized governance through smart contracts.
-            </p>
-          </div>
+          <el-row gutter="40">
+            <el-col :md="12" :sm="24">
+              <div class="mainnet-item">
+                <img
+                  class="mainnet-item-img"
+                  src="/imgs/mainnet1@2x.png"
+                  alt=""
+                  srcset=""
+                />
+                <h5 class="mainnet-item-title">4EVER-STORAGE</h5>
+                <p class="mainnet-item-content">
+                  4EVERLAND forms nodes into a huge storage network through
+                  Swarm technology, which relies on node cooperativeness to
+                  achieve persistent storage of specific data, and supports
+                  horizontal expansion of nodes.
+                </p>
+              </div>
+            </el-col>
+            <el-col :md="12" :sm="24">
+              <div class="mainnet-item">
+                <img
+                  class="mainnet-item-img"
+                  src="/imgs/mainnet2@2x.png"
+                  alt=""
+                  srcset=""
+                />
+                <h5 class="mainnet-item-title">4EVER-GATEWAY</h5>
+                <p class="mainnet-item-content">
+                  The gateway nodes contain dynamic DNS, Data I/O, and Cert
+                  Manager modules. With simple configuration, developers can
+                  achieve safe and reliable global acceleration based on
+                  4EVERLAND quickly.
+                </p>
+              </div>
+            </el-col>
+            <el-col :md="12" :sm="24">
+              <div class="mainnet-item">
+                <img
+                  class="mainnet-item-img"
+                  src="/imgs/mainnet3@2x.png"
+                  alt=""
+                  srcset=""
+                />
+                <h5 class="mainnet-item-title">Storage Proof</h5>
+                <p class="mainnet-item-content">
+                  4EVERLAND builds Swarm distributed storage network based on
+                  IPFS protocol and proposes storage challenge proof PoSC based
+                  on TEE technology, to ensure the availability and reliability
+                  of data.
+                </p>
+              </div>
+            </el-col>
+            <el-col :md="12" :sm="24">
+              <div class="mainnet-item">
+                <img
+                  class="mainnet-item-img"
+                  src="/imgs/mainnet4@2x.png"
+                  alt=""
+                  srcset=""
+                />
+                <h5 class="mainnet-item-title">Smart Contracts</h5>
+                <p class="mainnet-item-content">
+                  The smart contract module of 4EVERLAND mainly includes payment
+                  contracts, campaign contracts, lending contracts, control
+                  contracts,etc. It achieves open, transparent and free
+                  decentralized governance through smart contracts.
+                </p>
+              </div>
+            </el-col>
+          </el-row>
         </div>
       </div>
     </div>
@@ -368,7 +375,9 @@
     </div>
 
     <div class="info-block5">
-      <h3 class="block-title">Deploy to IPFS a site in 30 second</h3>
+      <h3 class="block-title">
+        Deploy a website based on Web3.0 in 30 seconds
+      </h3>
       <div class="security-content3" style="margin-top: 80px">
         <div class="block5-item">
           <img class="block5-item-img" src="/imgs/GitHub@2x.png" alt="" />
@@ -398,6 +407,7 @@
     <Roadmap></Roadmap>
 
     <div class="info-block3">
+      <img src="/imgs/skybg@2x.png" class="skybg" />
       <h3 class="info-block3-text1">Where we're going</h3>
       <p class="info-block3-text2">
         4EVERLAND is the land to pursue developers' ideal paradigm for Web 3.0,
@@ -432,7 +442,7 @@ export default {
     if (this.isMobile()) {
       this.initGlobe(320);
     } else {
-      this.initGlobe(650);
+      this.initGlobe(780);
     }
   },
   data() {
@@ -553,6 +563,13 @@ export default {
 
 <style>
 @import "../assets/style/base.css";
+.skybg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 115%;
+}
 #container {
   display: flex;
   justify-content: center;
@@ -669,16 +686,15 @@ export default {
   .info-block4 .security-content3 {
     display: block;
     position: relative;
-    width: 10.066667rem;
     min-height: 12rem;
     margin: 0 auto;
+    padding-top: 70px;
   }
 
   .character-line-view {
     display: block;
     clear: both;
     position: relative;
-    top: 1.2rem;
     width: 100%;
     min-height: 2.666667rem;
     margin-top: 20px;
@@ -726,11 +742,9 @@ export default {
   .block-title {
     display: block;
     position: relative;
-    top: 45px;
     width: 9.066667rem;
     font-size: 0.6rem;
-    font-weight: normal;
-    font-stretch: normal;
+    font-weight: 300;
     line-height: 0.8rem;
     color: #000;
     text-align: center;
@@ -740,10 +754,12 @@ export default {
   .info-block5 {
     position: relative;
     width: 100%;
-    min-height: 5.333333rem;
     background-color: #fff;
-    margin-top: -0.683333rem;
-    overflow: hidden;
+    margin-top: -0.3rem;
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .info-block5 .security-content3 {
     position: relative;
@@ -773,8 +789,7 @@ export default {
     top: 45px;
     width: 100%;
     font-size: 0.6rem;
-    font-weight: normal;
-    font-stretch: normal;
+    font-weight: 300;
     line-height: 0.6rem;
     color: #fff;
     text-align: center;
@@ -814,40 +829,29 @@ export default {
 
   .info-block3 {
     position: relative;
-    width: 100%;
-    min-height: 5.333333rem;
-    background-image: url("/imgs/skybg@2x.png");
-    background-size: 200%;
-    background-position-x: -40px;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 60px 0;
   }
   .info-block3-text1 {
-    display: block;
-    position: relative;
-    top: 0.6rem;
-    font-size: 0.6rem;
-    font-weight: normal;
-    font-stretch: normal;
-    line-height: 0.4rem;
+    /* width: 539px; */
+    font-weight: 300;
+    font-size: 30px;
     color: #fff;
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
+    padding-top: 30px;
+    z-index: 1;
   }
   .info-block3-text2 {
-    display: block;
-    position: relative;
-    top: 0.866667rem;
-    width: 8.133333rem;
-    height: 1.826667rem;
-    font-size: 0.24rem;
-    font-weight: normal;
-    font-stretch: normal;
-    line-height: 0.4rem;
+    /* width: 735px; */
+    font-size: 18px;
+    padding: 0 15px;
+    font-weight: 400;
+    line-height: 30px;
     color: #fff;
-    margin: 0 auto;
     text-align: center;
+    z-index: 1;
+    margin-top: 40px;
   }
 
   .phone-item {
@@ -882,8 +886,6 @@ export default {
     top: 0.6rem;
     width: 100%;
     font-size: 0.6rem;
-    font-weight: normal;
-    font-stretch: normal;
     line-height: 0.8rem;
     color: #fff;
     text-align: center;
@@ -917,24 +919,18 @@ export default {
     border-radius: 30px 30px 0 0;
     background-color: #2b85fb;
     z-index: 2;
+    display: flex;
+    align-items: center;
   }
 
   .item-header-img {
-    position: absolute;
-    top: 19px;
-    left: 40px;
+    margin-left: 50px;
   }
   .item-header-text {
-    display: block;
-    position: absolute;
-    left: 106px;
-    top: 20px;
-    line-height: 30px;
     font-size: 18px;
     font-weight: normal;
-    font-stretch: normal;
-    letter-spacing: 0;
     color: #fff;
+    margin-left: 18px;
   }
 
   .feature-content {
@@ -944,7 +940,7 @@ export default {
     width: 6.533333rem;
     min-height: 1.626667rem;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: normal;
     line-height: 18px;
     color: #fff;
     margin: 0 auto;
@@ -960,40 +956,31 @@ export default {
   }
 
   .check-item-view {
-    position: relative;
     margin-left: 15px;
-    width: 95%;
     min-height: 30px;
     line-height: 30px;
     text-align: left;
     color: #fff;
     font-weight: normal;
     font-size: 14px;
-    clear: left;
   }
 
   .check-item-text {
-    display: inline-block;
-    width: 80%;
-    min-height: 30px;
     margin-left: 10px;
-    margin-top: -5px;
-    float: left;
+    text-align: left;
   }
 
   .mainnet-view {
     position: relative;
     width: 100%;
-    min-height: 10.466667rem;
   }
 
   .mainnet-view .block-title {
     display: block;
+    margin-bottom: 45px;
     position: relative;
     width: 100%;
     font-size: 0.6rem;
-    font-weight: normal;
-    font-stretch: normal;
     line-height: 0.8rem;
     color: #fff;
     text-align: center;
@@ -1008,12 +995,8 @@ export default {
   }
 
   .mainnet-line-view {
-    display: block;
-    position: relative;
-    width: 100%;
-    min-height: 4rem;
+    display: flex;
     margin-bottom: 1.28rem;
-    overflow: hidden;
   }
 
   .mainnet-item {
@@ -1148,37 +1131,28 @@ export default {
   }
 
   .info-block3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0 75px 0;
     position: relative;
-    width: 100%;
-    height: 8.333333rem;
-    background-image: url("/imgs/skybg@2x.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
   }
   .info-block3-text1 {
-    display: block;
-    position: relative;
-    top: 1.6rem;
     width: 539px;
-    height: 65px;
+    font-weight: 300;
     font-size: 60px;
-    font-weight: normal;
-    line-height: 30px;
     color: #fff;
-    margin: 0 auto;
+    z-index: 1;
   }
   .info-block3-text2 {
-    display: block;
-    position: relative;
-    top: 1.6rem;
     width: 735px;
-    height: 137px;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 30px;
     color: #fff;
-    margin: 0 auto;
     text-align: center;
+    margin-top: 40px;
+    z-index: 1;
   }
 
   .partners {
@@ -1191,11 +1165,9 @@ export default {
 
   .block-title {
     position: relative;
-    top: 45px;
     width: 100%;
     font-size: 60px;
-    font-weight: normal;
-    font-stretch: normal;
+    font-weight: 300;
     line-height: 30px;
     color: #000;
     text-align: center;
@@ -1215,6 +1187,7 @@ export default {
     width: 100%;
     min-height: 8.333333rem;
     padding-bottom: 2.066667rem;
+    padding-top: 25px;
   }
 
   .map-block-title {
@@ -1223,8 +1196,7 @@ export default {
     top: 45px;
     width: 100%;
     font-size: 60px;
-    font-weight: normal;
-    font-stretch: normal;
+    font-weight: 300;
     line-height: 60px;
     color: #fff;
     text-align: center;
@@ -1260,6 +1232,7 @@ export default {
     width: 1200px;
     min-height: 600px;
     margin: 0 auto;
+    padding-top: 70px;
   }
 
   .character-line-view {
@@ -1306,18 +1279,26 @@ export default {
   .info-block5 {
     position: relative;
     width: 100%;
-    min-height: 400px;
     background-color: #fff;
-    margin-top: -0.683333rem;
+    margin-top: -0.3rem;
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .info-block5 .block-title {
-    line-height: 120px;
+    line-height: 70px;
+    width: 800px;
+    text-align: center;
   }
   .info-block5 .security-content3 {
     position: relative;
     width: 1200px;
     min-height: 400px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .block5-text {
@@ -1329,10 +1310,6 @@ export default {
     margin-top: 13px;
   }
   .block5-item {
-    position: relative;
-    width: 33.3%;
-    height: 300px;
-    float: left;
   }
 
   .feature-view {
@@ -1356,8 +1333,6 @@ export default {
     top: 45px;
     width: 100%;
     font-size: 60px;
-    font-weight: normal;
-    font-stretch: normal;
     line-height: 60px;
     color: #fff;
     text-align: center;
@@ -1393,24 +1368,18 @@ export default {
     border-radius: 30px 30px 0 0;
     background-color: #2b85fb;
     z-index: 2;
+    display: flex;
+    align-items: center;
   }
 
   .item-header-img {
-    position: absolute;
-    top: 19px;
-    left: 40px;
+    margin-left: 50px;
   }
   .item-header-text {
-    display: block;
-    position: absolute;
-    left: 106px;
-    top: 20px;
-    line-height: 30px;
     font-size: 18px;
     font-weight: normal;
-    font-stretch: normal;
-    letter-spacing: 0;
     color: #fff;
+    margin-left: 18px;
   }
 
   .feature-content {
@@ -1419,8 +1388,7 @@ export default {
     width: 276px;
     height: 122px;
     font-size: 14px;
-    font-weight: 300;
-    font-stretch: normal;
+    font-weight: normal;
     line-height: 18px;
     color: #fff;
     margin: 0 auto;
@@ -1436,40 +1404,33 @@ export default {
   }
 
   .check-item-view {
-    position: relative;
     margin-left: 15px;
-    width: 95%;
-    min-height: 30px;
-    line-height: 30px;
-    text-align: left;
+    line-height: 18px;
+    margin-top: 9px;
     color: #fff;
     font-weight: normal;
     font-size: 14px;
-    clear: left;
+    display: flex;
+    align-items: flex-start;
   }
 
   .check-item-text {
-    display: inline-block;
-    width: 90%;
-    min-height: 30px;
     margin-left: 10px;
-    margin-top: -5px;
-    float: left;
+    text-align: left;
   }
 
   .mainnet-view {
     position: relative;
     width: 100%;
-    min-height: 785px;
+    padding-bottom: 80px;
   }
 
   .mainnet-view .block-title {
     display: block;
     position: relative;
+    margin-bottom: 45px;
     width: 100%;
     font-size: 60px;
-    font-weight: normal;
-    font-stretch: normal;
     line-height: 60px;
     color: #fff;
     text-align: center;
@@ -1486,55 +1447,36 @@ export default {
   }
 
   .mainnet-line-view {
-    display: block;
-    position: relative;
-    width: 100%;
-    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .mainnet-item {
-    display: block;
-    position: relative;
-    width: 50%;
+    flex: 1;
+    min-width: 400px;
     min-height: 500px;
-    float: left;
   }
 
   .mainnet-item-img {
-    display: block;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: 488px;
-    height: 288px;
+    width: 100%;
   }
 
   .mainnet-item-title {
-    display: block;
-    position: relative;
-    left: 15px;
-    width: 362px;
-    height: 23px;
     font-size: 30px;
     font-weight: normal;
     font-stretch: normal;
     letter-spacing: 0;
     color: #fff;
+    padding: 0px 15px 10px 15px;
   }
 
   .mainnet-item-content {
-    display: block;
-    position: relative;
-    top: 30px;
-    left: 15px;
-    width: 450px;
     font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
     line-height: 24px;
     letter-spacing: 0;
     color: #b1b6bb;
     box-sizing: border-box;
+    padding: 0 15px;
   }
 
   .dialog-view {
