@@ -131,6 +131,7 @@ export default {
     min-height: 100px;
     box-sizing: border-box;
     padding: 20px;
+    cursor: pointer;
   }
 
   .left-content {
@@ -210,6 +211,7 @@ export default {
     min-height: 100px;
     box-sizing: border-box;
     padding: 40px;
+    cursor: pointer;
   }
 
   .left-content {
