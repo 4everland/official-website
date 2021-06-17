@@ -89,7 +89,7 @@
                 srcset=""
               />
               <span class="check-item-text"
-                >Dynamic Domain Name Service DDNS</span
+                >Dynamic Domain Name Service (DDNS)</span
               >
             </div>
             <div class="check-item-view">
@@ -130,7 +130,7 @@
               srcset=""
             />
             <span style="top: 40px" class="item-header-text"
-              >Privacy protection</span
+              >Privacy Protection</span
             >
           </div>
 
@@ -186,7 +186,7 @@
               srcset=""
             />
             <span style="top: 40px" class="item-header-text"
-              >Distributed storage</span
+              >Distributed Storage</span
             >
           </div>
 
@@ -215,8 +215,7 @@
                 srcset=""
               />
               <span class="check-item-text"
-                >TEE-based proof of storage challenge POSC (Proof of Storage
-                Challenge)</span
+                >TEE-based proof of storage challenge (PoSC)</span
               >
             </div>
             <div class="check-item-view">
@@ -281,7 +280,7 @@
                   alt=""
                   srcset=""
                 />
-                <h5 class="mainnet-item-title">Storage Proof</h5>
+                <h5 class="mainnet-item-title">Proof of Storage</h5>
                 <p class="mainnet-item-content">
                   4EVERLAND builds Swarm distributed storage network based on
                   IPFS protocol and proposes storage challenge proof PoSC based
@@ -1103,7 +1102,6 @@ export default {
     position: relative;
     width: 220px;
     height: 48px;
-    margin-left: 180px;
     background-image: url("/imgs/down-btn@2x.png");
   }
 
