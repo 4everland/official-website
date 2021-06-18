@@ -2,8 +2,13 @@
   <footer>
     <div class="footer-content">
       <div class="security-content">
-        <img class="footer-logo" src="/imgs/logo.svg" alt="" srcset="" />
-
+        <img
+          class="logo-img"
+          @click="toHome"
+          src="/imgs/logo.svg"
+          alt=""
+          srcset=""
+        />
         <div :class="eamil_check ? 'input-view' : 'input-view dis-btn'">
           <input
             class="input-box"
@@ -131,6 +136,11 @@ export default {
       return data;
     },
 
+    toHome() {
+      this.$router.push({
+        path: "/",
+      });
+    },
     toTerm() {
       this.$router.push({
         path: "/service",
@@ -144,6 +154,7 @@ export default {
     },
 
     setEmail(value) {
+      console.log(this.email_address);
       var t =
         /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
       if (t.test(this.email_address)) {
@@ -187,27 +198,25 @@ export default {
     position: relative;
     display: block;
     width: 280px;
-    margin: 0 auto;
-    margin-top: 1.413333rem;
+    margin: 20px auto;
   }
   .input-view {
     display: flex;
     flex-direction: row;
     align-items: stretch;
     background-color: #2b85fb;
-    position: relative;
     width: 6.933333rem;
     height: 0.853333rem;
-    border-radius: 0.133333rem;
+    border-radius: 3px;
     margin: 0 auto;
     margin-top: 0.933333rem;
   }
   .input-box {
     position: relative;
-    padding-left: 10px;
-    width: 4.8rem;
+    padding-left: 15px;
+    width: 5.2rem;
     height: 0.853333rem;
-    border-radius: 0.133333rem;
+    border-radius: 3px;
     border: none;
     background-color: #fff;
     float: left;
@@ -215,14 +224,8 @@ export default {
   }
 
   .right-btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 2rem;
-    height: 0.853333rem;
-    line-height: 0.853333rem;
-    border-radius: 0.133333rem;
-    background-color: #2b85fb;
+    border-radius: 10px;
+    background-color: transparent;
     text-align: center;
     color: #fff;
     font-size: 0.266667rem;
@@ -230,6 +233,7 @@ export default {
     float: right;
     cursor: pointer;
     z-index: 98;
+    flex: 1;
     border: none;
   }
 
@@ -286,6 +290,17 @@ export default {
     margin: 10px;
     font-size: 16px;
     color: #fff !important;
+  }
+  .dis-btn {
+    background-color: #c1c1c1;
+  }
+
+  .logo-img {
+    display: block;
+    position: relative;
+    width: 240px;
+    height: 39px;
+    margin: 20px auto;
   }
 }
 
@@ -409,18 +424,18 @@ export default {
     margin: 10px;
     font-size: 24px;
     color: #fff !important;
-    margin-right: 45px;
+    margin-right: 60px;
   }
   .dis-btn {
     background-color: #c1c1c1;
   }
-}
-.logo-img {
-  display: block;
-  position: relative;
-  top: 40px;
-  width: 280px;
-  height: 39px;
-  margin: 0px auto;
+  .logo-img {
+    display: block;
+    position: relative;
+    top: 40px;
+    width: 280px;
+    height: 39px;
+    margin: 0px auto;
+  }
 }
 </style>
