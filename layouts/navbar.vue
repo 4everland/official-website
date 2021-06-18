@@ -210,6 +210,7 @@ export default {
     height: 1.333333rem;
     background-color: #1e2226;
     z-index: 99;
+    overflow: hidden;
   }
 
   .logo-img {

@@ -843,6 +843,7 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 30px 0 60px 0;
+    overflow: hidden;
   }
   .info-block3-text1 {
     /* width: 539px; */
@@ -1232,7 +1233,7 @@ export default {
     width: 100%;
     min-height: 800px;
     background-color: #fff;
-    margin-top: -0.683333rem;
+    margin-top: -0.783333rem;
   }
 
   .black {

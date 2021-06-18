@@ -66,12 +66,12 @@
       <div class="moblie">
         <div
           class="time-line"
-          :style="{ height: 90 * roadmapNum + 32 + 'px' }"
+          :style="{ height: 90 * roadmapNum + 105 + 'px' }"
         ></div>
 
         <div
           class="time-line2"
-          :style="{ height: 90 * activeNum + 32 + 'px' }"
+          :style="{ height: 90 * activeNum + 100 + 'px' }"
         ></div>
 
         <div class="roadmap-list">
@@ -238,7 +238,7 @@ export default {
 
   .roadmap-item {
     width: 5.933333rem;
-    min-height: 2.2rem;
+    height: 90px;
     margin-left: 80px;
     margin-top: 20px;
   }
