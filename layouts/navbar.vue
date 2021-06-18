@@ -143,24 +143,28 @@ export default {
           jump: 1,
         },
       });
+      this.drawer = false;
     },
     toRoadmap() {
       this.active = "Roadmap";
       this.$router.push({
         path: "/#roadmap",
       });
+      this.drawer = false;
     },
     toTechnology() {
       this.active = "Technology";
       this.$router.push({
         path: "/#technology",
       });
+      this.drawer = false;
     },
     toBlog() {
       this.active = "Blog";
       this.$router.push({
         path: "/blog/menu/1",
       });
+      this.drawer = false;
     },
     toHome() {
       this.$router.push({
@@ -212,7 +216,7 @@ export default {
     display: block;
     position: relative;
     left: 20px;
-    top: 0.4rem;
+    top: 0.15rem;
     width: 200px;
     float: left;
   }

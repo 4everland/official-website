@@ -1,8 +1,8 @@
 <template>
   <div class="roadmap-content">
-    <div class="security-content">
-      <h3 class="block-title" id="roadmap">Roadmap</h3>
+    <h3 class="block-title" id="roadmap">Roadmap</h3>
 
+    <div class="security-content">
       <div class="pc">
         <img
           class="left-icon"
@@ -36,7 +36,7 @@
 
           <div
             class="time-line"
-            :style="{ width: (220 * roadmapNum) / 2 + 240 + 'px' }"
+            :style="{ width: (220 * roadmapNum) / 2 + 260 + 'px' }"
           ></div>
 
           <div
@@ -66,12 +66,12 @@
       <div class="moblie">
         <div
           class="time-line"
-          :style="{ height: 90 * roadmapNum + 'px' }"
+          :style="{ height: 90 * roadmapNum + 32 + 'px' }"
         ></div>
 
         <div
           class="time-line2"
-          :style="{ height: 90 * activeNum + 'px' }"
+          :style="{ height: 90 * activeNum + 32 + 'px' }"
         ></div>
 
         <div class="roadmap-list">
@@ -107,7 +107,7 @@ export default {
           color: "#E60033",
           title: "V1：Quark（2021-2022）",
           content:
-            "<strong>The Paas of Web 3.0</strong> &nbsp;&nbsp; Genesis Product, Realizing the Initial Vision",
+            "<strong>The Paas of Web 3.0</strong> &nbsp;&nbsp;<br/> Genesis Product, Realizing the Initial Vision",
         },
         {
           color: "#E83929",
@@ -153,13 +153,13 @@ export default {
           color: "#CCA6BF",
           title: "V2：Proton（2023-2024）",
           content:
-            "<strong> Enpower Web3.0 developers </strong> expand commercialization capability, launch more developer application tools ",
+            "<strong> Enpower Web3.0 developers </strong> <br/> expand commercialization capability, launch more developer application tools ",
         },
         {
           color: "#3E62AD",
           title: "V3：Atom ( 2025-2026 )",
           content:
-            "<strong>Cloud Computing of Web3.0</strong> &nbsp; Launch virtual machine container, acquire capabilities of Web3.0 cloud computing",
+            "<strong>Cloud Computing of Web3.0</strong> &nbsp; <br/> Launch virtual machine container, acquire capabilities of Web3.0 cloud computing",
         },
       ],
     };
@@ -205,17 +205,21 @@ export default {
   }
   .block-title {
     position: relative;
+    top: 40px;
     width: 100%;
     text-align: center;
     color: #fff;
     font-size: 0.6rem;
+    padding-top: 2rem;
+    margin-top: -2rem;
   }
 
   .time-line {
     position: relative;
     width: 1px;
     margin-left: 1.333333rem;
-    margin-top: 1.666667rem;
+    top: 70px;
+
     min-height: 15rem;
     border: 1px solid #bababa;
     float: left;
@@ -224,7 +228,7 @@ export default {
     position: absolute;
     width: 1px;
     margin-left: 1.333333rem;
-    margin-top: 1.666667rem;
+    top: 70px;
     min-height: 0rem;
     border: 1px solid #00cfff;
     float: left;

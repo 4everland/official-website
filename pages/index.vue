@@ -400,8 +400,9 @@
 
     <div class="map-view">
       <h3 class="map-block-title">
-        Welcome to the <br />
-        next generation internet
+        Welcome to the next
+        <br />
+        generation internet
       </h3>
       <img class="map-img" src="/imgs/map@2x.png" alt="" srcset="" />
     </div>
@@ -883,7 +884,7 @@ export default {
 
   .feature-view .security-content {
     position: relative;
-    width: 8.533333rem;
+    width: 9.066667rem;
     min-height: 9.133333rem;
     margin: 0px auto;
     padding: 0 10px;
@@ -943,11 +944,10 @@ export default {
   }
 
   .feature-content {
-    display: block;
     position: relative;
-    top: 0.533333rem;
-    width: 6.533333rem;
-    min-height: 1.626667rem;
+    top: 40px;
+    width: 276px;
+    height: 122px;
     font-size: 14px;
     font-weight: normal;
     line-height: 18px;
@@ -966,12 +966,13 @@ export default {
 
   .check-item-view {
     margin-left: 15px;
-    min-height: 30px;
-    line-height: 30px;
-    text-align: left;
+    line-height: 18px;
+    margin-top: 9px;
     color: #fff;
     font-weight: normal;
     font-size: 14px;
+    display: flex;
+    align-items: flex-start;
   }
 
   .check-item-text {
@@ -993,6 +994,8 @@ export default {
     line-height: 0.8rem;
     color: #fff;
     text-align: center;
+    padding-top: 2rem;
+    margin-top: -2rem;
   }
 
   .mainnet-view .security-content {
