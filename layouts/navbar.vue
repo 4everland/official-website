@@ -3,7 +3,7 @@
     <div class="header-view">
       <div class="security-content">
         <img
-          class="logo-img"
+          class="logo-img2"
           @click="toHome"
           src="/imgs/logo.svg"
           alt=""
@@ -213,11 +213,11 @@ export default {
     overflow: hidden;
   }
 
-  .logo-img {
+  .logo-img2 {
     display: block;
     position: relative;
     left: 20px;
-    top: 0.15rem;
+    top: 0.3rem;
     width: 200px;
     float: left;
   }
@@ -256,7 +256,7 @@ export default {
     height: 100px;
     margin: 0 auto;
   }
-  .logo-img {
+  .logo-img2 {
     display: block;
     position: relative;
     top: 30px;
