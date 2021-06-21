@@ -1,26 +1,44 @@
+
 <template>
   <div class="content">
     <div class="menu-content">
       <div class="left-content">
         <div
           class="html-item"
-          :key="item.title"
-          v-for="item of article"
-          @click="toActice(item.link)"
+          @click="toActice('/blog2/2021/6/21/1624247537123')"
         >
-          <p class="acticle-time">{{ item.time }}</p>
-          <h1 class="acticle-title">{{ item.title }}</h1>
-          <img class="article-img" v-if="item.img" v-lazy="item.img" alt="" />
-          <p class="article-content">{{ item.content }}</p>
+        <h1>4EVERLAND：The PaaS of Web3.0</h1><p><img src="https://www.typora.io/img/theme-prev/Snip20141101_3.png" alt="image"></p><p>4EVERLAND is designed to solve this problem by providing a distributed, highly efficient, self-motivated, and low-cost data hosting gateway based on IPFS and the underlying technology of Ethereum. If free accounts, free contracts, and free assets are the foundation of Web 3.0, then the development protocol built by 4EVERLAND will be the access layer protocol of the Web 3.0 world, liberating Web 3.0 developers from the constraints of centralization, improve the robustness and security of the service, and provide a globally accelerated, ever-lasting network service for users.</p><p>The Internet needs Web 3.0, a new generation of the Internet paradigm that advocates free identity, free contracts, and free assets, and blockchain technology provides a near-perfect solution to Web 3.0 with decentralized addresses as accounts, smart contracts for self-deployment and access, and Tokens that flow autonomously and frictionlessly. The free market creates prosperity and the blockchain...</p>
           <p class="click-articel">READ MORE</p>
         </div>
+    <div
+        v-if="true"
+        class="html-item"
+        @click="toActice('/blog2/2021/6/21/1624247543943')"
+      >
+      <h1>4EVERLAND：The PaaS of Web3.0</h1><p><img src="https://www.typora.io/img/theme-prev/Snip20141101_3.png" alt="image"></p><p>4EVERLAND is designed to solve this problem by providing a distributed, highly efficient, self-motivated, and low-cost data hosting gateway based on IPFS and the underlying technology of Ethereum. If free accounts, free contracts, and free assets are the foundation of Web 3.0, then the development protocol built by 4EVERLAND will be the access layer protocol of the Web 3.0 world, liberating Web 3.0 developers from the constraints of centralization, improve the robustness and security of the service, and provide a globally accelerated, ever-lasting network service for users.</p><p>The Internet needs Web 3.0, a new generation of the Internet paradigm that advocates free identity, free contracts, and free assets, and blockchain technology provides a near-perfect solution to Web 3.0 with decentralized addresses as accounts, smart contracts for self-deployment and access, and Tokens that flow autonomously and frictionlessly. The free market creates prosperity and the blockchain...</p>
+        <p class="click-articel">READ MORE</p>
+      </div>
 
-        <el-button type="" icon="el-icon-arrow-left" class="menu-left-btn"
-          >Previous</el-button
-        >
-        <el-button type="" class="menu-right-btn"
-          >Next<i class="el-icon-arrow-right el-icon--right"></i
-        ></el-button>
+
+    <div
+      class="html-item"
+      v-if="true"
+      @click="toActice('/blog2/2021/6/21/1624247527090')"
+    >
+    <h1>4EVERLAND：The PaaS of Web3.0</h1><p><img src="https://www.typora.io/img/theme-prev/Snip20141101_3.png" alt="image"></p><p>4EVERLAND is designed to solve this problem by providing a distributed, highly efficient, self-motivated, and low-cost data hosting gateway based on IPFS and the underlying technology of Ethereum. If free accounts, free contracts, and free assets are the foundation of Web 3.0, then the development protocol built by 4EVERLAND will be the access layer protocol of the Web 3.0 world, liberating Web 3.0 developers from the constraints of centralization, improve the robustness and security of the service, and provide a globally accelerated, ever-lasting network service for users.</p><p>The Internet needs Web 3.0, a new generation of the Internet paradigm that advocates free identity, free contracts, and free assets, and blockchain technology provides a near-perfect solution to Web 3.0 with decentralized addresses as accounts, smart contracts for self-deployment and access, and Tokens that flow autonomously and frictionlessly. The free market creates prosperity and the blockchain...</p>
+      <p class="click-articel">READ MORE</p>
+    </div>
+    <el-button type="" icon="el-icon-arrow-left" class="menu-left-btn"
+    v-if="true"
+    @click="toActice('/blog/menu2/1')"
+    >Previous</el-button
+  >
+  <el-button type="" class="menu-right-btn"
+  v-if="true"
+  @click="toActice('/blog/menu2/3')"
+    >Next<i class="el-icon-arrow-right el-icon--right"></i
+  ></el-button>
+
       </div>
       <div class="line"></div>
       <div class="right-content">
@@ -73,32 +91,6 @@ export default {
   mounted() {},
   data() {
     return {
-      article: [
-        {
-          time: "April 16th, 2021",
-          title: "4EVERLAND: The PaaS of Web3.0",
-          content:
-            "The Internet needs Web 3.0, a new generation of the Internet paradigm that advocates free identity, free contracts, and free assets, and blockchain technology provides a near-perfect solution to Web 3.0 with decentralized addresses as accounts, smart contracts for self-deployment and access, and Tokens that flow autonomously and frictionlessly. The free market creates prosperity and the blockchain business is growing rapidly, with liberal financial experience of DEFI, attracting hundreds of billions of dollars. Moreover, NFT is empowering art, sports and trendy culture has brought millions of incremental users to the blockchain world.",
-          img: "/imgs/blog/blog1@2x.png",
-          link: "/blog/2021/6/10/1623293963620",
-        },
-        {
-          time: "April 16th, 2021",
-          title: "The technical architecture design of 4EVERLAND",
-          content:
-            "Based on IPFS and the underlying technology of Ethereum, 4EVERLAND is designed to provide a distributed, highly efficient, self-motivated, and low-cost data hosting gateway. 4EVERLAND has designed a robust architecture to support the stable and efficient operation of the entire network, which mainly includes 4EVER-STORAGE, Proof of storage, 4EVER-GATEWAY, Smart contracts, and 4EVER-HOSTING.",
-          img: "/imgs/blog/blog2@2x.png",
-          link: "/blog/2021/6/10/1623304497527",
-        },
-        {
-          time: "April 16th, 2021",
-          title: "4EVERLAND logo and its design meaning ",
-          content:
-            "The 4EVERLAND logo is set on the basis of the cyclotron pattern, which has evolved to form a three-dimensional pattern. The overall image is presented in the form of a fixed star, it also has the shape of an eye. The slim lines of blue and purple gradient are especially geeky.The design of the fixed star comparing 4EVERLAND to a planet in the vast universe, representing eternity and security.",
-          img: "",
-          link: "/blog/2021/6/10/1623315553148",
-        },
-      ],
     };
   },
   methods: {
@@ -176,7 +168,7 @@ export default {
   .click-articel {
     position: relative;
     font-size: 16px;
-    color: #0397ff;
+    color: #0397ff !important;
     font-weight: 500;
     line-height: 50px;
     cursor: pointer;
@@ -261,7 +253,7 @@ export default {
   .click-articel {
     position: relative;
     font-size: 16px;
-    color: #7db4dc;
+    color: #7db4dc !important;
     font-weight: 500;
     line-height: 50px;
     cursor: pointer;
@@ -313,12 +305,55 @@ export default {
   color: #000 !important;
 }
 
-.menu-left-btn {
-  position: absolute;
-  left: 20px;
-}
-.menu-right-btn {
-  position: absolute;
-  right: 20px;
-}
+.html-item img {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .html-item h1 {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.533333rem;
+    line-height: 1.066667rem;
+    margin-bottom: 30px;
+  }
+
+  .html-item p {
+    line-height: 20px;
+    color: #989898;
+    margin-bottom: 30px;
+  }
+
+  .html-item h3 {
+    line-height: 20px;
+    color: #989898;
+    font-size: 14px;
+  }
+
+  .html-item strong {
+    line-height: 20px;
+    color: #989898;
+    font-size: 14px;
+  }
+
+  .html-item li {
+    line-height: 20px;
+    color: #989898;
+    font-size: 14px;
+  }
+  .menu-left-btn {
+    position: absolute;
+    left: 20px;
+  }
+  .menu-right-btn {
+    position: absolute;
+    right: 20px;
+  }
 </style>
+
+                    
+                    

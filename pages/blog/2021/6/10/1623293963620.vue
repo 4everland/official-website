@@ -148,6 +148,20 @@
           We expect to witness the radical change of server structure and the
           evolution based on Web3.0 network upgrade in the future.
         </p>
+
+        <el-button
+          type=""
+          icon="el-icon-arrow-left"
+          class="menu-left-btn"
+          @click="toActice('`+ file_arr[accumulator - 1] + `')"
+          >Previous</el-button
+        >
+        <el-button
+          type=""
+          class="menu-right-btn"
+          @click="toActice('`+ file_arr[accumulator + 1] + `')"
+          >Next<i class="el-icon-arrow-right el-icon--right"></i
+        ></el-button>
       </div>
     </div>
   </div>

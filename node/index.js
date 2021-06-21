@@ -49,20 +49,17 @@ function fileDisplay(filePath) {
           var mdStr = fs.readFileSync(filePath + '/' + filename, 'utf-8');
 
           let mdData = md.render(mdStr)
-          if (accumulator % 3 == 1) {
+          if (accumulator % 3 + 1 == 1) {
             a1 = mdData.substring(0, 1000)
           }
-          if (accumulator % 3 == 2) {
+          if (accumulator % 3 + 1 == 2) {
             a2 = mdData.substring(0, 1000)
-
           }
-          if (accumulator % 3 == 0) {
+          if (accumulator % 3 + 1 == 3) {
             a3 = mdData.substring(0, 1000)
-
-            // create menu
+            // create
             fs.mkdir('./pages/blog/meun', { recursive: true }, (err) => { })
-            fs.writeFile('./pages/blog/menu/' + Math.ceil(accumulator / 3) + '.vue',
-
+            fs.writeFile('./pages/blog/menu2/' + Math.ceil(accumulator / 3) + '.vue',
               `
 <template>
   <div class="content">
@@ -115,9 +112,7 @@ export default {
   box-sizing: content-box;
   padding: 40px;
 }
-</style>
-
-            
+</style>  
             `
               , err => { })
           }
@@ -132,7 +127,7 @@ export default {
             (err) => {
             })
 
-          fs.writeFile(
+          fs.writeFileSync(
             './pages/blog/' +
             year +
             path.sep +
@@ -171,9 +166,7 @@ export default {
                   background-color: #fff;
                 }
                 </style>
-                    `, err => {
-
-          })
+                    `)
 
 
         }
