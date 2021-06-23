@@ -31,7 +31,7 @@
           resistant, and free of centralized gatekeepers. Welcome to the new
           Internet.
         </p>
-        <div style="margin-top: 50px">
+        <div class="share-view">
           <a target="_blank" href="https://github.com/4everland">
             <span
               class="iconfont icon-github right-icon"
@@ -112,6 +112,23 @@ export default {
 </script>
 
 <style scoped>
+.share-view {
+  margin-top: 50px;
+}
+
+.share-view .right-icon {
+  color: #000;
+  font-size: 24px;
+}
+
+.share-view a:hover {
+  text-decoration: none;
+}
+
+.share-view a:hover .right-icon {
+  color: #0397ff !important;
+}
+
 @media only screen and (max-width: 1280px) {
   .content {
     position: relative;
@@ -311,6 +328,10 @@ export default {
 .right-icon {
   margin: 5px;
   color: #000 !important;
+}
+
+.right-icon:hover {
+  color: #0397ff;
 }
 
 .menu-left-btn {

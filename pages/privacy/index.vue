@@ -351,7 +351,7 @@
           We also share Personal Data when necessary to complete a transaction
           initiated or authorized by you or provide you with a product or
           service you have requested. In addition to those set forth above,
-          these parties also include：
+          these parties also include:
         </p>
 
         <ul>

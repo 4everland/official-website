@@ -3,7 +3,7 @@
     <div class="service-content">
       <p class="back-text" @click="goback()">&lt; Back</p>
       <div class="acticle-view">
-        <h1>4EVERLAND：The PaaS of Web3.0</h1>
+        <h1>4EVERLAND: The PaaS of Web3.0</h1>
 
         <p><img alt="image" src="/imgs/blog/2.png" /></p>
 

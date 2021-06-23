@@ -97,8 +97,8 @@
         </el-dialog>
 
         <div class="bottom-link-view">
-          <div class="link-item" @click="toTerm">Terms of use</div>
-          <div class="link-item" @click="toPrivacy">Privacy Policy</div>
+          <nuxt-link to="/service" class="link-item">Terms of use</nuxt-link>
+          <nuxt-link to="/privacy" class="link-item">Privacy Policy</nuxt-link>
         </div>
 
         <p class="copyright">©️ 2021 4EVERLAND FOUNDATION LTD</p>
@@ -172,7 +172,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .el-dialog__header {
   display: none !important;
 }
@@ -276,6 +276,14 @@ export default {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+  }
+
+  .share-view a:hover {
+    text-decoration: none;
+  }
+
+  .share-view a:hover .iconfont {
+    color: #2b85fb !important;
   }
 
   .share-icon {
@@ -408,6 +416,14 @@ export default {
     display: flex;
     justify-content: center;
     margin-top: 37px;
+  }
+
+  .share-view a:hover {
+    text-decoration: none;
+  }
+
+  .share-view a:hover .iconfont {
+    color: #2b85fb !important;
   }
 
   .share-icon {

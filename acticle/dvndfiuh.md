@@ -1,4 +1,4 @@
-# 4EVERLAND：The PaaS of Web3.0
+# 4EVERLAND: The PaaS of Web3.0
 
 ![image](https://www.typora.io/img/theme-prev/Snip20141101_3.png)
 
@@ -14,12 +14,12 @@ However, there is still an important part of the Web 3.0 paradigm of blockchain 
 
 In addition, 4EVERLAND provides products and protocols such as DWeb hosting, decentralized gateway, decentralized domain name, digital marketing system, and data services to help developers access Web 3.0 in one click, and eventually build a globally accelerated, privacy-protected, link-perpetual distributed network and Web 3.0 infrastructure with IPFS.
 
-Here are some core technologies of 4EVERLAND: 
+Here are some core technologies of 4EVERLAND:
 
-- ***4EVER-STORAGE:*** 4EVERLAND forms nodes into a huge storage network through Swarm technology, relying on node cooperativeness to achieve persistent storage of specific data and supporting horizontal expansion of nodes.
+- **_4EVER-STORAGE:_** 4EVERLAND forms nodes into a huge storage network through Swarm technology, relying on node cooperativeness to achieve persistent storage of specific data and supporting horizontal expansion of nodes.
 
-- ***4EVER-GATEWAY:*** The gateway nodes contain dynamic DNS, Data I/O, and Cert Manager modules, and developers can quickly realize safe and reliable global acceleration based on 4EVERLAND through simple configuration.
+- **_4EVER-GATEWAY:_** The gateway nodes contain dynamic DNS, Data I/O, and Cert Manager modules, and developers can quickly realize safe and reliable global acceleration based on 4EVERLAND through simple configuration.
 
-- ***Storage Proof:*** 4EVERLAND builds Swarm distributed storage network based on IPFS protocol and proposes storage challenge proof PoSC based on TEE technology, ensuring the availability and reliability of data.
+- **_Storage Proof:_** 4EVERLAND builds Swarm distributed storage network based on IPFS protocol and proposes storage challenge proof PoSC based on TEE technology, ensuring the availability and reliability of data.
 
-- ***Smart Contracts:*** 4EVERLAND's smart contract module mainly includes payment contracts, campaign contracts, lending contracts, control contracts. It achieves open, transparent and free decentralized governance through smart contracts.   
+- **_Smart Contracts:_** 4EVERLAND's smart contract module mainly includes payment contracts, campaign contracts, lending contracts, control contracts. It achieves open, transparent and free decentralized governance through smart contracts.

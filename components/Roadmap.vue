@@ -105,7 +105,7 @@ export default {
       roadmap: [
         {
           color: "#E60033",
-          title: "V1：Quark（2021-2022）",
+          title: "V1: Quark（2021-2022）",
           content:
             "<strong>The Paas of Web 3.0</strong> &nbsp;&nbsp;<br/> Genesis Product, Realizing the Initial Vision",
         },
@@ -151,13 +151,13 @@ export default {
         },
         {
           color: "#CCA6BF",
-          title: "V2：Proton（2023-2024）",
+          title: "V2: Proton（2023-2024）",
           content:
             "<strong> Enpower Web3.0 developers </strong> <br/> expand commercialization capability, launch more developer application tools ",
         },
         {
           color: "#3E62AD",
-          title: "V3：Atom ( 2025-2026 )",
+          title: "V3: Atom ( 2025-2026 )",
           content:
             "<strong>Cloud Computing of Web3.0</strong> &nbsp; <br/> Launch virtual machine container, acquire capabilities of Web3.0 cloud computing",
         },

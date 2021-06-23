@@ -746,7 +746,7 @@ export default {
     font-weight: normal;
     font-stretch: normal;
     line-height: 0.52rem;
-    color: #b1b6bb;
+    /* color: #b1b6bb; */
   }
 
   .block-title {
@@ -1286,7 +1286,7 @@ export default {
     font-weight: normal;
     font-stretch: normal;
     line-height: 24px;
-    color: #b1b6bb;
+    /* color: #b1b6bb; */
   }
   .info-block5 {
     position: relative;
