@@ -244,25 +244,25 @@ export default {
 
   .acticle-view p {
     line-height: 20px;
-    color: #989898;
+    font-size: 13px;
     margin-bottom: 30px;
   }
 
   .acticle-view h3 {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
 
   .acticle-view strong {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
 
   .acticle-view li {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
 }
@@ -356,24 +356,24 @@ export default {
 
   .acticle-view p {
     line-height: 20px;
-    color: #989898;
+    font-size: 13px;
     margin-bottom: 30px;
   }
 
   .acticle-view h3 {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
 
   .acticle-view strong {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
   .acticle-view li {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
 }

@@ -149,7 +149,7 @@
           evolution based on Web3.0 network upgrade in the future.
         </p>
 
-        <el-button
+        <!-- <el-button
           type=""
           icon="el-icon-arrow-left"
           class="menu-left-btn"
@@ -161,7 +161,7 @@
           class="menu-right-btn"
           @click="toActice('`+ file_arr[accumulator + 1] + `')"
           >Next<i class="el-icon-arrow-right el-icon--right"></i
-        ></el-button>
+        ></el-button> -->
       </div>
     </div>
   </div>
@@ -273,25 +273,25 @@ export default {
 
   .acticle-view p {
     line-height: 20px;
-    color: #989898;
+    font-size: 13px;
     margin-bottom: 30px;
   }
 
   .acticle-view h3 {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
 
   .acticle-view strong {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
 
   .acticle-view li {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
 }
@@ -385,24 +385,24 @@ export default {
 
   .acticle-view p {
     line-height: 20px;
-    color: #989898;
+    font-size: 13px;
     margin-bottom: 30px;
   }
 
   .acticle-view h3 {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
 
   .acticle-view strong {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
   .acticle-view li {
     line-height: 20px;
-    color: #989898;
+
     font-size: 14px;
   }
 }

@@ -111,18 +111,18 @@ export default {
         },
         {
           color: "#E83929",
-          title: "Q1 2021.",
+          title: "Q1 2021",
           content: " Market research and product prototype",
         },
         {
           color: "#E83929",
-          title: "March 2021.",
+          title: "March 2021",
           content: "Product Design & Technology Development",
         },
         {
           color: "#e95464",
           title: "May 2021",
-          content: "Establish 4EVERLAND Foundation and technical community ",
+          content: "Establish 4EVERLAND Foundation and technical community",
         },
         {
           color: "#E95464",
@@ -153,7 +153,7 @@ export default {
           color: "#CCA6BF",
           title: "V2: Proton（2023-2024）",
           content:
-            "<strong> Enpower Web3.0 developers </strong> <br/> expand commercialization capability, launch more developer application tools ",
+            "<strong> Enpower Web3.0 developers </strong> <br/> expand commercialization capability, launch more developer application tools",
         },
         {
           color: "#3E62AD",
@@ -203,6 +203,7 @@ export default {
     width: 9.066667rem;
     margin: 0 auto;
   }
+
   .block-title {
     position: relative;
     top: 40px;
@@ -282,9 +283,16 @@ export default {
     width: 100%;
     background-color: #1e2226;
     padding-bottom: 100px;
+    /* background-image: url("/imgs/roadmap-bg.png"); */
+    /* background-size: cover; */
   }
   .roadmap-content .block-title {
     padding-top: 160px;
+  }
+  .roadmap-bg {
+    position: absolute;
+    width: 100%;
+    transform: scale(1.2);
   }
   .security-content {
     position: relative;
@@ -388,7 +396,7 @@ export default {
   .left-icon {
     position: absolute;
     top: 80px;
-    z-index: 99;
+    z-index: 2;
     cursor: pointer;
   }
 
@@ -396,7 +404,7 @@ export default {
     position: absolute;
     right: -40px;
     top: 80px;
-    z-index: 99;
+    z-index: 2;
     cursor: pointer;
   }
   .moblie {
