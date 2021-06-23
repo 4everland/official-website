@@ -1098,6 +1098,7 @@ export default {
     font-stretch: normal;
     letter-spacing: 0;
     color: #fff;
+    line-height: 52px;
   }
   .website-display {
     font-size: 30px;
@@ -1268,11 +1269,12 @@ export default {
     display: block;
     position: relative;
     float: left;
+    width:50px;
   }
 
   .character-item .item-title {
     position: relative;
-    top: 20px;
+    top: 10px;
     left: 20px;
     font-size: 30px;
   }
