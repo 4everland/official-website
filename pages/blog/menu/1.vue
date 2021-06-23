@@ -14,13 +14,12 @@
           <p class="article-content">{{ item.content }}</p>
           <p class="click-articel">READ MORE</p>
         </div>
-
-        <el-button type="" icon="el-icon-arrow-left" class="menu-left-btn"
+        <!-- <el-button type="" icon="el-icon-arrow-left" class="menu-left-btn"
           >Previous</el-button
         >
         <el-button type="" class="menu-right-btn"
           >Next<i class="el-icon-arrow-right el-icon--right"></i
-        ></el-button>
+        ></el-button> -->
       </div>
       <div class="line"></div>
       <div class="right-content">
@@ -189,6 +188,7 @@ export default {
     object-fit: cover;
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 5px;
   }
   .click-articel {
     position: relative;
@@ -274,6 +274,7 @@ export default {
     object-fit: cover;
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 5px;
   }
   .click-articel {
     position: relative;

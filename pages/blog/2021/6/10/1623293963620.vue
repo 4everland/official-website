@@ -258,6 +258,7 @@ export default {
     display: block;
     width: 100%;
     margin-bottom: 30px;
+    border-radius: 5px;
   }
 
   .acticle-view h1 {
@@ -369,6 +370,7 @@ export default {
     display: block;
     width: 100%;
     margin-bottom: 30px;
+    border-radius: 5px;
   }
 
   .acticle-view h1 {

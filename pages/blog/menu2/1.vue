@@ -1,4 +1,3 @@
-
 <template>
   <div class="content">
     <div class="menu-content">
@@ -7,38 +6,107 @@
           class="html-item"
           @click="toActice('/blog2/2021/6/21/1624253041623')"
         >
-        <h4><strong>Term of Service</strong></h4><p>PLEASE NOTE THAT YOUR USE OF AND ACCESS TO OUR SERVICES (DEFINED BELOW) ARE SUBJECT TO THE FOLLOWING TERMS; IF YOU DO NOT AGREE TO ALL OF THE FOLLOWING, YOU MAY NOT USE OR ACCESS THE SERVICES IN ANY MANNER.</p><p>Terms of Use</p><p>Effective date: 06/07/2021</p><p>Welcome to 4EVERLAND. Please read on to learn the rules and restrictions that govern your use of our website(s), products, services and applications . If you have any questions, comments, or concerns regarding these terms or the Services, please contact us in support@4everland.org.These Terms of Use (the “Terms”) are a binding contract between you and 4EVERLAND Labs . You must agree to and accept all of the Terms, or you don’t have the right to use the Services. Your using the Services in any way means that you agree to all of these Terms, and these Terms will remain in effect while you use the Services. These Terms include the provisions in this document, as well as those in the Privacy Policy and Copyright Dispute Policy (4EVERLAND.org/#/copyright)....</p>
+          <h4><strong>Term of Service</strong></h4>
+          <p>
+            PLEASE NOTE THAT YOUR USE OF AND ACCESS TO OUR SERVICES (DEFINED
+            BELOW) ARE SUBJECT TO THE FOLLOWING TERMS; IF YOU DO NOT AGREE TO
+            ALL OF THE FOLLOWING, YOU MAY NOT USE OR ACCESS THE SERVICES IN ANY
+            MANNER.
+          </p>
+          <p>Terms of Use</p>
+          <p>Effective date: 06/07/2021</p>
+          <p>
+            Welcome to 4EVERLAND. Please read on to learn the rules and
+            restrictions that govern your use of our website(s), products,
+            services and applications . If you have any questions, comments, or
+            concerns regarding these terms or the Services, please contact us in
+            support@4everland.org.These Terms of Use (the “Terms”) are a binding
+            contract between you and 4EVERLAND Labs . You must agree to and
+            accept all of the Terms, or you don’t have the right to use the
+            Services. Your using the Services in any way means that you agree to
+            all of these Terms, and these Terms will remain in effect while you
+            use the Services. These Terms include the provisions in this
+            document, as well as those in the Privacy Policy and Copyright
+            Dispute Policy (4EVERLAND.org/#/copyright)....
+          </p>
           <p class="click-articel">READ MORE</p>
         </div>
-    <div
-        v-if="true"
-        class="html-item"
-        @click="toActice('/blog2/2021/6/21/1624253037872')"
-      >
-      <h4><strong>Term of Service</strong></h4><p>PLEASE NOTE THAT YOUR USE OF AND ACCESS TO OUR SERVICES (DEFINED BELOW) ARE SUBJECT TO THE FOLLOWING TERMS; IF YOU DO NOT AGREE TO ALL OF THE FOLLOWING, YOU MAY NOT USE OR ACCESS THE SERVICES IN ANY MANNER.</p><p>Terms of Use</p><p>Effective date: 06/07/2021</p><p>Welcome to 4EVERLAND. Please read on to learn the rules and restrictions that govern your use of our website(s), products, services and applications . If you have any questions, comments, or concerns regarding these terms or the Services, please contact us in support@4everland.org.These Terms of Use (the “Terms”) are a binding contract between you and 4EVERLAND Labs . You must agree to and accept all of the Terms, or you don’t have the right to use the Services. Your using the Services in any way means that you agree to all of these Terms, and these Terms will remain in effect while you use the Services. These Terms include the provisions in this document, as well as those in the Privacy Policy and Copyright Dispute Policy (4EVERLAND.org/#/copyright)....</p>
-        <p class="click-articel">READ MORE</p>
-      </div>
+        <div
+          v-if="true"
+          class="html-item"
+          @click="toActice('/blog2/2021/6/21/1624253037872')"
+        >
+          <h4><strong>Term of Service</strong></h4>
+          <p>
+            PLEASE NOTE THAT YOUR USE OF AND ACCESS TO OUR SERVICES (DEFINED
+            BELOW) ARE SUBJECT TO THE FOLLOWING TERMS; IF YOU DO NOT AGREE TO
+            ALL OF THE FOLLOWING, YOU MAY NOT USE OR ACCESS THE SERVICES IN ANY
+            MANNER.
+          </p>
+          <p>Terms of Use</p>
+          <p>Effective date: 06/07/2021</p>
+          <p>
+            Welcome to 4EVERLAND. Please read on to learn the rules and
+            restrictions that govern your use of our website(s), products,
+            services and applications . If you have any questions, comments, or
+            concerns regarding these terms or the Services, please contact us in
+            support@4everland.org.These Terms of Use (the “Terms”) are a binding
+            contract between you and 4EVERLAND Labs . You must agree to and
+            accept all of the Terms, or you don’t have the right to use the
+            Services. Your using the Services in any way means that you agree to
+            all of these Terms, and these Terms will remain in effect while you
+            use the Services. These Terms include the provisions in this
+            document, as well as those in the Privacy Policy and Copyright
+            Dispute Policy (4EVERLAND.org/#/copyright)....
+          </p>
+          <p class="click-articel">READ MORE</p>
+        </div>
 
-
-    <div
-      class="html-item"
-      v-if="true"
-      @click="toActice('/blog2/2021/6/21/1624253051414')"
-    >
-    <h4><strong>Term of Service</strong></h4><p>PLEASE NOTE THAT YOUR USE OF AND ACCESS TO OUR SERVICES (DEFINED BELOW) ARE SUBJECT TO THE FOLLOWING TERMS; IF YOU DO NOT AGREE TO ALL OF THE FOLLOWING, YOU MAY NOT USE OR ACCESS THE SERVICES IN ANY MANNER.</p><p>Terms of Use</p><p>Effective date: 06/07/2021</p><p>Welcome to 4EVERLAND. Please read on to learn the rules and restrictions that govern your use of our website(s), products, services and applications . If you have any questions, comments, or concerns regarding these terms or the Services, please contact us in support@4everland.org.These Terms of Use (the “Terms”) are a binding contract between you and 4EVERLAND Labs . You must agree to and accept all of the Terms, or you don’t have the right to use the Services. Your using the Services in any way means that you agree to all of these Terms, and these Terms will remain in effect while you use the Services. These Terms include the provisions in this document, as well as those in the Privacy Policy and Copyright Dispute Policy (4EVERLAND.org/#/copyright)....</p>
-      <p class="click-articel">READ MORE</p>
-    </div>
-    <el-button type="" icon="el-icon-arrow-left" class="menu-left-btn"
-    v-if="false"
-    @click="toActice('undefined')"
-    >Previous</el-button
-  >
-  <el-button type="" class="menu-right-btn"
-  v-if="true"
-  @click="toActice('/blog/menu2/2')"
-    >Next<i class="el-icon-arrow-right el-icon--right"></i
-  ></el-button>
-
+        <div
+          class="html-item"
+          v-if="true"
+          @click="toActice('/blog2/2021/6/21/1624253051414')"
+        >
+          <h4><strong>Term of Service</strong></h4>
+          <p>
+            PLEASE NOTE THAT YOUR USE OF AND ACCESS TO OUR SERVICES (DEFINED
+            BELOW) ARE SUBJECT TO THE FOLLOWING TERMS; IF YOU DO NOT AGREE TO
+            ALL OF THE FOLLOWING, YOU MAY NOT USE OR ACCESS THE SERVICES IN ANY
+            MANNER.
+          </p>
+          <p>Terms of Use</p>
+          <p>Effective date: 06/07/2021</p>
+          <p>
+            Welcome to 4EVERLAND. Please read on to learn the rules and
+            restrictions that govern your use of our website(s), products,
+            services and applications . If you have any questions, comments, or
+            concerns regarding these terms or the Services, please contact us in
+            support@4everland.org.These Terms of Use (the “Terms”) are a binding
+            contract between you and 4EVERLAND Labs . You must agree to and
+            accept all of the Terms, or you don’t have the right to use the
+            Services. Your using the Services in any way means that you agree to
+            all of these Terms, and these Terms will remain in effect while you
+            use the Services. These Terms include the provisions in this
+            document, as well as those in the Privacy Policy and Copyright
+            Dispute Policy (4EVERLAND.org/#/copyright)....
+          </p>
+          <p class="click-articel">READ MORE</p>
+        </div>
+        <el-button
+          type=""
+          icon="el-icon-arrow-left"
+          class="menu-left-btn"
+          v-if="false"
+          @click="toActice('undefined')"
+          >Previous</el-button
+        >
+        <el-button
+          type=""
+          class="menu-right-btn"
+          v-if="true"
+          @click="toActice('/blog/menu2/2')"
+          >Next<i class="el-icon-arrow-right el-icon--right"></i
+        ></el-button>
       </div>
       <div class="line"></div>
       <div class="right-content">
@@ -90,8 +158,7 @@ export default {
   created() {},
   mounted() {},
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     toActice(link) {
@@ -164,6 +231,7 @@ export default {
     object-fit: cover;
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 5px;
   }
   .click-articel {
     position: relative;
@@ -249,6 +317,7 @@ export default {
     object-fit: cover;
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 5px;
   }
   .click-articel {
     position: relative;
@@ -306,54 +375,51 @@ export default {
 }
 
 .html-item img {
-    position: relative;
-    display: block;
-    width: 100%;
-    margin-bottom: 30px;
-  }
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
 
-  .html-item h1 {
-    position: relative;
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 0.533333rem;
-    line-height: 1.066667rem;
-    margin-bottom: 30px;
-  }
+.html-item h1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 0.533333rem;
+  line-height: 1.066667rem;
+  margin-bottom: 30px;
+}
 
-  .html-item p {
-    line-height: 20px;
-    color: #989898;
-    margin-bottom: 30px;
-  }
+.html-item p {
+  line-height: 20px;
+  color: #989898;
+  margin-bottom: 30px;
+}
 
-  .html-item h3 {
-    line-height: 20px;
-    color: #989898;
-    font-size: 14px;
-  }
+.html-item h3 {
+  line-height: 20px;
+  color: #989898;
+  font-size: 14px;
+}
 
-  .html-item strong {
-    line-height: 20px;
-    color: #989898;
-    font-size: 14px;
-  }
+.html-item strong {
+  line-height: 20px;
+  color: #989898;
+  font-size: 14px;
+}
 
-  .html-item li {
-    line-height: 20px;
-    color: #989898;
-    font-size: 14px;
-  }
-  .menu-left-btn {
-    position: absolute;
-    left: 20px;
-  }
-  .menu-right-btn {
-    position: absolute;
-    right: 20px;
-  }
+.html-item li {
+  line-height: 20px;
+  color: #989898;
+  font-size: 14px;
+}
+.menu-left-btn {
+  position: absolute;
+  left: 20px;
+}
+.menu-right-btn {
+  position: absolute;
+  right: 20px;
+}
 </style>
-
-                    
-                    
