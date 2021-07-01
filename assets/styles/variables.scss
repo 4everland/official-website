@@ -1,0 +1,15 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+$body-font-family: 'PingFang SC', 'Roboto', 'Helvetica Neue',
+  'Helvetica, Tahoma', 'Arial', 'PingFang SC-Light', 'Microsoft YaHei';
+$btn-font-size: 400;
+
+body {
+  overflow-x: hidden;
+}
+
+.v-btn {
+  text-transform: capitalize;
+}

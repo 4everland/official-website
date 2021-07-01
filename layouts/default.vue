@@ -1,69 +1,85 @@
 <template>
-  <div>
-    <vHeader ref="vheader"></vHeader>
-    <Nuxt />
-    <vFooter></vFooter>
-  </div>
+  <v-app dark>
+    <v-app-bar fixed app>
+      <v-container class="d-flex align-center">
+        <v-btn text color="transparent" to="/" class="always-active mr-8">
+          <logo />
+        </v-btn>
+        <v-btn
+          v-for="item in links"
+          :key="item.text"
+          class="hidden-sm-and-down"
+          plain
+          nuxt
+          :to="item.link"
+        >
+          {{ item.text }}
+        </v-btn>
+        <v-spacer />
+        <v-btn
+          class="hidden-md-and-up"
+          text
+          icon
+          @click.stop="showDrawer = !showDrawer"
+        >
+          <v-icon>{{ mdiMenu }}</v-icon>
+        </v-btn>
+      </v-container>
+    </v-app-bar>
+    <v-main>
+      <nuxt />
+    </v-main>
+    <v-navigation-drawer v-model="showDrawer" right temporary fixed>
+      <v-list>
+        <v-list-item
+          v-for="item in links"
+          :key="item.text"
+          nuxt
+          :to="item.link"
+        >
+          <v-list-item-title>{{ item.text }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <app-footer />
+  </v-app>
 </template>
 
 <script>
-import vHeader from "./navbar.vue";
-import vFooter from "./bottom.vue";
+import { mdiMenu } from '@mdi/js'
+import Logo from '../components/Logo.vue'
+import AppFooter from '../components/AppFooter.vue'
 
 export default {
-  components: {
-    vHeader,
-    vFooter,
+  components: { Logo, AppFooter },
+  data() {
+    return {
+      mdiMenu,
+      showDrawer: false,
+      links: [
+        {
+          text: 'Features',
+          link: '/#feature',
+        },
+        {
+          text: 'Technology',
+          link: '/#technology',
+        },
+        {
+          text: 'Roadmap',
+          link: '/#roadmap',
+        },
+        {
+          text: 'Blog',
+          link: '/blog',
+        },
+      ],
+    }
   },
-};
+}
 </script>
-
-<style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+<style scoped>
+.always-active {
+  opacity: 1 !important;
 }
 </style>

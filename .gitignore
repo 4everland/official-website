@@ -33,7 +33,6 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
-dist
 
 # Dependency directories
 node_modules/
@@ -70,6 +69,7 @@ typings/
 .nuxt
 
 # Nuxt generate
+dist
 
 # vuepress build output
 .vuepress/dist
@@ -79,7 +79,6 @@ typings/
 
 # IDE / Editor
 .idea
-.vscode
 
 # Service worker
 sw.*
