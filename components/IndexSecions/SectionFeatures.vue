@@ -56,9 +56,9 @@ export default {
           icon: require('~/assets/imgs/index/global@2x.png'),
           desc: 'The consensus-driven Swarm network, improves network throughput massively and high availability, provides more efficient and fast Web3.0 access for global developers.',
           items: [
-            'Dynamic Domain Name Service (DDNS)',
+            'Decentralized gateway',
+            'Distributed storage',
             'Data I/O optimization',
-            'Automatic SSL certificate management',
           ],
         },
         {
