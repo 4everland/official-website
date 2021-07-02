@@ -5,7 +5,7 @@
     </h3>
     <div class="globe-wrapper">
       <img
-        src="~/assets/imgs/index/waves@2x.png"
+        src="~/assets/imgs/index/waves.png"
         style="width: 100%"
         class="globe-bg"
       />
