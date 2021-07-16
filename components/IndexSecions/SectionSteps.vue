@@ -47,7 +47,7 @@ export default {
           img: require('~/assets/imgs/index/step_1@2x.png'),
         },
         {
-          title: '2. Add your build setting',
+          title: '2. Add your build settings',
           img: require('~/assets/imgs/index/step_2@2x.png'),
         },
         {
