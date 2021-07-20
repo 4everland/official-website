@@ -1,7 +1,7 @@
 ---
 title: 4EVERLAND logo and its design meaning
 description: The 4EVERLAND logo is set on the basis of the cyclotron pattern, which has evolved to form a three-dimensional pattern. The overall image is presented in the form of a fixed star, it also has the shape of an eye. The slim lines of blue and purple gradient are especially geeky.
-img: /imgs/blogs/1.png
+img: /imgs/blogs/logo_design.png
 alt: 4EVERLAND logo and its design meaning
 published: 2021-05-29
 ---

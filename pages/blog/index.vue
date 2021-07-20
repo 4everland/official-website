@@ -31,13 +31,7 @@
                 {{ article.title }}
               </h5>
               <p v-if="article.img" class="my-4">
-                <v-img
-                  :src="article.img"
-                  height="300"
-                  width="640"
-                  class="article-img"
-                  aspect-ratio="16/9"
-                ></v-img>
+                <v-img :src="article.img" class="article-img"></v-img>
               </p>
               <p class="text-body-2">
                 {{ article.description }}
@@ -150,6 +144,7 @@ export default {
   text-decoration: none;
 }
 .article-img {
+  width: 100%;
   border-radius: 8px;
   overflow: hidden;
 }
