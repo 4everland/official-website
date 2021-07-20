@@ -1,7 +1,7 @@
 ---
 title: The technical architecture design of 4EVERLAND
 description: Based on IPFS and the underlying technology of Ethereum, 4EVERLAND is designed to provide a distributed, highly efficient, self-motivated, and low-cost data hosting gateway. 4EVERLAND has designed a robust architecture to support the stable and efficient operation of the entire network, which mainly includes 4EVER-STORAGE, Proof of storage, 4EVER-GATEWAY, Smart contracts, and 4EVER-HOSTING.
-img: '/imgs/blogs/3.png'
+img: '/imgs/blogs/arch_design.png'
 alt: The architecture design of 4EVERLAND
 published: 2021-06-19
 ---
