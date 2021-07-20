@@ -1,10 +1,12 @@
 ---
 title: 4EVERLAND Bi-Weekly (July 5, 2021-July 18, 2021)
-description: 4EVERLAND bi-Weekly report, 4EVERLAND is a Web3.0 cloud computing platform with global acceleration, privacy protection, distributed storage and other technical features.
+description: 4EVERLAND bi-weekly report, 4EVERLAND is a Web3.0 cloud computing platform with global acceleration, privacy protection, distributed storage and other technical features.
 img: '/imgs/blogs/Bi-Weekly.png'
 alt: 4EVERLAND Bi-Weekly Report
 published: 2021-07-19
 ---
+
+![image](/imgs/blogs/Bi-Weekly.png)
 
 Dear community members:
 
@@ -30,6 +32,7 @@ Since its establishment, 4EVERLAND has developed in accordance with Roadmap. As 
 - Cross TEE node Communication framework @WIP
 - Data processing logic between TEE and IPFS  @WIP
 
+------------
 
 ### About 4EVERLAND
 
