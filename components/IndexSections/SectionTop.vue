@@ -16,13 +16,26 @@
           <v-btn
             href="/4everland-whitepaper-en(Draft V0.0.2).pdf"
             target="_blank"
-            class="btn-whitepaper"
+            class="btn-whitepaper mr-2 mb-4"
             rounded
             x-large
           >
             <v-icon left size="20">{{ mdiBookOpenVariant }}</v-icon>
             <span>Whitepaper |</span>
             <v-icon right size="20">{{ mdiDownloadCircleOutline }}</v-icon>
+          </v-btn>
+          <v-btn
+            href="/4everland-whitepaper-en(Draft V0.0.2).pdf"
+            target="_blank"
+            class="blue darken-1 mb-4"
+            rounded
+            x-large
+          >
+            <v-icon left size="20">{{ mdiGithub }}</v-icon>
+            <span>Start Deploying |</span>
+            <v-icon right size="20">{{
+              mdiCheckboxMarkedCircleOutline
+            }}</v-icon>
           </v-btn>
         </p>
       </v-col>
@@ -37,12 +50,19 @@
   </v-container>
 </template>
 <script>
-import { mdiBookOpenVariant, mdiDownloadCircleOutline } from '@mdi/js'
+import {
+  mdiBookOpenVariant,
+  mdiDownloadCircleOutline,
+  mdiGithub,
+  mdiCheckboxMarkedCircleOutline,
+} from '@mdi/js'
 export default {
   data() {
     return {
       mdiBookOpenVariant,
       mdiDownloadCircleOutline,
+      mdiGithub,
+      mdiCheckboxMarkedCircleOutline,
     }
   },
 }

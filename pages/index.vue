@@ -13,15 +13,15 @@
 </template>
 
 <script>
-import SectionFeatures from '../components/IndexSecions/SectionFeatures.vue'
-import SectionGlobe from '../components/IndexSecions/SectionGlobe.vue'
-import SectionParticipant from '../components/IndexSecions/SectionParticipant.vue'
-import SectionSteps from '../components/IndexSecions/SectionSteps.vue'
-import SectionTechnology from '../components/IndexSecions/SectionTechnology.vue'
-import SectionTop from '../components/IndexSecions/SectionTop.vue'
-import SectionMap from '../components/IndexSecions/SectionMap.vue'
-import SectionRoadmap from '../components/IndexSecions/SectionRoadmap.vue'
-import SectionFuture from '../components/IndexSecions/SectionFuture.vue'
+import SectionFeatures from '../components/IndexSections/SectionFeatures.vue'
+import SectionGlobe from '../components/IndexSections/SectionGlobe.vue'
+import SectionParticipant from '../components/IndexSections/SectionParticipant.vue'
+import SectionSteps from '../components/IndexSections/SectionSteps.vue'
+import SectionTechnology from '../components/IndexSections/SectionTechnology.vue'
+import SectionTop from '../components/IndexSections/SectionTop.vue'
+import SectionMap from '../components/IndexSections/SectionMap.vue'
+import SectionRoadmap from '../components/IndexSections/SectionRoadmap.vue'
+import SectionFuture from '../components/IndexSections/SectionFuture.vue'
 export default {
   components: {
     SectionTop,
