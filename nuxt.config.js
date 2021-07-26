@@ -1,4 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
+require('dotenv').config({
+  path: `environments/.env.${process.env.NODE_ENV || 'development'}`,
+})
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -54,10 +57,16 @@ export default {
     '@nuxt/content',
     // https://www.npmjs.com/package/vuetify-dialog
     'vuetify-dialog/nuxt',
+    ['@nuxtjs/dotenv', { filename: '.env.production' }],
   ],
-
+  env: {
+    BASE_URL: process.env.BASE_URL,
+    NODE_ENV: process.env.NODE_ENV,
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL, // Used as fallback if no runtime config is provided
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
