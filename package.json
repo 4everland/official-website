@@ -38,6 +38,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.9.1",
     "dotenv": "^10.0.0",
+    "echarts": "^5.1.2",
     "nuxt": "^2.15.3",
     "vuetify-dialog": "^2.0.16"
   },

@@ -1,15 +1,14 @@
 <template>
   <v-theme-provider light>
-    <div id="steps">
+    <div
+      id="steps"
+      :style="{ background: background == 'black' ? '#121212' : '#ffffff' }"
+    >
       <v-container class="px-8 pb-16">
         <h3
-          class="
-            text-h3
-            font-weight-light
-            text-center
-            mb-16
-            grey--text
-            text--darken-4
+          class="text-h3 font-weight-light text-center mb-16"
+          :class="
+            background == 'black' ? 'white--text' : 'grey--text text--darken-4'
           "
         >
           Deploy a website based on<br />
@@ -23,24 +22,49 @@
             lg="4"
             md="4"
           >
+            <p
+              class="text-center"
+              :class="
+                background == 'black'
+                  ? 'white--text'
+                  : 'grey--text text--darken-4'
+              "
+            >
+              {{ step.title }}
+            </p>
             <v-card flat class="step">
               <div>
                 <img style="width: 100%" :src="step.img" />
               </div>
-              <v-card-text>
-                <p class="text-center">{{ step.title }}</p>
-              </v-card-text>
             </v-card>
           </v-col>
         </v-row>
+        <p class="my-12 text-center">
+          <v-btn
+            href="https://hosting-website.vercel.app"
+            class="blue darken-1 white--text"
+            rounded
+            x-large
+          >
+            <v-icon left size="20">{{ mdiGithub }}</v-icon>
+            <span>Start Deploying |</span>
+            <v-icon right size="20">{{
+              mdiCheckboxMarkedCircleOutline
+            }}</v-icon>
+          </v-btn>
+        </p>
       </v-container>
     </div>
   </v-theme-provider>
 </template>
 <script>
+import { mdiGithub, mdiCheckboxMarkedCircleOutline } from '@mdi/js'
 export default {
+  props: { background: { type: String, default: 'white' } },
   data() {
     return {
+      mdiGithub,
+      mdiCheckboxMarkedCircleOutline,
       steps: [
         {
           title: '1. Connect your GitHub',
@@ -60,7 +84,7 @@ export default {
 }
 </script>
 <style scoped>
-#steps {
+/* #steps {
   background: #fff;
-}
+} */
 </style>

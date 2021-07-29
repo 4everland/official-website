@@ -12,6 +12,7 @@
           plain
           nuxt
           :to="item.link"
+          :href="item.href"
         >
           {{ item.text }}
         </v-btn>
@@ -23,6 +24,14 @@
           @click.stop="showDrawer = !showDrawer"
         >
           <v-icon>{{ mdiMenu }}</v-icon>
+        </v-btn>
+        <v-btn
+          href="https://hosting-website.vercel.app"
+          class="blue darken-1 white--text hidden-sm-and-down"
+          rounded
+        >
+          <v-icon left size="32">{{ mdiGithub }}</v-icon>
+          <span>Login</span>
         </v-btn>
       </v-container>
     </v-app-bar>
@@ -46,7 +55,7 @@
 </template>
 
 <script>
-import { mdiMenu } from '@mdi/js'
+import { mdiMenu, mdiGithub } from '@mdi/js'
 import Logo from '../components/Logo.vue'
 import AppFooter from '../components/AppFooter.vue'
 
@@ -55,23 +64,29 @@ export default {
   data() {
     return {
       mdiMenu,
+      mdiGithub,
       showDrawer: false,
       links: [
         {
           text: 'Features',
-          link: '/#feature',
+          link: '/',
         },
         {
-          text: 'Technology',
-          link: '/#technology',
+          text: 'Hosting',
+          link: '/hosting',
         },
         {
-          text: 'Roadmap',
-          link: '/#roadmap',
+          text: 'Docs',
+          href: 'https://4ever-hosting-docs.vercel.app',
         },
+
         {
           text: 'Blog',
           link: '/blog',
+        },
+        {
+          text: 'Dapps',
+          link: '/dapps',
         },
       ],
     }

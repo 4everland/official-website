@@ -16,7 +16,7 @@
           <v-btn
             href="/4everland-whitepaper-en(Draft V0.0.2).pdf"
             target="_blank"
-            class="btn-whitepaper mr-2 mb-4"
+            class="btn-whitepaper mr-2 mb-md-4"
             rounded
             x-large
           >
@@ -25,9 +25,8 @@
             <v-icon right size="20">{{ mdiDownloadCircleOutline }}</v-icon>
           </v-btn>
           <v-btn
-            href="/4everland-whitepaper-en(Draft V0.0.2).pdf"
-            target="_blank"
-            class="blue darken-1 mb-4"
+            href="https://hosting-website.vercel.app"
+            class="blue darken-1 mb-md-4"
             rounded
             x-large
           >
@@ -63,6 +62,8 @@ export default {
       mdiDownloadCircleOutline,
       mdiGithub,
       mdiCheckboxMarkedCircleOutline,
+      model: 0,
+      colors: ['primary', 'secondary', 'yellow darken-2', 'red', 'orange'],
     }
   },
 }
