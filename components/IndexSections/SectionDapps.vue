@@ -45,7 +45,7 @@
               </div>
             </v-card>
           </v-col>
-          <v-col v-col cols="12" lg="7" md="6">
+          <v-col cols="12" lg="7" md="6">
             <v-img
               src="http://iph.href.lu/1024x800?fg=666666&bg=cccccc"
               height="500"

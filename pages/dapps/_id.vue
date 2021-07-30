@@ -2,23 +2,23 @@
   <div>
     <detail-info />
     <detail-total />
-    <dapps-charts-sections />
-    <dapps-table title="Retention Rate" />
+    <detail-charts-sections />
+    <detail-table />
   </div>
 </template>
 
 <script>
 import DetailInfo from '@/components/DappsSections/DappsDetail/DetailInfo.vue'
 import DetailTotal from '@/components/DappsSections/DappsDetail/DetailTotal.vue'
-import DappsChartsSections from '@/components/DappsSections/DappsChartsSections.vue'
-import DappsTable from '@/components/DappsSections/DappsTable.vue'
+import DetailChartsSections from '@/components/DappsSections/DappsDetail/DetailChartsSections.vue'
+import DetailTable from '@/components/DappsSections/DappsDetail/DetailTable.vue'
 
 export default {
   components: {
     DetailInfo,
     DetailTotal,
-    DappsChartsSections,
-    DappsTable,
+    DetailChartsSections,
+    DetailTable,
   },
   methods: {},
 }

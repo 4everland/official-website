@@ -1,23 +1,25 @@
 <template>
   <v-container class="px-15 pb-15 grey--text text--darken-4 white">
-    <v-row>
+    <div v-if="!data">
+      <v-skeleton-loader light type="avatar,article" />
+    </div>
+    <v-row v-else>
       <v-col cols="12" md="4" lg="4">
         <div class="bg-grey rounded-lg pa-6">
           <div class="text-h6 pb-6">Most Popular Recently</div>
           <div class="d-flex align-center pb-6 bd-dash">
-            <img
-              class="rounded-circle mr-4"
-              src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
-              alt=""
-              width="36"
-              height="36"
-            />
+            <v-avatar size="36" class="mr-4">
+              <img
+                src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
+                alt=""
+              />
+            </v-avatar>
             <div class="flex-grow-1">
               <div
                 class="subtitle-2 cursor-pointer link-hover"
-                @click="toDetail"
+                @click="toDetail(data.mostPopularRecently.projectId)"
               >
-                Dapp Name
+                {{ data.mostPopularRecently.dappName }}
               </div>
               <div class="caption grey--text text--darken-1">
                 Recently data during 3 days
@@ -29,13 +31,13 @@
               <div class="text-left">
                 <div class="caption">Total UV</div>
                 <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                  25,590
+                  {{ tools.formatBigNum(data.mostPopularRecently.totalUv) }}
                 </div>
               </div>
               <div class="text-right">
                 <div class="caption">Total PV</div>
                 <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                  25,590
+                  {{ tools.formatBigNum(data.mostPopularRecently.totalPv) }}
                 </div>
               </div>
             </div>
@@ -43,13 +45,13 @@
               <div class="text-left">
                 <div class="caption">24H UV</div>
                 <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                  25,590
+                  {{ tools.formatBigNum(data.mostPopularRecently.uv) }}
                 </div>
               </div>
               <div class="text-right">
                 <div class="caption">24H PV</div>
                 <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                  25,590
+                  {{ tools.formatBigNum(data.mostPopularRecently.pv) }}
                 </div>
               </div>
             </div>
@@ -67,19 +69,18 @@
           <v-row>
             <v-col cols="4">
               <div class="d-flex align-center">
-                <img
-                  class="rounded-circle mr-4"
-                  src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
-                  alt=""
-                  width="36"
-                  height="36"
-                />
+                <v-avatar size="36" class="mr-4">
+                  <img
+                    src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
+                    alt=""
+                  />
+                </v-avatar>
                 <div class="flex-grow-1">
                   <div
                     class="subtitle-2 cursor-pointer link-hover"
-                    @click="toDetail"
+                    @click="toDetail(data.bestToday.projectId)"
                   >
-                    Dapp Name
+                    {{ data.bestToday.dappName }}
                   </div>
                 </div>
               </div>
@@ -87,27 +88,27 @@
             <v-col cols="8">
               <div class="d-flex justify-space-between">
                 <div class="text-center">
-                  <div class="caption">Total PV</div>
-                  <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                    25,590
-                  </div>
-                </div>
-                <div class="text-center">
                   <div class="caption">Total UV</div>
                   <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                    25,590
+                    {{ tools.formatBigNum(data.bestToday.totalUv) }}
                   </div>
                 </div>
                 <div class="text-center">
-                  <div class="caption">24H PV</div>
+                  <div class="caption">Total PV</div>
                   <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                    25,590
+                    {{ tools.formatBigNum(data.bestToday.totalPv) }}
                   </div>
                 </div>
                 <div class="text-center">
                   <div class="caption">24H UV</div>
                   <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                    25,590
+                    {{ tools.formatBigNum(data.bestToday.uv) }}
+                  </div>
+                </div>
+                <div class="text-center">
+                  <div class="caption">24H PV</div>
+                  <div class="body-1 font-weight-bold blue--text tex--darken-1">
+                    {{ tools.formatBigNum(data.bestToday.pv) }}
                   </div>
                 </div>
               </div>
@@ -117,59 +118,24 @@
         <div class="bg-grey rounded-lg pa-6">
           <div class="text-h6 pb-6">Recently Released</div>
           <v-row>
-            <v-col cols="4">
+            <v-col
+              v-for="item in data.recentlyReleased"
+              :key="item.projectId"
+              cols="4"
+            >
               <div class="d-flex align-center">
-                <img
-                  class="rounded-circle mr-4"
-                  src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
-                  alt=""
-                  width="36"
-                  height="36"
-                />
+                <v-avatar size="36" class="mr-4">
+                  <img
+                    src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
+                    alt=""
+                  />
+                </v-avatar>
                 <div class="flex-grow-1">
                   <div
                     class="subtitle-2 cursor-pointer link-hover"
-                    @click="toDetail"
+                    @click="toDetail(item.projectId)"
                   >
-                    Dapp Name
-                  </div>
-                </div>
-              </div>
-            </v-col>
-            <v-col cols="4">
-              <div class="d-flex align-center">
-                <img
-                  class="rounded-circle mr-4"
-                  src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
-                  alt=""
-                  width="36"
-                  height="36"
-                />
-                <div class="flex-grow-1">
-                  <div
-                    class="subtitle-2 cursor-pointer link-hover"
-                    @click="toDetail"
-                  >
-                    Dapp Name
-                  </div>
-                </div>
-              </div>
-            </v-col>
-            <v-col cols="4">
-              <div class="d-flex align-center">
-                <img
-                  class="rounded-circle mr-4"
-                  src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
-                  alt=""
-                  width="36"
-                  height="36"
-                />
-                <div class="flex-grow-1">
-                  <div
-                    class="subtitle-2 cursor-pointer link-hover"
-                    @click="toDetail"
-                  >
-                    Dapp Name
+                    {{ item.dappName }}
                   </div>
                 </div>
               </div>
@@ -183,12 +149,24 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      data: null,
+    }
+  },
+  mounted() {
+    this.getRecently()
   },
   methods: {
+    async getRecently() {
+      try {
+        const { data } = await this.$axios.get('/dapps/recently/detail')
+        this.data = data.data
+      } catch (error) {
+        //
+      }
+    },
     toDetail(id) {
-      console.log(111)
-      this.$router.push(`/dapps/1`)
+      this.$router.push(`/dapps/${id}`)
     },
   },
 }

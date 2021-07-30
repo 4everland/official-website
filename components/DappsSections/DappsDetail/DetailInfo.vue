@@ -3,13 +3,9 @@
     <v-row class="pb-15 bd-dash">
       <v-col cols="12" md="2" lg="2">
         <div class="text-center mb-5">
-          <img
-            class="rounded-circle"
-            src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
-            alt=""
-            width="74"
-            height="74"
-          />
+          <v-avatar size="74">
+            <img src="http://iph.href.lu/200x200?fg=666666&bg=cccccc" alt="" />
+          </v-avatar>
         </div>
         <div class="text-center">
           <v-btn rounded outlined color="primary">Website</v-btn>

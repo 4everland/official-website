@@ -9,9 +9,9 @@
           class="d-flex align-end caption grey--text font-weight-bold"
         >
           <div
-            :class="item.type == defaultType ? 'link-active' : ''"
+            :class="item.type == timeType ? 'link-active' : ''"
             class="link-hover cursor-pointer"
-            @click="defaultType = item.type"
+            @click="timeChange(item.type)"
           >
             {{ item.name }}
           </div>
@@ -29,54 +29,58 @@ import * as echarts from 'echarts'
 export default {
   props: {
     title: { type: String, default: '' },
+    viewType: { type: String, default: '' },
   },
   data() {
     return {
-      defaultType: 4,
+      timeType: 'day-7',
       timeChoose: [
         {
           name: 'All',
-          type: 1,
+          type: 'all',
         },
         {
           name: '90 Days',
-          type: 2,
+          type: 'day-90',
         },
         {
           name: '30 Days',
-          type: 3,
+          type: 'day-30',
         },
         {
           name: '7 Days',
-          type: 4,
+          type: 'day-7',
         },
       ],
     }
   },
   mounted() {
-    this.setData()
+    this.getChart(this.viewType, this.timeType)
   },
   methods: {
-    setData() {
+    async getChart(viewType, timeType) {
+      try {
+        const { data } = await this.$axios.get('/dapps/total/view', {
+          params: {
+            viewType,
+            timeType,
+          },
+        })
+        this.setData(data.data)
+      } catch (error) {
+        //
+      }
+    },
+    setData(chartData) {
       const el = this.$refs.chart
       const chart = echarts.init(el)
-
-      let base = +new Date(1968, 9, 3)
-      const oneDay = 24 * 3600 * 1000
+      const viewDate = chartData.viewDate
       const date = []
-
-      const data = [Math.random() * 300]
-
-      for (let i = 1; i < 20000; i++) {
-        const now = new Date((base += oneDay))
-        date.push(
-          [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/')
-        )
-        data.push(
-          Math.abs(Math.round((Math.random() - 0.5) * 200 + data[i - 1]))
-        )
+      const data = []
+      for (const key in viewDate) {
+        date.push(key)
+        data.push(viewDate[key])
       }
-
       const option = {
         tooltip: {
           trigger: 'axis',
@@ -98,10 +102,11 @@ export default {
           splitLine: {
             show: false,
           },
+          max: 'dataMax',
         },
         series: [
           {
-            name: '模拟数据',
+            name: this.title,
             type: 'line',
             symbol: 'none',
             sampling: 'lttb',
@@ -109,22 +114,17 @@ export default {
               color: 'rgba(74, 150, 250, 1)',
             },
             areaStyle: {
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                {
-                  offset: 0,
-                  color: 'rgba(74, 150, 250, 1)',
-                },
-                {
-                  offset: 1,
-                  color: 'rgba(74, 150, 250, 1)',
-                },
-              ]),
+              color: 'rgba(74, 150, 250, 1)',
             },
             data,
           },
         ],
       }
       chart.setOption(option)
+    },
+    timeChange(timeType) {
+      this.timeType = timeType
+      this.getRecently(this.viewType, this.timeType)
     },
   },
 }
