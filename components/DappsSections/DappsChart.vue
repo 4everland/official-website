@@ -109,10 +109,10 @@ export default {
             symbol: 'none',
             sampling: 'lttb',
             itemStyle: {
-              color: 'rgba(74, 150, 250, 1)',
+              color: 'rgba(52, 169, 255, 0.5)',
             },
             areaStyle: {
-              color: 'rgba(74, 150, 250, 1)',
+              color: 'rgba(52, 169, 255, 0.2)',
             },
             data,
           },
