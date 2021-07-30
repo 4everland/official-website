@@ -36,10 +36,6 @@ export default {
       timeType: 'day-7',
       timeChoose: [
         {
-          name: 'All',
-          type: 'all',
-        },
-        {
           name: '90 Days',
           type: 'day-90',
         },
@@ -72,8 +68,10 @@ export default {
       }
     },
     setData(chartData) {
-      const el = this.$refs.chart
-      const chart = echarts.init(el)
+      let chart = echarts.getInstanceByDom(this.$refs.chart)
+      if (chart == null) {
+        chart = echarts.init(this.$refs.chart)
+      }
       const viewDate = chartData.viewDate
       const date = []
       const data = []
@@ -124,7 +122,7 @@ export default {
     },
     timeChange(timeType) {
       this.timeType = timeType
-      this.getRecently(this.viewType, this.timeType)
+      this.getChart(this.viewType, this.timeType)
     },
   },
 }

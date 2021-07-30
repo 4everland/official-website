@@ -16,7 +16,8 @@
           toDetail(item.projectId)
         }
       "
-    ></v-data-table>
+    >
+    </v-data-table>
   </v-container>
 </template>
 <script>
@@ -56,12 +57,20 @@ export default {
           },
         })
         data.data.content.map((item, index) => {
-          return (item.index = index + 1)
+          item.totalUv = this.tools.formatBigNum(item.totalUv)
+          item.totalPv = this.tools.formatBigNum(item.totalPv)
+          item.uv = this.tools.formatBigNum(item.uv)
+          item.pv = this.tools.formatBigNum(item.pv)
+          item.index = index + 1
+          return item
         })
         this.data = data.data
       } catch (error) {
         //
       }
+    },
+    print(item) {
+      console.log(item)
     },
   },
 }

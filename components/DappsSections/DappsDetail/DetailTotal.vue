@@ -24,16 +24,14 @@
     <v-row>
       <v-col cols="12" md="4" lg="4">
         <div class="text-sm-center text-md-left">
-          <div class="grey--text text--darken-1 mb-2">Total User</div>
+          <div class="grey--text text--darken-1 mb-2">Total UV</div>
           <div class="text-h4 grey--text text--darken-4">64,589</div>
         </div></v-col
       >
       <v-col cols="12" md="4" lg="4">
         <div class="text-sm-center">
-          <div class="grey--text text--darken-1 mb-2">
-            Use Time(7days average)
-          </div>
-          <div class="text-h4 grey--text text--darken-4">00:15:36</div>
+          <div class="grey--text text--darken-1 mb-2">Total PV</div>
+          <div class="text-h4 grey--text text--darken-4">64,589</div>
         </div></v-col
       >
       <v-col cols="12" md="4" lg="4">
