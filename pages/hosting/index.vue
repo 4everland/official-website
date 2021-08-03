@@ -3,7 +3,7 @@
     <hosting-top />
     <hosting-steps background="black" />
     <hosting-dapps background="black" />
-    <hosting-journey />
+    <hosting-journey background="black" />
   </div>
 </template>
 

@@ -13,6 +13,7 @@
           nuxt
           :to="item.link"
           :href="item.href"
+          :target="item.target"
         >
           {{ item.text }}
         </v-btn>
@@ -45,6 +46,8 @@
           :key="item.text"
           nuxt
           :to="item.link"
+          :href="item.href"
+          :target="item.target"
         >
           <v-list-item-title>{{ item.text }}</v-list-item-title>
         </v-list-item>
@@ -78,6 +81,7 @@ export default {
         {
           text: 'Docs',
           href: 'https://4ever-hosting-docs.vercel.app',
+          target: '_blank',
         },
 
         {

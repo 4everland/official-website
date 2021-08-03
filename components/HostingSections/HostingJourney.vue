@@ -1,8 +1,13 @@
 <template>
   <v-theme-provider light>
-    <div id="hostingDapps">
-      <v-container class="px-8 pb-16">
-        <h3 class="text-h3 font-weight-light text-center mb-16 white--text">
+    <div :style="{ background: background == 'black' ? '#121212' : '#ffffff' }">
+      <v-container class="px-8 py-16">
+        <h3
+          class="text-h3 font-weight-light text-center mb-16"
+          :class="
+            background == 'black' ? 'white--text' : 'grey--text text--darken-4'
+          "
+        >
           Being Your 4EVER-HOSTING Journey
         </h3>
         <v-row>
@@ -64,7 +69,9 @@
               <div
                 class="py-4 px-6 grey lighten-4 text-body-1 font-weight-bold"
               >
-                Get started for free with a template
+                <v-btn text plain x-small class="text-body-1 font-weight-bold">
+                  Get started for free with a template
+                </v-btn>
               </div>
             </v-card>
           </v-col>
@@ -76,7 +83,7 @@
 <script>
 import { mdiGithub, mdiArrowRight } from '@mdi/js'
 export default {
-  components: {},
+  props: { background: { type: String, default: 'white' } },
   data() {
     return {
       mdiGithub,

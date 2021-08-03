@@ -9,6 +9,7 @@
     <section-dapps />
     <section-map />
     <section-roadmap />
+    <hosting-journey />
     <section-future />
   </div>
 </template>
@@ -23,6 +24,7 @@ import SectionSteps from '@/components/IndexSections/SectionSteps.vue'
 import SectionDapps from '@/components/IndexSections/SectionDapps.vue'
 import SectionMap from '@/components/IndexSections/SectionMap.vue'
 import SectionRoadmap from '@/components/IndexSections/SectionRoadmap.vue'
+import HostingJourney from '@/components/HostingSections/HostingJourney.vue'
 import SectionFuture from '@/components/IndexSections/SectionFuture.vue'
 export default {
   components: {
@@ -35,6 +37,7 @@ export default {
     SectionDapps,
     SectionMap,
     SectionRoadmap,
+    HostingJourney,
     SectionFuture,
   },
   methods: {

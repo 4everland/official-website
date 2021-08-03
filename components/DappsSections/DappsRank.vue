@@ -67,7 +67,7 @@
         <div class="bg-grey rounded-lg pa-6 mb-6">
           <div class="text-h6 pb-6">Best Today</div>
           <v-row>
-            <v-col cols="4">
+            <v-col cols="12" md="4" lg="4">
               <div class="d-flex align-center">
                 <v-avatar size="36" class="mr-4">
                   <img
@@ -85,8 +85,8 @@
                 </div>
               </div>
             </v-col>
-            <v-col cols="8">
-              <div class="d-flex justify-space-between">
+            <v-col cols="12" md="8" lg="8">
+              <div class="d-flex justify-space-between flex-wrap">
                 <div class="text-center">
                   <div class="caption">Total UV</div>
                   <div class="body-1 font-weight-bold blue--text tex--darken-1">
@@ -121,7 +121,9 @@
             <v-col
               v-for="item in data.recentlyReleased"
               :key="item.projectId"
-              cols="4"
+              cols="12"
+              md="4"
+              lg="4"
             >
               <div class="d-flex align-center">
                 <v-avatar size="36" class="mr-4">
