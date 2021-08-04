@@ -46,9 +46,7 @@ export default {
   methods: {
     async getTable(id) {
       try {
-        const { data } = await this.$axios.get(
-          `/analytics/user/retention/project/${id}`
-        )
+        const { data } = await this.$axios.get(`/dapps/retention/${id}`)
         this.data = data.data
       } catch (error) {
         //

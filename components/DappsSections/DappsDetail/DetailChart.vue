@@ -58,7 +58,7 @@ export default {
   methods: {
     async getChart(projectId, viewType, timeLimit) {
       try {
-        const { data } = await this.$axios.get('/analytics/user/view/data', {
+        const { data } = await this.$axios.get('/dapps/view/data', {
           params: {
             projectId,
             viewType,
