@@ -1,6 +1,6 @@
 <template>
   <v-theme-provider light>
-    <v-container class="white">
+    <v-container class="mt-4 rounded-t-xl pb-16 white bottom-round">
       <v-row no-gutters>
         <v-col cols="12" md="8" order-md="1" order-sm="2" order="2">
           <nuxt-link

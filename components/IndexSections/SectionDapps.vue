@@ -17,13 +17,14 @@
           <v-col
             cols="12"
             lg="5"
-            md="6"
+            md="12"
             class="d-flex flex-column justify-space-between"
           >
             <v-card
               v-for="item in 3"
               :key="item"
               class="d-flex flex-row align-center pa-4 rounded-lg mb-2"
+              :class="{ 'flex-column': $vuetify.breakpoint.smAndDown }"
             >
               <v-img
                 class="rounded-lg"
@@ -45,10 +46,10 @@
               </div>
             </v-card>
           </v-col>
-          <v-col cols="12" lg="7" md="6">
+          <v-col cols="12" lg="7" md="12">
             <v-img
               src="http://iph.href.lu/1024x800?fg=666666&bg=cccccc"
-              height="500"
+              max-height="500"
             ></v-img>
           </v-col>
         </v-row>

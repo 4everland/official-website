@@ -48,13 +48,18 @@
           hide-delimiter-background
           show-arrows-on-hover
           interval="3000"
-          height="350"
+          height="450"
         >
-          <v-carousel-item v-for="(item, i) in 4" :key="i" class="text-center">
+          <v-carousel-item
+            v-for="(item, i) in banner"
+            :key="i"
+            class="text-center"
+          >
             <img
+              class="cursor-pointer"
               alt="top-banner"
               style="width: 100%; max-width: 450px"
-              src="~/assets/imgs/index/top@2x.png"
+              :src="item.src"
             />
           </v-carousel-item>
         </v-carousel>
@@ -78,6 +83,20 @@ export default {
       mdiCheckboxMarkedCircleOutline,
       model: 0,
       colors: ['primary', 'secondary', 'yellow darken-2', 'red', 'orange'],
+      banner: [
+        {
+          src: require('@/assets/imgs/index/banner1.png'),
+        },
+        {
+          src: require('@/assets/imgs/index/banner2.png'),
+        },
+        {
+          src: require('@/assets/imgs/index/banner3.png'),
+        },
+        {
+          src: require('@/assets/imgs/index/banner4.png'),
+        },
+      ],
     }
   },
 }

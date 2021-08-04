@@ -1,5 +1,5 @@
 <template>
-  <v-container class="px-15 pb-16 grey--text text--darken-4 white">
+  <v-container class="px-15 pb-16 grey--text text--darken-4 white bottom-round">
     <div class="text-h5 font-weight-bold pb-6">Leaderboard</div>
     <div v-if="!data">
       <v-skeleton-loader light type="table" />

@@ -11,7 +11,7 @@
           Being Your 4EVER-HOSTING Journey
         </h3>
         <v-row>
-          <v-col cols="12" md="6" lg="6" class="px-10">
+          <v-col cols="12" md="12" lg="6" class="px-10">
             <v-card outlined>
               <div class="pa-4">
                 <div class="text-body-1 font-weight-bold">
@@ -21,7 +21,9 @@
               <v-divider></v-divider>
               <div
                 class="d-flex align-center justify-center"
-                style="height: 348px"
+                :style="{
+                  minHeight: $vuetify.breakpoint.smAndDown ? '200px' : '553px',
+                }"
               >
                 <p class="text-center">
                   <v-btn
@@ -43,17 +45,23 @@
               </div>
             </v-card>
           </v-col>
-          <v-col cols="12" md="6" lg="6" class="px-10">
+          <v-col cols="12" md="12" lg="6" class="px-10">
             <v-card outlined>
               <div class="pa-4">
                 <div class="text-body-1 font-weight-bold">Clone Template</div>
               </div>
               <v-divider></v-divider>
-              <div class="pa-4" style="height: 348px">
+              <div class="pa-4" style="min-height: 553px">
                 <v-row>
-                  <v-col v-for="(it, i) in tplList" :key="i" cols="6">
+                  <v-col
+                    v-for="(it, i) in tplList"
+                    :key="i"
+                    cols="12"
+                    md="6"
+                    lg="6"
+                  >
                     <v-card v-ripple outlined class="hover-1">
-                      <v-img :src="it.img" height="100"></v-img>
+                      <v-img :src="it.img"></v-img>
                       <div class="pa-2 d-flex align-center">
                         <img
                           src="~/assets/imgs/hosting/next.svg"
@@ -69,7 +77,22 @@
               <div
                 class="py-4 px-6 grey lighten-4 text-body-1 font-weight-bold"
               >
-                <v-btn text plain x-small class="text-body-1 font-weight-bold">
+                <v-btn
+                  v-if="$vuetify.breakpoint.smAndDown"
+                  text
+                  plain
+                  x-small
+                  class="text-body-1 font-weight-bold"
+                >
+                  Get started<v-icon right>{{ mdiArrowRight }}</v-icon>
+                </v-btn>
+                <v-btn
+                  v-else
+                  text
+                  plain
+                  x-small
+                  class="text-body-1 font-weight-bold"
+                >
                   Get started for free with a template
                 </v-btn>
               </div>
