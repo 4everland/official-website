@@ -11,7 +11,7 @@
 <script>
 import DappsChart from './DappsChart.vue'
 export default {
-  comments: { DappsChart },
+  components: { DappsChart },
   data() {
     return {
       chartList: [
