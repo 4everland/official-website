@@ -27,10 +27,11 @@
               >
                 <p class="text-center">
                   <v-btn
-                    href="https://hosting-website.vercel.app"
                     class="blue darken-1 white--text px-2"
                     rounded
                     large
+                    href="https://hosting-website.vercel.app"
+                    target="_blank"
                   >
                     <v-icon left size="32">{{ mdiGithub }}</v-icon>
                     <span>Continue with Github</span>
@@ -45,6 +46,7 @@
                   x-small
                   class="text-body-1 font-weight-bold"
                   href="https://hosting-website.vercel.app"
+                  target="_blank"
                 >
                   View Docs<v-icon right>{{ mdiArrowRight }}</v-icon>
                 </v-btn>
@@ -71,6 +73,7 @@
                       outlined
                       class="hover-1"
                       href="https://hosting-website.vercel.app"
+                      target="_blank"
                     >
                       <v-img :src="it.img" height="200"></v-img>
                       <div class="pa-2 d-flex align-center">
@@ -92,6 +95,7 @@
                   x-small
                   class="text-body-1 font-weight-bold"
                   href="https://hosting-website.vercel.app"
+                  target="_blank"
                 >
                   Get started<v-icon right>{{ mdiArrowRight }}</v-icon>
                 </v-btn>
@@ -102,6 +106,7 @@
                   x-small
                   class="text-body-1 font-weight-bold"
                   href="https://hosting-website.vercel.app"
+                  target="_blank"
                 >
                   Get started for free with a template
                 </v-btn>

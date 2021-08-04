@@ -42,6 +42,7 @@
         <p class="my-12 text-center">
           <v-btn
             href="https://hosting-website.vercel.app"
+            target="_blank"
             class="blue darken-1 white--text"
             rounded
             x-large

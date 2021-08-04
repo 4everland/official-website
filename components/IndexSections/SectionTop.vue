@@ -29,6 +29,7 @@
           </v-btn>
           <v-btn
             href="https://hosting-website.vercel.app"
+            target="_blank"
             class="blue darken-1"
             rounded
             x-large
