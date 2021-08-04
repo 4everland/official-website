@@ -272,7 +272,7 @@ export default {
             content: 'Establish 4EVERLAND Foundation and technical community',
           },
           {
-            color: '#8BB7FF',
+            color: '#255BB4',
             title: 'June 2021',
             content: 'Whitepaper published, 4EVERLAND official website launch',
           },
@@ -367,18 +367,20 @@ export default {
 .roadmap-time {
   position: absolute;
   right: 0;
-  top: -20px;
+  top: -16px;
+  font-size: 12px;
 }
 .roadmap-title {
   /* white-space: nowrap; */
   font-size: 14px;
+  font-weight: bold;
 }
 .roadmap-desc {
   font-size: 12px;
   line-height: 14px;
 }
 .item-right {
-  width: 200px;
+  width: 210px;
 }
 .nav-buttons {
   position: absolute;
