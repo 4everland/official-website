@@ -122,7 +122,7 @@
               ></div>
               <div
                 class="item-right d-flex flex-column position-relative"
-                :style="{ width: roadmap.plus ? '260px' : '' }"
+                :style="{ width: roadmap.plus ? '270px' : '' }"
               >
                 <p class="roadmap-time">{{ roadmap.plus }}</p>
                 <p class="roadmap-title mb-2">{{ roadmap.title }}</p>
