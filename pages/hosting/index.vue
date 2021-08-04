@@ -3,7 +3,7 @@
     <hosting-top />
     <hosting-steps background="black" />
     <hosting-dapps background="black" />
-    <hosting-journey background="black" />
+    <hosting-template background="black" />
   </div>
 </template>
 
@@ -11,14 +11,14 @@
 import HostingTop from '@/components/HostingSections/HostingTop.vue'
 import HostingSteps from '@/components/IndexSections/SectionSteps.vue'
 import HostingDapps from '@/components/IndexSections/SectionDapps.vue'
-import HostingJourney from '@/components/HostingSections/HostingJourney.vue'
+import HostingTemplate from '@/components/HostingSections/HostingTemplate.vue'
 
 export default {
   components: {
     HostingTop,
     HostingSteps,
     HostingDapps,
-    HostingJourney,
+    HostingTemplate,
   },
   methods: {},
 }

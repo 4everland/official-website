@@ -39,7 +39,13 @@
               </div>
               <v-divider></v-divider>
               <div class="pa-4 grey lighten-4">
-                <v-btn text plain x-small class="text-body-1 font-weight-bold">
+                <v-btn
+                  text
+                  plain
+                  x-small
+                  class="text-body-1 font-weight-bold"
+                  href="https://hosting-website.vercel.app"
+                >
                   View Docs<v-icon right>{{ mdiArrowRight }}</v-icon>
                 </v-btn>
               </div>
@@ -60,13 +66,15 @@
                     md="6"
                     lg="6"
                   >
-                    <v-card v-ripple outlined class="hover-1">
-                      <v-img :src="it.img"></v-img>
+                    <v-card
+                      v-ripple
+                      outlined
+                      class="hover-1"
+                      href="https://hosting-website.vercel.app"
+                    >
+                      <v-img :src="it.img" height="200"></v-img>
                       <div class="pa-2 d-flex align-center">
-                        <img
-                          src="~/assets/imgs/hosting/next.svg"
-                          style="width: 20px"
-                        />
+                        <img :src="it.logo" style="width: 20px" />
                         <div class="ml-2">{{ it.title }}</div>
                       </div>
                     </v-card>
@@ -83,6 +91,7 @@
                   plain
                   x-small
                   class="text-body-1 font-weight-bold"
+                  href="https://hosting-website.vercel.app"
                 >
                   Get started<v-icon right>{{ mdiArrowRight }}</v-icon>
                 </v-btn>
@@ -92,6 +101,7 @@
                   plain
                   x-small
                   class="text-body-1 font-weight-bold"
+                  href="https://hosting-website.vercel.app"
                 >
                   Get started for free with a template
                 </v-btn>
@@ -113,22 +123,24 @@ export default {
       mdiArrowRight,
       tplList: [
         {
-          img: 'https://assets.vercel.com/image/upload/f_auto,c_limit,q_auto,w_7680/front/home/new/virtual-event-starter-kit.png',
-          logo: '~/assets/imgs/hosting/next.svg',
-          title: 'Vue.js',
-          src: 'https://github.com/vercel/vercel/tree/main/examples/vue',
+          img: require('~/assets/imgs/hosting/nextjs.png'),
+          logo: require('~/assets/imgs/hosting/next.svg'),
+          title: 'Next.js',
         },
         {
-          img: 'https://assets.vercel.com/image/upload/f_auto,c_limit,q_auto,w_7680/front/home/new/virtual-event-starter-kit.png',
-          logo: '~/asset/imgs/hosting/next.svg',
+          img: require('~/assets/imgs/hosting/vue.png'),
+          logo: require('~/assets/imgs/hosting/vuejs.png'),
           title: 'Vue.js',
-          src: 'https://github.com/vercel/vercel/tree/main/examples/vue',
         },
         {
-          img: 'https://assets.vercel.com/image/upload/f_auto,c_limit,q_auto,w_7680/front/home/new/virtual-event-starter-kit.png',
-          logo: '~/asset/imgs/hosting/next.svg',
-          title: 'Vue.js',
-          src: 'https://github.com/vercel/vercel/tree/main/examples/vue',
+          img: require('~/assets/imgs/hosting/nuxtjs.png'),
+          logo: require('~/assets/imgs/hosting/nuxt.svg'),
+          title: 'Nuxt.js',
+        },
+        {
+          img: require('~/assets/imgs/hosting/gatsbyjs.png'),
+          logo: require('~/assets/imgs/hosting/gatsby.svg'),
+          title: 'Gatsby.js',
         },
       ],
     }

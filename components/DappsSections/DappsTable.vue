@@ -36,7 +36,7 @@ export default {
         { text: '24H UV', align: 'center', value: 'uv' },
         { text: '24H PV', align: 'center', value: 'pv' },
       ],
-      page: 0,
+      page: 1,
       size: 10,
       data: null,
     }

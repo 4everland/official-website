@@ -1,9 +1,13 @@
 <template>
   <v-container class="px-15 pb-16 grey--text text--darken-4 white bottom-round">
     <div class="text-h5 font-weight-bold pb-6">Retention Rate</div>
+    <div v-if="!data">
+      <v-skeleton-loader light type="table" />
+    </div>
     <v-data-table
+      v-else
       :headers="headers"
-      :items="desserts"
+      :items="data"
       :items-per-page="7"
       class="elevation-1"
       light
@@ -21,76 +25,35 @@ export default {
         {
           text: 'Time',
           align: 'center',
-          value: 'time',
+          value: 'createAt',
         },
         { text: 'New Users', align: 'center', value: 'newUsers' },
-        { text: '1 Day', align: 'center', value: 'day1' },
-        { text: '2 Day', align: 'center', value: 'day2' },
-        { text: '3 Day', align: 'center', value: 'day3' },
-        { text: '4 Day', align: 'center', value: 'day4' },
-        { text: '5 Day', align: 'center', value: 'day5' },
-        { text: '6 Day', align: 'center', value: 'day6' },
-        { text: '7 Day', align: 'center', value: 'day7' },
+        { text: '1 Day', align: 'center', value: 'd1' },
+        { text: '2 Day', align: 'center', value: 'd2' },
+        { text: '3 Day', align: 'center', value: 'd3' },
+        { text: '4 Day', align: 'center', value: 'd4' },
+        { text: '5 Day', align: 'center', value: 'd5' },
+        { text: '6 Day', align: 'center', value: 'd6' },
+        { text: '7 Day', align: 'center', value: 'd7' },
       ],
-      desserts: [
-        {
-          time: '2021/07/28',
-          newUsers: 100,
-          day1: '89.89%',
-          day2: '89.89%',
-          day3: '89.89%',
-          day4: '89.89%',
-          day5: '89.89%',
-          day6: '89.89%',
-          day7: '89.89%',
-        },
-        {
-          time: '2021/07/28',
-          newUsers: 100,
-          day1: '89.89%',
-          day2: '89.89%',
-          day3: '89.89%',
-          day4: '89.89%',
-          day5: '89.89%',
-          day6: '89.89%',
-        },
-        {
-          time: '2021/07/28',
-          newUsers: 100,
-          day1: '89.89%',
-          day2: '89.89%',
-          day3: '89.89%',
-          day4: '89.89%',
-          day5: '89.89%',
-        },
-        {
-          time: '2021/07/28',
-          newUsers: 100,
-          day1: '89.89%',
-          day2: '89.89%',
-          day3: '89.89%',
-          day4: '89.89%',
-        },
-        {
-          time: '2021/07/28',
-          newUsers: 100,
-          day1: '89.89%',
-          day2: '89.89%',
-          day3: '89.89%',
-        },
-        {
-          time: '2021/07/28',
-          newUsers: 100,
-          day1: '89.89%',
-          day2: '89.89%',
-        },
-        {
-          time: '2021/07/28',
-          newUsers: 100,
-          day1: '89.89%',
-        },
-      ],
+      data: null,
     }
+  },
+  mounted() {
+    const id = this.$nuxt.$route.params.id
+    this.getTable(id)
+  },
+  methods: {
+    async getTable(id) {
+      try {
+        const { data } = await this.$axios.get(
+          `/analytics/user/retention/project/${id}`
+        )
+        this.data = data.data
+      } catch (error) {
+        //
+      }
+    },
   },
 }
 </script>
