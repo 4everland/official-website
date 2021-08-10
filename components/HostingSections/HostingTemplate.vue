@@ -45,7 +45,7 @@
                   plain
                   x-small
                   class="text-body-1 font-weight-bold"
-                  href="https://hosting-website.vercel.app"
+                  href="https://4ever-hosting-docs.vercel.app"
                   target="_blank"
                 >
                   View Docs<v-icon right>{{ mdiArrowRight }}</v-icon>

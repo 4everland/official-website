@@ -6,7 +6,7 @@
     <section-technology />
     <section-participant />
     <section-steps />
-    <section-dapps />
+    <!-- <section-dapps /> -->
     <section-map />
     <section-roadmap />
     <hosting-template />

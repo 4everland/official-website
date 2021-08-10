@@ -2,7 +2,7 @@
   <div>
     <hosting-top />
     <hosting-steps background="black" />
-    <hosting-dapps background="black" />
+    <!-- <hosting-dapps background="black" /> -->
     <hosting-template background="black" />
   </div>
 </template>

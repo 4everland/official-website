@@ -12,14 +12,12 @@ We’re constantly trying to improve our Services, so we may need to change this
 What Information does 4EVERLAND Collect?
 
 Information You Provide to Us:
-
-- First and last name
-- Email address
-- Third-party account credentials (for example, your log-in credentials for GitHub)
-
+– First and last name
+– Email address
+– Third-party account credentials (for example, your log-in credentials for GitHub)
 Certain information may be required to register with us or to take advantage of some of our features.
 
-We may communicate with you if you’ve provided us the means to do so. For example, if you’ve given us your email address, we may send you promotional email offers on behalf of other businesses, or email you about your use of the Services. Also, we may receive a confirmation when you open an email from us. This confirmation helps us make our communications with you more interesting and improve our services. If you do not want to receive communications from us, please indicate your preference by contacting us at support@4EVERLAND .org.
+We may communicate with you if you’ve provided us the means to do so. For example, if you’ve given us your email address, we may send you promotional email offers on behalf of other businesses, or email you about your use of the Services. Also, we may receive a confirmation when you open an email from us. This confirmation helps us make our communications with you more interesting and improve our services. If you do not want to receive communications from us, please indicate your preference by contacting us at support@4EVERLAND .com.
 
 Information Collected Automatically.
 
@@ -29,7 +27,7 @@ Will 4EVERLAND Share Any of the Personal Information it Receives?
 
 We may share your Personal Information with third parties as described in this section:
 
-Analytics: We may use third party analytics service providers, such as Google Analytics for our business purposes, including but not limited to improving and developing our Services, monitoring and analyzing use of our Services, and increasing the functionality and user-friendliness of our Services. Google Analytics may collect and retain some information about you by planting a persistent cookie or identifier on your web browser or device. You may opt out of Google Analytics by visiting [https://tools.google.com/dlpage/gaoptout/](https://tools.google.com/dlpage/gaoptout/.?fileGuid=J9WgRwgQxJWYqrXX) Google’s ability to use and share information collected by Google Analytics about your use of the Services is restricted by the Google Analytics Terms of Service and the Google Privacy Policy. You may find additional information about Google’s ability to use and share information collected by Google Analytics by visiting [http://www.google.com/policies/privacy/partners/](http://www.google.com/policies/privacy/partners/.?fileGuid=J9WgRwgQxJWYqrXX)
+Analytics: We may use third party analytics service providers, such as Google Analytics for our business purposes, including but not limited to improving and developing our Services, monitoring and analyzing use of our Services, and increasing the functionality and user-friendliness of our Services. Google Analytics may collect and retain some information about you by planting a persistent cookie or identifier on your web browser or device. You may opt out of Google Analytics by visiting https://tools.google.com/dlpage/gaoptout/. Google’s ability to use and share information collected by Google Analytics about your use of the Services is restricted by the Google Analytics Terms of Service and the Google Privacy Policy. You may find additional information about Google’s ability to use and share information collected by Google Analytics by visiting http://www.google.com/policies/privacy/partners/.
 
 Protection of 4EVERLAND and Others: We reserve the right to access, read, preserve, and disclose any information that we believe is necessary to comply with applicable law or court order or respond to valid legal process, including from law enforcement or other government agencies; enforce or apply our Terms of Use and other agreements; prevent spam or other unwanted communications and investigate or protect against fraud; protect the rights, property, or safety of 4EVERLAND, our employees, our users, or others; or maintain the security of our products and services.
 
@@ -42,10 +40,8 @@ We endeavor to protect the privacy of your account and other Personal Informatio
 What Personal Information can I access?
 
 Through your account settings, you may access, and, in some cases, edit or delete the following information you’ve provided to us:
-
-- First and last nam
-- Email address
-
+– First and last nam
+– Email address
 The information you can view, update, and delete may change as the Services change. If you have any questions about viewing or updating information we have on file about you, please contact us at support@4everland.
 
 What choices do I have?
@@ -65,70 +61,62 @@ If there are any conflicts between this section and any other provision of this 
 What Personal Data Do We Collect From You? We collect Personal Data about you when you provide such information directly to us, when third parties such as our business partners or service providers provide us with Personal Data about you, or when Personal Data about you is automatically collected in connection with your use of our Services. For more information, please refer to “What Information does 4EVERLAND Collect?”
 
 How Do We Use Your Personal Data? We process Personal Data to operate, improve, understand and personalize our Services. For example, we use Personal Data to:
-
-- Create and manage user profiles
-- Communicate with you about the Services
-- Process order
-- Contact you about Service announcements, updates or offer
-- Provide support and assistance for the Services
-- Personalize website content and communications based on your preferences
-- Meet contract or legal obligations
-- Respond to user inquirie
-- Fulfill user requests
-- Comply with our legal or contractual obligations
-- Resolve disputes
-- Protect against or deter fraudulent, illegal or harmful actions
-- Enforce our Terms of Service
+– Create and manage user profiles
+– Communicate with you about the Services
+– Process order
+– Contact you about Service announcements, updates or offers
+– Provide support and assistance for the Services
+– Personalize website content and communications based on your preferences
+– Meet contract or legal obligations
+– Respond to user inquiries
+– Fulfill user requests
+– Comply with our legal or contractual obligations
+– Resolve disputes
+– Protect against or deter fraudulent, illegal or harmful actions
+– Enforce our Terms of Service
 
 We will only process your Personal Data if we have a lawful basis for doing so. Lawful bases for processing include consent, contractual necessity and our “legitimate interests” or the legitimate interest of others, as further described below.
 
-- Contractual Necessity: We process the following categories of Personal Data as a matter of “contractual necessity”, meaning that we need to process the data to perform under our Terms of Use with you, which enables us to provide you with the Services. When we process data due to contractual necessity, failure to provide such Personal Data will result in your inability to use some or all portions of the Services that require such data.
-  - Your full nam
-  - Your email address
-- Legitimate Interest: We process the following categories of Personal Data when we believe it furthers the legitimate interest of us or third parties.
+– Contractual Necessity: We process the following categories of Personal Data as a matter of “contractual necessity”, meaning that we need to process the data to perform under our Terms of Use with you, which enables us to provide you with the Services. When we process data due to contractual necessity, failure to provide such Personal Data will result in your inability to use some or all portions of the Services that require such data.
 
-  - Your IP address
+- Your full nam
 
-  Examples of these legitimate interests include:
+- Your email address
 
-  - Operation and improvement of our business, products and service
-  - Marketing of our products and services
-  - Provision of customer support
-  - Protection from fraud or security threats
-  - Compliance with legal obligations
+– Legitimate Interest: We process the following categories of Personal Data when we believe it furthers the legitimate interest of us or third parties.
 
-- Consent: In some cases, we process Personal Data based on the consent you expressly grant to us at the time we collect such data. When we process Personal Data based on your consent, it will be expressly indicated to you at the point and time of collection.
-- Other Processing Grounds: From time to time we may also need to process Personal Data to comply with a legal obligation, if it is necessary to protect the vital interests of you or other data subjects, or if it is necessary for a task carried out in the public interest.
+- Your IP address
 
-How and With Whom Do We Share Your Data? We share Personal Data with vendors, third party service providers and agents who work on our behalf and provide us with services related to the purposes described in this Privacy Policy or our Terms of Service. These parties include：
+Examples of these legitimate interests include:
 
-- Payment processors
-- Fraud prevention service providers
-- Analytics service providers
-- Hosting service providers
-- Telecommunications service providers
-
-We also share Personal Data when necessary to complete a transaction initiated or authorized by you or provide you with a product or service you have requested. In addition to those set forth above, these parties also include：
-
-- Payment processors
-- Fraud prevention service providers
-- Analytics service providers
-- Hosting service providers
-- Telecommunications service providers
-
-We also share Personal Data when necessary to complete a transaction initiated or authorized by you or provide you with a product or service you have requested. In addition to those set forth above, these parties also include:
-
-- Other users (where you post information publicly or as otherwise necessary to effect a transaction initiated or authorized by you through the Services)
-- Third party business partners who you access through the Services
-- Other parties authorized by you
-
-We also share information with third parties when you have given us consent to do so (as indicated at the point such information is collected).
-
-We also share Personal Data when we believe it is necessary to:
-
-- Comply with applicable law or respond to valid legal process, including from law enforcement or other government agencies
-- Protect us, our business or our users, for example to enforce our terms of service, prevent spam or other unwanted communications and investigate or protect against frau
-- Maintain the security of our products and services
+- Operation and improvement of our business, products and services
+- Marketing of our products and services
+- Provision of customer support
+- Protection from fraud or security threats
+- Compliance with legal obligations
+  – Consent: In some cases, we process Personal Data based on the consent you expressly grant to us at the time we collect such data. When we process Personal Data based on your consent, it will be expressly indicated to you at the point and time of collection.
+  – Other Processing Grounds: From time to time we may also need to process Personal Data to comply with a legal obligation, if it is necessary to protect the vital interests of you or other data subjects, or if it is necessary for a task carried out in the public interest.
+  How and With Whom Do We Share Your Data? We share Personal Data with vendors, third party service providers and agents who work on our behalf and provide us with services related to the purposes described in this Privacy Policy or our Terms of Service. These parties include
+  – Payment processors
+  – Fraud prevention service providers
+  – Analytics service providers
+  – Hosting service providers
+  – Telecommunications service providers
+  We also share Personal Data when necessary to complete a transaction initiated or authorized by you or provide you with a product or service you have requested. In addition to those set forth above, these parties also include：
+  – Payment processors
+  – Fraud prevention service providers
+  – Analytics service providers
+  – Hosting service providers
+  – Telecommunications service providers
+  We also share Personal Data when necessary to complete a transaction initiated or authorized by you or provide you with a product or service you have requested. In addition to those set forth above, these parties also include:
+  – Other users (where you post information publicly or as otherwise necessary to effect a transaction initiated or authorized by you through the Services)
+  – Third party business partners who you access through the Services
+  – Other parties authorized by you
+  We also share information with third parties when you have given us consent to do so (as indicated at the point such information is collected).
+  We also share Personal Data when we believe it is necessary to:
+  – Comply with applicable law or respond to valid legal process, including from law enforcement or other government agencies
+  – Protect us, our business or our users, for example to enforce our terms of service, prevent spam or other unwanted communications and investigate or protect against frau
+  – Maintain the security of our products and services
 
 How Long Do We Retain Your Personal Data? We retain Personal Data about you for as long as you have an open account with us and for 6 months after you close your account. In some cases we retain Personal Data for longer, if doing so is necessary to comply with our legal obligations, resolve disputes or collect fees owed, or is otherwise permitted or required by applicable law, rule or regulation. Afterwards, we retain some information in a depersonalized or aggregated form but not in a way that would identify you personally.
 
@@ -137,18 +125,16 @@ What Security Measures Do We Use? We seek to protect Personal Data using appropr
 Personal Data of Children: As noted in the Terms of Use, we do not knowingly collect or solicit Personal Data from anyone under the age of 16. If you are under 16, please do not attempt to register for the Services or send any Personal Data about yourself to us. If we learn that we have collected Personal Data from a child under age 16, we will delete that information as quickly as possible. If you believe that a child under 16 may have provided us Personal Data, please contact us at contact@4everland.org.
 
 What Rights Do You Have Regarding Your Personal Data? You have certain rights with respect to your Personal Data, including those set forth below. For more information about these rights, or to submit a request, please email contact@4everland.org. Please note that in some circumstances, we may not be able to fully comply with your request, such as if it is frivolous or extremely impractical, if it jeopardizes the rights of others, or if it is not required by law, but in those circumstances, we will still respond to notify you of such a decision. In some cases, we may also need to you to provide us with additional information, which may include Personal Data, if necessary to verify your identity and the nature of your request.
-
-- Access: You can request more information about the Personal Data we hold about you and request a copy of such Personal Data.
-- Rectification: If you believe that any Personal Data we are holding about you is incorrect or incomplete, you can request that we correct or supplement such data. You can also correct some of this information directly by updating your user profile.
-- Erasure: You can request that we erase some or all of your Personal Data from our systems.
-- Withdrawal of Consent: If we are processing your Personal Data based on your consent (as indicated at the time of collection of such data), you have the right to withdraw your consent at any time. Please note, however, that if you exercise this right, you may have to then provide express consent on a case-by-case basis for the use or disclosure of certain of your Personal Data, if such use or disclosure is necessary to enable you to utilize some or all of our Services.
-- Portability: You can ask for a copy of your Personal Data in a machine-readable format. You can also request that we transmit the data to another controller where technically feasible.
-- Objection: You can contact us to let us know that you object to the further use or disclosure of your Personal Data for certain purposes.
-- Restriction of Processing: You can ask us to restrict further processing of your Personal Data.
-- Right to File Complaint: You have the right to lodge a complaint about Terminal’s practices with respect to your Personal Data with the supervisory authority of your country or EU Member State.
+– Access: You can request more information about the Personal Data we hold about you and request a copy of such Personal Data.
+– Rectification: If you believe that any Personal Data we are holding about you is incorrect or incomplete, you can request that we correct or supplement such data. You can also correct some of this information directly by updating your user profile.
+– Erasure: You can request that we erase some or all of your Personal Data from our systems.
+– Withdrawal of Consent: If we are processing your Personal Data based on your consent (as indicated at the time of collection of such data), you have the right to withdraw your consent at any time. Please note, however, that if you exercise this right, you may have to then provide express consent on a case-by-case basis for the use or disclosure of certain of your Personal Data, if such use or disclosure is necessary to enable you to utilize some or all of our Services.
+– Portability: You can ask for a copy of your Personal Data in a machine-readable format. You can also request that we transmit the data to another controller where technically feasible.
+– Objection: You can contact us to let us know that you object to the further use or disclosure of your Personal Data for certain purposes.
+– Restriction of Processing: You can ask us to restrict further processing of your Personal Data.
+– Right to File Complaint: You have the right to lodge a complaint about Terminal’s practices with respect to your Personal Data with the supervisory authority of your country or EU Member State.
 
 What if I have questions about this Privacy Policy?
-
 If you have any questions or concerns regarding our Privacy Policy, please send us a detailed message to contact@4everland.org, and we will try to resolve your concerns.
 </template>
 <style scoped>
