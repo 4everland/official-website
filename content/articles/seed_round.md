@@ -10,7 +10,7 @@ published: 2021-08-09
 
 Dear community members:
 
-Cloud computing platform — 4EVERLAND raised 1.5 million dollars in a seed round with participation from Fenbushi Capital, FBG Capital, Bixin Ventures, Mint Ventures and Random Capital. The fund raised will be used to develop and build the 4EVERLAND platform which will provide a globally accelerated, ever-lasting network service for users.
+Cloud computing platform — 4EVERLAND raised 1.5 million dollars in a seed round with participation from Fenbushi Capital, FBG Capital, Bixin Ventures, Mint Ventures and Random Number Capital. The fund raised will be used to develop and build the 4EVERLAND platform which will provide a globally accelerated, ever-lasting network service for users.
 
 4EVERLAND is a blockchain technology-powered cloud computing platform, designed to help developers develop Web 3.0 applications efficiently. It features global acceleration, privacy protection, and distributed storage. 4EVERLAND is designed to provide a distributed, highly efficient, self-motivated, and low-cost data hosting gateway based on IPFS and the underlying technology of Ethereum.
 
