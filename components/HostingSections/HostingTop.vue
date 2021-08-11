@@ -2,7 +2,7 @@
   <v-container class="py-12">
     <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
       <v-col cols="12" md="6" lg="6">
-        <img alt="top-banner" src="~/assets/imgs/hosting/hosting.png" />
+        <img alt="top-banner" src="~/assets/imgs/hosting/Hosting.png" />
         <h1
           class="text-h2 mt-8"
           :class="{ 'text-nowrap': !$vuetify.breakpoint.mdAndDown }"
