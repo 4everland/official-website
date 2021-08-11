@@ -3,7 +3,7 @@
     <dapps-total />
     <dapps-rank />
     <dapps-charts-sections />
-    <dapps-table />
+    <!-- <dapps-table /> -->
   </div>
 </template>
 
