@@ -14,12 +14,12 @@
         </h4>
         <p class="my-12">
           <v-btn
-            href="/4everland-whitepaper-en(Draft V0.0.2).pdf"
+            href="/4everland-whitepaper-en(V1.0.0).pdf"
             target="_blank"
+            class="btn-whitepaper mr-2"
             :class="{
               'mb-4': $vuetify.breakpoint.xsOnly || $vuetify.breakpoint.mdOnly,
             }"
-            class="btn-whitepaper mr-2"
             rounded
             x-large
           >
@@ -31,6 +31,9 @@
             href="https://hosting-website.vercel.app"
             target="_blank"
             class="blue darken-1"
+            :class="{
+              'mb-4': $vuetify.breakpoint.xsOnly || $vuetify.breakpoint.mdOnly,
+            }"
             rounded
             x-large
           >
@@ -48,7 +51,7 @@
           dark
           hide-delimiter-background
           show-arrows-on-hover
-          interval="3000"
+          interval="5000"
           height="450"
         >
           <v-carousel-item
