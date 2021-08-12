@@ -30,7 +30,7 @@
                     class="blue darken-1 white--text px-2"
                     rounded
                     large
-                    href="https://hosting-website.vercel.app"
+                    :href="hosting_web"
                     target="_blank"
                   >
                     <v-icon left size="32">{{ mdiGithub }}</v-icon>
@@ -72,7 +72,7 @@
                       v-ripple
                       outlined
                       class="hover-1"
-                      href="https://hosting-website.vercel.app"
+                      :href="hosting_web"
                       target="_blank"
                     >
                       <v-img :src="it.img" height="200"></v-img>
@@ -94,7 +94,7 @@
                   plain
                   x-small
                   class="text-body-1 font-weight-bold"
-                  href="https://hosting-website.vercel.app"
+                  :href="hosting_web"
                   target="_blank"
                 >
                   Get started<v-icon right>{{ mdiArrowRight }}</v-icon>
@@ -105,7 +105,7 @@
                   plain
                   x-small
                   class="text-body-1 font-weight-bold"
-                  href="https://hosting-website.vercel.app"
+                  :href="hosting_web"
                   target="_blank"
                 >
                   Get started for free with a template

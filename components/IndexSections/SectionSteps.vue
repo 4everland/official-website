@@ -41,7 +41,7 @@
         </v-row>
         <p class="my-12 text-center">
           <v-btn
-            href="https://hosting-website.vercel.app"
+            :href="hosting_web"
             target="_blank"
             class="blue darken-1 white--text"
             rounded

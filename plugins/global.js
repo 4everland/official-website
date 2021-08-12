@@ -3,6 +3,7 @@ import BigNumber from 'bignumber.js'
 
 const tools = {
   install(Vue) {
+    Vue.prototype.hosting_web = 'https://hosting.4everland.org'
     Vue.prototype.tools = {
       formatBigNum(num) {
         if (num) {

@@ -12,7 +12,7 @@
 
         <p class="my-16">
           <v-btn
-            href="https://hosting-website.vercel.app"
+            :href="hosting_web"
             target="_blank"
             class="blue darken-1"
             rounded

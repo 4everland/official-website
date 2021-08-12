@@ -28,7 +28,7 @@
             <v-icon right size="20">{{ mdiDownloadCircleOutline }}</v-icon>
           </v-btn>
           <v-btn
-            href="https://hosting-website.vercel.app"
+            :href="hosting_web"
             target="_blank"
             class="blue darken-1"
             :class="{
@@ -50,6 +50,7 @@
           cycle
           dark
           hide-delimiter-background
+          hide-delimiters
           show-arrows-on-hover
           interval="5000"
           height="450"
@@ -58,6 +59,8 @@
             v-for="(item, i) in banner"
             :key="i"
             class="text-center"
+            :href="item.href"
+            target="_blank"
           >
             <img
               class="cursor-pointer"
@@ -88,17 +91,19 @@ export default {
       model: 0,
       colors: ['primary', 'secondary', 'yellow darken-2', 'red', 'orange'],
       banner: [
-        {
-          src: require('@/assets/imgs/index/banner1.png'),
-        },
-        {
-          src: require('@/assets/imgs/index/banner2.png'),
-        },
+        // {
+        //   src: require('@/assets/imgs/index/banner1.png'),
+        // },
+        // {
+        //   src: require('@/assets/imgs/index/banner2.png'),
+        // },
         {
           src: require('@/assets/imgs/index/banner3.png'),
+          href: 'https://hosting.4everland.org/#/bug-bounty',
         },
         {
           src: require('@/assets/imgs/index/banner4.png'),
+          href: this.hosting_web,
         },
       ],
     }
