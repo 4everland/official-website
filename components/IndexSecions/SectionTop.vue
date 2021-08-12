@@ -14,7 +14,7 @@
         </h4>
         <p class="my-12">
           <v-btn
-            href="/4everland-whitepaper-en(Draft V0.0.2).pdf"
+            href="/4everland-whitepaper-en(V1.0.0).pdf"
             target="_blank"
             class="btn-whitepaper"
             rounded
