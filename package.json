@@ -35,7 +35,7 @@
     "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3",
+    "nuxt": "^2.15.8",
     "vuetify-dialog": "^2.0.16"
   },
   "devDependencies": {
