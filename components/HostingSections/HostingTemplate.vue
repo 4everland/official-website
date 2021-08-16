@@ -48,7 +48,7 @@
                   text
                   plain
                   x-small
-                  class="text-body-1"
+                  class="text-body-2"
                   href="https://docs.hosting.4everland.org/guide/"
                   target="_blank"
                 >
@@ -92,9 +92,7 @@
                 </v-row>
               </div>
               <v-divider></v-divider>
-              <div
-                class="py-4 px-6 grey lighten-4 text-body-1 font-weight-bold"
-              >
+              <div class="py-4 px-6 grey lighten-4 text-body-2">
                 <v-btn
                   v-if="$vuetify.breakpoint.smAndDown"
                   text
@@ -111,7 +109,7 @@
                   text
                   plain
                   x-small
-                  class="text-body-1"
+                  class="text-body-2"
                   :href="hosting_web"
                   target="_blank"
                 >
