@@ -10,8 +10,8 @@
         >
           Being Your 4EVER-HOSTING Journey
         </h3>
-        <v-row>
-          <v-col cols="12" md="12" lg="6" class="px-5">
+        <v-row style="max-width: 1100px; margin: 0 auto">
+          <v-col cols="12" md="12" lg="6" class="px-3">
             <v-card outlined>
               <div class="pa-4">
                 <div class="text-body-1 font-weight-bold">
@@ -21,15 +21,9 @@
               <v-divider></v-divider>
               <div
                 class="d-flex align-center justify-center"
-                :style="{
-                  minHeight: $vuetify.breakpoint.smAndDown
-                    ? '200px'
-                    : $vuetify.breakpoint.xlOnly
-                    ? '538px'
-                    : '351px',
-                }"
+                style="min-height: 444px"
               >
-                <p class="text-center">
+                <p class="text-center py-16 mb-0">
                   <v-btn
                     class="blue darken-1 white--text px-2"
                     rounded
@@ -57,21 +51,15 @@
               </div>
             </v-card>
           </v-col>
-          <v-col cols="12" md="12" lg="6" class="px-5">
+          <v-col cols="12" md="12" lg="6" class="px-3">
             <v-card outlined>
               <div class="pa-4">
                 <div class="text-body-1 font-weight-bold">Clone Template</div>
               </div>
               <v-divider></v-divider>
-              <div
-                ref="templateBox"
-                class="pa-4"
-                :style="{
-                  minHeight: '351px',
-                }"
-              >
+              <div class="pa-4" style="min-height: 444px">
                 <v-row>
-                  <v-col
+                  <!-- <v-col
                     v-for="(it, i) in tplList"
                     :key="i"
                     cols="12"
@@ -87,7 +75,8 @@
                     >
                       <v-img :src="it.img" contain max-height="240"></v-img>
                     </v-card>
-                  </v-col>
+                  </v-col> -->
+                  <project-templates />
                 </v-row>
               </div>
               <v-divider></v-divider>
@@ -124,7 +113,9 @@
 </template>
 <script>
 import { mdiGithub, mdiArrowRight } from '@mdi/js'
+import ProjectTemplates from './ProjectTemplates.vue'
 export default {
+  components: { ProjectTemplates },
   props: { background: { type: String, default: 'white' } },
   data() {
     return {
