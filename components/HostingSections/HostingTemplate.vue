@@ -11,7 +11,7 @@
           Being Your 4EVER-HOSTING Journey
         </h3>
         <v-row>
-          <v-col cols="12" md="12" lg="6" class="pl-10">
+          <v-col cols="12" md="12" lg="6" class="px-5">
             <v-card outlined>
               <div class="pa-4">
                 <div class="text-body-1 font-weight-bold">
@@ -22,7 +22,11 @@
               <div
                 class="d-flex align-center justify-center"
                 :style="{
-                  minHeight: $vuetify.breakpoint.smAndDown ? '200px' : '553px',
+                  minHeight: $vuetify.breakpoint.smAndDown
+                    ? '200px'
+                    : $vuetify.breakpoint.xlOnly
+                    ? '538px'
+                    : '345px',
                 }"
               >
                 <p class="text-center">
@@ -45,7 +49,7 @@
                   plain
                   x-small
                   class="text-body-1"
-                  href="https://4ever-hosting-docs.vercel.app"
+                  href="https://docs.hosting.4everland.org/guide/"
                   target="_blank"
                 >
                   View Docs<v-icon right>{{ mdiArrowRight }}</v-icon>
@@ -53,13 +57,19 @@
               </div>
             </v-card>
           </v-col>
-          <v-col cols="12" md="12" lg="6" class="pr-10">
+          <v-col cols="12" md="12" lg="6" class="px-5">
             <v-card outlined>
               <div class="pa-4">
                 <div class="text-body-1 font-weight-bold">Clone Template</div>
               </div>
               <v-divider></v-divider>
-              <div class="pa-4" style="min-height: 553px">
+              <div
+                ref="templateBox"
+                class="pa-4"
+                :style="{
+                  minHeight: '345px',
+                }"
+              >
                 <v-row>
                   <v-col
                     v-for="(it, i) in tplList"
@@ -76,7 +86,7 @@
                       :href="getTplLink(it)"
                       target="_blank"
                     >
-                      <v-img :src="it.img" height="240"></v-img>
+                      <v-img :src="it.img" contain max-height="240"></v-img>
                     </v-card>
                   </v-col>
                 </v-row>
@@ -90,7 +100,7 @@
                   text
                   plain
                   x-small
-                  class="text-body-1 font-weight-bold"
+                  class="text-body-1"
                   :href="hosting_web"
                   target="_blank"
                 >
@@ -146,9 +156,6 @@ export default {
         },
       ],
     }
-  },
-  mounted() {
-    // this.getList()
   },
   methods: {
     async getList() {

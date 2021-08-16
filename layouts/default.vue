@@ -81,7 +81,7 @@ export default {
         },
         {
           text: 'Docs',
-          href: 'https://4ever-hosting-docs.vercel.app',
+          href: 'https://docs.hosting.4everland.org/guide/',
           target: '_blank',
         },
 
