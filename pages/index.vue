@@ -6,22 +6,26 @@
     <section-technology />
     <section-participant />
     <section-steps />
+    <!-- <section-dapps /> -->
     <section-map />
     <section-roadmap />
+    <hosting-template />
     <section-future />
   </div>
 </template>
 
 <script>
-import SectionFeatures from '../components/IndexSecions/SectionFeatures.vue'
-import SectionGlobe from '../components/IndexSecions/SectionGlobe.vue'
-import SectionParticipant from '../components/IndexSecions/SectionParticipant.vue'
-import SectionSteps from '../components/IndexSecions/SectionSteps.vue'
-import SectionTechnology from '../components/IndexSecions/SectionTechnology.vue'
-import SectionTop from '../components/IndexSecions/SectionTop.vue'
-import SectionMap from '../components/IndexSecions/SectionMap.vue'
-import SectionRoadmap from '../components/IndexSecions/SectionRoadmap.vue'
-import SectionFuture from '../components/IndexSecions/SectionFuture.vue'
+import SectionTop from '@/components/IndexSections/SectionTop.vue'
+import SectionGlobe from '@/components/IndexSections/SectionGlobe.vue'
+import SectionFeatures from '@/components/IndexSections/SectionFeatures.vue'
+import SectionTechnology from '@/components/IndexSections/SectionTechnology.vue'
+import SectionParticipant from '@/components/IndexSections/SectionParticipant.vue'
+import SectionSteps from '@/components/IndexSections/SectionSteps.vue'
+import SectionDapps from '@/components/IndexSections/SectionDapps.vue'
+import SectionMap from '@/components/IndexSections/SectionMap.vue'
+import SectionRoadmap from '@/components/IndexSections/SectionRoadmap.vue'
+import HostingTemplate from '@/components/HostingSections/HostingTemplate.vue'
+import SectionFuture from '@/components/IndexSections/SectionFuture.vue'
 export default {
   components: {
     SectionTop,
@@ -30,8 +34,10 @@ export default {
     SectionTechnology,
     SectionParticipant,
     SectionSteps,
+    SectionDapps,
     SectionMap,
     SectionRoadmap,
+    HostingTemplate,
     SectionFuture,
   },
   methods: {

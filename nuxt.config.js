@@ -1,4 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
+require('dotenv').config({
+  path: `environments/.env.${process.env.NODE_ENV || 'development'}`,
+})
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -13,7 +16,13 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: '/css/materialdesignicons.min.css',
+      },
+    ],
     script: [
       {
         src: '/js/globe.gl.min.js',
@@ -24,10 +33,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['assets/styles/common.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['plugins/global'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -54,10 +63,16 @@ export default {
     '@nuxt/content',
     // https://www.npmjs.com/package/vuetify-dialog
     'vuetify-dialog/nuxt',
+    ['@nuxtjs/dotenv', { filename: '.env.production' }],
   ],
-
+  env: {
+    BASE_URL: process.env.BASE_URL,
+    NODE_ENV: process.env.NODE_ENV,
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL, // Used as fallback if no runtime config is provided
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {

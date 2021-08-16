@@ -3,7 +3,7 @@
     <v-container class="text-center d-flex flex-column align-center">
       <h3 class="text-h3 font-weight-light mb-16">Where we're going</h3>
       <p
-        class="text-h6 text--secondary font-weight-regular"
+        class="text-subtitle-2 text--secondary font-weight-regular"
         style="max-width: 700px"
       >
         4EVERLAND is a great place to pursue developers' ideal paradigm for Web
