@@ -26,7 +26,7 @@
                     ? '200px'
                     : $vuetify.breakpoint.xlOnly
                     ? '538px'
-                    : '345px',
+                    : '351px',
                 }"
               >
                 <p class="text-center">
@@ -67,7 +67,7 @@
                 ref="templateBox"
                 class="pa-4"
                 :style="{
-                  minHeight: '345px',
+                  minHeight: '351px',
                 }"
               >
                 <v-row>
