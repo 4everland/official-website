@@ -47,8 +47,10 @@
       </v-col>
       <v-col class="d-flex align-center justify-center" cols="12" md="6" lg="6">
         <v-carousel
+          v-model="model"
           cycle
           dark
+          reverse
           hide-delimiter-background
           hide-delimiters
           show-arrows-on-hover
