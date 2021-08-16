@@ -11,11 +11,11 @@
           Being Your 4EVER-HOSTING Journey
         </h3>
         <v-row>
-          <v-col cols="12" md="12" lg="6" class="px-10">
+          <v-col cols="12" md="12" lg="6" class="pl-10">
             <v-card outlined>
               <div class="pa-4">
                 <div class="text-body-1 font-weight-bold">
-                  Import Git Repositor
+                  Import Git Repository
                 </div>
               </div>
               <v-divider></v-divider>
@@ -44,7 +44,7 @@
                   text
                   plain
                   x-small
-                  class="text-body-1 font-weight-bold"
+                  class="text-body-1"
                   href="https://4ever-hosting-docs.vercel.app"
                   target="_blank"
                 >
@@ -53,7 +53,7 @@
               </div>
             </v-card>
           </v-col>
-          <v-col cols="12" md="12" lg="6" class="px-10">
+          <v-col cols="12" md="12" lg="6" class="pr-10">
             <v-card outlined>
               <div class="pa-4">
                 <div class="text-body-1 font-weight-bold">Clone Template</div>
@@ -70,16 +70,13 @@
                   >
                     <v-card
                       v-ripple
+                      flat
                       outlined
                       class="hover-1"
-                      :href="hosting_web"
+                      :href="getTplLink(it)"
                       target="_blank"
                     >
-                      <v-img :src="it.img" height="200"></v-img>
-                      <div class="pa-2 d-flex align-center">
-                        <img :src="it.logo" style="width: 20px" />
-                        <div class="ml-2">{{ it.title }}</div>
-                      </div>
+                      <v-img :src="it.img" height="240"></v-img>
                     </v-card>
                   </v-col>
                 </v-row>
@@ -104,7 +101,7 @@
                   text
                   plain
                   x-small
-                  class="text-body-1 font-weight-bold"
+                  class="text-body-1"
                   :href="hosting_web"
                   target="_blank"
                 >
@@ -128,24 +125,24 @@ export default {
       mdiArrowRight,
       tplList: [
         {
-          img: require('~/assets/imgs/hosting/nextjs.png'),
-          logo: require('~/assets/imgs/hosting/next.svg'),
-          title: 'Next.js',
+          img: require('~/assets/imgs/hosting/next.png'),
+          slug: 'nextjs',
+          name: 'Next.js',
         },
         {
           img: require('~/assets/imgs/hosting/vue.png'),
-          logo: require('~/assets/imgs/hosting/vuejs.png'),
-          title: 'Vue.js',
+          slug: 'vue',
+          name: 'Vue.js',
         },
         {
-          img: require('~/assets/imgs/hosting/nuxtjs.png'),
-          logo: require('~/assets/imgs/hosting/nuxt.svg'),
-          title: 'Nuxt.js',
+          img: require('~/assets/imgs/hosting/nuxt.png'),
+          slug: 'nuxtjs',
+          name: 'Nuxt.js',
         },
         {
-          img: require('~/assets/imgs/hosting/gatsbyjs.png'),
-          logo: require('~/assets/imgs/hosting/gatsby.svg'),
-          title: 'Gatsby.js',
+          img: require('~/assets/imgs/hosting/gatsby.png'),
+          slug: 'gatsby',
+          name: 'Gatsby.js',
         },
       ],
     }
@@ -163,6 +160,15 @@ export default {
       } catch (error) {
         //
       }
+    },
+    getTplLink(it) {
+      const src =
+        'https://github.com/4everland/project-templates/tree/main/examples/' +
+        it.slug
+      return (
+        this.hosting_web +
+        `#/new/clone-flow?s=${encodeURIComponent(src)}&t=${it.name}`
+      )
     },
   },
 }
