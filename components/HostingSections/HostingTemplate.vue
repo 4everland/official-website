@@ -10,7 +10,7 @@
         >
           Being Your 4EVER-HOSTING Journey
         </h3>
-        <v-row style="max-width: 1100px; margin: 0 auto">
+        <v-row style="max-width: 1200px; margin: 0 auto">
           <v-col cols="12" md="12" lg="6" class="px-3">
             <v-card outlined>
               <div class="pa-4">
@@ -21,9 +21,9 @@
               <v-divider></v-divider>
               <div
                 class="d-flex align-center justify-center"
-                style="min-height: 444px"
+                style="min-height: 446px"
               >
-                <p class="text-center py-16 mb-0">
+                <div class="text-center py-16">
                   <v-btn
                     class="blue darken-1 white--text px-2"
                     rounded
@@ -34,7 +34,7 @@
                     <v-icon left size="32">{{ mdiGithub }}</v-icon>
                     <span>Continue with Github</span>
                   </v-btn>
-                </p>
+                </div>
               </div>
               <v-divider></v-divider>
               <div class="pa-4 grey lighten-4">
@@ -46,7 +46,7 @@
                   href="https://docs.hosting.4everland.org/guide/"
                   target="_blank"
                 >
-                  View Docs<v-icon right>{{ mdiArrowRight }}</v-icon>
+                  View Docs<v-icon right size="14">{{ mdiArrowRight }}</v-icon>
                 </v-btn>
               </div>
             </v-card>
@@ -57,7 +57,7 @@
                 <div class="text-body-1 font-weight-bold">Clone Template</div>
               </div>
               <v-divider></v-divider>
-              <div class="pa-4" style="min-height: 444px">
+              <div class="py-4" style="min-height: 446px">
                 <v-row>
                   <!-- <v-col
                     v-for="(it, i) in tplList"
@@ -80,7 +80,7 @@
                 </v-row>
               </div>
               <v-divider></v-divider>
-              <div class="py-4 px-6 grey lighten-4 text-body-2">
+              <div class="pa-4 grey lighten-4">
                 <v-btn
                   v-if="$vuetify.breakpoint.smAndDown"
                   text

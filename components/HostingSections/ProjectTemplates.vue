@@ -78,7 +78,6 @@ export default {
   padding: 16px;
   cursor: pointer;
 }
-
 .projects .project *:hover {
   text-decoration: none;
 }
