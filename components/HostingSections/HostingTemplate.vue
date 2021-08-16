@@ -81,7 +81,6 @@
                     <v-card
                       v-ripple
                       flat
-                      outlined
                       class="hover-1"
                       :href="getTplLink(it)"
                       target="_blank"
