@@ -1,6 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 require('dotenv').config({
-  path: `environments/.env.${process.env.NODE_ENV || 'development'}`,
+  path: `.env.${process.env.NODE_ENV || 'development'}`,
 })
 
 export default {
