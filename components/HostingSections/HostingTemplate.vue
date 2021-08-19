@@ -59,23 +59,6 @@
               <v-divider></v-divider>
               <div class="py-4" style="min-height: 446px">
                 <v-row>
-                  <!-- <v-col
-                    v-for="(it, i) in tplList"
-                    :key="i"
-                    cols="12"
-                    md="6"
-                    lg="6"
-                  >
-                    <v-card
-                      v-ripple
-                      flat
-                      class="hover-1"
-                      :href="getTplLink(it)"
-                      target="_blank"
-                    >
-                      <v-img :src="it.img" contain max-height="240"></v-img>
-                    </v-card>
-                  </v-col> -->
                   <project-templates />
                 </v-row>
               </div>
@@ -121,34 +104,10 @@ export default {
     return {
       mdiGithub,
       mdiArrowRight,
-      tplList: [
-        {
-          img: require('~/assets/imgs/hosting/next.png'),
-          slug: 'nextjs',
-          name: 'Next.js',
-        },
-        {
-          img: require('~/assets/imgs/hosting/vue.png'),
-          slug: 'vue',
-          name: 'Vue.js',
-        },
-        {
-          img: require('~/assets/imgs/hosting/nuxt.png'),
-          slug: 'nuxtjs',
-          name: 'Nuxt.js',
-        },
-        {
-          img: require('~/assets/imgs/hosting/gatsby.png'),
-          slug: 'gatsby',
-          name: 'Gatsby.js',
-        },
-      ],
     }
   },
   methods: {
     async getList() {
-      window.console.log(process.env.NODE_ENV)
-      window.console.log(process.env)
       try {
         const { data } = await this.$axios.get('/template/clone-template')
         window.console.log(data)
