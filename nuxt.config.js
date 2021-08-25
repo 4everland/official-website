@@ -108,15 +108,6 @@ export default {
       },
     },
   },
-  generate: {
-    routes() {
-      return axios.get(`${process.env.BASE_URL}/dapps/list`).then((res) => {
-        return res.data.data.list.map((item) => {
-          return '/dapps/' + item.projectId
-        })
-      })
-    },
-  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
