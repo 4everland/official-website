@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import axios from 'axios'
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`,
 })
@@ -107,7 +108,15 @@ export default {
       },
     },
   },
-
+  generate: {
+    routes() {
+      return axios.get(`${process.env.BASE_URL}/dapps/list`).then((res) => {
+        return res.data.data.list.map((item) => {
+          return '/dapps/' + item.projectId
+        })
+      })
+    },
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }

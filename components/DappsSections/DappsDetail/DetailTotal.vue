@@ -47,11 +47,17 @@
             <p class="text-h6">{{ item.name }}</p>
             <div class="d-flex justify-space-between mb-2">
               <div>Today</div>
-              <div>+{{ tools.formatBigNum(data[item.today]) }}</div>
+              <div>
+                <span v-if="index == 0">+</span
+                >{{ tools.formatBigNum(data[item.today]) }}
+              </div>
             </div>
             <div class="d-flex justify-space-between">
               <div>Yesterday</div>
-              <div>+{{ tools.formatBigNum(data[item.yesterday]) }}</div>
+              <div>
+                <span v-if="index == 0">+</span
+                >{{ tools.formatBigNum(data[item.yesterday]) }}
+              </div>
             </div>
           </div>
         </v-col>
