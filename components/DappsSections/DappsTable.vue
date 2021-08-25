@@ -1,5 +1,8 @@
 <template>
-  <v-container class="px-15 pb-16 grey--text text--darken-4 white bottom-round">
+  <v-container
+    class="px-15 grey--text text--darken-4 white bottom-round"
+    style="padding-bottom: 120px"
+  >
     <div class="text-h5 font-weight-bold pb-6">Leaderboard</div>
     <div v-if="!data">
       <v-skeleton-loader light type="table" />
@@ -7,7 +10,7 @@
     <v-data-table
       v-else
       :headers="headers"
-      :items="data.content"
+      :items="data.list"
       light
       loading-text="Loading... Please wait"
       disable-sort
@@ -30,14 +33,14 @@ export default {
           align: 'center',
           value: 'index',
         },
-        { text: 'DApps', align: 'center', value: 'dAppName' },
+        { text: 'DApps', align: 'center', value: 'projectName' },
         { text: 'Total UV', align: 'center', value: 'totalUv' },
         { text: 'Total PV', align: 'center', value: 'totalPv' },
         { text: '24H UV', align: 'center', value: 'uv' },
         { text: '24H PV', align: 'center', value: 'pv' },
       ],
       page: 1,
-      size: 10,
+      size: 50,
       data: null,
     }
   },
@@ -48,15 +51,15 @@ export default {
     toDetail(id) {
       this.$router.push(`/dapps/${id}`)
     },
-    async getTable(page, size) {
+    async getTable(pageNum, pageSize) {
       try {
         const { data } = await this.$axios.get('/dapps/list', {
           params: {
-            page,
-            size,
+            pageNum,
+            pageSize,
           },
         })
-        data.data.content.map((item, index) => {
+        data.data.list.map((item, index) => {
           item.totalUv = this.tools.formatBigNum(item.totalUv)
           item.totalPv = this.tools.formatBigNum(item.totalPv)
           item.uv = this.tools.formatBigNum(item.uv)

@@ -8,10 +8,7 @@
         <v-col cols="12" md="2" lg="2">
           <div class="text-center mb-5">
             <v-avatar size="74">
-              <img
-                src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
-                alt=""
-              />
+              <img class="pa-1 blue lighten-2" src="/dapps.svg" alt="" />
             </v-avatar>
           </div>
           <div class="text-center">
@@ -62,7 +59,7 @@
       <v-row>
         <v-col cols="12" md="4" lg="4">
           <div class="text-sm-center text-md-left">
-            <div class="grey--text text--darken-1 mb-2">Total UV</div>
+            <div class="grey--text text--darken-1 mb-2">Total Users</div>
             <div class="text-h4 grey--text text--darken-4">
               {{ tools.formatBigNum(data.totalUsers) }}
             </div>
@@ -70,22 +67,30 @@
         >
         <v-col cols="12" md="4" lg="4">
           <div class="text-sm-center">
+            <div class="grey--text text--darken-1 mb-2">Total UV</div>
+            <div class="text-h4 grey--text text--darken-4">
+              {{ tools.formatBigNum(data.totalUsers) }}
+            </div>
+          </div></v-col
+        >
+        <v-col cols="12" md="4" lg="4">
+          <div class="text-sm-center text-md-right">
             <div class="grey--text text--darken-1 mb-2">Total PV</div>
             <div class="text-h4 grey--text text--darken-4">
               {{ tools.formatBigNum(data.totalPv) }}
             </div>
           </div></v-col
         >
-        <v-col cols="12" md="4" lg="4">
+        <!-- <v-col cols="12" md="4" lg="4">
           <div class="text-sm-center text-md-right">
             <div class="grey--text text--darken-1 mb-2">
               Next day retention rate
             </div>
             <div class="text-h4 grey--text text--darken-4">
-              {{ data.retentionRate }}
+              {{ data.retentionRate }}%
             </div>
           </div></v-col
-        >
+        > -->
       </v-row>
     </template>
   </v-container>

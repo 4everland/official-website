@@ -9,17 +9,14 @@
           <div class="text-h6 pb-6">Most Popular Recently</div>
           <div class="d-flex align-center pb-6 bd-dash">
             <v-avatar size="36" class="mr-4">
-              <img
-                src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
-                alt=""
-              />
+              <img class="pa-1 blue lighten-2" src="/dapps.svg" alt="" />
             </v-avatar>
             <div class="flex-grow-1">
               <div
                 class="subtitle-2 cursor-pointer link-hover"
-                @click="toDetail(data.mostPopularRecently.projectId)"
+                @click="toDetail(mostPopularRecently.projectId)"
               >
-                {{ data.mostPopularRecently.dappName }}
+                {{ mostPopularRecently.dappName }}
               </div>
               <div class="caption grey--text text--darken-1">
                 Recently data during 3 days
@@ -31,13 +28,13 @@
               <div class="text-left">
                 <div class="caption">Total UV</div>
                 <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                  {{ tools.formatBigNum(data.mostPopularRecently.totalUv) }}
+                  {{ tools.formatBigNum(mostPopularRecently.totalUv) }}
                 </div>
               </div>
               <div class="text-right">
                 <div class="caption">Total PV</div>
                 <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                  {{ tools.formatBigNum(data.mostPopularRecently.totalPv) }}
+                  {{ tools.formatBigNum(mostPopularRecently.totalPv) }}
                 </div>
               </div>
             </div>
@@ -45,13 +42,13 @@
               <div class="text-left">
                 <div class="caption">24H UV</div>
                 <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                  {{ tools.formatBigNum(data.mostPopularRecently.uv) }}
+                  {{ tools.formatBigNum(mostPopularRecently.uv) }}
                 </div>
               </div>
               <div class="text-right">
                 <div class="caption">24H PV</div>
                 <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                  {{ tools.formatBigNum(data.mostPopularRecently.pv) }}
+                  {{ tools.formatBigNum(mostPopularRecently.pv) }}
                 </div>
               </div>
             </div>
@@ -70,17 +67,14 @@
             <v-col cols="12" md="4" lg="4">
               <div class="d-flex align-center">
                 <v-avatar size="36" class="mr-4">
-                  <img
-                    src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
-                    alt=""
-                  />
+                  <img class="pa-1 blue lighten-2" src="/dapps.svg" alt="" />
                 </v-avatar>
                 <div class="flex-grow-1">
                   <div
                     class="subtitle-2 cursor-pointer link-hover"
-                    @click="toDetail(data.bestToday.projectId)"
+                    @click="toDetail(bestToday.projectId)"
                   >
-                    {{ data.bestToday.dappName }}
+                    {{ bestToday.dappName }}
                   </div>
                 </div>
               </div>
@@ -90,25 +84,25 @@
                 <div class="text-center">
                   <div class="caption">Total UV</div>
                   <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                    {{ tools.formatBigNum(data.bestToday.totalUv) }}
+                    {{ tools.formatBigNum(bestToday.totalUv) }}
                   </div>
                 </div>
                 <div class="text-center">
                   <div class="caption">Total PV</div>
                   <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                    {{ tools.formatBigNum(data.bestToday.totalPv) }}
+                    {{ tools.formatBigNum(bestToday.totalPv) }}
                   </div>
                 </div>
                 <div class="text-center">
                   <div class="caption">24H UV</div>
                   <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                    {{ tools.formatBigNum(data.bestToday.uv) }}
+                    {{ tools.formatBigNum(bestToday.uv) }}
                   </div>
                 </div>
                 <div class="text-center">
                   <div class="caption">24H PV</div>
                   <div class="body-1 font-weight-bold blue--text tex--darken-1">
-                    {{ tools.formatBigNum(data.bestToday.pv) }}
+                    {{ tools.formatBigNum(bestToday.pv) }}
                   </div>
                 </div>
               </div>
@@ -119,7 +113,7 @@
           <div class="text-h6 pb-6">Recently Released</div>
           <v-row>
             <v-col
-              v-for="item in data.recentlyReleased"
+              v-for="item in recentlyReleased"
               :key="item.projectId"
               cols="12"
               md="4"
@@ -127,10 +121,7 @@
             >
               <div class="d-flex align-center">
                 <v-avatar size="36" class="mr-4">
-                  <img
-                    src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
-                    alt=""
-                  />
+                  <img class="pa-1 blue lighten-2" src="/dapps.svg" alt="" />
                 </v-avatar>
                 <div class="flex-grow-1">
                   <div
@@ -153,6 +144,9 @@ export default {
   data() {
     return {
       data: null,
+      bestToday: {},
+      mostPopularRecently: {},
+      recentlyReleased: {},
     }
   },
   mounted() {
@@ -163,6 +157,9 @@ export default {
       try {
         const { data } = await this.$axios.get('/dapps/recently/detail')
         this.data = data.data
+        this.bestToday = data.data.bestToday || {}
+        this.mostPopularRecently = data.data.mostPopularRecently || {}
+        this.recentlyReleased = data.data.recentlyReleased || {}
       } catch (error) {
         //
       }

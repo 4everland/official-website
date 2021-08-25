@@ -89,10 +89,10 @@ export default {
           text: 'Blog',
           link: '/blog',
         },
-        // {
-        //   text: 'Dapps',
-        //   link: '/dapps',
-        // },
+        {
+          text: 'Dapps',
+          link: '/dapps',
+        },
       ],
     }
   },
