@@ -47,7 +47,7 @@ export default {
     }
   },
   mounted() {
-    const id = this.$nuxt.$route.params.id
+    const id = this.$route.query.id
     this.getTable(id)
   },
   methods: {

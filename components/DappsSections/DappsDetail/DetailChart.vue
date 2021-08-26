@@ -52,7 +52,7 @@ export default {
     }
   },
   mounted() {
-    this.projectId = this.$nuxt.$route.params.id
+    this.projectId = this.$route.query.id
     this.getChart(this.projectId, this.viewType, this.timeLimit)
   },
   methods: {

@@ -165,7 +165,7 @@ export default {
       }
     },
     toDetail(id) {
-      this.$router.push(`/dapps/${id}`)
+      this.$router.push(`/dapps/detail?id=${id}`)
     },
   },
 }
