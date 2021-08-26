@@ -3,10 +3,9 @@
     <v-container class="mt-4 rounded-t-xl pb-16 white bottom-round">
       <v-row no-gutters>
         <v-col cols="12" md="8" order-md="1" order-sm="2" order="2">
-          <nuxt-link
+          <div
             v-for="article in articles"
             :key="article.title"
-            :to="`/blog/${article.slug}`"
             class="decoration-none grey--text text--darken-2"
           >
             <div
@@ -27,20 +26,24 @@
                   }}
                 </small>
               </div>
-              <h5 class="text-h5 grey--text text--darken-4">
-                {{ article.title }}
-              </h5>
-              <p v-if="article.img" class="my-4">
-                <v-img :src="article.img" class="article-img"></v-img>
-              </p>
-              <p class="text-body-2">
+              <nuxt-link class="decoration-none" :to="`/blog/${article.slug}`">
+                <h5 class="text-h5 grey--text text--darken-4">
+                  {{ article.title }}
+                </h5>
+              </nuxt-link>
+              <div v-if="article.img" class="my-4">
+                <nuxt-link :to="`/blog/${article.slug}`">
+                  <v-img :src="article.img" class="article-img"></v-img>
+                </nuxt-link>
+              </div>
+              <div class="text-body-2">
                 {{ article.description }}
-              </p>
+              </div>
               <nuxt-link class="link-more" :to="`/blog/${article.slug}`">
                 Read More
               </nuxt-link>
             </div>
-          </nuxt-link>
+          </div>
         </v-col>
         <v-col cols="12" md="4" order-md="2" order-sm="1" order="1">
           <div class="blog-intro grey--text text--darken-2 pa-8">
@@ -94,6 +97,7 @@ export default {
   },
   data() {
     return {
+      articles: [],
       links: [
         {
           icon: mdiGithub,
