@@ -8,8 +8,19 @@
         <div class="bg-grey rounded-lg pa-6">
           <div class="text-h6 pb-6">Most Popular Recently</div>
           <div class="d-flex align-center pb-6 bd-dash">
-            <v-avatar size="36" class="mr-4">
-              <img class="pa-1 blue lighten-2" src="/dapps.svg" alt="" />
+            <v-avatar size="36" rounded class="mr-4">
+              <img
+                v-if="mostPopularRecently.icon"
+                :src="mostPopularRecently.icon"
+                alt=""
+              />
+
+              <img
+                v-else
+                class="pa-1 blue lighten-2 rounded-circle"
+                src="/dapps.svg"
+                alt=""
+              />
             </v-avatar>
             <div class="flex-grow-1">
               <div
@@ -66,8 +77,14 @@
           <v-row>
             <v-col cols="12" md="4" lg="4">
               <div class="d-flex align-center">
-                <v-avatar size="36" class="mr-4">
-                  <img class="pa-1 blue lighten-2" src="/dapps.svg" alt="" />
+                <v-avatar size="36" rounded class="mr-4">
+                  <img v-if="bestToday.icon" :src="bestToday.icon" alt="" />
+                  <img
+                    v-else
+                    class="pa-1 blue lighten-2 rounded-circle"
+                    src="/dapps.svg"
+                    alt=""
+                  />
                 </v-avatar>
                 <div class="flex-grow-1">
                   <div
@@ -120,8 +137,14 @@
               lg="4"
             >
               <div class="d-flex align-center">
-                <v-avatar size="36" class="mr-4">
-                  <img class="pa-1 blue lighten-2" src="/dapps.svg" alt="" />
+                <v-avatar size="36" rounded class="mr-4">
+                  <img v-if="item.icon" :src="item.icon" alt="" />
+                  <img
+                    v-else
+                    class="pa-1 blue lighten-2 rounded-circle"
+                    src="/dapps.svg"
+                    alt=""
+                  />
                 </v-avatar>
                 <div class="flex-grow-1">
                   <div

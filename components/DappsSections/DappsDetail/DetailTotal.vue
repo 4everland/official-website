@@ -7,8 +7,14 @@
       <v-row class="pb-15 bd-dash">
         <v-col cols="12" md="2" lg="2">
           <div class="text-center mb-5">
-            <v-avatar size="74">
-              <img class="pa-1 blue lighten-2" src="/dapps.svg" alt="" />
+            <v-avatar size="74" rounded>
+              <img v-if="data.icon" :src="data.icon" alt="" />
+              <img
+                v-else
+                class="pa-1 blue lighten-2 rounded-circle"
+                src="/dapps.svg"
+                alt=""
+              />
             </v-avatar>
           </div>
           <div class="text-center">
@@ -16,7 +22,7 @@
               rounded
               outlined
               color="primary"
-              :href="data.domains.domain"
+              :href="'https://' + data.domains[0].domain"
               target="_blank"
               >Website</v-btn
             >
@@ -27,11 +33,7 @@
             {{ data.projectName }}
           </div>
           <div class="grey--text text--darken-2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae nulla
-            tenetur debitis eligendi nisi ad fugit fuga doloremque, commodi
-            quos, distinctio nam sit eius? Inventore iste molestias minima
-            veritatis quis, vitae aliquam voluptates numquam, libero esse eos
-            illo commodi debitis?
+            {{ data.desc }}
           </div>
         </v-col>
       </v-row>
@@ -121,7 +123,7 @@ export default {
         {
           color: '#BE80E0',
           name: 'PV',
-          today: 'totalPv',
+          today: 'todayPv',
           yesterday: 'yesterdayPv',
         },
       ],
