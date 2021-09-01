@@ -97,7 +97,6 @@ export default {
   },
   data() {
     return {
-      articles: [],
       links: [
         {
           icon: mdiGithub,
