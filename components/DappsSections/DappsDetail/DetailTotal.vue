@@ -33,7 +33,7 @@
             {{ data.projectName }}
           </div>
           <div class="grey--text text--darken-2">
-            {{ data.desc }}
+            {{ data.desc ? data.desc : 'No introduction in the project.' }}
           </div>
         </v-col>
       </v-row>
