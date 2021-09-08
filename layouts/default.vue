@@ -9,12 +9,16 @@
           v-for="item in links"
           :key="item.text"
           class="hidden-sm-and-down"
+          :style="item.style"
           plain
           nuxt
           :to="item.link"
           :href="item.href"
           :target="item.target"
         >
+          <v-icon v-if="item.icon" class="mr-2" size="28">{{
+            item.icon
+          }}</v-icon>
           {{ item.text }}
         </v-btn>
         <v-spacer />
@@ -59,7 +63,7 @@
 </template>
 
 <script>
-import { mdiMenu, mdiGithub } from '@mdi/js'
+import { mdiMenu, mdiGithub, mdiFire } from '@mdi/js'
 import Logo from '../components/Logo.vue'
 import AppFooter from '../components/AppFooter.vue'
 
@@ -93,6 +97,15 @@ export default {
         //   text: 'Dapps',
         //   link: '/dapps',
         // },
+        {
+          text: 'Firstlanding',
+          link: '/firstlanding',
+          style: {
+            color: '#F33845',
+            fontWeight: 'bold',
+          },
+          icon: mdiFire,
+        },
       ],
     }
   },
