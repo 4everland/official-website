@@ -9,17 +9,16 @@
           v-for="item in links"
           :key="item.text"
           class="hidden-sm-and-down"
-          :style="item.style"
           plain
           nuxt
           :to="item.link"
           :href="item.href"
           :target="item.target"
         >
-          <v-icon v-if="item.icon" class="mr-2" size="28">{{
-            item.icon
-          }}</v-icon>
-          {{ item.text }}
+          <v-img v-if="item.icon" class="mr-2" :src="item.icon" alt="" />
+          <span :style="item.style">
+            {{ item.text }}
+          </span>
         </v-btn>
         <v-spacer />
         <v-btn
@@ -63,7 +62,7 @@
 </template>
 
 <script>
-import { mdiMenu, mdiGithub, mdiFire } from '@mdi/js'
+import { mdiMenu, mdiGithub } from '@mdi/js'
 import Logo from '../components/Logo.vue'
 import AppFooter from '../components/AppFooter.vue'
 
@@ -101,10 +100,15 @@ export default {
           text: 'Firstlanding',
           link: '/firstlanding',
           style: {
-            color: '#F33845',
+            backgroundImage:
+              'linear-gradient(to right,#fd6f8a, #d739f8, #9748f7)',
+            backgroundClip: 'text',
+            webkitBackgroundClip: 'text',
+            color: 'transparent',
             fontWeight: 'bold',
+            fontSize: '16px',
           },
-          icon: mdiFire,
+          icon: require('~/assets/imgs/firstlanding/fire.png'),
         },
       ],
     }

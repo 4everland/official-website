@@ -1,10 +1,18 @@
 <template>
-  <div>111</div>
+  <div>
+    <section-top />
+    <section-main />
+  </div>
 </template>
 
 <script>
+import SectionTop from '@/components/FirstlandingSections/SectionTop.vue'
+import SectionMain from '@/components/FirstlandingSections/SectionMain.vue'
 export default {
-  components: {},
+  components: {
+    SectionTop,
+    SectionMain,
+  },
   methods: {},
 }
 </script>
