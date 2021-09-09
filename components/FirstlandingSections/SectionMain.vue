@@ -124,7 +124,7 @@
           </div>
           <div class="font-16 mb-4 color-text">
             • Any 4EVERLAND system related issues please report to
-            <a href="mailto:contract@4everland.org">contract@4everland.org</a>
+            <a href="mailto:contact@4everland.org">contact@4everland.org</a>
           </div>
           <div class="font-16 mb-4 color-text">
             Join 4EVERLAND
