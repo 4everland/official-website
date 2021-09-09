@@ -86,7 +86,7 @@
             Events end is randomised to prevent malicious competition and will
             be anytime between October 7 and 14 UTC
           </div>
-          <div class="font-36 mb-6 color-text">Rewards rules:</div>
+          <div class="font-36 mb-6 color-text">Rewards rules</div>
           <v-row style="margin: 0 auto">
             <v-col
               v-for="(item, index) in rules"
