@@ -9,13 +9,21 @@
           v-for="item in links"
           :key="item.text"
           class="hidden-sm-and-down"
+          :class="{ 'first-landing': item.icon }"
           plain
           nuxt
           :to="item.link"
           :href="item.href"
           :target="item.target"
+          :ripple="false"
         >
-          <v-img v-if="item.icon" class="mr-2" :src="item.icon" alt="" />
+          <v-img
+            v-if="item.icon"
+            class="mr-2"
+            width="16"
+            :src="item.icon"
+            alt=""
+          />
           <span :style="item.style">
             {{ item.text }}
           </span>
@@ -117,6 +125,9 @@ export default {
 </script>
 <style scoped>
 .always-active {
+  opacity: 1 !important;
+}
+/deep/ .first-landing span {
   opacity: 1 !important;
 }
 </style>

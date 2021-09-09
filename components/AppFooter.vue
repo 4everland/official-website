@@ -59,6 +59,10 @@
         &copy; 2021 4EVERLAND FOUNDATION LTD
       </v-container>
     </v-footer>
+    <div class="sub-success" v-show="subSuccessShow">
+      <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
+      <span class="ml-4">Thank you for subscription.</span>
+    </div>
   </div>
 </template>
 <script>
@@ -69,6 +73,7 @@ import {
   mdiReddit,
   mdiDiscord,
   mdiEmail,
+  mdiEmoticonHappyOutline,
 } from '@mdi/js'
 export default {
   data() {
@@ -76,6 +81,8 @@ export default {
       email: '',
       loading: false,
       disabled: true,
+      subSuccessShow: false,
+      mdiEmoticonHappyOutline,
       links: [
         {
           icon: mdiGithub,
@@ -125,17 +132,21 @@ export default {
         // console.log(resp.data)
         if (resp.data.status) {
           if (resp.data.status === 'success') {
-            this.$dialog.message.success('Subscribed', {
-              position: 'top',
-              timeout: 2500,
-              actions: [
-                {
-                  text: 'OK',
-                  color: 'green accent-4',
-                  key: true,
-                },
-              ],
-            })
+            // this.$dialog.message.success('Subscribed', {
+            //   position: 'top',
+            //   timeout: 2500,
+            //   actions: [
+            //     {
+            //       text: 'OK',
+            //       color: 'green accent-4',
+            //       key: true,
+            //     },
+            //   ],
+            // })
+            this.subSuccessShow = true
+            setTimeout(() => {
+              this.subSuccessShow = false
+            }, 2500)
           } else {
             this.$dialog.error({
               text: resp.data.detail?.title || 'Subscribe failed',
@@ -209,5 +220,21 @@ export default {
 }
 .link:hover {
   text-decoration: underline;
+}
+.sub-success {
+  width: 600px;
+  height: 200px;
+  line-height: 200px;
+  background: #fff;
+  border: 2px solid #2b85fb;
+  border-radius: 10px;
+  color: #666;
+  font-size: 18px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 120px;
+  margin: auto;
 }
 </style>

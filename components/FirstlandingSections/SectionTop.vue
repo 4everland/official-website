@@ -6,13 +6,13 @@
           <v-col
             class="d-flex justify-end align-center"
             cols="12"
-            md="7"
-            lg="7"
+            md="6"
+            lg="6"
           >
-            <v-img width="100%" max-width="784" :src="banner[0]" />
+            <v-img width="100%" max-width="679" :src="banner[0]" />
           </v-col>
-          <v-col class="d-flex align-center" cols="12" md="4" lg="4">
-            <v-img width="100%" max-width="539" :src="banner[1]" />
+          <v-col class="d-flex align-center" cols="12" md="6" lg="6">
+            <v-img width="100%" max-width="591" :src="banner[1]" />
           </v-col>
         </v-row>
       </v-container>

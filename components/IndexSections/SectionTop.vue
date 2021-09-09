@@ -62,7 +62,8 @@
             :key="i"
             class="text-center"
             :href="item.href"
-            target="_blank"
+            :to="item.to"
+            :target="item.href ? '_blank' : ''"
           >
             <img
               class="cursor-pointer"
@@ -106,6 +107,10 @@ export default {
         {
           src: require('@/assets/imgs/index/banner4.png'),
           href: this.hosting_web,
+        },
+        {
+          src: require('@/assets/imgs/index/banner5.jpg'),
+          to: '/firstlanding',
         },
       ],
     }

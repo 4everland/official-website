@@ -2,15 +2,8 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <div
-          class="main-bg"
-          :style="
-            $vuetify.breakpoint.smAndDown
-              ? ''
-              : 'padding: 0 72px; padding-top: 67px'
-          "
-        >
-          <div class="font-24 fw-bold">
+        <div class="main-bg">
+          <div class="font-24 color-text">
             4EVERLAND the 'First Landing' event aims to discover more developers
             to reach Web3.0. 50million 4EVER is the reward for deploying
             projects on 4EVERLAND, where provides global acceleration and
@@ -36,10 +29,10 @@
               }"
             />
             <v-btn
+              id="subscribeBtn"
               :loading="loading"
               :disabled="disabled"
               rounded
-              id="subscribeBtn"
               color="#2b85fb"
               class="btn-subscribe"
               :class="{
@@ -50,7 +43,20 @@
               Subscribe
             </v-btn>
           </div>
-          <div class="font-18 mb-10">
+          <img
+            class="d-none d-lg-flex"
+            src="~/assets/imgs/firstlanding/icon1.png"
+            alt=""
+          />
+        </div>
+        <div
+          :style="
+            $vuetify.breakpoint.smAndDown
+              ? 'padding: 0 5px;'
+              : 'padding: 0 72px; padding-top: 67px'
+          "
+        >
+          <div class="font-18 mb-10 color-text">
             Since 4EVERLAND HOSTING was live on the 16th of August it was
             popular for developers even for such a short period. At present,
             many applications are deployed in 4EVERLAND for web hosting base on
@@ -59,25 +65,25 @@
             developers who use the 4EVER-HOSTING service. Meanwhile, all
             participants will receive limited NFTs in rewards.
           </div>
-          <div class="font-18 mb-10">
+          <div class="font-18 mb-10 color-text">
             4EVERLAND the 'First Landing' aims to find more outstanding
             developers and help them efficiently develop Web3.0 applications. It
             aims to encourage more developers to deploy more applications in
             4EVERLAND with a variety of rewards also provides global
             acceleration and storage network service.
           </div>
-          <div class="font-18 mb-10">
+          <div class="font-18 mb-10 color-text">
             We sincerely invite all developers from all stages of projects to
             participate. You will build a brand new Web3.0 application in
             4EVERLAND and rewards.
           </div>
-          <div class="font-36">Event dates</div>
-          <div class="font-18 mb-10">
+          <div class="font-36 color-text">Events dates</div>
+          <div class="font-18 color-text" style="margin-bottom: 100px">
             The event starts at 00:00 15th September UTC<br />
             The event ends anytime on 7th - 14th October UTC(Randomize end time
             to prevent malicious competition)
           </div>
-          <div class="font-36 mb-6">Reward rules</div>
+          <div class="font-36 mb-6 color-text">Rewards rules</div>
           <v-row style="margin: 0 auto">
             <v-col
               v-for="(item, index) in rules"
@@ -93,29 +99,31 @@
                 max-width="480"
                 :src="item.img"
               ></v-img>
-              <div class="font-16" v-html="item.html"></div>
+              <div class="font-16 color-text" v-html="item.html"></div>
             </v-col>
           </v-row>
-          <div class="font-36 mb-6">Terms of service</div>
-          <div class="font-16 mb-4">
+          <div class="font-16 mb-4 color-text" style="margin-top: 100px">
+            Terms of service
+          </div>
+          <div class="font-16 mb-4 color-text">
             • 4EVERLAND reserves the right of final interpretation of the 'First
             landing' event and the right to determine the rules and rewards.
           </div>
-          <div class="font-16 mb-4">
+          <div class="font-16 mb-4 color-text">
             • It is not allowed such as unfair competition scalping, plagiarism
             or any malicious competition. 4EVERLAND retains the right to
             disqualify them.
           </div>
-          <div class="font-16 mb-4">
+          <div class="font-16 mb-4 color-text">
             • Any 4EVERLAND system related issues please report to
             <a href="mailto:contract@4everland.org">contract@4everland.org</a>
           </div>
-          <div class="font-16 mb-4">
+          <div class="font-16 mb-4 color-text">
             • Join 4EVERLAND
             <a href="https://discord.gg/sxtHDvvpuT" target="_blank">Discord</a>
             to find solutions if you have problems using 4EVERLAND services.
           </div>
-          <div class="font-16 mt-12">
+          <div class="font-16 mt-12 color-text">
             Please join our
             <a href="https://discord.gg/sxtHDvvpuT" target="_blank">Discord</a>
             to get new updates of 4EVERLAND. Meanwhile, report any bugs related
@@ -125,18 +133,43 @@
             >
             ' event.
           </div>
+          <img
+            class="pos-img d-none d-lg-flex"
+            src="~/assets/imgs/firstlanding/icon2.png"
+            alt=""
+            style="left: 0; top: 36%"
+          />
+          <img
+            class="pos-img d-none d-lg-flex"
+            src="~/assets/imgs/firstlanding/icon3.png"
+            alt=""
+            style="right: 0; top: 40%"
+          />
+          <img
+            class="pos-img d-none d-lg-flex"
+            src="~/assets/imgs/firstlanding/icon4.png"
+            alt=""
+            style="left: 0; top: 89%"
+          />
         </div>
       </v-col>
     </v-row>
+    <div class="sub-success" v-show="subSuccessShow">
+      <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
+      <span class="ml-4">Thank you for subscription.</span>
+    </div>
   </v-container>
 </template>
 <script>
+import { mdiEmoticonHappyOutline } from '@mdi/js'
 export default {
   data() {
     return {
+      mdiEmoticonHappyOutline,
       email: '',
       loading: false,
       disabled: true,
+      subSuccessShow: false,
       rules: [
         {
           img: require('~/assets/imgs/firstlanding/rules1.png'),
@@ -251,17 +284,10 @@ export default {
         // console.log(resp.data)
         if (resp.data.status) {
           if (resp.data.status === 'success') {
-            this.$dialog.message.success('Subscribed', {
-              position: 'top',
-              timeout: 2500,
-              actions: [
-                {
-                  text: 'OK',
-                  color: 'green accent-4',
-                  key: true,
-                },
-              ],
-            })
+            this.subSuccessShow = true
+            setTimeout(() => {
+              this.subSuccessShow = false
+            }, 2500)
           } else {
             this.$dialog.error({
               text: resp.data.detail?.title || 'Subscribe failed',
@@ -290,15 +316,47 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
 .main-bg {
+  padding-left: 7%;
+  padding-right: 6%;
+  padding-top: 6%;
+  width: 100%;
+  min-height: 419px;
   background-image: url('~/assets/imgs/firstlanding/main-bg.png');
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: 'top';
+  position: relative;
+}
+.main-bg img {
+  position: absolute;
+  right: 1%;
+  top: 52%;
+}
+.sub-success {
+  width: 600px;
+  height: 200px;
+  line-height: 200px;
+  background: #fff;
+  border: 2px solid #2b85fb;
+  border-radius: 10px;
+  color: #666;
+  font-size: 18px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 120px;
+  margin: auto;
 }
 a {
   text-decoration: none;
+}
+.pos-img {
+  position: absolute;
+}
+.color-text {
+  color: #ccd6e3;
 }
 .subscribe-tit {
   font-size: 24px;
