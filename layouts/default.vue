@@ -61,7 +61,18 @@
           :href="item.href"
           :target="item.target"
         >
-          <v-list-item-title>{{ item.text }}</v-list-item-title>
+          <v-list-item-title>
+            <span :style="item.style">
+              <img
+                v-if="item.icon"
+                class="mr-2"
+                width="16"
+                :src="item.icon"
+                alt=""
+              />
+              {{ item.text }}
+            </span>
+          </v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -115,6 +126,9 @@ export default {
             color: 'transparent',
             fontWeight: 'bold',
             fontSize: '16px',
+            verticalAlign: 'middle',
+            display: 'flex',
+            alignItems: 'center',
           },
           icon: require('~/assets/imgs/firstlanding/fire.png'),
         },

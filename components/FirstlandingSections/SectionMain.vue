@@ -2,7 +2,12 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <div class="main-bg">
+        <div
+          :class="{
+            'main-bg': !$vuetify.breakpoint.smAndDown,
+            'px-2': $vuetify.breakpoint.smAndDown,
+          }"
+        >
           <div class="font-24 color-text">
             4EVERLAND the 'First Landing' event aims to discover more developers
             to reach Web3.0. 50million 4EVER is the reward for deploying
@@ -355,7 +360,7 @@ input.subscribe-input:focus {
   font-weight: bold;
 }
 #subscribeBtn.disabled {
-  background-color: #c1c1c1 !important;
+  background-color: #2b85fb !important;
   color: #fff !important;
 }
 </style>
