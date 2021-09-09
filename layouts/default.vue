@@ -17,14 +17,8 @@
           :target="item.target"
           :ripple="false"
         >
-          <v-img
-            v-if="item.icon"
-            class="mr-2"
-            width="16"
-            :src="item.icon"
-            alt=""
-          />
-          <span :style="item.style">
+          <v-img v-if="item.icon" width="143" :src="item.icon" alt="" />
+          <span v-else>
             {{ item.text }}
           </span>
         </v-btn>
@@ -62,14 +56,8 @@
           :target="item.target"
         >
           <v-list-item-title>
-            <span :style="item.style">
-              <img
-                v-if="item.icon"
-                class="mr-2"
-                width="16"
-                :src="item.icon"
-                alt=""
-              />
+            <v-img v-if="item.icon" width="143" :src="item.icon" alt="" />
+            <span v-else>
               {{ item.text }}
             </span>
           </v-list-item-title>
@@ -130,7 +118,7 @@ export default {
             display: 'flex',
             alignItems: 'center',
           },
-          icon: require('~/assets/imgs/firstlanding/fire.png'),
+          icon: require('~/assets/imgs/firstlanding/firstlanding.png'),
         },
       ],
     }

@@ -59,7 +59,7 @@
         &copy; 2021 4EVERLAND FOUNDATION LTD
       </v-container>
     </v-footer>
-    <div class="sub-success" v-show="subSuccessShow">
+    <div v-show="subSuccessShow" class="sub-success">
       <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
       <span class="ml-4">Thank you for subscription.</span>
     </div>
