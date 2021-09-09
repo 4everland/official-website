@@ -65,8 +65,8 @@
             Dear community developers and users:
           </div>
           <div class="font-18 mb-10 color-text">
-            Since 4EVERLAND 4EVER-HOSTING went live on August 16 it has shown
-            great popularity, even in such a short period of time, with many
+            Since 4EVER-HOSTING went live on August 16 it has shown great
+            popularity, even in such a short period of time, with many
             applications already deployed by developers in 4EVERLAND IPFS web
             hosting.
           </div>
