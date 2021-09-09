@@ -48,7 +48,7 @@
 
     <div class="mb-12 text-center">
       <nuxt-link to="/term-of-use" class="link grey--text"
-        >Term of Use</nuxt-link
+        >Terms of Use</nuxt-link
       >
       <nuxt-link to="/privacy-policy" class="link ml-8 grey--text"
         >Privacy Policy</nuxt-link
