@@ -9,10 +9,10 @@
           }"
         >
           <div class="font-24 color-text">
-            4EVERLAND the 'First Landing' event aims to discover more developers
-            to reach Web3.0. 50million 4EVER is the reward for deploying
-            projects on 4EVERLAND, where provides global acceleration and
-            storage network service.
+            4EVERLAND’s First Landing aims to continue to reach more outstanding
+            developers and help them efficiently develop Web3.0 applications,
+            encouraging them to deploy applications in 4EVERLAND with this
+            rewards based event.
           </div>
           <div class="my-12" style="text-align: center">
             <span
@@ -25,7 +25,7 @@
             >
             <input
               v-model="email"
-              placeholder="Enter your E-mail to get event notes →"
+              placeholder="Enter your E-mail to signup for more updates"
               type="email"
               class="subscribe-input"
               :class="{
