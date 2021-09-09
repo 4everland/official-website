@@ -97,7 +97,7 @@ export default {
         //   link: '/dapps',
         // },
         {
-          text: 'Firstlanding',
+          text: 'First Landing',
           link: '/firstlanding',
           style: {
             backgroundImage:
