@@ -18,5 +18,8 @@ export default {
     DetailTable,
   },
   methods: {},
+  mounted() {
+    console.log(this.$route.query.id)
+  },
 }
 </script>

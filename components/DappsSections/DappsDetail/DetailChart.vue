@@ -52,7 +52,7 @@ export default {
     }
   },
   mounted() {
-    this.projectId = this.$nuxt.$route.params.id
+    this.projectId = this.$route.query.id
     this.getChart(this.projectId, this.viewType, this.timeLimit)
   },
   methods: {
@@ -79,7 +79,7 @@ export default {
       const date = []
       const data = []
       for (const key in viewDate) {
-        date.push(key)
+        date.push(this.tools.parseTime(key, '{y}-{m}-{d}'))
         data.push(viewDate[key])
       }
       const option = {
@@ -104,6 +104,7 @@ export default {
             show: false,
           },
           max: 'dataMax',
+          minInterval: 1,
         },
         series: [
           {

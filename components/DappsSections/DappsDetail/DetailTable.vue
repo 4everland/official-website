@@ -1,5 +1,8 @@
 <template>
-  <v-container class="px-15 pb-16 grey--text text--darken-4 white bottom-round">
+  <v-container
+    class="px-15 grey--text text--darken-4 white bottom-round"
+    style="padding-bottom: 120px"
+  >
     <div class="text-h5 font-weight-bold pb-6">Retention Rate</div>
     <div v-if="!data">
       <v-skeleton-loader light type="table" />
@@ -14,7 +17,11 @@
       loading-text="Loading... Please wait"
       hide-default-footer
       disable-sort
-    ></v-data-table>
+    >
+      <template #[`item.createAt`]="{ item }">
+        {{ tools.parseTime(item.createAt, '{y}-{m}-{d}') }}
+      </template>
+    </v-data-table>
   </v-container>
 </template>
 <script>
@@ -40,7 +47,7 @@ export default {
     }
   },
   mounted() {
-    const id = this.$nuxt.$route.params.id
+    const id = this.$route.query.id
     this.getTable(id)
   },
   methods: {

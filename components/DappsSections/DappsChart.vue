@@ -33,19 +33,19 @@ export default {
   },
   data() {
     return {
-      timeType: 'day-7',
+      timeType: 'DAY_7',
       timeChoose: [
         {
           name: '90 Days',
-          type: 'day-90',
+          type: 'DAY_90',
         },
         {
           name: '30 Days',
-          type: 'day-30',
+          type: 'DAY_30',
         },
         {
           name: '7 Days',
-          type: 'day-7',
+          type: 'DAY_7',
         },
       ],
     }
@@ -76,7 +76,7 @@ export default {
       const date = []
       const data = []
       for (const key in viewDate) {
-        date.push(key)
+        date.push(this.tools.parseTime(key, '{y}-{m}-{d}'))
         data.push(viewDate[key])
       }
       const option = {
@@ -101,6 +101,7 @@ export default {
             show: false,
           },
           max: 'dataMax',
+          minInterval: 1,
         },
         series: [
           {

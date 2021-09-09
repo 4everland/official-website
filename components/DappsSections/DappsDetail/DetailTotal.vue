@@ -7,9 +7,12 @@
       <v-row class="pb-15 bd-dash">
         <v-col cols="12" md="2" lg="2">
           <div class="text-center mb-5">
-            <v-avatar size="74">
+            <v-avatar size="74" rounded>
+              <img v-if="data.icon" :src="data.icon" alt="" />
               <img
-                src="http://iph.href.lu/200x200?fg=666666&bg=cccccc"
+                v-else
+                class="pa-1 blue lighten-2 rounded-circle"
+                src="/dapps.svg"
                 alt=""
               />
             </v-avatar>
@@ -19,7 +22,7 @@
               rounded
               outlined
               color="primary"
-              :href="data.domains.domain"
+              :href="'https://' + data.domains[0].domain"
               target="_blank"
               >Website</v-btn
             >
@@ -30,11 +33,7 @@
             {{ data.projectName }}
           </div>
           <div class="grey--text text--darken-2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae nulla
-            tenetur debitis eligendi nisi ad fugit fuga doloremque, commodi
-            quos, distinctio nam sit eius? Inventore iste molestias minima
-            veritatis quis, vitae aliquam voluptates numquam, libero esse eos
-            illo commodi debitis?
+            {{ data.desc ? data.desc : 'No introduction in the project.' }}
           </div>
         </v-col>
       </v-row>
@@ -50,11 +49,17 @@
             <p class="text-h6">{{ item.name }}</p>
             <div class="d-flex justify-space-between mb-2">
               <div>Today</div>
-              <div>+{{ tools.formatBigNum(data[item.today]) }}</div>
+              <div>
+                <span v-if="index == 0">+</span
+                >{{ tools.formatBigNum(data[item.today]) }}
+              </div>
             </div>
             <div class="d-flex justify-space-between">
               <div>Yesterday</div>
-              <div>+{{ tools.formatBigNum(data[item.yesterday]) }}</div>
+              <div>
+                <span v-if="index == 0">+</span
+                >{{ tools.formatBigNum(data[item.yesterday]) }}
+              </div>
             </div>
           </div>
         </v-col>
@@ -62,7 +67,7 @@
       <v-row>
         <v-col cols="12" md="4" lg="4">
           <div class="text-sm-center text-md-left">
-            <div class="grey--text text--darken-1 mb-2">Total UV</div>
+            <div class="grey--text text--darken-1 mb-2">Total Users</div>
             <div class="text-h4 grey--text text--darken-4">
               {{ tools.formatBigNum(data.totalUsers) }}
             </div>
@@ -70,22 +75,30 @@
         >
         <v-col cols="12" md="4" lg="4">
           <div class="text-sm-center">
+            <div class="grey--text text--darken-1 mb-2">Total UV</div>
+            <div class="text-h4 grey--text text--darken-4">
+              {{ tools.formatBigNum(data.totalUsers) }}
+            </div>
+          </div></v-col
+        >
+        <v-col cols="12" md="4" lg="4">
+          <div class="text-sm-center text-md-right">
             <div class="grey--text text--darken-1 mb-2">Total PV</div>
             <div class="text-h4 grey--text text--darken-4">
               {{ tools.formatBigNum(data.totalPv) }}
             </div>
           </div></v-col
         >
-        <v-col cols="12" md="4" lg="4">
+        <!-- <v-col cols="12" md="4" lg="4">
           <div class="text-sm-center text-md-right">
             <div class="grey--text text--darken-1 mb-2">
               Next day retention rate
             </div>
             <div class="text-h4 grey--text text--darken-4">
-              {{ data.retentionRate }}
+              {{ data.retentionRate }}%
             </div>
           </div></v-col
-        >
+        > -->
       </v-row>
     </template>
   </v-container>
@@ -110,7 +123,7 @@ export default {
         {
           color: '#BE80E0',
           name: 'PV',
-          today: 'totalPv',
+          today: 'todayPv',
           yesterday: 'yesterdayPv',
         },
       ],
@@ -118,7 +131,7 @@ export default {
     }
   },
   mounted() {
-    const id = this.$nuxt.$route.params.id
+    const id = this.$route.query.id
     this.getTotal(id)
   },
   methods: {

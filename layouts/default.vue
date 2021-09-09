@@ -76,7 +76,7 @@ export default {
       links: [
         {
           text: 'Features',
-          link: '/',
+          link: '/#feature',
         },
         {
           text: 'Hosting',

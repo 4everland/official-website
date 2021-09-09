@@ -17,19 +17,19 @@ export default {
       chartList: [
         {
           title: 'Total Dapps',
-          viewType: 'total-dapps',
+          viewType: 'TOTAL_DAPPS',
         },
         {
           title: 'New Dapps',
-          viewType: 'new-dapps',
+          viewType: 'NEW_DAPPS',
         },
         {
           title: 'Total Users',
-          viewType: 'total-users',
+          viewType: 'TOTAL_USERS',
         },
         {
           title: 'New Users',
-          viewType: 'new-users',
+          viewType: 'NEW_USERS',
         },
       ],
     }
