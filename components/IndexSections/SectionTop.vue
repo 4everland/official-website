@@ -52,9 +52,8 @@
           dark
           reverse
           hide-delimiter-background
-          hide-delimiters
           show-arrows-on-hover
-          interval="5000"
+          interval="2000"
           height="450"
         >
           <v-carousel-item
@@ -101,16 +100,16 @@ export default {
         //   src: require('@/assets/imgs/index/banner2.png'),
         // },
         {
+          src: require('@/assets/imgs/index/banner5.jpg'),
+          to: '/firstlanding',
+        },
+        {
           src: require('@/assets/imgs/index/banner3.png'),
           href: 'https://hosting.4everland.org/#/bug-bounty',
         },
         {
           src: require('@/assets/imgs/index/banner4.png'),
           href: this.hosting_web,
-        },
-        {
-          src: require('@/assets/imgs/index/banner5.jpg'),
-          to: '/firstlanding',
         },
       ],
     }
