@@ -17,7 +17,7 @@
           :target="item.target"
           :ripple="false"
         >
-          <v-img v-if="item.icon" width="143" :src="item.icon" alt="" />
+          <v-img v-if="item.icon" width="137" :src="item.icon" alt="" />
           <span v-else>
             {{ item.text }}
           </span>
