@@ -317,7 +317,7 @@ export default {
             title: 'V3 Atom: Cloud Computing of Web3.0 ',
             plus: '(2025-2026)',
             content:
-              'Launch virtual machin container, acquire capability of Web3.0 cloud computing ',
+              'Launch virtual machine container, acquire capability of Web3.0 cloud computing ',
           },
         ],
       },
