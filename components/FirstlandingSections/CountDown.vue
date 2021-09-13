@@ -2,7 +2,12 @@
   <div class="countdown">
     <v-container class="py-12">
       <v-row class="main">
-        <v-col class="d-flex align-center" cols="12" md="4" lg="4">
+        <v-col
+          class="d-flex align-center justify-center"
+          cols="12"
+          md="4"
+          lg="4"
+        >
           <div class="text-h4">
             EVENT {{ type == 'start' ? 'START' : 'ENDS' }} IN
             <v-icon v-if="type == 'end'" color="#fff" size="48">{{
@@ -10,16 +15,25 @@
             }}</v-icon>
           </div>
         </v-col>
-        <v-col class="d-flex" cols="12" md="8" lg="8">
-          <div class="time-item">
+        <v-col class="d-flex justify-center" cols="12" md="8" lg="8">
+          <div
+            class="time-item"
+            :class="{ 'mobile-time': $vuetify.breakpoint.smAndDown }"
+          >
             <div class="num">{{ hours | formatNum }}</div>
             <div>HOURS</div>
           </div>
-          <div class="time-item">
+          <div
+            class="time-item"
+            :class="{ 'mobile-time': $vuetify.breakpoint.smAndDown }"
+          >
             <div class="num">{{ minutes | formatNum }}</div>
             <div>MINUTES</div>
           </div>
-          <div class="time-item">
+          <div
+            class="time-item"
+            :class="{ 'mobile-time': $vuetify.breakpoint.smAndDown }"
+          >
             <div class="num">{{ seconds | formatNum }}</div>
             <div>SECONDS</div>
           </div>
@@ -90,7 +104,7 @@ export default {
 </script>
 <style scoped lang="scss">
 .main {
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
@@ -101,6 +115,7 @@ export default {
   text-align: center;
   padding: 30px 40px;
   margin-right: 32px;
+  min-width: 160px;
   div {
     color: #8287ac;
     font-size: 18px;
@@ -110,5 +125,16 @@ export default {
     font-size: 48px;
     color: #fff;
   }
+}
+.time-item:last-child {
+  margin-right: 0;
+}
+.mobile-time {
+  padding: 6px 12px;
+  margin-right: 12px;
+  min-width: 80px;
+}
+.mobile-time:last-child {
+  margin-right: 12px;
 }
 </style>
