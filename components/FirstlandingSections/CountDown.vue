@@ -132,7 +132,7 @@ export default {
 .mobile-time {
   padding: 6px 12px;
   margin-right: 12px;
-  min-width: 80px;
+  min-width: 100px;
 }
 .mobile-time:last-child {
   margin-right: 12px;
