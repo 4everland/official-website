@@ -9,10 +9,9 @@
           }"
         >
           <div class="font-24 color-text">
-            4EVERLAND’s First Landing aims to continue to reach more outstanding
-            developers and help them efficiently develop Web3.0 applications,
-            encouraging them to deploy applications in 4EVERLAND with this
-            rewards based event.
+            4EVERLAND First Landing aims to reach outstanding developers and
+            help them efficiently develop Web3.0 applications, encouraging the
+            deployment of applications in 4EVERLAND.
           </div>
           <div class="my-12" style="text-align: center">
             <span
@@ -61,37 +60,57 @@
               : 'padding: 0 72px; padding-top: 67px'
           "
         >
+          <div class="font-18 mb-10 color-text">Dear users:</div>
           <div class="font-18 mb-10 color-text">
-            Dear community developers and users:
-          </div>
-          <div class="font-18 mb-10 color-text">
-            Since 4EVER-HOSTING went live on August 16 it has shown great
-            popularity, even in such a short period of time, with many
-            applications already deployed by developers in 4EVERLAND IPFS web
-            hosting.
+            Since 4EVER-HOSTING went live on 16th August it has shown great
+            popularity in a short period of time, with many applications already
+            deployed by developers in 4EVERLAND Web Hosting Services.
           </div>
           <div class="font-18 mb-10 color-text">
             Today, we are pleased to announce the launch of the 4EVERLAND First
-            Landing event with 50 million 4EVER credit rewards up for grabs.
+            Landing Event with 50 million 4EVER tokens and limited NFT rewards
+            up for grabs.
           </div>
           <div class="font-18 mb-10 color-text">
-            4EVERLAND’s First Landing aims to continue to reach more outstanding
-            developers and help them efficiently develop Web3.0 applications,
-            encouraging them to deploy applications in 4EVERLAND with this
-            rewards based event.
+            4EVERLAND's First Landing aims to reach outstanding developers and
+            help them efficiently develop Web3.0 applications, encouraging the
+            deployment of applications in 4EVERLAND.
           </div>
           <div class="font-18 mb-10 color-text">
             Developers from all project stages are welcome to join this global
             event and all you have to do is deploy your website in 4EVERLAND to
-            get a share in the massive reward pool.
+            get a share of the massive reward pool.
           </div>
-          <div class="font-36 color-text">Events Information</div>
-          <div class="font-18 color-text" style="margin-bottom: 100px">
-            Events start at 00:00 September 15 UTC <br />
-            Events end is randomised to prevent malicious competition and will
-            be anytime between October 7 and 14 UTC
+          <div class="font-18 mb-10 color-text font-italic">
+            *You must have a git hub account created before 8th September, 2021
           </div>
-          <div class="font-36 mb-6 color-text">Rewards rules</div>
+          <div class="font-36 mb-10 color-text">Events Information</div>
+          <div class="font-18 color-text">
+            The event starts at 00:00 15th September UTC and the event ends
+            randomized between October 7th and 14th UTC for further official
+            notice.
+          </div>
+          <div class="font-18 color-text">
+            There are a total of 50 million 4EVER deployment token rewards
+            available for developers during the First Landing event. This is
+            broken down into
+          </div>
+          <div class="font-18 color-text">• Deployment Rewards</div>
+          <div class="font-18 color-text">• Total Users Rewards</div>
+          <div class="font-18 color-text">• Invitation Rewards</div>
+          <div class="font-18 color-text">• Developer Grants</div>
+          <div class="font-18 color-text font-italic">
+            *2000 4EVER for each developer who deployed projects on 4EVERLAND
+            before 8th September as Early Adopter Rewards.
+          </div>
+          <div
+            class="font-18 color-text font-italic"
+            style="margin-bottom: 100px"
+          >
+            *To show our thanks every 4EVERLAND account member will receive 1
+            NFT reward
+          </div>
+          <div class="font-36 mb-6 color-text">Reward rules</div>
           <v-row style="margin: 0 auto">
             <v-col
               v-for="(item, index) in rules"
@@ -115,7 +134,7 @@
           </div>
           <div class="font-16 mb-4 color-text">
             • 4EVERLAND reserves the right of final interpretation of the First
-            landing event and the right to determine the rules and rewards.
+            Landing Event and the right to determine the rules and rewards.
           </div>
           <div class="font-16 mb-4 color-text">
             • Unfair competition scalping, plagiarism or any malicious
@@ -123,11 +142,19 @@
             disqualify participants.
           </div>
           <div class="font-16 mb-4 color-text">
+            • Deployment rewards and Total users rewards are available only to
+            members with GitHub accounts registered before 8th September, 2021
+          </div>
+          <div class="font-16 mb-4 color-text">
+            • Please submit your ETH wallet address to claim your rewards within
+            a week after the end of the event.
+          </div>
+          <div class="font-16 mb-4 color-text">
             • Any 4EVERLAND system related issues please report to
             <a href="mailto:contact@4everland.org">contact@4everland.org</a>
           </div>
           <div class="font-16 mb-4 color-text">
-            Join 4EVERLAND
+            • Join 4EVERLAND
             <a href="https://discord.gg/sxtHDvvpuT" target="_blank">Discord</a>
             to find solutions if you have problems using 4EVERLAND services and
             report any bugs related to 4EVERLAND will be rewarded in the '<a
@@ -177,61 +204,64 @@ export default {
         {
           img: require('~/assets/imgs/firstlanding/rules1.png'),
           html: `<span class="d-block mb-1">
-                  There are a total of 10 million 4EVER deployment credit rewards available for developers during the First Landing event. All you have to do is:
+                  There are a total of 10 million 4EVER tokens available for developers during the First Landing Event. To qualify you must have:
                 </span>
                 <span class="d-block mb-1">
-                  1.Completed one or more deployments in 4EVER-HOSTING before September 8 and be rewarded 2000 4EVER credits.
+                 •	Used a GitHub account created before 8th September
                 </span>
                 <span class="d-block mb-1">
-                  2.All developers who successfully deploy a project during the event period with have their account rewarded with 1000 4EVER credits at the end of the event.
+                  •	All developers who successfully deploy a project during the event period will have their account rewarded with 1000 4EVER tokens at the end of the event.
                 </span>
                 <span class="d-block mb-1">
-                  3.An additional 2000 4EVER credits will be awarded to those who customise their project domain name.
+                 •	2000 4EVER tokens will be awarded to those who customize their project with a domain name.
                 </span>
-                <span class="d-block mb-1">
-                  *Credit rewards are only awarded once per account, per address and first-level domain name.
+                <span class="d-block mb-1 font-italic">
+                *Tokens are only awarded once per account, per address and first-level domain name.
                 </span>`,
         },
         {
           img: require('~/assets/imgs/firstlanding/rules2.png'),
           html: `<span class="d-block mb-1">
-                   There is also a total of 10 million 4EVER credits available based on each projects total number of users. All projects that meet the deployment criteria will be eligible to win a share of the total credit pool calculated on the projects users divided by the total number over users across all projects.
+                  There are also a total of 10 million 4EVER tokens available based on your project’s total number of visits to your project.
                 </span>
                 <span class="d-block mb-1">
-                   *Credits are available to the developers who register a Githbub account before September 8 and meet the deployment criteria up to an event total of 10 million. One account can win up to 100,000 4EVER credits. Template deployments do not count as valid participates.
+                  All projects that meet the deployment criteria will be eligible to win a share of the total token reward pool. This is calculated on individual project visits divided by the total number of visits across all projects.
+                </span>
+                <span class="d-block mb-1 font-italic">
+                  *Tokens are available to the developers who meet the deployment criteria up to an event total of 10 million. Maximum total for one (1) project is 100,000 4EVER tokens. Template deployments do not count as valid participates. 
                 </span>`,
         },
         {
           img: require('~/assets/imgs/firstlanding/rules3.png'),
           html: `<span class="d-block mb-1">
-                 Developers to win your share of 4EVER credits rewards by simply following the below 3 steps to invite new developers to 4EVERLAND:
+                You can win your share of 4EVER token rewards by simply following the 3 easy steps below to invite new developers to 4EVERLAND: 
                 </span>
                 <span class="d-block mb-1">
-                  1.Current account holders email an invitation link to new developers to register.
+                  •	Email an invitation link to new developers to register from your authorized account 
                 </span>
                 <span class="d-block mb-1">
-                  2.The invitee clicks the invitation link and completes their registration to 4EVERLAND
+                  •	The invitee must click the invitation link and complete their registration to 4EVERLAND 
                 </span>
                 <span class="d-block mb-1">
-                  3.The new developer must register before September 8 and deployed one or more projects as per the deployment criteria.
+                 •	The invitee must also have a git hub account registered before 8th September and must deploy one or more projects as per the deployment criteria. 
                 </span>
-                <span class="d-block mb-1">
-                  *Reward count is a weighted average divided by the number of valid invitations during the event with the counted share of 10 million of 4EVER credits at the end of the event.
+                <span class="d-block mb-1 font-italic">
+                 *Reward count is based on a weighted average divided by the number of valid invitations during the event with the counted share of 10 million of 4EVER tokens at the end of the event. 
                 </span>`,
         },
         {
           img: require('~/assets/imgs/firstlanding/rules4.png'),
           html: `<span class="d-block mb-1">
-                  20 million 4EVER sponsorship credits will be available to qualified projects for their long term development. All 4EVER-HOSTING projects are welcomed to apply for Dev-Grant for a chance to receive between 50,000 to 500,000 4EVER credits. To be eligible for the Dev-Grant you will need to:
+                  20 million 4EVER sponsorship tokens will be available to qualified projects for their long term development. All 4EVER-HOSTING projects are welcome to apply for Development Grant. To be eligible for the Development Grant you will need to: 
                 </span>
                 <span class="d-block mb-1">
-                  1.Connect your domain name to the project;
+                  •	Connect your domain name to the project; 
                 </span>
                 <span class="d-block mb-1">
-                  2.Add the 4EVERLAND logo and links on their website.
+                  •	Add the official 4EVERLAND logo and links on their website. 
                 </span>
-                <span class="d-block mb-1">
-                  *This event is valid until all rewards are given. Plagiarism and illegally copied project are not qualified for Grants.
+                <span class="d-block mb-1 font-italic">
+                 *This event is valid until all rewards are given. Plagiarism and illegally copied project are not qualified for Grants. 
                 </span>`,
         },
       ],
