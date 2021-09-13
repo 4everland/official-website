@@ -1,7 +1,7 @@
 <template>
   <div class="countdown">
     <v-container class="py-12">
-      <v-row class="main">
+      <v-row class="main" v-if="timestamp">
         <v-col
           class="d-flex align-center justify-center"
           cols="12"
@@ -83,12 +83,18 @@ export default {
         //
       }
     },
-    setTime(timestamp) {
+    setTime() {
       let timer = 0
       if (this.type === 'start') {
         timer = this.startTime - this.timestamp
       } else {
         timer = this.endTime - this.timestamp
+      }
+      if (timer >= 0) {
+        this.hours = Math.floor(timer / (1000 * 60 * 60))
+        this.minutes = Math.floor((timer / (1000 * 60)) % 60)
+        this.seconds = Math.floor((timer / 1000) % 60)
+        timer -= 1000
       }
       setInterval(() => {
         if (timer >= 0) {
