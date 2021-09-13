@@ -38,6 +38,7 @@ export default {
         { text: 'Total PV', align: 'center', value: 'totalPv' },
         { text: '24H UV', align: 'center', value: 'uv' },
         { text: '24H PV', align: 'center', value: 'pv' },
+        { text: 'Total Users', align: 'center', value: 'totalUsers' },
       ],
       page: 1,
       size: 50,

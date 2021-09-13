@@ -1,5 +1,6 @@
 <template>
   <div class="pos-r">
+    <count-down type="start" />
     <section-top />
     <section-main />
     <div class="future">
@@ -9,10 +10,12 @@
 </template>
 
 <script>
+import CountDown from '@/components/FirstlandingSections/CountDown.vue'
 import SectionTop from '@/components/FirstlandingSections/SectionTop.vue'
 import SectionMain from '@/components/FirstlandingSections/SectionMain.vue'
 export default {
   components: {
+    CountDown,
     SectionTop,
     SectionMain,
   },

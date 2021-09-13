@@ -77,7 +77,7 @@
           <div class="text-sm-center">
             <div class="grey--text text--darken-1 mb-2">Total UV</div>
             <div class="text-h4 grey--text text--darken-4">
-              {{ tools.formatBigNum(data.totalUsers) }}
+              {{ tools.formatBigNum(data.totalUv) }}
             </div>
           </div></v-col
         >
