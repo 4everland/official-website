@@ -1,6 +1,6 @@
 <template>
   <div class="pos-r">
-    <count-down type="start" />
+    <count-down v-if="active_status == 0" type="start" />
     <section-top />
     <section-main />
     <div class="future">
@@ -19,7 +19,24 @@ export default {
     SectionTop,
     SectionMain,
   },
-  methods: {},
+  data() {
+    return {
+      active_status: null,
+    }
+  },
+  mounted() {
+    this.getStatus()
+  },
+  methods: {
+    async getStatus() {
+      try {
+        const { data } = await this.$axios.get('/dapps/status')
+        this.active_status = data.data
+      } catch (error) {
+        //
+      }
+    },
+  },
 }
 </script>
 <style scoped>

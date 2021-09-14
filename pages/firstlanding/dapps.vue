@@ -1,6 +1,6 @@
 <template>
   <v-theme-provider light>
-    <v-container class="mt-4">
+    <v-container class="mt-16">
       <div
         class="top-bar text-center"
         :style="{
@@ -20,7 +20,7 @@
           }}
         </div>
       </div>
-      <count-down type="end" />
+      <!-- <count-down type="end" /> -->
       <div v-if="!total">
         <v-skeleton-loader light type="image" />
       </div>

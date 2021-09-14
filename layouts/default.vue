@@ -105,23 +105,26 @@ export default {
         // },
         {
           text: 'First Landing',
-          link: '/firstlanding',
-          style: {
-            backgroundImage:
-              'linear-gradient(to right,#fd6f8a, #d739f8, #9748f7)',
-            backgroundClip: 'text',
-            webkitBackgroundClip: 'text',
-            color: 'transparent',
-            fontWeight: 'bold',
-            fontSize: '16px',
-            verticalAlign: 'middle',
-            display: 'flex',
-            alignItems: 'center',
-          },
+          link:
+            this.active_status === 0 ? '/firstlanding' : '/firstlanding/dapps',
           icon: require('~/assets/imgs/firstlanding/firstlanding.png'),
         },
       ],
+      active_status: null,
     }
+  },
+  mounted() {
+    this.getStatus()
+  },
+  methods: {
+    async getStatus() {
+      try {
+        const { data } = await this.$axios.get('/dapps/status')
+        this.active_status = data.data
+      } catch (error) {
+        //
+      }
+    },
   },
 }
 </script>

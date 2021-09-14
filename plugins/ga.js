@@ -21,10 +21,11 @@ if (process.client && process.env.NODE_ENV === 'production') {
 
   ga('create', 'UA-207520421-1', 'auto')
 }
-
 export default ({ app: { router }, store }) => {
-  router.afterEach((to, from) => {
-    ga('set', 'page', to.fullPath)
-    ga('send', 'pageview')
-  })
+  if (process.client && process.env.NODE_ENV === 'production') {
+    router.afterEach((to, from) => {
+      ga('set', 'page', to.fullPath)
+      ga('send', 'pageview')
+    })
+  }
 }
