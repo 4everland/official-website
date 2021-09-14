@@ -31,6 +31,8 @@
               "
               rounded
               color="#2B85FB"
+              href="https://forms.gle/iMaFNYdyjWp36msS6"
+              target="_blank"
               >SUBMIT DEVELOPER GRANT APPLCATION</v-btn
             >
           </div>
@@ -85,6 +87,8 @@
               rounded
               outlined
               color="#2B85FB"
+              href="https://forms.gle/iMaFNYdyjWp36msS6"
+              target="_blank"
               >Apply Now</v-btn
             >
           </div>

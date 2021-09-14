@@ -243,7 +243,7 @@ export default {
                   •	The invitee must click the invitation link and complete their registration to 4EVERLAND 
                 </span>
                 <span class="d-block mb-1">
-                 •	The invitee must also have a git hub account registered before 8th September and must deploy one or more projects as per the deployment criteria. 
+                 •	The invitee must also have a github account registered before 8th September and must deploy one or more projects as per the deployment criteria. 
                 </span>
                 <span class="d-block mb-1 font-italic">
                  *Reward count is based on a weighted average divided by the number of valid invitations during the event with the counted share of 10 million of 4EVER tokens at the end of the event. 
