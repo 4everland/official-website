@@ -9,7 +9,7 @@
           lg="5"
         >
           <div class="text-h4">
-            EVENT {{ type == 'start' ? 'START' : 'ENDS' }} IN
+            EVENT {{ type == 'start' ? 'STARTS' : 'ENDS' }} IN
             <v-tooltip top max-width="400">
               <template v-slot:activator="{ on, attrs }">
                 <v-icon
