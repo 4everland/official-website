@@ -1,6 +1,25 @@
 <template>
   <v-theme-provider light>
     <v-container class="mt-4">
+      <div
+        class="top-bar text-center"
+        :style="{
+          top: $vuetify.breakpoint.smAndDown ? '56px' : '64px',
+        }"
+      >
+        <div
+          v-for="(item, index) in award"
+          :key="index"
+          class="up-item text-h6 text-truncate"
+        >
+          {{
+            item.awardUserName +
+            item.awardInfo +
+            formatSeconds(item.timestamp) +
+            ' Seconds ago.'
+          }}
+        </div>
+      </div>
       <count-down type="end" />
       <div v-if="!total">
         <v-skeleton-loader light type="image" />
@@ -44,7 +63,7 @@
           ></v-col
         >
       </v-row>
-      <v-row>
+      <v-row v-if="data.length > 0">
         <v-col cols="12">
           <div class="rounded-lg" style="overflow: hidden">
             <v-data-table
@@ -89,6 +108,13 @@
                 </div>
               </template>
             </v-data-table>
+            <div v-if="showMoreBtn" class="text-center mt-4">
+              <v-btn icon @click="showMore">
+                <v-icon color="#5461be" size="48">
+                  {{ mdiChevronDown }}
+                </v-icon>
+              </v-btn>
+            </div>
           </div>
         </v-col>
       </v-row>
@@ -97,7 +123,7 @@
 </template>
 <script>
 import CountDown from '@/components/FirstlandingSections/CountDown.vue'
-
+import { mdiChevronDown } from '@mdi/js'
 export default {
   components: {
     CountDown,
@@ -113,6 +139,7 @@ export default {
   },
   data() {
     return {
+      mdiChevronDown,
       headers: [
         {
           text: 'Rank',
@@ -128,6 +155,7 @@ export default {
         { color: '#84D199', name: 'Total Developers', key: 'totalDevelopers' },
         { color: '#BE80E0', name: 'Total Uesrs', key: 'totalUsers' },
       ],
+      award: [],
       total: null,
       data: [],
       rankIcon: [
@@ -136,11 +164,13 @@ export default {
         require('@/assets/imgs/firstlanding/rank3.png'),
       ],
       itemsPerPage: 20,
+      showMoreBtn: true,
     }
   },
   mounted() {
     this.getTable()
     this.getTotal()
+    this.getAward()
   },
   methods: {
     toDetail(url) {
@@ -168,10 +198,45 @@ export default {
         //
       }
     },
+    async getAward() {
+      try {
+        const { data } = await this.$axios.get('/dapps/award')
+        this.award = data.data
+        setTimeout(() => {
+          this.getAward()
+        }, 20000)
+      } catch (error) {
+        //
+      }
+    },
+    showMore() {
+      this.itemsPerPage = this.itemsPerPage + 10
+      if (this.itemsPerPage >= this.data.length) {
+        this.showMoreBtn = false
+      }
+    },
+    formatSeconds(time) {
+      let s = Date.parse(new Date()) / 1000 - time
+      if (s === 0) {
+        s = 1
+      }
+      return s
+    },
   },
 }
 </script>
 <style scoped lang="less">
+.top-bar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  background-image: linear-gradient(to left, #24befc, #21a4fc, #1573fc);
+  overflow: hidden;
+  padding: 0 10px;
+}
 .item-block {
   background-image: linear-gradient(#5c5a8d, #32374e, #242839);
 }
@@ -222,6 +287,84 @@ export default {
 
   tr:hover:nth-child(odd) {
     background-color: #1e2226 !important;
+  }
+}
+.up-item {
+  position: relative;
+  animation: moveup 20s 2s infinite;
+  -webkit-animation: moveup 20s 2s infinite;
+  height: 48px;
+  line-height: 48px;
+}
+
+@keyframes moveup {
+  0% {
+    top: 0;
+  }
+  10% {
+    top: -48px;
+  }
+  20% {
+    top: -96px;
+  }
+  30% {
+    top: -144px;
+  }
+  40% {
+    top: -192px;
+  }
+  50% {
+    top: -240px;
+  }
+  60% {
+    top: -288px;
+  }
+  70% {
+    top: -336px;
+  }
+  80% {
+    top: -384px;
+  }
+  90% {
+    top: -432px;
+  }
+  100% {
+    top: -480px;
+  }
+}
+@-webkit-keyframes moveup /*Safari and Chrome*/ {
+  0% {
+    top: 0;
+  }
+  10% {
+    top: -48px;
+  }
+  20% {
+    top: -96px;
+  }
+  30% {
+    top: -144px;
+  }
+  40% {
+    top: -192px;
+  }
+  50% {
+    top: -240px;
+  }
+  60% {
+    top: -288px;
+  }
+  70% {
+    top: -336px;
+  }
+  80% {
+    top: -384px;
+  }
+  90% {
+    top: -432px;
+  }
+  100% {
+    top: -480px;
   }
 }
 </style>

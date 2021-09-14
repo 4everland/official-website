@@ -82,7 +82,7 @@
             get a share of the massive reward pool.
           </div>
           <div class="font-18 mb-10 color-text font-italic">
-            *You must have a git hub account created before 8th September, 2021
+            *You must have a github account created before 8th September, 2021
           </div>
           <div class="font-36 mb-10 color-text">Events Information</div>
           <div class="font-18 color-text">
