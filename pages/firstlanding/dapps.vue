@@ -51,7 +51,7 @@
             rounded
             outlined
             color="#2b85fb"
-            >Rulse</v-btn
+            >Rules</v-btn
           >
           <v-btn
             href="/firstlanding/grants"
@@ -63,7 +63,7 @@
           ></v-col
         >
       </v-row>
-      <v-row v-if="data.length > 0">
+      <v-row v-if="data.length > 0" class="pb-8">
         <v-col cols="12">
           <div class="rounded-lg" style="overflow: hidden">
             <v-data-table
@@ -86,7 +86,7 @@
                   v-if="item.index <= 3"
                   :src="rankIcon[item.index - 1]"
                   alt=""
-                  width="48"
+                  width="50"
                 />
                 <span v-else>
                   {{ item.index | rank }}
@@ -115,9 +115,15 @@
                 </v-icon>
               </v-btn>
             </div>
+            <!-- <div class="back-top" v-if="!$vuetify.breakpoint.smAndDown">
+              <v-btn icon @click="backTop">
+                <img src="~/assets/imgs/firstlanding/toTop.png" alt="" />
+              </v-btn>
+            </div> -->
           </div>
         </v-col>
       </v-row>
+      <!-- <img src="~/assets/imgs/index/skybg-mask@2x.png" class="skybg-mask" /> -->
     </v-container>
   </v-theme-provider>
 </template>
@@ -130,11 +136,7 @@ export default {
   },
   filters: {
     rank(index) {
-      if (index <= 3) {
-        return 222
-      } else {
-        return index
-      }
+      return index
     },
   },
   data() {
@@ -215,6 +217,9 @@ export default {
         this.showMoreBtn = false
       }
     },
+    backTop() {
+      scrollTo(0, 0)
+    },
     formatSeconds(time) {
       let s = Date.parse(new Date()) / 1000 - time
       if (s === 0) {
@@ -288,6 +293,17 @@ export default {
   tr:hover:nth-child(odd) {
     background-color: #1e2226 !important;
   }
+}
+.back-top {
+  position: fixed;
+  right: 100px;
+  top: 40%;
+}
+.skybg-mask {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
 }
 .up-item {
   position: relative;
