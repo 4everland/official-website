@@ -1,6 +1,6 @@
 if (process.client && process.env.NODE_ENV === 'production') {
   ;(function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r
+    i.GoogleAnalyticsObject = r
     ;(i[r] =
       i[r] ||
       function () {
@@ -15,16 +15,16 @@ if (process.client && process.env.NODE_ENV === 'production') {
     window,
     document,
     'script',
-    'https://www.googletagmanager.com/gtag/js?id=G-5LHZB7BHF0',
+    'https://www.google-analytics.com/analytics.js',
     'ga'
   )
+
   ga('create', 'G-5LHZB7BHF0', 'auto')
 }
+
 export default ({ app: { router }, store }) => {
-  if (process.client && process.env.NODE_ENV === 'production') {
-    router.afterEach((to, from) => {
-      ga('set', 'page', to.fullPath)
-      ga('send', 'pageview')
-    })
-  }
+  router.afterEach((to, from) => {
+    ga('set', 'page', to.fullPath)
+    ga('send', 'pageview')
+  })
 }
