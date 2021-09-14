@@ -255,10 +255,13 @@ export default {
                   20 million 4EVER sponsorship tokens will be available to qualified projects for their long term development. All 4EVER-HOSTING projects are welcome to apply for Development Grant. To be eligible for the Development Grant you will need to: 
                 </span>
                 <span class="d-block mb-1">
-                  •	Connect your domain name to the project; 
+                  •	Connect your domain name to the project
                 </span>
                 <span class="d-block mb-1">
-                  •	Add the official 4EVERLAND logo and links on their website. 
+                  •	Add the text 'Accelerated & hosted by 4EVERLAND' on your website footer
+                </span>
+                 <span class="d-block mb-1">
+                  •	 Fill this form: <a href="https://forms.gle/iMaFNYdyjWp36msS6" target="_blank" style="text-decoration: none;">https://forms.gle/iMaFNYdyjWp36msS6</a>
                 </span>
                 <span class="d-block mb-1 font-italic">
                  *This event is valid until all rewards are given. Plagiarism and illegally copied project are not qualified for Grants. 

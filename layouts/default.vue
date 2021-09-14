@@ -105,12 +105,10 @@ export default {
         // },
         {
           text: 'First Landing',
-          link:
-            this.active_status === 0 ? '/firstlanding' : '/firstlanding/dapps',
+          link: '/firstlanding',
           icon: require('~/assets/imgs/firstlanding/firstlanding.png'),
         },
       ],
-      active_status: null,
     }
   },
   mounted() {
@@ -120,7 +118,13 @@ export default {
     async getStatus() {
       try {
         const { data } = await this.$axios.get('/dapps/status')
-        this.active_status = data.data
+        if (data.data === 0) {
+          this.links[4].link = '/firstlanding'
+        } else if (data.data === 1) {
+          this.links[4].link = '/firstlanding/dapps'
+        } else if (data.data === 2) {
+          this.links[4].link = '/firstlanding/dapps'
+        }
       } catch (error) {
         //
       }
