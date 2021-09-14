@@ -5,17 +5,30 @@
         <v-col
           class="d-flex align-center justify-center"
           cols="12"
-          md="4"
-          lg="4"
+          md="5"
+          lg="5"
         >
           <div class="text-h4">
             EVENT {{ type == 'start' ? 'START' : 'ENDS' }} IN
-            <v-icon v-if="type == 'end'" color="#fff" size="48">{{
-              mdiAlertCircleOutline
-            }}</v-icon>
+            <v-tooltip top max-width="400">
+              <template v-slot:activator="{ on, attrs }">
+                <v-icon
+                  v-if="type == 'end'"
+                  color="#fff"
+                  size="48"
+                  v-bind="attrs"
+                  v-on="on"
+                  >{{ mdiAlertCircleOutline }}</v-icon
+                >
+              </template>
+              <span
+                >The event ends randomized between October 7th and 14th UTC,
+                please participate in advance.</span
+              >
+            </v-tooltip>
           </div>
         </v-col>
-        <v-col class="d-flex justify-center" cols="12" md="8" lg="8">
+        <v-col class="d-flex justify-center" cols="12" md="7" lg="7">
           <div
             class="time-item"
             :class="{ 'mobile-time': $vuetify.breakpoint.smAndDown }"

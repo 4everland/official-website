@@ -54,6 +54,7 @@
               loading-text="Loading... Please wait"
               disable-sort
               hide-default-footer
+              :items-per-page="data.length"
               class="white--text"
               @click:row="
                 (item) => {
