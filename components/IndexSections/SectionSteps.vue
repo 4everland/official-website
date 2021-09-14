@@ -14,7 +14,7 @@
           Deploy a website based on<br />
           Web3.0 in 30 seconds
         </h3>
-        <v-row>
+        <v-row class="mb-16">
           <v-col
             v-for="step in steps"
             :key="step.title"
@@ -37,6 +37,27 @@
                 <img style="width: 100%" :src="step.img" />
               </div>
             </v-card>
+          </v-col>
+        </v-row>
+        <h3
+          class="text-h3 font-weight-light text-center mb-16"
+          :class="
+            background == 'black' ? 'white--text' : 'grey--text text--darken-4'
+          "
+        >
+          How to Deploy?
+        </h3>
+        <v-row class="mb-16">
+          <v-col cols="12" class="text-center">
+            <iframe
+              :width="$vuetify.breakpoint.smAndDown ? 300 : 800"
+              :height="$vuetify.breakpoint.smAndDown ? 200 : 450"
+              src="https://www.youtube.com/embed/7D9MuVk6NNA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </v-col>
         </v-row>
         <p class="my-12 text-center">
