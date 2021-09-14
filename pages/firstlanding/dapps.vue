@@ -54,7 +54,7 @@
               loading-text="Loading... Please wait"
               disable-sort
               hide-default-footer
-              :items-per-page="data.length"
+              :items-per-page="itemsPerPage"
               class="white--text"
               @click:row="
                 (item) => {
@@ -135,6 +135,7 @@ export default {
         require('@/assets/imgs/firstlanding/rank2.png'),
         require('@/assets/imgs/firstlanding/rank3.png'),
       ],
+      itemsPerPage: 20,
     }
   },
   mounted() {

@@ -7,21 +7,18 @@
             <div
               class="grey--text text--darken-4 text-h4 font-weight-bold mb-12"
             >
-              4EVERLAND Developer Grant Program
+              Development Grant Rewards
             </div>
             <div class="grey--text text--darken-2 text-subtitle-1 mb-12">
               <p>
-                The 4EVERLAND Developer Grant Program aims to catalyze the
-                growth of the Internet Computer
+                20 million 4EVER sponsorship tokens will be available to
+                qualified projects for their long term development.
               </p>
               <p>
-                ecosystem and make the Internet Computer accessible and
-                approachable to more developers around
+                All 4EVER-HOSTING projects are welcome to apply for Development
+                Grant.
               </p>
-              <p>
-                the world by providing support to promising developers and
-                teams.
-              </p>
+              <p>To be eligible for the Development Grant you will need to:</p>
             </div>
             <v-btn
               class="
@@ -49,12 +46,16 @@
               <div
                 v-for="(item, index) in text"
                 :key="index"
-                class="mb-6 ml-16"
+                class="mb-6 text-center text-item"
               >
                 <v-icon color="#2B85FB" size="24">{{ mdiCheckCircle }}</v-icon>
                 <span class="grey--text text--darken-2 text-subtitle-1">{{
                   item
                 }}</span>
+              </div>
+              <div class="grey--text text--darken-2 text-subtitle-1">
+                *This event is valid until all rewards are given. Plagiarism and
+                illegally copied project are not qualified for Grants.
               </div>
             </div>
           </div>
@@ -100,11 +101,8 @@ export default {
     return {
       mdiCheckCircle,
       text: [
-        'Caniater Development Kits (CDKS)& Agents',
-        'Developer Tooling ite g IDts, dbsgers, loging ibraies',
-        'infrasructure leg oracles, asset bridges',
-        'Integrations & APis (e g chat email, maps)',
-        'Apps & Open Internet Services',
+        'Connect your domain name to the project;',
+        'Add the official 4EVERLAND logo and links on their website.',
       ],
     }
   },
@@ -112,12 +110,12 @@ export default {
 </script>
 <style scoped>
 .main {
-  padding: 0 120px;
+  /* padding: 0 120px; */
   padding-top: 95px;
   padding-bottom: 140px;
 }
 .main-top {
-  padding: 0 160px;
+  /* padding: 0 160px; */
 }
 .main-bottom {
   position: relative;
@@ -127,5 +125,9 @@ export default {
   bottom: 0;
   width: 100%;
   left: 0;
+}
+.text-item {
+  display: inline-block;
+  margin-left: 26%;
 }
 </style>
