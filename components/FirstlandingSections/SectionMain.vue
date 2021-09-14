@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <div
+        <!-- <div
           :class="{
             'main-bg': !$vuetify.breakpoint.smAndDown,
             'px-2': $vuetify.breakpoint.smAndDown,
@@ -52,7 +52,7 @@
             src="~/assets/imgs/firstlanding/icon1.png"
             alt=""
           />
-        </div>
+        </div> -->
         <div
           :style="
             $vuetify.breakpoint.smAndDown

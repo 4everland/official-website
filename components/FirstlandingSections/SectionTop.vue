@@ -11,8 +11,20 @@
           >
             <v-img width="100%" max-width="679" :src="banner[0]" />
           </v-col>
-          <v-col class="d-flex align-center" cols="12" md="6" lg="6">
-            <v-img width="100%" max-width="591" :src="banner[1]" />
+          <v-col
+            class="d-flex flex-column align-center"
+            cols="12"
+            md="6"
+            lg="6"
+          >
+            <v-img contain width="100%" max-width="590" :src="banner[1]" />
+            <v-btn
+              class="py-6 px-6 mt-4 text-h6"
+              rounded
+              color="#2b85fb"
+              to="/firstlanding/dapps"
+              >Start Deploy for Free</v-btn
+            >
           </v-col>
         </v-row>
       </v-container>
