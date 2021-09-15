@@ -103,7 +103,7 @@
                     width="36"
                   />
                   <span class="ml-4">
-                    {{ item.projectName }}
+                    {{ item.domain | formatDomain }}
                   </span>
                 </div>
               </template>
@@ -137,6 +137,9 @@ export default {
   filters: {
     rank(index) {
       return index
+    },
+    formatDomain(domain) {
+      return domain.replace('https://', '')
     },
   },
   data() {
