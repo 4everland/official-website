@@ -111,25 +111,6 @@ export default {
       ],
     }
   },
-  mounted() {
-    this.getStatus()
-  },
-  methods: {
-    async getStatus() {
-      try {
-        const { data } = await this.$axios.get('/dapps/status')
-        if (data.data === 0) {
-          this.links[4].link = '/firstlanding'
-        } else if (data.data === 1) {
-          this.links[4].link = '/firstlanding/dapps'
-        } else if (data.data === 2) {
-          this.links[4].link = '/firstlanding/dapps'
-        }
-      } catch (error) {
-        //
-      }
-    },
-  },
 }
 </script>
 <style scoped>

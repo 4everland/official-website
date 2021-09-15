@@ -22,7 +22,8 @@
               class="py-6 px-6 mt-4 text-h6"
               rounded
               color="#2b85fb"
-              to="/firstlanding/dapps"
+              href="https://hosting.4everland.org/#/dashboard/first-landing"
+              target="_blank"
               >Start Deploy for Free</v-btn
             >
           </v-col>
