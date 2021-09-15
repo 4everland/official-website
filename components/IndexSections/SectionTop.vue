@@ -100,7 +100,7 @@ export default {
         //   src: require('@/assets/imgs/index/banner2.png'),
         // },
         {
-          src: require('@/assets/imgs/index/banner5.jpg'),
+          src: require('@/assets/imgs/index/banner5.png'),
           to: '/firstlanding',
         },
         {
