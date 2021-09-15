@@ -228,7 +228,7 @@ export default {
                   All projects that meet the deployment criteria will be eligible to win a share of the total token reward pool. This is calculated on individual project visits divided by the total number of visits across all projects.
                 </span>
                 <span class="d-block mb-1 font-italic">
-                  *Tokens are available to the developers who meet the deployment criteria up to an event total of 10 million. Maximum total for one (1) project is 100,000 4EVER tokens. Template deployments do not count as valid participates. 
+                  *Tokens are available to the developers who meet the deployment criteria up to an event total of 10 million. Maximum total for one (1) project is 100,000 4EVER tokens. 
                 </span>`,
         },
         {
@@ -261,7 +261,7 @@ export default {
                   •	Add the text 'Accelerated & hosted by 4EVERLAND' on your website footer
                 </span>
                  <span class="d-block mb-1">
-                  •	 Fill this form: <a href="https://forms.gle/iMaFNYdyjWp36msS6" target="_blank" style="text-decoration: none;">https://forms.gle/iMaFNYdyjWp36msS6</a>
+                  •	 Fill this form: <a href="https://www.4everland.org/firstlanding/grants/" target="_blank" style="text-decoration: none;">https://www.4everland.org/firstlanding/grants/</a>
                 </span>
                 <span class="d-block mb-1 font-italic">
                  *This event is valid until all rewards are given. Plagiarism and illegally copied project are not qualified for Grants. 
