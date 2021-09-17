@@ -247,6 +247,9 @@ export default {
                 </span>
                 <span class="d-block mb-1 font-italic">
                  *Reward count is based on a weighted average divided by the number of valid invitations during the event with the counted share of 10 million of 4EVER tokens at the end of the event. 
+                </span>
+                <span class="d-block mb-1 font-italic">
+                 *Deployment criteria: You must connect  your domain in order to claim total user rewards.
                 </span>`,
         },
         {
