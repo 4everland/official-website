@@ -229,6 +229,9 @@ export default {
                 </span>
                 <span class="d-block mb-1 font-italic">
                   *Tokens are available to the developers who meet the deployment criteria up to an event total of 10 million. Maximum total for one (1) project is 100,000 4EVER tokens. 
+                </span>
+                <span class="d-block mb-1 font-italic">
+                 *Deployment criteria: You must connect  your domain in order to claim total user rewards.
                 </span>`,
         },
         {
@@ -247,9 +250,6 @@ export default {
                 </span>
                 <span class="d-block mb-1 font-italic">
                  *Reward count is based on a weighted average divided by the number of valid invitations during the event with the counted share of 10 million of 4EVER tokens at the end of the event. 
-                </span>
-                <span class="d-block mb-1 font-italic">
-                 *Deployment criteria: You must connect  your domain in order to claim total user rewards.
                 </span>`,
         },
         {
