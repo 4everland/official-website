@@ -29,7 +29,7 @@ export default {
       colors: [
         { color: '#75A6E7', name: 'Total DApps', key: 'totalDApps' },
         { color: '#84D199', name: 'Total Developers', key: 'totalDevelopers' },
-        { color: '#BE80E0', name: 'Total Uesrs', key: 'totalUsers' },
+        { color: '#BE80E0', name: 'Total Users', key: 'totalUsers' },
       ],
       data: null,
     }

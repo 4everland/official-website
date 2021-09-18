@@ -1,25 +1,6 @@
 <template>
   <v-theme-provider light>
     <v-container class="mt-16">
-      <div
-        class="top-bar text-center"
-        :style="{
-          top: $vuetify.breakpoint.smAndDown ? '56px' : '64px',
-        }"
-      >
-        <div
-          v-for="(item, index) in award"
-          :key="index"
-          class="up-item text-h6 text-truncate"
-        >
-          {{
-            item.awardUserName +
-            item.awardInfo +
-            formatSeconds(item.timestamp) +
-            ' Seconds ago.'
-          }}
-        </div>
-      </div>
       <!-- <count-down type="end" /> -->
       <div v-if="!total">
         <v-skeleton-loader light type="image" />
@@ -120,15 +101,9 @@
                 </v-icon>
               </v-btn>
             </div>
-            <!-- <div class="back-top" v-if="!$vuetify.breakpoint.smAndDown">
-              <v-btn icon @click="backTop">
-                <img src="~/assets/imgs/firstlanding/toTop.png" alt="" />
-              </v-btn>
-            </div> -->
           </div>
         </v-col>
       </v-row>
-      <!-- <img src="~/assets/imgs/index/skybg-mask@2x.png" class="skybg-mask" /> -->
     </v-container>
   </v-theme-provider>
 </template>
@@ -164,7 +139,7 @@ export default {
       colors: [
         { color: '#75A6E7', name: 'Total DApps', key: 'totalDApps' },
         { color: '#84D199', name: 'Total Developers', key: 'totalDevelopers' },
-        { color: '#BE80E0', name: 'Total Uesrs', key: 'totalUsers' },
+        { color: '#BE80E0', name: 'Total Users', key: 'totalUsers' },
       ],
       award: [],
       total: null,
