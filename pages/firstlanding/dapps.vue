@@ -102,9 +102,14 @@
                     alt=""
                     width="36"
                   />
-                  <span class="ml-4">
+                  <a
+                    class="ml-4 white--text"
+                    v-bind:href="item.domain"
+                    @click.stop
+                    target="_blank"
+                  >
                     {{ item.domain | formatDomain }}
-                  </span>
+                  </a>
                 </div>
               </template>
             </v-data-table>
