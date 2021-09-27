@@ -13,7 +13,7 @@
           md="4"
           lg="4"
         >
-          <div class="pa-10 rounded-lg text-center item-block">
+          <div class="py-10 px-4 rounded-lg text-center item-block">
             <p class="text-h4 font-weight-bold">{{ item.name }}</p>
             <p class="text-h3 font-weight-bold" style="color: #2b85fb">
               {{ tools.formatBigNum(total[item.key]) }}
@@ -23,7 +23,7 @@
       </v-row>
       <v-row class="mt-16">
         <v-col cols="6">
-          <div class="text-h4">DApp List</div>
+          <div class="text-h4">Favorite DApps</div>
         </v-col>
         <v-col cols="6" class="text-right"
           ><v-btn
@@ -62,17 +62,6 @@
                 }
               "
             >
-              <template #[`item.index`]="{ item }">
-                <img
-                  v-if="item.index <= 3"
-                  :src="rankIcon[item.index - 1]"
-                  alt=""
-                  width="50"
-                />
-                <span v-else>
-                  {{ item.index | rank }}
-                </span>
-              </template>
               <template #[`item.projectName`]="{ item }">
                 <div class="d-flex align-center">
                   <img v-if="item.icon" :src="item.icon" alt="" width="36" />
@@ -85,12 +74,17 @@
                   />
                   <a
                     class="ml-4 white--text"
-                    v-bind:href="item.domain"
-                    @click.stop
+                    :href="item.domain"
                     target="_blank"
+                    @click.stop
                   >
                     {{ item.domain | formatDomain }}
                   </a>
+                </div>
+              </template>
+              <template #[`item.createAt`]="{ item }">
+                <div class="d-flex align-center">
+                  {{ new Date(item.createAt * 1000).format() }}
                 </div>
               </template>
             </v-data-table>
@@ -127,13 +121,12 @@ export default {
       mdiChevronDown,
       headers: [
         {
-          text: 'Rank',
+          text: '#',
           align: 'center',
           value: 'index',
           width: 300,
         },
-        { text: 'DApps', align: 'left', value: 'projectName', width: 450 },
-        { text: 'Total users', align: 'left', value: 'totalUsers' },
+        { text: 'DApps', align: 'left', value: 'projectName' },
         { text: 'AtCreated', align: 'left', value: 'createAt' },
       ],
       colors: [
@@ -164,13 +157,14 @@ export default {
     },
     async getTable() {
       try {
-        const { data } = await this.$axios.get('/dapps/bigbang/projects')
+        const { data } = await this.$axios.get('/dapps/list/projects')
         data.data.map((item, index) => {
-          item.createAt = this.tools.parseTime(item.createAt)
-          item.totalUsers = this.tools.formatBigNum(item.totalUsers)
           item.index = index + 1
           return item
         })
+        if (data.data.length <= 20) {
+          this.showMoreBtn = false
+        }
         this.data = data.data
       } catch (error) {
         //
@@ -288,83 +282,5 @@ export default {
   bottom: 0;
   width: 100%;
   left: 0;
-}
-.up-item {
-  position: relative;
-  animation: moveup 20s 2s infinite;
-  -webkit-animation: moveup 20s 2s infinite;
-  height: 48px;
-  line-height: 48px;
-}
-
-@keyframes moveup {
-  0% {
-    top: 0;
-  }
-  10% {
-    top: -48px;
-  }
-  20% {
-    top: -96px;
-  }
-  30% {
-    top: -144px;
-  }
-  40% {
-    top: -192px;
-  }
-  50% {
-    top: -240px;
-  }
-  60% {
-    top: -288px;
-  }
-  70% {
-    top: -336px;
-  }
-  80% {
-    top: -384px;
-  }
-  90% {
-    top: -432px;
-  }
-  100% {
-    top: -480px;
-  }
-}
-@-webkit-keyframes moveup /*Safari and Chrome*/ {
-  0% {
-    top: 0;
-  }
-  10% {
-    top: -48px;
-  }
-  20% {
-    top: -96px;
-  }
-  30% {
-    top: -144px;
-  }
-  40% {
-    top: -192px;
-  }
-  50% {
-    top: -240px;
-  }
-  60% {
-    top: -288px;
-  }
-  70% {
-    top: -336px;
-  }
-  80% {
-    top: -384px;
-  }
-  90% {
-    top: -432px;
-  }
-  100% {
-    top: -480px;
-  }
 }
 </style>

@@ -13,8 +13,9 @@ const tools = {
             num = num.div(1000000000).toFixed(1)
             str = ' B'
           } else if (Math.abs(num) > 1000000) {
-            num = num.dividedBy(1000000).toFixed(1)
-            str = ' M'
+            // num = num.dividedBy(1000000).toFixed(1)
+            // str = ' M'
+            num = num.toFixed()
           } else {
             num = num.toFixed()
           }

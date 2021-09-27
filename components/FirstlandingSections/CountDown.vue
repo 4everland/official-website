@@ -77,7 +77,7 @@ export default {
       mdiAlertCircleOutline,
       timestamp: 0,
       startTime: 1631664000000,
-      endTime: 1631664000000,
+      endTime: 1634169600000,
       hours: 0,
       minutes: 0,
       seconds: 0,
