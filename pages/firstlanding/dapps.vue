@@ -23,7 +23,7 @@
       </v-row>
       <v-row class="mt-16">
         <v-col cols="6">
-          <div class="text-h4">Favorite DApps</div>
+          <div class="text-h4">Favorite</div>
         </v-col>
         <v-col cols="6" class="text-right"
           ><v-btn
