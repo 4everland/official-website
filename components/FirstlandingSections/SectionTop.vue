@@ -31,7 +31,7 @@
               color="#2b85fb"
               href="https://hosting.4everland.org/#/dashboard/first-landing"
               target="_blank"
-              >Start Deploy for Free</v-btn
+              >Get Started for Free</v-btn
             >
           </v-col>
         </v-row>
