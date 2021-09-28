@@ -6,13 +6,7 @@
         <v-skeleton-loader light type="image" />
       </div>
       <v-row v-else>
-        <v-col
-          v-for="(item, index) in colors"
-          :key="index"
-          cols="12"
-          md="4"
-          lg="4"
-        >
+        <v-col v-for="(item, index) in colors" :key="index" cols="12" lg="4">
           <div class="py-10 px-4 rounded-lg text-center item-block">
             <p class="text-h4 font-weight-bold">{{ item.name }}</p>
             <p class="text-h3 font-weight-bold" style="color: #2b85fb">
@@ -23,7 +17,7 @@
       </v-row>
       <v-row class="mt-16">
         <v-col cols="6">
-          <div class="text-h4">Favorite</div>
+          <div class="text-h4">Featured</div>
         </v-col>
         <v-col cols="6" class="text-right"
           ><v-btn
@@ -34,15 +28,7 @@
             color="#2b85fb"
             >Rules</v-btn
           >
-          <v-btn
-            href="/firstlanding/grants"
-            class="font-weight-bold"
-            rounded
-            outlined
-            color="#2b85fb"
-            >Grants</v-btn
-          ></v-col
-        >
+        </v-col>
       </v-row>
       <v-row v-if="data.length > 0" class="pb-8">
         <v-col cols="12">

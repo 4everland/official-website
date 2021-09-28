@@ -105,7 +105,7 @@ export default {
         // },
         {
           text: 'First Landing',
-          link: '/firstlanding/dapps',
+          link: '/firstlanding',
           icon: require('~/assets/imgs/firstlanding/firstlanding.png'),
         },
       ],
