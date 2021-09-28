@@ -1,91 +1,126 @@
 <template>
-  <v-theme-provider light>
-    <v-container class="mt-16">
-      <!-- <count-down type="end" /> -->
-      <div v-if="!total">
-        <v-skeleton-loader light type="image" />
-      </div>
-      <v-row v-else>
-        <v-col v-for="(item, index) in colors" :key="index" cols="12" lg="4">
-          <div class="py-10 px-4 rounded-lg text-center item-block">
-            <p class="text-h4 font-weight-bold">{{ item.name }}</p>
-            <p class="text-h3 font-weight-bold" style="color: #2b85fb">
-              {{ tools.formatBigNum(total[item.key]) }}
-            </p>
-          </div>
-        </v-col>
-      </v-row>
-      <v-row class="mt-16">
-        <v-col cols="6">
-          <div class="text-h4">Featured</div>
-        </v-col>
-        <v-col cols="6" class="text-right"
-          ><v-btn
-            href="/firstlanding"
-            class="font-weight-bold"
-            rounded
-            outlined
-            color="#2b85fb"
-            >Rules</v-btn
-          >
-        </v-col>
-      </v-row>
-      <v-row v-if="data.length > 0" class="pb-8">
-        <v-col cols="12">
-          <div class="rounded-lg" style="overflow: hidden">
-            <v-data-table
-              :headers="headers"
-              :items="data"
-              light
-              loading-text="Loading... Please wait"
-              disable-sort
-              hide-default-footer
-              :items-per-page="itemsPerPage"
-              class="white--text"
-              @click:row="
-                (item) => {
-                  toDetail(item.domain)
-                }
-              "
-            >
-              <template #[`item.projectName`]="{ item }">
-                <div class="d-flex align-center">
-                  <img v-if="item.icon" :src="item.icon" alt="" width="36" />
-                  <img
-                    v-else
-                    class="pa-1 blue lighten-2 rounded-circle"
-                    src="/dapps.svg"
-                    alt=""
-                    width="36"
-                  />
-                  <a
-                    class="ml-4 white--text"
-                    :href="item.domain"
-                    target="_blank"
-                    @click.stop
-                  >
-                    {{ item.domain | formatDomain }}
-                  </a>
-                </div>
-              </template>
-              <template #[`item.createAt`]="{ item }">
-                <div class="d-flex align-center">
-                  {{ new Date(item.createAt * 1000).format() }}
-                </div>
-              </template>
-            </v-data-table>
-            <div v-if="showMoreBtn" class="text-center mt-4">
-              <v-btn icon @click="showMore">
-                <v-icon color="#5461be" size="48">
-                  {{ mdiChevronDown }}
-                </v-icon>
-              </v-btn>
+  <div class="pos-r">
+    <v-theme-provider light>
+      <v-container class="pt-16">
+        <!-- <count-down type="end" /> -->
+        <div v-if="!total">
+          <v-skeleton-loader light type="image" />
+        </div>
+        <v-row v-else>
+          <v-col v-for="(item, index) in colors" :key="index" cols="12" lg="4">
+            <div class="py-10 px-4 rounded-lg text-center item-block">
+              <p class="text-h4 font-weight-bold">{{ item.name }}</p>
+              <p class="text-h3 font-weight-bold" style="color: #2b85fb">
+                {{ tools.formatBigNum(total[item.key]) }}
+              </p>
             </div>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-theme-provider>
+          </v-col>
+        </v-row>
+        <v-row class="mt-16">
+          <v-col cols="6">
+            <div class="text-h4">Featured</div>
+          </v-col>
+          <v-col cols="6" class="text-right"
+            ><v-btn
+              href="/firstlanding"
+              class="font-weight-bold"
+              rounded
+              outlined
+              color="#2b85fb"
+              >Rules</v-btn
+            >
+          </v-col>
+        </v-row>
+        <v-row v-if="data.length > 0" class="pb-8">
+          <v-col cols="12">
+            <div class="rounded-lg" style="overflow: hidden">
+              <v-data-table
+                :headers="headers"
+                :items="data"
+                light
+                loading-text="Loading... Please wait"
+                disable-sort
+                hide-default-footer
+                :items-per-page="itemsPerPage"
+                class="white--text"
+                @click:row="
+                  (item) => {
+                    toDetail(item.domain)
+                  }
+                "
+              >
+                <template #[`item.projectName`]="{ item }">
+                  <div class="d-flex align-center">
+                    <img v-if="item.icon" :src="item.icon" alt="" width="36" />
+                    <img
+                      v-else
+                      class="pa-1 blue lighten-2 rounded-circle"
+                      src="/dapps.svg"
+                      alt=""
+                      width="36"
+                    />
+                    <a
+                      class="ml-4 white--text"
+                      :href="item.domain"
+                      target="_blank"
+                      @click.stop
+                    >
+                      {{ item.domain | formatDomain }}
+                    </a>
+                  </div>
+                </template>
+                <template #[`item.createAt`]="{ item }">
+                  <div class="d-flex align-center">
+                    {{ new Date(item.createAt * 1000).format() }}
+                  </div>
+                </template>
+              </v-data-table>
+              <div v-if="showMoreBtn" class="text-center mt-4">
+                <v-btn icon @click="showMore">
+                  <v-icon color="#5461be" size="48">
+                    {{ mdiChevronDown }}
+                  </v-icon>
+                </v-btn>
+              </div>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-theme-provider>
+    <div class="future">
+      <img src="~/assets/imgs/index/skybg-mask@2x.png" class="skybg-mask" />
+    </div>
+    <img
+      class="pos-img d-none d-lg-flex"
+      src="~/assets/imgs/firstlanding/icon6.png"
+      alt=""
+      style="left: 0; top: 12%"
+    />
+    <img
+      class="pos-img d-none d-lg-flex"
+      src="~/assets/imgs/firstlanding/icon2.png"
+      alt=""
+      style="left: 0; top: 36%"
+    />
+    <img
+      class="pos-img d-none d-lg-flex"
+      src="~/assets/imgs/firstlanding/icon5.png"
+      alt=""
+      style="right: 0; top: 6%"
+    />
+    <img
+      class="pos-img d-none d-lg-flex"
+      src="~/assets/imgs/firstlanding/icon3.png"
+      alt=""
+      style="right: 0; top: 15%"
+    />
+    <img
+      class="pos-img d-none d-lg-flex"
+      src="~/assets/imgs/firstlanding/icon7.png"
+      alt=""
+      style="right: 0; top: 50%"
+    />
+  </div>
 </template>
 <script>
 import CountDown from '@/components/FirstlandingSections/CountDown.vue'
@@ -262,6 +297,16 @@ export default {
   position: fixed;
   right: 100px;
   top: 40%;
+}
+.pos-r {
+  background-image: linear-gradient(to bottom, #1e2226, #1e2945);
+  position: relative;
+}
+.pos-img {
+  position: absolute;
+}
+.future {
+  padding-bottom: 120px;
 }
 .skybg-mask {
   position: absolute;
