@@ -59,7 +59,7 @@ export default {
 }
 .featured {
   position: absolute;
-  left: 5%;
+  left: 8%;
   top: 2%;
 }
 </style>

@@ -1,21 +1,16 @@
 <template>
-  <div class="countdown">
+  <div class="countdown" v-show="this.timestamp >= 1633305600000">
     <v-container class="py-12">
-      <v-row class="main" v-if="timestamp">
-        <v-col
-          class="d-flex align-center justify-center"
-          cols="12"
-          md="5"
-          lg="5"
-        >
+      <v-row v-if="timestamp" class="main">
+        <v-col class="d-flex align-center justify-center" cols="12">
           <div class="text-h4">
             EVENT {{ type == 'start' ? 'STARTS' : 'ENDS' }} IN
             <v-tooltip top max-width="400">
-              <template v-slot:activator="{ on, attrs }">
+              <template #activator="{ on, attrs }">
                 <v-icon
                   v-if="type == 'end'"
                   color="#fff"
-                  size="48"
+                  size="24"
                   v-bind="attrs"
                   v-on="on"
                   >{{ mdiAlertCircleOutline }}</v-icon
@@ -28,7 +23,14 @@
             </v-tooltip>
           </div>
         </v-col>
-        <v-col class="d-flex justify-center" cols="12" md="7" lg="7">
+        <v-col class="d-flex justify-center" cols="12">
+          <div
+            class="time-item"
+            :class="{ 'mobile-time': $vuetify.breakpoint.smAndDown }"
+          >
+            <div class="num">{{ days | formatNum }}</div>
+            <div>DAYS</div>
+          </div>
           <div
             class="time-item"
             :class="{ 'mobile-time': $vuetify.breakpoint.smAndDown }"
@@ -78,6 +80,7 @@ export default {
       timestamp: 0,
       startTime: 1631664000000,
       endTime: 1634169600000,
+      days: 0,
       hours: 0,
       minutes: 0,
       seconds: 0,
@@ -104,14 +107,16 @@ export default {
         timer = this.endTime - this.timestamp
       }
       if (timer >= 0) {
-        this.hours = Math.floor(timer / (1000 * 60 * 60))
+        this.days = Math.floor(timer / (1000 * 60 * 60 * 24))
+        this.hours = Math.floor((timer / (1000 * 60 * 60)) % 24)
         this.minutes = Math.floor((timer / (1000 * 60)) % 60)
         this.seconds = Math.floor((timer / 1000) % 60)
         timer -= 1000
       }
       setInterval(() => {
         if (timer >= 0) {
-          this.hours = Math.floor(timer / (1000 * 60 * 60))
+          this.days = Math.floor(timer / (1000 * 60 * 60 * 24))
+          this.hours = Math.floor((timer / (1000 * 60 * 60)) % 24)
           this.minutes = Math.floor((timer / (1000 * 60)) % 60)
           this.seconds = Math.floor((timer / 1000) % 60)
           timer -= 1000
@@ -151,9 +156,12 @@ export default {
 .mobile-time {
   padding: 6px 12px;
   margin-right: 12px;
-  min-width: 100px;
+  min-width: 80px;
+  div {
+    font-size: 12px;
+  }
 }
 .mobile-time:last-child {
-  margin-right: 12px;
+  margin-right: 0;
 }
 </style>

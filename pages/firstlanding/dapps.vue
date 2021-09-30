@@ -2,7 +2,7 @@
   <div class="pos-r">
     <v-theme-provider light>
       <v-container class="pt-16">
-        <!-- <count-down type="end" /> -->
+        <count-down type="end" />
         <div v-if="!total">
           <v-skeleton-loader light type="image" />
         </div>
