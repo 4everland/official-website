@@ -1,6 +1,6 @@
 <template>
   <div class="pos-r">
-    <count-down v-if="active_status == 0" type="start" />
+    <count-down v-if="active_status == 1" type="end" />
     <section-top />
     <section-main />
     <div class="future">
