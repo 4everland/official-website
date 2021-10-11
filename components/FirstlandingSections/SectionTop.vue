@@ -5,18 +5,11 @@
         <v-row>
           <v-col
             class="d-flex justify-end align-center"
-            style="position: relative"
             cols="12"
             md="6"
             lg="6"
           >
             <v-img width="100%" max-width="679" :src="banner[0]" />
-            <nuxt-link to="/firstlanding/dapps"
-              ><img
-                class="featured"
-                src="@/assets/imgs/firstlanding/Featured.png"
-                alt=""
-            /></nuxt-link>
           </v-col>
           <v-col
             class="d-flex flex-column align-center"
@@ -56,10 +49,5 @@ export default {
   background-image: url('~/assets/imgs/firstlanding/bg.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-}
-.featured {
-  position: absolute;
-  left: 8%;
-  top: 2%;
 }
 </style>

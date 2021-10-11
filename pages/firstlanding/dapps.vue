@@ -112,7 +112,7 @@
       class="pos-img d-none d-lg-flex"
       src="~/assets/imgs/firstlanding/icon3.png"
       alt=""
-      style="right: 0; top: 15%"
+      style="right: 0; top: 25%"
     />
     <img
       class="pos-img d-none d-lg-flex"

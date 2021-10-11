@@ -1,5 +1,13 @@
 <template>
   <div class="pos-r">
+    <v-container style="position: relative">
+      <nuxt-link to="/firstlanding/dapps"
+        ><img
+          class="featured"
+          src="@/assets/imgs/firstlanding/Featured.png"
+          alt=""
+      /></nuxt-link>
+    </v-container>
     <count-down v-if="active_status == 1" type="end" />
     <section-top />
     <section-main />
@@ -52,5 +60,10 @@ export default {
   bottom: 0;
   width: 100%;
   left: 0;
+}
+.featured {
+  position: absolute;
+  left: 8%;
+  top: 20px;
 }
 </style>
