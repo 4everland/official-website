@@ -62,7 +62,7 @@
         >
           <div class="font-18 mb-10 color-text">Dear users:</div>
           <div class="font-18 mb-10 color-text">
-            Since 4EVER-HOSTING went live on 16th August it has shown great
+            Since 4EVERLAND HOSTING went live on 16th August it has shown great
             popularity in a short period of time, with many applications already
             deployed by developers in 4EVERLAND Web Hosting Services.
           </div>
@@ -255,7 +255,7 @@ export default {
         {
           img: require('~/assets/imgs/firstlanding/rules4.png'),
           html: `<span class="d-block mb-1">
-                  20 million 4EVER sponsorship tokens will be available to qualified projects for their long term development. All 4EVER-HOSTING projects are welcome to apply for Development Grant. To be eligible for the Development Grant you will need to: 
+                  20 million 4EVER sponsorship tokens will be available to qualified projects for their long term development. All 4EVERLAND HOSTING projects are welcome to apply for Development Grant. To be eligible for the Development Grant you will need to: 
                 </span>
                 <span class="d-block mb-1">
                   •	Connect your domain name to the project

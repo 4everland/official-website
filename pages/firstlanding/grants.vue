@@ -15,8 +15,8 @@
                 qualified projects for their long term development.
               </p>
               <p>
-                All 4EVER-HOSTING projects are welcome to apply for Development
-                Grant.
+                All 4EVERLAND HOSTING projects are welcome to apply for
+                Development Grant.
               </p>
               <p>To be eligible for the Development Grant you will need to:</p>
             </div>

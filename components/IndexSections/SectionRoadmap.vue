@@ -280,7 +280,7 @@ export default {
             color: '#8BB7FF',
             title: 'August 2021',
             content:
-              '<strong>ALPHA Launch</strong><br/>launch 4EVER-HOSTING, enable Dweb hosting function',
+              '<strong>ALPHA Launch</strong><br/>launch 4EVERLAND HOSTING, enable Dweb hosting function',
             current: true,
           },
           {

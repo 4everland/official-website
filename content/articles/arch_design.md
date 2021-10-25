@@ -1,12 +1,12 @@
 ---
 title: The technical architecture design of 4EVERLAND
-description: Based on IPFS and the underlying technology of Ethereum, 4EVERLAND is designed to provide a distributed, highly efficient, self-motivated, and low-cost data hosting gateway. 4EVERLAND has designed a robust architecture to support the stable and efficient operation of the entire network, which mainly includes 4EVER-STORAGE, Proof of storage, 4EVER-GATEWAY, Smart contracts, and 4EVER-HOSTING.
+description: Based on IPFS and the underlying technology of Ethereum, 4EVERLAND is designed to provide a distributed, highly efficient, self-motivated, and low-cost data hosting gateway. 4EVERLAND has designed a robust architecture to support the stable and efficient operation of the entire network, which mainly includes 4EVER-STORAGE, Proof of storage, 4EVER-GATEWAY, Smart contracts, and 4EVERLAND HOSTING.
 img: '/imgs/blogs/arch_design.png'
 alt: The architecture design of 4EVERLAND
 published: 2021-06-19
 ---
 
-Based on IPFS and the underlying technology of Ethereum, 4EVERLAND is designed to provide a distributed, highly efficient, self-motivated, and low-cost data hosting gateway. 4EVERLAND has designed a robust architecture to support the stable and efficient operation of the entire network, which mainly includes 4EVER-STORAGE, Proof of storage, 4EVER-GATEWAY, Smart contracts, and 4EVER-HOSTING.
+Based on IPFS and the underlying technology of Ethereum, 4EVERLAND is designed to provide a distributed, highly efficient, self-motivated, and low-cost data hosting gateway. 4EVERLAND has designed a robust architecture to support the stable and efficient operation of the entire network, which mainly includes 4EVER-STORAGE, Proof of storage, 4EVER-GATEWAY, Smart contracts, and 4EVERLAND HOSTING.
 
 ![image](/imgs/blogs/3.png)
 
@@ -43,8 +43,8 @@ Smart contract module is an important technical solution for 4EVERLAND to realiz
 
 ![image](/imgs/blogs/5.png)
 
-### 4EVER-HOSTING5
+### 4EVERLAND HOSTING
 
-4EVER-HOSTING is a developer application, can be accessed from the official website of 4EVERLAND. Developers can deploy web application resources to the 4EVERLAND gateway as a DWeb through the visual interface (Hosting App) or the command (@4everland/cli). All nodes in 4EVERLAND can provide persistent storage for the DWeb, and all gateways can provide access acceleration services for the DWeb.
+4EVERLAND HOSTING is a developer application, can be accessed from the official website of 4EVERLAND. Developers can deploy web application resources to the 4EVERLAND gateway as a DWeb through the visual interface (Hosting App) or the command (@4everland/cli). All nodes in 4EVERLAND can provide persistent storage for the DWeb, and all gateways can provide access acceleration services for the DWeb.
 
 4EVERLAND provides products and protocols such as DWeb hosting, decentralized gateway, decentralized domain name, digital marketing system, and data services to help developers access Web 3.0 in one click.

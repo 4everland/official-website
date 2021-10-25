@@ -12,7 +12,7 @@ published: 2021-08-16 00:00:00
 
 ## Technical Progress
 
-### 4EVER-HOSTING
+### 4EVERLAND HOSTING
 
 - websocket connection optimization @DONE
 - Documents update @DONE
@@ -60,7 +60,7 @@ published: 2021-08-16 00:00:00
 
 - **_Smart Contracts:_** The smart contracts module of 4EVERLAND mainly includes payment contracts, auction contracts, lending contracts, control contracts,etc. It achieves open, transparent and free decentralized governance through smart contracts.
 
-- **_4EVER-HOSTING:_** 4EVER-HOSTING is a developer application, available from the official website of 4EVERLAND. Developers can deploy web application resources to the 4EVERLAND gateway as a DWeb through the visual interface (Hosting App) or the command (@4everland/cli).
+- **_4EVERLAND HOSTING:_** 4EVERLAND HOSTING is a developer application, available from the official website of 4EVERLAND. Developers can deploy web application resources to the 4EVERLAND gateway as a DWeb through the visual interface (Hosting App) or the command (@4everland/cli).
 
 ### Community
 

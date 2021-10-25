@@ -8,7 +8,7 @@
             background == 'black' ? 'white--text' : 'grey--text text--darken-4'
           "
         >
-          Begin Your 4EVER-HOSTING Journey
+          Begin Your 4EVERLAND HOSTING Journey
         </h3>
         <v-row style="max-width: 1200px; margin: 0 auto">
           <v-col cols="12" md="12" lg="6" class="px-3">
