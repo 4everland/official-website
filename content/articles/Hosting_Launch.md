@@ -53,6 +53,6 @@ Welcome to join the 4EVERLAND community to learn more:
 - Twitter: https://twitter.com/4everland_org
 - Telegram: https://t.me/org_4everland
 - Medium: https://4everland.medium.com/
-- Discord: https://discord.gg/sxtHDvvpuT
+- Discord: https://discord.gg/Cun2VpsdjF
 - Reddit: https://www.reddit.com/user/4everland_org/
 - Email: contact@4everland.org

@@ -22,6 +22,6 @@ Welcome to join the 4EVERLAND community to learn more:
 - **_Twitter:_** https://twitter.com/4everland_org
 - **_Telegram:_** https://t.me/org_4everland
 - **_Medium:_** https://4everland.medium.com/
-- **_Discord:_** https://discord.gg/sxtHDvvpuT
+- **_Discord:_** https://discord.gg/Cun2VpsdjF
 - **_Reddit:_** https://www.reddit.com/user/4everland_org/
 - **_Email:_** contact@4everland.org

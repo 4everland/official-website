@@ -155,7 +155,7 @@
           </div>
           <div class="font-16 mb-4 color-text">
             • Join 4EVERLAND
-            <a href="https://discord.gg/sxtHDvvpuT" target="_blank">Discord</a>
+            <a href="https://discord.gg/Cun2VpsdjF" target="_blank">Discord</a>
             to find solutions if you have problems using 4EVERLAND services and
             report any bugs related to 4EVERLAND will be rewarded in the '<a
               href="https://hosting.4everland.org/#/bug-bounty"
