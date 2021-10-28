@@ -120,7 +120,7 @@ export default {
         },
         {
           icon: mdiDiscord,
-          link: 'https://discord.com/invite/sxtHDvvpuT',
+          link: 'https://discord.gg/Cun2VpsdjF',
         },
         {
           icon: mdiEmail,
