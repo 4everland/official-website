@@ -1,60 +1,96 @@
 <template>
-  <div id="Footer">
-    <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
-      <v-col cols="12" md="6" lg="6">
-        <div class="footer-titele font-weight-black">Stay in the loop</div>
-        <div class="footer-text mt-12">
-          Subscribe to the newsletter to hear about Polkadot updates and events.
-        </div>
-        <div class="subscribe-input mt-12">
-          <input
-            class="enter-email"
-            v-model="email"
-            placeholder="Your email address"
-            type="email"
-          />
-          <v-btn
-            class="text-Caption ml-4 text-h5"
-            color="#3c46d3"
-            tile
-            width="12.5rem"
-            height="3.5rem"
-            >Subscribe</v-btn
-          >
-        </div>
-      </v-col>
-      <v-col cols="12" md="6" lg="6">
-        <div class="footer-titele font-weight-black">Join the community</div>
-        <div class="d-flex mt-12">
-          <v-btn
-            v-for="link in links"
-            :key="link.link"
-            :href="link.link"
-            text
-            icon
-            class="mr-16"
-            target="_blank"
-            nofollow
-          >
-            <v-img width="3rem" :src="link.icon"></v-img>
-          </v-btn>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
-      <v-col cols="12" md="6" lg="6">
-        <div class="footer-titele font-weight-black">4EVERLAND</div>
-        <div class="footer-text2 mt-12">
-          4EVERLAND is a Blockchain Technology-Powered cloud computing platform
-          using Web 3.0 that provides globally accelerated, open,
-          permissionless, privacy-protected, ever-lasting storage solution, and
-          network services to all users.
-        </div>
-      </v-col>
-      <v-col cols="12" md="6" lg="6">
-        <div>Join the community</div>
-      </v-col>
-    </v-row>
+  <div>
+    <v-container class="align-center">
+      <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
+        <v-col cols="12" md="6" lg="6">
+          <div class="footer-titele font-weight-black">Stay in the loop</div>
+          <div class="footer-text mt-12">
+            Subscribe to the newsletter to hear about Polkadot updates and
+            events.
+          </div>
+          <div class="subscribe-input mt-12">
+            <input
+              v-model="email"
+              class="enter-email mr-4 mb-4"
+              placeholder="Your email address"
+              type="email"
+            />
+            <v-btn
+              :loading="loading"
+              class="text-Caption text-h5"
+              color="#3c46d3"
+              tile
+              max-width="12.5rem"
+              height="3.5rem"
+              @click="subscribe"
+              >Subscribe</v-btn
+            >
+          </div>
+        </v-col>
+        <v-col cols="12" md="6" lg="6">
+          <div class="footer-titele font-weight-black">Join the community</div>
+          <div class="d-flex flex-wrap mt-12">
+            <v-btn
+              v-for="link in links"
+              :key="link.link"
+              :href="link.link"
+              text
+              icon
+              class="text-center mr-8 mb-8"
+              target="_blank"
+              nofollow
+            >
+              <v-img :src="link.icon"></v-img>
+            </v-btn>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
+        <v-col cols="12" md="6" lg="6">
+          <div class="footer-titele font-weight-black">4EVERLAND</div>
+          <div class="footer-text2 mt-12">
+            4EVERLAND is a Blockchain Technology-Powered cloud computing
+            platform using Web 3.0 that provides globally accelerated, open,
+            permissionless, privacy-protected, ever-lasting storage solution,
+            and network services to all users.
+          </div>
+        </v-col>
+        <v-col cols="12" md="6" lg="6">
+          <v-row>
+            <v-col
+              v-for="item in project"
+              :key="item.name"
+              cols="6"
+              lg="3"
+              md="3"
+              class="d-flex flex-column"
+            >
+              <div class="ml-4 mb-4 text-h6">{{ item.name }}</div>
+              <div v-for="link in item.list" :key="link.name" class="mb-4">
+                <v-btn
+                  :to="link.link"
+                  :href="link.href"
+                  :target="link.target"
+                  plain
+                  text
+                  nofollow
+                >
+                  {{ link.name }}
+                </v-btn>
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-divider></v-divider>
+    <v-container>
+      <div class="copy-right">&copy; 2021 4EVERLAND, Inc</div>
+    </v-container>
+    <div v-show="subSuccessShow" class="sub-success">
+      <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
+      <span class="ml-4">Thank you for subscription.</span>
+    </div>
   </div>
 </template>
 <script>
@@ -97,6 +133,96 @@ export default {
           link: 'mailto:contact@4everland.org',
         },
       ],
+      project: [
+        {
+          name: 'Project',
+          list: [
+            {
+              name: 'Hosting',
+              link: '/hosting',
+            },
+            {
+              name: 'WhitePaper',
+              href: '/4everland-whitepaper-en.pdf',
+              target: '_blank',
+            },
+            {
+              name: 'Blogs',
+              link: '/blog',
+            },
+            {
+              name: 'Roadmap',
+              link: '/#Roadmap',
+            },
+          ],
+        },
+        {
+          name: 'Support',
+          list: [
+            {
+              name: 'Documentation',
+              link: '/hosting',
+            },
+            {
+              name: 'Grants',
+              href: '/4everland-whitepaper-en.pdf',
+              target: '_blank',
+            },
+            {
+              name: 'Bug Bounty',
+              link: '/blog',
+            },
+            {
+              name: 'FAQ',
+              link: '/#Roadmap',
+            },
+            {
+              name: 'Contact us',
+              link: '/#Roadmap',
+            },
+          ],
+        },
+        {
+          name: 'Frameworks',
+          list: [
+            {
+              name: 'Vue.js',
+              link: '/hosting',
+            },
+            {
+              name: 'Create React App',
+              href: '/4everland-whitepaper-en.pdf',
+              target: '_blank',
+            },
+            {
+              name: 'Next.js',
+              link: '/blog',
+            },
+            {
+              name: 'Gatsby',
+              link: '/#Roadmap',
+            },
+            {
+              name: 'Angular',
+              link: '/#Roadmap',
+            },
+          ],
+        },
+        {
+          name: 'Legal',
+          list: [
+            {
+              name: 'Terms of Users',
+              link: '/hosting',
+            },
+            {
+              name: 'Privacy Policy',
+              href: '/4everland-whitepaper-en.pdf',
+              target: '_blank',
+            },
+          ],
+        },
+      ],
     }
   },
   watch: {
@@ -116,17 +242,6 @@ export default {
         // console.log(resp.data)
         if (resp.data.status) {
           if (resp.data.status === 'success') {
-            // this.$dialog.message.success('Subscribed', {
-            //   position: 'top',
-            //   timeout: 2500,
-            //   actions: [
-            //     {
-            //       text: 'OK',
-            //       color: 'green accent-4',
-            //       key: true,
-            //     },
-            //   ],
-            // })
             this.subSuccessShow = true
             setTimeout(() => {
               this.subSuccessShow = false
@@ -160,22 +275,22 @@ export default {
 }
 </script>
 <style scoped>
-#Footer {
-  padding: 0 14rem;
-}
 .footer-titele {
   font-size: 2.25rem;
 }
 .footer-text {
   font-size: 1.5rem;
+  color: #b1b6bb;
 }
 .footer-text2 {
-  width: 38.44rem;
+  max-width: 38.44rem;
   font-size: 1.25rem;
+  color: #b1b6bb;
 }
 .subscribe-input {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: stretch;
   flex: 1;
 }
@@ -203,6 +318,7 @@ input:-ms-input-placeholder {
   font-size: 1.5rem;
 }
 .subscribe-input input {
+  color: #fff;
   background-color: #666;
   font-size: 1.5rem;
   padding-left: 1.88rem;
@@ -214,23 +330,11 @@ input:-ms-input-placeholder {
 .subscribe-input input:focus {
   outline: none;
 }
-.btn-subscribe {
-  height: 100% !important;
-  color: #fff !important;
-  width: 120px;
-  justify-content: center;
-  padding: 0;
-  align-content: center;
-}
-.media-links {
-  flex-wrap: wrap;
-}
-.link {
-  text-decoration: none;
-  font-size: 14px;
-}
-.link:hover {
-  text-decoration: underline;
+.copy-right {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  text-align: right;
+  color: #b1b6bb;
 }
 .sub-success {
   width: 600px;
