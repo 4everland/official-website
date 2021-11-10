@@ -32,8 +32,8 @@
           <div class="d-flex flex-wrap mt-12">
             <v-btn
               v-for="link in links"
-              :key="link.link"
-              :href="link.link"
+              :key="link.href"
+              :href="link.href"
               text
               icon
               class="text-center mr-8 mb-8"
@@ -68,7 +68,7 @@
               <div class="ml-4 mb-4 text-h6">{{ item.name }}</div>
               <div v-for="link in item.list" :key="link.name" class="mb-4">
                 <v-btn
-                  :to="link.link"
+                  :to="link.to"
                   :href="link.href"
                   :target="link.target"
                   plain
@@ -106,31 +106,31 @@ export default {
       links: [
         {
           icon: require('@/assets/imgs/footer/github.png'),
-          link: 'https://github.com/4everland',
+          href: 'https://github.com/4everland',
         },
         {
           icon: require('@/assets/imgs/footer/twitter.png'),
-          link: 'https://twitter.com/4everland_org',
+          href: 'https://twitter.com/4everland_org',
         },
         {
           icon: require('@/assets/imgs/footer/telegram.png'),
-          link: 'https://t.me/org_4everland',
+          href: 'https://t.me/org_4everland',
         },
         {
           icon: require('@/assets/imgs/footer/reddit.png'),
-          link: 'https://www.reddit.com/user/4everland_org/',
+          href: 'https://www.reddit.com/user/4everland_org/',
         },
         {
           icon: require('@/assets/imgs/footer/medium.png'),
-          link: 'https://4everland.medium.com/',
+          href: 'https://4everland.medium.com/',
         },
         {
           icon: require('@/assets/imgs/footer/discord.png'),
-          link: 'https://discord.gg/Cun2VpsdjF',
+          href: 'https://discord.gg/Cun2VpsdjF',
         },
         {
           icon: require('@/assets/imgs/footer/email.png'),
-          link: 'mailto:contact@4everland.org',
+          href: 'mailto:contact@4everland.org',
         },
       ],
       project: [
@@ -139,7 +139,7 @@ export default {
           list: [
             {
               name: 'Hosting',
-              link: '/hosting',
+              to: '/hosting',
             },
             {
               name: 'WhitePaper',
@@ -148,11 +148,11 @@ export default {
             },
             {
               name: 'Blogs',
-              link: '/blog',
+              to: '/blog',
             },
             {
               name: 'Roadmap',
-              link: '/#Roadmap',
+              to: '/#Roadmap',
             },
           ],
         },
@@ -161,24 +161,25 @@ export default {
           list: [
             {
               name: 'Documentation',
-              link: '/hosting',
-            },
-            {
-              name: 'Grants',
-              href: '/4everland-whitepaper-en.pdf',
+              href: 'https://docs.hosting.4everland.org/guide/',
               target: '_blank',
             },
             {
+              name: 'Grants',
+              to: '/grants',
+            },
+            {
               name: 'Bug Bounty',
-              link: '/blog',
+              href: 'https://hosting.4everland.org/#/bug-bounty',
+              target: '_blank',
             },
             {
               name: 'FAQ',
-              link: '/#Roadmap',
+              to: '/#Roadmap',
             },
             {
               name: 'Contact us',
-              link: '/#Roadmap',
+              href: 'mailto:contact@4everlan.org',
             },
           ],
         },
@@ -187,24 +188,28 @@ export default {
           list: [
             {
               name: 'Vue.js',
-              link: '/hosting',
+              href: 'https://hosting.4everland.org/#/solution/vue',
+              target: '_blank',
             },
             {
               name: 'Create React App',
-              href: '/4everland-whitepaper-en.pdf',
+              href: 'https://hosting.4everland.org/#/solution/create-react-app',
               target: '_blank',
             },
             {
               name: 'Next.js',
-              link: '/blog',
+              href: 'https://hosting.4everland.org/#/solution/nextjs',
+              target: '_blank',
             },
             {
               name: 'Gatsby',
-              link: '/#Roadmap',
+              href: 'https://hosting.4everland.org/#/solution/gatsby',
+              target: '_blank',
             },
             {
               name: 'Angular',
-              link: '/#Roadmap',
+              href: 'https://hosting.4everland.org/#/solution/angular',
+              target: '_blank',
             },
           ],
         },
@@ -213,12 +218,11 @@ export default {
           list: [
             {
               name: 'Terms of Users',
-              link: '/hosting',
+              to: '/term-of-use',
             },
             {
               name: 'Privacy Policy',
-              href: '/4everland-whitepaper-en.pdf',
-              target: '_blank',
+              to: '/privacy-policy',
             },
           ],
         },
