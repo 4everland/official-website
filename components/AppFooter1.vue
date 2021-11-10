@@ -1,64 +1,80 @@
 <template>
-  <div id="Footer">
-    <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
-      <v-col cols="12" md="6" lg="6">
-        <div class="footer-titele font-weight-black">Stay in the loop</div>
-        <div class="footer-text mt-12">
-          Subscribe to the newsletter to hear about Polkadot updates and events.
-        </div>
-        <div class="subscribe-input mt-12">
-          <input
-            class="enter-email"
-            v-model="email"
-            placeholder="Your email address"
-            type="email"
-          />
+  <div>
+    <div class="d-flex justify-center">
+      <Logo class="mt-16 mb-12" :width="280" />
+    </div>
+    <v-row justify="center">
+      <v-col md="5" class="d-flex justify-center align-stretch">
+        <div
+          class="subscribe-input"
+          :style="{ height: `${$vuetify.breakpoint.smAndDown ? 60 : 65}px` }"
+          :class="{
+            disabled: disabled,
+            'mx-16': !$vuetify.breakpoint.mdAndDown,
+            'mx-4': $vuetify.breakpoint.mdAndDown,
+          }"
+        >
+          <input v-model="email" placeholder="Enter Your Email" type="email" />
           <v-btn
-            class="text-Caption ml-4 text-h5"
-            color="#3c46d3"
-            tile
-            width="12.5rem"
-            height="3.5rem"
-            >Subscribe</v-btn
+            :loading="loading"
+            :disabled="disabled"
+            color="transparent"
+            style="color: #fff !important"
+            class="btn-subscribe"
+            @click="subscribe"
           >
-        </div>
-      </v-col>
-      <v-col cols="12" md="6" lg="6">
-        <div class="footer-titele font-weight-black">Join the community</div>
-        <div class="d-flex mt-12">
-          <v-btn
-            v-for="link in links"
-            :key="link.link"
-            :href="link.link"
-            text
-            icon
-            class="mr-16"
-            target="_blank"
-            nofollow
-          >
-            <v-img width="3rem" :src="link.icon"></v-img>
+            Subscribe
           </v-btn>
         </div>
       </v-col>
     </v-row>
-    <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
-      <v-col cols="12" md="6" lg="6">
-        <div class="footer-titele font-weight-black">4EVERLAND</div>
-        <div class="footer-text2 mt-12">
-          4EVERLAND is a Blockchain Technology-Powered cloud computing platform
-          using Web 3.0 that provides globally accelerated, open,
-          permissionless, privacy-protected, ever-lasting storage solution, and
-          network services to all users.
-        </div>
-      </v-col>
-      <v-col cols="12" md="6" lg="6">
-        <div>Join the community</div>
+    <v-row justify="center" class="my-12">
+      <v-col md="6" class="d-flex justify-center media-links">
+        <v-btn
+          v-for="link in links"
+          :key="link.link"
+          :href="link.link"
+          text
+          icon
+          rounded
+          class="mx-4"
+          target="_blank"
+          nofollow
+        >
+          <v-icon size="24">{{ link.icon }}</v-icon>
+        </v-btn>
       </v-col>
     </v-row>
+
+    <div class="mb-12 text-center">
+      <nuxt-link to="/term-of-use" class="link grey--text"
+        >Terms of Use</nuxt-link
+      >
+      <nuxt-link to="/privacy-policy" class="link ml-8 grey--text"
+        >Privacy Policy</nuxt-link
+      >
+    </div>
+    <v-footer>
+      <v-container class="text-caption text--secondary">
+        &copy; 2021 4EVERLAND FOUNDATION LTD
+      </v-container>
+    </v-footer>
+    <div v-show="subSuccessShow" class="sub-success">
+      <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
+      <span class="ml-4">Thank you for subscription.</span>
+    </div>
   </div>
 </template>
 <script>
-import { mdiEmoticonHappyOutline } from '@mdi/js'
+import {
+  mdiGithub,
+  mdiTwitter,
+  mdiTelegram,
+  mdiReddit,
+  mdiDiscord,
+  mdiEmail,
+  mdiEmoticonHappyOutline,
+} from '@mdi/js'
 export default {
   data() {
     return {
@@ -69,31 +85,31 @@ export default {
       mdiEmoticonHappyOutline,
       links: [
         {
-          icon: require('@/assets/imgs/footer/github.png'),
+          icon: mdiGithub,
           link: 'https://github.com/4everland',
         },
         {
-          icon: require('@/assets/imgs/footer/twitter.png'),
+          icon: mdiTwitter,
           link: 'https://twitter.com/4everland_org',
         },
         {
-          icon: require('@/assets/imgs/footer/telegram.png'),
+          icon: mdiTelegram,
           link: 'https://t.me/org_4everland',
         },
         {
-          icon: require('@/assets/imgs/footer/reddit.png'),
+          icon: mdiReddit,
           link: 'https://www.reddit.com/user/4everland_org/',
         },
         {
-          icon: require('@/assets/imgs/footer/medium.png'),
+          icon: 'M12,0 C5.3671875,0 0,5.3671875 0,12 C0,18.6328125 5.3671875,24 12,24 C18.6328125,24 24,18.6328125 24,12 C24,5.3671875 18.6328125,0 12,0 Z M9.2953125,17.7140625 L9.2953125,17.7140625 L9.2953125,17.7140625 L5.1046875,15.6609375 C5.0625,15.61875 4.9734375,15.5296875 4.9734375,15.440625 L4.9734375,5.934375 L9.2484375,8.071875 L9.2484375,17.7140625 L9.2953125,17.7140625 Z M9.8203125,13.1765625 L9.8203125,8.859375 L13.659375,15.0984375 L9.8203125,13.1765625 Z M11.521875,10.6453125 L14.4890625,5.8875 L18.8109375,8.0671875 L14.3578125,15.2671875 L11.521875,10.6453125 Z M18.9375,17.7140625 L18.9375,17.7140625 L18.9375,17.7140625 L14.746875,15.6609375 L18.9375,8.859375 L18.9375,17.7140625 Z',
           link: 'https://4everland.medium.com/',
         },
         {
-          icon: require('@/assets/imgs/footer/discord.png'),
+          icon: mdiDiscord,
           link: 'https://discord.gg/Cun2VpsdjF',
         },
         {
-          icon: require('@/assets/imgs/footer/email.png'),
+          icon: mdiEmail,
           link: 'mailto:contact@4everland.org',
         },
       ],
@@ -160,56 +176,29 @@ export default {
 }
 </script>
 <style scoped>
-#Footer {
-  padding: 0 14rem;
-}
-.footer-titele {
-  font-size: 2.25rem;
-}
-.footer-text {
-  font-size: 1.5rem;
-}
-.footer-text2 {
-  width: 38.44rem;
-  font-size: 1.25rem;
-}
 .subscribe-input {
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  background-color: #2b85fb;
+  height: 64px;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 600px;
   flex: 1;
 }
 .subscribe-input.disabled {
   background-color: #c1c1c1 !important;
 }
-
-input::-webkit-input-placeholder {
-  color: #fff;
-  font-size: 1.5rem;
-}
-input::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #fff;
-  font-size: 1.5rem;
-}
-input:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #fff;
-  font-size: 1.5rem;
-}
-input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #fff;
-  font-size: 1.5rem;
-}
 .subscribe-input input {
-  background-color: #666;
-  font-size: 1.5rem;
-  padding-left: 1.88rem;
-  max-width: 40.88rem;
-  height: 3.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+  padding-left: 16px;
+  min-width: 150px;
   flex: auto;
 }
+
 .subscribe-input input:hover,
 .subscribe-input input:focus {
   outline: none;

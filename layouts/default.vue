@@ -1,27 +1,55 @@
 <template>
   <v-app dark>
-    <v-app-bar fixed app>
+    <v-app-bar fixed app color="#161616">
       <v-container class="d-flex align-center">
         <v-btn text color="transparent" to="/" class="always-active mr-8">
           <logo />
         </v-btn>
-        <v-btn
+        <v-menu
           v-for="item in links"
           :key="item.text"
-          class="hidden-sm-and-down"
-          :class="{ 'first-landing': item.icon }"
-          plain
-          nuxt
-          :to="item.link"
-          :href="item.href"
-          :target="item.target"
-          :ripple="false"
+          open-on-hover
+          bottom
+          transition="slide-y-transition"
+          offset-y
         >
-          <v-img v-if="item.icon" width="137" :src="item.icon" alt="" />
-          <span v-else>
-            {{ item.text }}
-          </span>
-        </v-btn>
+          <template #activator="{ on, attrs }">
+            <v-btn
+              class="hidden-sm-and-down nav-btn"
+              plain
+              nuxt
+              :to="item.link"
+              :href="item.href"
+              :target="item.target"
+              :ripple="false"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <span>
+                {{ item.text }}
+                <v-icon v-if="item.childs">{{ mdiChevronDown }}</v-icon>
+              </span>
+            </v-btn>
+          </template>
+          <v-list v-if="item.childs">
+            <v-list-item v-for="child in item.childs" :key="child.text">
+              <v-btn
+                class="hidden-sm-and-down nav-btn"
+                plain
+                nuxt
+                :to="child.link"
+                :href="child.href"
+                :target="child.target"
+                :ripple="false"
+              >
+                <span>
+                  {{ child.text }}
+                </span>
+              </v-btn>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
         <v-spacer />
         <v-btn
           class="hidden-md-and-up"
@@ -47,21 +75,41 @@
     </v-main>
     <v-navigation-drawer v-model="showDrawer" right temporary fixed>
       <v-list>
-        <v-list-item
-          v-for="item in links"
-          :key="item.text"
-          nuxt
-          :to="item.link"
-          :href="item.href"
-          :target="item.target"
-        >
-          <v-list-item-title>
-            <v-img v-if="item.icon" width="143" :src="item.icon" alt="" />
-            <span v-else>
-              {{ item.text }}
-            </span>
-          </v-list-item-title>
-        </v-list-item>
+        <template v-for="item in links">
+          <v-list-group v-if="item.childs" :key="item.text" no-action>
+            <template #activator>
+              <v-list-item-title>{{ item.text }}</v-list-item-title>
+            </template>
+            <v-list-item
+              v-for="child in item.childs"
+              :key="child.text"
+              nuxt
+              :to="child.link"
+              :href="child.href"
+              :target="child.target"
+            >
+              <v-list-item-title>
+                <span>
+                  {{ child.text }}
+                </span>
+              </v-list-item-title>
+            </v-list-item>
+          </v-list-group>
+          <v-list-item
+            v-else
+            :key="item.text"
+            nuxt
+            :to="item.link"
+            :href="item.href"
+            :target="item.target"
+          >
+            <v-list-item-title>
+              <span>
+                {{ item.text }}
+              </span>
+            </v-list-item-title>
+          </v-list-item>
+        </template>
       </v-list>
     </v-navigation-drawer>
     <app-footer />
@@ -69,7 +117,7 @@
 </template>
 
 <script>
-import { mdiMenu, mdiGithub } from '@mdi/js'
+import { mdiMenu, mdiGithub, mdiChevronDown } from '@mdi/js'
 import Logo from '../components/Logo.vue'
 import AppFooter from '../components/AppFooter.vue'
 
@@ -79,34 +127,58 @@ export default {
     return {
       mdiMenu,
       mdiGithub,
+      mdiChevronDown,
       showDrawer: false,
       links: [
         {
-          text: 'Features',
-          link: '/#feature',
+          text: 'Ecosystem',
+          link: '/',
+          childs: [
+            {
+              text: 'Dapps',
+              link: '/firstlanding/dapps',
+            },
+            {
+              text: ' Developer Grants',
+              link: '/grants',
+            },
+          ],
         },
         {
-          text: 'Hosting',
+          text: 'Developer',
           link: '/hosting',
+          childs: [
+            {
+              text: 'Hosting',
+              link: '/hosting',
+            },
+            {
+              text: ' WhitePaper',
+              href: '/4everland-whitepaper-en.pdf',
+              target: '_blank',
+            },
+            {
+              text: ' Technical Docs',
+              href: 'https://docs.hosting.4everland.org/guide/',
+              target: '_blank',
+            },
+            {
+              text: ' Dev Forum',
+              link: '/grants',
+            },
+            {
+              text: ' BugBounty',
+              link: '/grants',
+            },
+          ],
         },
-        {
-          text: 'Docs',
-          href: 'https://docs.hosting.4everland.org/guide/',
-          target: '_blank',
-        },
-
         {
           text: 'Blog',
           link: '/blog',
         },
-        // {
-        //   text: 'Dapps',
-        //   link: '/dapps',
-        // },
         {
-          text: 'First Landing',
-          link: '/firstlanding',
-          icon: require('~/assets/imgs/firstlanding/firstlanding.png'),
+          text: 'Contact',
+          link: '/dapps',
         },
       ],
     }
@@ -117,7 +189,11 @@ export default {
 .always-active {
   opacity: 1 !important;
 }
-/deep/ .first-landing span {
+.v-btn--active,
+.nav-btn:hover {
+  color: #2a7eed;
+}
+/deep/ .nav-btn .v-btn__content {
   opacity: 1 !important;
 }
 </style>

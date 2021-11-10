@@ -1,16 +1,16 @@
 <template>
   <div v-scroll="onScroll">
-    <section-top />
+    <!-- <section-top />
     <section-globe />
     <section-features />
     <section-technology />
     <section-participant />
     <section-steps />
-    <!-- <section-dapps /> -->
+    <section-dapps />
     <section-map />
     <section-roadmap />
     <hosting-template />
-    <section-future />
+    <section-future /> -->
   </div>
 </template>
 
