@@ -1,3 +1,7 @@
+<script>
+/* eslint-disable vue/no-v-html */
+</script>
+
 <template>
   <div>
     <div class="grant-process">
