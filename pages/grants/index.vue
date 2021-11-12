@@ -52,7 +52,7 @@
               md="3"
               class="ta-c"
             >
-              <img :src="it.img" height="60" class="bdrs-100" />
+              <img :src="it.img" height="60" />
               <div class="label-1 mt-2 fz-14">{{ it.label }}</div>
             </v-col>
           </v-row>

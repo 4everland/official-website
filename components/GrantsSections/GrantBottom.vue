@@ -3,31 +3,25 @@
     <h2>Grantee Use Cases</h2>
     <v-row>
       <v-col v-for="(it, i) in granteeList" :key="i" cols="6" md="3">
-        <div class="bd-b1 bg-black">
+        <a class="d-b bd-b1 bg-black" :href="it.url" target="_blank">
           <div class="d-flex al-c pa-3">
             <div class="bdrs-100 shrink-0 ov-h">
-              <v-img
-                width="40"
-                src="https://hosting.4everland.org/img/icon/tever.jpg"
-              ></v-img>
+              <v-img width="40" :src="it.logo"></v-img>
             </div>
             <div class="ml-2 lh-1">
               <div class="fw-b">{{ it.title }}</div>
               <div class="mt-1 fz-14">
-                {{ it.intro }}
+                {{ it.type }}
               </div>
             </div>
           </div>
 
-          <v-img
-            height="120"
-            src="https://hosting.4everland.org/img/empty/cover.jpg"
-          ></v-img>
+          <v-img height="160" :src="it.cover"></v-img>
 
-          <div class="pa-3 fz-14">
+          <div class="pa-3 fz-14" style="min-height: 88px">
             {{ it.desc }}
           </div>
-        </div>
+        </a>
       </v-col>
     </v-row>
 
@@ -76,10 +70,36 @@ export default {
       goImg: require('@/assets/imgs/grants/go.png'),
       granteeList: [
         {
-          title: '4everland',
-          desc: 'test',
-          intro: 'test',
-          img: '',
+          title: 'Uniswap',
+          type: 'DEX',
+          url: 'https://uniswap-org.4everland.app/',
+          desc: 'Uniswap is the first automated market-making transaction protocol built on the Ethereum',
+          logo: require('@/assets/imgs/grants/case/00.png'),
+          cover: require('@/assets/imgs/grants/case/0.png'),
+        },
+        {
+          title: 'DOGECOIN',
+          type: 'Public Chain',
+          url: 'https://dogecoin.4everland.app/',
+          desc: 'Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.',
+          logo: require('@/assets/imgs/grants/case/11.png'),
+          cover: require('@/assets/imgs/grants/case/1.png'),
+        },
+        {
+          title: 'Yam Finance',
+          type: 'DeFi',
+          url: 'https://yam-www.4everland.app/',
+          desc: 'Yam Finance is an experimental protocol',
+          logo: require('@/assets/imgs/grants/case/22.png'),
+          cover: require('@/assets/imgs/grants/case/2.png'),
+        },
+        {
+          title: 'LOSSST',
+          type: 'Game',
+          url: 'https://lossst.4everland.app/',
+          desc: 'Web games: A snake in space',
+          logo: require('@/assets/imgs/grants/case/33.png'),
+          cover: require('@/assets/imgs/grants/case/3.png'),
         },
       ],
     }

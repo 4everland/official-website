@@ -65,6 +65,7 @@
   margin: 0 auto;
 }
 
+.d-b { display: block; }
 .d-ib { display: inline-block; }
 .flex-1 {
   flex: 1;
@@ -110,4 +111,7 @@
 .bd-b1 {
   background: #1a1b22;
   border: 1px solid #393f45;
+}
+a.bg-black {
+  color: #f0f0f0;
 }
