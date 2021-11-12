@@ -141,10 +141,6 @@ export default {
     font-size: 26px;
     margin: 70px 0 50px;
   }
-  .bd-1 {
-    background: #1a1b22;
-    border: 1px solid #393f45;
-  }
   .go-img {
     right: 10%;
     top: -40px;

@@ -80,6 +80,7 @@
 
 .mat-3 { margin-top: 3px; }
 
+.fz-18 { font-size: 18px; }
 .fz-14 { font-size: 14px; }
 .fw-b { font-weight: bold; }
 .op-5 { opacity: .5; }
@@ -91,7 +92,22 @@
 .ov-h { overflow: hidden; }
 
 .label-1 { color: #8B9CA6; }
+.gray-3 { color: #333; }
+.link-1 {
+  color: #1976d2;
+  cursor: pointer;
+}
+.hover-1 {
+  cursor: pointer;
+  :hover {
+    opacity: .8;
+  }
+}
 
 .bdrs-100 {
   border-radius: 100px;
+}
+.bd-b1 {
+  background: #1a1b22;
+  border: 1px solid #393f45;
 }
