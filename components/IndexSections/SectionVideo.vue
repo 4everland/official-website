@@ -19,7 +19,7 @@
           <video
             controls
             class="video-play"
-            src="@/assets/media/4EVERLAND.mp4"
+            src="https://storage.4everland.app/4EVERLAND.mp4"
           ></video>
         </v-col>
       </v-row>
