@@ -5,7 +5,8 @@
         <div :key="i" class="ta-c item">
           <img :src="it.img" style="height: 75px" />
           <div class="mt-4 fz-14 label-1">
-            {{ it.label }}
+            <a v-if="it.link" :href="it.link" target="_blank">{{ it.label }}</a>
+            <span v-else>{{ it.label }}</span>
           </div>
         </div>
         <div v-show="i < list.length - 1" :key="i" class="mt-3">
@@ -24,10 +25,12 @@ export default {
         {
           label: 'Add Accelerated & Hosted by 4EVERLAND',
           img: require('@/assets/imgs/grants/process/code.png'),
+          link: '',
         },
         {
           label: 'Submit Your Developer Grant Application Here',
           img: require('@/assets/imgs/grants/process/date.png'),
+          link: 'https://forms.gle/iMaFNYdyjWp36msS6',
         },
         {
           label: 'Project Review',

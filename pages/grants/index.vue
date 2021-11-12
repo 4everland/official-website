@@ -35,7 +35,12 @@
       <div class="wrap-1">
         <div class="con-1">
           <div class="ta-c">
-            <div class="grant-btn1">SUBMIT DEVELOPER GRANT APPLCATION</div>
+            <a
+              class="grant-btn1"
+              href="https://forms.gle/iMaFNYdyjWp36msS6"
+              target="_blank"
+              >SUBMIT DEVELOPER GRANT APPLCATION</a
+            >
           </div>
 
           <h2>Grants Program Offers</h2>
@@ -118,6 +123,9 @@ export default {
       width: 100%;
     }
   }
+  a {
+    text-decoration: none;
+  }
   .grant-btn1 {
     font-weight: bold;
     color: #fff;
@@ -136,6 +144,16 @@ export default {
   .bd-1 {
     background: #1a1b22;
     border: 1px solid #393f45;
+  }
+  .go-img {
+    right: 10%;
+    top: -40px;
+    width: 40%;
+    &.mobile {
+      width: 30%;
+      top: -60px;
+      right: 20px;
+    }
   }
 }
 </style>

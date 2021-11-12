@@ -35,10 +35,32 @@
     <process></process>
 
     <h2>Are you ready?</h2>
-    <div class="label-1 fz-14">
+    <div class="label-1 fz-14 pos-r">
       <div>Individuals, teams and researchers</div>
       <div class="mt-1">are all welcome to submit applications.</div>
+      <div class="mt-10">
+        <a
+          class="grant-btn1"
+          href="https://forms.gle/iMaFNYdyjWp36msS6"
+          target="_blank"
+          >SUBMIT DEVELOPER GRANT APPLCATION</a
+        >
+      </div>
+      <div class="mt-3">
+        For more details contact us at contact@4everland.org
+      </div>
+
+      <div
+        class="pos-a go-img"
+        :class="{
+          mobile: asMobile,
+        }"
+      >
+        <v-img :src="goImg" max-width="300" />
+      </div>
     </div>
+
+    <div class="pa-10"></div>
   </div>
 </template>
 
@@ -51,6 +73,7 @@ export default {
   },
   data() {
     return {
+      goImg: require('@/assets/imgs/grants/go.png'),
       granteeList: [
         {
           title: '4everland',
@@ -60,6 +83,11 @@ export default {
         },
       ],
     }
+  },
+  computed: {
+    asMobile() {
+      return this.$vuetify.breakpoint.smAndDown
+    },
   },
 }
 </script>
