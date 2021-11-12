@@ -3,7 +3,11 @@
     <v-container class="my-16">
       <v-row>
         <v-col cols="12" md="12" lg="12">
-          <div class="block-titel">Technologies</div>
+          <div class="block-titel">Welcome to the new internet - Web 3</div>
+          <div class="block-text">
+            4EVERLAND Can Help You Rebuild the Web’s Foundation Layer and
+            Transition to a New and Unbiased Web 3.0.
+          </div>
         </v-col>
       </v-row>
     </v-container>
@@ -13,8 +17,8 @@
         :key="item.title"
         class="border-box"
         cols="12"
-        md="3"
-        lg="3"
+        md="4"
+        lg="4"
       >
         <div class="win py-16">
           <!-- <div class="border_corner border_corner_left_top"></div>
@@ -35,30 +39,24 @@
 </template>
 <script>
 import '@/assets/styles/home.scss'
-
 export default {
   data() {
     return {
       list: [
         {
           img: require('@/assets/imgs/index/icon.png'),
-          title: '4EVER-STORAGE',
-          desc: '4EVERLAND forms nodes into a huge storage network through Swarm technology, which relies on node cooperativeness to achieve persistent storage of specific data, and supports horizontal expansion of nodes.',
+          title: 'Global Acceleration',
+          desc: 'The consensus-driven Swarm network, improves network throughput massively and high availability, provides more efficient and fast Web3.0 access for global developers.',
         },
         {
           img: require('@/assets/imgs/index/icon.png'),
-          title: '4EVER-GATEWAY',
-          desc: 'The gateway nodes contain dynamic DNS, Data I/O, and Cert Manager modules. With simple configuration, developers can achieve safe and reliable global acceleration based on 4EVERLAND quickly.',
+          title: 'Privacy Protection',
+          desc: '4EVERLAND does not require KYC, that ensures user anonymity and data security.',
         },
         {
           img: require('@/assets/imgs/index/icon.png'),
-          title: 'Proof of Storage',
-          desc: '4EVERLAND builds Swarm distributed storage network based on IPFS protocol and proposes storage challenge proof PoSC based on TEE technology, to ensure the availability and reliability of data.',
-        },
-        {
-          img: require('@/assets/imgs/index/icon.png'),
-          title: 'Smart Contract',
-          desc: 'The smart contracts module of 4EVERLAND mainly includes payment contracts, auction contracts, lending contracts, control contracts,etc. It achieves open, transparent and free decentralized governance through smart contracts.',
+          title: 'Distributed Storage',
+          desc: '4EVERLAND builds a Swarm distributed storage network to achieve data availability and reliability.',
         },
       ],
     }

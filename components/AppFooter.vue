@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="footer">
     <v-container class="align-center">
       <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
         <v-col cols="12" md="6" lg="6">
@@ -17,11 +17,11 @@
             />
             <v-btn
               :loading="loading"
-              class="text-Caption text-h5"
+              class="text-h6"
               color="#3c46d3"
               tile
-              max-width="12.5rem"
-              height="3.5rem"
+              max-width="150"
+              height="42"
               @click="subscribe"
               >Subscribe</v-btn
             >
@@ -29,7 +29,10 @@
         </v-col>
         <v-col cols="12" md="6" lg="6">
           <div class="footer-titele font-weight-black">Join the community</div>
-          <div class="d-flex flex-wrap mt-12">
+          <div
+            class="d-flex flex-wrap mt-12"
+            :class="{ 'justify-center': $vuetify.breakpoint.smAndDown }"
+          >
             <v-btn
               v-for="link in links"
               :key="link.href"
@@ -40,12 +43,15 @@
               target="_blank"
               nofollow
             >
-              <v-img :src="link.icon"></v-img>
+              <v-img width="36" :src="link.icon"></v-img>
             </v-btn>
           </div>
         </v-col>
       </v-row>
-      <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
+      <v-row
+        class="mt-16"
+        :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
+      >
         <v-col cols="12" md="6" lg="6">
           <div class="footer-titele font-weight-black">4EVERLAND</div>
           <div class="footer-text2 mt-12">
@@ -279,16 +285,19 @@ export default {
 }
 </script>
 <style scoped>
+#footer {
+  padding-top: 88px;
+}
 .footer-titele {
-  font-size: 2.25rem;
+  font-size: 28px;
 }
 .footer-text {
-  font-size: 1.5rem;
+  font-size: 18px;
   color: #b1b6bb;
 }
 .footer-text2 {
-  max-width: 38.44rem;
-  font-size: 1.25rem;
+  max-width: 460px;
+  font-size: 16px;
   color: #b1b6bb;
 }
 .subscribe-input {
@@ -304,30 +313,30 @@ export default {
 
 input::-webkit-input-placeholder {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 18px;
 }
 input::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 18px;
 }
 input:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 18px;
 }
 input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 18px;
 }
 .subscribe-input input {
   color: #fff;
   background-color: #666;
-  font-size: 1.5rem;
-  padding-left: 1.88rem;
-  max-width: 40.88rem;
-  height: 3.5rem;
+  font-size: 18px;
+  padding-left: 30px;
+  max-width: 490px;
+  height: 42px;
   flex: auto;
 }
 .subscribe-input input:hover,
@@ -335,8 +344,7 @@ input:-ms-input-placeholder {
   outline: none;
 }
 .copy-right {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding: 30px 0;
   text-align: right;
   color: #b1b6bb;
 }

@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-app-bar fixed app color="#161616">
+    <v-app-bar fixed app color="#161616" height="100">
       <v-container class="d-flex align-center">
         <v-btn text color="transparent" to="/" class="always-active mr-8">
           <logo />
@@ -15,7 +15,7 @@
         >
           <template #activator="{ on, attrs }">
             <v-btn
-              class="hidden-sm-and-down nav-btn"
+              class="hidden-sm-and-down nav-btn text-subtitle-1"
               plain
               nuxt
               :to="item.link"
@@ -34,7 +34,7 @@
           <v-list v-if="item.childs">
             <v-list-item v-for="child in item.childs" :key="child.text">
               <v-btn
-                class="hidden-sm-and-down nav-btn"
+                class="hidden-sm-and-down nav-btn text-subtitle-1"
                 plain
                 nuxt
                 :to="child.link"

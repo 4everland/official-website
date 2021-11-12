@@ -1,50 +1,55 @@
 <template>
-  <div v-scroll="onScroll">
-    <!-- <section-top />
-    <section-globe />
-    <section-features />
+  <div id="home">
+    <section-top />
+    <section-new />
+    <section-video />
     <section-technology />
-    <section-participant />
+    <section-products />
+    <section-framework />
+    <section-customer />
+    <section-global />
     <section-steps />
-    <section-dapps />
-    <section-map />
-    <section-roadmap />
-    <hosting-template />
-    <section-future /> -->
+
+    <!-- <section-globe /> -->
+    <!-- <section-dapps /> -->
+    <!-- <section-map /> -->
+    <!-- <section-roadmap /> -->
+    <!-- <hosting-template /> -->
+    <section-future />
   </div>
 </template>
 
 <script>
 import SectionTop from '@/components/IndexSections/SectionTop.vue'
-import SectionGlobe from '@/components/IndexSections/SectionGlobe.vue'
-import SectionFeatures from '@/components/IndexSections/SectionFeatures.vue'
+import SectionNew from '@/components/IndexSections/SectionNew.vue'
+import SectionVideo from '@/components/IndexSections/SectionVideo.vue'
 import SectionTechnology from '@/components/IndexSections/SectionTechnology.vue'
-import SectionParticipant from '@/components/IndexSections/SectionParticipant.vue'
+import SectionProducts from '@/components/IndexSections/SectionProducts.vue'
+import SectionFramework from '@/components/IndexSections/SectionFramework.vue'
+import SectionCustomer from '@/components/IndexSections/SectionCustomer.vue'
+import SectionGlobal from '@/components/IndexSections/SectionGlobal.vue'
 import SectionSteps from '@/components/IndexSections/SectionSteps.vue'
-import SectionDapps from '@/components/IndexSections/SectionDapps.vue'
-import SectionMap from '@/components/IndexSections/SectionMap.vue'
 import SectionRoadmap from '@/components/IndexSections/SectionRoadmap.vue'
-import HostingTemplate from '@/components/HostingSections/HostingTemplate.vue'
 import SectionFuture from '@/components/IndexSections/SectionFuture.vue'
 export default {
   components: {
     SectionTop,
-    SectionGlobe,
-    SectionFeatures,
+    SectionNew,
+    SectionVideo,
     SectionTechnology,
-    SectionParticipant,
+    SectionProducts,
+    SectionFramework,
+    SectionCustomer,
+    SectionGlobal,
     SectionSteps,
-    SectionDapps,
-    SectionMap,
     SectionRoadmap,
-    HostingTemplate,
     SectionFuture,
   },
-  methods: {
-    onScroll(e) {
-      // eslint-disable-next-line no-console
-      // console.log(e, this.hash)
-    },
-  },
+  methods: {},
 }
 </script>
+<style scoped>
+#home {
+  background-color: #161616;
+}
+</style>
