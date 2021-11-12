@@ -1,0 +1,33 @@
+<template>
+  <div class="home-block section-customer">
+    <v-container class="my-16">
+      <v-row>
+        <v-col cols="12" md="12" lg="12">
+          <div class="title-underline">Customer Success</div>
+          <div class="block-titel">Join and Access to the Web3.0 world</div>
+          <div class="block-text">
+            See how developers large and small are leveraging 4EVERLAND to grow
+            and improve their business
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+</template>
+<script>
+import '@/assets/styles/home.scss'
+export default {
+  data() {
+    return {}
+  },
+}
+</script>
+<style scoped>
+.section-customer {
+  padding: 70px 0;
+  background-image: url('@/assets/imgs/index/customer-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+</style>
