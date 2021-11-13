@@ -9,12 +9,8 @@
     <section-customer />
     <section-global />
     <section-steps />
-
-    <!-- <section-globe /> -->
-    <!-- <section-dapps /> -->
-    <!-- <section-map /> -->
-    <!-- <section-roadmap /> -->
-    <!-- <hosting-template /> -->
+    <section-roadmap />
+    <section-partners />
     <section-future />
   </div>
 </template>
@@ -30,6 +26,7 @@ import SectionCustomer from '@/components/IndexSections/SectionCustomer.vue'
 import SectionGlobal from '@/components/IndexSections/SectionGlobal.vue'
 import SectionSteps from '@/components/IndexSections/SectionSteps.vue'
 import SectionRoadmap from '@/components/IndexSections/SectionRoadmap.vue'
+import SectionPartners from '@/components/IndexSections/SectionPartners.vue'
 import SectionFuture from '@/components/IndexSections/SectionFuture.vue'
 export default {
   components: {
@@ -43,6 +40,7 @@ export default {
     SectionGlobal,
     SectionSteps,
     SectionRoadmap,
+    SectionPartners,
     SectionFuture,
   },
   methods: {},

@@ -168,7 +168,7 @@ export default {
             },
             {
               text: ' BugBounty',
-              link: '/grants',
+              link: 'https://hosting.4everland.org/#/bug-bounty',
             },
           ],
         },

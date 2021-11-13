@@ -11,12 +11,19 @@
           </div>
         </v-col>
       </v-row>
+      <v-row class="swiper-box">
+        <swiper-cus></swiper-cus>
+      </v-row>
     </v-container>
   </div>
 </template>
 <script>
+import SwiperCus from './SwiperCus.vue'
 import '@/assets/styles/home.scss'
 export default {
+  components: {
+    SwiperCus,
+  },
   data() {
     return {}
   },
@@ -29,5 +36,10 @@ export default {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.swiper-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px;
 }
 </style>

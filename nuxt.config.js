@@ -41,6 +41,7 @@ export default {
     'plugins/global',
     'plugins/extend',
     { src: 'plugins/ga.js', ssr: false },
+    { src: 'plugins/vue-swiper.js', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
