@@ -17,10 +17,11 @@
     </v-container>
     <v-row>
       <v-col cols="12" md="12" lg="12" class="pa-0">
-        <v-img
+        <!-- <v-img
           :src="require('@/assets/imgs/index/global.png')"
           width="100%"
-        ></v-img>
+        ></v-img> -->
+        <section-globe />
       </v-col>
     </v-row>
     <v-row>
@@ -44,7 +45,11 @@
 </template>
 <script>
 import '@/assets/styles/home.scss'
+import SectionGlobe from './SectionGlobe.vue'
 export default {
+  components: {
+    SectionGlobe,
+  },
   data() {
     return {
       list: [
@@ -78,7 +83,7 @@ export default {
   font-weight: bold;
 }
 .main-num {
-  font-size: 100px;
+  font-size: 80px;
   font-weight: bold;
 }
 </style>

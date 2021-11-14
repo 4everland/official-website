@@ -31,7 +31,7 @@ export default {
 </script>
 <style scoped>
 .section-customer {
-  padding: 70px 0;
+  padding: 40px 0;
   background-image: url('@/assets/imgs/index/customer-bg.png');
   background-position: center center;
   background-size: cover;

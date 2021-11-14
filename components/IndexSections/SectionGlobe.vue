@@ -1,8 +1,8 @@
 <template>
-  <div v-resize="onResize" class="pt-12">
-    <h3 class="text-h3 font-weight-light text-center">
+  <div v-resize="onResize">
+    <!-- <h3 class="text-h3 font-weight-light text-center">
       Developers deploy with <br />One click in <strong>Web 3.0</strong>
-    </h3>
+    </h3> -->
     <div class="globe-wrapper">
       <img
         src="~/assets/imgs/index/waves.png"

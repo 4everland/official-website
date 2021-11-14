@@ -62,11 +62,14 @@
         <v-btn
           :href="hosting_web"
           target="_blank"
-          class="blue darken-1 white--text hidden-sm-and-down"
-          rounded
+          class="hidden-sm-and-down transparent"
+          tile
         >
-          <v-icon left size="32">{{ mdiGithub }}</v-icon>
-          <span>Login</span>
+          <img
+            src="@/assets/imgs/common/hosting-btn.png"
+            width="160px"
+            alt=""
+          />
         </v-btn>
       </v-container>
     </v-app-bar>
