@@ -10,9 +10,9 @@
 
 <script>
 import HostingTop from '@/components/HostingSections/HostingTop.vue'
-import HostingSteps from '@/components/IndexSections/SectionSteps.vue'
+import HostingSteps from '@/components/HostingSections/SectionSteps.vue'
 import SectionFramework from '@/components/IndexSections/SectionFramework.vue'
-import SectionCustomer from '@/components/IndexSections/SectionCustomer.vue'
+import SectionCustomer from '@/components/HostingSections/SectionCustomer.vue'
 import HostingTemplate from '@/components/HostingSections/HostingTemplate.vue'
 
 export default {

@@ -164,7 +164,8 @@ export default {
             },
             {
               text: ' Dev Forum',
-              link: '/grants',
+              href: 'https://www.reddit.com/user/4everland_org/',
+              target: '_blank',
             },
             {
               text: ' BugBounty',

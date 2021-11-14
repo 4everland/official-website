@@ -1,39 +1,49 @@
 <template>
-  <v-container class="py-12">
-    <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
-      <v-col cols="12" md="6" lg="6">
-        <img alt="top-banner" src="~/assets/imgs/hosting/Hosting.png" />
-        <h1
-          class="text-h2 mt-8"
-          :class="{ 'text-nowrap': !$vuetify.breakpoint.mdAndDown }"
+  <div style="background: #222">
+    <v-container class="py-12">
+      <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
+        <v-col
+          class="d-flex flex-column justify-center"
+          cols="12"
+          md="5"
+          lg="5"
         >
-          Host Websites or Dapps <br />based on the <strong>Web3.0</strong>
-        </h1>
-
-        <p class="my-16">
-          <v-btn
-            :href="hosting_web"
-            target="_blank"
-            class="blue darken-1"
-            rounded
-            x-large
+          <div class="text-h4" style="max-width: 500px">
+            Host websites or DApps based on the Web3.0
+          </div>
+          <div
+            class="text-body-2 mt-16 grey--text text--lighten-1"
+            style="max-width: 500px"
           >
-            <span>Get Started for Free |</span>
-            <v-icon right size="20">{{
-              mdiCheckboxMarkedCircleOutline
-            }}</v-icon>
-          </v-btn>
-        </p>
-      </v-col>
-      <v-col class="d-flex align-center justify-center" cols="12" md="6" lg="6">
-        <img
-          alt="top-banner"
-          style="width: 100%; max-width: 450px"
-          src="~/assets/imgs/hosting/top@2x.png"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
+            4EVERLAND has everything you need to host fast , efficient, and
+            censorship-proof websites or DApps on the web3.0.
+          </div>
+          <p class="mt-8">
+            <v-btn
+              :href="hosting_web"
+              target="_blank"
+              tile
+              class="start-btn"
+              height="60"
+              >Get Started for Free</v-btn
+            >
+          </p>
+        </v-col>
+        <v-col
+          class="d-flex align-center justify-center pa-10"
+          cols="12"
+          md="7"
+          lg="7"
+        >
+          <img
+            alt="top-banner"
+            style="width: 100%; max-width: 800px"
+            src="~/assets/imgs/hosting/top@2x.png"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 <script>
 import { mdiCheckboxMarkedCircleOutline } from '@mdi/js'
@@ -48,5 +58,12 @@ export default {
 <style scoped>
 .text-nowrap {
   white-space: nowrap;
+}
+.start-btn {
+  width: 300px;
+  height: 60px;
+  background: linear-gradient(-90deg, #ffb830, #e31313, #ff30f8);
+  font-size: 20px;
+  font-weight: bold;
 }
 </style>
