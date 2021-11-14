@@ -198,7 +198,7 @@ export default {
               target: '_blank',
             },
             {
-              name: 'Create React App',
+              name: 'React App',
               href: 'https://hosting.4everland.org/#/solution/create-react-app',
               target: '_blank',
             },

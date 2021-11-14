@@ -44,17 +44,17 @@ export default {
     return {
       list: [
         {
-          img: require('@/assets/imgs/index/icon.png'),
+          img: require('@/assets/imgs/index/new/new1.png'),
           title: 'Global Acceleration',
           desc: 'The consensus-driven Swarm network, improves network throughput massively and high availability, provides more efficient and fast Web3.0 access for global developers.',
         },
         {
-          img: require('@/assets/imgs/index/icon.png'),
+          img: require('@/assets/imgs/index/new/new2.png'),
           title: 'Privacy Protection',
           desc: '4EVERLAND does not require KYC, that ensures user anonymity and data security.',
         },
         {
-          img: require('@/assets/imgs/index/icon.png'),
+          img: require('@/assets/imgs/index/new/new3.png'),
           title: 'Distributed Storage',
           desc: '4EVERLAND builds a Swarm distributed storage network to achieve data availability and reliability.',
         },

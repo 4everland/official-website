@@ -20,7 +20,7 @@
           <v-col cols="6">
             <div class="text-h4">Featured</div>
           </v-col>
-          <v-col cols="6" class="text-right"
+          <!-- <v-col cols="6" class="text-right"
             ><v-btn
               href="/firstlanding"
               class="font-weight-bold"
@@ -29,7 +29,7 @@
               color="#2b85fb"
               >Rules</v-btn
             >
-          </v-col>
+          </v-col> -->
         </v-row>
         <v-row v-if="data.length > 0" class="pb-8">
           <v-col cols="12">
@@ -90,24 +90,14 @@
     <div class="future">
       <img src="~/assets/imgs/index/skybg-mask@2x.png" class="skybg-mask" />
     </div>
-    <img
-      class="pos-img d-none d-lg-flex"
-      src="~/assets/imgs/firstlanding/icon6.png"
-      alt=""
-      style="left: 0; top: 12%"
-    />
+
     <img
       class="pos-img d-none d-lg-flex"
       src="~/assets/imgs/firstlanding/icon2.png"
       alt=""
       style="left: 0; top: 36%"
     />
-    <img
-      class="pos-img d-none d-lg-flex"
-      src="~/assets/imgs/firstlanding/icon5.png"
-      alt=""
-      style="right: 0; top: 6%"
-    />
+
     <img
       class="pos-img d-none d-lg-flex"
       src="~/assets/imgs/firstlanding/icon3.png"

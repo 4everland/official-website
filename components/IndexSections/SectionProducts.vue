@@ -23,7 +23,10 @@
       >
         <div class="win py-8">
           <div class="main text-center">
-            <v-img :src="item.img" width="150px" class="ma-auto"> </v-img>
+            <div class="img-box">
+              <v-img contain :src="item.img" height="128px" class="ma-auto">
+              </v-img>
+            </div>
             <div class="main-title">{{ item.title }}</div>
           </div>
         </div>
@@ -52,28 +55,28 @@ export default {
     return {
       list: [
         {
-          img: require('@/assets/imgs/index/icon.png'),
-          title: 'Global Acceleration',
+          img: require('@/assets/imgs/index/products/Dweb.png'),
+          title: 'Dweb Hosting',
         },
         {
-          img: require('@/assets/imgs/index/icon.png'),
-          title: 'Privacy Protection',
+          img: require('@/assets/imgs/index/products/Gateway.png'),
+          title: 'Decentralized Gateway',
         },
         {
-          img: require('@/assets/imgs/index/icon.png'),
-          title: 'Distributed Storage',
+          img: require('@/assets/imgs/index/products/Globally.png'),
+          title: 'Globally Acceleration',
         },
         {
-          img: require('@/assets/imgs/index/icon.png'),
-          title: 'Global Acceleration',
+          img: require('@/assets/imgs/index/products/Domains.png'),
+          title: 'Decentralized Domains',
         },
         {
-          img: require('@/assets/imgs/index/icon.png'),
-          title: 'Privacy Protection',
+          img: require('@/assets/imgs/index/products/Digital.png'),
+          title: ' Digital Marketing System',
         },
         {
-          img: require('@/assets/imgs/index/icon.png'),
-          title: 'Distributed Storage',
+          img: require('@/assets/imgs/index/products/Services.png'),
+          title: 'Data Services',
         },
       ],
     }
@@ -87,5 +90,12 @@ export default {
   background: linear-gradient(-90deg, #ffb830, #e31313, #ff30f8);
   font-size: 20px;
   font-weight: bold;
+}
+.main .img-box {
+  width: 128px;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
 }
 </style>

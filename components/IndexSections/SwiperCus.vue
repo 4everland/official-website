@@ -5,7 +5,7 @@
         <div v-for="item in list" :key="item.name" class="swiper-slide">
           <div class="customer-item" @click="toCustomer(item.href)">
             <div class="img-box">
-              <v-img contain :src="item.img" height="66"></v-img>
+              <img :src="item.img" height="66" />
             </div>
             <div class="name">{{ item.name }}</div>
             <div class="desc">
@@ -57,13 +57,13 @@ export default {
         },
         {
           name: 'MORE',
-          desc: '30,000+ Dapps, including Metaverse, DeFi, GameFi, NFT, etc.',
-          href: 'https://uniswap-org.4everland.app/',
-          img: '',
+          desc: '30,000+ Dapps, including Metaverse, DeFi, GameFi, NFT, etc...',
+          href: 'https://4everland.org/firstlanding/dapps',
+          img: require('@/assets/imgs/index/customer/more.png'),
         },
       ],
       swiperOption: {
-        loop: false,
+        loop: true,
         autoplay: true,
         slidesPerView: 3,
         navigation: {

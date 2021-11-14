@@ -50,9 +50,9 @@ export default {
     return {
       tab: 0,
       items: [
-        { img: require('@/assets/imgs/index/banner1.png') },
-        { img: require('@/assets/imgs/index/banner1.png') },
-        { img: require('@/assets/imgs/index/banner1.png') },
+        { img: require('@/assets/imgs/index/banner1.jpg') },
+        { img: require('@/assets/imgs/index/banner1.jpg') },
+        { img: require('@/assets/imgs/index/banner1.jpg') },
       ],
     }
   },

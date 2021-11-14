@@ -169,17 +169,18 @@ export default {
             },
             {
               text: ' BugBounty',
-              link: 'https://hosting.4everland.org/#/bug-bounty',
+              href: 'https://hosting.4everland.org/#/bug-bounty',
+              target: '_blank',
             },
           ],
         },
         {
-          text: 'Blog',
+          text: 'Blogs',
           link: '/blog',
         },
         {
           text: 'Contact',
-          link: '/dapps',
+          link: '/#footer',
         },
       ],
     }
