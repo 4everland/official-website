@@ -158,7 +158,7 @@ export default {
             },
             {
               name: 'Roadmap',
-              to: '/#Roadmap',
+              to: '/#roadmap',
             },
           ],
         },
@@ -181,7 +181,7 @@ export default {
             },
             {
               name: 'FAQ',
-              to: '/#Roadmap',
+              to: '/hosting/#faq',
             },
             {
               name: 'Contact us',

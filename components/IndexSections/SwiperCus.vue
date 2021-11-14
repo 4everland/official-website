@@ -57,7 +57,7 @@ export default {
         },
         {
           name: 'MORE',
-          desc: 'Uniswap is the first automated market-making transaction protocol built on the Ethereum',
+          desc: '30,000+ Dapps, including Metaverse, DeFi, GameFi, NFT, etc.',
           href: 'https://uniswap-org.4everland.app/',
           img: '',
         },

@@ -20,7 +20,7 @@
             <div>{{ item.title }}</div>
           </div>
         </v-col>
-        <v-col cols="12" md="12" lg="12">
+        <!-- <v-col cols="12" md="12" lg="12">
           <div class="text-center">
             <v-btn
               text
@@ -30,7 +30,7 @@
               <v-icon> mdi-chevron-right </v-icon></v-btn
             >
           </div>
-        </v-col>
+        </v-col> -->
       </v-row>
     </v-container>
   </div>

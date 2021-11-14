@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="hosting">
     <hosting-top />
     <hosting-steps />
     <section-framework />
@@ -26,3 +26,8 @@ export default {
   methods: {},
 }
 </script>
+<style scoped>
+#hosting {
+  background-color: #161616;
+}
+</style>

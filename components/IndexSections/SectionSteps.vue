@@ -26,10 +26,15 @@
                 <v-img :src="item.img"></v-img>
               </v-col>
               <v-col class="step-box btn-box" cols="12" md="4" lg="4">
-                <v-btn class="usage-btn mb-8" height="60" tile
+                <v-btn href="/#video" class="usage-btn mb-8" height="60" tile
                   >USAGE VIDEO</v-btn
                 >
-                <v-btn class="start-btn" height="60" tile
+                <v-btn
+                  :href="hosting_web"
+                  target="_blank"
+                  tile
+                  class="start-btn"
+                  height="60"
                   >START DEPLOYING</v-btn
                 >
               </v-col>

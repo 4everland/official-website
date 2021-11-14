@@ -32,7 +32,14 @@
     <v-container class="my-16">
       <v-row>
         <v-col cols="12" md="12" lg="12" class="text-center">
-          <v-btn class="start-btn" height="60" tile>START DEPLOYING</v-btn>
+          <v-btn
+            :href="hosting_web"
+            target="_blank"
+            tile
+            class="start-btn"
+            height="60"
+            >START DEPLOYING</v-btn
+          >
         </v-col>
       </v-row>
     </v-container>

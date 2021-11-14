@@ -1,5 +1,5 @@
 <template>
-  <div class="section-video">
+  <div id="video" class="section-video">
     <v-container>
       <v-row class="video-box">
         <v-col
