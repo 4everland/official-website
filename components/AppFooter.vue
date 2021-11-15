@@ -124,7 +124,7 @@ export default {
         },
         {
           icon: require('@/assets/imgs/footer/reddit.png'),
-          href: 'https://www.reddit.com/r/4everland//',
+          href: 'https://www.reddit.com/r/4everland/',
         },
         {
           icon: require('@/assets/imgs/footer/medium.png'),
