@@ -49,19 +49,19 @@ export default {
       colors: ['primary', 'secondary', 'yellow darken-2', 'red', 'orange'],
       banner: [
         {
-          src: require('@/assets/imgs/index/banner1.jpg'),
+          src: require('@/assets/imgs/index/banner1.png'),
           to: '/firstlanding',
         },
         {
-          src: require('@/assets/imgs/index/banner4.jpg'),
+          src: require('@/assets/imgs/index/banner2.png'),
           to: '/firstleap',
         },
         {
-          src: require('@/assets/imgs/index/banner2.jpg'),
+          src: require('@/assets/imgs/index/banner3.png'),
           href: this.hosting_web,
         },
         {
-          src: require('@/assets/imgs/index/banner3.jpg'),
+          src: require('@/assets/imgs/index/banner4.png'),
           to: '/grants',
         },
       ],

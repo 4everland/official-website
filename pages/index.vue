@@ -11,7 +11,7 @@
     <section-steps />
     <section-roadmap />
     <section-partners />
-    <section-future />
+    <section-future ref="scrollFuture" />
   </div>
 </template>
 

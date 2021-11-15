@@ -31,6 +31,7 @@
                     {{ v1.content }}
                   </div>
                 </div>
+                <div style="padding-bottom: 100px"></div>
               </div>
               <div v-if="version == 2" class="map-list-box">
                 <div class="map-list-item list-v1">

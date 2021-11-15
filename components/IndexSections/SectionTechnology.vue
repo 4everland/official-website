@@ -15,11 +15,14 @@
         cols="12"
         md="3"
         lg="3"
-        :style="{ backgroundImage: `url('${item.img}')` }"
       >
         <div class="win py-16">
           <div class="main text-center">
             <!-- <v-img :src="item.img" width="150px" class="ma-auto"> </v-img> -->
+            <div
+              class="border-box1"
+              :style="{ backgroundImage: `url('${item.img}')` }"
+            ></div>
             <div class="main-title mb-8">{{ item.title }}</div>
             <div class="main-text">
               {{ item.desc }}
@@ -68,12 +71,16 @@ export default {
 }
 .border-box {
   background-position: center top;
+  background-size: inherit;
+  background-repeat: no-repeat;
+}
+.border-box1 {
+  height: 300px;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.main {
-  padding-top: 300px;
-}
+
 .main-text {
   font-size: 16px !important;
 }

@@ -22,10 +22,10 @@
         <v-tabs-items v-model="tab" class="mt-16">
           <v-tab-item v-for="item in items" :key="item.img">
             <v-row>
-              <v-col class="step-box" cols="12" md="8" lg="8">
+              <v-col class="step-box" cols="12" md="7" lg="7">
                 <v-img :src="item.img"></v-img>
               </v-col>
-              <v-col class="step-box btn-box" cols="12" md="4" lg="4">
+              <v-col class="step-box btn-box" cols="12" md="5" lg="5">
                 <v-btn href="/#video" class="usage-btn mb-8" height="60" tile
                   >USAGE VIDEO</v-btn
                 >
@@ -73,7 +73,7 @@ export default {
 }
 .btn-box {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
 }

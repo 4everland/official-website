@@ -10,10 +10,11 @@
           md="12"
           lg="12"
           class="d-flex justify-center flex-wrap"
+          style="max-width: 1200px; margin: 0 auto"
         >
-          <div v-for="item in list" :key="item.title" class="ma-4">
+          <div v-for="item in list" :key="item.title" class="ma-10">
             <div class="img-box">
-              <v-img contain :src="item.img" max-height="60"> </v-img>
+              <v-img contain :src="item.img" max-height="50"> </v-img>
             </div>
           </div>
         </v-col>
