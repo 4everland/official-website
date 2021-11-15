@@ -74,7 +74,7 @@ export default {
         {
           label: 'Submit Your Developer Grant Application Here',
           img: require('@/assets/imgs/grants/process/date.png'),
-          link: 'https://forms.gle/iMaFNYdyjWp36msS6',
+          link: 'https://docs.google.com/forms/d/e/1FAIpQLSe57urVpB68gbkUaeHpzDt1hmry_dcUHgIeY1pwc2vVR-00WA/viewform?vc=0&c=0&w=1&flr=0',
         },
         {
           label: 'Project Review',
