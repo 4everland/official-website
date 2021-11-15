@@ -19,7 +19,7 @@
                 <b>START DEPLOYING</b>
               </v-btn>
               <v-btn
-                href="https://forms.gle/iMaFNYdyjWp36msS6"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScjEs1xwbLIlwjQCKTsSb6Yr3dq5BztjXmZ4SYiwXBZncjspQ/viewform"
                 target="_blank"
                 color="#3e4cd0"
                 width="150"
@@ -37,7 +37,7 @@
         <h2>The First Leap</h2>
         <div class="desc-1">
           <p>
-            Since it's launch, 4EVERLAND has provided tens of thousands of
+            Since its launch, 4EVERLAND has provided tens of thousands of
             developers’ project front-ends with permanent storage based on IPFS
             and compatibility options to the http/https protocols along with
             global acceleration services.
