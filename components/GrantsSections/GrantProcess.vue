@@ -67,7 +67,7 @@ export default {
     return {
       list: [
         {
-          label: 'Add Accelerated & Hosted by 4EVERLAND',
+          label: 'Add `Powered by 4EVERLAND`',
           img: require('@/assets/imgs/grants/process/code.png'),
           link: 'showCode',
         },
@@ -89,7 +89,7 @@ export default {
       codeList: [
         {
           type: 'Text',
-          html: `<a href="https://4everland.org" target="blank">Accelerated & Hosted by 4EVERLAND</a>`,
+          html: `<a href="https://4everland.org" target="blank">Powered by 4EVERLAND</a>`,
         },
         {
           type: 'Picture',

@@ -261,7 +261,7 @@ export default {
                   •	Connect your domain name to the project
                 </span>
                 <span class="d-block mb-1">
-                  •	Add the text 'Accelerated & hosted by 4EVERLAND' on your website footer
+                  •	Add the text 'Powered by 4EVERLAND' on your website footer
                 </span>
                  <span class="d-block mb-1">
                   •	 Fill this form: <a href="https://www.4everland.org/firstlanding/grants/" target="_blank" style="text-decoration: none;">https://www.4everland.org/firstlanding/grants/</a>
