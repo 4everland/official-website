@@ -10,7 +10,7 @@
             </div>
             <div class="ml-2 lh-1">
               <div class="fw-b">{{ it.title }}</div>
-              <div class="mt-1 fz-14">
+              <div class="mt-1 fz-14 op-8">
                 {{ it.type }}
               </div>
             </div>
@@ -18,7 +18,7 @@
 
           <v-img height="160" :src="it.cover"></v-img>
 
-          <div class="pa-3 fz-14" style="min-height: 88px">
+          <div class="pa-3 fz-14 op-9" style="min-height: 88px">
             {{ it.desc }}
           </div>
         </a>
