@@ -93,7 +93,9 @@
               </p>
               <p>
                 ● For any queries or doubts please email us to
-                contact@4everland.org.
+                <a href="mailto:contact@4everland.org" class="fl-link-1"
+                  >contact@4everland.org</a
+                >.
               </p>
               <p>
                 ● Join the 4EVERLAND Discord for any help. If you encounter any
@@ -167,7 +169,7 @@ export default {
           intros: [
             `All 4EVERLAND users can participate in this invitation plan. If you have certain projects and developer resources, you can invite developers and project parties to participate in the 'First Leap' program and get corresponding invitation rewards.`,
             'If you successfully invite qualified project parties or individuals to participate, the inviter will receive 10,000 4EVER invitation rewards, you can get your exclusive link <a href="https://hosting.4everland.org/#/user/refer" target="_blank" class="fl-link-1">here</a>.',
-            'Also, you will receive up to 5,000 4EVER clue bonuses for successfully providing the clues of qualified project party to bd@4everland.org. 4EVERLAND team will contact based on the information you submitted.',
+            'Also, you will receive up to 5,000 4EVER clue bonuses for successfully providing the clues of qualified project party to <a href="mailto:bd@4everland.org" class="fl-link-1">bd@4everland.org</a>. 4EVERLAND team will contact based on the information you submitted.',
           ],
           cls: 'r3-bg',
         },
@@ -176,7 +178,7 @@ export default {
         {
           title: 'Developer Grants',
           icon: require('@/assets/imgs/act/firstleap/icon/g1.png'),
-          con: "All projects or individuals participating in the 'First Leap' program, those willing to promote the development of 4EVERLAND through brand, market, technology, community, etc., can apply for the 4EVERLAND Grants and receive up to 1 million 4EVER Grants sponsorship incentives. <a class='fl-link-1' href='https://docs.google.com/forms/d/e/1FAIpQLScjEs1xwbLIlwjQCKTsSb6Yr3dq5BztjXmZ4SYiwXBZncjspQ/viewform' target='_blank'>Apply Now.</a>",
+          con: "All projects or individuals participating in the 'First Leap' program, and those willing to promote the development of 4EVERLAND through brand, market, technology, community, etc., can apply for the 4EVERLAND Grants and receive up to 1 million 4EVER Grants sponsorship incentives. <a class='fl-link-1' href='https://docs.google.com/forms/d/e/1FAIpQLScjEs1xwbLIlwjQCKTsSb6Yr3dq5BztjXmZ4SYiwXBZncjspQ/viewform' target='_blank'>Apply Now.</a>",
           cls: 'g1-bg',
         },
         {

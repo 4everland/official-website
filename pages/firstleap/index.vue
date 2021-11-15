@@ -43,7 +43,7 @@
             global acceleration services.
           </p>
           <p>
-            In order to promote the development of web3, We announce the
+            In order to promote the development of web3, we announce the
             initiation of the 'First Leap' program, provide no less than 15
             million 4EVER and at least $150, 000 rights to encourage outstanding
             projects or individual developers, separate the front-end from
