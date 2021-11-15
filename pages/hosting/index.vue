@@ -5,6 +5,7 @@
     <section-framework />
     <section-customer />
     <hosting-template background="black" />
+    <hosting-faq />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import HostingSteps from '@/components/HostingSections/SectionSteps.vue'
 import SectionFramework from '@/components/IndexSections/SectionFramework.vue'
 import SectionCustomer from '@/components/HostingSections/SectionCustomer.vue'
 import HostingTemplate from '@/components/HostingSections/HostingTemplate.vue'
+import HostingFaq from '@/components/HostingSections/HostingFaq.vue'
 
 export default {
   components: {
@@ -22,6 +24,7 @@ export default {
     SectionFramework,
     SectionCustomer,
     HostingTemplate,
+    HostingFaq,
   },
   methods: {},
 }
