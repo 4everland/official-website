@@ -11,7 +11,7 @@
     <section-steps />
     <section-roadmap />
     <section-partners />
-    <section-future />
+    <section-future ref="scrollFuture" />
   </div>
 </template>
 
@@ -43,11 +43,7 @@ export default {
     SectionPartners,
     SectionFuture,
   },
-  methods: {
-    onscroll() {
-      console.log(111)
-    },
-  },
+  methods: {},
 }
 </script>
 <style scoped>

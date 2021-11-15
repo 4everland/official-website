@@ -18,12 +18,14 @@
               class="hidden-sm-and-down nav-btn text-subtitle-1"
               plain
               nuxt
+              replace
               :to="item.link"
               :href="item.href"
               :target="item.target"
               :ripple="false"
               v-bind="attrs"
               v-on="on"
+              @click="item.event"
             >
               <span>
                 {{ item.text }}
@@ -136,20 +138,6 @@ export default {
       showDrawer: false,
       links: [
         {
-          text: 'Ecosystem',
-          link: '',
-          childs: [
-            {
-              text: 'Dapps',
-              link: '/firstlanding/dapps',
-            },
-            {
-              text: ' Developer Grants',
-              link: '/grants',
-            },
-          ],
-        },
-        {
           text: 'Developer',
           link: '',
           childs: [
@@ -180,12 +168,30 @@ export default {
           ],
         },
         {
+          text: 'Ecosystem',
+          link: '',
+          childs: [
+            {
+              text: 'Dapps',
+              link: '/firstlanding/dapps',
+            },
+            {
+              text: ' Developer Grants',
+              link: '/grants',
+            },
+          ],
+        },
+        {
           text: 'Blogs',
           link: '/blog',
         },
         {
           text: 'Contact',
-          link: '/#footer',
+          event(e) {
+            // const t = document.body.clientHeight
+            // window.scroll({ top: t, left: 0, behavior: 'smooth' })
+            window.location.replace('/#footer')
+          },
         },
         {
           text: 'First Leap',

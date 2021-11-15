@@ -66,6 +66,7 @@ export default {
         loop: true,
         autoplay: true,
         slidesPerView: 3,
+        speed: 2500,
         navigation: {
           prevEl: '.swiper-button-prev',
           nextEl: '.swiper-button-next',
