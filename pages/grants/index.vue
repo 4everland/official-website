@@ -2,7 +2,7 @@
   <v-theme-provider light>
     <div class="page-grants">
       <div class="banner pos-r">
-        <v-img :src="banner" min-height="450" max-height="700" />
+        <v-img :src="banner" min-height="450" max-height="600" />
         <div class="pos-btm">
           <div class="wrap-1">
             <div class="con-3">

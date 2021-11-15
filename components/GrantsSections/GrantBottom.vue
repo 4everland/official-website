@@ -3,7 +3,7 @@
     <h2>Grantee Use Cases</h2>
     <v-row>
       <v-col v-for="(it, i) in granteeList" :key="i" cols="6" md="3">
-        <a class="d-b bd-b1 bg-black" :href="it.url" target="_blank">
+        <a class="d-b bd-b1 bg-black hover-1" :href="it.url" target="_blank">
           <div class="d-flex al-c pa-3">
             <div class="bdrs-100 shrink-0 ov-h">
               <v-img width="40" :src="it.logo"></v-img>
