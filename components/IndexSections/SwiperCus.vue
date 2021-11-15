@@ -33,7 +33,7 @@ export default {
         },
         {
           name: 'DOGECOIN',
-          desc: 'Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.',
+          desc: 'Dogecoin is an open source peer-to-peer digital currency,favored by Shiba Inus worldwide.',
           href: 'https://dogecoin.4everland.app/',
           img: require('@/assets/imgs/index/customer/dogecoin.png'),
         },
@@ -57,7 +57,7 @@ export default {
         },
         {
           name: 'MORE',
-          desc: '30,000+ Dapps, including Metaverse, DeFi, GameFi, NFT, etc.',
+          desc: '30,000+ Dapps,including Metaverse,DeFi,GameFi,NFT,etc.',
           href: 'https://4everland.org/firstlanding/dapps',
           img: require('@/assets/imgs/index/customer/more.png'),
         },

@@ -64,10 +64,12 @@
           target="_blank"
           class="hidden-sm-and-down transparent"
           tile
+          text
+          plain
         >
           <img
             src="@/assets/imgs/common/hosting-btn.png"
-            width="160px"
+            width="140px"
             alt=""
           />
         </v-btn>
@@ -135,7 +137,7 @@ export default {
       links: [
         {
           text: 'Ecosystem',
-          link: '/',
+          link: '',
           childs: [
             {
               text: 'Dapps',
@@ -149,7 +151,7 @@ export default {
         },
         {
           text: 'Developer',
-          link: '/hosting',
+          link: '',
           childs: [
             {
               text: 'Hosting',
@@ -185,6 +187,10 @@ export default {
           text: 'Contact',
           link: '/#footer',
         },
+        {
+          text: 'First Leap',
+          link: '/firstleap',
+        },
       ],
     }
   },
@@ -197,6 +203,9 @@ export default {
 .v-btn--active,
 .nav-btn:hover {
   color: #2a7eed;
+}
+/deep/ .v-btn__content {
+  opacity: 1 !important;
 }
 /deep/ .nav-btn .v-btn__content {
   opacity: 1 !important;

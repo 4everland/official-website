@@ -43,7 +43,11 @@ export default {
     SectionPartners,
     SectionFuture,
   },
-  methods: {},
+  methods: {
+    onscroll() {
+      console.log(111)
+    },
+  },
 }
 </script>
 <style scoped>
