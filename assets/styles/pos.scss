@@ -85,6 +85,7 @@
 .fz-14 { font-size: 14px; }
 .fw-b { font-weight: bold; }
 .op-5 { opacity: .5; }
+.op-8 { opacity: .8; }
 .op-9 { opacity: .9; }
 
 .ta-c { text-align: center; }
@@ -102,6 +103,12 @@
   cursor: pointer;
   :hover {
     opacity: .8;
+  }
+}
+ul.plain {
+  padding: 0;
+  li {
+    list-style: none;
   }
 }
 
