@@ -27,7 +27,7 @@ export default {
       list: [
         {
           name: 'UNISWAP',
-          desc: 'Uniswap is the first automated market-making transaction protocol built on the Ethereum',
+          desc: 'Uniswap is the first automated market-making transaction protocol built on the Ethereum.',
           href: 'https://uniswap-org.4everland.app/',
           img: require('@/assets/imgs/index/customer/uniswap.png'),
         },
@@ -39,7 +39,7 @@ export default {
         },
         {
           name: 'ONTOLOGY',
-          desc: 'A blockchain for self-sovereign ID and Data',
+          desc: 'A blockchain for self-sovereign ID and Data.',
           href: 'https://dweb.ont.io/',
           img: require('@/assets/imgs/index/customer/ontology.png'),
         },
@@ -51,13 +51,13 @@ export default {
         },
         {
           name: 'BELLA',
-          desc: 'Bella is a suite of DeFi Products to make Crypto Banking Simple.',
+          desc: 'Bella is a Suite of DeFi Products to make Crypto Banking Simple.',
           href: 'https://dweb.bella.fi/',
           img: require('@/assets/imgs/index/customer/bella.png'),
         },
         {
           name: 'MORE',
-          desc: '30,000+ Dapps, including Metaverse, DeFi, GameFi, NFT, etc...',
+          desc: '30,000+ Dapps, including Metaverse, DeFi, GameFi, NFT, etc.',
           href: 'https://4everland.org/firstlanding/dapps',
           img: require('@/assets/imgs/index/customer/more.png'),
         },
