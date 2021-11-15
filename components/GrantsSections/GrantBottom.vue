@@ -35,7 +35,7 @@
       <div class="mt-10">
         <a
           class="grant-btn1 hover-1"
-          href="https://forms.gle/iMaFNYdyjWp36msS6"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSe57urVpB68gbkUaeHpzDt1hmry_dcUHgIeY1pwc2vVR-00WA/viewform?vc=0&c=0&w=1&flr=0"
           target="_blank"
           >SUBMIT YOUR DEVELOPER GRANT APPLICATION HERE</a
         >
