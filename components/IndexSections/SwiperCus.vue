@@ -127,9 +127,9 @@ export default {
 }
 .swiper-button-prev,
 .swiper-button-next {
-  width: 21px;
-  height: 36px;
-  background-size: 21px 36px;
+  width: 10px;
+  height: 18px;
+  background-size: 10px 18px;
   position: absolute;
 }
 .swiper-button-prev {

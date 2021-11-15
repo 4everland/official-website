@@ -53,16 +53,16 @@ export default {
           to: '/firstlanding',
         },
         {
+          src: require('@/assets/imgs/index/banner4.jpg'),
+          to: '/firstleap',
+        },
+        {
           src: require('@/assets/imgs/index/banner2.jpg'),
           href: this.hosting_web,
         },
         {
           src: require('@/assets/imgs/index/banner3.jpg'),
           to: '/grants',
-        },
-        {
-          src: require('@/assets/imgs/index/banner4.jpg'),
-          to: '/firstleap',
         },
       ],
     }

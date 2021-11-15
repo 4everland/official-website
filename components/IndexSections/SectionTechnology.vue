@@ -71,4 +71,10 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.main {
+  padding-top: 300px;
+}
+.main-text {
+  font-size: 16px !important;
+}
 </style>
