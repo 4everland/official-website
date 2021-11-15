@@ -3,7 +3,7 @@
     <v-container class="my-16">
       <v-row>
         <v-col cols="12" md="12" lg="12">
-          <div class="block-titel">Welcome to the new internet - Web 3</div>
+          <div class="block-titel">Welcome to the new internet - Web 3.0</div>
           <div class="block-text">
             4EVERLAND Can Help You Rebuild the Web’s Foundation Layer and
             Transition to a New and Unbiased Web 3.0.

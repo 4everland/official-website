@@ -15,8 +15,8 @@
             class="text-body-2 mt-16 grey--text text--lighten-1"
             style="max-width: 500px"
           >
-            4EVERLAND has everything you need to host fast , efficient, and
-            censorship-proof websites or DApps on the web3.0.
+            4EVERLAND has everything you need to host fast, efficient, and
+            censorship-proof websites or DApps on the Web3.0.
           </div>
           <p class="mt-8">
             <v-btn
