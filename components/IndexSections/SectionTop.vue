@@ -11,7 +11,6 @@
           v-model="model"
           cycle
           dark
-          reverse
           hide-delimiter-background
           hide-delimiters
           interval="5000"
@@ -20,17 +19,12 @@
           <v-carousel-item
             v-for="(item, i) in banner"
             :key="i"
-            class="text-center"
+            class="text-center cursor-pointer"
+            :src="item.src"
             :href="item.href"
             :to="item.to"
             :target="item.href ? '_blank' : ''"
           >
-            <img
-              class="cursor-pointer"
-              alt="top-banner"
-              style="width: 100%"
-              :src="item.src"
-            />
           </v-carousel-item>
         </v-carousel>
       </v-col>
@@ -66,10 +60,10 @@ export default {
           src: require('@/assets/imgs/index/banner3.jpg'),
           to: '/grants',
         },
-        // {
-        //   src: require('@/assets/imgs/index/banner4.jpg'),
-        //   to: '/grants',
-        // },
+        {
+          src: require('@/assets/imgs/index/banner4.jpg'),
+          to: '/firstleap',
+        },
       ],
     }
   },
