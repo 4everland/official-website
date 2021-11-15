@@ -43,18 +43,18 @@
             <v-expansion-panel-content>
               <ul>
                 <li>
-                  Globally accelerated: A consensus-driven Swarm network for
-                  massively increased network throughput and availability,
-                  facilitating access to Web 3.0 for developers worldwide in a
-                  more efficient and faster way.
+                  Globally Acceleration: The consensus-driven Swarm network,
+                  improves network throughput massively and high availability,
+                  provides more efficient and fast Web3.0 access for global
+                  developers.
                 </li>
                 <li>
-                  Privacy protection: 4EVERLAND has no KYC requirements, user
-                  anonymity, and data security.
+                  Privacy Protection: 4EVERLAND does not require KYC, that
+                  ensures user anonymity and data security.
                 </li>
                 <li>
-                  Distributed storage: 4EVERLAND has built a Swarm distributed
-                  storage network to ensure data availability and reliability.
+                  Distributed Storage: 4EVERLAND builds a Swarm distributed
+                  storage network to achieve data availability and reliability.
                 </li>
               </ul>
             </v-expansion-panel-content>
