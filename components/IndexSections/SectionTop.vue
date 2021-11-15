@@ -58,11 +58,11 @@ export default {
         },
         {
           src: require('@/assets/imgs/index/banner3.png'),
-          href: this.hosting_web,
+          to: '/grants',
         },
         {
           src: require('@/assets/imgs/index/banner4.png'),
-          to: '/grants',
+          href: this.hosting_web,
         },
       ],
     }
