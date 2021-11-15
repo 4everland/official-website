@@ -52,9 +52,9 @@ export default {
     return {
       tab: 0,
       items: [
-        { img: require('@/assets/imgs/index/banner1.jpg') },
-        { img: require('@/assets/imgs/index/banner1.jpg') },
-        { img: require('@/assets/imgs/index/banner1.jpg') },
+        { img: require('@/assets/imgs/index/step/step1.gif') },
+        { img: require('@/assets/imgs/index/step/step2.gif') },
+        { img: require('@/assets/imgs/index/step/step3.gif') },
       ],
     }
   },
