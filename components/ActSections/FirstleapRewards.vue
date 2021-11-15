@@ -178,7 +178,7 @@ export default {
         {
           title: 'Developer Grants',
           icon: require('@/assets/imgs/act/firstleap/icon/g1.png'),
-          con: "All projects or individuals participating in the 'First Leap' program, and those willing to promote the development of 4EVERLAND through brand, market, technology, community, etc., can apply for the 4EVERLAND Grants and receive up to 1 million 4EVER Grants sponsorship incentives. <a class='fl-link-1' href='https://docs.google.com/forms/d/e/1FAIpQLScjEs1xwbLIlwjQCKTsSb6Yr3dq5BztjXmZ4SYiwXBZncjspQ/viewform' target='_blank'>Apply Now.</a>",
+          con: "All projects or individuals participating in the 'First Leap' program, and those willing to promote the development of 4EVERLAND through brand, market, technology, community, etc., can apply for the 4EVERLAND Grants and receive up to 1 million 4EVER Grants sponsorship incentives. <a class='fl-link-1' href='https://docs.google.com/forms/d/e/1FAIpQLSe57urVpB68gbkUaeHpzDt1hmry_dcUHgIeY1pwc2vVR-00WA/viewform?vc=0&c=0&w=1&flr=0' target='_blank'>Apply Now.</a>",
           cls: 'g1-bg',
         },
         {
