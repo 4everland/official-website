@@ -25,7 +25,7 @@
 
     <div class="wrap-1 pb-0">
       <div class="con-1">
-        <h2>Grants & Bug Bounty</h2>
+        <h2 class="pb-3">Grants & Bug Bounty</h2>
       </div>
     </div>
 

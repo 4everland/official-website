@@ -86,7 +86,7 @@
           </ul>
         </div>
 
-        <h2>Rewards</h2>
+        <h2 style="margin-bottom: 12px; padding-bottom: 30px">Rewards</h2>
       </div>
     </div>
 
