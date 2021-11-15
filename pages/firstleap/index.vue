@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="wrap-1 pb-0">
+    <div class="wrap-1 pb-0 s2-bg">
       <div class="con-1">
         <h2>The First Leap</h2>
         <div class="desc-1">
@@ -110,6 +110,11 @@ export default {
 </script>
 
 <style lang="scss">
+.s2-bg {
+  background: url('@/assets/imgs/act/firstleap/s2-bg.png') right bottom
+    no-repeat;
+  background-size: contain;
+}
 .first-leap {
   h2 {
     font-size: 26px;
