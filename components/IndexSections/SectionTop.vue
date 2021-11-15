@@ -66,10 +66,10 @@ export default {
           src: require('@/assets/imgs/index/banner3.jpg'),
           to: '/grants',
         },
-        {
-          src: require('@/assets/imgs/index/banner4.jpg'),
-          to: '/grants',
-        },
+        // {
+        //   src: require('@/assets/imgs/index/banner4.jpg'),
+        //   to: '/grants',
+        // },
       ],
     }
   },

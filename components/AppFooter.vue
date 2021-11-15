@@ -72,7 +72,7 @@
               class="d-flex flex-column"
             >
               <div class="ml-4 mb-4 text-h6">{{ item.name }}</div>
-              <div v-for="link in item.list" :key="link.name" class="mb-4">
+              <div v-for="link in item.list" :key="link.name">
                 <v-btn
                   :to="link.to"
                   :href="link.href"

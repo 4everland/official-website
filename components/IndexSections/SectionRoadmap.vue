@@ -34,6 +34,7 @@
               </div>
               <div v-if="version == 2" class="map-list-box">
                 <div class="map-list-item list-v1">
+                  <div class="left"></div>
                   <div class="right">
                     Upgrade commercialization capabilities, launch in-depth data
                     analysis systems, Web3 website development templates,
@@ -44,6 +45,7 @@
               </div>
               <div v-if="version == 3" class="map-list-box">
                 <div class="map-list-item list-v1">
+                  <div class="left"></div>
                   <div class="right">
                     Launch virtual machine container, acquire capability of
                     Web3.0 cloud computing
