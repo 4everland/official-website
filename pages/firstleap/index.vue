@@ -67,15 +67,22 @@
           <p>You will make a good fit if you:</p>
           <ul>
             <li>
-              ✅ Have been officially invited by the 4EVERLAND team, or are the
-              projects or individual applicants who have certain influence.
+              <span class="mr-3">✅</span>Have been officially invited by the
+              4EVERLAND team, or are the projects or individual applicants who
+              have certain influence.
             </li>
             <li>
-              ✅ Are the project member or individual owner of the deployed
-              webpage.
+              <span class="mr-3">✅</span>Are the project member or individual
+              owner of the deployed webpage.
             </li>
-            <li>✅ Have completed the front-end deployment on 4EVERLAND.</li>
-            <li>✅ Have reliable access data on the deployed webpage.</li>
+            <li>
+              <span class="mr-3">✅</span>Have completed the front-end
+              deployment on 4EVERLAND.
+            </li>
+            <li>
+              <span class="mr-3">✅</span>Have reliable access data on the
+              deployed webpage.
+            </li>
           </ul>
         </div>
 
