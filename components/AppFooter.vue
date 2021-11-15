@@ -343,6 +343,9 @@ input:-ms-input-placeholder {
 .subscribe-input input:focus {
   outline: none;
 }
+.v-btn {
+  text-transform: none !important;
+}
 .copy-right {
   padding: 30px 0;
   text-align: right;
