@@ -36,10 +36,10 @@
         <div class="con-1">
           <div class="ta-c">
             <a
-              class="grant-btn1"
+              class="grant-btn1 hover-1"
               href="https://forms.gle/iMaFNYdyjWp36msS6"
               target="_blank"
-              >SUBMIT DEVELOPER GRANT APPLCATION</a
+              >SUBMIT YOUR DEVELOPER GRANT APPLICATION HERE</a
             >
           </div>
 
@@ -57,7 +57,7 @@
             </v-col>
           </v-row>
 
-          <h2>Focus Areas</h2>
+          <h2>Support & Focus Areas</h2>
           <div class="ta-c">
             <v-img :src="focusImg" max-width="600" style="margin: auto" />
           </div>

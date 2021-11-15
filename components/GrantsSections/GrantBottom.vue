@@ -34,10 +34,10 @@
       <div class="mt-1">are all welcome to submit applications.</div>
       <div class="mt-10">
         <a
-          class="grant-btn1"
+          class="grant-btn1 hover-1"
           href="https://forms.gle/iMaFNYdyjWp36msS6"
           target="_blank"
-          >SUBMIT DEVELOPER GRANT APPLCATION</a
+          >SUBMIT YOUR DEVELOPER GRANT APPLICATION HERE</a
         >
       </div>
       <div class="mt-3">
