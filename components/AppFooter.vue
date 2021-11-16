@@ -30,7 +30,7 @@
         <v-col cols="12" md="6" lg="6">
           <div class="footer-titele font-weight-black">Join the community</div>
           <div
-            class="d-flex flex-wrap mt-12"
+            class="mt-12"
             :class="{ 'justify-center': $vuetify.breakpoint.smAndDown }"
           >
             <v-btn

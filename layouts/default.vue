@@ -27,7 +27,14 @@
               v-on="on"
               @click="item.event"
             >
-              <span>
+              <v-img
+                v-if="item.icon"
+                contain
+                width="90"
+                :src="item.icon"
+                alt=""
+              />
+              <span v-else>
                 {{ item.text }}
                 <v-icon v-if="item.childs">{{ mdiChevronDown }}</v-icon>
               </span>
@@ -196,6 +203,7 @@ export default {
         {
           text: 'First Leap',
           link: '/firstleap',
+          icon: require('@/assets/imgs/common/firstleap.png'),
         },
       ],
     }

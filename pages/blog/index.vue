@@ -62,12 +62,12 @@
                 :href="link.link"
                 text
                 icon
-                rounded
-                class="mr-2"
+                class="ma-2"
                 target="_blank"
                 nofollow
               >
-                <v-icon size="18">{{ link.icon }}</v-icon>
+                <!-- <v-icon size="18">{{ link.icon }}</v-icon> -->
+                <v-img width="18" :src="link.icon"></v-img>
               </v-btn>
             </div>
           </div>
@@ -77,14 +77,6 @@
   </v-theme-provider>
 </template>
 <script>
-import {
-  mdiGithub,
-  mdiTwitter,
-  mdiTelegram,
-  mdiReddit,
-  mdiDiscord,
-  mdiEmail,
-} from '@mdi/js'
 export default {
   async asyncData({ $content }) {
     const articles = await $content('articles')
@@ -99,32 +91,32 @@ export default {
     return {
       links: [
         {
-          icon: mdiGithub,
-          link: 'https://github.com/4everland',
+          icon: require('@/assets/imgs/footer/github.png'),
+          href: 'https://github.com/4everland',
         },
         {
-          icon: mdiTwitter,
-          link: 'https://twitter.com/4everland_org',
+          icon: require('@/assets/imgs/footer/twitter.png'),
+          href: 'https://twitter.com/4everland_org',
         },
         {
-          icon: mdiTelegram,
-          link: 'https://t.me/org_4everland',
+          icon: require('@/assets/imgs/footer/telegram.png'),
+          href: 'https://t.me/org_4everland',
         },
         {
-          icon: mdiReddit,
-          link: 'https://www.reddit.com/user/4everland_org/',
+          icon: require('@/assets/imgs/footer/reddit.png'),
+          href: 'https://www.reddit.com/r/4everland/',
         },
         {
-          icon: 'M12,0 C5.3671875,0 0,5.3671875 0,12 C0,18.6328125 5.3671875,24 12,24 C18.6328125,24 24,18.6328125 24,12 C24,5.3671875 18.6328125,0 12,0 Z M9.2953125,17.7140625 L9.2953125,17.7140625 L9.2953125,17.7140625 L5.1046875,15.6609375 C5.0625,15.61875 4.9734375,15.5296875 4.9734375,15.440625 L4.9734375,5.934375 L9.2484375,8.071875 L9.2484375,17.7140625 L9.2953125,17.7140625 Z M9.8203125,13.1765625 L9.8203125,8.859375 L13.659375,15.0984375 L9.8203125,13.1765625 Z M11.521875,10.6453125 L14.4890625,5.8875 L18.8109375,8.0671875 L14.3578125,15.2671875 L11.521875,10.6453125 Z M18.9375,17.7140625 L18.9375,17.7140625 L18.9375,17.7140625 L14.746875,15.6609375 L18.9375,8.859375 L18.9375,17.7140625 Z',
-          link: 'https://4everland.medium.com/',
+          icon: require('@/assets/imgs/footer/medium.png'),
+          href: 'https://4everland.medium.com/',
         },
         {
-          icon: mdiDiscord,
-          link: 'https://discord.gg/Cun2VpsdjF',
+          icon: require('@/assets/imgs/footer/discord.png'),
+          href: 'https://discord.gg/Cun2VpsdjF',
         },
         {
-          icon: mdiEmail,
-          link: 'mailto:contact@4everland.org',
+          icon: require('@/assets/imgs/footer/email.png'),
+          href: 'mailto:contact@4everland.org',
         },
       ],
     }

@@ -26,10 +26,10 @@
     </v-row>
     <v-row>
       <v-col
-        v-for="item in list"
-        :key="item.title"
+        v-for="(item, index) in list"
+        :key="index"
         class="border-box"
-        cols="12"
+        cols="6"
         md="3"
         lg="3"
       >

@@ -17,7 +17,7 @@
         v-for="item in list"
         :key="item.title"
         class="border-box"
-        cols="12"
+        cols="6"
         md="4"
         lg="4"
       >
