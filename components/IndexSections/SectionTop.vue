@@ -2,7 +2,7 @@
   <div id="banner">
     <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
       <v-col cols="12" md="12" lg="12">
-        <swiper :options="swiperOption" :key="$vuetify.breakpoint.smAndDown">
+        <swiper :key="$vuetify.breakpoint.smAndDown" :options="swiperOption">
           <swiper-slide
             v-for="(item, index) in banner"
             :key="index"

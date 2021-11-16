@@ -14,6 +14,13 @@
     color: #fff;
     text-align: center;
   }
+  @media (max-width: 960px) {
+    .block-titel {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+
   .block-text {
     font-size: 18px;
     color: #b1b6bb;

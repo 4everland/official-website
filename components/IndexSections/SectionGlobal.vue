@@ -35,8 +35,15 @@
       >
         <div class="win py-8">
           <div class="main text-center">
-            <div class="main-num">{{ item.title }}</div>
-            <div class="main-text">{{ item.text }}</div>
+            <div
+              class="main-num"
+              :style="$vuetify.breakpoint.smAndDown ? 'font-size:40px' : ''"
+            >
+              {{ item.title }}
+            </div>
+            <div class="main-text">
+              {{ item.text }}
+            </div>
           </div>
         </div>
       </v-col>
