@@ -207,11 +207,11 @@ export default {
           title: 'Medium',
         },
         {
-          href: 'https://discord.gg/sxtHDvvpuT',
+          href: 'https://discord.com/invite/Cun2VpsdjF',
           title: 'Discord',
         },
         {
-          href: 'https://www.reddit.com/user/4everland_org/',
+          href: 'https://www.reddit.com/r/4everland/',
           title: 'Reddit',
         },
         {
