@@ -18,6 +18,7 @@
         <v-col cols="12" md="6" lg="6">
           <video
             controls
+            preload="meta"
             class="video-play"
             src="https://storage.4everland.app/4EVERLAND.mp4"
           ></video>

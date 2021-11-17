@@ -48,9 +48,10 @@ export default {
         },
       ],
       swiperOption: {
-        loop: true,
         speed: 1000,
-        autoplay: true,
+        autoplay: {
+          disableOnInteraction: false,
+        },
         effect: 'fade',
         pagination: {
           el: '.swiper-pagination',
