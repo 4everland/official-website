@@ -30,9 +30,9 @@ export default {
         {
           img: require('@/assets/imgs/index/partners/ipfs.png'),
         },
-        {
-          img: require('@/assets/imgs/index/partners/ethereum.png'),
-        },
+        // {
+        //   img: require('@/assets/imgs/index/partners/ethereum.png'),
+        // },
         {
           img: require('@/assets/imgs/index/partners/filecoin.png'),
         },
