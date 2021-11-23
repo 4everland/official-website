@@ -9,10 +9,18 @@
             class="swiper-slide"
           >
             <nuxt-link v-if="item.to" :to="item.to">
-              <v-img contain width="100%" :src="item.src" />
+              <v-img
+                contain
+                width="100%"
+                :src="$vuetify.breakpoint.smAndDown ? item.srcMobile : item.src"
+              />
             </nuxt-link>
             <a v-else :href="item.href" target="_blank">
-              <v-img contain width="100%" :src="item.src" />
+              <v-img
+                contain
+                width="100%"
+                :src="$vuetify.breakpoint.smAndDown ? item.srcMobile : item.src"
+              />
             </a>
           </swiper-slide>
           <div
@@ -32,18 +40,25 @@ export default {
       banner: [
         {
           src: require('@/assets/imgs/index/banner1.png'),
+          srcMobile: require('@/assets/imgs/index/mbanner1.png'),
           to: '/firstlanding',
         },
         {
           src: require('@/assets/imgs/index/banner2.png'),
+          srcMobile: require('@/assets/imgs/index/mbanner2.png'),
+
           to: '/firstleap',
         },
         {
           src: require('@/assets/imgs/index/banner3.png'),
+          srcMobile: require('@/assets/imgs/index/mbanner3.png'),
+
           to: '/grants',
         },
         {
           src: require('@/assets/imgs/index/banner4.png'),
+          srcMobile: require('@/assets/imgs/index/mbanner4.png'),
+
           href: this.hosting_web,
         },
       ],

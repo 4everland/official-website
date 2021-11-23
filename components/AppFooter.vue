@@ -5,7 +5,7 @@
         <v-col cols="12" md="6" lg="6">
           <div class="footer-titele font-weight-black">Stay in the loop</div>
           <div class="footer-text mt-12">
-            Subscribe to the newsletter to hear about Polkadot updates and
+            Subscribe to the newsletter to hear about 4EVERLAND updates and
             events.
           </div>
           <div class="subscribe-input mt-12">

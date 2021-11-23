@@ -1,5 +1,4 @@
 import colors from 'vuetify/es5/util/colors'
-import axios from 'axios'
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`,
 })
