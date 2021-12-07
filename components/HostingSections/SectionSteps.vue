@@ -24,7 +24,12 @@
                 <v-img :src="item.img"></v-img>
               </v-col>
               <v-col class="step-box btn-box" cols="12" md="5" lg="5">
-                <v-btn href="/#video" class="usage-btn mb-8" height="60" tile
+                <v-btn
+                  href="https://youtu.be/7D9MuVk6NNA"
+                  target="_blank"
+                  class="usage-btn mb-8"
+                  height="60"
+                  tile
                   >USAGE VIDEO</v-btn
                 >
                 <!-- <v-btn

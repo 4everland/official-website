@@ -138,6 +138,10 @@ export default {
           icon: require('@/assets/imgs/footer/email.png'),
           href: 'mailto:contact@4everland.org',
         },
+        {
+          icon: require('@/assets/imgs/footer/youtube.png'),
+          href: 'https://www.youtube.com/channel/UC9gDft8jnTt_1yrtLfsUq0w',
+        },
       ],
       project: [
         {
