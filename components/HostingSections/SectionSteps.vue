@@ -45,6 +45,26 @@
           </v-tab-item>
         </v-tabs-items>
       </v-row>
+      <v-row class="mt-16">
+        <v-col cols="12" md="12" lg="12">
+          <div class="block-titel">
+            Control the 4EVERLAND Hosting Suite With our CLI
+          </div>
+        </v-col>
+        <v-col class="step-box ma-auto mt-10" cols="12" md="7" lg="7">
+          <v-img :src="cliGif"></v-img>
+        </v-col>
+        <v-col class="text-center mt-16" cols="12">
+          <v-btn
+            href="https://docs.hosting.4everland.org/cli/"
+            target="_blank"
+            tile
+            class="usage-btn"
+            height="60"
+            >VIEW DOCS</v-btn
+          >
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
@@ -59,6 +79,7 @@ export default {
         { img: require('@/assets/imgs/index/step/step2.gif') },
         { img: require('@/assets/imgs/index/step/step3.gif') },
       ],
+      cliGif: require('@/assets/imgs/index/step/cli.gif'),
     }
   },
 }
