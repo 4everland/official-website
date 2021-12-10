@@ -25,7 +25,15 @@
               <v-col class="step-box" cols="12" md="7" lg="7">
                 <v-img :src="item.img"></v-img>
               </v-col>
-              <v-col class="step-box btn-box" cols="12" md="5" lg="5">
+              <v-col
+                class="step-box btn-box"
+                :style="
+                  $vuetify.breakpoint.smAndDown ? 'align-items: center;' : ''
+                "
+                cols="12"
+                md="5"
+                lg="5"
+              >
                 <v-btn
                   href="https://youtu.be/7D9MuVk6NNA"
                   target="_blank"
@@ -47,6 +55,31 @@
           </v-tab-item>
         </v-tabs-items>
       </v-row>
+      <v-row class="mt-16">
+        <v-col cols="12" md="12" lg="12">
+          <div class="block-titel">
+            Control the 4EVERLAND Hosting Suite With our CLI
+          </div>
+          <div class="block-text">
+            4EVERLAND also supports command-line interface (CLI) that enables
+            interaction with the platform using a terminal or automated system.
+          </div>
+        </v-col>
+
+        <v-col class="step-box ma-auto mt-10" cols="12" md="7" lg="7">
+          <v-img :src="cliGif"></v-img>
+        </v-col>
+        <v-col class="text-center mt-16" cols="12">
+          <v-btn
+            href="https://docs.hosting.4everland.org/cli/"
+            target="_blank"
+            tile
+            class="usage-btn"
+            height="60"
+            >VIEW DOCS</v-btn
+          >
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
@@ -61,6 +94,7 @@ export default {
         { img: require('@/assets/imgs/index/step/step2.gif') },
         { img: require('@/assets/imgs/index/step/step3.gif') },
       ],
+      cliGif: require('@/assets/imgs/index/step/cli.gif'),
     }
   },
 }
@@ -72,7 +106,6 @@ export default {
 /deep/ .v-tabs-slider {
   background: linear-gradient(-90deg, #ce7cff, #2e9dfd);
 }
-
 .step-box {
   background-color: #161616;
 }
