@@ -13,8 +13,6 @@
       </v-row>
       <v-row>
         <v-tabs v-model="tab" background-color="transparent">
-          <!-- <v-tabs-slider color="yellow"></v-tabs-slider> -->
-
           <v-tab :key="0">1. Connect your GitHub</v-tab>
           <v-tab :key="1">2.Add your build setting</v-tab>
           <v-tab :key="2">3. Deploy your site</v-tab>
