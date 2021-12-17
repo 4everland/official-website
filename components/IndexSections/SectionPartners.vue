@@ -40,6 +40,9 @@ export default {
           img: require('@/assets/imgs/index/partners/polygon.png'),
         },
         {
+          img: require('@/assets/imgs/index/partners/near.png'),
+        },
+        {
           img: require('@/assets/imgs/index/partners/js13kgames.png'),
         },
         {
