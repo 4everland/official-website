@@ -66,6 +66,7 @@ export default {
         loop: true,
         autoplay: true,
         slidesPerView: 3,
+        centeredSlides: true,
         speed: 2500,
         navigation: {
           prevEl: '.swiper-button-prev',
@@ -100,12 +101,9 @@ export default {
   padding-top: 120px;
   background-color: #333;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 20px auto;
   cursor: pointer;
-  &:hover {
-    box-shadow: 0 0 30px rgba(72, 163, 255, 0.35) inset,
-      0 0 30px rgba(0, 178, 249, 0.3);
-  }
+
   .img-box {
     width: 70px;
     height: 70px;
@@ -120,6 +118,12 @@ export default {
   }
   .desc {
     font-size: 14px;
+  }
+}
+.swiper-slide-active {
+  .customer-item {
+    box-shadow: 0 0 10px rgba(128, 176, 255, 0.35) inset,
+      0 0 20px rgba(130, 179, 255, 1);
   }
 }
 .swiper-content {
