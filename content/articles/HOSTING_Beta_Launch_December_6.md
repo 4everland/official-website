@@ -31,7 +31,7 @@ Developers can now have the option of choosing which pricing plan suits them bes
 
 Details of the services are as follows.
 
-![image](/imgs/blogs/2_HOSTING_Beta_Launch_December_6.png)
+![image](/imgs/blogs/2_HOSTING_Beta_Launch_December_6.jpg)
 
 Please note: Currently we accept DAI, USDC, and USDT payments methods.
 
@@ -43,7 +43,7 @@ From the initial statistics module, Hosting Beta has now been enhanced to analyz
 
 By using this function, you can now analyze the number of users, their regional distribution, the source of their visits, operating system, device type, and other factors to optimize your website, which will increase the number of visitors to your website and improve the publicity for your project.
 
-![image](/imgs/blogs/3_HOSTING_Beta_Launch_December_6.png)
+![image](/imgs/blogs/3_HOSTING_Beta_Launch_December_6.jpg)
 
 ### Better Global Acceleration
 
