@@ -153,6 +153,10 @@ export default {
               link: '/hosting',
             },
             {
+              text: 'Bucket',
+              link: '/bucket',
+            },
+            {
               text: ' WhitePaper',
               href: '/4everland-whitepaper-en.pdf',
               target: '_blank',
