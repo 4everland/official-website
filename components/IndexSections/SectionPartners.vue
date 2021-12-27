@@ -11,7 +11,7 @@
           lg="12"
           class="d-flex justify-center flex-wrap"
         >
-          <div v-for="item in list" :key="item.title" class="ma-4">
+          <div v-for="item in list" :key="item.title" class="ma-4 d-flex">
             <div class="img-box">
               <v-img contain :src="item.img" max-height="50"> </v-img>
             </div>
@@ -50,6 +50,21 @@ export default {
         },
         {
           img: require('@/assets/imgs/index/partners/metis.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/nuls.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/fenbushi.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/bixin.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/mintVentures.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/randomNumber.png'),
         },
       ],
     }

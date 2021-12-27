@@ -3,9 +3,9 @@
     <v-container class="my-16">
       <v-row>
         <v-col cols="12" md="12" lg="12">
-          <div class="block-titel">Welcome to the new internet - Web 3.0</div>
+          <div class="block-titel">Welcome to the new internet - Web 3</div>
           <div class="block-text">
-            4EVERLAND Can Help You Rebuild the Web’s Foundation Layer and
+            4EVERLAND Can Help You Rebuild the Web's Foundation Layer and
             Transition to a New and Unbiased Web 3.0.
           </div>
         </v-col>
@@ -17,14 +17,10 @@
         :key="item.title"
         class="border-box"
         cols="12"
-        md="4"
-        lg="4"
+        md="6"
+        lg="3"
       >
         <div class="win py-16">
-          <!-- <div class="border_corner border_corner_left_top"></div>
-          <div class="border_corner border_corner_right_top"></div>
-          <div class="border_corner border_corner_left_bottom"></div>
-          <div class="border_corner border_corner_right_bottom"></div> -->
           <div class="main text-center">
             <v-img :src="item.img" width="150px" class="ma-auto"> </v-img>
             <div class="main-title mb-8">{{ item.title }}</div>
@@ -45,18 +41,23 @@ export default {
       list: [
         {
           img: require('@/assets/imgs/index/new/new1.png'),
-          title: 'Global Acceleration',
-          desc: 'The consensus-driven Swarm network, improves network throughput massively and high availability, provides more efficient and fast Web3.0 access for global developers.',
+          title: 'Write once, Run any blockchian',
+          desc: "4EVERLAND helps developers to initiate 'write once, run any blockchain' programming paradigm by integrating various public chains and solving the differences between public chain protocols. In addition, it enables developers of each public chain to deploy contracts and front ends once and achieve a fully decentralized technical architecture.",
         },
         {
           img: require('@/assets/imgs/index/new/new2.png'),
-          title: 'Privacy Protection',
-          desc: '4EVERLAND does not require KYC, that ensures user anonymity and data security.',
+          title: 'DApps can be created without centralized components',
+          desc: "4EVERLAND helps developers to initiate 'write once, run any blockchain' programming paradigm by integrating various public chains and solving the differences between public chain protocols. In addition, it enables developers of each public chain to deploy contracts and front ends once and achieve a fully decentralized technical architecture.",
         },
         {
           img: require('@/assets/imgs/index/new/new3.png'),
-          title: 'Distributed Storage',
-          desc: '4EVERLAND builds a Swarm distributed storage network to achieve data availability and reliability.',
+          title: 'Compatible with the traditional development environment',
+          desc: '4EVERLAND provides a series of development and deployment tools, compatible with EVM, WASM, etc., Easily coupled and integrated, so that Web 2.0 developers can quickly complete the development and deployment of DApp without any additional learning costs.',
+        },
+        {
+          img: require('@/assets/imgs/index/new/new4.png'),
+          title: 'Provide multiple ecological resources',
+          desc: '4EVERLAND integrates the underlying public chains of Ethereum, BSC, Solana, Polygon, Filecoin, etc., and supports various forms of inter-blockchain information exchange, so that developers can quickly implement multi-chain deployment and multi-chain communication to enjoy the various ecological resources.',
         },
       ],
     }
