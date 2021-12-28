@@ -221,15 +221,15 @@ export default {
             content: 'Whitepaper published, 4EVERLAND official website launch',
           },
           {
-            color: '#b1b6bb',
+            color: '#00fcff',
             title: 'August 2021',
             content: 'ALPHA Launch',
-            current: true,
           },
           {
-            color: '#b1b6bb',
+            color: '#00fcff',
             title: 'November 2021',
             content: 'BETA Launch',
+            current: true,
           },
           {
             color: '#b1b6bb',
@@ -292,17 +292,17 @@ export default {
             content: 'Whitepaper published, 4EVERLAND official website launch',
           },
           {
-            color: '#8BB7FF',
+            color: '#255BB4',
             title: 'August 2021',
             content:
               '<strong>ALPHA Launch</strong><br/>launch 4EVERLAND HOSTING, enable Dweb hosting function',
-            current: true,
           },
           {
-            color: '#8BB7FF',
+            color: '#255BB4',
             title: 'November 2021',
             content:
               '<strong>BETA Launch</strong><br/>launch gateway node, storage node, and data analysis system',
+            current: true,
           },
           {
             color: '#8BB7FF',
