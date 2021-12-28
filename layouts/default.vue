@@ -156,11 +156,11 @@ export default {
               text: 'Bucket',
               link: '/bucket',
             },
-            {
-              text: ' WhitePaper',
-              href: '/4everland-whitepaper-en.pdf',
-              target: '_blank',
-            },
+            // {
+            //   text: ' WhitePaper',
+            //   href: '/4everland-whitepaper-en.pdf',
+            //   target: '_blank',
+            // },
             {
               text: ' Technical Docs',
               href: 'https://docs.hosting.4everland.org/guide/',
