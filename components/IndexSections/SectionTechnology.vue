@@ -41,7 +41,7 @@ export default {
     return {
       list: [
         {
-          img: require('@/assets/imgs/index/technologies/smart.png'),
+          img: require('@/assets/imgs/index/technologies/gateway.png'),
           title: 'Computing Architecture',
           desc: '4EVERLAND integrates public chains such as Ethereum, BSC, Solana, Polygon, etc., to achieve interconnection and interoperability between multiple chains, helping developers improve development efficiency and to better enjoy the resources of the ecosystem.',
         },
@@ -51,7 +51,7 @@ export default {
           desc: '4EVERLAND is compatible with open protocols such as IPFS, it uses Swarm technology to form a huge storage network of nodes and relies on node collaboration to achieve persistent storage of specific data.',
         },
         {
-          img: require('@/assets/imgs/index/technologies/gateway.png'),
+          img: require('@/assets/imgs/index/technologies/proof.png'),
           title: 'Gateway Architecture',
           desc: "4EVER-GATEWAY helps users to access the nearest storage provider. Developers can quickly identify safe and reliable global acceleration based on 4EVERLAND's simple configuration.",
         },
