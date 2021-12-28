@@ -10,9 +10,8 @@
         >
           <div class="text-h3 mb-16">What is 4EVERLAND?</div>
           <div class="text-h6">
-            4EVERLAND is a Web3.0 cloud computing platform with global
-            acceleration, privacy protection, distributed storage and other
-            technical features.
+            4EVERLAND is a Web 3.0 cloud computing platform that integrates
+            storage, computing, and network core capabilities.
           </div>
         </v-col>
         <v-col cols="12" md="6" lg="6">

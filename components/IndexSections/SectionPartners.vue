@@ -6,15 +6,16 @@
           <div class="block-titel">Partners</div>
         </v-col>
         <v-col
+          v-for="item in list"
+          :key="item.title"
           cols="12"
-          md="12"
-          lg="12"
-          class="d-flex justify-center flex-wrap"
+          md="3"
+          lg="3"
+          xl="2"
+          class="my-4 d-flex justify-center"
         >
-          <div v-for="item in list" :key="item.title" class="ma-4">
-            <div class="img-box">
-              <v-img contain :src="item.img" max-height="50"> </v-img>
-            </div>
+          <div class="img-box">
+            <v-img contain :src="item.img" max-height="50"> </v-img>
           </div>
         </v-col>
       </v-row>
@@ -51,6 +52,21 @@ export default {
         {
           img: require('@/assets/imgs/index/partners/metis.png'),
         },
+        {
+          img: require('@/assets/imgs/index/partners/nuls.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/fenbushi.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/bixin.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/mintVentures.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/randomNumber.png'),
+        },
       ],
     }
   },
@@ -67,5 +83,6 @@ export default {
 .img-box {
   display: flex;
   align-items: center;
+  max-width: 100%;
 }
 </style>

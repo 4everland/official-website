@@ -55,10 +55,11 @@
         <v-col cols="12" md="6" lg="6">
           <div class="footer-titele font-weight-black">4EVERLAND</div>
           <div class="footer-text2 mt-12">
-            4EVERLAND is a Blockchain Technology-Powered cloud computing
-            platform using Web 3.0 that provides globally accelerated, open,
-            permissionless, privacy-protected, ever-lasting storage solution,
-            and network services to all users.
+            4EVERLAND is a Web 3.0 cloud computing platform that integrates
+            storage, computing, and network core capabilities to provide
+            inter-blockchain communication, decentralized front-end, write-once,
+            run any blockchain solutions and web services, enabling developers
+            to build Web 3.0 applications more easily and quickly.
           </div>
         </v-col>
         <v-col cols="12" md="6" lg="6">

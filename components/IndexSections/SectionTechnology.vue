@@ -13,8 +13,8 @@
         :key="item.title"
         class="border-box"
         cols="12"
-        md="3"
-        lg="3"
+        md="4"
+        lg="4"
       >
         <div class="win py-16">
           <div class="main text-center">
@@ -41,24 +41,19 @@ export default {
     return {
       list: [
         {
-          img: require('@/assets/imgs/index/technologies/storage.png'),
-          title: '4EVER-STORAGE',
-          desc: '4EVERLAND forms nodes into a huge storage network through Swarm technology, which relies on node cooperativeness to achieve persistent storage of specific data, and supports horizontal expansion of nodes.',
+          img: require('@/assets/imgs/index/technologies/gateway.png'),
+          title: 'Computing Architecture',
+          desc: '4EVERLAND integrates public chains such as Ethereum, BSC, Solana, Polygon, etc., to achieve interconnection and interoperability between multiple chains, helping developers improve development efficiency and to better enjoy the resources of the ecosystem.',
         },
         {
-          img: require('@/assets/imgs/index/technologies/gateway.png'),
-          title: '4EVER-GATEWAY',
-          desc: 'The gateway nodes contain dynamic DNS, Data I/O, and Cert Manager modules. With simple configuration, developers can achieve safe and reliable global acceleration based on 4EVERLAND quickly.',
+          img: require('@/assets/imgs/index/technologies/storage.png'),
+          title: 'Storage Architecture',
+          desc: '4EVERLAND is compatible with open protocols such as IPFS, it uses Swarm technology to form a huge storage network of nodes and relies on node collaboration to achieve persistent storage of specific data.',
         },
         {
           img: require('@/assets/imgs/index/technologies/proof.png'),
-          title: 'Proof of Storage',
-          desc: '4EVERLAND builds Swarm distributed storage network based on IPFS protocol and proposes storage challenge proof PoSC based on TEE technology, to ensure the availability and reliability of data.',
-        },
-        {
-          img: require('@/assets/imgs/index/technologies/smart.png'),
-          title: 'Smart Contract',
-          desc: 'The smart contracts module of 4EVERLAND mainly includes payment contracts, auction contracts, lending contracts, control contracts,etc. It achieves open, transparent and free decentralized governance through smart contracts.',
+          title: 'Gateway Architecture',
+          desc: "4EVER-GATEWAY helps users to access the nearest storage provider. Developers can quickly identify safe and reliable global acceleration based on 4EVERLAND's simple configuration.",
         },
       ],
     }

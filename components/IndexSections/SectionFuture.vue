@@ -5,15 +5,14 @@
         <v-col cols="12" md="12" lg="12">
           <div class="block-titel mb-4">Where we're going</div>
           <div class="block-text text-left">
-            4EVERLAND is a great place to pursue developers' ideal paradigm for
-            Web 3.0, releasing them from the shackles of centeredness completely
-            and creating more robust and secure services. We hope that more
-            developers and scholars will join us along the way to build a
-            globally accelerated, forever-linked network service for more users
-            using 4EVERLAND, which is a distributed, highly efficient,
-            self-motivated, and low-cost cloud computing network. Witness the
-            radical change in server architecture together and the giant
-            technical leaps in Web3.0.
+            4EVERLAND is a good place to pursue developers' ideal Web 3.0
+            paradigm, freeing them from the constraints of centeredness and
+            creating more robust and secure services. We hope that more
+            developers and scholars will join us on this journey to help build a
+            infrastructure for millions of Web 3.0 developers and applications,
+            as well as to help more users in making a smooth leap from Web 2.0
+            to Web 3.0. Witness the radical shift in server architecture and the
+            massive technical leaps in Web3.0 together.
           </div>
         </v-col>
       </v-row>
