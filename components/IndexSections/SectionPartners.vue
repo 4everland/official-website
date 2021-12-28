@@ -83,5 +83,6 @@ export default {
 .img-box {
   display: flex;
   align-items: center;
+  max-width: 100%;
 }
 </style>
