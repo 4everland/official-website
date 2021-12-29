@@ -204,11 +204,11 @@ export default {
             window.location.replace('/#footer')
           },
         },
-        {
-          text: 'First Leap',
-          link: '/firstleap',
-          icon: require('@/assets/imgs/common/firstleap.png'),
-        },
+        // {
+        //   text: 'First Leap',
+        //   link: '/firstleap',
+        //   icon: require('@/assets/imgs/common/firstleap.png'),
+        // },
       ],
     }
   },
