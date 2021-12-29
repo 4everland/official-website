@@ -22,9 +22,15 @@
       >
         <div class="win py-16">
           <div class="main text-center">
-            <v-img :src="item.img" width="150px" class="ma-auto"> </v-img>
+            <v-img
+              :src="item.img"
+              max-width="150px"
+              height="130px"
+              class="ma-auto"
+            >
+            </v-img>
             <div class="main-title mb-8">{{ item.title }}</div>
-            <div class="main-text">
+            <div class="main-text" style="font-size: 16px">
               {{ item.desc }}
             </div>
           </div>
@@ -67,5 +73,17 @@ export default {
 <style scoped>
 .text-nowrap {
   white-space: nowrap;
+}
+.win {
+  height: 100%;
+}
+.main {
+  height: 100%;
+}
+.main-title {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
