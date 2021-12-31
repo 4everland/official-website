@@ -1,38 +1,151 @@
 <template>
   <div>
     <v-container>
-      <div class="text-h1">Technologies</div>
-
-      <v-row>
-        <v-col cols="12" md="12" lg="12"> </v-col>
-      </v-row>
+      <div class="bucket-block my-16 py-16">
+        <div class="text-h3 tit2 mb-16">
+          Top-Notch Platform for NFT Media Management
+        </div>
+        <v-row>
+          <v-col v-for="item in list" :key="item.tit" cols="12" md="4" lg="4">
+            <div class="img-box mb-10">
+              <v-img
+                contain
+                class="ma-auto"
+                :src="item.img"
+                max-height="250px"
+              ></v-img>
+            </div>
+            <div class="text-h4 item-tit mb-10">{{ item.tit }}</div>
+            <div class="text-h5 item-content">{{ item.content }}</div>
+          </v-col>
+        </v-row>
+      </div>
+      <div class="bucket-block my-16 py-16">
+        <div class="text-h2 tit1 mb-16">
+          BUCKET is Open, Powerful, and Dedicated to You.
+        </div>
+        <div class="text-h3 tit2 mb-16">
+          Upload & Pin Files to IPFS Smoothly
+        </div>
+        <div class="text-h5 desc">
+          Upload your files to IPFS smoothly with our UI, CLI, or SDK. The
+          built-in pinning orchestration in our platform makes uploading and
+          pinning files to IPFS a breeze.
+        </div>
+        <v-row>
+          <v-col v-for="item in imgs" :key="item.name" cols="12" md="4" lg="4">
+            <div class="text-h4 name mt-10">{{ item.name }}</div>
+            <v-img class="ma-auto" :src="item.img" width="100%"></v-img>
+          </v-col>
+        </v-row>
+      </div>
+      <div class="bucket-block my-16 py-16">
+        <div class="text-h3 tit2 mb-16">Get Started for Free</div>
+        <div class="text-h5 desc">
+          4EVERLAND BUCKET UI enables you to upload, pin, manage, view, and drag
+          and drop files. Easily manage your IPFS file requirements from one
+          dashboard.
+        </div>
+        <div class="my-16">
+          <v-img
+            class="ma-auto"
+            :src="require('@/assets/imgs/bucket/build.png')"
+            width="100%"
+            max-width="1000px"
+          ></v-img>
+        </div>
+      </div>
+      <div class="bucket-block my-16">
+        <v-row class="d-flex align-center">
+          <v-col cols="12" md="7" lg="7">
+            <v-img
+              contain
+              :src="require('@/assets/imgs/bucket/build.png')"
+            ></v-img>
+          </v-col>
+          <v-spacer></v-spacer>
+          <v-col cols="12" md="4" lg="4">
+            <div class="text-h3 tit2 mb-16 text-left">
+              Build the next unicorn
+            </div>
+            <div class="text-h5 desc text-left">
+              BUCKET was designed for developers. We offer APIs and SDKs that
+              will empower you whether you're building an app, an NFT
+              marketplace, or everything in between.
+            </div>
+          </v-col>
+        </v-row>
+      </div>
     </v-container>
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {}
+    return {
+      list: [
+        {
+          img: require('@/assets/imgs/bucket/ntf1.png'),
+          tit: 'No restrictions on sharing NFT',
+          content:
+            'Share your NFT anytime, anyway, and anywhere. Designed for you, beautiful, vibrant, and brandable.',
+        },
+        {
+          img: require('@/assets/imgs/bucket/ntf2.png'),
+          tit: 'Fast and reliable',
+          content:
+            'Wait times are the worst part of any encounter. We ensure that NFTs are fast and reliable for everyone.',
+        },
+        {
+          img: require('@/assets/imgs/bucket/ntf3.png'),
+          tit: 'Easy to use',
+          content:
+            'Uploading a file is easy. We are here to support you if you have any questions.',
+        },
+      ],
+      imgs: [
+        {
+          img: require('@/assets/imgs/bucket/cli.png'),
+          name: 'CLI',
+        },
+        {
+          img: require('@/assets/imgs/bucket/ui.png'),
+          name: 'UI',
+        },
+        {
+          img: require('@/assets/imgs/bucket/sdk.png'),
+          name: 'SDK',
+        },
+      ],
+    }
   },
 }
 </script>
 <style scoped>
-.text-nowrap {
-  white-space: nowrap;
+.bucket-block {
+  text-align: center;
 }
-.border-box {
-  background-position: center top;
-  background-size: inherit;
-  background-repeat: no-repeat;
+.tit1 {
+  color: #333;
+  font-weight: bold;
 }
-.border-box1 {
-  height: 300px;
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
+.tit2 {
+  color: #484d72;
 }
-
-.main-text {
-  font-size: 16px !important;
+.desc {
+  color: #666;
+}
+.img-box {
+  max-height: 250px;
+}
+.item-tit {
+  color: #484d72;
+}
+.item-content {
+  color: #666;
+}
+.name {
+  color: #484d72;
+  font-weight: bold;
 }
 </style>
