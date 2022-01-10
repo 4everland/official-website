@@ -53,7 +53,7 @@ export default {
         {
           img: require('@/assets/imgs/index/new/new2.png'),
           title: 'DApps can be created without centralized components',
-          desc: "4EVERLAND helps developers to initiate 'write once, run any blockchain' programming paradigm by integrating various public chains and solving the differences between public chain protocols. In addition, it enables developers of each public chain to deploy contracts and front ends once and achieve a fully decentralized technical architecture.",
+          desc: '4EVERLAND uses a decentralized network system that integrates core services such as storage, computing, and networking, enabling data storage and business logic to run on a decentralized network instead of centralized services like AWS or Google Cloud.',
         },
         {
           img: require('@/assets/imgs/index/new/new3.png'),
