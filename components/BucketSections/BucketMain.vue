@@ -39,7 +39,7 @@
           </v-col>
         </v-row>
       </div>
-      <div class="bucket-block my-16 py-16">
+      <!-- <div class="bucket-block my-16 py-16">
         <div class="text-h3 tit2 mb-16">Get Started for Free</div>
         <div class="text-h5 desc">
           4EVERLAND BUCKET UI enables you to upload, pin, manage, view, and drag
@@ -54,7 +54,7 @@
             max-width="1000px"
           ></v-img>
         </div>
-      </div>
+      </div> -->
       <div class="bucket-block my-16">
         <v-row class="d-flex align-center">
           <v-col cols="12" md="7" lg="7">

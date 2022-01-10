@@ -1,10 +1,12 @@
 <template>
   <div class="banner">
-    <v-img
-      :src="require('~/assets/imgs/bucket/banner.png')"
-      width="100%"
-      contain
-    ></v-img>
+    <a href="https://bucket.4everland.org/" target="_blank">
+      <v-img
+        :src="require('~/assets/imgs/bucket/banner.png')"
+        width="100%"
+        contain
+      ></v-img>
+    </a>
     <!-- <v-container class="con">
       <v-row>
         <v-col class="pa-0" cols="12" md="5" lg="5">
