@@ -22,7 +22,7 @@
       </div>
       <div class="bucket-block my-16 py-16">
         <div class="text-h2 tit1 mb-16">
-          BUCKET is Open, Powerful, and Dedicated to You.
+          BUCKET is Open, Powerful, and Dedicated to You
         </div>
         <div class="text-h3 tit2 mb-16">
           Upload & Pin Files to IPFS Smoothly
@@ -66,7 +66,7 @@
           <v-spacer></v-spacer>
           <v-col cols="12" md="4" lg="4">
             <div class="text-h3 tit2 mb-16 text-left">
-              Build the next unicorn
+              Build the Next Unicorn
             </div>
             <div class="text-h5 desc text-left">
               BUCKET was designed for developers. We offer APIs and SDKs that
