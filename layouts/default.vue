@@ -69,6 +69,18 @@
           <v-icon>{{ mdiMenu }}</v-icon>
         </v-btn>
         <v-btn
+          v-if="$route.name == 'bucket'"
+          href="https://bucket.4everland.org/"
+          target="_blank"
+          class="hidden-sm-and-down transparent"
+          tile
+          text
+          plain
+        >
+          <img src="@/assets/imgs/common/bucket-btn.png" width="140px" alt="" />
+        </v-btn>
+        <v-btn
+          v-else
           :href="hosting_web"
           target="_blank"
           class="hidden-sm-and-down transparent"
@@ -199,18 +211,14 @@ export default {
         {
           text: 'Contact',
           event(e) {
-            // const t = document.body.clientHeight
-            // window.scroll({ top: t, left: 0, behavior: 'smooth' })
             window.location.replace('/#footer')
           },
         },
-        // {
-        //   text: 'First Leap',
-        //   link: '/firstleap',
-        //   icon: require('@/assets/imgs/common/firstleap.png'),
-        // },
       ],
     }
+  },
+  created() {
+    console.log(this.$route.name)
   },
 }
 </script>
