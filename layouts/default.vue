@@ -69,9 +69,8 @@
           <v-icon>{{ mdiMenu }}</v-icon>
         </v-btn>
         <v-btn
-          v-if="$route.name == 'bucket'"
-          href="https://bucket.4everland.org/"
-          target="_blank"
+          v-if="$route.name == 'bucket' || $route.name == 'bucketlogin'"
+          to="/bucketlogin"
           class="hidden-sm-and-down transparent"
           tile
           text
