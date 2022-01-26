@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12">
           <div class="img-box my-16">
-            <a href="https://bucket.4everland.org/#/login" target="_blank">
+            <a href="https://bucket.4everland.org/#/login">
               <v-img
                 contain
                 class="ma-auto"
