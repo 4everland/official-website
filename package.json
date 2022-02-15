@@ -46,7 +46,7 @@
     "nuxt": "^2.15.8",
     "swiper": "^4.1.1",
     "vue-awesome-swiper": "^4.1.1",
-    "vuetify-dialog": "^2.0.16",
+    "vuetify-dialog": "^2.0.17",
     "vuetify-toast-snackbar": "^0.6.1"
   },
   "devDependencies": {
