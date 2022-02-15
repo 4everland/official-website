@@ -116,7 +116,6 @@ export default {
   },
   mounted() {
     const code = this.$route.query.code
-    console.log(code)
     if (code) {
       this.getAuth(code)
     }
@@ -192,7 +191,9 @@ export default {
         this.$axios
           .post(`${authApi}/web3login/${accounts}`, data)
           .then((res) => {
-            location.href = `${BUCKET_HOST}/login?stoken=${res.data.data.stoken}`
+            if (res.data.data.stoken) {
+              location.href = `${BUCKET_HOST}/login?stoken=${res.data.data.stoken}`
+            }
           })
       } catch (e) {
         console.log(e)
