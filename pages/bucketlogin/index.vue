@@ -9,14 +9,14 @@
             </div>
             <div class="text-caption grey--text text--darken-2">
               Store your NFTs and metadata in a fast and convenient way with a
-              web3 aggregator.
+              web3 aggregator
             </div>
             <div class="login-box pt-8 mt-16">
               <div class="text-h5 font-weight-black purple-color mb-5">
                 Connect
               </div>
               <div class="text-caption grey--text text--darken-2 mb-7">
-                Connect your wallet to access the Bucket.
+                Connect your wallet to access the Bucket
               </div>
               <v-btn
                 class="
