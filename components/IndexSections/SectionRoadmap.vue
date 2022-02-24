@@ -65,7 +65,7 @@
               <div class="version" @click="chaneVersion(2)">
                 <span class="dot"> ● </span>
                 <span>V2</span>
-                <span class="text">Enpower Web3.0 developers (2023-2024)</span>
+                <span class="text">Empower Web3.0 developers (2023-2024)</span>
               </div>
               <div class="version" @click="chaneVersion(3)">
                 <span class="dot"> ● </span>
@@ -246,7 +246,7 @@ export default {
         v2: [
           {
             color: '#b1b6bb',
-            title: 'V2 Proton: Enpower Web3.0 developers ',
+            title: 'V2 Proton: Empower Web3.0 developers ',
             plus: '(2023-2024)',
             content:
               'Upgrade commercialization capabilities, launch in-depth data analysis systems, Web3 website development templates, digital marketing systems and more products to provide developers with better services. ',
@@ -320,7 +320,7 @@ export default {
         v2: [
           {
             color: '#D66575',
-            title: 'V2 Proton: Enpower Web3.0 developers ',
+            title: 'V2 Proton: Empower Web3.0 developers ',
             plus: '(2023-2024)',
             content:
               'Upgrade commercialization capabilities, launch in-depth data analysis systems, Web3 website development templates, digital marketing systems and more products to provide developers with better services. ',
@@ -367,7 +367,7 @@ export default {
       }
       if (v == 2) {
         this.version = 2
-        this.defaultTitle = 'V2 Proton: Enpower Web3.0 developers (2023-2024)'
+        this.defaultTitle = 'V2 Proton: Empower Web3.0 developers (2023-2024)'
       }
       if (v == 3) {
         this.version = 3
