@@ -9,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - The PaaS of Web3.0',
+    titleTemplate: '%s - A Cloud Computing Platform of WEB 3.0',
     title: '4EVERLAND',
     meta: [
       { charset: 'utf-8' },
