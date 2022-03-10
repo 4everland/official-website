@@ -14,40 +14,38 @@
           </div>
         </v-col>
       </v-row>
-    </v-container>
-    <v-row>
-      <v-col cols="12" md="12" lg="12" class="pa-0">
-        <!-- <v-img
+      <v-row>
+        <v-col cols="12" md="12" lg="12" class="pa-0">
+          <!-- <v-img
           :src="require('@/assets/imgs/index/global.png')"
           width="100%"
         ></v-img> -->
-        <section-globe />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col
-        v-for="(item, index) in list"
-        :key="index"
-        class="border-box"
-        cols="6"
-        md="3"
-        lg="3"
-      >
-        <div class="win py-8">
-          <div class="main text-center">
-            <div
-              class="main-num"
-              :style="$vuetify.breakpoint.smAndDown ? 'font-size:40px' : ''"
-            >
-              {{ item.title }}
-            </div>
-            <div class="main-text">
-              {{ item.text }}
+          <!-- <section-globe /> -->
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col
+          v-for="(item, index) in list"
+          :key="index"
+          class="border-box"
+          cols="6"
+          md="3"
+          lg="3"
+        >
+          <div class="py-8">
+            <div class="main text-center pa-16">
+              <div
+                class="main-num"
+                :style="$vuetify.breakpoint.smAndDown ? 'font-size:40px' : ''"
+              >
+                {{ item.title }}
+              </div>
+              <div class="main-text" v-html="item.text"></div>
             </div>
           </div>
-        </div>
-      </v-col>
-    </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 <script>
@@ -69,12 +67,12 @@ export default {
           text: 'REQUESTS PER WEEK',
         },
         {
-          title: '10B+',
-          text: 'DATA  SERVED',
-        },
-        {
           title: '99.99%',
           text: 'GUARANTEED UPTIME',
+        },
+        {
+          title: '10B+',
+          text: 'DATA  SERVED <br/> Total Network Storage',
         },
       ],
     }
@@ -89,8 +87,17 @@ export default {
   font-size: 20px;
   font-weight: bold;
 }
+.main {
+  min-height: 300px;
+  background: linear-gradient(120deg, #e1f2ff, #fff6f6);
+}
 .main-num {
-  font-size: 80px;
+  font-size: 72px;
+  font-weight: bold;
+  color: #473b8b;
+}
+.main-text {
+  color: #6c7789;
   font-weight: bold;
 }
 </style>

@@ -8,7 +8,7 @@
     <defs>
       <style>
         .cls-1 {
-          fill: #fff;
+          fill: #494b68;
         }
         .cls-2 {
           fill: url(#gradient_10);

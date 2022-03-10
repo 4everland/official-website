@@ -17,8 +17,8 @@
             />
             <v-btn
               :loading="loading"
-              class="text-h6"
-              color="#3c46d3"
+              class="text-h6 white--text"
+              color="#452C92"
               tile
               max-width="150"
               height="42"
@@ -48,6 +48,9 @@
           </div>
         </v-col>
       </v-row>
+    </v-container>
+    <v-divider class="mt-14"></v-divider>
+    <v-container>
       <v-row
         class="mt-16"
         :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
@@ -90,7 +93,6 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-divider></v-divider>
     <v-container>
       <div class="copy-right">&copy; 2021 4EVERLAND, Inc</div>
     </v-container>
@@ -317,27 +319,27 @@ export default {
 }
 
 input::-webkit-input-placeholder {
-  color: #fff;
+  color: #132642;
   font-size: 18px;
 }
 input::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #fff;
+  color: #132642;
   font-size: 18px;
 }
 input:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #fff;
+  color: #132642;
   font-size: 18px;
 }
 input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #fff;
+  color: #132642;
   font-size: 18px;
 }
 .subscribe-input input {
-  color: #fff;
-  background-color: #666;
+  color: #132642;
+  border: 1px solid #969696;
   font-size: 18px;
   padding-left: 30px;
   max-width: 490px;

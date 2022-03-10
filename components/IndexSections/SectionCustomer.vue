@@ -1,5 +1,5 @@
 <template>
-  <div class="home-block section-customer">
+  <div class="home-block">
     <v-container class="my-16">
       <v-row>
         <v-col cols="12" md="12" lg="12">
@@ -32,7 +32,6 @@ export default {
 <style scoped>
 .section-customer {
   padding: 40px 0;
-  background-image: url('@/assets/imgs/index/customer-bg.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

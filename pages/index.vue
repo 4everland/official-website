@@ -2,7 +2,7 @@
   <div id="home">
     <section-top />
     <section-new />
-    <section-video />
+    <!-- <section-video /> -->
     <section-technology />
     <section-products />
     <section-framework />
@@ -48,6 +48,6 @@ export default {
 </script>
 <style scoped>
 #home {
-  background-color: #161616;
+  /* background-color: #161616; */
 }
 </style>

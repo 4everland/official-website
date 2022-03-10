@@ -55,19 +55,17 @@
       </v-row>
       <v-row class="mt-16">
         <v-col cols="12" md="12" lg="12">
-          <div class="block-titel">
-            Control the 4EVERLAND Hosting Suite With our CLI
-          </div>
+          <div class="block-titel">Easy to deploy</div>
           <div class="block-text">
-            4EVERLAND also supports command-line interface (CLI) that enables
-            interaction with the platform using a terminal or automated system.
+            We also support the CLI command line,To allow for interacting with
+            the platform using the terminal or an automated system
           </div>
         </v-col>
 
-        <v-col class="step-box ma-auto mt-10" cols="12" md="7" lg="7">
+        <v-col class="step-box ma-auto mt-10" cols="12" md="6" lg="6">
           <v-img :src="cliGif"></v-img>
         </v-col>
-        <v-col class="text-center mt-16" cols="12">
+        <v-col class="text-center mt-16 btn-box" cols="12" md="6" lg="6">
           <v-btn
             href="https://docs.hosting.4everland.org/cli/"
             target="_blank"
@@ -104,27 +102,29 @@ export default {
 /deep/ .v-tabs-slider {
   background: linear-gradient(-90deg, #ce7cff, #2e9dfd);
 }
-.step-box {
-  background-color: #161616;
-}
+
 .btn-box {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 .usage-btn {
   width: 300px;
-  height: 60px;
-  background: #3c46d3 !important;
+  height: 88px;
+  background: #452c92 !important;
+  border-radius: 44px;
   font-size: 20px;
   font-weight: bold;
+  color: #fff;
 }
 .start-btn {
   width: 300px;
-  height: 60px;
-  background: linear-gradient(-90deg, #ffb830, #e31313, #ff30f8);
+  height: 88px;
+  background: linear-gradient(90deg, #fdb6fe, #acc0fd, #31adfe);
+  border-radius: 44px;
   font-size: 20px;
   font-weight: bold;
+  color: #fff;
 }
 </style>

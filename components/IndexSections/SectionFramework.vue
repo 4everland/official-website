@@ -14,10 +14,10 @@
           class="d-flex justify-center flex-wrap"
         >
           <div v-for="item in list" :key="item.title" class="text-center pa-12">
-            <div class="img-box mb-4">
+            <div class="img-box ma-auto mb-4">
               <v-img :src="item.img" max-width="86" max-height="86"> </v-img>
             </div>
-            <div>{{ item.title }}</div>
+            <div class="frame-title text-h6">{{ item.title }}</div>
           </div>
         </v-col>
         <!-- <v-col cols="12" md="12" lg="12">
@@ -84,5 +84,8 @@ export default {
   line-height: 86px;
   display: flex;
   align-items: center;
+}
+.farme-titele {
+  color: #6c7789;
 }
 </style>

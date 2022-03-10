@@ -6,31 +6,22 @@
           <div class="block-titel">Technologies</div>
         </v-col>
       </v-row>
-    </v-container>
-    <v-row>
-      <v-col
-        v-for="item in list"
-        :key="item.title"
-        class="border-box"
-        cols="12"
-        md="4"
-        lg="4"
-      >
-        <div class="win py-16">
-          <div class="main text-center">
-            <!-- <v-img :src="item.img" width="150px" class="ma-auto"> </v-img> -->
+      <v-row>
+        <v-col v-for="item in list" :key="item.title" cols="12" md="4" lg="4">
+          <div class="text-center">
             <div
-              class="border-box1"
+              class="border-box pa-14"
               :style="{ backgroundImage: `url('${item.img}')` }"
-            ></div>
-            <div class="main-title mb-8">{{ item.title }}</div>
-            <div class="main-text">
-              {{ item.desc }}
+            >
+              <div class="main-title mb-8">{{ item.title }}</div>
+              <div class="main-text">
+                {{ item.desc }}
+              </div>
             </div>
           </div>
-        </div>
-      </v-col>
-    </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 <script>
@@ -65,18 +56,21 @@ export default {
   white-space: nowrap;
 }
 .border-box {
-  background-position: center top;
-  background-size: inherit;
-  background-repeat: no-repeat;
-}
-.border-box1 {
-  height: 300px;
+  min-height: 480px;
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.main-title {
+  font-size: 30px;
+  color: #132642;
+  font-weight: bold;
 }
 
 .main-text {
-  font-size: 16px !important;
+  font-size: 20px !important;
+  color: #6c7789;
 }
 </style>

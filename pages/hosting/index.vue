@@ -31,6 +31,6 @@ export default {
 </script>
 <style scoped>
 #hosting {
-  background-color: #161616;
+  background-color: #fff;
 }
 </style>

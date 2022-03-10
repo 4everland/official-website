@@ -10,33 +10,45 @@
           </div>
         </v-col>
       </v-row>
-    </v-container>
-    <v-row>
-      <v-col
-        v-for="item in list"
-        :key="item.title"
-        class="border-box"
-        cols="12"
-        md="6"
-        lg="3"
-      >
-        <div class="win py-16">
-          <div class="main text-center">
-            <v-img
-              :src="item.img"
-              max-width="150px"
-              height="130px"
-              class="ma-auto"
-            >
-            </v-img>
+      <v-row>
+        <v-col
+          v-for="(item, index) in list"
+          :key="item.title"
+          cols="12"
+          md="6"
+          lg="6"
+        >
+          <div class="new-item ma-6 py-12 px-16" :class="'new-item-' + index">
             <div class="main-title mb-8">{{ item.title }}</div>
-            <div class="main-text" style="font-size: 16px">
+            <div class="main-text">
               {{ item.desc }}
             </div>
           </div>
-        </div>
-      </v-col>
-    </v-row>
+        </v-col>
+      </v-row>
+      <v-row class="video-box my-16">
+        <v-col
+          class="d-flex flex-column justify-center"
+          cols="12"
+          md="6"
+          lg="6"
+        >
+          <div class="text-h3 mb-16 video-title">What is 4EVERLAND?</div>
+          <div class="text-h5 video-text">
+            4EVERLAND is a Web 3.0 cloud computing platform that integrates
+            storage, computing, and network core capabilities.
+          </div>
+        </v-col>
+        <v-col cols="12" md="6" lg="6">
+          <video
+            controls
+            preload="meta"
+            class="video-play"
+            src="https://storage.4everland.app/4EVERLAND.mp4"
+          ></video>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 <script>
@@ -71,19 +83,61 @@ export default {
 }
 </script>
 <style scoped>
+.home-block {
+  background-image: url('@/assets/imgs/index/video-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .text-nowrap {
   white-space: nowrap;
 }
-.win {
-  height: 100%;
+.new-item {
+  min-height: 320px;
 }
-.main {
-  height: 100%;
+.new-item-0 {
+  background: linear-gradient(-30deg, #e1f2ff, #fff6f6);
+  border-radius: 0 60px 0 60px;
+}
+.new-item-1 {
+  background: linear-gradient(30deg, #e1f2ff, #fff6f6);
+  border-radius: 60px 0 60px 0;
+}
+.new-item-2 {
+  background: linear-gradient(210deg, #e1f2ff, #fff6f6);
+  border-radius: 60px 0 60px 0;
+}
+.new-item-3 {
+  background: linear-gradient(150deg, #e1f2ff, #fff6f6);
+  border-radius: 0 60px 0 60px;
 }
 .main-title {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 24px;
+  color: #132642;
+  font-weight: bold;
+}
+.main-text {
+  font-size: 18px;
+  color: #6c7789;
+}
+.section-video {
+  padding: 90px 0;
+  background-image: url('@/assets/imgs/index/video-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.video-play {
+  max-width: 1200px;
+  width: 100%;
+}
+.video-title {
+  color: #132642;
+  text-align: center;
+}
+.video-text {
+  color: #6c7789;
+  max-width: 570px;
+  margin: 0 auto;
 }
 </style>

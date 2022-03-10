@@ -11,29 +11,30 @@
           </div>
         </v-col>
       </v-row>
-    </v-container>
-    <v-row>
-      <v-col
-        v-for="item in list"
-        :key="item.title"
-        class="border-box"
-        cols="6"
-        md="4"
-        lg="4"
-      >
-        <div class="win py-8">
-          <div class="main text-center">
-            <div class="img-box">
-              <v-img contain :src="item.img" height="128px" class="ma-auto">
-              </v-img>
-            </div>
-            <div class="main-title">{{ item.title }}</div>
-          </div>
-        </div>
-      </v-col>
-    </v-row>
-    <v-container class="my-16">
       <v-row>
+        <v-col
+          v-for="item in list"
+          :key="item.title"
+          class="border-box"
+          cols="12"
+          md="4"
+          lg="4"
+        >
+          <div class="main pa-12">
+            <v-row>
+              <v-col cols="12" md="12" lg="12" xl="6">
+                <div class="img-box">
+                  <v-img contain :src="item.img" height="160px" class="ma-auto">
+                  </v-img></div
+              ></v-col>
+              <v-col cols="12" md="6" lg="6" class="d-flex align-center">
+                <div class="main-title text-h5">{{ item.title }}</div></v-col
+              >
+            </v-row>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row class="my-16">
         <v-col cols="12" md="12" lg="12" class="text-center">
           <v-btn
             :href="hosting_web"
@@ -86,16 +87,26 @@ export default {
 <style scoped>
 .start-btn {
   width: 300px;
-  height: 60px;
-  background: linear-gradient(-90deg, #ffb830, #e31313, #ff30f8);
-  font-size: 20px;
-  font-weight: bold;
+  height: 88px;
+  background: linear-gradient(90deg, #fdb6fe, #acc0fd, #31adfe);
+  border-radius: 44px;
+  font-size: 24px;
+  color: #fff;
 }
-.main .img-box {
-  width: 128px;
-  height: 128px;
+.main {
+  min-height: 380px;
+  background: linear-gradient(120deg, #e1f2ff, #fff6f6);
+  border-radius: 20px;
   display: flex;
   align-items: center;
-  margin: 0 auto;
+}
+.main .img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .main-title {
+  color: #132642;
+  font-weight: bold;
 }
 </style>

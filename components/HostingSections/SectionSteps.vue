@@ -93,7 +93,7 @@ export default {
 }
 
 .step-box {
-  background-color: #161616;
+  background-color: #fff;
 }
 .btn-box {
   display: flex;

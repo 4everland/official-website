@@ -1,6 +1,6 @@
 <template>
-  <v-app dark>
-    <v-app-bar fixed app color="#161616" height="100">
+  <v-app>
+    <v-app-bar fixed app color="#FAFAFA" height="100">
       <v-container class="d-flex align-center">
         <v-btn text color="transparent" to="/" class="always-active mr-8">
           <logo />
@@ -193,10 +193,10 @@ export default {
           text: 'Ecosystem',
           link: '',
           childs: [
-            {
-              text: 'Dapps',
-              link: '/firstlanding/dapps',
-            },
+            // {
+            //   text: 'Dapps',
+            //   link: '/firstlanding/dapps',
+            // },
             {
               text: ' Developer Grants',
               link: '/grants',

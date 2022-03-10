@@ -7,14 +7,14 @@
     <v-container class="pt-16">
       <h3 class="text-h3 font-weight-light text-center mb-12">Roadmap</h3>
     </v-container>
-    <div class="new-roadmap">
-      <v-container>
+    <v-container>
+      <div class="new-roadmap">
         <v-row v-if="!$vuetify.breakpoint.smAndDown">
           <v-col cols="12" md="8" lg="8">
             <div class="map-box ma-auto">
               <div
                 class="new-roadmap-title"
-                :style="{ color: version == 1 ? '#00fcff' : '' }"
+                :style="{ color: version == 1 ? '#132642' : '' }"
               >
                 {{ defaultTitle }}
               </div>
@@ -171,8 +171,8 @@
             </div>
           </div>
         </div>
-      </v-container>
-    </div>
+      </div>
+    </v-container>
   </div>
 </template>
 <script>
@@ -201,32 +201,32 @@ export default {
       roadmapsObj: {
         v1: [
           {
-            color: '#00fcff',
+            color: '#132642',
             title: '2021.Q1',
             content: 'Market research and product prototype',
           },
           {
-            color: '#00fcff',
+            color: '#132642',
             title: 'March 2021',
             content: 'Product Design & Technology Development',
           },
           {
-            color: '#00fcff',
+            color: '#132642',
             title: 'May 2021',
             content: 'Establish 4EVERLAND Foundation and technical community',
           },
           {
-            color: '#00fcff',
+            color: '#132642',
             title: 'June 2021',
             content: 'Whitepaper published, 4EVERLAND official website launch',
           },
           {
-            color: '#00fcff',
+            color: '#132642',
             title: 'August 2021',
             content: 'ALPHA Launch',
           },
           {
-            color: '#00fcff',
+            color: '#132642',
             title: 'November 2021',
             content: 'BETA Launch',
             current: true,
@@ -379,12 +379,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .new-roadmap {
-  background-image: url('@/assets/imgs/index/roadmap-bg.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
   padding-top: 80px;
   padding-bottom: 100px;
+  background: linear-gradient(90deg, #e1f2ff, #fff6f6);
+  border-radius: 20px;
   .map-box {
     max-width: 800px;
     position: relative;
@@ -439,14 +437,14 @@ export default {
       }
     }
     .active {
-      color: #00fcff;
+      color: #132642;
     }
     .line {
       position: absolute;
       top: -15px;
       left: 5px;
       width: 2px;
-      height: 300px;
+      height: 120px;
     }
   }
 }

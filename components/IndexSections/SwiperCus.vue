@@ -99,7 +99,8 @@ export default {
   height: 378px;
   padding: 50px 40px;
   padding-top: 120px;
-  background-color: #333;
+  background: linear-gradient(-30deg, #e1f2ff, #fff6f6);
+  border-radius: 20px;
   box-sizing: border-box;
   margin: 20px auto;
   cursor: pointer;
@@ -118,12 +119,12 @@ export default {
   }
   .desc {
     font-size: 14px;
+    color: #6c7789;
   }
 }
 .swiper-slide-active {
   .customer-item {
-    box-shadow: 0 0 10px rgba(128, 176, 255, 0.35) inset,
-      0 0 20px rgba(130, 179, 255, 1);
+    background: linear-gradient(-30deg, #afddff, #ffe3e3);
   }
 }
 .swiper-content {
@@ -136,11 +137,5 @@ export default {
   height: 18px;
   background-size: 10px 18px;
   position: absolute;
-}
-.swiper-button-prev {
-  background-image: url('@/assets/imgs/index/customer/prev.png');
-}
-.swiper-button-next {
-  background-image: url('@/assets/imgs/index/customer/next.png');
 }
 </style>
