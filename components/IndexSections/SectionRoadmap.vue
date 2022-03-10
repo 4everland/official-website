@@ -197,7 +197,7 @@ export default {
       mdiChevronRight,
       version: 1,
       defaultTitle:
-        'V1 The Paas of Web 3.0 Genesis Product, Realizing the Initial Vision',
+        'V1 A Cloud Computing Platform of WEB 3.0 Genesis Product, Realizing the Initial Vision',
       roadmapsObj: {
         v1: [
           {
@@ -266,7 +266,7 @@ export default {
         v1: [
           {
             color: '#255BB4',
-            title: 'V1 Quark:The Paas of Web 3.0',
+            title: 'V1 Quark:A Cloud Computing Platform of WEB 3.0',
             plus: '(2021-2022)',
             content:
               'Genesis Product, Realizing a cloud computing platform with distributed storage of content, global access acceleration, and global node collaboration.',
@@ -363,7 +363,7 @@ export default {
       if (v == 1) {
         this.version = 1
         this.defaultTitle =
-          'V1 The Paas of Web 3.0 Genesis Product, Realizing the Initial Vision'
+          'V1 A Cloud Computing Platform of WEB 3.0 Genesis Product, Realizing the Initial Vision'
       }
       if (v == 2) {
         this.version = 2

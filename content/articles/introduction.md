@@ -1,8 +1,8 @@
 ---
-title: 4EVERLAND The PaaS of Web3.0
+title: 4EVERLAND A Cloud Computing Platform of WEB 3.0
 description: 4EVERLAND is designed to solve this problem by providing a distributed, highly efficient, self-motivated, and low-cost data Ethereum. If free accounts, free contracts, and free assets are the foundation of Web 3.0, then the development protocol built by 4EVERLAND will be the access layer protocol of the Web 3.0 world, liberating Web 3.0 developers from the constraints of centralization, improve the robustness and security of the service, and provide a globally accelerated, ever-lasting network service for users.
 img: /imgs/blogs/introduction.png
-alt: 4EVERLAND The PaaS of Web3.0
+alt: 4EVERLAND A Cloud Computing Platform of WEB 3.0
 published: 2021-05-31
 ---
 
