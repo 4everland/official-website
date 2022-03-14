@@ -14,10 +14,10 @@
                   line-height: 1.2;
                 "
               >
-                <div>4EVERLAND</div>
-                <div>GRANTS PROGRAM</div>
+                <div class="white--text">4EVERLAND</div>
+                <div class="white--text">GRANTS PROGRAM</div>
               </div>
-              <div class="op-9 fz-14 ta-c lh-2">
+              <div class="op-9 fz-14 ta-c lh-2 white--text">
                 <p>
                   4EVERLAND's Dev-Grants Program aims to ensure developers make
                   that smooth leap from Web 2.0 to Web 3.0 along with helping in
@@ -52,8 +52,8 @@
               md="3"
               class="ta-c"
             >
-              <img :src="it.img" height="60" />
-              <div class="label-1 mt-2 fz-14">{{ it.label }}</div>
+              <img :src="it.img" height="120" />
+              <div class="label-1 mt-2 fz-18 fw-b">{{ it.label }}</div>
             </v-col>
           </v-row>
 
@@ -116,7 +116,6 @@ export default {
 
 <style lang="less">
 .page-grants {
-  background: #1e2126;
   .banner {
     width: 100%;
     img {
@@ -129,13 +128,11 @@ export default {
   .grant-btn1 {
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(0deg, #249af7 0%, #dfa5fa 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border: 2px solid;
-    border-image: linear-gradient(90deg, #dda6fd, #2d90e6) 1 1;
+    background: linear-gradient(90deg, #fdb6fe, #acc0fd, #31adfe);
+    border-radius: 44px;
     display: inline-block;
     padding: 10px 20px;
+    box-shadow: 4px 10px 32px 0 rgba(120, 167, 206, 0.44);
   }
   h2 {
     font-size: 26px;

@@ -69,29 +69,16 @@
           <v-icon>{{ mdiMenu }}</v-icon>
         </v-btn>
         <v-btn
-          v-if="$route.name == 'bucket' || $route.name == 'bucketlogin'"
-          to="/bucketlogin"
-          class="hidden-sm-and-down transparent"
-          tile
-          text
-          plain
-        >
-          <img src="@/assets/imgs/common/bucket-btn.png" width="140px" alt="" />
-        </v-btn>
-        <v-btn
-          v-else
           :href="hosting_web"
           target="_blank"
-          class="hidden-sm-and-down transparent"
+          class="hidden-sm-and-down"
+          outlined
           tile
-          text
-          plain
+          color="#452c92"
         >
-          <img
-            src="@/assets/imgs/common/hosting-btn.png"
-            width="140px"
-            alt=""
-          />
+          <v-icon class="mr-2">{{ mdiWallet }}</v-icon>
+          Login
+          <v-icon class="ml-2">{{ mdiChevronRight }}</v-icon>
         </v-btn>
       </v-container>
     </v-app-bar>
@@ -142,7 +129,13 @@
 </template>
 
 <script>
-import { mdiMenu, mdiGithub, mdiChevronDown } from '@mdi/js'
+import {
+  mdiMenu,
+  mdiGithub,
+  mdiChevronDown,
+  mdiChevronRight,
+  mdiWallet,
+} from '@mdi/js'
 import Logo from '../components/Logo.vue'
 import AppFooter from '../components/AppFooter.vue'
 
@@ -153,6 +146,8 @@ export default {
       mdiMenu,
       mdiGithub,
       mdiChevronDown,
+      mdiChevronRight,
+      mdiWallet,
       showDrawer: false,
       links: [
         {

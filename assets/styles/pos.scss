@@ -1,14 +1,31 @@
+.top-0 {
+  top: 0;
+}
+.left-0 {
+  left: 0;
+}
+.right-0 {
+  right: 0;
+}
+.btm-0 {
+  bottom: 0;
+}
 
-.top-0 { top: 0; }
-.left-0 { left: 0; }
-.right-0 { right: 0; }
-.btm-0 { bottom: 0; }
-
-.z--1 { z-index: -1; }
-.z-1 { z-index: 1; }
-.z-10 { z-index: 10; }
-.z-100 { z-index: 100; }
-.z-1000 { z-index: 1000; }
+.z--1 {
+  z-index: -1;
+}
+.z-1 {
+  z-index: 1;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-100 {
+  z-index: 100;
+}
+.z-1000 {
+  z-index: 1000;
+}
 
 .pos-mask {
   position: absolute;
@@ -16,7 +33,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1
+  z-index: 1;
 }
 .pos-center {
   position: absolute;
@@ -41,9 +58,15 @@
   transform: translateY(-50%);
 }
 
-.pos-r { position: relative; }
-.pos-a { position: absolute; }
-.pos-f { position: fixed; }
+.pos-r {
+  position: relative;
+}
+.pos-a {
+  position: absolute;
+}
+.pos-f {
+  position: fixed;
+}
 .pos-s {
   position: sticky;
 }
@@ -65,13 +88,21 @@
   margin: 0 auto;
 }
 
-.d-b { display: block; }
-.d-ib { display: inline-block; }
+.d-b {
+  display: block;
+}
+.d-ib {
+  display: inline-block;
+}
 .flex-1 {
   flex: 1;
 }
-.shrink-0 { flex-shrink: 0; }
-.shrink-1 { flex-shrink: 1; }
+.shrink-0 {
+  flex-shrink: 0;
+}
+.shrink-1 {
+  flex-shrink: 1;
+}
 .al-c {
   align-items: center;
 }
@@ -79,22 +110,48 @@
   justify-content: center;
 }
 
-.mat-3 { margin-top: 3px; }
+.mat-3 {
+  margin-top: 3px;
+}
 
-.fz-18 { font-size: 18px; }
-.fz-14 { font-size: 14px; }
-.fw-b { font-weight: bold; }
-.op-5 { opacity: .5; }
-.op-8 { opacity: .8; }
-.op-9 { opacity: .9; }
+.fz-18 {
+  font-size: 18px;
+}
+.fz-14 {
+  font-size: 14px;
+}
+.fw-b {
+  font-weight: bold;
+}
+.op-5 {
+  opacity: 0.5;
+}
+.op-8 {
+  opacity: 0.8;
+}
+.op-9 {
+  opacity: 0.9;
+}
 
-.ta-c { text-align: center; }
-.lh-1 { line-height: 1; }
-.lh-2 { line-height: 2; }
-.ov-h { overflow: hidden; }
+.ta-c {
+  text-align: center;
+}
+.lh-1 {
+  line-height: 1;
+}
+.lh-2 {
+  line-height: 2;
+}
+.ov-h {
+  overflow: hidden;
+}
 
-.label-1 { color: #8B9CA6; }
-.gray-3 { color: #333; }
+.label-1 {
+  color: #8b9ca6;
+}
+.gray-3 {
+  color: #333;
+}
 .link-1 {
   color: #1976d2;
   cursor: pointer;
@@ -102,7 +159,7 @@
 .hover-1 {
   cursor: pointer;
   :hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 ul.plain {
@@ -118,6 +175,10 @@ ul.plain {
 .bd-b1 {
   background: #1a1b22;
   border: 1px solid #393f45;
+}
+.bd-b2 {
+  background: #fff;
+  border: 1px solid #fff;
 }
 .v-application a.bg-black {
   color: #f0f0f0;

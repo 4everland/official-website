@@ -2,33 +2,46 @@
   <div id="banner">
     <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
       <v-col cols="12" md="12" lg="12">
-        <swiper :key="$vuetify.breakpoint.smAndDown" :options="swiperOption">
-          <swiper-slide
-            v-for="(item, index) in banner"
-            :key="index"
-            class="swiper-slide"
+        <v-carousel
+          cycle
+          height="1000"
+          hide-delimiters
+          hide-delimiter-background
+          show-arrows-on-hover
+        >
+          <v-carousel-item
+            v-for="(item, i) in banner"
+            :key="i"
+            :src="item.src"
+            reverse-transition="fade-transition"
+            transition="fade-transition"
           >
-            <nuxt-link v-if="item.to" :to="item.to">
-              <v-img
-                contain
-                width="100%"
-                :src="$vuetify.breakpoint.smAndDown ? item.srcMobile : item.src"
-              />
-            </nuxt-link>
-            <a v-else :href="item.href" target="_blank">
-              <v-img
-                contain
-                width="100%"
-                :src="$vuetify.breakpoint.smAndDown ? item.srcMobile : item.src"
-              />
-            </a>
-          </swiper-slide>
-          <div
-            v-if="!$vuetify.breakpoint.smAndDown"
-            slot="pagination"
-            class="swiper-pagination"
-          ></div>
-        </swiper>
+            <v-row class="fill-height" align="center" justify="center">
+              <div class="text-center">
+                <div
+                  class="text-h2 text-center font-weight-bold text-uppercase"
+                  style="color: #132642"
+                  v-html="item.title"
+                ></div>
+                <div
+                  class="text-h5 text-center mt-10 mb-16 text-uppercase"
+                  style="color: #6c7789"
+                  v-html="item.tips"
+                ></div>
+                <v-btn
+                  class="banner-btn text-h5 mt-16 px-16 text-uppercase"
+                  height="60"
+                  elevation="6"
+                  :to="item.to"
+                  :href="item.href"
+                  :target="item.href ? '_blank' : ''"
+                >
+                  {{ item.button }}
+                </v-btn>
+              </div>
+            </v-row>
+          </v-carousel-item>
+        </v-carousel>
       </v-col>
     </v-row>
   </div>
@@ -40,23 +53,31 @@ export default {
       banner: [
         {
           src: require('@/assets/imgs/index/banner1.png'),
-          srcMobile: require('@/assets/imgs/index/mbanner1.png'),
           to: '/firstlanding',
+          title: '4EVERLAND <br/> A Cloud Computing Platform Of Web3.0',
+          tips: 'Build Web3.0 infrastructure for millions developers and projects',
+          button: 'START DEPLOYING',
         },
         {
           src: require('@/assets/imgs/index/banner2.png'),
-          srcMobile: require('@/assets/imgs/index/mbanner2.png'),
-          to: '/firstleap',
+          href: this.hosting_web,
+          title: 'DEPLOY TO HOSTING',
+          tips: "Deploy your website on Hosting <br/> 4EVERLAND Can Help You Rebuild the Web's Foundation <br/> Layer and Transition to a New and Unbiased Web 3.0.",
+          button: 'APPLY',
         },
         {
-          src: require('@/assets/imgs/index/banner3.png'),
-          srcMobile: require('@/assets/imgs/index/mbanner3.png'),
+          src: require('@/assets/imgs/index/banner1.png'),
           to: '/grants',
+          title: 'DEPLOY TO HOSTING',
+          tips: "Deploy your website on Hosting <br/> 4EVERLAND Can Help You Rebuild the Web's Foundation <br/> Layer and Transition to a New and Unbiased Web 3.0.",
+          button: 'APPLY',
         },
         {
           src: require('@/assets/imgs/index/banner4.png'),
-          srcMobile: require('@/assets/imgs/index/mbanner4.png'),
-          href: this.hosting_web,
+          to: '/grants',
+          title: 'DEVELOPERMENT GRANTS',
+          tips: '20 MILLION 4EVER SPONSORSHIP TOKENS WILL BE AVAILABLE TO <br/> QUALIFIED PROJECTS FOR THEIR LONG TERM DEVELOPMENT. ',
+          button: 'APPLY',
         },
       ],
       swiperOption: {
@@ -83,35 +104,10 @@ export default {
 }
 </script>
 <style scoped>
-/deep/.swiper-pagination-fraction,
-.swiper-pagination-custom,
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 30px;
-}
-/deep/ .swiper-pagination-bullet {
-  background: #505050;
-  height: 12px;
-  width: 12px;
-  border-radius: 0;
-  opacity: 1;
-  margin: 0 8px !important;
-}
-/deep/ .swiper-pagination-bullet-active {
-  opacity: 1;
-  background: linear-gradient(-90deg, #ffb830, #e31313, #ff30f8);
-  position: relative;
-}
-/deep/.swiper-pagination-bullet-active::after {
-  content: '';
-  width: 24px;
-  height: 24px;
-  border: 2px solid transparent;
-  border-image: -webkit-linear-gradient(-90deg, #ffb830, #e31313, #ff30f8) 1;
-  border-image: -moz-linear-gradient(-90deg, #ffb830, #e31313, #ff30f8) 1;
-  border-image: -o-linear-gradient(-90deg, #ffb830, #e31313, #ff30f8) 1;
-  border-image: linear-gradient(-90deg, #ffb830, #e31313, #ff30f8) 1;
-  position: absolute;
-  left: -50%;
-  top: -50%;
+.banner-btn {
+  background: linear-gradient(90deg, #fdb6fe, #acc0fd, #31adfe);
+  border-radius: 44px;
+  color: #fff;
+  text-shadow: 0 5px 6px rgba(120, 167, 206, 0.22);
 }
 </style>

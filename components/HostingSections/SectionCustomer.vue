@@ -1,5 +1,5 @@
 <template>
-  <div class="home-block section-customer">
+  <div class="home-block">
     <v-container>
       <v-row>
         <v-col cols="12" md="12" lg="12">
@@ -25,13 +25,6 @@ export default {
 }
 </script>
 <style scoped>
-.section-customer {
-  padding: 70px 0;
-  background-image: url('@/assets/imgs/index/customer-bg.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 .swiper-box {
   max-width: 1200px;
   margin: 0 auto;

@@ -26,7 +26,7 @@
     </div>
 
     <v-dialog v-model="showCode" max-width="700">
-      <div class="bd-b1 pa-8 pos-r">
+      <div class="bd-b2 pa-8 pos-r">
         <div class="pos-a right-0 top-0 pa-5 hover-1" @click="showCode = false">
           <v-icon>mdi-close</v-icon>
         </div>
@@ -44,7 +44,7 @@
                   >{{ it.copied ? 'Copied' : 'Copy' }}</v-btn
                 >
               </div>
-              <div class="white pa-6 gray-3 fz-14">
+              <div class="pa-6 gray-3 fz-14" style="border: 1px solid #000">
                 {{ it.html }}
               </div>
             </v-col>

@@ -4,7 +4,7 @@
     <hosting-steps />
     <section-framework />
     <section-customer />
-    <hosting-template background="black" />
+    <hosting-template />
     <hosting-faq />
   </div>
 </template>

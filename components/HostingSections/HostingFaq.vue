@@ -1,6 +1,6 @@
 <template>
   <div id="faq" class="home-block">
-    <v-container class="my-16 py-10">
+    <v-container class="my-16 py-16">
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="block-titel ma-auto mb-16" style="max-width: 1100px">
@@ -9,7 +9,7 @@
         </v-col>
       </v-row>
       <v-row>
-        <v-expansion-panels accordion class="list-box">
+        <v-expansion-panels accordion :flat="true" class="list-box">
           <v-expansion-panel class="list-item">
             <v-expansion-panel-header class="text-h6">
               1. What is 4EVERLAND?
@@ -122,16 +122,16 @@ export default {
 </script>
 <style scoped>
 #faq {
-  background-color: #0c0c0c;
+  background-color: #ecf6fd;
 }
 .list-box {
-  background-color: #0c0c0c;
+  background-color: #ecf6fd;
   max-width: 1200px;
   margin: 0 auto;
 }
 .list-item {
-  background-color: #0c0c0c !important;
-  color: #b1b6bb !important;
+  background-color: #ecf6fd !important;
+  color: #333 !important;
   font-size: 18px !important;
 }
 </style>

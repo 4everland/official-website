@@ -3,14 +3,14 @@
     <h2>Grantee Use Cases</h2>
     <v-row>
       <v-col v-for="(it, i) in granteeList" :key="i" cols="6" md="3">
-        <a class="d-b bd-b1 bg-black hover-1" :href="it.url" target="_blank">
+        <a class="d-b bg-black hover-1 item-bg" :href="it.url" target="_blank">
           <div class="d-flex al-c pa-3">
             <div class="bdrs-100 shrink-0 ov-h">
               <v-img width="40" :src="it.logo"></v-img>
             </div>
             <div class="ml-2 lh-1">
-              <div class="fw-b">{{ it.title }}</div>
-              <div class="mt-1 fz-14 op-8">
+              <div class="fw-b" style="color: #132642">{{ it.title }}</div>
+              <div class="mt-1 fz-14 op-8" style="color: #6c7789">
                 {{ it.type }}
               </div>
             </div>
@@ -18,7 +18,7 @@
 
           <v-img height="160" :src="it.cover"></v-img>
 
-          <div class="pa-3 fz-14 op-9" style="min-height: 88px">
+          <div class="pa-3 fz-14 op-9" style="min-height: 88px; color: #6c7789">
             {{ it.desc }}
           </div>
         </a>
@@ -40,7 +40,7 @@
           >SUBMIT YOUR DEVELOPER GRANT APPLICATION HERE</a
         >
       </div>
-      <div class="mt-3">
+      <div class="mt-6">
         For more details contact us at contact@4everland.org
       </div>
 
@@ -111,3 +111,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+.item-bg {
+  background: linear-gradient(120deg, #e1f2ff, #fff6f6);
+}
+</style>

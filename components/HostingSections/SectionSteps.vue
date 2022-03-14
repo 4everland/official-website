@@ -103,16 +103,20 @@ export default {
 }
 .usage-btn {
   width: 300px;
-  height: 60px;
-  background: #3c46d3 !important;
+  height: 88px;
+  background: #452c92 !important;
+  border-radius: 44px;
   font-size: 20px;
   font-weight: bold;
+  color: #fff;
 }
 .start-btn {
   width: 300px;
-  height: 60px;
-  background: linear-gradient(-90deg, #ffb830, #e31313, #ff30f8);
+  height: 88px;
+  background: linear-gradient(90deg, #fdb6fe, #acc0fd, #31adfe);
+  border-radius: 44px;
   font-size: 20px;
   font-weight: bold;
+  color: #fff;
 }
 </style>
