@@ -55,10 +55,12 @@
       </v-row>
       <v-row class="mt-16">
         <v-col cols="12" md="12" lg="12">
-          <div class="block-titel">Easy to deploy</div>
+          <div class="block-titel">
+            Control the 4EVERLAND Hosting Suite With our CLI
+          </div>
           <div class="block-text">
-            We also support the CLI command line,To allow for interacting with
-            the platform using the terminal or an automated system
+            4EVERLAND also supports command-line interface (CLI) that enables
+            interaction with the platform using a terminal or automated system.
           </div>
         </v-col>
 
