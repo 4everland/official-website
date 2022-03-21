@@ -66,11 +66,11 @@ export default {
           button: 'APPLY',
         },
         {
-          src: require('@/assets/imgs/index/banner1.png'),
-          to: '/grants',
-          title: 'DEPLOY TO HOSTING',
-          tips: "Deploy your website on Hosting <br/> 4EVERLAND Can Help You Rebuild the Web's Foundation <br/> Layer and Transition to a New and Unbiased Web 3.0.",
-          button: 'APPLY',
+          src: require('@/assets/imgs/index/banner3.png'),
+          to: '/bucket',
+          title: '4EVERLAND BUCKET',
+          tips: 'AN IPFS-BASED DECENTRALIZED STORAGE SOLUTION THAT INTEGRATES ARWEAVE',
+          button: 'Try for Free',
         },
         {
           src: require('@/assets/imgs/index/banner4.png'),
