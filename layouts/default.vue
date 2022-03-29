@@ -69,7 +69,7 @@
           <v-icon>{{ mdiMenu }}</v-icon>
         </v-btn>
         <v-btn
-          :href="hosting_web"
+          :href="loginUrl"
           target="_blank"
           class="hidden-sm-and-down"
           outlined
@@ -139,6 +139,8 @@ import {
 import Logo from '../components/Logo.vue'
 import AppFooter from '../components/AppFooter.vue'
 
+const LOGIN_URL = process.env.LOGIN_URL
+
 export default {
   components: { Logo, AppFooter },
   data() {
@@ -149,6 +151,7 @@ export default {
       mdiChevronRight,
       mdiWallet,
       showDrawer: false,
+      loginUrl: LOGIN_URL,
       links: [
         {
           text: 'Developer',

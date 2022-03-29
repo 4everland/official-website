@@ -43,11 +43,12 @@ export default {
     SectionPartners,
     SectionFuture,
   },
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 1000)
+    })
+  },
   methods: {},
 }
 </script>
-<style scoped>
-#home {
-  /* background-color: #161616; */
-}
-</style>
