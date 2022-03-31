@@ -3,7 +3,7 @@ title: Integration Announcement — 4EVERLAND Bucket x ARWEAVE
 description: 4EVERLAND Bucket now supports Arweave
 img: '/imgs/blogs/Integration_Announcement_March_30.jpg'
 alt: 4EVERLAND Bucket now supports Arweave
-published: 2022-03-08
+published: 2022-03-30
 ---
 
 ![image](/imgs/blogs/Integration_Announcement_March_30.jpg)
@@ -82,4 +82,4 @@ Arweave is a new type of storage that backs data with sustainable and perpetual 
 
 4EVERLAND realizes the need for inter-blockchain communication and interoperability between multiple chains and so it utilizes the IBC technology to integrate with the underlying public chains such as Ethereum, BSC, Solana, Polygon, and Filecoin. Similarly, 4EVERLAND also provides a distributed, high-efficiency, self-incentivized, and low-cost data hosting network based on an open protocol system like IPFS to meet developers’ requests for inter-blockchain communication, decentralized front-end, and write once, run any blockchain, making it easier to quickly build Web 3.0 applications.
 
-[Website](https://www.4everland.org/) | [Twitter](https://twitter.com/4everland_org) | [Telegram](https://t.me/org_4everland) | [Discord](https://discord.gg/Cun2VpsdjF) | [Reddit](https://www.reddit.com/r/4everland/) | [Medium](https://4everland.medium.com/) | [Email](mailto:contact@4everland.org) 
+[Website](https://www.4everland.org/) | [Twitter](https://twitter.com/4everland_org) | [Telegram](https://t.me/org_4everland) | [Discord](https://discord.gg/Cun2VpsdjF) | [Reddit](https://www.reddit.com/r/4everland/) | [Medium](https://4everland.medium.com/) | [Email](mailto:contact@4everland.org)
