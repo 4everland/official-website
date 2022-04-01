@@ -12,6 +12,9 @@ export default {
   data: () => ({
     loading: true,
   }),
+  mounted() {
+    setTimeout(() => this.finish(), 1000)
+  },
   methods: {
     start() {
       this.loading = true
