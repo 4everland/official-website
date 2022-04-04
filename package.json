@@ -41,7 +41,7 @@
     "clipboard-polyfill": "^3.0.3",
     "core-js": "^3.15.2",
     "dotenv": "^10.0.0",
-    "echarts": "^5.1.2",
+    "echarts": "^5.3.2",
     "ethers": "^5.5.4",
     "nuxt": "^2.15.8",
     "swiper": "^4.1.1",
