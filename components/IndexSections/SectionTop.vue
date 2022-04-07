@@ -4,7 +4,7 @@
       <v-col cols="12" md="12" lg="12">
         <v-carousel
           cycle
-          height="1000"
+          height="800"
           hide-delimiters
           hide-delimiter-background
           show-arrows-on-hover
