@@ -33,7 +33,7 @@
           lg="3"
         >
           <div class="py-8">
-            <div class="main text-center pa-16">
+            <div class="main text-center py-16 px-12">
               <div
                 class="main-num"
                 :style="$vuetify.breakpoint.smAndDown ? 'font-size:40px' : ''"
@@ -92,7 +92,7 @@ export default {
   background: linear-gradient(120deg, #e1f2ff, #fff6f6);
 }
 .main-num {
-  font-size: 72px;
+  font-size: 60px;
   font-weight: bold;
   color: #473b8b;
 }

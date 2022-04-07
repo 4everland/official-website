@@ -10,7 +10,7 @@
         <v-col v-for="item in list" :key="item.title" cols="12" md="4" lg="4">
           <div class="text-center">
             <div
-              class="border-box pa-14"
+              class="border-box pa-10"
               :style="{ backgroundImage: `url('${item.img}')` }"
             >
               <div class="main-title mb-8">{{ item.title }}</div>

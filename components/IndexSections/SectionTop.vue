@@ -53,7 +53,7 @@ export default {
       banner: [
         {
           src: require('@/assets/imgs/index/banner1.png'),
-          to: '/firstlanding',
+          href: this.hosting_web,
           title: '4EVERLAND <br/> A Cloud Computing Platform Of Web3.0',
           tips: 'Build Web3.0 infrastructure for millions developers and projects',
           button: 'START DEPLOYING',

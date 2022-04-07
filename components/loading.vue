@@ -1,7 +1,7 @@
 <template>
   <div class="loading-page" v-if="loading">
     <div class="logo-box">
-      <img src="/icon.png" alt="" class="logo" />
+      <img src="@/assets/imgs/loading/logo.png" alt="" class="logo" />
       <span class="logo-mask"></span>
     </div>
   </div>
@@ -13,7 +13,7 @@ export default {
     loading: true,
   }),
   mounted() {
-    setTimeout(() => this.finish(), 1000)
+    setTimeout(() => this.finish(), 2000)
   },
   methods: {
     start() {
@@ -34,6 +34,10 @@ export default {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 1);
+  background-image: url('@/assets/imgs/loading/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
   font-size: 30px;
   font-family: sans-serif;
@@ -43,7 +47,7 @@ export default {
 }
 .logo-box {
   position: relative;
-  width: 200px;
+  width: 240px;
   margin: 0 auto;
 }
 .logo {
