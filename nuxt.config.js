@@ -75,6 +75,7 @@ export default {
     NODE_ENV: process.env.NODE_ENV,
     AUTH_URL: process.env.AUTH_URL,
     BUCKET_HOST: process.env.BUCKET_HOST,
+    LOGIN_URL: process.env.LOGIN_URL,
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
