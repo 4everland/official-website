@@ -69,7 +69,7 @@ export default {
           src: require('@/assets/imgs/index/banner3.png'),
           to: '/bucket',
           title: '4EVERLAND BUCKET',
-          tips: 'AN IPFS-BASED DECENTRALIZED STORAGE SOLUTION THAT INTEGRATES ARWEAVE',
+          tips: 'S3-compatible aggregator based on IPFS and Arweave',
           button: 'Try for Free',
         },
         {
