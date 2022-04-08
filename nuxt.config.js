@@ -28,7 +28,7 @@ export default {
       {
         name: 'twitter:image',
         content:
-          'https://landingpage.4everland.store/4everland%20website%20landing%20page.png',
+          'https://official-website-test.4everland.app/twitter-image.png',
       },
     ],
     link: [
