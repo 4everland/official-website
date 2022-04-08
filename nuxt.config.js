@@ -15,17 +15,24 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'twitter:card', content: 'summary_large_image' },
       {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        hid: 'twitter:title',
         name: 'twitter:title',
         content: '4everland - A CLOUD COMPUTING PLATFORM OF WEB3.0',
       },
       {
+        hid: 'twitter:description',
         name: 'twitter:description',
         content:
           '4EVERLAND is a Web 3.0 cloud computing platform that integrates storage, computing, and network core capabilities.',
       },
       {
+        hid: 'twitter:image',
         name: 'twitter:image',
         content:
           'https://official-website-test.4everland.app/twitter-image.png',
