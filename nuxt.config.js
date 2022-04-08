@@ -25,7 +25,11 @@ export default {
         content:
           '4EVERLAND is a Web 3.0 cloud computing platform that integrates storage, computing, and network core capabilities.',
       },
-      { name: 'twitter:image', content: '/twitter-image.png' },
+      {
+        name: 'twitter:image',
+        content:
+          'https://landingpage.4everland.store/4everland%20website%20landing%20page.png',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
