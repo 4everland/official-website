@@ -34,8 +34,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content:
-          'https://official-website-test.4everland.app/twitter-image.png',
+        content: 'https://4everland.org/twitter-image.png',
       },
     ],
     link: [
