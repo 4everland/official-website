@@ -57,7 +57,7 @@ export default {
 }
 .logo-mask {
   background-size: cover;
-  background-image: url('../static/icon.png');
+  background-image: url('../assets/imgs/loading/logo.png');
   width: 200px;
   height: 100%;
   display: block;

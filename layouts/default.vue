@@ -202,6 +202,11 @@ export default {
           ],
         },
         {
+          text: 'Explorer',
+          href: 'https://explorer.4everland.org',
+          target: '_blank',
+        },
+        {
           text: 'Blogs',
           link: '/blog',
         },
