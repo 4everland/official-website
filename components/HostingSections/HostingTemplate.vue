@@ -43,7 +43,7 @@
                   plain
                   x-small
                   class="text-body-2"
-                  href="https://docs.hosting.4everland.org/guide/"
+                  href="https://docs.4everland.org/hosting/"
                   target="_blank"
                 >
                   View Docs<v-icon right size="14">{{ mdiArrowRight }}</v-icon>

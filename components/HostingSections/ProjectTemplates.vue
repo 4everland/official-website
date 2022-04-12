@@ -10,7 +10,7 @@
     >
       <a
         class="no-decoration"
-        :href="`https://hosting.4everland.org/#/new/clone-flow?s=$${encodeURIComponent(
+        :href="`https://dashboard.4everland.org/#/hosting/new?type=clone-flow&s=$${encodeURIComponent(
           p.repo
         )}`"
         target="_blank"
