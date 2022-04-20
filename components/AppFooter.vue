@@ -174,7 +174,7 @@ export default {
           list: [
             {
               name: 'Documentation',
-              href: 'https://docs.hosting.4everland.org/guide/',
+              href: 'https://docs.4everland.org/',
               target: '_blank',
             },
             {

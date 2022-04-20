@@ -1,12 +1,12 @@
 <template>
   <div class="banner">
-    <nuxt-link to="/bucketlogin">
+    <a href="https://dashboard.4everland.org">
       <v-img
         :src="require('~/assets/imgs/bucket/banner.png')"
         width="100%"
         contain
       ></v-img>
-    </nuxt-link>
+    </a>
     <!-- <v-container class="con">
       <v-row>
         <v-col class="pa-0" cols="12" md="5" lg="5">
