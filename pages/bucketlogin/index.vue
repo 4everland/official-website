@@ -19,15 +19,7 @@
                 Connect your wallet to access the Bucket
               </div>
               <v-btn
-                class="
-                  d-block
-                  text-subtitle-1
-                  font-weight-black
-                  deep-purple
-                  darken-3
-                  ma-auto
-                  mb-6
-                "
+                class="d-block text-subtitle-1 font-weight-black deep-purple darken-3 ma-auto mb-6"
                 x-large
                 @click="connectOverlay = true"
                 >Connect Wallet</v-btn
@@ -103,7 +95,7 @@
 import contracts from '@/contracts'
 
 const authApi = process.env.AUTH_URL
-const BUCKET_HOST = process.env.BUCKET_HOST
+const DASHBOARD_HOST = process.env.DASHBOARD_HOST
 export default {
   components: {},
   data() {
@@ -143,7 +135,7 @@ export default {
           this.gitOverlay = true
         }
         if (data.code === 200 && data.data.stoken) {
-          location.href = `${BUCKET_HOST}/login?stoken=${data.data.stoken}`
+          location.href = `${DASHBOARD_HOST}/login?stoken=${data.data.stoken}`
         }
       } catch (error) {
         console.log(error)
@@ -192,7 +184,7 @@ export default {
           .post(`${authApi}/web3login/${accounts}`, data)
           .then((res) => {
             if (res.data.data.stoken) {
-              location.href = `${BUCKET_HOST}/login?stoken=${res.data.data.stoken}`
+              location.href = `${DASHBOARD_HOST}/login?stoken=${res.data.data.stoken}`
             }
           })
       } catch (e) {

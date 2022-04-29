@@ -17,36 +17,18 @@
           <v-tab :key="1">2.Add your build setting</v-tab>
           <v-tab :key="2">3. Deploy your site</v-tab>
         </v-tabs>
-        <v-tabs-items v-model="tab" class="mt-16">
+        <v-tabs-items v-model="tab" class="mt-16" style="width: 100%">
           <v-tab-item v-for="item in items" :key="item.img">
-            <v-row>
-              <v-col class="step-box" cols="12" md="7" lg="7">
-                <v-img :src="item.img"></v-img>
-              </v-col>
-              <v-col
-                class="step-box btn-box"
-                :style="
-                  $vuetify.breakpoint.smAndDown ? 'align-items: center;' : ''
-                "
-                cols="12"
-                md="5"
-                lg="5"
-              >
+            <v-row class="justify-center">
+              <v-col class="step-box text-center" cols="12">
+                <v-img :src="item.img" max-width="1000" class="ma-auto"></v-img>
                 <v-btn
                   href="https://youtu.be/7D9MuVk6NNA"
                   target="_blank"
-                  class="usage-btn mb-8"
+                  class="usage-btn my-8"
                   height="60"
                   tile
                   >USAGE VIDEO</v-btn
-                >
-                <v-btn
-                  :href="hosting_web"
-                  target="_blank"
-                  tile
-                  class="start-btn"
-                  height="60"
-                  >START DEPLOYING</v-btn
                 >
               </v-col>
             </v-row>

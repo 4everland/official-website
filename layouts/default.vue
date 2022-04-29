@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <v-app-bar fixed app color="#FAFAFA" height="100">
+    <app-header />
+    <!-- <v-app-bar fixed app color="#FAFAFA" height="100">
       <v-container class="d-flex align-center">
         <v-btn text color="transparent" to="/" class="always-active mr-8">
           <logo />
@@ -82,9 +83,6 @@
         </v-btn>
       </v-container>
     </v-app-bar>
-    <v-main>
-      <nuxt />
-    </v-main>
     <v-navigation-drawer v-model="showDrawer" right temporary fixed>
       <v-list>
         <template v-for="item in links">
@@ -123,7 +121,10 @@
           </v-list-item>
         </template>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
+    <v-main>
+      <nuxt />
+    </v-main>
     <app-footer />
   </v-app>
 </template>
@@ -137,12 +138,13 @@ import {
   mdiWallet,
 } from '@mdi/js'
 import Logo from '../components/Logo.vue'
+import AppHeader from '../components/AppHeader.vue'
 import AppFooter from '../components/AppFooter.vue'
 
 const LOGIN_URL = process.env.LOGIN_URL
 
 export default {
-  components: { Logo, AppFooter },
+  components: { Logo, AppHeader, AppFooter },
   data() {
     return {
       mdiMenu,

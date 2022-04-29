@@ -12,7 +12,7 @@
           md="3"
           lg="3"
           xl="2"
-          class="my-4 d-flex justify-center"
+          class="my-4 d-flex"
         >
           <div class="img-box">
             <v-img contain :src="item.img" max-height="50"> </v-img>
@@ -38,14 +38,24 @@ export default {
           img: require('@/assets/imgs/index/partners/filecoin.png'),
         },
         {
+          img: require('@/assets/imgs/index/partners/arweave.png'),
+        },
+        {
           img: require('@/assets/imgs/index/partners/polygon.png'),
         },
         {
-          img: require('@/assets/imgs/index/partners/near.png'),
+          img: require('@/assets/imgs/index/partners/ENS.png'),
         },
         {
           img: require('@/assets/imgs/index/partners/js13kgames.png'),
         },
+        {
+          img: require('@/assets/imgs/index/partners/harmony.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/near.png'),
+        },
+
         {
           img: require('@/assets/imgs/index/partners/heco.png'),
         },
@@ -53,10 +63,13 @@ export default {
           img: require('@/assets/imgs/index/partners/metis.png'),
         },
         {
-          img: require('@/assets/imgs/index/partners/nuls.png'),
+          img: require('@/assets/imgs/index/partners/fenbushi.png'),
         },
         {
-          img: require('@/assets/imgs/index/partners/fenbushi.png'),
+          img: require('@/assets/imgs/index/partners/FBG.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/nuls.png'),
         },
         {
           img: require('@/assets/imgs/index/partners/bixin.png'),

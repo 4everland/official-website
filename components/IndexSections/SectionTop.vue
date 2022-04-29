@@ -4,7 +4,7 @@
       <v-col cols="12" md="12" lg="12">
         <v-carousel
           cycle
-          height="800"
+          :height="bannerHeight"
           hide-delimiters
           hide-delimiter-background
           show-arrows-on-hover
@@ -19,12 +19,12 @@
             <v-row class="fill-height" align="center" justify="center">
               <div class="text-center">
                 <div
-                  class="text-h2 text-center font-weight-bold text-uppercase"
+                  class="text-h3 text-center font-weight-bold text-uppercase"
                   style="color: #132642"
                   v-html="item.title"
                 ></div>
                 <div
-                  class="text-h5 text-center mt-10 mb-16 text-uppercase"
+                  class="text-h6 text-center mt-10 mb-16 text-uppercase"
                   style="color: #6c7789"
                   v-html="item.tips"
                 ></div>
@@ -56,14 +56,14 @@ export default {
           href: this.hosting_web,
           title: '4EVERLAND <br/> A Cloud Computing Platform Of Web3.0',
           tips: 'Build Web3.0 infrastructure for millions developers and projects',
-          button: 'START DEPLOYING',
+          button: 'TRY FOR FREE',
         },
         {
           src: require('@/assets/imgs/index/banner2.png'),
           href: this.hosting_web,
-          title: 'DEPLOY TO HOSTING',
+          title: 'Host your Website on IPFS',
           tips: "Deploy your website on Hosting <br/> 4EVERLAND Can Help You Rebuild the Web's Foundation <br/> Layer and Transition to a New and Unbiased Web 3.0.",
-          button: 'APPLY',
+          button: 'TRY FOR FREE',
         },
         {
           src: require('@/assets/imgs/index/banner3.png'),
@@ -75,31 +75,34 @@ export default {
         {
           src: require('@/assets/imgs/index/banner4.png'),
           to: '/grants',
-          title: 'DEVELOPERMENT GRANTS',
+          title: 'DEVELOPER GRANTS',
           tips: '20 MILLION 4EVER SPONSORSHIP TOKENS WILL BE AVAILABLE TO <br/> QUALIFIED PROJECTS FOR THEIR LONG TERM DEVELOPMENT. ',
           button: 'APPLY',
         },
       ],
-      swiperOption: {
-        speed: 1000,
-        autoplay: {
-          autoplay: false,
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        effect: 'fade',
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        on: {
-          init() {},
-          click() {},
-        },
-      },
+      screenWidth: null,
+      screenHeight: null,
     }
   },
-  mounted() {},
+  computed: {
+    bannerHeight() {
+      const clientWidth = this.screenWidth
+      let bannerHeight = (clientWidth / 2560) * 1000
+      if (bannerHeight < 750) {
+        bannerHeight = 750
+      }
+      if (bannerHeight > 1000) {
+        bannerHeight = 1000
+      }
+      return bannerHeight
+    },
+  },
+  mounted() {
+    window.screenWidth = document.body.clientWidth
+    window.screenHeight = document.body.clientHeight
+    this.screenWidth = window.screenWidth
+    this.screenHeight = window.screenHeight
+  },
   methods: {},
 }
 </script>

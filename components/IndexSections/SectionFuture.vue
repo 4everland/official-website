@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="block-titel mb-4">Where we're going</div>
-          <div class="block-text text-left">
+          <div class="block-text text-center">
             4EVERLAND is a good place to pursue developers' ideal Web 3.0
             paradigm, freeing them from the constraints of centeredness and
             creating more robust and secure services. We hope that more
@@ -33,13 +33,17 @@ export default {
   white-space: nowrap;
 }
 .section-future {
-  padding: 70px 0;
+  padding: 100px 0;
   background-image: url('@/assets/imgs/index/future.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+.home-block .block-titel {
+  margin-top: 0;
+}
 .home-block .block-text {
-  font-size: 15px;
+  max-width: 1000px;
+  font-size: 16px;
 }
 </style>

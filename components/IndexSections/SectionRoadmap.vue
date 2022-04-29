@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div id="roadmap">
+  <div id="roadmap" class="home-block">
     <v-container class="pt-16">
-      <h3 class="text-h3 font-weight-light text-center mb-12">Roadmap</h3>
+      <div class="block-titel">Roadmap</div>
     </v-container>
     <v-container>
       <div class="new-roadmap">

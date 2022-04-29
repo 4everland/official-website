@@ -44,7 +44,7 @@
     "echarts": "^5.1.2",
     "ethers": "^5.5.4",
     "nuxt": "^2.15.8",
-    "swiper": "^4.1.1",
+    "swiper": "^5.2.0",
     "vue-awesome-swiper": "^4.1.1",
     "vuetify-dialog": "^2.0.16",
     "vuetify-toast-snackbar": "^0.6.1"

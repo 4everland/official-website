@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="title-underline">Customer Success</div>
-          <div class="block-titel">Join and Access to the Web3.0 world</div>
+          <div class="block-titel">Access to the Web3.0 World</div>
           <div class="block-text">
             See how developers large and small are leveraging 4EVERLAND to grow
             and improve their business

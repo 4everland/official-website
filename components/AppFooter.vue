@@ -167,6 +167,11 @@ export default {
               name: 'Roadmap',
               to: '/#roadmap',
             },
+            {
+              name: 'Brand Resources',
+              href: '/logo.zip',
+              target: '_blank',
+            },
           ],
         },
         {
@@ -230,8 +235,8 @@ export default {
           name: 'Legal',
           list: [
             {
-              name: 'Terms of Users',
-              to: '/term-of-use',
+              name: 'Terms of Service',
+              to: '/term-of-service',
             },
             {
               name: 'Privacy Policy',
@@ -304,8 +309,7 @@ export default {
 }
 .footer-text2 {
   max-width: 460px;
-  font-size: 16px;
-  color: #b1b6bb;
+  font-size: 14px;
 }
 .subscribe-input {
   display: flex;
