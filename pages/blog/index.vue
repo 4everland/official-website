@@ -57,9 +57,9 @@
             <div class="mt-4">
               <v-btn
                 v-for="link in links"
-                :key="link.link"
+                :key="link.href"
                 small
-                :href="link.link"
+                :href="link.href"
                 text
                 icon
                 class="ma-2"

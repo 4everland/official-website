@@ -17,14 +17,20 @@
           :key="item.title"
           class="border-box"
           cols="12"
-          md="4"
-          lg="4"
+          md="6"
+          lg="6"
+          xl="4"
         >
           <div class="main pa-12">
             <v-row>
-              <v-col cols="12" md="12" lg="12" xl="6">
+              <v-col cols="12" md="6" lg="6" xl="6">
                 <div class="img-box">
-                  <v-img contain :src="item.img" height="160px" class="ma-auto">
+                  <v-img
+                    contain
+                    :src="item.img"
+                    max-height="100px"
+                    class="ma-auto"
+                  >
                   </v-img></div
               ></v-col>
               <v-col cols="12" md="6" lg="6" class="d-flex align-center">
@@ -94,7 +100,7 @@ export default {
   color: #fff;
 }
 .main {
-  min-height: 380px;
+  min-height: 180px;
   background: linear-gradient(120deg, #e1f2ff, #fff6f6);
   border-radius: 20px;
   display: flex;

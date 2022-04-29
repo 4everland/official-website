@@ -1,6 +1,6 @@
 <template>
   <div class="home-block">
-    <v-container class="my-16">
+    <v-container class="my-12">
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="block-titel">Welcome to the new internet - Web 3</div>

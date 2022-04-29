@@ -62,7 +62,7 @@ export default {
           src: require('@/assets/imgs/index/banner2.png'),
           href: this.hosting_web,
           title: 'Host your Website on IPFS',
-          tips: "Deploy your website on Hosting <br/> 4EVERLAND Can Help You Rebuild the Web's Foundation <br/> Layer and Transition to a New and Unbiased Web 3.0.",
+          tips: "Deploy your website on Hosting <br/> 4EVERLAND Can Help You Rebuild the Web's Foundation <br/> Layer and Transition to a New and Unbiased Web 3.0",
           button: 'TRY FOR FREE',
         },
         {
@@ -76,7 +76,7 @@ export default {
           src: require('@/assets/imgs/index/banner4.png'),
           to: '/grants',
           title: 'DEVELOPER GRANTS',
-          tips: '20 MILLION 4EVER SPONSORSHIP TOKENS WILL BE AVAILABLE TO <br/> QUALIFIED PROJECTS FOR THEIR LONG TERM DEVELOPMENT. ',
+          tips: '20 MILLION 4EVER SPONSORSHIP TOKENS WILL BE AVAILABLE TO <br/> QUALIFIED PROJECTS FOR THEIR LONG TERM DEVELOPMENT',
           button: 'APPLY',
         },
       ],
@@ -88,9 +88,6 @@ export default {
     bannerHeight() {
       const clientWidth = this.screenWidth
       let bannerHeight = (clientWidth / 2560) * 1000
-      if (bannerHeight < 750) {
-        bannerHeight = 750
-      }
       if (bannerHeight > 1000) {
         bannerHeight = 1000
       }
@@ -107,6 +104,9 @@ export default {
 }
 </script>
 <style scoped>
+#banner {
+  min-height: 500px;
+}
 .banner-btn {
   background: linear-gradient(90deg, #fdb6fe, #acc0fd, #31adfe);
   border-radius: 44px;

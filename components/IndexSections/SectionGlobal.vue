@@ -71,7 +71,7 @@ export default {
           text: 'GUARANTEED UPTIME',
         },
         {
-          title: '10B+',
+          title: '10T+',
           text: 'DATA  SERVED <br/> Total Network Storage',
         },
       ],

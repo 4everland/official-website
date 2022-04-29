@@ -38,11 +38,18 @@
           <div v-if="item.childs" class="white menu-down">
             <v-container>
               <v-row>
-                <v-col v-for="child in item.childs" :key="child.text" :cols="4">
+                <v-col
+                  v-for="child in item.childs"
+                  :key="child.text"
+                  :cols="12"
+                  :md="6"
+                  :lg="6"
+                  :xl="4"
+                >
                   <v-btn
                     plain
                     nuxt
-                    :height="80"
+                    :height="60"
                     replace
                     :to="child.link"
                     :href="child.href"
@@ -256,7 +263,7 @@ export default {
 }
 .menu-down {
   width: 100%;
-  min-height: 216px;
+  min-height: 180px;
 }
 .tips {
   padding-right: 10px;

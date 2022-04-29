@@ -81,6 +81,7 @@
                   :to="link.to"
                   :href="link.href"
                   :target="link.target"
+                  color="#B1B6BB"
                   plain
                   text
                   nofollow
@@ -309,7 +310,8 @@ export default {
 }
 .footer-text2 {
   max-width: 460px;
-  font-size: 14px;
+  font-size: 16px;
+  color: #b1b6bb;
 }
 .subscribe-input {
   display: flex;
