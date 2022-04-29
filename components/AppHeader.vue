@@ -36,7 +36,7 @@
             </v-btn>
           </template>
           <div v-if="item.childs" class="white menu-down">
-            <div style="max-width: 1400px; margin: 0 auto">
+            <v-container>
               <v-row>
                 <v-col v-for="child in item.childs" :key="child.text" :cols="4">
                   <v-btn
@@ -69,7 +69,7 @@
                   </v-btn>
                 </v-col>
               </v-row>
-            </div>
+            </v-container>
           </div>
           <!-- <v-list v-if="item.childs">
             <v-list-item v-for="child in item.childs" :key="child.text">
