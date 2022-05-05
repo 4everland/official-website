@@ -59,7 +59,7 @@ export default {
       list: [
         {
           img: require('@/assets/imgs/index/new/new1.png'),
-          title: 'Write once, Run any blockchian',
+          title: 'Write once, Run any blockchain',
           desc: "4EVERLAND helps developers to initiate 'write once, run any blockchain' programming paradigm by integrating various public chains and solving the differences between public chain protocols. In addition, it enables developers of each public chain to deploy contracts and front ends once and achieve a fully decentralized technical architecture.",
         },
         {
