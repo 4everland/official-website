@@ -44,7 +44,7 @@
           <img
             alt="top-banner"
             style="width: 100%; max-width: 1000px"
-            src="~/assets/imgs/ens/top@2x.png"
+            src="~/assets/imgs/decentralise/top@2x.png"
           />
         </v-col>
       </v-row>

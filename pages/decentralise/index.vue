@@ -1,20 +1,20 @@
 <template>
   <div id="ens">
     <ens-top />
-    <ens-about />
+    <ens-type />
     <ens-browes />
   </div>
 </template>
 
 <script>
-import ensTop from '@/components/ensSections/ensTop.vue'
-import ensAbout from '@/components/ensSections/ensAbout.vue'
-import ensBrowes from '@/components/ensSections/ensBrowes.vue'
+import ensTop from '@/components/decentraliseSections/Top.vue'
+import ensType from '@/components/decentraliseSections/Type.vue'
+import ensBrowes from '@/components/decentraliseSections/Browes.vue'
 
 export default {
   components: {
     ensTop,
-    ensAbout,
+    ensType,
     ensBrowes,
   },
   methods: {},

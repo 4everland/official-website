@@ -18,7 +18,7 @@
           md="6"
           lg="6"
         >
-          <div class="new-item ma-6 py-12 px-16" :class="'new-item-' + index">
+          <div class="new-item ma-4 pa-8" :class="'new-item-' + index">
             <div class="main-title mb-8">{{ item.title }}</div>
             <div class="main-text">
               {{ item.desc }}
@@ -33,8 +33,8 @@
           md="6"
           lg="6"
         >
-          <div class="text-h3 mb-16 video-title">What is 4EVERLAND?</div>
-          <div class="text-h5 video-text">
+          <div class="text-h4 mb-16 video-title">What is 4EVERLAND?</div>
+          <div class="text-h6 video-text">
             4EVERLAND is a Web 3.0 cloud computing platform that integrates
             storage, computing, and network core capabilities.
           </div>
