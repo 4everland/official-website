@@ -119,6 +119,46 @@
         </v-btn>
       </v-container>
     </v-app-bar>
+    <v-navigation-drawer v-model="showDrawer" right temporary fixed>
+      <v-list>
+        <template v-for="item in links">
+          <v-list-group v-if="item.childs" :key="item.text" no-action>
+            <template #activator>
+              <v-list-item-title>{{ item.text }}</v-list-item-title>
+            </template>
+            <v-list-item
+              v-for="child in item.childs"
+              :key="child.text"
+              nuxt
+              :to="child.link"
+              :href="child.href"
+              :target="child.target"
+            >
+              <v-list-item-title class="d-flex align-center">
+                <img class="mr-2" :src="child.icon" alt="" width="20" />
+                <span>
+                  {{ child.text }}
+                </span>
+              </v-list-item-title>
+            </v-list-item>
+          </v-list-group>
+          <v-list-item
+            v-else
+            :key="item.text"
+            nuxt
+            :to="item.link"
+            :href="item.href"
+            :target="item.target"
+          >
+            <v-list-item-title>
+              <span>
+                {{ item.text }}
+              </span>
+            </v-list-item-title>
+          </v-list-item>
+        </template>
+      </v-list>
+    </v-navigation-drawer>
   </div>
 </template>
 <script>
@@ -170,6 +210,12 @@ export default {
             //   href: 'https://explorer.4everland.org',
             //   target: '_blank',
             // },
+            // {
+            //   text: 'IPFS Gateway',
+            //   tips: 'Decentralize your websites or applications further with an ENS Domain',
+            //   icon: require('@/assets/imgs/nav/IPFS Gateway.png'),
+            //   link: '/ipfs',
+            // },
             {
               text: 'ENS Domain',
               tips: 'Decentralize your websites or applications further with an ENS Domain',
@@ -181,7 +227,7 @@ export default {
             //   text: 'SNS Domain',
             //   tips: 'Decentralize your websites or applications further with an SNS Domain',
             //   icon: require('@/assets/imgs/nav/SNS Domain.png'),
-            //   link: '/bucket',
+            //   link: '/sns',
             // },
           ],
         },
