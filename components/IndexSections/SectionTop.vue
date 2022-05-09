@@ -4,7 +4,7 @@
       <v-col cols="12" md="12" lg="12">
         <v-carousel
           cycle
-          :height="bannerHeight"
+          :height="$vuetify.breakpoint.smAndDown ? 1000 : bannerHeight"
           hide-delimiters
           hide-delimiter-background
           show-arrows-on-hover
@@ -19,7 +19,7 @@
             <v-row class="fill-height" align="center" justify="center">
               <div class="text-center">
                 <div
-                  class="text-h3 text-center font-weight-bold text-uppercase"
+                  class="text-h4 text-center font-weight-bold text-uppercase"
                   style="color: #132642"
                   v-html="item.title"
                 ></div>
@@ -30,7 +30,7 @@
                 ></div>
                 <v-btn
                   class="banner-btn text-h5 mt-16 px-16 text-uppercase"
-                  height="60"
+                  height="50"
                   elevation="6"
                   :to="item.to"
                   :href="item.href"
