@@ -84,6 +84,9 @@ export default {
   },
   data() {
     return {
+      title: 'Developer Grants Program | 4EVERLAND',
+      description:
+        "4EVERLAND's Dev-Grants Program aims to ensure developers make that smooth leap from Web 2.0 to Web 3.0 along with helping in the growth and development of Web 3.0.",
       banner: require('@/assets/imgs/grants/banner.png'),
       focusImg: require('@/assets/imgs/grants/focus.png'),
       mdiCheckCircle,
@@ -107,6 +110,18 @@ export default {
         {
           label: 'Exclusive Support',
           img: require('@/assets/imgs/grants/icon4.png'),
+        },
+      ],
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description,
         },
       ],
     }

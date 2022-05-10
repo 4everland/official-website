@@ -258,7 +258,7 @@ export default {
               text: 'Bug Bounty',
               tips: 'Get rewarded for finding bugs and exploits',
               icon: require('@/assets/imgs/nav/Bug Bounty.png'),
-              href: 'https://hosting.4everland.org/#/bug-bounty',
+              href: 'https://dashboard.4everland.org/#/bug-bounty',
               target: '_blank',
             },
             {

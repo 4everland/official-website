@@ -23,18 +23,15 @@
         </div>
       </div>
       <v-row>
-        <v-col cols="12" md="6"> </v-col>
+        <v-col cols="12" md="6" class="d-flex justify-end">
+          <v-img max-width="500" :src="domainObj[type].img"></v-img>
+        </v-col>
         <v-col cols="12" md="6">
           <div class="text-h6 font-weight-bold mb-2" style="color: #132642">
-            Solana Name Service Analytics
+            {{ domainObj[type].tit }}
           </div>
           <div class="text-body-1" style="color: #6c7789">
-            Solana domain name service has been the standard for P2P
-            transactions on Solana chain. Major wallets such as Phantom,
-            Solflare and Slope Finance have successfully integrated Solana
-            domain name service function. Solana domain name service converts
-            lengthy SOL addresses into easy-to-read. Sol domain names, greatly
-            simplifying on-chain payments.
+            {{ domainObj[type].desc }}
           </div>
         </v-col>
       </v-row>
@@ -45,7 +42,19 @@
 export default {
   data() {
     return {
-      type: 'ens',
+      type: 'ENS',
+      domainObj: {
+        ENS: {
+          img: require('~/assets/imgs/decentralise/ens.png'),
+          tit: 'Solana Name Service Analytics',
+          desc: 'Solana domain name service has been the standard for P2P transactions on Solana chain. Major wallets such as Phantom, Solflare and Slope Finance have successfully integrated Solana domain name service function. Solana domain name service converts lengthy SOL addresses into easy-to-read. Sol domain names, greatly simplifying on-chain payments.',
+        },
+        SNS: {
+          img: require('~/assets/imgs/decentralise/sns.png'),
+          tit: 'Solana Name Service Analytics',
+          desc: 'Solana domain name service has been the standard for P2P transactions on Solana chain. Major wallets such as Phantom, Solflare and Slope Finance have successfully integrated Solana domain name service function. Solana domain name service converts lengthy SOL addresses into easy-to-read. Sol domain names, greatly simplifying on-chain payments.',
+        },
+      },
     }
   },
   created() {

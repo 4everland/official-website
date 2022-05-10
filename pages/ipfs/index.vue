@@ -17,6 +17,26 @@ export default {
     IpfsAbout,
     IpfsBrowes,
   },
+  data() {
+    return {
+      title:
+        'IPFS Gateway | Global accelerated distributed web gateway | 4EVERLAND',
+      description:
+        "Browse files stored on IPFS easily and securely with 4EVERLAND's distributed web gateway without downloading software.",
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description,
+        },
+      ],
+    }
+  },
   methods: {},
 }
 </script>
