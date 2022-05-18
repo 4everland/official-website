@@ -246,7 +246,7 @@ export default {
               text: 'Litepaper',
               tips: 'Read the 4EVERLAND litepaper and discover the scope of the project',
               icon: require('@/assets/imgs/nav/Litepaper.png'),
-              href: '/4everland-whitepaper-en.pdf',
+              href: 'https://static.4everland.org/4everland-litepaper.pdf',
               target: '_blank',
             },
             {

@@ -157,7 +157,7 @@ export default {
             },
             {
               name: 'WhitePaper',
-              href: '/4everland-whitepaper-en.pdf',
+              href: 'https://static.4everland.org/4everland-litepaper.pdf',
               target: '_blank',
             },
             {
