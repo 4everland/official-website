@@ -5,11 +5,12 @@
         class="text-h4 font-weight-bold text-center mb-6"
         style="color: #132642"
       >
-        About InterPlanetary File System (IPFS)
+        About InterPlantary File System(IPFS)
       </div>
       <div class="text-h6 font-weight-bold text-center" style="color: #6c7789">
-        4EVERLAND Can Help You Rebuild the Web's Foundation Layer and Transition
-        to a New and Unbiased Web 3.0.
+        4EVERLAND has its own IPFS gateway which means it can allow you to
+        access those addresses over HTTP (Hypertext Transfer Protocol) on your
+        browser.
       </div>
       <v-row class="mt-16">
         <v-col
@@ -38,18 +39,18 @@ export default {
     return {
       list: [
         {
-          title: 'What is IPFS?',
-          desc: 'The IPFS is a distributed file storage protocol that allows computers all over the globe to store and serve files as part of a giant peer-to-peer network.Any computer, anywhere in the world, can download the IPFS software and start hosting and serving files.If someone runs IPFS on their computer and uploads a file to the IPFS network, that file can be viewed and downloaded by anyone else in the world who is also running IPFS.',
+          title: 'What is IPFS network and Dweb?',
+          desc: 'The InterPlanetary File System (IPFS) is a protocol and peer-to-peer network for storing and sharing data (files, images, videos, websites) in a distributed file system. IPFS uses content-addressing to uniquely identify each file in a global namespace connecting all computing devices. IPFS allows users to not only receive but also host content.',
           img: require('~/assets/imgs/ipfs/IPFS_01.png'),
         },
         {
           title: 'How does IPFS Work?',
-          desc: "Distributed Computers Join the Network: Any computer can download the IPFS software and start adding and requesting files from the network.Unique Hash Created for Every File: Every file added to IPFS is given an address derived from a hash of the file's content. That address is like a fingerprint. It belongs uniquely to that file and will be the same, no matter where the file is stored in IPFS.",
+          desc: 'IPFS works by connecting all computing devices with the same system of files via a system of nodes. It uses a “distributed hash table, an incentivized block exchange, and a self-certifying namespace.” In simpler terms, it acts similarly to a torrent system, except that instead of sharing and exchanging media, IPFS exchanges git objects. This means that the entire system is based around a simple key-value data storage.',
           img: require('~/assets/imgs/ipfs/IPFS_02.png'),
         },
         {
-          title: 'Why Are People Using IPFS?',
-          desc: 'Ensure Integrity of ContentEvery file on IPFS has a unique address determined by the exact bits that comprise the file. If even a single bit changes, the whole address changes. This allows the users to know for sure if a file has ever been tampered with.',
+          title: 'Why Choose to use IPFS?',
+          desc: 'Compared IPFS and HTTP. HTTP is a twenty-year-old technology and needs to be improved in order for the Internet to keep up with technology. IPFS allows for decreased latency, enabling us to utilize the higher memory densities and faster processing speeds that are continually being developed. It provides faster overall Internet speed, increased security, and the decentralization of virtual information.',
           img: require('~/assets/imgs/ipfs/IPFS_03.png'),
         },
       ],
@@ -61,7 +62,7 @@ export default {
 .about-item {
   width: 100%;
   max-width: 580px;
-  min-height: 600px;
+  min-height: 450px;
   background: linear-gradient(150deg, #e1f2ff, #f3ffe9);
   position: relative;
   img {

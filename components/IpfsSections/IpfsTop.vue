@@ -12,26 +12,36 @@
             class="text-h3 font-weight-black"
             style="max-width: 600px; color: #132642"
           >
-            IPFS Gateway
+            IPFS GATEWAY
           </div>
           <div
             class="text-h6 mt-12 font-weight-blod"
             style="max-width: 800px; color: #6c7789"
           >
-            Simplify, speed up, and secure access to both the Ethereum network
-            and the InterPlanetary File System (IPFS)Use 4EVERALND gateways to
-            access the Distributed Web easily, quickly, and securely, no
-            software required.
+            The IPFS gateway owns the content that can acquire the IPFS network
+            by itself and deliver it to users via HTTPS. 4EVERLAND gateways
+            offers global acceleration, custom domain, and SSL certificate
+            technology to chaise better performance. Start to use IPFS gateways
+            on the Open Web now!
           </div>
           <p class="mt-16">
             <v-btn
-              :href="hosting_web"
+              href="https://ipfs.io/"
               target="_blank"
               tile
               class="start-btn"
               height="60"
-              color="#452c92"
-              >TRY FOR FREE</v-btn
+              color="#9989cc"
+              >Public Gateway</v-btn
+            >
+            <v-btn
+              href="https://ipfs.4everland.io"
+              target="_blank"
+              tile
+              class="start-btn"
+              height="60"
+              color="#76a9f4"
+              >Dedicated Gateway</v-btn
             >
           </p>
         </v-col>
@@ -62,8 +72,11 @@
 .start-btn {
   width: 240px;
   height: 60px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #fff;
+}
+.start-btn:first-child {
+  margin-right: 18px;
 }
 </style>

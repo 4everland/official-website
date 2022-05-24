@@ -5,23 +5,20 @@
         <v-col
           class="d-flex flex-column justify-center"
           cols="12"
-          md="6"
-          lg="6"
+          md="7"
+          lg="7"
         >
-          <div
-            class="text-h3 font-weight-black"
-            style="max-width: 600px; color: #132642"
-          >
-            Decentralised naming
+          <div class="text-h4 font-weight-black" style="color: #132642">
+            Add ENS/SNS Domains to Sites on IPFS
           </div>
           <div
             class="text-h6 mt-12 font-weight-blod"
-            style="max-width: 800px; color: #6c7789"
+            style="max-width: 600px; color: #6c7789"
           >
-            Simplify, speed up, and secure access to both the Ethereum network
-            and the InterPlanetary File System (IPFS)Use 4EVERALND gateways to
-            access the Distributed Web easily, quickly, and securely, no
-            software required.
+            You can host any websites in a truly decentralized way by using
+            decentralized domains on IPFS. This means your website will be
+            censorship-resistant, immutable, and in a decentralized network. And
+            also you can really control everything in the realm of web.3.0.
           </div>
           <p class="mt-16">
             <v-btn
@@ -36,10 +33,10 @@
           </p>
         </v-col>
         <v-col
-          class="d-flex align-center justify-center pa-10"
+          class="d-flex align-center justify-center"
           cols="12"
-          md="6"
-          lg="6"
+          md="5"
+          lg="5"
         >
           <img
             alt="top-banner"

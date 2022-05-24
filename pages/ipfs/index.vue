@@ -1,21 +1,24 @@
 <template>
   <div id="ipfs">
     <ipfs-top />
-    <ipfs-about />
     <ipfs-browes />
+    <ipfs-type />
+    <ipfs-about />
   </div>
 </template>
 
 <script>
 import IpfsTop from '@/components/IpfsSections/IpfsTop.vue'
-import IpfsAbout from '@/components/IpfsSections/IpfsAbout.vue'
 import IpfsBrowes from '@/components/IpfsSections/IpfsBrowes.vue'
+import IpfsType from '@/components/IpfsSections/IpfsType.vue'
+import IpfsAbout from '@/components/IpfsSections/IpfsAbout.vue'
 
 export default {
   components: {
     IpfsTop,
-    IpfsAbout,
     IpfsBrowes,
+    IpfsType,
+    IpfsAbout,
   },
   data() {
     return {

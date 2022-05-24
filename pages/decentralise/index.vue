@@ -1,17 +1,20 @@
 <template>
   <div id="ens">
     <ens-top />
+    <ens-domain />
     <ens-type />
   </div>
 </template>
 
 <script>
 import ensTop from '@/components/decentraliseSections/Top.vue'
+import ensDomain from '@/components/decentraliseSections/Domain.vue'
 import ensType from '@/components/decentraliseSections/Type.vue'
 
 export default {
   components: {
     ensTop,
+    ensDomain,
     ensType,
   },
   data() {
