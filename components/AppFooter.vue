@@ -380,4 +380,8 @@ input:-ms-input-placeholder {
   top: 120px;
   margin: auto;
 }
+/deep/.v-btn--plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover)
+  .v-btn__content {
+  opacity: 1;
+}
 </style>

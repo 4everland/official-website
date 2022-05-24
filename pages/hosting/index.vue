@@ -26,6 +26,26 @@ export default {
     HostingTemplate,
     HostingFaq,
   },
+  data() {
+    return {
+      title:
+        '4EVERLAND Hosting | Host websites or DApps based on the Web3.0 | 4EVERLAND',
+      description:
+        '4EVERLAND Hosting is a developer application that helps developers to build, publish, and manage DWebs quickly.',
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description,
+        },
+      ],
+    }
+  },
   methods: {},
 }
 </script>

@@ -210,25 +210,24 @@ export default {
             //   href: 'https://explorer.4everland.org',
             //   target: '_blank',
             // },
-            // {
-            //   text: 'IPFS Gateway',
-            //   tips: 'Decentralize your websites or applications further with an ENS Domain',
-            //   icon: require('@/assets/imgs/nav/IPFS Gateway.png'),
-            //   link: '/ipfs',
-            // },
+            {
+              text: 'IPFS Gateway',
+              tips: 'Decentralize your websites or applications further with an ENS Domain',
+              icon: require('@/assets/imgs/nav/IPFS Gateway.png'),
+              link: '/ipfs',
+            },
             {
               text: 'ENS Domain',
               tips: 'Decentralize your websites or applications further with an ENS Domain',
               icon: require('@/assets/imgs/nav/ENS Domain.png'),
-              href: 'https://www.4everland.org/blog/Support_ENS_IPNS_January_15',
-              target: '_blank',
+              link: '/ens',
             },
-            // {
-            //   text: 'SNS Domain',
-            //   tips: 'Decentralize your websites or applications further with an SNS Domain',
-            //   icon: require('@/assets/imgs/nav/SNS Domain.png'),
-            //   link: '/sns',
-            // },
+            {
+              text: 'SNS Domain',
+              tips: 'Decentralize your websites or applications further with an SNS Domain',
+              icon: require('@/assets/imgs/nav/SNS Domain.png'),
+              link: '/sns',
+            },
           ],
         },
         {
@@ -259,7 +258,7 @@ export default {
               text: 'Bug Bounty',
               tips: 'Get rewarded for finding bugs and exploits',
               icon: require('@/assets/imgs/nav/Bug Bounty.png'),
-              href: 'https://hosting.4everland.org/#/bug-bounty',
+              href: 'https://dashboard.4everland.org/#/bug-bounty',
               target: '_blank',
             },
             {
@@ -274,7 +273,8 @@ export default {
 
         {
           text: 'Blogs',
-          link: '/blog',
+          href: 'https://medium.com/4everland',
+          target: '_blank',
         },
         {
           text: 'Community',

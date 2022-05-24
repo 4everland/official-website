@@ -56,7 +56,7 @@ export default {
   white-space: nowrap;
 }
 .border-box {
-  min-height: 480px;
+  min-height: 420px;
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -64,13 +64,13 @@ export default {
   overflow: hidden;
 }
 .main-title {
-  font-size: 30px;
+  font-size: 24px;
   color: #132642;
   font-weight: bold;
 }
 
 .main-text {
-  font-size: 20px !important;
+  font-size: 18px !important;
   color: #6c7789;
 }
 </style>
