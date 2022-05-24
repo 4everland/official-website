@@ -203,13 +203,13 @@ export default {
               icon: require('@/assets/imgs/nav/bucket.png'),
               link: '/bucket',
             },
-            {
-              text: 'Explorer',
-              tips: 'View statistics, pools, nodes and status of the network',
-              icon: require('@/assets/imgs/nav/explorer.png'),
-              href: 'https://explorer.4everland.org',
-              target: '_blank',
-            },
+            // {
+            //   text: 'Explorer',
+            //   tips: 'View statistics, pools, nodes and status of the network',
+            //   icon: require('@/assets/imgs/nav/explorer.png'),
+            //   href: 'https://explorer.4everland.org',
+            //   target: '_blank',
+            // },
             {
               text: 'IPFS Gateway',
               tips: 'Decentralize your websites or applications further with an ENS Domain',

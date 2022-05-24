@@ -81,7 +81,7 @@ export default {
   },
   watch: {
     $route: {
-      immediate: true, // 一旦监听到路由的变化立即执行
+      immediate: true,
       handler(to, from) {
         this.type = to.query.type
       },

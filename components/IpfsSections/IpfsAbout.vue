@@ -63,6 +63,7 @@ export default {
   width: 100%;
   max-width: 580px;
   min-height: 450px;
+  max-height: 460px;
   background: linear-gradient(150deg, #e1f2ff, #f3ffe9);
   position: relative;
   img {
