@@ -20,7 +20,7 @@
           >
             The IPFS gateway owns the content that can acquire the IPFS network
             by itself and deliver it to users via HTTPS. 4EVERLAND gateways
-            offers global acceleration, custom domain, and SSL certificate
+            offer global acceleration, custom domain, and SSL certificate
             technology to chaise better performance. Start to use IPFS gateways
             on the Open Web now!
           </div>
