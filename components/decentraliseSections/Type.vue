@@ -6,7 +6,7 @@
           v-for="item in ['ENS', 'SNS']"
           :key="item"
           class="tab tetx-h5 font-weight-bold"
-          :class="type == item ? 'active' : ''"
+          :class="domainType == item ? 'active' : ''"
           @click="changeTab(item)"
         >
           {{ item }}
@@ -14,14 +14,14 @@
       </div>
       <v-row>
         <v-col cols="12" md="6" class="d-flex justify-end">
-          <v-img max-width="500" :src="domainObj[type].img"></v-img>
+          <v-img max-width="500" :src="domainObj[domainType].img"></v-img>
         </v-col>
         <v-col cols="12" md="6" class="pa-10">
           <div class="text-h6 font-weight-bold mb-2" style="color: #132642">
-            {{ domainObj[type].tit }}
+            {{ domainObj[domainType].tit }}
           </div>
           <div class="text-body-1" style="color: #6c7789">
-            {{ domainObj[type].desc }}
+            {{ domainObj[domainType].desc }}
           </div>
         </v-col>
       </v-row>
@@ -39,14 +39,14 @@
       <v-row class="pt-16">
         <v-col cols="12" md="6" class="pa-10">
           <div class="text-h6 font-weight-bold mb-2" style="color: #132642">
-            {{ domainObj[type].gifTit }}
+            {{ domainObj[domainType].gifTit }}
           </div>
           <div class="text-body-1" style="color: #6c7789">
-            {{ domainObj[type].gifDesc }}
+            {{ domainObj[domainType].gifDesc }}
           </div>
         </v-col>
         <v-col cols="12" md="6" class="d-flex justify-end">
-          <v-img max-width="500" :src="domainObj[type].gif"></v-img>
+          <v-img max-width="500" :src="domainObj[domainType].gif"></v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -54,9 +54,14 @@
 </template>
 <script>
 export default {
+  props: {
+    domainType: {
+      type: String,
+      default: 'ENS',
+    },
+  },
   data() {
     return {
-      type: 'ENS',
       domainObj: {
         ENS: {
           img: require('~/assets/imgs/decentralise/ens.png'),
@@ -79,25 +84,10 @@ export default {
       },
     }
   },
-  watch: {
-    $route: {
-      immediate: true,
-      handler(to, from) {
-        this.type = to.query.type
-      },
-    },
-  },
-  created() {
-    this.type = this.$route.query.type
-  },
   methods: {
     changeTab(item) {
-      this.type = item
-      let url = window.location.href
-      if (url.includes('?')) {
-        url = url.split('?')[0] + '?type=' + item
-        window.history.pushState({}, 0, url)
-      }
+      const path = item.toLowerCase()
+      this.$router.push('/' + path + '#DecentraliseType')
     },
   },
 }
