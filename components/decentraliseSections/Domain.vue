@@ -41,7 +41,7 @@ export default {
     return {
       list: [
         {
-          title: 'Private exlusive',
+          title: 'Private Exclusive',
           img: require('~/assets/imgs/decentralise/domain_01.png'),
         },
         {

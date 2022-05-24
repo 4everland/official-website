@@ -45,8 +45,8 @@
             {{ domainObj[domainType].gifDesc }}
           </div>
         </v-col>
-        <v-col cols="12" md="6" class="d-flex justify-end">
-          <v-img max-width="500" :src="domainObj[domainType].gif"></v-img>
+        <v-col cols="12" md="6" class="d-flex justify-start">
+          <v-img max-width="600" :src="domainObj[domainType].gif"></v-img>
         </v-col>
       </v-row>
     </v-container>
