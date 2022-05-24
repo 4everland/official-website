@@ -46,6 +46,9 @@ export default {
         {
           img: require('@/assets/imgs/index/partners/zkSync.png'),
         },
+           {
+          img: require('@/assets/imgs/index/partners/bonfida.png'),
+        },
         {
           img: require('@/assets/imgs/index/partners/ENS.png'),
         },
