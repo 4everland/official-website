@@ -11,7 +11,7 @@
         <v-col
           v-for="(item, index) in list"
           :key="index"
-          class="pa-10"
+          class="pa-4"
           cols="12"
           md="4"
           lg="4"
@@ -52,11 +52,15 @@ export default {
 .about-item {
   width: 100%;
   max-width: 500px;
-  min-height: 300px;
+  min-height: 360px;
   margin: 0 auto;
   background: linear-gradient(150deg, #e1f2ff, #f3ffe9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   img {
     width: 100%;
+    max-width: 300px;
   }
 }
 .item-title {
