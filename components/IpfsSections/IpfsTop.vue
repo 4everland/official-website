@@ -26,7 +26,7 @@
           </div>
           <p class="mt-16">
             <v-btn
-              href="https://ipfs.io/"
+              href="https://ipfs.4everland.io"
               target="_blank"
               tile
               class="start-btn"
@@ -35,7 +35,7 @@
               >Public Gateway</v-btn
             >
             <v-btn
-              href="https://ipfs.4everland.io"
+              :href="hosting_web"
               target="_blank"
               tile
               class="start-btn"
