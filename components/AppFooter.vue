@@ -198,7 +198,7 @@ export default {
             },
             {
               name: 'Contact us',
-              href: 'mailto:contact@4everlan.org',
+              href: 'mailto:contact@4everland.org',
             },
           ],
         },
