@@ -46,7 +46,7 @@ export default {
         {
           img: require('@/assets/imgs/index/partners/zkSync.png'),
         },
-           {
+        {
           img: require('@/assets/imgs/index/partners/bonfida.png'),
         },
         {
@@ -60,6 +60,9 @@ export default {
         },
         {
           img: require('@/assets/imgs/index/partners/near.png'),
+        },
+        {
+          img: require('@/assets/imgs/index/partners/okc.png'),
         },
         {
           img: require('@/assets/imgs/index/partners/heco.png'),
