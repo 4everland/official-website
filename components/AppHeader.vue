@@ -278,7 +278,7 @@ export default {
         },
         {
           text: 'Community',
-          href: 'https://discord.com/invite/Cun2VpsdjF ',
+          href: 'https://discord.com/invite/4everland',
           target: '_blank',
         },
       ],
