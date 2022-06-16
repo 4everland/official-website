@@ -32,7 +32,7 @@
               @click="showAll"
             >
               <div class="explore-menu-item-type">ALL</div>
-              <div class="explore-menu-item-num">{{ dappsList.length }}</div>
+              <!-- <div class="explore-menu-item-num">{{ dappsList.length }}</div> -->
             </div>
             <div
               v-for="(value, key, index) in typeList"
@@ -42,7 +42,7 @@
               @click="chooseType(key, index)"
             >
               <div class="explore-menu-item-type">{{ key }}</div>
-              <div class="explore-menu-item-num">{{ value }}</div>
+              <!-- <div class="explore-menu-item-num">{{ value }}</div> -->
             </div>
           </div>
           <div class="explore-list">
@@ -60,7 +60,7 @@
                   {{ item.desc }}
                 </div>
                 <div class="dapps-more">
-                  <a :href="item.website" target="_blank">Read More</a>
+                  <a :href="item.website" target="_blank">Explore Now</a>
                 </div>
                 <div class="dapps-footer">
                   <div class="tags">
@@ -204,7 +204,7 @@ export default {
       padding: 0 15px;
       border: 1px solid #eeeef2;
       &-title {
-        font-size: 27px;
+        font-size: 28px;
         font-weight: bold;
         color: #292934;
         font-family: 'BookmanOldStyle-Bold', sans-serif !important;
@@ -231,8 +231,8 @@ export default {
       position: relative;
       margin-top: -1px;
       .explore-menu {
-        flex: 0 0 169px;
-        max-width: 169px;
+        flex: 0 0 240px;
+        max-width: 240px;
         margin-right: -1px;
         &-item {
           border-left: 1px solid #eeeef2;
@@ -240,8 +240,8 @@ export default {
           border-bottom: 1px solid #eeeef2;
           display: flex;
           justify-content: space-between;
-          padding: 16px;
-          font-size: 14px;
+          padding: 26px 16px;
+          font-size: 18px;
           position: relative;
           cursor: pointer;
           &:first-child {
@@ -259,8 +259,8 @@ export default {
           &.active {
             &::before {
               content: '';
-              width: 2px;
-              height: 13px;
+              width: 4px;
+              height: 26px;
               background: #452c92;
               position: absolute;
               left: 0;
