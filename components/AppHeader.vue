@@ -235,10 +235,10 @@ export default {
           link: '',
           childs: [
             {
-              text: 'Ecosystem',
-              tips: 'Read the 4EVERLAND docs and get started on 4EVERLAND',
-              icon: require('@/assets/imgs/nav/Docs.png'),
-              link: '/ecosystem',
+              text: 'Universe',
+              tips: 'Projects Build on 4EVERLAND or Web3.0 tech',
+              icon: require('@/assets/imgs/nav/Universe.png'),
+              link: '/universe',
             },
             {
               text: 'Docs',

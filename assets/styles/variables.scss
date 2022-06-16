@@ -6,12 +6,8 @@ $body-font-family: 'Arial', 'PingFang SC', 'Roboto', 'Helvetica Neue',
   'Helvetica, Tahoma', 'PingFang SC-Light', 'Microsoft YaHei';
 $btn-font-size: 400;
 
-body {
-  overflow-x: hidden;
-}
-
 .v-btn {
-  text-transform: capitalize;
+  text-transform: none;
 }
 .v-menu__content {
   max-width: 100%;
