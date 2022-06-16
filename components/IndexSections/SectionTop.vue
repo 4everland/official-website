@@ -17,28 +17,30 @@
             transition="fade-transition"
           >
             <v-row class="fill-height" align="center" justify="center">
-              <div class="text-center">
-                <div
-                  class="text-h4 text-center font-weight-bold text-uppercase"
-                  style="color: #132642"
-                  v-html="item.title"
-                ></div>
-                <div
-                  class="text-h6 text-center mt-10 mb-16 text-uppercase"
-                  style="color: #6c7789"
-                  v-html="item.tips"
-                ></div>
-                <v-btn
-                  class="banner-btn text-h5 mt-16 px-16 text-uppercase"
-                  height="50"
-                  elevation="6"
-                  :to="item.to"
-                  :href="item.href"
-                  :target="item.href ? '_blank' : ''"
-                >
-                  {{ item.button }}
-                </v-btn>
-              </div>
+              <v-container>
+                <div class="text-center">
+                  <div
+                    class="text-h3 text-center font-weight-bold text-uppercase"
+                    style="color: #132642"
+                    v-html="item.title"
+                  ></div>
+                  <div
+                    class="text-h5 text-center mt-10 mb-16 text-uppercase"
+                    style="color: #6c7789"
+                    v-html="item.tips"
+                  ></div>
+                  <v-btn
+                    class="banner-btn text-h5 mt-16 px-16 text-uppercase"
+                    height="50"
+                    elevation="6"
+                    :to="item.to"
+                    :href="item.href"
+                    :target="item.href ? '_blank' : ''"
+                  >
+                    {{ item.button }}
+                  </v-btn>
+                </div>
+              </v-container>
             </v-row>
           </v-carousel-item>
         </v-carousel>

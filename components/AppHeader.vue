@@ -44,7 +44,7 @@
                   :cols="12"
                   :md="6"
                   :lg="6"
-                  :xl="4"
+                  :xl="6"
                 >
                   <v-btn
                     plain
@@ -235,6 +235,12 @@ export default {
           link: '',
           childs: [
             {
+              text: 'Universe',
+              tips: 'Projects Build on 4EVERLAND or Web3.0 tech',
+              icon: require('@/assets/imgs/nav/Universe.png'),
+              link: '/universe',
+            },
+            {
               text: 'Docs',
               tips: 'Read the 4EVERLAND docs and get started on 4EVERLAND',
               icon: require('@/assets/imgs/nav/Docs.png'),
@@ -278,7 +284,7 @@ export default {
         },
         {
           text: 'Community',
-          href: 'https://discord.com/invite/Cun2VpsdjF ',
+          href: 'https://discord.com/invite/4everland',
           target: '_blank',
         },
       ],

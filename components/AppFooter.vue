@@ -101,6 +101,21 @@
       <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
       <span class="ml-4">Thank you for subscription.</span>
     </div>
+    <div v-show="subPendingShow" class="sub-success">
+      <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
+      <span class="ml-4"
+        >We have sent a subscription confirmation email. To complete the
+        subscription process, please click the confirmation link.</span
+      >
+      <div style="flex-basis: 100%">
+        <v-btn
+          color="#2b85fb"
+          class="white--text"
+          @click="subPendingShow = false"
+          >ok</v-btn
+        >
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -112,6 +127,7 @@ export default {
       loading: false,
       disabled: true,
       subSuccessShow: false,
+      subPendingShow: false,
       mdiEmoticonHappyOutline,
       links: [
         {
@@ -264,7 +280,9 @@ export default {
         // eslint-disable-next-line no-console
         // console.log(resp.data)
         if (resp.data.status) {
-          if (resp.data.status === 'success') {
+          if (resp.data.status === 'success' && resp.data.pending) {
+            this.subPendingShow = true
+          } else if (resp.data.status === 'success') {
             this.subSuccessShow = true
             setTimeout(() => {
               this.subSuccessShow = false
@@ -365,9 +383,12 @@ input:-ms-input-placeholder {
   color: #b1b6bb;
 }
 .sub-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 600px;
-  height: 200px;
-  line-height: 200px;
+  min-height: 240px;
   background: #fff;
   border: 2px solid #2b85fb;
   border-radius: 10px;
@@ -379,6 +400,7 @@ input:-ms-input-placeholder {
   right: 0;
   top: 120px;
   margin: auto;
+  padding: 20px;
 }
 /deep/.v-btn--plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover)
   .v-btn__content {

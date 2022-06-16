@@ -1,0 +1,621 @@
+{
+    "types": [
+        "Dweb",
+        "DDNS",
+        "4EVER Space",
+        "IPFS&Arweave",
+        "Tools"
+    ],
+    "list": [
+        {
+            "logo": "https://app-01.4everland.store/dweb/uniswap.jpeg",
+            "name": "Uniswap",
+            "desc": "A protocol for trading and automated liquidity provision on Ethereum.",
+            "website": "https://uniswap-org.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "DeFi"
+            ],
+            "github": "https://github.com/Uniswap",
+            "ipfs": "QmUHRFsefmi8jggMCZz4w8VHGtwDskNDrwMTteJrzAcRBE"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/sushiswap.jpeg",
+            "name": "Sushi",
+            "desc": "Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform. ",
+            "website": "https://sushiswap-3.4everland.app/home",
+            "type": "Dweb",
+            "tags": [
+                "DeFi"
+            ],
+            "github": "https://github.com/sushiswap",
+            "ipfs": "bafybeicuyqohco63zgki6xb67hrvzaesqsfpxfnq7g3lluxrcalybsr4dm"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/bancor.png",
+            "name": "Bancor",
+            "desc": "The only DeFi trading and staking protocol with Single-Sided Liquidity & 100% Impermanent Loss Protection",
+            "website": "https://bancor.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "DeFi"
+            ],
+            "github": "https://github.com/bancorprotocol/",
+            "ipfs": "bafybeifo3yo3qr6kj6ttszbbkirf337ixshw2qjcq3v2m343yrdgfm3tgu"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/MultiChain.jpeg",
+            "name": "Multichain",
+            "desc": "Multichain is the ultimate Router for web3. It is an infrastructure developed for arbitrary cross-chain interactions.",
+            "website": "https://bancor.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "Infra"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Dogecoin",
+            "desc": "Dogecoin is an open source peer-to-peer cryptocurrency, favored by shibas worldwide. ",
+            "website": "https://dogecoin.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "meme"
+            ],
+            "github": "https://github.com/dogecoin/dogecoin.com",
+            "ipfs": "bafybeib5e2wc2cs555eopctci3guxwarkojzmdm2nk726xvh7yg7zkmusi"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/dogecoin.png",
+            "name": "Dogecoin",
+            "desc": "Dogecoin is an open source peer-to-peer cryptocurrency, favored by shibas worldwide. ",
+            "website": "https://dogecoin.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "meme"
+            ],
+            "github": "https://github.com/dogecoin/dogecoin.com",
+            "ipfs": "bafybeib5e2wc2cs555eopctci3guxwarkojzmdm2nk726xvh7yg7zkmusi"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/WePiggy.png",
+            "name": "WePiggy",
+            "desc": "WePiggy is an open-source, non-custodial, crypto asset lending market protocol. ",
+            "website": "https://wepiggy.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "DeFi"
+            ],
+            "github": "https://github.com/WePiggy",
+            "ipfs": "QmPvxQG6cYfaQcdKFKihi4f6a6TutUQGAn8aF27m3jjoKj"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/solidy.png",
+            "name": "Solidly",
+            "desc": "Solid offers foreign exchange trading solutions for the institutional market. ",
+            "website": "https://solidly-exchange.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "DeFi"
+            ],
+            "github": "https://github.com/solidlyexchange",
+            "ipfs": "bafybeiborya3mkpwt3tnlj54szhhecfng4qdg2iowaxde6amdby5kf5k7e"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/chainlist.png",
+            "name": "Chainlist",
+            "desc": "Chainlist is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain id and Network id to connect to the correct chain.",
+            "website": "https://chainlist.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "Tools"
+            ],
+            "github": "https://github.com/antonnell/networklist-org",
+            "ipfs": "bafybeicganmvepi2nbpxrpxsz3lkljajli5tuiphoagw3au7fgn4h5d2vq"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/bella.png",
+            "name": "Bella",
+            "desc": "Bella Protocol is a platform that provides a suite of DeFi products designed to make crypto banking simpler and more accessible.",
+            "website": "https://dweb.bella.fi/",
+            "type": "Dweb",
+            "tags": [
+                "DeFi"
+            ],
+            "github": "",
+            "ipfs": "QmUDvUfk6Tp9uMbtYXQHv5CXSct1Z1o1CzWtaU9uAJVFHm"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/Permaswap.jpeg",
+            "name": "Permaswap",
+            "desc": "The first cross-chain DEX on Arweave.",
+            "website": "https://perma-website-2.4everland.app/#/",
+            "type": "Dweb",
+            "tags": [
+                "DeFi",
+                "Arweave"
+            ],
+            "github": "",
+            "ipfs": "bafybeiee7khn3saxvwhznf5dhr6dymua4lc3augcwesiwmshcxfeknxpci"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/Perpetual.png",
+            "name": "Perpetual",
+            "desc": "Perpetual Protocol is a decentralized exchange (DEX) for futures on Ethereum and xDai.",
+            "website": "https://perpetual.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "DeFi"
+            ],
+            "github": "https://github.com/perpetual-protocol/perp-v2-referral-dashboard",
+            "ipfs": "bafybeiem63qfd2aotyg5cldnc6a5yk3la7djer662snhdhcaaprtve6jaa"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/Yam.png",
+            "name": "YAM DAO",
+            "desc": "Fair finance by the people, for the people.",
+            "website": "https://yam-2.4everland.app/#/",
+            "type": "Dweb",
+            "tags": [
+                "DeFi"
+            ],
+            "github": "https://github.com/yam-finance/yam-www",
+            "ipfs": "bafybeia4fttwrypa45ysqmjo4cgkzblzbxvhc5ilxooknn7s3p2x3z4tra"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/keep3r.png",
+            "name": "Keep3r",
+            "desc": "Keep3rV1 is a decentralized platform designed to facilitate the coordination between projects that need to source outside development operations and those who can provide those required services.",
+            "website": "https://keep3r.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "DeFi"
+            ],
+            "github": "https://github.com/keep3r-network",
+            "ipfs": "bafybeif3u5t222vgyfrj43v4tubb4eyfowkytro627ddwroy4n55li4mcu"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/Mango.jpeg",
+            "name": "Mango",
+            "desc": "Mango intends to merge the liquidity and usability of CeFi with the permissionless innovation of DeFi at a lower cost to the end user than both currently provide. ",
+            "website": "https://mangoweb.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "DeFi"
+            ],
+            "github": "https://github.com/blockworks-foundation/mango-web",
+            "ipfs": "bafybeihlgmnnecacczcz4dckbyh7253nle5rt34xfcvmbirq2wqw5hjvde"
+        },
+        {
+            "logo": "https://app-01.4everland.store/dweb/beefy.png",
+            "name": "Beefy",
+            "desc": "Beefy Finance is a Decentralized, Multi-Chain Yield Optimizer platform that allows its users to earn compound interest on their crypto holdings.",
+            "website": "https://beefyfinance.4everland.app/",
+            "type": "Dweb",
+            "tags": [
+                "DeFi"
+            ],
+            "github": "https://github.com/beefyfinance/beefyfinance.github.io",
+            "ipfs": "bafybeih44rj7zqi32w3myybixqyd6u2cde7cwmwexbfdjazm7hu3zqkmh4"
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "ENS",
+            "desc": "Decentralised naming for wallets, websites, & more.",
+            "website": "https://ens.domains/",
+            "type": "DDNS",
+            "tags": [
+                "DDNS"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "SNS",
+            "desc": "Decentralized naming service built on Solana",
+            "website": "https://bonfida.org/",
+            "type": "DDNS",
+            "tags": [
+                "DDNS"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "DAS",
+            "desc": "DAS is a cross-chain decentralized account system.",
+            "website": "https://www.gogodas.com/",
+            "type": "DDNS",
+            "tags": [
+                "DDNS"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "FNS",
+            "desc": "The new generation of decentralized domain name services built on Flow",
+            "website": "https://www.flowns.org/zh",
+            "type": "DDNS",
+            "tags": [
+                "DDNS"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Relation",
+            "desc": "Redefine the Ownership of Data, create Your Social Graph Value on Web.3.0",
+            "website": "https://relationlabs.ai/#/home",
+            "type": "4EVER Space",
+            "tags": [
+                "Social",
+                "Data"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Mintbox",
+            "desc": "Mint NFT by yourself!",
+            "website": "https://mint-box.4everland.app/#/",
+            "type": "4EVER Space",
+            "tags": [
+                "NFT",
+                "Tools"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Gödel City",
+            "desc": "Godel City . NFT Land Game project, 3D scene scavenger hunt and launchpad game",
+            "website": "https://www.godel.cc/",
+            "type": "4EVER Space",
+            "tags": [
+                "Game",
+                "NFT"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "MyNFT",
+            "desc": "MyNFT is an NFT platform owned by creators, voters, and collectors.",
+            "website": "https://mynft.io/",
+            "type": "4EVER Space",
+            "tags": [
+                "NFT"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Dataverse",
+            "desc": "Dataverse is your secure home in Metaverse",
+            "website": "https://dataverse.art/",
+            "type": "4EVER Space",
+            "tags": [
+                "Tools"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "PooZone",
+            "desc": "Customize your Web3 space",
+            "website": "https://poo.zone/",
+            "type": "4EVER Space",
+            "tags": [
+                "Social",
+                "Data"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Treasureland",
+            "desc": "A cross-chain platform for NFT issuance, trading, NFT collections and tailored in-shop services.",
+            "website": "https://metaline.4everland.app/",
+            "type": "4EVER Space",
+            "tags": [
+                "Game",
+                "NFT"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "5Degrees",
+            "desc": "A protocol for decentralized social network, help people to get into Web3.0 easily.",
+            "website": "https://www.5degrees.io/",
+            "type": "4EVER Space",
+            "tags": [
+                "Social",
+                "Protocol"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Web3img",
+            "desc": "Web3 image Bed",
+            "website": "https://web3img.com/",
+            "type": "4EVER Space",
+            "tags": [
+                "Data",
+                "Tools"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Galaxy",
+            "desc": "Create New Experiences with Web3 Credentials",
+            "website": "https://galaxy.eco/",
+            "type": "4EVER Space",
+            "tags": [
+                "NFT"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Check My NFT",
+            "desc": "Check the strength of your NFT assets with it",
+            "website": "https://checkmynft.com/",
+            "type": "4EVER Space",
+            "tags": [
+                "NFT",
+                "Tools"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "NFTPort",
+            "desc": "NFTPort is Stripe for NFTs - Bring Your NFT Application to Market in Hours instead of Months w/Developer-First NFT APIs ",
+            "website": "https://www.nftport.xyz/",
+            "type": "4EVER Space",
+            "tags": [
+                "NFT",
+                "Tools"
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Poap",
+            "desc": "POAP stands for Proof of Attendance Protocol. It is a curated ecosystem for the preservation of memories.",
+            "website": "https://poap.xyz/",
+            "type": "4EVER Space",
+            "tags": [
+                "NFT",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Rabbit Hole",
+            "desc": "Learn and earn crypto by using the latest web3 apps",
+            "website": "https://rabbithole.gg/",
+            "type": "4EVER Space",
+            "tags": [
+                "Learning",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Buildspace",
+            "desc": "Buildspace accelerates your builder journey into web3.",
+            "website": "https://buildspace.so/",
+            "type": "4EVER Space",
+            "tags": [
+                "Learning",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "LearnWeb3",
+            "desc": "A free program that will turn you into a web3 developer.",
+            "website": "https://www.learnweb3.io/",
+            "type": "4EVER Space",
+            "tags": [
+                "Learning",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Everpay",
+            "desc": "Decentralized financial services for everyone, everywhere.",
+            "website": "https://everpay.io/",
+            "type": "IPFS&Arweave",
+            "tags": [
+                "Arweave",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "weavemail",
+            "desc": "Decentralized mail on Arweave",
+            "website": "https://biuq26pcmjwrr22godqmwehtd5mof25encuxiy4rxapxdmrz5m.arweave.net/CikNeeJibRjrRnDgyxDzH1ji66RoqXR_jkbgfcbI56w/index.html#/",
+            "type": "IPFS&Arweave",
+            "tags": [
+                "Arweave",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Mirror",
+            "desc": "Create and connect your world on web3",
+            "website": "https://mirror.xyz/",
+            "type": "IPFS&Arweave",
+            "tags": [
+                "Arweave",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Arweave News",
+            "desc": "Community-driven news organization for the Arweave ecosystem.",
+            "website": "https://arweave.news/",
+            "type": "IPFS&Arweave",
+            "tags": [
+                "Arweave",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "IPFS Public Gateways",
+            "desc": "",
+            "website": "https://ipfs.github.io/public-gateway-checker/",
+            "type": "IPFS&Arweave",
+            "tags": [
+                "IPFS",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Planet",
+            "desc": "Decentralized blogs & websites powered by IPFS & ENS",
+            "website": "https://www.planetable.xyz/",
+            "type": "IPFS&Arweave",
+            "tags": [
+                "IPFS",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "noFungible",
+            "desc": "Web interface for generating ipfs-lp albums",
+            "website": "https://ipfs-lp.nofungible.cloud/",
+            "type": "IPFS&Arweave",
+            "tags": [
+                "IPFS",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "Tansferfile",
+            "desc": "Decentralized filesharing over the IPFS network",
+            "website": "https://transferfile.io/#/",
+            "type": "IPFS&Arweave",
+            "tags": [
+                "IPFS",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "CID INSPECTOR",
+            "desc": "CID version transfer",
+            "website": "https://cid.ipfs.io/",
+            "type": "IPFS&Arweave",
+            "tags": [
+                "IPFS",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "IPFS Command-line install",
+            "desc": "Just want to use IPFS from your terminal? Follow these step-by-step instructions for getting up and running on the command line using the Go implementation of IPFS. Includes directions for Windows, macOS, and Linux.",
+            "website": "https://docs.ipfs.io/how-to/command-line-quick-start/",
+            "type": "IPFS&Arweave",
+            "tags": [
+                "IPFS",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "IPFS Companion",
+            "desc": "Get ipfs:// address support and more in your browser with this extension for Chromium and Firefox.",
+            "website": "https://github.com/ipfs/ipfs-companion",
+            "type": "IPFS&Arweave",
+            "tags": [
+                "IPFS",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "CyberDuck",
+            "desc": "Cyberduck is a libre server and cloud storage browser for Mac and Windows with support for 4EVERLAND Bucket FTP, SFTP, WebDAV, Amazon S3, etc.",
+            "website": "https://cyberduck.io/",
+            "type": "Tools",
+            "tags": [
+                "Bucket Connection",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "S3 browser",
+            "desc": "S3 Browser is a freeware Windows client for  4EVERLAND Bucket, Amazon S3, etc.",
+            "website": "https://s3browser.com/",
+            "type": "Tools",
+            "tags": [
+                "Bucket Connection",
+            ],
+            "github": "",
+            "ipfs": ""
+        },
+        {
+            "logo": "https://polygon.technology/ecosystem/0",
+            "name": "MountainDuck",
+            "desc": "Mountain Duck lets you mount server and decentralized storage (Via 4EVERLAND Bucket) as a disk in Finder on macOS and the File Explorer on Windows.",
+            "website": "https://mountainduck.io/",
+            "type": "Tools",
+            "tags": [
+                "Bucket Connection",
+            ],
+            "github": "",
+            "ipfs": ""
+        }
+    ]
+}
