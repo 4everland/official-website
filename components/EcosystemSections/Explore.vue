@@ -3,7 +3,7 @@
     <v-container>
       <div class="explore-box" v-show="isShow">
         <div class="explore-top">
-          <div class="explore-top-title">Explore dApps</div>
+          <div class="explore-top-title">Explore DApps</div>
           <div class="search-box">
             <v-icon size="20px"> mdi-magnify </v-icon>
             <input
@@ -285,21 +285,22 @@ export default {
           border: 1px solid #eeeef2;
           padding: 30px;
           .dapps-name {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: bold;
             margin-top: 17px;
             font-family: 'BookmanOldStyle-Bold', sans-serif !important;
           }
           .dapps-desc {
             min-height: 92px;
-            font-size: 14px;
+            font-size: 16px;
             color: #5d606c;
             overflow: hidden;
             display: -webkit-box;
             text-overflow: ellipsis;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 5;
+            -webkit-line-clamp: 4;
             margin-top: 23px;
+            font-family: 'Ubuntu', sans-serif !important;
           }
           .dapps-more {
             font-size: 14px;
@@ -312,7 +313,7 @@ export default {
             }
           }
           .dapps-footer {
-            margin-top: 42px;
+            margin-top: 28px;
             .tags {
               span {
                 display: inline-block;
