@@ -100,7 +100,6 @@ export default {
       .grant-item {
         width: 338px;
         height: 450px;
-        background: #452c92;
         border-radius: 11px;
         background-image: url('@/assets/imgs/ecosystem/Grants.png');
         background-size: contain;

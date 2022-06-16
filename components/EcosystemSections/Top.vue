@@ -63,10 +63,10 @@ export default {
       font-family: 'BookmanOldStyle-Bold', sans-serif !important;
     }
     .banner-tips {
-      max-width: 490px;
+      max-width: 560px;
       margin: 0 auto;
       margin-top: 36px;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 400;
       color: #132642;
       font-family: 'Ubuntu', sans-serif !important;
@@ -85,7 +85,7 @@ export default {
     }
     .banner-box {
       .banner-title {
-        font-size: 60px;
+        font-size: 54px;
       }
       .banner-tips {
         font-size: 24px;
