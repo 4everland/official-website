@@ -14,7 +14,8 @@
             class="top-btn white--text font-weight-bold ma-2"
             color="#452C92"
             rounded
-            x-large
+            :large="$vuetify.breakpoint.mdAndDown"
+            :x-large="$vuetify.breakpoint.xlOnly"
             href="https://forms.gle/ud4PXFy1sRRKtK1N7"
             target="_blank"
             >Submit your project</v-btn
@@ -24,7 +25,8 @@
             outlined
             color="#452C92"
             rounded
-            x-large
+            :large="$vuetify.breakpoint.mdAndDown"
+            :x-large="$vuetify.breakpoint.xlOnly"
             style="background: #fff"
             :href="hosting_web"
             target="_blank"
