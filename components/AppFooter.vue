@@ -152,7 +152,7 @@ export default {
         },
         {
           icon: require('@/assets/imgs/footer/discord.png'),
-          href: 'https://discord.gg/Cun2VpsdjF',
+          href: 'https://discord.com/invite/4everland',
         },
         {
           icon: require('@/assets/imgs/footer/email.png'),
