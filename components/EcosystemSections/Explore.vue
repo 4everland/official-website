@@ -9,7 +9,7 @@
             <input
               v-model="searchText"
               type="text"
-              placeholder="Search dApps"
+              placeholder="Search DApps"
               @input="search"
             />
           </div>
@@ -210,7 +210,7 @@ export default {
         font-family: 'BookmanOldStyle-Bold', sans-serif !important;
       }
       .search-box {
-        width: 338px;
+        width: 300px;
         height: 45px;
         border: 1px solid #eeeef2;
         display: flex;
@@ -318,8 +318,8 @@ export default {
               span {
                 display: inline-block;
                 min-width: 56px;
-                height: 20px;
-                line-height: 20px;
+                height: 24px;
+                line-height: 24px;
                 background: #ebebf0;
                 border-radius: 10px;
                 text-align: center;
