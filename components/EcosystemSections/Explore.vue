@@ -118,7 +118,7 @@ export default {
   methods: {
     async getDappsList() {
       const { data } = await this.$axios.get(
-        'https://logo.4everland.store/dapps.json'
+        'https://eco.4everland.space/json/dapps.json'
       )
       console.log(data)
       this.formatData(data)
