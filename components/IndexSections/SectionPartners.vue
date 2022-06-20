@@ -11,7 +11,7 @@
           cols="12"
           md="3"
           lg="3"
-          xl="2"
+          xl="3"
           class="my-4 d-flex"
         >
           <div class="img-box">

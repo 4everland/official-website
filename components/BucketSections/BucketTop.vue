@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <a href="https://dashboard.4everland.org">
+    <a :href="hosting_web">
       <v-img
         :src="require('~/assets/imgs/bucket/banner.png')"
         width="100%"
