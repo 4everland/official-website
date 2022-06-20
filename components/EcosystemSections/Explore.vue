@@ -120,7 +120,6 @@ export default {
       const { data } = await this.$axios.get(
         'https://eco.4everland.space/json/dapps.json'
       )
-      console.log(data)
       this.formatData(data)
       this.isShow = true
     },
@@ -140,7 +139,6 @@ export default {
       this.chooseType(types[0], 0)
     },
     mobileChooseType(val) {
-      console.log(val)
       this.chooseType(val)
     },
     chooseType(key, index) {
@@ -179,7 +177,6 @@ export default {
           arr.push(ele)
         }
       })
-      console.log(arr)
       this.showList = arr
     },
     toIpfs(cid) {
