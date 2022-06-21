@@ -8,7 +8,6 @@
         <v-menu
           v-for="item in links"
           :key="item.text"
-          open-on-hover
           bottom
           rounded="0"
           transition="slide-y-transition"
