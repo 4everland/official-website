@@ -71,12 +71,12 @@
               <div class="version" @click="chaneVersion(2)">
                 <span class="dot"> ● </span>
                 <span>V2</span>
-                <span class="text">Empower Web3.0 developers (2023-2024)</span>
+                <span class="text">Empower Web3.0 Developers (2022-2023)</span>
               </div>
               <div class="version" @click="chaneVersion(3)">
                 <span class="dot"> ● </span>
                 <span>V3</span>
-                <span class="text">Cloud Computing of Web3.0 (2025-2026)</span>
+                <span class="text">Cloud Computing of Web3.0 (2023-2024)</span>
               </div>
               <img
                 class="line hidden-sm-and-down"
@@ -206,7 +206,7 @@ export default {
         'V1 A Cloud Computing Platform of WEB 3.0 Genesis Product, Realizing the Initial Vision',
       roadmapsTitle: [
         'V1 A Cloud Computing Platform of WEB 3.0 Genesis Product, Realizing the Initial Vision',
-        'V2 Proton: Empower Web3.0 developers ',
+        'V2 Proton: Empower Web3.0 Developers ',
         'V3 Atom: Cloud Computing of Web3.0 ',
       ],
       roadmapsObj: {
@@ -325,7 +325,7 @@ export default {
         v2: [
           {
             color: '#D66575',
-            title: 'V2 Proton: Empower Web3.0 developers ',
+            title: 'V2 Proton: Empower Web3.0 Developers ',
             plus: '(2023-2024)',
             content:
               'Upgrade commercialization capabilities, launch in-depth data analysis systems, Web3 website development templates, digital marketing systems and more products to provide developers with better services.',
@@ -396,11 +396,11 @@ export default {
       }
       if (v == 2) {
         this.version = 2
-        this.defaultTitle = 'V2 Proton: Empower Web3.0 developers (2023-2024)'
+        this.defaultTitle = 'V2 Proton: Empower Web3.0 Developers (2022-2023)'
       }
       if (v == 3) {
         this.version = 3
-        this.defaultTitle = 'V3 Atom: Cloud Computing of Web3.0 (2025-2026)'
+        this.defaultTitle = 'V3 Atom: Cloud Computing of Web3.0 (2023-2024)'
       }
     },
   },
