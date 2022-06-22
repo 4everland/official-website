@@ -34,15 +34,21 @@
                 <div style="padding-bottom: 100px"></div>
               </div>
               <div v-if="version == 2" class="map-list-box">
-                <div class="map-list-item list-v1">
-                  <div class="left"></div>
-                  <div class="right">
-                    Upgrade commercialization capabilities, launch in-depth data
-                    analysis systems, Web3 website development templates,
-                    digital marketing systems and more products to provide
-                    developers with better services.
+                <div
+                  v-for="v2 in roadmapsObj.v2"
+                  :key="v2.title"
+                  class="map-list-item list-v1"
+                >
+                  <div class="left" :style="{ color: v2.color }">
+                    {{ v2.title }}
                   </div>
+                  <div
+                    class="right"
+                    :style="{ color: v2.color }"
+                    v-html="v2.content"
+                  ></div>
                 </div>
+                <div style="padding-bottom: 100px"></div>
               </div>
               <div v-if="version == 3" class="map-list-box">
                 <div class="map-list-item list-v1">
@@ -60,7 +66,7 @@
               <div class="version active" @click="chaneVersion(1)">
                 <span class="dot"> ● </span>
                 <span>V1</span>
-                <span class="text">The Stone Age（2021-2022）</span>
+                <span class="text">The Stone Age (2021-2022) </span>
               </div>
               <div class="version" @click="chaneVersion(2)">
                 <span class="dot"> ● </span>
@@ -198,6 +204,11 @@ export default {
       version: 1,
       defaultTitle:
         'V1 A Cloud Computing Platform of WEB 3.0 Genesis Product, Realizing the Initial Vision',
+      roadmapsTitle: [
+        'V1 A Cloud Computing Platform of WEB 3.0 Genesis Product, Realizing the Initial Vision',
+        'V2 Proton: Empower Web3.0 developers ',
+        'V3 Atom: Cloud Computing of Web3.0 ',
+      ],
       roadmapsObj: {
         v1: [
           {
@@ -231,25 +242,31 @@ export default {
             content: 'BETA Launch',
             current: true,
           },
-          {
-            color: '#b1b6bb',
-            title: '2022.Q1',
-            content:
-              'Online auction system, participate in genesis node bidding',
-          },
-          {
-            color: '#b1b6bb',
-            title: '2022.Q2',
-            content: 'Mainnet launch',
-          },
         ],
         v2: [
           {
             color: '#b1b6bb',
-            title: 'V2 Proton: Empower Web3.0 developers ',
-            plus: '(2023-2024)',
+            title: '2022.Q3',
             content:
-              'Upgrade commercialization capabilities, launch in-depth data analysis systems, Web3 website development templates, digital marketing systems and more products to provide developers with better services. ',
+              "Launch the trusted 4EVERLAND node network.<br/>Launch a multi-chain payment system, supporting ETH, BSC, Polygon, and other public chains.<br/>Provide online front-end verifiable solutions to deliver a more comprehensive decentralized front-end hosting services.<br/>Complete the integration with capabilities of Dfinity's ecosystem.",
+          },
+          {
+            color: '#b1b6bb',
+            title: '2022.Q4',
+            content:
+              "Complete the integration of at least 3 mainstream public chains.<br/>Complete the integration with capabilities of Arweave's ecosystem.<br/>Increase the product functions for Hosting and Bucket to meet the needs of developers facing different scenarios.<br/>Provide open storage and network underlying capabilities, and also want to attract providers to build the upper-layer of commercial applications.<br/>",
+          },
+          {
+            color: '#b1b6bb',
+            title: '2023.Q1',
+            content:
+              'The 4EVERLAND node network will go online.<br/>Open source all application layer codes for all community providers to build and use.<br/>Complete the integration with capabilities of Filecoin’s ecosystem.<br/>Bring about more decentralized and powerful gateway capabilities with online (custom) dedicated gateways.',
+          },
+          {
+            color: '#b1b6bb',
+            title: '2023.Q2',
+            content:
+              'Launch the provider incentive model to motivate the community to build commercial applications.<br/>Integrate more storage protocol capabilities.<br/>Complete the integration of more public chain ecological capabilities and realize the interconnection of public chains and storage protocols.',
           },
         ],
         v3: [
@@ -304,18 +321,6 @@ export default {
               '<strong>BETA Launch</strong><br/>launch gateway node, storage node, and data analysis system',
             current: true,
           },
-          {
-            color: '#8BB7FF',
-            title: 'Q1 2022',
-            content:
-              'Online auction system, participate in genesis node bidding',
-          },
-          {
-            color: '#8BB7FF',
-            title: '2022.Q2',
-            content:
-              '<strong>Mainnet launch</strong><br/>enable cloud computing platform with global node synergy',
-          },
         ],
         v2: [
           {
@@ -323,7 +328,31 @@ export default {
             title: 'V2 Proton: Empower Web3.0 developers ',
             plus: '(2023-2024)',
             content:
-              'Upgrade commercialization capabilities, launch in-depth data analysis systems, Web3 website development templates, digital marketing systems and more products to provide developers with better services. ',
+              'Upgrade commercialization capabilities, launch in-depth data analysis systems, Web3 website development templates, digital marketing systems and more products to provide developers with better services.',
+          },
+          {
+            color: '#D66575',
+            title: '2022.Q3',
+            content:
+              "Launch the trusted 4EVERLAND node network.<br/>Launch a multi-chain payment system, supporting ETH, BSC, Polygon, and other public chains.<br/>Provide online front-end verifiable solutions to deliver a more comprehensive decentralized front-end hosting services.<br/>Complete the integration with capabilities of Dfinity's ecosystem.",
+          },
+          {
+            color: '#D66575',
+            title: '2022.Q4',
+            content:
+              "Complete the integration of at least 3 mainstream public chains.<br/>Complete the integration with capabilities of Arweave's ecosystem.<br/>Increase the product functions for Hosting and Bucket to meet the needs of developers facing different scenarios.<br/>Provide open storage and network underlying capabilities, and also want to attract providers to build the upper-layer of commercial applications.<br/>",
+          },
+          {
+            color: '#D66575',
+            title: '2023.Q1',
+            content:
+              'The 4EVERLAND node network will go online.<br/>Open source all application layer codes for all community providers to build and use.<br/>Complete the integration with capabilities of Filecoin’s ecosystem.<br/>Bring about more decentralized and powerful gateway capabilities with online (custom) dedicated gateways.',
+          },
+          {
+            color: '#D66575',
+            title: '2023.Q2',
+            content:
+              'Launch the provider incentive model to motivate the community to build commercial applications.<br/>Integrate more storage protocol capabilities.<br/>Complete the integration of more public chain ecological capabilities and realize the interconnection of public chains and storage protocols.',
           },
         ],
         v3: [
@@ -388,8 +417,9 @@ export default {
     position: relative;
   }
   .new-roadmap-title {
-    font-size: 20px;
+    font-size: 18px;
     color: #b1b6bb;
+    margin: 0 auto;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -404,7 +434,7 @@ export default {
       to(rgba(0, 0, 0, 0))
     );
     .map-list-item {
-      font-size: 16px;
+      font-size: 14px;
       color: #b1b6bb;
       display: flex;
       margin-bottom: 10px;
@@ -412,6 +442,9 @@ export default {
         width: 150px;
         text-align: right;
         margin-right: 10px;
+      }
+      .right {
+        flex: 1;
       }
     }
   }
