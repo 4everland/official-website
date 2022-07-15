@@ -13,7 +13,7 @@
   </div>
 </template>
 <script>
-import SwiperCus from '../IndexSections/SwiperCus.vue'
+import SwiperCus from './SwiperCus.vue'
 import '@/assets/styles/home.scss'
 export default {
   components: {

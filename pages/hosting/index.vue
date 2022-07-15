@@ -12,7 +12,7 @@
 <script>
 import HostingTop from '@/components/HostingSections/HostingTop.vue'
 import HostingSteps from '@/components/HostingSections/SectionSteps.vue'
-import SectionFramework from '@/components/IndexSections/SectionFramework.vue'
+import SectionFramework from '@/components/HostingSections/SectionFramework.vue'
 import SectionCustomer from '@/components/HostingSections/SectionCustomer.vue'
 import HostingTemplate from '@/components/HostingSections/HostingTemplate.vue'
 import HostingFaq from '@/components/HostingSections/HostingFaq.vue'

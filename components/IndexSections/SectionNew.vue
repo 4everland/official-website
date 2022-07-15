@@ -1,143 +1,116 @@
 <template>
-  <div class="home-block">
-    <v-container class="my-12">
-      <v-row>
-        <v-col cols="12" md="12" lg="12">
-          <div class="block-titel">Welcome to the new internet - Web 3</div>
-          <div class="block-text">
-            4EVERLAND Can Help You Rebuild the Web's Foundation Layer and
-            Transition to a New and Unbiased Web 3.0.
-          </div>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col
-          v-for="(item, index) in list"
-          :key="item.title"
-          cols="12"
-          md="6"
-          lg="6"
-        >
-          <div class="new-item ma-4 pa-8" :class="'new-item-' + index">
-            <div class="main-title mb-8">{{ item.title }}</div>
-            <div class="main-text">
-              {{ item.desc }}
-            </div>
-          </div>
-        </v-col>
-      </v-row>
-      <v-row class="video-box my-16">
-        <v-col
-          class="d-flex flex-column justify-center"
-          cols="12"
-          md="6"
-          lg="6"
-        >
-          <div class="text-h4 mb-16 video-title">What is 4EVERLAND?</div>
-          <div class="text-h6 video-text">
-            4EVERLAND is a Web 3.0 cloud computing platform that integrates
-            storage, computing, and network core capabilities.
-          </div>
-        </v-col>
-        <v-col cols="12" md="6" lg="6">
+  <div id="new">
+    <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
+      <v-col cols="12" md="12" lg="12">
+        <div class="css-75nahk">
           <video
-            controls
-            preload="meta"
-            class="video-play"
-            src="https://storage.4everland.app/4EVERLAND.mp4"
-          ></video>
-        </v-col>
-      </v-row>
-    </v-container>
+            class="css-1jb4ggb"
+            autoplay=""
+            muted=""
+            loop=""
+            playsinline=""
+          >
+            <source
+              src="@/assets/imgs/index/top/bg_video1803.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="css-hhqijc"><div class="css-k57fb3"></div></div>
+        </div>
+      </v-col>
+    </v-row>
   </div>
 </template>
 <script>
-import '@/assets/styles/home.scss'
 export default {
   data() {
     return {
-      list: [
+      banner: [
         {
-          img: require('@/assets/imgs/index/new/new1.png'),
-          title: 'Write once, Run any blockchain',
-          desc: "4EVERLAND helps developers to initiate 'write once, run any blockchain' programming paradigm by integrating various public chains and solving the differences between public chain protocols. In addition, it enables developers of each public chain to deploy contracts and front ends once and achieve a fully decentralized technical architecture.",
+          src: require('@/assets/imgs/index/banner1.png'),
+          href: this.hosting_web,
+          title: '4EVERLAND <br/> A Cloud Computing Platform Of Web3.0',
+          tips: 'Build Web3.0 infrastructure for millions developers and projects',
+          button: 'TRY FOR FREE',
         },
         {
-          img: require('@/assets/imgs/index/new/new2.png'),
-          title: 'DApps can be created without centralized components',
-          desc: '4EVERLAND uses a decentralized network system that integrates core services such as storage, computing, and networking, enabling data storage and business logic to run on a decentralized network instead of centralized services like AWS or Google Cloud.',
+          src: require('@/assets/imgs/index/banner2.png'),
+          href: this.hosting_web,
+          title: 'Host your Website on IPFS',
+          tips: "Deploy your website on Hosting <br/> 4EVERLAND Can Help You Rebuild the Web's Foundation <br/> Layer and Transition to a New and Unbiased Web 3.0",
+          button: 'TRY FOR FREE',
         },
         {
-          img: require('@/assets/imgs/index/new/new3.png'),
-          title: 'Compatible with the traditional development environment',
-          desc: '4EVERLAND provides a series of development and deployment tools, compatible with EVM, WASM, etc., Easily coupled and integrated, so that Web 2.0 developers can quickly complete the development and deployment of DApp without any additional learning costs.',
+          src: require('@/assets/imgs/index/banner3.png'),
+          to: '/bucket',
+          title: '4EVERLAND BUCKET',
+          tips: 'S3-compatible aggregator based on IPFS and Arweave',
+          button: 'Try for Free',
         },
         {
-          img: require('@/assets/imgs/index/new/new4.png'),
-          title: 'Provide multiple ecological resources',
-          desc: '4EVERLAND integrates the underlying public chains of Ethereum, BSC, Solana, Polygon, Filecoin, etc., and supports various forms of inter-blockchain information exchange, so that developers can quickly implement multi-chain deployment and multi-chain communication to enjoy the various ecological resources.',
+          src: require('@/assets/imgs/index/banner4.png'),
+          to: '/grants',
+          title: 'DEVELOPER GRANTS',
+          tips: '20 MILLION 4EVER SPONSORSHIP TOKENS WILL BE AVAILABLE TO <br/> QUALIFIED PROJECTS FOR THEIR LONG TERM DEVELOPMENT',
+          button: 'APPLY',
         },
       ],
+      screenWidth: null,
+      screenHeight: null,
     }
   },
+  computed: {
+    bannerHeight() {
+      const clientWidth = this.screenWidth
+      let bannerHeight = (clientWidth / 2560) * 1000
+      if (bannerHeight > 1000) {
+        bannerHeight = 1000
+      }
+      return bannerHeight
+    },
+  },
+  mounted() {
+    window.screenWidth = document.body.clientWidth
+    window.screenHeight = document.body.clientHeight
+    this.screenWidth = window.screenWidth
+    this.screenHeight = window.screenHeight
+  },
+  methods: {},
 }
 </script>
 <style scoped>
-.home-block {
-  background-image: url('@/assets/imgs/index/video-bg.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+#new {
+  min-height: 500px;
+  position: relative;
 }
-.text-nowrap {
-  white-space: nowrap;
-}
-.new-item {
-  min-height: 320px;
-}
-.new-item-0 {
-  background: linear-gradient(-30deg, #e1f2ff, #fff6f6);
-  border-radius: 0 60px 0 60px;
-}
-.new-item-1 {
-  background: linear-gradient(30deg, #e1f2ff, #fff6f6);
-  border-radius: 60px 0 60px 0;
-}
-.new-item-2 {
-  background: linear-gradient(210deg, #e1f2ff, #fff6f6);
-  border-radius: 60px 0 60px 0;
-}
-.new-item-3 {
-  background: linear-gradient(150deg, #e1f2ff, #fff6f6);
-  border-radius: 0 60px 0 60px;
-}
-.main-title {
-  font-size: 24px;
-  color: #132642;
-  font-weight: bold;
-}
-.main-text {
-  font-size: 18px;
-  color: #6c7789;
-}
-.section-video {
-  padding: 90px 0;
-  background-image: url('@/assets/imgs/index/video-bg.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.video-play {
-  max-width: 1200px;
+.css-1jb4ggb {
   width: 100%;
+  height: 70%;
+  top: 30%;
+  object-position: bottom;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
 }
-.video-title {
-  color: #132642;
-  text-align: center;
-}
-.video-text {
-  color: #6c7789;
-  max-width: 570px;
-  margin: 0 auto;
+.css-75nahk {
+  width: 100%;
+  height: 100%;
+  max-width: 740px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+  bottom: 0;
+  position: absolute;
+  overflow: hidden;
+  -webkit-mask-image: url('@/assets/imgs/index/top/Web-bg.png');
+  mask-image: url('@/assets/imgs/index/top/Web-bg.png');
+  -webkit-mask-position: 50% bottom;
+  mask-position: 50% bottom;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background: rgb(167, 155, 234);
 }
 </style>

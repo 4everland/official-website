@@ -42,12 +42,4 @@ export default {
 #ecosystem {
   background-color: #fff;
 }
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('../../static/fonts/Ubuntu-R-9.ttf');
-}
-@font-face {
-  font-family: 'BookmanOldStyle-Bold';
-  src: url('../../static/fonts/Bookman-Old-Style-Bold-2.ttf');
-}
 </style>

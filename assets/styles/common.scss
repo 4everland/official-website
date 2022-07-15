@@ -29,3 +29,23 @@
 .fw-bold {
   font-weight: bold;
 }
+@font-face {
+  font-family: 'PARaDOS';
+  src: url('@/static/fonts/PARaDOS.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('@/static/fonts/Ubuntu-R-9.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-Medium';
+  src: url('@/static/fonts/Ubuntu-M-7.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-Bold';
+  src: url('@/static/fonts/Ubuntu-B-2.ttf');
+}
+@font-face {
+  font-family: 'BookmanOldStyle-Bold';
+  src: url('@/static/fonts/Bookman-Old-Style-Bold-2.ttf');
+}

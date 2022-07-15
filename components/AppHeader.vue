@@ -292,10 +292,6 @@ export default {
 }
 </script>
 <style scoped>
-@font-face {
-  font-family: 'PARaDOS';
-  src: url('../static/fonts/PARaDOS.ttf');
-}
 .nav-font {
   font-family: 'PARaDOS', sans-serif !important;
 }

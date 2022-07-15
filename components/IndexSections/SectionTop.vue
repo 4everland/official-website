@@ -1,118 +1,164 @@
 <template>
   <div id="banner">
-    <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
-      <v-col cols="12" md="12" lg="12">
-        <v-carousel
-          cycle
-          :height="$vuetify.breakpoint.smAndDown ? 1000 : bannerHeight"
-          hide-delimiters
-          hide-delimiter-background
-          show-arrows-on-hover
+    <v-container class="my-16">
+      <v-row>
+        <v-col cols="12" md="12" lg="12">
+          <div class="text-box">
+            <div class="text-title">Build Fantastic <br />Web.3.0</div>
+            <div class="text-tips">
+              Build Web3 infrastructure for millions developers and projects.
+            </div>
+            <div style="margin-top: 65px">
+              <v-btn color="#000" tile class="white--text">BUILD WEB3</v-btn>
+            </div>
+          </div>
+          <div class="css-75nahk">
+            <video
+              class="css-1jb4ggb"
+              autoplay=""
+              muted=""
+              loop=""
+              playsinline=""
+            >
+              <source
+                src="@/assets/imgs/index/top/bg_video1803.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="css-hhqijc"><div class="css-k57fb3"></div></div>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row style="margin-top: 160px">
+        <v-col
+          v-for="(item, index) in items"
+          :key="index"
+          cols="12"
+          md="3"
+          lg="3"
         >
-          <v-carousel-item
-            v-for="(item, i) in banner"
-            :key="i"
-            :src="item.src"
-            reverse-transition="fade-transition"
-            transition="fade-transition"
-          >
-            <v-row class="fill-height" align="center" justify="center">
-              <v-container>
-                <div class="text-center">
-                  <div
-                    class="text-h3 text-center font-weight-bold text-uppercase"
-                    style="color: #132642"
-                    v-html="item.title"
-                  ></div>
-                  <div
-                    class="text-h5 text-center mt-10 mb-16 text-uppercase"
-                    style="color: #6c7789"
-                    v-html="item.tips"
-                  ></div>
-                  <v-btn
-                    class="banner-btn text-h5 mt-16 px-16 text-uppercase"
-                    height="50"
-                    elevation="6"
-                    :to="item.to"
-                    :href="item.href"
-                    :target="item.href ? '_blank' : ''"
-                  >
-                    {{ item.button }}
-                  </v-btn>
-                </div>
-              </v-container>
-            </v-row>
-          </v-carousel-item>
-        </v-carousel>
-      </v-col>
-    </v-row>
+          <div class="d-flex align-center item-text">
+            <v-img
+              contain
+              max-height="20"
+              max-width="20"
+              :src="item.icon"
+              class="mr-3"
+            ></v-img>
+            <span>{{ item.name }}</span>
+          </div>
+          <div class="item-tips">
+            {{ item.tips }}
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      banner: [
+      items: [
         {
-          src: require('@/assets/imgs/index/banner1.png'),
-          href: this.hosting_web,
-          title: '4EVERLAND <br/> A Cloud Computing Platform Of Web3.0',
-          tips: 'Build Web3.0 infrastructure for millions developers and projects',
-          button: 'TRY FOR FREE',
+          name: 'Storage',
+          tips: 'Powerful storage capability based on IPFS and Arweave',
+          icon: require('@/assets/imgs/index/top/storage.png'),
+          link: '',
         },
         {
-          src: require('@/assets/imgs/index/banner2.png'),
-          href: this.hosting_web,
-          title: 'Host your Website on IPFS',
-          tips: "Deploy your website on Hosting <br/> 4EVERLAND Can Help You Rebuild the Web's Foundation <br/> Layer and Transition to a New and Unbiased Web 3.0",
-          button: 'TRY FOR FREE',
+          name: 'Complute',
+          tips: 'Fast, Modern and censorship-proof satisfied any Need',
+          icon: require('@/assets/imgs/index/top/complute.png'),
+          link: '',
         },
         {
-          src: require('@/assets/imgs/index/banner3.png'),
-          to: '/bucket',
-          title: '4EVERLAND BUCKET',
-          tips: 'S3-compatible aggregator based on IPFS and Arweave',
-          button: 'Try for Free',
+          name: 'Network',
+          tips: 'Trusted node network with no limitation,and powerful performance',
+          icon: require('@/assets/imgs/index/top/network.png'),
+          link: '',
         },
         {
-          src: require('@/assets/imgs/index/banner4.png'),
-          to: '/grants',
-          title: 'DEVELOPER GRANTS',
-          tips: '20 MILLION 4EVER SPONSORSHIP TOKENS WILL BE AVAILABLE TO <br/> QUALIFIED PROJECTS FOR THEIR LONG TERM DEVELOPMENT',
-          button: 'APPLY',
+          name: 'Web3 Own',
+          tips: 'Own your web.3.0 upper-layer direction',
+          icon: require('@/assets/imgs/index/top/web3.png'),
+          link: '',
         },
       ],
-      screenWidth: null,
-      screenHeight: null,
     }
   },
-  computed: {
-    bannerHeight() {
-      const clientWidth = this.screenWidth
-      let bannerHeight = (clientWidth / 2560) * 1000
-      if (bannerHeight > 1000) {
-        bannerHeight = 1000
-      }
-      return bannerHeight
-    },
-  },
-  mounted() {
-    window.screenWidth = document.body.clientWidth
-    window.screenHeight = document.body.clientHeight
-    this.screenWidth = window.screenWidth
-    this.screenHeight = window.screenHeight
-  },
+  computed: {},
+  mounted() {},
   methods: {},
 }
 </script>
-<style scoped>
+<style lang="less" scoped>
 #banner {
   min-height: 500px;
-}
-.banner-btn {
-  background: linear-gradient(90deg, #fdb6fe, #acc0fd, #31adfe);
-  border-radius: 44px;
-  color: #fff;
-  text-shadow: 0 5px 6px rgba(120, 167, 206, 0.22);
+  position: relative;
+  .text-box {
+    z-index: 2;
+    position: relative;
+    .text-title {
+      font-size: 100px;
+      line-height: 120px;
+      text-align: left;
+      -webkit-letter-spacing: -2px;
+      -moz-letter-spacing: -2px;
+      -ms-letter-spacing: -2px;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+      font-weight: 700;
+      color: #161617;
+      font-family: 'Ubuntu-Bold', sans-serif !important;
+    }
+    .text-tips {
+      font-size: 24px;
+      text-align: left;
+      max-width: 700px;
+      color: #161617;
+      font-family: 'Ubuntu', sans-serif !important;
+    }
+  }
+  .css-1jb4ggb {
+    width: 100%;
+    height: 100%;
+    object-position: bottom;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+  .css-75nahk {
+    width: 100%;
+    max-width: 860px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+    -webkit-mask-image: url('@/assets/imgs/index/top/mask-bg.png');
+    mask-image: url('@/assets/imgs/index/top/mask-bg.png');
+    -webkit-mask-position: 50% bottom;
+    mask-position: 50% bottom;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background: rgb(167, 155, 234);
+  }
+  .item-text {
+    max-width: 135px;
+    border-bottom: 1px solid #161617;
+    padding: 10px 0;
+    font-family: 'Ubuntu-Bold', sans-serif !important;
+  }
+  .item-tips {
+    margin-top: 7px;
+    font-family: 'Ubuntu-Medium', sans-serif !important;
+    font-size: 11px;
+    max-width: 200px;
+  }
 }
 </style>
