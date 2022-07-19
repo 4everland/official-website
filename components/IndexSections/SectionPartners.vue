@@ -1,109 +1,223 @@
 <template>
-  <div class="home-block">
-    <v-container class="my-16">
-      <v-row>
-        <v-col cols="12" md="12" lg="12">
-          <div class="block-titel">Partners</div>
-        </v-col>
-        <v-col
-          v-for="item in list"
-          :key="item.title"
-          cols="12"
-          md="3"
-          lg="3"
-          xl="3"
-          class="my-4 d-flex"
-        >
-          <div class="img-box">
-            <v-img contain :src="item.img" max-height="50"> </v-img>
+  <div id="Partner">
+    <div class="front">
+      <v-container class="partner-box">
+        <v-row>
+          <v-col cols="4">
+            <div class="text-box">
+              <div class="text-title">Partner</div>
+            </div>
+          </v-col>
+          <v-col cols="8" class="partner-tips">
+            <div class="my-4">
+              Build a diversified WEB.3.0 technology partner as a necessary
+              integrated<br />
+              ecological service hosted and stored on 4EVERLAND
+            </div>
+            <div>
+              <v-icon color="#051F30" class="mr-6" size="32">
+                mdi-arrow-right </v-icon
+              >Explore the 4EVERLAND ecosystem
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+      <v-row class="mt-16 container-wrapper">
+        <v-col cols="12" class="partner-list">
+          <div
+            v-for="(item, index) in dappsList"
+            :key="index"
+            class="item-img-box"
+          >
+            <v-img
+              class="mr-2"
+              contain
+              max-height="50"
+              max-width="50"
+              :src="item.logo"
+            ></v-img>
+            <div class="partner-item-name">{{ item.name }}</div>
           </div>
         </v-col>
       </v-row>
-    </v-container>
+      <v-container class="touch-bar-box">
+        <div class="touch-bar"></div>
+      </v-container>
+    </div>
+
+    <div class="back-ball-box">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </template>
 <script>
-import '@/assets/styles/home.scss'
 export default {
   data() {
     return {
-      list: [
-        {
-          img: require('@/assets/imgs/index/partners/ipfs.png'),
-        },
-        // {
-        //   img: require('@/assets/imgs/index/partners/ethereum.png'),
-        // },
-        {
-          img: require('@/assets/imgs/index/partners/filecoin.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/arweave.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/polygon.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/zkSync.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/bonfida.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/ENS.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/js13kgames.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/harmony.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/near.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/okc.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/heco.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/metis.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/fenbushi.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/FBG.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/nuls.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/bixin.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/mintVentures.png'),
-        },
-        {
-          img: require('@/assets/imgs/index/partners/randomNumber.png'),
-        },
-      ],
+      dappsList: [],
     }
+  },
+  mounted() {
+    this.getDappsList()
+  },
+  methods: {
+    async getDappsList() {
+      const { data } = await this.$axios.get(
+        'https://eco.4everland.space/json/dapps.json'
+      )
+      const { list } = data
+      this.dappsList = list
+      this.isShow = true
+    },
+    toIpfs(cid) {
+      const url = 'https://4everland.io/ipfs/' + cid
+      window.open(url)
+    },
   },
 }
 </script>
-<style scoped>
-.start-btn {
-  width: 300px;
-  height: 60px;
-  background: linear-gradient(-90deg, #ffb830, #e31313, #ff30f8);
-  font-size: 20px;
-  font-weight: bold;
+<style lang="less" scoped>
+#Partner {
+  padding-bottom: 150px;
+  position: relative;
+  overflow: hidden;
+  .front {
+    position: relative;
+    z-index: 9;
+  }
+  .partner-box {
+    padding-top: 86px;
+    .partner-tips {
+      font-size: 18px;
+      text-align: left;
+      color: #051f30;
+      font-family: 'Ubuntu-Medium', sans-serif !important;
+      font-weight: 500;
+    }
+    .text-box {
+      .text-title {
+        font-size: 45px;
+        text-align: left;
+        color: #051f30;
+        font-family: 'Ubuntu-Bold', sans-serif !important;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .container-wrapper {
+    overflow: hidden;
+
+    .partner-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: 300px;
+      padding-left: calc(52vw - 1220px * 0.19) !important;
+      padding-right: 20px;
+      overflow: scroll hidden;
+      .item-img-box {
+        display: flex;
+        align-items: center;
+        width: 180px;
+        height: 76px;
+        background: rgba(255, 255, 255, 0.3);
+        border: 1px solid #fff;
+        border-radius: 8px;
+        margin: 4px;
+        padding: 0 15px;
+      }
+      .partner-item-name {
+        font-size: 14px;
+        font-family: 'Ubuntu', sans-serif !important;
+        color: #051f30;
+      }
+    }
+  }
+
+  .touch-bar-box {
+    position: relative;
+    .touch-bar {
+      position: absolute;
+      right: auto;
+      left: 0;
+      top: 0;
+      border-radius: 50px;
+      cursor: pointer;
+      pointer-events: auto;
+      min-height: 0;
+      min-width: 10px;
+      width: 180px !important;
+      height: 8px;
+      transform: translate3d(0, 0, 0);
+      display: block;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 180px;
+        height: 8px;
+        border-radius: 50px;
+        opacity: 1;
+        transition: 0.3s linear;
+        background-color: #051f30;
+      }
+    }
+  }
+  .back-ball-box {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    span {
+      width: 40vmin;
+      height: 40vmin;
+      border-radius: 20vmin;
+      backface-visibility: hidden;
+      position: absolute;
+      animation-name: move;
+      animation-duration: 6s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      opacity: 0.3;
+    }
+    span:nth-child(1) {
+      color: #7f17ff;
+      top: 54%;
+      left: 41%;
+      animation-duration: 26s;
+      animation-delay: -15.3s;
+      transform-origin: 15vw 100px;
+      box-shadow: -60vmin 0 12.328532637vmin 40px currentColor;
+    }
+    span:nth-child(2) {
+      color: #ff7417;
+      top: 0;
+      left: 45%;
+      animation-duration: 18s;
+      animation-delay: 2s;
+      transform-origin: 14vw 20px;
+      box-shadow: 60vmin 0 10.2115006212vmin 20px currentColor;
+    }
+    span:nth-child(3) {
+      color: #17ff95;
+      top: 35%;
+      left: 60%;
+      animation-duration: 10s;
+      animation-delay: -8.6s;
+      transform-origin: 0 -82px;
+      box-shadow: -60vmin 0 8.9038134634vmin 30px currentColor;
+    }
+  }
 }
-.img-box {
-  display: flex;
-  align-items: center;
-  max-width: 100%;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
 }
 </style>

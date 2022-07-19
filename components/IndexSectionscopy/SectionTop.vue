@@ -52,36 +52,6 @@
 export default {
   data() {
     return {
-      banner: [
-        {
-          src: require('@/assets/imgs/index/banner1.png'),
-          href: this.hosting_web,
-          title: '4EVERLAND <br/> A Cloud Computing Platform Of Web3.0',
-          tips: 'Build Web3.0 infrastructure for millions developers and projects',
-          button: 'TRY FOR FREE',
-        },
-        {
-          src: require('@/assets/imgs/index/banner2.png'),
-          href: this.hosting_web,
-          title: 'Host your Website on IPFS',
-          tips: "Deploy your website on Hosting <br/> 4EVERLAND Can Help You Rebuild the Web's Foundation <br/> Layer and Transition to a New and Unbiased Web 3.0",
-          button: 'TRY FOR FREE',
-        },
-        {
-          src: require('@/assets/imgs/index/banner3.png'),
-          to: '/bucket',
-          title: '4EVERLAND BUCKET',
-          tips: 'S3-compatible aggregator based on IPFS and Arweave',
-          button: 'Try for Free',
-        },
-        {
-          src: require('@/assets/imgs/index/banner4.png'),
-          to: '/grants',
-          title: 'DEVELOPER GRANTS',
-          tips: '20 MILLION 4EVER SPONSORSHIP TOKENS WILL BE AVAILABLE TO <br/> QUALIFIED PROJECTS FOR THEIR LONG TERM DEVELOPMENT',
-          button: 'APPLY',
-        },
-      ],
       screenWidth: null,
       screenHeight: null,
     }

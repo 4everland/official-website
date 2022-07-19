@@ -1,6 +1,9 @@
 <template>
   <div id="new">
-    <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
+    <div class="universe-title">
+      Welcome to a network of infinite possibilities
+    </div>
+    <v-row class="ani-box">
       <v-col cols="12" md="12" lg="12">
         <div class="css-75nahk">
           <video
@@ -19,42 +22,19 @@
         </div>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col :cols="12" class="text-center" style="margin-top: 55px">
+        <v-btn color="#000" tile class="white--text let-start"
+          >Let's Start</v-btn
+        >
+      </v-col>
+    </v-row>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      banner: [
-        {
-          src: require('@/assets/imgs/index/banner1.png'),
-          href: this.hosting_web,
-          title: '4EVERLAND <br/> A Cloud Computing Platform Of Web3.0',
-          tips: 'Build Web3.0 infrastructure for millions developers and projects',
-          button: 'TRY FOR FREE',
-        },
-        {
-          src: require('@/assets/imgs/index/banner2.png'),
-          href: this.hosting_web,
-          title: 'Host your Website on IPFS',
-          tips: "Deploy your website on Hosting <br/> 4EVERLAND Can Help You Rebuild the Web's Foundation <br/> Layer and Transition to a New and Unbiased Web 3.0",
-          button: 'TRY FOR FREE',
-        },
-        {
-          src: require('@/assets/imgs/index/banner3.png'),
-          to: '/bucket',
-          title: '4EVERLAND BUCKET',
-          tips: 'S3-compatible aggregator based on IPFS and Arweave',
-          button: 'Try for Free',
-        },
-        {
-          src: require('@/assets/imgs/index/banner4.png'),
-          to: '/grants',
-          title: 'DEVELOPER GRANTS',
-          tips: '20 MILLION 4EVER SPONSORSHIP TOKENS WILL BE AVAILABLE TO <br/> QUALIFIED PROJECTS FOR THEIR LONG TERM DEVELOPMENT',
-          button: 'APPLY',
-        },
-      ],
       screenWidth: null,
       screenHeight: null,
     }
@@ -83,10 +63,22 @@ export default {
   min-height: 500px;
   position: relative;
 }
+.universe-title {
+  max-width: 800px;
+  font-size: 28px;
+  font-family: 'Ubuntu-Bold', sans-serif !important;
+  font-weight: bold;
+  color: #161617;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 130px;
+}
+.ani-box {
+  height: 200px;
+}
 .css-1jb4ggb {
   width: 100%;
-  height: 70%;
-  top: 30%;
+  height: 100%;
   object-position: bottom;
   object-fit: cover;
   position: relative;
@@ -94,13 +86,13 @@ export default {
 }
 .css-75nahk {
   width: 100%;
-  height: 100%;
-  max-width: 740px;
+  height: 180px;
+  max-width: 850px;
   right: 50%;
   -webkit-transform: translateX(50%);
   -ms-transform: translateX(50%);
   transform: translateX(50%);
-  bottom: 0;
+  top: 80px;
   position: absolute;
   overflow: hidden;
   -webkit-mask-image: url('@/assets/imgs/index/top/Web-bg.png');
@@ -112,5 +104,10 @@ export default {
   -webkit-mask-size: contain;
   mask-size: contain;
   background: rgb(167, 155, 234);
+}
+.let-start {
+  width: 143px;
+  height: 24px !important;
+  font-family: 'Ubuntu', sans-serif !important;
 }
 </style>

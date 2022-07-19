@@ -1,0 +1,235 @@
+<template>
+  <div id="globe">
+    <v-container class="globe-box">
+      <v-row>
+        <v-col :cols="12">
+          <div class="text-box">
+            <div class="text-title">
+              Promote Web.3.0 <br />
+              with developers worldwidely
+            </div>
+            <div class="text-tips">
+              4EVERLAND is committed to leading developers and projects<br />
+              around the world to inspire value in Web.3.0
+            </div>
+          </div>
+        </v-col>
+      </v-row>
+      <div class="data-box">
+        <v-row>
+          <v-col v-for="(item, index) in btnItem" :key="index" :cols="3">
+            <div class="data-num">{{ item.num }}</div>
+            <div class="data-name">{{ item.name }}</div>
+          </v-col>
+        </v-row>
+      </div>
+      <div id="globeViz"></div>
+    </v-container>
+  </div>
+</template>
+<script>
+/* eslint-disable */
+const geoJSON = require('~/assets/json/geo.json')
+const emptyPNG =
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADICAYAAADGFbfiAAAC3ElEQVR4nO3VMQHAMAzAsKwsMv5Ai6G+JQh+/O3uPwDw6AgGQGEgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCwLuZud1fAfX9aO5bAAAAAElFTkSuQmCC'
+const debounce = (func, wait, immediate) => {
+  let timeout
+  return () => {
+    const context = this
+    const args = arguments
+    const later = function () {
+      timeout = null
+      if (!immediate) func.apply(context, args)
+    }
+    const callNow = immediate && !timeout
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (callNow) func.apply(context, args)
+  }
+}
+
+export default {
+  data() {
+    return {
+      btnItem: [
+        {
+          num: '100+',
+          name: 'CITIES',
+        },
+        {
+          num: '10B+',
+          name: 'REQUESTS PER WEEK',
+        },
+        {
+          num: '10B+',
+          name: 'DATA  SERVED',
+        },
+        {
+          num: '99.99%',
+          name: 'GUARANTEED UPTIME',
+        },
+      ],
+    }
+  },
+  computed: {},
+  mounted() {
+    this.initGlobe()
+  },
+  methods: {
+    onResize(e) {
+      // console.log('rezized', window.innerWidth)
+      if (this.world) {
+        debounce(
+          () => {
+            const w = window.innerWidth
+            const size = Math.min(w * 0.8, 750)
+            if (w < 800) {
+              this.world.width(w * 0.8).height(w * 0.8)
+            } else {
+              this.world.width(size).height(size)
+            }
+          },
+          200,
+          false
+        )()
+      }
+    },
+    initGlobe() {
+      const locations = [
+        [120.831693, 30.019926],
+        [116.56352, 40.324982],
+        [114.282256, 22.256955],
+        [139.964882, 36.505153],
+        [127.160363, 36.919906],
+        [107.806407, 34.275691],
+        [107.144104, 29.634919],
+        [120.24298, 36.326711],
+        [144.159466, -40.17175],
+        [10.641084, 51.084096],
+        [0.927311, 47.674532],
+        [-0.323705, 52.633177],
+        [-4.4447, 39.851596],
+        [-4.4447, 39.851596],
+        [-4.4447, 39.851596],
+        [-4.4447, 39.851596],
+        [-76.966844, 38.909266],
+        [-76.966844, 38.909266],
+        [-73.866899, 40.885868],
+        [-81.041845, 34.000322],
+        [-80.232364, 25.788132],
+        [-86.827795, 36.065743],
+        [-122.444962, 37.73531],
+        [-122.444962, 37.73531],
+      ]
+      const arcData = locations
+        .map(function (item, index, arr) {
+          const randomIndex = parseInt(Math.random() * (arr.length + 1))
+          return arr[randomIndex] && index !== randomIndex
+            ? {
+                startLat: item[1],
+                startLng: item[0],
+                endLat: arr[randomIndex][1],
+                endLng: arr[randomIndex][0],
+                color: '#81DDFF',
+              }
+            : null
+        })
+        .filter(function (item) {
+          return !!item
+        })
+      const w = window.innerWidth
+      const size = Math.min(w * 0.8, 700)
+      const world = Globe()
+        .width(size)
+        .height(size)
+        .globeImageUrl(emptyPNG)
+        .backgroundColor('rgba(0,0,0,0)')
+        .showAtmosphere(false)
+        .atmosphereAltitude('.25')
+        .hexPolygonsData(geoJSON.features)
+        .hexPolygonResolution(3)
+        .hexPolygonMargin(0.3)
+        .hexPolygonColor(() => `#687FF1`)
+        .arcsData(arcData)
+        .arcColor('color')
+        .arcStroke(0.6)
+        .arcDashLength(1)
+        .arcDashGap(function () {
+          return Math.random() + 2.5
+        })
+        .arcDashAnimateTime(function () {
+          return 2000 * Math.random() + 1500
+        })
+        .pointAltitude('size')
+        .pointColor('color')(document.getElementById('globeViz'))
+      world.controls().autoRotate = true
+      world.controls().autoRotateSpeed = 1
+      world.controls().enableZoom = false
+      world.pointOfView({
+        lat: 50,
+      })
+
+      this.world = world
+    },
+  },
+}
+</script>
+<style lang="less" scoped>
+#globe {
+  height: 800px;
+  background-color: #000;
+  .globe-box {
+    height: 100%;
+    padding-top: 200px;
+    position: relative;
+    #globeViz {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  .universe-title {
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif !important;
+    font-weight: 400;
+    color: #888;
+    text-align: center;
+    margin: 150px 0;
+  }
+  .text-box {
+    .text-title {
+      font-size: 45px;
+      text-align: left;
+      color: #fff;
+      font-family: 'Ubuntu-Bold', sans-serif !important;
+      font-weight: bold;
+      margin-bottom: 60px;
+    }
+    .text-tips {
+      font-size: 18px;
+      text-align: left;
+      color: #fff;
+      font-family: 'Ubuntu-Medium', sans-serif !important;
+      font-weight: 500;
+    }
+  }
+  .data-box {
+    color: #fff;
+    margin-top: 80px;
+    .data-num {
+      font-size: 90px;
+      text-align: left;
+      color: #fff;
+      font-family: 'Ubuntu-Medium', sans-serif !important;
+      font-weight: 500;
+    }
+    .data-name {
+      font-size: 18px;
+      text-align: left;
+      color: #fff;
+      font-family: 'Ubuntu-Medium', sans-serif !important;
+      font-weight: 500;
+    }
+  }
+}
+</style>

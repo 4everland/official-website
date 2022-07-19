@@ -112,13 +112,14 @@ export default {
 </script>
 <style lang="less" scoped>
 #universe {
+  padding-bottom: 200px;
   .universe-title {
     font-size: 18px;
     font-family: 'Ubuntu', sans-serif !important;
     font-weight: 400;
     color: #888;
     text-align: center;
-    margin: 150px 0;
+    margin: 130px 0;
   }
   .text-box {
     .text-title {
