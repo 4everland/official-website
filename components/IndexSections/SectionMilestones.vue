@@ -21,8 +21,13 @@
         </v-row>
       </v-container>
       <v-row class="mt-16 container-wrapper">
-        <v-col cols="12" class="partner-list">
-          <div v-for="(item, index) in roadmap" :key="index" class="item-list">
+        <v-col cols="12" ref="partnerList" class="partner-list">
+          <div
+            v-for="(item, index) in roadmap"
+            :key="index"
+            class="item-list"
+            :ref="item.isNow ? 'isNow' : null"
+          >
             <div class="item-img-box">
               <div class="partner-item-name">{{ item.date }}</div>
               <div
@@ -53,7 +58,6 @@
 export default {
   data() {
     return {
-      dappsList: [],
       roadmap: [
         {
           date: '2021 Q1',
@@ -152,22 +156,20 @@ export default {
     }
   },
   mounted() {
-    this.getDappsList()
+    this.$nextTick((_) => {
+      const left = this.$refs.isNow[0].offsetLeft
+      const offsetWidth = this.$refs.isNow[0].offsetWidth
+      const windowWidth = document.documentElement.clientWidth
+      console.log(this.$refs.isNow)
+      console.log(left)
+      console.log(offsetWidth)
+      console.log(windowWidth)
+      console.log(this.$refs)
+      const scrollLeft = left - windowWidth / 2 + offsetWidth / 2
+      this.$refs.partnerList.scrollTo(scrollLeft, 0)
+    })
   },
-  methods: {
-    async getDappsList() {
-      const { data } = await this.$axios.get(
-        'https://eco.4everland.space/json/dapps.json'
-      )
-      const { list } = data
-      this.dappsList = list
-      this.isShow = true
-    },
-    toIpfs(cid) {
-      const url = 'https://4everland.io/ipfs/' + cid
-      window.open(url)
-    },
-  },
+  methods: {},
 }
 </script>
 <style lang="less" scoped>
@@ -245,7 +247,7 @@ export default {
       .isnow-stone-img-box {
         width: 125px;
         height: 125px;
-        box-shadow: 0 0 14px 0 #8a7bd4 inset;
+        box-shadow: 0 0 8px 0 #8a7bd4 inset, 0 0 20px 8px #8a7bd4;
         margin: 36px 40px;
       }
       .under-line {

@@ -60,7 +60,6 @@ export default {
 </script>
 <style scoped>
 #new {
-  min-height: 500px;
   position: relative;
 }
 .universe-title {
