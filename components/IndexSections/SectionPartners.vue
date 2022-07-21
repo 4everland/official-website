@@ -74,7 +74,6 @@ export default {
 </script>
 <style lang="less" scoped>
 #Partner {
-  padding-bottom: 150px;
   position: relative;
   overflow: hidden;
   .front {
@@ -83,6 +82,7 @@ export default {
     background-image: url('@/assets/imgs/index/partner/bg.png');
     background-position: center;
     background-size: cover;
+    padding-bottom: 150px;
   }
   .partner-box {
     padding-top: 86px;
