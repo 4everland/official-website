@@ -31,10 +31,6 @@
         </v-row>
       </v-container>
     </div>
-    <div class="back-ball-box">
-      <span></span>
-      <span></span>
-    </div>
   </div>
 </template>
 <script>
@@ -58,13 +54,13 @@ export default {
         },
         {
           name: 'ENS',
-          tips: 'Host any websites by<br/><a href="">Ethereum Name Service (ENS)</a><br/>in a truly decentralized way on IPFS .',
+          tips: 'Host any websites by<br/>Ethereum Name Service (ENS)<br/>in a truly decentralized way on IPFS .',
           link: '',
           cols: 4,
         },
         {
           name: 'SNS',
-          tips: 'Host any websites by<br/><a href="">Solona Name Service (SNS)</a><br/>in a truly decentralized way on IPFS .',
+          tips: 'Host any websites by<br/>Solona Name Service (SNS)<br/>in a truly decentralized way on IPFS .',
           link: '',
           cols: 4,
         },
@@ -84,13 +80,16 @@ export default {
 </script>
 <style lang="less" scoped>
 #Explore {
-  padding: 60px 0;
   margin-top: 60px;
   position: relative;
   overflow: hidden;
   .front {
+    padding: 60px 0;
     position: relative;
     z-index: 9;
+    background-image: url('@/assets/imgs/index/explore/bg.png');
+    background-position: center;
+    background-size: cover;
   }
   .universe-title {
     max-width: 800px;
@@ -142,46 +141,6 @@ export default {
         font-weight: bold;
       }
     }
-  }
-  .back-ball-box {
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    span {
-      width: 40vmin;
-      height: 40vmin;
-      border-radius: 20vmin;
-      backface-visibility: hidden;
-      position: absolute;
-      animation-name: move;
-      animation-duration: 6s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      opacity: 1;
-    }
-    span:nth-child(1) {
-      color: #faeaff;
-      top: 20%;
-      left: 21%;
-      animation-duration: 10s;
-      animation-delay: -12.3s;
-      transform-origin: 12vw 100px;
-      box-shadow: -60vmin 0 12.328532637vmin 30px currentColor;
-    }
-    span:nth-child(2) {
-      color: #cbe2ff;
-      top: 50%;
-      left: 45%;
-      animation-duration: 12s;
-      animation-delay: 2s;
-      transform-origin: 14vw 20px;
-      box-shadow: 60vmin 0 10.2115006212vmin 20px currentColor;
-    }
-  }
-}
-@keyframes move {
-  100% {
-    transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
 </style>

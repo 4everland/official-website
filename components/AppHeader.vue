@@ -292,6 +292,9 @@ export default {
 }
 </script>
 <style scoped>
+#header {
+  z-index: 99;
+}
 .nav-font {
   font-family: 'PARaDOS', sans-serif !important;
 }

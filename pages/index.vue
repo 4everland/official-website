@@ -7,8 +7,8 @@
     <section-explore />
     <section-globe />
     <section-Partners />
-
     <section-new />
+    <section-milestones />
   </div>
 </template>
 
@@ -20,8 +20,8 @@ import SectionHelp from '@/components/IndexSections/SectionHelp.vue'
 import SectionExplore from '@/components/IndexSections/SectionExplore.vue'
 import SectionGlobe from '@/components/IndexSections/SectionGlobe.vue'
 import SectionPartners from '@/components/IndexSections/SectionPartners.vue'
-
 import SectionNew from '@/components/IndexSections/SectionNew.vue'
+import SectionMilestones from '@/components/IndexSections/SectionMilestones.vue'
 
 export default {
   components: {
@@ -31,8 +31,9 @@ export default {
     SectionHelp,
     SectionExplore,
     SectionGlobe,
-    SectionNew,
     SectionPartners,
+    SectionNew,
+    SectionMilestones,
   },
   mounted() {
     this.$nextTick(() => {

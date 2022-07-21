@@ -44,12 +44,6 @@
         <div class="touch-bar"></div>
       </v-container>
     </div>
-
-    <div class="back-ball-box">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
   </div>
 </template>
 <script>
@@ -86,9 +80,13 @@ export default {
   .front {
     position: relative;
     z-index: 9;
+    background-image: url('@/assets/imgs/index/partner/bg.png');
+    background-position: center;
+    background-size: cover;
   }
   .partner-box {
     padding-top: 86px;
+
     .partner-tips {
       font-size: 18px;
       text-align: left;
