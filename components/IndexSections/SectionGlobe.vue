@@ -17,7 +17,12 @@
       </v-row>
       <div class="data-box">
         <v-row>
-          <v-col v-for="(item, index) in btnItem" :key="index" :cols="3">
+          <v-col
+            v-for="(item, index) in btnItem"
+            :key="index"
+            :cols="6"
+            :md="3"
+          >
             <div class="data-num">{{ item.num }}</div>
             <div class="data-name">{{ item.name }}</div>
           </v-col>
@@ -186,17 +191,13 @@ export default {
       position: absolute;
       right: 0;
       top: 0;
+      z-index: 1;
     }
   }
-  .universe-title {
-    font-size: 18px;
-    font-family: 'Ubuntu', sans-serif !important;
-    font-weight: 400;
-    color: #888;
-    text-align: center;
-    margin: 150px 0;
-  }
+
   .text-box {
+    position: relative;
+    z-index: 7;
     .text-title {
       font-size: 45px;
       text-align: left;
@@ -216,6 +217,8 @@ export default {
   .data-box {
     color: #fff;
     margin-top: 80px;
+    position: relative;
+    z-index: 7;
     .data-num {
       font-size: 90px;
       text-align: left;
@@ -229,6 +232,49 @@ export default {
       color: #fff;
       font-family: 'Ubuntu-Medium', sans-serif !important;
       font-weight: 500;
+    }
+  }
+}
+@media (max-width: 960px) {
+  #globe {
+    height: 360px;
+    .globe-box {
+      height: 100%;
+      padding-top: 25px;
+      #globeViz {
+        right: 0;
+        top: 70px;
+      }
+    }
+    .text-box {
+      .text-title {
+        font-size: 18px;
+        font-family: 'Ubuntu', sans-serif !important;
+        font-weight: normal;
+        margin-bottom: 26px;
+      }
+      .text-tips {
+        font-size: 12px;
+        text-align: left;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif !important;
+        font-weight: normal;
+      }
+    }
+    .data-box {
+      margin-top: 40px;
+      .data-num {
+        font-size: 24px;
+        text-align: left;
+        font-family: 'Ubuntu', sans-serif !important;
+        font-weight: normal;
+      }
+      .data-name {
+        font-size: 12px;
+        text-align: left;
+        font-family: 'Ubuntu', sans-serif !important;
+        font-weight: normal;
+      }
     }
   }
 }

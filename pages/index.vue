@@ -44,3 +44,8 @@ export default {
   methods: {},
 }
 </script>
+<style lang="scss" scoped>
+#home {
+  overflow: hidden;
+}
+</style>

@@ -107,12 +107,12 @@
         <v-btn
           :href="loginUrl"
           target="_blank"
-          class="hidden-sm-and-down"
+          class="hidden-sm-and-down black white--text font-weight-bold"
           outlined
           tile
-          color="#452c92"
+          color="#000"
         >
-          <v-icon class="mr-2">{{ mdiWallet }}</v-icon>
+          <!-- <v-icon class="mr-2">{{ mdiWallet }}</v-icon> -->
           Login
           <v-icon class="ml-2">{{ mdiChevronRight }}</v-icon>
         </v-btn>

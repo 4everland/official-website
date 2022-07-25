@@ -9,10 +9,12 @@
               Build Web3 infrastructure for millions developers and projects.
             </div>
             <div style="margin-top: 65px">
-              <v-btn color="#000" tile class="white--text">BUILD WEB3</v-btn>
+              <v-btn color="#000" tile class="white--text" :href="hosting_web"
+                >BUILD WEB3</v-btn
+              >
             </div>
           </div>
-          <div class="css-75nahk">
+          <!-- <div class="css-75nahk">
             <video
               class="css-1jb4ggb"
               autoplay=""
@@ -26,14 +28,20 @@
               />
             </video>
             <div class="css-hhqijc"><div class="css-k57fb3"></div></div>
+          </div> -->
+          <div class="text-center banner">
+            <v-img
+              class="web-img"
+              :src="require('@/assets/imgs/index/top/mask-bg.png')"
+            ></v-img>
           </div>
         </v-col>
       </v-row>
-      <v-row style="margin-top: 160px">
+      <v-row class="item-list">
         <v-col
           v-for="(item, index) in items"
           :key="index"
-          cols="12"
+          cols="6"
           md="3"
           lg="3"
         >
@@ -110,7 +118,7 @@ export default {
       margin-bottom: 18px;
       font-weight: 700;
       color: #161617;
-      font-family: 'Ubuntu-Bold', sans-serif !important;
+      font-family: 'Ubuntu-Bold', sans-serif;
     }
     .text-tips {
       font-size: 24px;
@@ -120,6 +128,9 @@ export default {
       font-family: 'Ubuntu', sans-serif !important;
     }
   }
+  .item-list {
+    margin-top: 160px;
+  }
   .css-1jb4ggb {
     width: 100%;
     height: 100%;
@@ -128,7 +139,7 @@ export default {
     position: relative;
     z-index: 1;
   }
-  .css-75nahk {
+  .banner {
     width: 100%;
     max-width: 860px;
     right: 50%;
@@ -159,6 +170,29 @@ export default {
     font-family: 'Ubuntu-Medium', sans-serif !important;
     font-size: 11px;
     max-width: 200px;
+  }
+}
+
+@media (max-width: 960px) {
+  #banner {
+    .text-box {
+      .text-title {
+        font-size: 28px;
+        font-family: sans-serif;
+        line-height: unset;
+        font-weight: normal;
+      }
+      .text-tips {
+        font-size: 12px;
+        max-width: 208px;
+      }
+    }
+    .banner {
+      right: 10%;
+    }
+    .item-list {
+      margin-top: 50px;
+    }
   }
 }
 </style>

@@ -1,71 +1,51 @@
 <template>
   <div id="footer">
-    <v-container class="align-center">
+    <div class="black py-16">
+      <v-container class="align-center">
+        <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
+          <v-col cols="12">
+            <div class="footer-titele font-weight-black">
+              Stay up to date on developer updates for the 4EVERLAND
+            </div>
+            <div class="subscribe-input mt-12">
+              <div class="emain-title">E-mail</div>
+              <input v-model="email" class="enter-email" type="email" />
+              <v-btn
+                :loading="loading"
+                class="text-body2 white--text"
+                color="#000"
+                tile
+                max-width="150"
+                height="24"
+                @click="subscribe"
+                >Subscribe</v-btn
+              >
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+    <v-divider class="hidden-sm-and-down mt-14"></v-divider>
+    <v-container class="hidden-sm-and-down mt-8">
       <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
-        <v-col cols="12" md="6" lg="6">
-          <div class="footer-titele font-weight-black">Stay in the loop</div>
-          <div class="footer-text mt-12">
-            Subscribe to the newsletter to hear about 4EVERLAND updates and
-            events.
-          </div>
-          <div class="subscribe-input mt-12">
-            <input
-              v-model="email"
-              class="enter-email mr-4 mb-4"
-              placeholder="Your email address"
-              type="email"
-            />
-            <v-btn
-              :loading="loading"
-              class="text-h6 white--text"
-              color="#452C92"
-              tile
-              max-width="150"
-              height="42"
-              @click="subscribe"
-              >Subscribe</v-btn
-            >
+        <v-col cols="12" md="4" lg="4">
+          <div class="ml-4 mb-4 text-h6">Join us</div>
+          <div class="join-us">
+            <div v-for="link in links" :key="link.href" style="width: 40%">
+              <v-btn
+                :href="link.href"
+                target="_blank"
+                color="#B1B6BB"
+                plain
+                text
+                nofollow
+              >
+                {{ link.name }}
+              </v-btn>
+            </div>
           </div>
         </v-col>
-        <v-col cols="12" md="6" lg="6">
-          <div class="footer-titele font-weight-black">Join the community</div>
-          <div
-            class="mt-12"
-            :class="{ 'justify-center': $vuetify.breakpoint.smAndDown }"
-          >
-            <v-btn
-              v-for="link in links"
-              :key="link.href"
-              :href="link.href"
-              text
-              icon
-              class="text-center mr-8 mb-8"
-              target="_blank"
-              nofollow
-            >
-              <v-img width="36" :src="link.icon"></v-img>
-            </v-btn>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-    <v-divider class="mt-14"></v-divider>
-    <v-container>
-      <v-row
-        class="mt-16"
-        :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
-      >
-        <v-col cols="12" md="6" lg="6">
-          <div class="footer-titele font-weight-black">4EVERLAND</div>
-          <div class="footer-text2 mt-12">
-            4EVERLAND is a Web 3.0 cloud computing platform that integrates
-            storage, computing, and network core capabilities to provide
-            inter-blockchain communication, decentralized front-end, write-once,
-            run any blockchain solutions and web services, enabling developers
-            to build Web 3.0 applications more easily and quickly.
-          </div>
-        </v-col>
-        <v-col cols="12" md="6" lg="6">
+        <v-col cols="12" md="8" lg="8">
           <v-row>
             <v-col
               v-for="item in project"
@@ -94,8 +74,63 @@
         </v-col>
       </v-row>
     </v-container>
+    <v-container class="btn-box hidden-md-and-up">
+      <v-menu offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn outlined tile class="btn-item" v-bind="attrs" v-on="on"
+            >Join us
+            <v-icon right dark size="12"> mdi-plus </v-icon>
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item v-for="(item, index) in links" :key="index">
+            <v-list-item-title>
+              <v-btn
+                :to="item.to"
+                :href="item.href"
+                :target="item.target"
+                plain
+                text
+                nofollow
+              >
+                {{ item.name }}
+              </v-btn>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+      <v-menu offset-y v-for="(items, index) in project" :key="index">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn outlined tile class="btn-item" v-bind="attrs" v-on="on"
+            >{{ items.name }}
+            <v-icon right dark size="12"> mdi-plus </v-icon>
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item v-for="(item, index) in items.list" :key="index">
+            <v-list-item-title>
+              <v-btn
+                :to="item.to"
+                :href="item.href"
+                :target="item.target"
+                plain
+                text
+                nofollow
+              >
+                {{ item.name }}
+              </v-btn>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+    </v-container>
     <v-container>
-      <div class="copy-right">&copy; 2021 4EVERLAND, Inc</div>
+      <div
+        class="copy-right"
+        :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
+      >
+        &copy; 2021 4EVERLAND, Inc
+      </div>
     </v-container>
     <div v-show="subSuccessShow" class="sub-success">
       <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
@@ -131,58 +166,89 @@ export default {
       mdiEmoticonHappyOutline,
       links: [
         {
+          name: 'GitHub',
           icon: require('@/assets/imgs/footer/github.png'),
           href: 'https://github.com/4everland',
         },
         {
+          name: 'Twitter',
           icon: require('@/assets/imgs/footer/twitter.png'),
           href: 'https://twitter.com/4everland_org',
         },
         {
+          name: 'Telegram',
           icon: require('@/assets/imgs/footer/telegram.png'),
           href: 'https://t.me/org_4everland',
         },
         {
+          name: 'Reddit',
           icon: require('@/assets/imgs/footer/reddit.png'),
           href: 'https://www.reddit.com/r/4everland/',
         },
         {
+          name: 'Medium',
           icon: require('@/assets/imgs/footer/medium.png'),
           href: 'https://4everland.medium.com/',
         },
         {
+          name: 'Discord',
           icon: require('@/assets/imgs/footer/discord.png'),
           href: 'https://discord.com/invite/4everland',
         },
         {
+          name: 'Email',
           icon: require('@/assets/imgs/footer/email.png'),
           href: 'mailto:contact@4everland.org',
         },
         {
+          name: 'Youtube',
           icon: require('@/assets/imgs/footer/youtube.png'),
           href: 'https://www.youtube.com/channel/UC9gDft8jnTt_1yrtLfsUq0w',
         },
       ],
       project: [
         {
-          name: 'Project',
+          name: 'Products',
           list: [
             {
               name: 'Hosting',
               to: '/hosting',
             },
             {
-              name: 'WhitePaper',
+              name: 'Bucket',
+              to: '/bucket',
+            },
+            {
+              name: 'ENS Domain',
+              to: '/ens',
+            },
+            {
+              name: 'SNS Domain',
+              to: '/sns',
+            },
+            {
+              name: 'IPFS Gateway',
+              to: '/ipfs',
+            },
+          ],
+        },
+        {
+          name: 'Resources',
+          list: [
+            {
+              name: 'Documentation',
+              href: 'https://docs.4everland.org/',
+              target: '_blank',
+            },
+            {
+              name: 'Litepaper',
               href: 'https://static.4everland.org/4everland-litepaper.pdf',
               target: '_blank',
             },
             {
-              name: 'Blogs',
-              to: '/blog',
-            },
-            {
-              name: 'Roadmap',
-              to: '/#roadmap',
+              name: 'Blog',
+              href: 'https://medium.com/4everland',
+              target: '_blank',
             },
             {
               name: 'Brand Resources',
@@ -192,16 +258,12 @@ export default {
           ],
         },
         {
-          name: 'Support',
+          name: 'Decelopers',
           list: [
             {
-              name: 'Documentation',
-              href: 'https://docs.4everland.org/',
+              name: 'Dashboard',
+              href: 'https://dashboard.4everland.org/',
               target: '_blank',
-            },
-            {
-              name: 'Grants',
-              to: '/grants',
             },
             {
               name: 'Bug Bounty',
@@ -209,42 +271,8 @@ export default {
               target: '_blank',
             },
             {
-              name: 'FAQ',
-              to: '/hosting/#faq',
-            },
-            {
-              name: 'Contact us',
-              href: 'mailto:contact@4everland.org',
-            },
-          ],
-        },
-        {
-          name: 'Frameworks',
-          list: [
-            {
-              name: 'Vue.js',
-              href: 'https://hosting.4everland.org/#/solution/vue',
-              target: '_blank',
-            },
-            {
-              name: 'React App',
-              href: 'https://hosting.4everland.org/#/solution/create-react-app',
-              target: '_blank',
-            },
-            {
-              name: 'Next.js',
-              href: 'https://hosting.4everland.org/#/solution/nextjs',
-              target: '_blank',
-            },
-            {
-              name: 'Gatsby',
-              href: 'https://hosting.4everland.org/#/solution/gatsby',
-              target: '_blank',
-            },
-            {
-              name: 'Angular',
-              href: 'https://hosting.4everland.org/#/solution/angular',
-              target: '_blank',
+              name: 'Grants',
+              to: '/grants',
             },
           ],
         },
@@ -317,10 +345,12 @@ export default {
 </script>
 <style scoped>
 #footer {
-  padding-top: 88px;
+  padding-top: 0;
 }
 .footer-titele {
-  font-size: 28px;
+  font-size: 23px;
+  color: #fff;
+  text-align: center;
 }
 .footer-text {
   font-size: 18px;
@@ -336,7 +366,21 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
+  align-items: center;
+  justify-content: space-around;
   flex: 1;
+  background-color: #fff;
+  width: 100%;
+  max-width: 900px;
+  height: 76px;
+  margin: 0 auto;
+}
+.emain-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.enter-email {
+  width: 100%;
 }
 .subscribe-input.disabled {
   background-color: #c1c1c1 !important;
@@ -362,17 +406,20 @@ input:-ms-input-placeholder {
   font-size: 18px;
 }
 .subscribe-input input {
-  color: #132642;
-  border: 1px solid #969696;
-  font-size: 18px;
+  color: #000;
+  font-size: 36px;
   padding-left: 30px;
-  max-width: 490px;
-  height: 42px;
+  max-width: 600px;
+  height: 100%;
   flex: auto;
 }
 .subscribe-input input:hover,
 .subscribe-input input:focus {
   outline: none;
+}
+.join-us {
+  display: flex;
+  flex-wrap: wrap;
 }
 .v-btn {
   text-transform: none !important;
@@ -405,5 +452,29 @@ input:-ms-input-placeholder {
 /deep/.v-btn--plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover)
   .v-btn__content {
   opacity: 1;
+}
+
+@media (max-width: 960px) {
+  .subscribe-input {
+    padding: 0 14px;
+    height: 44px;
+  }
+  .subscribe-input input {
+    width: 50px;
+    font-size: 14px;
+    padding: 0 14px;
+  }
+  .btn-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn-item {
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin: 10px;
+  }
 }
 </style>

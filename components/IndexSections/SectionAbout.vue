@@ -2,7 +2,7 @@
   <div id="about">
     <v-container class="about-box">
       <v-row>
-        <v-col cols="6" md="6" lg="6">
+        <v-col cols="12" md="6" lg="6">
           <div class="text-box">
             <div class="text-title">What's is the 4EVERLAND?</div>
             <div class="text-tips">
@@ -15,7 +15,7 @@
           </div>
         </v-col>
         <v-col :cols="12">
-          <div style="margin-top: 60px">
+          <div class="btn-box">
             <v-btn
               outlined
               tile
@@ -75,14 +75,6 @@ export default {
     background-size: contain;
     display: flex;
     align-items: center;
-    .universe-title {
-      font-size: 18px;
-      font-family: 'Ubuntu', sans-serif !important;
-      font-weight: 400;
-      color: #888;
-      text-align: center;
-      margin: 150px 0;
-    }
     .text-box {
       .text-title {
         font-size: 45px;
@@ -100,10 +92,46 @@ export default {
         font-weight: 500;
       }
     }
+    .btn-box {
+      margin-top: 60px;
+    }
     .btn-item {
       width: 143px;
       height: 25px;
       margin-right: 23px;
+    }
+  }
+}
+@media (max-width: 960px) {
+  #about {
+    height: 345px;
+    background-color: #f3e8fe;
+    .about-box {
+      .text-box {
+        .text-title {
+          font-size: 21px;
+          text-align: left;
+          color: #161617;
+          font-weight: normal;
+          margin-bottom: 20px;
+          font-family: 'Ubuntu', sans-serif !important;
+        }
+        .text-tips {
+          font-size: 12px;
+          text-align: left;
+          font-weight: normal;
+          font-family: 'Ubuntu', sans-serif !important;
+        }
+      }
+      .btn-box {
+        margin-top: 30px;
+      }
+      .btn-item {
+        width: 100px;
+        height: 30px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
     }
   }
 }

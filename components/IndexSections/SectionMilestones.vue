@@ -9,7 +9,7 @@
             </div>
           </v-col>
           <v-col cols="12" md="6" class="partner-tips">
-            <div class="my-4">
+            <div class="my-md-4">
               4EVERLAND is committing R&D resources to the Web3 ecosystem in the
               form of the following proposed technical contributions. At each
               stage of its life cycle, these roadmap items will be voted on via
@@ -160,11 +160,6 @@ export default {
       const left = this.$refs.isNow[0].offsetLeft
       const offsetWidth = this.$refs.isNow[0].offsetWidth
       const windowWidth = document.documentElement.clientWidth
-      console.log(this.$refs.isNow)
-      console.log(left)
-      console.log(offsetWidth)
-      console.log(windowWidth)
-      console.log(this.$refs)
       const scrollLeft = left - windowWidth / 2 + offsetWidth / 2
       this.$refs.partnerList.scrollTo(scrollLeft, 0)
     })
@@ -179,7 +174,7 @@ export default {
   overflow: hidden;
   .front {
     position: relative;
-    z-index: 9;
+    z-index: 7;
   }
   .partner-box {
     padding-top: 86px;
@@ -216,7 +211,7 @@ export default {
       .item-list {
         display: flex;
         align-items: flex-end;
-        z-index: 9;
+        z-index: 7;
       }
       .item-img-box {
         display: flex;
@@ -265,5 +260,69 @@ export default {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+@media (max-width: 960px) {
+  #Partner {
+    padding-bottom: 40px;
+    .partner-box {
+      padding-top: 86px;
+      .partner-tips {
+        font-size: 12px;
+        color: #051f30;
+        font-family: 'Ubuntu', sans-serif !important;
+        font-weight: normal;
+      }
+      .text-box {
+        .text-title {
+          font-size: 14px;
+          font-family: 'Ubuntu', sans-serif !important;
+          font-weight: normal;
+        }
+      }
+    }
+
+    .container-wrapper {
+      overflow: hidden;
+      position: relative;
+      .partner-list {
+        display: flex;
+        padding: 0 100px;
+        overflow: scroll hidden;
+        .item-list {
+          display: flex;
+          align-items: flex-end;
+          z-index: 7;
+        }
+        .item-img-box {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: baseline;
+        }
+        .partner-item-name {
+          max-width: 140px;
+          min-height: 36px;
+          font-size: 12px;
+          font-family: 'Ubuntu', sans-serif !important;
+          font-weight: normal;
+        }
+        .stone-img-box {
+          width: 60px;
+          height: 60px;
+          padding: 6px;
+          margin: 23px;
+        }
+        .isnow-stone-img-box {
+          width: 65px;
+          height: 65px;
+          margin: 18px 20px;
+        }
+        .under-line {
+          top: 90px;
+        }
+      }
+    }
+  }
 }
 </style>

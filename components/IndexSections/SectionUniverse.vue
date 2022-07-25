@@ -3,23 +3,24 @@
     <v-container>
       <div class="universe-title">BE THE MOST DAZZLING UNIVERSE</div>
       <v-row>
-        <v-col cols="6" md="6" lg="6">
+        <v-col cols="12" md="6" lg="6">
           <div class="text-box">
             <div class="text-title">
               ENDOW THE PROJECT WITH WEB.3.0 ECOLOGICAL CAPABULITIES ON
               4EVERLAND
             </div>
 
-            <div style="margin-top: 72px">
-              <v-btn color="#000" tile class="white--text"
+            <div style="margin-top: 72px" class="hidden-sm-and-down">
+              <v-btn color="#000" tile class="white--text" to="/universe"
                 >Explore Universe</v-btn
               >
             </div>
           </div>
         </v-col>
-        <v-col cols="6" md="6" lg="6" class="universe-list">
+        <v-col cols="12" md="6" lg="6" class="universe-list">
           <div
             v-for="(item, index) in universeItem"
+            v-show="$vuetify.breakpoint.smAndDown ? index < 9 : true"
             :key="index"
             class="item-img-box"
           >
@@ -31,6 +32,13 @@
               :src="item.img"
             ></v-img>
             <div class="universe-item-name">{{ item.name }}</div>
+          </div>
+        </v-col>
+        <v-col cols="12" class="hidden-md-and-up">
+          <div class="text-center" style="margin-top: 42px">
+            <v-btn color="#000" tile class="white--text"
+              >Explore Universe</v-btn
+            >
           </div>
         </v-col>
       </v-row>
@@ -142,6 +150,36 @@ export default {
       font-size: 18px;
       font-family: 'Ubuntu', sans-serif !important;
       color: #161617;
+    }
+  }
+}
+@media (max-width: 960px) {
+  #universe {
+    padding-bottom: 40px;
+    .universe-title {
+      text-align: left;
+      font-size: 12px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    .text-box {
+      .text-title {
+        font-size: 21px;
+        text-align: left;
+        color: #161617;
+        font-weight: normal;
+        font-family: 'Ubuntu', sans-serif !important;
+      }
+    }
+    .universe-list {
+      .item-img-box {
+        width: 33%;
+        text-align: center;
+        margin: 12px 0;
+      }
+      .universe-item-name {
+        font-size: 14px;
+      }
     }
   }
 }
