@@ -169,7 +169,7 @@ export default {
     margin-top: 7px;
     font-family: 'Ubuntu-Medium', sans-serif !important;
     font-size: 11px;
-    max-width: 200px;
+    max-width: 220px;
   }
 }
 

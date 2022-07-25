@@ -10,7 +10,6 @@
     ]"
     @wheel.capture.stop="handlerWheel"
   >
-    <!-- <v-container></v-container> -->
     <div
       ref="strip"
       class="happy-scroll-bar"
