@@ -55,7 +55,7 @@
             <div class="time-line">
               <div class="time-line-top time-pc">
                 <div class="time-line-fixed"></div>
-                <div class="time-line-top-trun">
+                <div class="time-line-top-trun" @click="preview">
                   <!-- <img src="/_nuxt/img/arrow@3x.fb6f703.png" alt="" /> -->
                   <v-icon large>mdi-chevron-left</v-icon>
                 </div>
@@ -78,7 +78,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="time-line-top-trun">
+                <div class="time-line-top-trun" @click="next">
                   <v-icon large>mdi-chevron-right</v-icon>
                 </div>
               </div>
@@ -340,6 +340,45 @@ export default {
   methods: {
     choose(index) {
       this.active = index
+      console.log(this.$refs.isNow)
+    },
+    preview() {
+      let index = this.active
+      index = index - 1
+      if (index < 0) {
+        index = 0
+      }
+      this.active = index
+      const left = this.$refs.isNow[0].offsetLeft
+      const offsetWidth = this.$refs.isNow[0].offsetWidth
+      let scrollWidth = left - offsetWidth * 3
+      if (scrollWidth <= 0) {
+        scrollWidth = 0
+      }
+      this.$refs.partnerList.scrollTo({
+        left: scrollWidth,
+        top: 0,
+        behavior: 'smooth',
+      })
+    },
+    next() {
+      let index = this.active
+      index = index + 1
+      if (index >= this.newRoadmap.length) {
+        index = this.newRoadmap.length - 1
+      }
+      this.active = index
+      const left = this.$refs.isNow[0].offsetLeft
+      const offsetWidth = this.$refs.isNow[0].offsetWidth
+      let scrollWidth = left - offsetWidth * 2
+      if (scrollWidth <= 0) {
+        scrollWidth = 0
+      }
+      this.$refs.partnerList.scrollTo({
+        left: scrollWidth,
+        top: 0,
+        behavior: 'smooth',
+      })
     },
   },
 }
@@ -533,6 +572,7 @@ export default {
       background: #e5e0fe;
       border-radius: 50%;
       margin: 64px 36px 0;
+      cursor: pointer;
     }
     .time-line-top-content {
       width: 1000px;

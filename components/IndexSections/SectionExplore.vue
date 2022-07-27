@@ -83,7 +83,7 @@ export default {
 </script>
 <style lang="less" scoped>
 #Explore {
-  margin-top: 60px;
+  margin-top: 130px;
   position: relative;
   overflow: hidden;
   a {

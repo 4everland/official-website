@@ -128,6 +128,7 @@ export default {
     color: #888;
     text-align: center;
     margin: 130px 0;
+    margin-bottom: 80px;
   }
   .text-box {
     .text-title {

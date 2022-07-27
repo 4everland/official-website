@@ -8,8 +8,13 @@
               Stay up to date on developer updates for the 4EVERLAND
             </div>
             <div class="subscribe-input mt-12">
-              <div class="emain-title">E-mail</div>
-              <input v-model="email" class="enter-email" type="email" />
+              <!-- <div class="emain-title">E-mail</div> -->
+              <input
+                v-model="email"
+                class="enter-email"
+                type="email"
+                placeholder="E-mail"
+              />
               <v-btn
                 :loading="loading"
                 class="text-body2 white--text"
@@ -387,28 +392,28 @@ export default {
 }
 
 input::-webkit-input-placeholder {
-  color: #132642;
+  color: #000;
   font-size: 18px;
 }
 input::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #132642;
+  color: #000;
   font-size: 18px;
 }
 input:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #132642;
+  color: #000;
   font-size: 18px;
 }
 input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #132642;
+  color: #000;
   font-size: 18px;
+  font-weight: bold;
 }
 .subscribe-input input {
   color: #000;
-  font-size: 36px;
-  padding-left: 30px;
+  font-size: 18px;
   max-width: 600px;
   height: 100%;
   flex: auto;
