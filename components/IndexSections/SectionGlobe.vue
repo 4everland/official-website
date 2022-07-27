@@ -2,32 +2,31 @@
   <div id="globe">
     <v-container class="globe-box">
       <v-row>
-        <v-col :cols="12">
+        <v-col :cols="12" :md="6">
           <div class="text-box">
             <div class="text-title">
-              Promote Web.3.0 <br />
-              with developers worldwidely
+              Promote Web.3.0 with developers worldwidely
             </div>
             <div class="text-tips">
               4EVERLAND is committed to leading developers and projects<br />
               around the world to inspire value in Web.3.0
             </div>
           </div>
+          <div class="data-box">
+            <v-row>
+              <v-col
+                v-for="(item, index) in btnItem"
+                :key="index"
+                :cols="6"
+                :md="6"
+              >
+                <div class="data-num">{{ item.num }}</div>
+                <div class="data-name">{{ item.name }}</div>
+              </v-col>
+            </v-row>
+          </div>
         </v-col>
       </v-row>
-      <div class="data-box">
-        <v-row>
-          <v-col
-            v-for="(item, index) in btnItem"
-            :key="index"
-            :cols="6"
-            :md="3"
-          >
-            <div class="data-num">{{ item.num }}</div>
-            <div class="data-name">{{ item.name }}</div>
-          </v-col>
-        </v-row>
-      </div>
       <div id="globeViz"></div>
     </v-container>
   </div>
@@ -35,6 +34,7 @@
 <script>
 /* eslint-disable */
 const geoJSON = require('~/assets/json/geo.json')
+const whitePNG = require('~/assets/imgs/index/globe/globe-bg.png')
 const emptyPNG =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADICAYAAADGFbfiAAAC3ElEQVR4nO3VMQHAMAzAsKwsMv5Ai6G+JQh+/O3uPwDw6AgGQGEgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCwLuZud1fAfX9aO5bAAAAAElFTkSuQmCC'
 const debounce = (func, wait, immediate) => {
@@ -59,26 +59,28 @@ export default {
       btnItem: [
         {
           num: '100+',
-          name: 'CITIES',
+          name: 'GLOBAL NODE',
         },
         {
           num: '10B+',
-          name: 'REQUESTS PER WEEK',
-        },
-        {
-          num: '10B+',
-          name: 'DATA  SERVED',
-        },
-        {
-          num: '99.99%',
           name: 'GUARANTEED UPTIME',
+        },
+        {
+          num: '10x',
+          name: 'PERFORMANCE BOOST',
+        },
+        {
+          num: '50000+',
+          name: 'DEVELOPERS',
         },
       ],
     }
   },
   computed: {},
   mounted() {
-    this.initGlobe()
+    this.$nextTick(() => {
+      this.initGlobe()
+    })
   },
   methods: {
     onResize(e) {
@@ -144,18 +146,19 @@ export default {
         })
       const w = window.innerWidth
       const size = Math.min(w * 0.8, 700)
+      let bgImg = this.$vuetify.breakpoint.smAndDown ? emptyPNG : whitePNG
       const world = Globe()
         .width(size)
         .height(size)
-        .globeImageUrl(emptyPNG)
+        .globeImageUrl(bgImg)
         .backgroundColor('rgba(0,0,0,0)')
         .showAtmosphere(false)
         .atmosphereAltitude('.25')
-        .hexPolygonsData(geoJSON.features)
-        .hexPolygonResolution(3)
-        .hexPolygonMargin(0.3)
-        .hexPolygonColor(() => `#687FF1`)
-        .arcsData(arcData)
+        .polygonsData(geoJSON.features)
+        .polygonCapColor(() => `#6197ed`)
+        .polygonSideColor(() => 'rgba(0,0,0,.3)')
+        .polygonAltitude(() => '0.02')
+        // .arcsData(arcData)
         .arcColor('color')
         .arcStroke(0.6)
         .arcDashLength(1)
@@ -164,9 +167,7 @@ export default {
         })
         .arcDashAnimateTime(function () {
           return 2000 * Math.random() + 1500
-        })
-        .pointAltitude('size')
-        .pointColor('color')(document.getElementById('globeViz'))
+        })(document.getElementById('globeViz'))
       world.controls().autoRotate = true
       world.controls().autoRotateSpeed = 1
       world.controls().enableZoom = false
@@ -185,12 +186,12 @@ export default {
   background-color: #000;
   .globe-box {
     height: 100%;
-    padding-top: 200px;
+    padding-top: 90px;
     position: relative;
     #globeViz {
       position: absolute;
       right: 0;
-      top: 0;
+      top: 100px;
       z-index: 1;
     }
   }
@@ -199,7 +200,7 @@ export default {
     position: relative;
     z-index: 7;
     .text-title {
-      font-size: 45px;
+      font-size: 30px;
       text-align: left;
       color: #fff;
       font-family: 'Ubuntu-Bold', sans-serif !important;
@@ -220,7 +221,7 @@ export default {
     position: relative;
     z-index: 7;
     .data-num {
-      font-size: 90px;
+      font-size: 60px;
       text-align: left;
       color: #fff;
       font-family: 'Ubuntu-Medium', sans-serif !important;

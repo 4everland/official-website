@@ -1,5 +1,5 @@
 <template>
-  <div id="Partner">
+  <div id="Milestones">
     <div class="front">
       <v-container class="partner-box">
         <v-row class="mile-bg">
@@ -21,7 +21,7 @@
         </v-row>
       </v-container>
       <v-row class="mt-16 container-wrapper">
-        <v-col cols="12" ref="partnerList" class="partner-list">
+        <!-- <v-col cols="12" ref="partnerList" class="partner-list">
           <div
             v-for="(item, index) in roadmap"
             :key="index"
@@ -49,7 +49,76 @@
             </div>
           </div>
           <div class="under-line"></div>
-        </v-col>
+        </v-col> -->
+        <v-container>
+          <div>
+            <div class="time-line">
+              <div class="time-line-top time-pc">
+                <div class="time-line-fixed"></div>
+                <div class="time-line-top-trun">
+                  <!-- <img src="/_nuxt/img/arrow@3x.fb6f703.png" alt="" /> -->
+                  <v-icon large>mdi-chevron-left</v-icon>
+                </div>
+                <div class="time-line-top-content" ref="partnerList">
+                  <div
+                    v-for="(item, index) in newRoadmap"
+                    :key="index"
+                    class="time-line-content-item"
+                    :class="{
+                      'time-line-content-item-active': active == index,
+                    }"
+                    :ref="active == index ? 'isNow' : null"
+                    @click="choose(index)"
+                  >
+                    <div class="time-line-content-item-icon">
+                      <div class="time-line-content-item-icon-icon"></div>
+                    </div>
+                    <div class="time-line-content-item-info">
+                      {{ item.title }}
+                    </div>
+                  </div>
+                </div>
+                <div class="time-line-top-trun">
+                  <v-icon large>mdi-chevron-right</v-icon>
+                </div>
+              </div>
+              <!---->
+              <div class="time-line-bottom">
+                <v-row>
+                  <v-col cols="12" md="6">
+                    <div class="time-line-bottom-title">
+                      {{ newRoadmap[active].left }}
+                    </div>
+                  </v-col>
+                  <v-col cols="12" md="6">
+                    <div class="time-line-bottom-info">
+                      <div v-for="(it, i) in newRoadmap[active].right" :key="i">
+                        <div>•</div>
+                        <div>{{ it }}</div>
+                      </div>
+                    </div>
+                  </v-col>
+                </v-row>
+              </div>
+              <!-- <div class="time-line-bottom time-mobile">
+                <div class="time-line-bottom-title">MainNet</div>
+                <div class="time-line-bottom-info">
+                  <div>
+                    <div>•</div>
+                    <div>Polkadot/Kusama ParaChain Technical Readiness</div>
+                  </div>
+                  <div>
+                    <div>•</div>
+                    <div>
+                      Promote for Use Cases and Get Applications Running on
+                      MainNet
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </v-container>
       </v-row>
     </div>
   </div>
@@ -58,6 +127,7 @@
 export default {
   data() {
     return {
+      active: 8,
       roadmap: [
         {
           date: '2021 Q1',
@@ -153,25 +223,133 @@ export default {
           tips: 'Launch virtual machine container',
         },
       ],
+      newRoadmap: [
+        {
+          title: 'V1',
+          left: 'V1 The Stone Age (2021-2022)',
+          right: [],
+        },
+        {
+          title: '2021 Q1',
+          left: 'V1 The Stone Age (2021-2022)',
+          right: [
+            'Market research and product prototype discussion',
+            'Product Design & Technology Development',
+          ],
+        },
+        {
+          title: '2021 Q2',
+          left: 'V1 The Stone Age (2021-2022)',
+          right: [
+            'Establish 4EVERLAND Foundation and technical community',
+            'Release V1 version of white paper, 4EVERLAND official website online',
+          ],
+        },
+        {
+          title: '2021 Q3',
+          left: 'V1 The Stone Age (2021-2022)',
+          right: [
+            'ALPHA Launch:4EVER-HOSTING is online, realizing Dweb hosting and other functions',
+          ],
+        },
+        {
+          title: '2021 Q4',
+          left: 'V1 The Stone Age (2021-2022)',
+          right: [
+            'BETA Launch: Online gateway node, storage node, data statistics service',
+          ],
+        },
+        {
+          title: '2022 Q1',
+          left: 'V1 The Stone Age (2021-2022)',
+          right: [
+            'Online bidding and lending system, hold the creation node bidding',
+          ],
+        },
+        {
+          title: '2022 Q2',
+          left: 'V1 The Stone Age (2021-2022)',
+          right: [
+            'The main network is online, a data hosting network that realizes global node collaboration',
+          ],
+        },
+        {
+          title: 'V2',
+          left: 'V2 Empower Web3.0 Developers (2022-2023)',
+          right: [],
+        },
+        {
+          title: '2022 Q3',
+          left: 'V2 Empower Web3.0 Developers (2022-2023)',
+          right: [
+            'We launched the trusted 4EVERLAND node network',
+            'We also launched a multi-chain payment system, supporting ETH, BSC, Polygon, and other public chains',
+            'We now even provide online front-end verifiable solutions to deliver a more comprehensive decentralized front-end hosting services',
+            "We completed the integration with capabilities of Dfinity's ecosystem",
+          ],
+        },
+        {
+          title: '2022 Q4',
+          left: 'V2 Empower Web3.0 Developers (2022-2023)',
+          right: [
+            'We plan to complete the integration of at least 3 mainstream public chains',
+            "We plan to complete the integration with capabilities of Arweave's ecosystem",
+            'We plan to increase the product functions for Hosting and Bucket to meet the needs of developers facing different scenarios',
+            'We plan to provide open storage and network underlying capabilities, and also want to attract providers to build the upper-layer of commercial applications',
+          ],
+        },
+        {
+          title: '2023 Q1',
+          left: 'V2 Empower Web3.0 Developers (2022-2023)',
+          right: [
+            'The 4EVERLAND node network will go online',
+            'We plan to open source all application layer codes for all community providers to build and use',
+            "We plan to complete the integration with capabilities of Filecoin's ecosystem",
+            'We plan to bring about more decentralized and powerful gateway capabilities with online (custom) dedicated gateways',
+          ],
+        },
+        {
+          title: '2023 Q2',
+          left: 'V2 Empower Web3.0 Developers (2022-2023)',
+          right: [
+            'We plan to launch the provider incentive model to motivate the community to build commercial applications',
+            'We plan to integrate more storage protocol capabilities',
+            'We plan to complete the integration of more public chain ecological capabilities and realize the interconnection of public chains and storage protocols',
+          ],
+        },
+        {
+          title: 'V3',
+          left: 'V3 Atom: Cloud Computing of Web3.0 (2023-2024)',
+          right: [
+            'We planned to integrate and support more heterogeneous chains such as Ethereum, BSC, Solona, Polygon, and Filecoin, etc., to achieve inter-blockchain communication, multi-chain deployment, and other multi-scenario requirements. Finally obtain the capability of Web3.0 cloud computing',
+          ],
+        },
+      ],
     }
   },
   mounted() {
     this.$nextTick((_) => {
       const left = this.$refs.isNow[0].offsetLeft
       const offsetWidth = this.$refs.isNow[0].offsetWidth
-      const windowWidth = document.documentElement.clientWidth
-      const scrollLeft = left - windowWidth / 2 + offsetWidth / 2
+      const outerWidth = this.$refs.partnerList.offsetWidth
+      // const windowWidth = document.documentElement.clientWidth
+      const scrollLeft = left - outerWidth / 2 + offsetWidth / 2
       this.$refs.partnerList.scrollTo(scrollLeft, 0)
     })
   },
-  methods: {},
+  methods: {
+    choose(index) {
+      this.active = index
+    },
+  },
 }
 </script>
 <style lang="less" scoped>
-#Partner {
+#Milestones {
   padding-bottom: 150px;
   position: relative;
   overflow: hidden;
+  background: #f7fbfc;
   .front {
     position: relative;
     z-index: 7;
@@ -320,6 +498,151 @@ export default {
         }
         .under-line {
           top: 90px;
+        }
+      }
+    }
+  }
+}
+</style>
+<style lang="scss" scoped>
+.time-line {
+  // width: 1240px;
+  // min-height: 510px;
+  background: #fff;
+  box-shadow: 0 5px 5px 0 rgb(4 0 0 / 2%);
+  border-radius: 10px;
+  .time-line-top {
+    display: flex;
+    position: relative;
+    .time-line-fixed {
+      position: absolute;
+      top: 87px;
+      left: 50%;
+      margin-left: -500px;
+      width: 1000px;
+      height: 2px;
+      background: #8272d1;
+      content: '';
+    }
+    .time-line-top-trun {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      background: #e5e0fe;
+      border-radius: 50%;
+      margin: 64px 36px 0;
+    }
+    .time-line-top-content {
+      width: 1000px;
+      overflow-x: scroll;
+      display: flex;
+      padding-top: 50px;
+      .time-line-content-item {
+        z-index: 999;
+        flex-basis: 146px;
+        flex-shrink: 0;
+        height: 125px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin: 0 47px;
+        .time-line-content-item-icon {
+          margin: 24px auto 32px;
+          width: 28px;
+          height: 28px;
+          background: #e5e0fe;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .time-line-content-item-icon-icon {
+            width: 16px;
+            height: 16px;
+            background: #8272d1;
+            border-radius: 50%;
+            margin: auto;
+          }
+        }
+        .time-line-content-item-info {
+          margin: 0 auto;
+          text-align: center;
+          height: 17px;
+          font-size: 14px;
+          font-family: 'Ubuntu', sans-serif !important;
+          font-weight: 500;
+          color: #1f1f1f;
+          line-height: 7px;
+        }
+      }
+      .time-line-content-item-active {
+        background: #8272d1;
+        .time-line-content-item-info {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .time-line-bottom {
+    margin-top: 51px;
+    display: flex;
+    padding: 0 70px;
+    padding-bottom: 50px;
+    .time-line-bottom-title {
+      // width: 474px;
+      // height: 93px;
+      font-size: 30px;
+      font-family: 'Ubuntu-Bold', sans-serif !important;
+      font-weight: 700;
+      color: #8272d1;
+      line-height: 60px;
+    }
+    .time-line-bottom-info {
+      margin-top: 16px;
+      & > div {
+        display: flex;
+        font-size: 14px;
+        font-family: 'Ubuntu-Medium', sans-serif !important;
+        font-weight: 500;
+        color: #000;
+        line-height: 36px;
+      }
+    }
+  }
+}
+@media (max-width: 960px) {
+  .time-line {
+    // width: 1240px;
+    // min-height: 510px;
+    .time-line-top {
+      .time-line-top-trun {
+        display: none;
+      }
+      .time-line-top-content {
+        .time-line-content-item {
+          flex-basis: 60px;
+          margin: 0 5px;
+        }
+        .time-line-content-item-active {
+          flex-basis: 146px;
+        }
+      }
+    }
+    .time-line-bottom {
+      margin-top: 40px;
+      padding: 0 20px;
+      padding-bottom: 20px;
+      .time-line-bottom-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #8272d1;
+        line-height: 20px;
+      }
+      .time-line-bottom-info {
+        margin-top: 16px;
+        & > div {
+          font-size: 12px;
+          line-height: 28px;
         }
       }
     }

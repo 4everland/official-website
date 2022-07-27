@@ -58,6 +58,7 @@ export default {
 <style scoped>
 #new {
   position: relative;
+  padding-bottom: 155px;
 }
 .universe-title {
   max-width: 800px;
@@ -81,6 +82,9 @@ export default {
   font-family: 'Ubuntu', sans-serif !important;
 }
 @media (max-width: 960px) {
+  #new {
+    padding-bottom: 30px;
+  }
   .universe-title {
     font-size: 14px;
     font-family: 'Ubuntu', sans-serif !important;

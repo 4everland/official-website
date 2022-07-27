@@ -73,6 +73,7 @@ export default {
     background-image: url('@/assets/imgs/index/about/about-bg.png');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: bottom;
     display: flex;
     align-items: center;
     .text-box {
