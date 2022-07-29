@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" md="6" lg="6">
           <div class="text-box">
-            <div class="text-title">What is the 4EVERLAND?</div>
+            <div class="text-title">What is 4EVERLAND?</div>
             <div class="text-tips">
               4EVERLAND is a Web 3.0 cloud computing platform that integrates
               storage, computing, and network core capabilities. It aims to help

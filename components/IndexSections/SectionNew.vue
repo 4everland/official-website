@@ -61,8 +61,8 @@ export default {
   padding-bottom: 155px;
 }
 .universe-title {
-  max-width: 800px;
-  font-size: 28px;
+  /* max-width: 900px; */
+  font-size: 36px;
   font-family: 'Ubuntu-Bold', sans-serif !important;
   font-weight: bold;
   color: #161617;

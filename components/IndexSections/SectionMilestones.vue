@@ -337,7 +337,7 @@ export default {
         },
         {
           title: 'V3 Atom',
-          left: 'Cloud Computing of Web3.0<br/>(2023-2024)',
+          left: 'V3 Atom<br/>(2023-2024)',
           right: [
             'We planned to integrate and support more heterogeneous chains such as Ethereum, BSC, Solona, Polygon, and Filecoin, etc, to achieve inter-blockchain communication, multi-chain deployment, and other multi-scenario requirements. Finally obtain the capability of Web3.0 cloud computing',
           ],

@@ -4,7 +4,7 @@
       <v-container>
         <div class="universe-title">
           Explore infinite possibilities with products designed for
-          sophisticated and dynamic Web 3.0 experience
+          sophisticated and dynamic Web3.0 experience
         </div>
         <v-row>
           <v-col
@@ -34,7 +34,7 @@
                     >
                   </div>
                 </v-col>
-                <v-col :cols="6">
+                <v-col :cols="6" class="">
                   <div v-if="item.img">
                     <v-img
                       :src="item.img"
@@ -58,7 +58,7 @@
                     </div>
                   </div></v-col
                 >
-                <v-col v-if="item.img" :cols="12">
+                <v-col v-if="item.img" :cols="12" class="hidden-md-and-up">
                   <div class="item-img-box hidden-md-and-up">
                     <img
                       v-for="(img, index) in item.imgs"
@@ -131,7 +131,7 @@ export default {
           hover: true,
         },
         {
-          name: 'More',
+          name: 'Additional Features',
           tips: 'Come explore more with 4EVERLAND. We also provide data analytics, decentralized domains, and underlying computing features.',
           herf: 'https://dashboard.4everland.org',
           cols: 4,
@@ -194,6 +194,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     // cursor: pointer;
+
     .item-conten {
       flex: 1;
     }
@@ -224,6 +225,7 @@ export default {
     .item-img-box {
       display: flex;
       align-items: center;
+      justify-content: space-around;
       margin-top: 26px;
       img {
         height: 30px;
@@ -246,6 +248,9 @@ export default {
         color: #8272d1;
       }
     }
+  }
+  .has-bg .item-conten {
+    padding: 0 50px;
   }
   .active-hover {
     cursor: pointer;
@@ -329,6 +334,9 @@ export default {
       background-size: cover;
       border-radius: 10px;
       padding: 15px 10px;
+    }
+    .has-bg .item-conten {
+      padding: 0;
     }
     .active-hover:hover {
       background-color: transparent;

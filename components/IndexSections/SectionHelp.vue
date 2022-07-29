@@ -1,7 +1,7 @@
 <template>
   <div id="help">
     <v-container>
-      <div class="universe-title">Why Choose 4EVERLAND？</div>
+      <div class="universe-title">Why Choose 4EVERLAND?</div>
       <v-row>
         <v-col v-for="(item, index) in imgItem" :key="index" cols="6" md="3">
           <v-img
@@ -33,7 +33,7 @@ export default {
           img: require('@/assets/imgs/index/help/help_3.png'),
         },
         {
-          tips: 'Write once,run any blockchain',
+          tips: 'Write once, run any blockchain',
           img: require('@/assets/imgs/index/help/help_4.png'),
         },
       ],
@@ -48,7 +48,7 @@ export default {
 #help {
   .universe-title {
     max-width: 800px;
-    font-size: 26px;
+    font-size: 36px;
     font-family: 'Ubuntu-Bold', sans-serif !important;
     font-weight: bold;
     color: #161617;
