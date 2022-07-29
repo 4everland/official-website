@@ -30,7 +30,9 @@
           size="8"
           resize
           hide-vertical
-          :hide-horizontal="dappsList.length <= 15"
+          :hide-horizontal="
+            !$vuetify.breakpoint.smAndDown && dappsList.length <= 15
+          "
         >
           <v-col cols="12" class="partner-list">
             <div
