@@ -1,30 +1,47 @@
 <template>
-  <div v-resize="onResize">
-    <!-- <h3 class="text-h3 font-weight-light text-center">
-      Developers deploy with <br />One click in <strong>Web 3.0</strong>
-    </h3> -->
-    <div class="globe-wrapper">
-      <img
-        src="~/assets/imgs/index/waves.png"
-        style="width: 100%"
-        class="globe-bg"
-      />
-      <v-container class="d-flex flex-column align-center">
-        <div id="globeViz"></div>
-      </v-container>
-    </div>
+  <div id="globe">
+    <v-container class="globe-box">
+      <v-row>
+        <v-col :cols="12" :md="6">
+          <div class="text-box">
+            <div class="text-title">
+              Efficient and stable Web3.0 infrastructure
+            </div>
+            <div class="text-tips">
+              4EVERLAND is committed to offering users a distributed,
+              high-efficiency, self-incentivized, and low-cost data hosting
+              network
+            </div>
+          </div>
+          <div class="data-box">
+            <v-row>
+              <v-col
+                v-for="(item, index) in btnItem"
+                :key="index"
+                :cols="6"
+                :md="6"
+              >
+                <div class="data-num">{{ item.num }}</div>
+                <div class="data-name">{{ item.name }}</div>
+              </v-col>
+            </v-row>
+          </div>
+        </v-col>
+      </v-row>
+      <div id="globeViz"></div>
+    </v-container>
   </div>
 </template>
 <script>
+/* eslint-disable */
 const geoJSON = require('~/assets/json/geo.json')
-const places = require('~/assets/json/ne_110m_populated_places_simple.json')
+const whitePNG = require('~/assets/imgs/index/globe/globe-bg.png')
 const emptyPNG =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADICAYAAADGFbfiAAAC3ElEQVR4nO3VMQHAMAzAsKwsMv5Ai6G+JQh+/O3uPwDw6AgGQGEgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCQGIgACQGAkBiIAAkBgJAYiAAJAYCwLuZud1fAfX9aO5bAAAAAElFTkSuQmCC'
 const debounce = (func, wait, immediate) => {
   let timeout
   return () => {
     const context = this
-    // eslint-disable-next-line no-undef
     const args = arguments
     const later = function () {
       timeout = null
@@ -40,15 +57,34 @@ const debounce = (func, wait, immediate) => {
 export default {
   data() {
     return {
-      world: null,
+      btnItem: [
+        {
+          num: '200+',
+          name: 'GLOBAL NODES',
+        },
+        {
+          num: '99.99%',
+          name: 'GUARANTEED UPTIME',
+        },
+        {
+          num: '10x',
+          name: 'PERFORMANCE BOOST',
+        },
+        {
+          num: '50,000+',
+          name: 'DEVELOPERS',
+        },
+      ],
     }
   },
+  computed: {},
   mounted() {
-    this.initGlobe()
+    this.$nextTick(() => {
+      this.initGlobe()
+    })
   },
   methods: {
     onResize(e) {
-      // eslint-disable-next-line no-console
       // console.log('rezized', window.innerWidth)
       if (this.world) {
         debounce(
@@ -93,9 +129,6 @@ export default {
         [-122.444962, 37.73531],
         [-122.444962, 37.73531],
       ]
-      const colorPink = 'rgba(195,134,199,1)'
-      const colorBlue = 'RGBA(0, 255, 234, 1)'
-      const colorBlue2 = 'rgba(21,144,232,1)'
       const arcData = locations
         .map(function (item, index, arr) {
           const randomIndex = parseInt(Math.random() * (arr.length + 1))
@@ -105,7 +138,7 @@ export default {
                 startLng: item[0],
                 endLat: arr[randomIndex][1],
                 endLng: arr[randomIndex][0],
-                color: index % 2 === 1 ? colorPink : colorBlue,
+                color: '#81DDFF',
               }
             : null
         })
@@ -113,32 +146,19 @@ export default {
           return !!item
         })
       const w = window.innerWidth
-      const size = Math.min(w * 0.8, 750)
-      // eslint-disable-next-line no-undef
+      const size = Math.min(w * 0.8, 700)
+      let bgImg = this.$vuetify.breakpoint.smAndDown ? emptyPNG : whitePNG
       const world = Globe()
         .width(size)
         .height(size)
-        .globeImageUrl(emptyPNG)
+        .globeImageUrl(bgImg)
         .backgroundColor('rgba(0,0,0,0)')
-        .showAtmosphere(true)
-        .atmosphereColor('rgba(62,58,206,1)')
+        .showAtmosphere(false)
         .atmosphereAltitude('.25')
-        .hexPolygonsData(geoJSON.features)
-        .hexPolygonResolution(3)
-        .hexPolygonMargin(0.3)
-        .hexPolygonColor(function (item) {
-          return 'rgba(194,213,255,0.1)'
-        })
-        .labelsData(places.features)
-        .labelLat((d) => d.properties.latitude)
-        .labelLng((d) => d.properties.longitude)
-        .labelText((d) => d.properties.name)
-        .labelSize((d) => Math.sqrt(d.properties.pop_max) * 4e-4)
-        .labelDotRadius((d) => Math.sqrt(d.properties.pop_max) * 4e-4)
-        .labelColor((d) =>
-          d.properties.pop_max > 5000000 ? colorBlue : colorBlue2
-        )
-        .labelResolution(2)
+        .polygonsData(geoJSON.features)
+        .polygonCapColor(() => `#6197ed`)
+        .polygonSideColor(() => 'rgba(0,0,0,.3)')
+        .polygonAltitude(() => '0.02')
         .arcsData(arcData)
         .arcColor('color')
         .arcStroke(0.6)
@@ -148,9 +168,7 @@ export default {
         })
         .arcDashAnimateTime(function () {
           return 2000 * Math.random() + 1500
-        })
-        .pointAltitude('size')
-        .pointColor('color')(document.getElementById('globeViz'))
+        })(document.getElementById('globeViz'))
       world.controls().autoRotate = true
       world.controls().autoRotateSpeed = 1
       world.controls().enableZoom = false
@@ -163,18 +181,103 @@ export default {
   },
 }
 </script>
-<style scoped>
-.globe-wrapper {
-  position: relative;
+<style lang="less" scoped>
+#globe {
+  height: 800px;
+  background-color: #000;
+  .globe-box {
+    height: 100%;
+    padding-top: 90px;
+    position: relative;
+    #globeViz {
+      position: absolute;
+      right: 0;
+      top: 100px;
+      z-index: 1;
+    }
+  }
+
+  .text-box {
+    position: relative;
+    z-index: 7;
+    .text-title {
+      font-size: 30px;
+      text-align: left;
+      color: #fff;
+      font-family: 'Ubuntu-Bold', sans-serif !important;
+      font-weight: bold;
+      margin-bottom: 60px;
+    }
+    .text-tips {
+      font-size: 18px;
+      text-align: left;
+      color: #fff;
+      font-family: 'Ubuntu-Medium', sans-serif !important;
+      font-weight: 500;
+    }
+  }
+  .data-box {
+    color: #fff;
+    margin-top: 80px;
+    position: relative;
+    z-index: 7;
+    .data-num {
+      font-size: 60px;
+      text-align: left;
+      color: #fff;
+      font-family: 'Ubuntu-Medium', sans-serif !important;
+      font-weight: 500;
+    }
+    .data-name {
+      font-size: 18px;
+      text-align: left;
+      color: #fff;
+      font-family: 'Ubuntu-Medium', sans-serif !important;
+      font-weight: 500;
+    }
+  }
 }
-.globe-bg {
-  position: absolute;
-  opacity: 0.6;
-  width: 100%;
-  left: 0;
-  top: 80px;
-}
-#globeViz {
-  z-index: 1;
+@media (max-width: 960px) {
+  #globe {
+    height: 360px;
+    .globe-box {
+      height: 100%;
+      padding-top: 25px;
+      #globeViz {
+        right: 0;
+        top: 70px;
+      }
+    }
+    .text-box {
+      .text-title {
+        font-size: 18px;
+        font-family: 'Ubuntu', sans-serif !important;
+        font-weight: normal;
+        margin-bottom: 26px;
+      }
+      .text-tips {
+        font-size: 12px;
+        text-align: left;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif !important;
+        font-weight: normal;
+      }
+    }
+    .data-box {
+      margin-top: 40px;
+      .data-num {
+        font-size: 24px;
+        text-align: left;
+        font-family: 'Ubuntu', sans-serif !important;
+        font-weight: normal;
+      }
+      .data-name {
+        font-size: 12px;
+        text-align: left;
+        font-family: 'Ubuntu', sans-serif !important;
+        font-weight: normal;
+      }
+    }
+  }
 }
 </style>

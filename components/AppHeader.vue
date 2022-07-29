@@ -1,6 +1,14 @@
 <template>
   <div id="header">
-    <v-app-bar fixed app color="#FAFAFA" height="80">
+    <v-app-bar
+      fixed
+      app
+      flat
+      elevate-on-scroll
+      :elevation="4"
+      color="#fff"
+      height="80"
+    >
       <v-container class="d-flex align-center">
         <v-btn text color="transparent" to="/" class="always-active mr-8">
           <logo />
@@ -107,12 +115,12 @@
         <v-btn
           :href="loginUrl"
           target="_blank"
-          class="hidden-sm-and-down"
+          class="hidden-sm-and-down black white--text font-weight-bold"
           outlined
           tile
-          color="#452c92"
+          color="#000"
         >
-          <v-icon class="mr-2">{{ mdiWallet }}</v-icon>
+          <!-- <v-icon class="mr-2">{{ mdiWallet }}</v-icon> -->
           Login
           <v-icon class="ml-2">{{ mdiChevronRight }}</v-icon>
         </v-btn>
@@ -292,12 +300,11 @@ export default {
 }
 </script>
 <style scoped>
-@font-face {
-  font-family: 'PARaDOS';
-  src: url('../static/fonts/PARaDOS.ttf');
+#header {
+  z-index: 99;
 }
 .nav-font {
-  font-family: 'PARaDOS', sans-serif !important;
+  font-family: 'Ubuntu-Blod', sans-serif !important;
 }
 .always-active {
   opacity: 1 !important;
