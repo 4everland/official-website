@@ -1,6 +1,6 @@
 <template>
   <div id="banner">
-    <v-container class="my-16">
+    <v-container class="my-4 my-md-16">
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="text-box">
@@ -67,7 +67,10 @@
           :class="{ 'justify-space-between': index == 0 }"
         >
           <div>
-            <div class="d-flex align-center item-text">
+            <div
+              class="d-flex align-center item-text"
+              :class="{ 'mobile-item-one': index == 0 }"
+            >
               <v-img
                 contain
                 max-height="20"
@@ -224,6 +227,9 @@ export default {
     }
     .item-list {
       margin-top: 50px;
+      .mobile-item-one {
+        border-bottom: 2px solid #8272d1;
+      }
     }
   }
 }

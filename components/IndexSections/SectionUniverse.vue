@@ -78,7 +78,7 @@ export default {
           img: require('@/assets/imgs/index/universe/Relationlabs.png'),
         },
         {
-          name: 'Everpay',
+          name: 'EverPay',
           img: require('@/assets/imgs/index/universe/Everpay.png'),
         },
         {
@@ -157,9 +157,9 @@ export default {
   #universe {
     padding-bottom: 40px;
     .universe-title {
-      text-align: left;
+      text-align: center;
       font-size: 12px;
-      margin-top: 30px;
+      margin-top: 10px;
       margin-bottom: 20px;
     }
     .text-box {

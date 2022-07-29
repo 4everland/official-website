@@ -296,8 +296,9 @@ export default {
 
       .item-name {
         font-size: 14px;
-        font-weight: normal;
-        margin: 15px 0;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 15px;
         font-family: 'Ubuntu', sans-serif !important;
       }
       .item-box {
@@ -315,7 +316,7 @@ export default {
       .item-img-box {
         display: flex;
         align-items: center;
-        margin-top: 26px;
+        margin-top: 10px;
         img {
           height: 25px;
           margin-right: 15px;
