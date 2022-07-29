@@ -38,6 +38,7 @@
   width: 0;
   -webkit-transition: height 0.4s ease, width 0.6s ease;
   transition: height 0.4s ease, width 0.6s ease;
+  max-width: 240px;
 }
 
 .happy-scroll-container::-webkit-scrollbar {

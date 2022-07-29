@@ -64,7 +64,7 @@ export default {
       config: {},
       startMove: false,
       binded: false,
-      length: 240,
+      length: 0,
       percentage: 0,
       maxOffset: 0,
       currentOffset: 0,
@@ -122,9 +122,9 @@ export default {
       const currentSize = this.$refs.stripContainer[this.config.client]
 
       let length = currentSize * (clientSize / scrollSize)
-      if (length > 240) {
-        length = 240
-      }
+      // if (length > 240) {
+      //   length = 240
+      // }
       this.length = length
       let minLength = this.horizontal ? this.minLengthH : this.minLengthV
       if (minLength < 1) {

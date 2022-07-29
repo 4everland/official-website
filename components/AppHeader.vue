@@ -6,7 +6,7 @@
       flat
       elevate-on-scroll
       :elevation="4"
-      color="#FAFAFA"
+      color="#fff"
       height="80"
     >
       <v-container class="d-flex align-center">

@@ -1,10 +1,10 @@
 <template>
   <div id="about">
     <v-container class="about-box">
-      <v-row style="margin-bottom: 20px">
+      <v-row>
         <v-col cols="12" md="6" lg="6">
           <div class="text-box">
-            <div class="text-title">What's is the 4EVERLAND?</div>
+            <div class="text-title">What is the 4EVERLAND?</div>
             <div class="text-tips">
               4EVERLAND is a Web 3.0 cloud computing platform that integrates
               storage, computing, and network core capabilities. It aims to help
@@ -61,15 +61,18 @@ export default {
 </script>
 <style lang="less" scoped>
 #about {
-  height: 580px;
+  height: 640px;
   background-color: #f3e8fe;
+  background-image: url('@/assets/imgs/index/about/bg.png');
+  background-position: center;
+  background-size: cover;
   .about-box {
     width: 100%;
     height: 100%;
     background-image: url('@/assets/imgs/index/about/about-bg.png');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top;
+    background-position: center;
     display: flex;
     align-items: center;
     .text-box {
@@ -79,7 +82,7 @@ export default {
         color: #161617;
         font-family: 'Ubuntu-Bold', sans-serif !important;
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
       .text-tips {
         font-size: 18px;

@@ -159,7 +159,7 @@ export default {
         .polygonCapColor(() => `#6197ed`)
         .polygonSideColor(() => 'rgba(0,0,0,.3)')
         .polygonAltitude(() => '0.02')
-        // .arcsData(arcData)
+        .arcsData(arcData)
         .arcColor('color')
         .arcStroke(0.6)
         .arcDashLength(1)

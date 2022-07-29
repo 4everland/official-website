@@ -63,20 +63,30 @@
           cols="6"
           md="3"
           lg="3"
+          class="d-flex justify-space-between"
         >
-          <div class="d-flex align-center item-text">
-            <v-img
-              contain
-              max-height="20"
-              max-width="20"
-              :src="item.icon"
-              class="mr-3 hidden-sm-and-down"
-            ></v-img>
-            <span>{{ item.name }}</span>
+          <div>
+            <div class="d-flex align-center item-text">
+              <v-img
+                contain
+                max-height="20"
+                max-width="20"
+                :src="item.icon"
+                class="mr-3 hidden-sm-and-down"
+              ></v-img>
+              <span>{{ item.name }}</span>
+            </div>
+            <div class="item-tips">
+              {{ item.tips }}
+            </div>
           </div>
-          <div class="item-tips">
-            {{ item.tips }}
-          </div>
+          <v-icon
+            v-if="index == 0"
+            class="hidden-sm-and-down"
+            color="#000"
+            large
+            >mdi-menu-right</v-icon
+          >
         </v-col>
       </v-row>
     </v-container>
@@ -86,6 +96,7 @@
 export default {
   data() {
     return {
+      model: 0,
       items: [
         {
           name: 'Web3 Aggregator',

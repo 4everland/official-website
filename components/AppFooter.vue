@@ -263,7 +263,7 @@ export default {
           ],
         },
         {
-          name: 'Decelopers',
+          name: 'Developers',
           list: [
             {
               name: 'Dashboard',
@@ -285,7 +285,7 @@ export default {
           name: 'Legal',
           list: [
             {
-              name: 'Terms of Service',
+              name: 'Term of Service',
               to: '/term-of-service',
             },
             {

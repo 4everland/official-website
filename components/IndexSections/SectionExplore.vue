@@ -50,7 +50,11 @@
                         :src="img"
                         contain
                       />
-                      <span>More...</span>
+                      <span>
+                        <v-icon color="#000" class="mr-2"
+                          >mdi-dots-horizontal-circle-outline</v-icon
+                        >More</span
+                      >
                     </div>
                   </div></v-col
                 >
@@ -62,7 +66,11 @@
                       :src="img"
                       contain
                     />
-                    <span>More...</span>
+                    <span>
+                      <v-icon color="#000" class="mr-2"
+                        >mdi-dots-horizontal-circle-outline</v-icon
+                      >More</span
+                    >
                   </div>
                 </v-col>
               </v-row>
@@ -79,7 +87,7 @@ export default {
     return {
       imgItem: [
         {
-          name: 'HOSTING',
+          name: 'DWeb Hosting',
           tips: '4EVERLAND Hosting service can help developers to host Webs or Dapps on multiple protocols such as IPFS and Arweave, etc. Users can swiftly deploy websites to Web3.0 by using Github authorization or a Cli local template build.',
           link: '/hosting',
           img: require('@/assets/imgs/index/explore/hosting.png'),
@@ -87,12 +95,13 @@ export default {
             require('@/assets/imgs/index/explore/IPFS.png'),
             require('@/assets/imgs/index/explore/dfinity.png'),
             require('@/assets/imgs/index/explore/Arweave.png'),
+            // require('@/assets/imgs/index/explore/more.png'),
           ],
           cols: 12,
           childCols: 6,
         },
         {
-          name: 'BUCKET',
+          name: 'Storage',
           tips: "BUCKET enables users to upload, store, and fetch files from multiple protocols such as IPFS and Arweave in a secure, convenient, and efficient manner. Additionally, it's compatible with AWS S3 APIs, interface operations, CLI, and other upload methods.",
           link: '/bucket',
           img: require('@/assets/imgs/index/explore/bucket.png'),
@@ -100,6 +109,7 @@ export default {
             require('@/assets/imgs/index/explore/IPFS.png'),
             require('@/assets/imgs/index/explore/Arweave.png'),
             require('@/assets/imgs/index/explore/Filecoin.png'),
+            // require('@/assets/imgs/index/explore/more.png'),
           ],
           cols: 12,
           childCols: 6,
@@ -220,7 +230,7 @@ export default {
       span {
         font-size: 14px;
         font-family: 'Ubuntu', sans-serif !important;
-        margin-left: auto;
+        // margin-left: auto;
       }
     }
     .try-free {
@@ -291,6 +301,20 @@ export default {
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           font-family: 'Ubuntu', sans-serif !important;
+        }
+      }
+      .item-img-box {
+        display: flex;
+        align-items: center;
+        margin-top: 26px;
+        img {
+          height: 30px;
+          margin-right: 20px;
+        }
+        span {
+          font-size: 14px;
+          font-family: 'Ubuntu', sans-serif !important;
+          // margin-left: auto;
         }
       }
     }

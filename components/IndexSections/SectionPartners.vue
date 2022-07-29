@@ -5,7 +5,7 @@
         <v-row>
           <v-col cols="12" md="4">
             <div class="text-box">
-              <div class="text-title">Partner</div>
+              <div class="text-title">Partners</div>
             </div>
           </v-col>
           <v-col cols="12" md="8" class="partner-tips">
@@ -25,7 +25,13 @@
         </v-row>
       </v-container>
       <v-row class="mt-4 mt-md-8 container-wrapper">
-        <happy-scroll color="rgba(5, 31, 48, 1)" size="8" resize hide-vertical>
+        <happy-scroll
+          color="rgba(5, 31, 48, 1)"
+          size="8"
+          resize
+          hide-vertical
+          :hide-horizontal="dappsList.length <= 15"
+        >
           <v-col cols="12" class="partner-list">
             <div
               v-for="(item, index) in dappsList"
