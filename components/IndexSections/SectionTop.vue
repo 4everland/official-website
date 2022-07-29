@@ -4,7 +4,25 @@
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="text-box">
-            <div class="text-title">Decentralize Your <br />Website</div>
+            <div class="text-title">
+              Decentralize Your <br />
+              <div>
+                <v-carousel
+                  v-model="model"
+                  hide-delimiter-background
+                  hide-delimiters
+                  vertical
+                  :show-arrows="false"
+                  :height="$vuetify.breakpoint.smAndDown ? 42 : 120"
+                  cycle
+                  interval="3000"
+                >
+                  <v-carousel-item v-for="color in colors" :key="color">
+                    <div class="text-title">{{ color }}</div>
+                  </v-carousel-item>
+                </v-carousel>
+              </div>
+            </div>
             <div class="text-tips">
               Build a Web3 application easily, efficiently, and cost-effectively
               on 4EVERLAND
@@ -94,6 +112,7 @@ export default {
           link: '',
         },
       ],
+      colors: ['Website', 'Storage', 'Data', 'Application'],
     }
   },
   computed: {},
