@@ -50,6 +50,7 @@
               ></v-img>
               <div class="partner-item-name">{{ item.name }}</div>
             </div>
+            <div class="pa-5"></div>
           </v-col>
         </happy-scroll>
       </v-row>

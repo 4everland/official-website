@@ -213,7 +213,6 @@ export default {
     .text-box {
       .text-title {
         font-size: 28px;
-        font-family: sans-serif;
         line-height: unset;
         font-weight: normal;
       }
