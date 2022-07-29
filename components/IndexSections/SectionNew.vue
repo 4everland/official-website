@@ -2,7 +2,7 @@
   <div id="new">
     <v-container>
       <div class="universe-title">
-        Welcome to a network of infinite possibilities
+        Come be part of the next era of infinite possibilities at 4EVERLAND
       </div>
       <v-row class="ani-box">
         <v-col cols="12" md="12" lg="12">

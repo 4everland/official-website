@@ -21,7 +21,7 @@ export default {
     return {
       imgItem: [
         {
-          tips: 'One-stop Dapps build solution',
+          tips: 'One-stop solution for Dapps building',
           img: require('@/assets/imgs/index/help/help_1.png'),
         },
         {
@@ -33,7 +33,7 @@ export default {
           img: require('@/assets/imgs/index/help/help_3.png'),
         },
         {
-          tips: 'Write once, Run any blockchain',
+          tips: 'Write once,run any blockchain',
           img: require('@/assets/imgs/index/help/help_4.png'),
         },
       ],

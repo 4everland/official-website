@@ -5,7 +5,7 @@
         <v-col :cols="12" :md="6">
           <div class="text-box">
             <div class="text-title">
-              Efficient and stable Web3 infrastructure
+              Efficient and stable Web3.0 infrastructure
             </div>
             <div class="text-tips">
               4EVERLAND is committed to offering users a distributed,
@@ -60,7 +60,7 @@ export default {
       btnItem: [
         {
           num: '200+',
-          name: 'GLOBAL NODE',
+          name: 'GLOBAL NODES',
         },
         {
           num: '99.9999%',

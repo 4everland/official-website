@@ -5,7 +5,7 @@
         <v-row class="mile-bg">
           <v-col cols="12">
             <div class="text-box">
-              <div class="text-title">MILESTONES</div>
+              <div class="text-title">Roadmap</div>
             </div>
           </v-col>
           <!-- <v-col cols="12" md="6" class="partner-tips">
@@ -20,7 +20,7 @@
           </v-col> -->
         </v-row>
       </v-container>
-      <v-row class="mt-16 container-wrapper">
+      <v-row class="mt-8 mt-md-16 container-wrapper">
         <!-- <v-col cols="12" ref="partnerList" class="partner-list">
           <div
             v-for="(item, index) in roadmap"
@@ -238,7 +238,7 @@ export default {
       newRoadmap: [
         {
           title: 'V1 Quark',
-          left: 'The Stone Age (2021-2022)',
+          left: 'V1 Quark<br/>(2021-2022)',
           right: [
             'Our Genesis product completes the overall network architecture of the global node collaboration, provides content storage and global access acceleration services.',
           ],
@@ -249,29 +249,29 @@ export default {
           left: 'V1 Quark',
           right: [
             '• Market research and product prototype discussion',
-            '• Product Design & Technology Development',
+            '• Product design & technology development',
           ],
         },
         {
           title: '2021 Q2',
           left: 'V1 Quark',
           right: [
-            '• Establish 4EVERLAND Foundation and technical community',
-            '• Release V1 version of white paper, 4EVERLAND official website online',
+            '• Establish 4EVERLAND foundation and technical community',
+            '• Release V1 version of the white paper, 4EVERLAND official website online',
           ],
         },
         {
           title: '2021 Q3',
           left: 'V1 Quark',
           right: [
-            '• ALPHA Launch:4EVER-HOSTING is online, realizing Dweb hosting and other functions',
+            '• ALPHA Launch: 4EVER-HOSTING is online, realizing Dweb hosting and other functions',
           ],
         },
         {
           title: '2021 Q4',
           left: 'V1 Quark',
           right: [
-            '• BETA Launch: Online gateway node, storage node, data statistics service',
+            '• BETA version: Online gateway node, storage node, data statistics service',
           ],
         },
         {
@@ -290,7 +290,7 @@ export default {
         },
         {
           title: 'V2 Proton',
-          left: 'Web3.0 Developers (2022-2023)',
+          left: 'V2 Proton<br/>(2022-2023)',
           right: [
             'we plan to open the underlying storage and network capabilities, by engaging and supporting more developers to build exclusive service platforms, and further expand commercialization capabilities.',
           ],
@@ -300,46 +300,46 @@ export default {
           title: '2022 Q3',
           left: 'V2 Proton',
           right: [
-            '• We launched the trusted 4EVERLAND node network',
-            '• We also launched a multi-chain payment system, supporting ETH, BSC, Polygon, and other public chains',
-            '• We now even provide online front-end verifiable solutions to deliver a more comprehensive decentralized front-end hosting services',
-            "• We completed the integration with capabilities of Dfinity's ecosystem",
+            '• Launch the trusted 4EVERLAND node network.',
+            '• Launch a multi-chain payment system, supporting ETH, BSC, Polygon, and other public chains.',
+            '• Provide online front-end verifiable solutions to deliver more comprehensive decentralized front-end hosting services.',
+            '• Complete the integration with capabilities of Dfinity’s ecosystem.',
           ],
         },
         {
           title: '2022 Q4',
           left: 'V2 Proton',
           right: [
-            '• We plan to complete the integration of at least 3 mainstream public chains',
-            "• We plan to complete the integration with capabilities of Arweave's ecosystem",
-            '• We plan to increase the product functions for Hosting and Bucket to meet the needs of developers facing different scenarios',
-            '• We plan to provide open storage and network underlying capabilities, and also want to attract providers to build the upper-layer of commercial applications',
+            '• Complete the integration of at least 3 mainstream public chains.',
+            '• Deepen the integration with Arweave ecosystem.',
+            '• Enrich the functionality of Hosting and Bucket to meet the needs of developers facing different scenarios.',
+            '• Provide open storage and network underlying capabilities. Attract providers to build the upper-layer of commercial applications.',
           ],
         },
         {
           title: '2023 Q1',
           left: 'V2 Proton',
           right: [
-            '• The 4EVERLAND node network will go online',
-            '• We plan to open source all application layer codes for all community providers to build and use',
-            "• We plan to complete the integration with capabilities of Filecoin's ecosystem",
-            '• We plan to bring about more decentralized and powerful gateway capabilities with online (custom) dedicated gateways',
+            '• The 4EVERLAND node network will go online.',
+            '• Open-source all application layer codes for all community providers to build and use.',
+            "• Complete the integration with capabilities of Filecoin's ecosystem.",
+            '• Bring about more decentralized and powerful gateway capabilities with online (custom) dedicated gateways.',
           ],
         },
         {
           title: '2023 Q2',
           left: 'V2 Proton',
           right: [
-            '• We plan to launch the provider incentive model to motivate the community to build commercial applications',
-            '• We plan to integrate more storage protocol capabilities',
-            '• We plan to complete the integration of more public chain ecological capabilities and realize the interconnection of public chains and storage protocols',
+            '• Launch a provider incentive model to motivate the community to build commercial applications.',
+            '• Integrate more storage protocol capabilities.',
+            '• Deepen the integration with ecosystem capabilities of public chains. Realize the interconnection of public chains and storage protocols.',
           ],
         },
         {
           title: 'V3 Atom',
           left: 'Cloud Computing of Web3.0<br/>(2023-2024)',
           right: [
-            'We planned to integrate and support more heterogeneous chains such as Ethereum, BSC, Solona, Polygon, and Filecoin, etc., to achieve inter-blockchain communication, multi-chain deployment, and other multi-scenario requirements. Finally obtain the capability of Web3.0 cloud computing',
+            'We planned to integrate and support more heterogeneous chains such as Ethereum, BSC, Solona, Polygon, and Filecoin, etc, to achieve inter-blockchain communication, multi-chain deployment, and other multi-scenario requirements. Finally obtain the capability of Web3.0 cloud computing',
           ],
           img: require(`@/assets/imgs/index/milestones/3.png`),
         },
@@ -429,7 +429,7 @@ export default {
     .text-box {
       .text-title {
         font-size: 45px;
-        text-align: left;
+        text-align: center;
         color: #051f30;
         font-family: 'Ubuntu-Bold', sans-serif !important;
         font-weight: 500;
@@ -499,22 +499,22 @@ export default {
 }
 
 @media (max-width: 960px) {
-  #Partner {
+  #Milestones {
     padding-bottom: 40px;
     .partner-box {
-      padding-top: 86px;
+      padding-top: 50px;
+      .text-box {
+        .text-title {
+          font-size: 18px;
+          font-family: 'Ubuntu', sans-serif !important;
+          font-weight: normal;
+        }
+      }
       .partner-tips {
         font-size: 12px;
         color: #051f30;
         font-family: 'Ubuntu', sans-serif !important;
         font-weight: normal;
-      }
-      .text-box {
-        .text-title {
-          font-size: 14px;
-          font-family: 'Ubuntu', sans-serif !important;
-          font-weight: normal;
-        }
       }
     }
 

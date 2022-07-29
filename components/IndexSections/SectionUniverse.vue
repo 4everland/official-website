@@ -126,7 +126,7 @@ export default {
     font-weight: 400;
     color: #888;
     text-align: center;
-    margin: 130px 0;
+    margin: 40px 0;
     margin-bottom: 80px;
   }
   .text-box {

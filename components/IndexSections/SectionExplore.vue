@@ -4,7 +4,7 @@
       <v-container>
         <div class="universe-title">
           Explore infinite possibilities with products designed for
-          sophisticated and dynamic Web 3.0
+          sophisticated and dynamic Web 3.0 experience
         </div>
         <v-row>
           <v-col
@@ -15,10 +15,10 @@
           >
             <div
               class="item"
-              :class="{ 'active-hover': item.hover }"
+              :class="{ 'active-hover': item.hover, 'has-bg': index <= 1 }"
               @click="linkTo(item)"
             >
-              <v-row>
+              <v-row :class="{ 'flex-row-reverse': index == 1 }">
                 <v-col :cols="item.childCols">
                   <div class="item-conten">
                     <div class="item-name">{{ item.name }}</div>
@@ -67,7 +67,7 @@
                       contain
                     />
                     <span>
-                      <v-icon color="#000" class="mr-2"
+                      <v-icon color="#000" dense class="mr-2"
                         >mdi-dots-horizontal-circle-outline</v-icon
                       >More</span
                     >
@@ -88,7 +88,7 @@ export default {
       imgItem: [
         {
           name: 'DWeb Hosting',
-          tips: '4EVERLAND Hosting service can help developers to host Webs or Dapps on multiple protocols such as IPFS and Arweave, etc. Users can swiftly deploy websites to Web3.0 by using Github authorization or a Cli local template build.',
+          tips: '4EVERLAND Hosting services can help developers to host Webs or Dapps on multiple protocols such as IPFS and Arweave, etc. Users can swiftly deploy websites to Web3.0 by using Github authorization or a Cli local template build.',
           link: '/hosting',
           img: require('@/assets/imgs/index/explore/hosting.png'),
           imgs: [
@@ -116,7 +116,7 @@ export default {
         },
         {
           name: 'Decentralized Gateway',
-          tips: '200+ globally distributed gateway nodes provide more efficient and faster web 3.0 access for global developers.',
+          tips: '200+ globally distributed gateway nodes available to provide developers with more efficient and faster Web3.0 access.',
           herf: 'https://ipfs.4everland.io',
           cols: 4,
           childCols: 12,
@@ -132,9 +132,11 @@ export default {
         },
         {
           name: 'More',
-          tips: 'Explore more data analytics, decentralized domains, and underlying computing features',
+          tips: 'Come explore more with 4EVERLAND. We also provide data analytics, decentralized domains, and underlying computing features.',
+          herf: 'https://dashboard.4everland.org',
           cols: 4,
           childCols: 12,
+          hover: true,
         },
       ],
     }
@@ -269,6 +271,7 @@ export default {
     margin-top: 0;
     .front {
       padding: 20px 0;
+      background-image: none;
     }
     .universe-title {
       font-size: 18px;
@@ -285,6 +288,7 @@ export default {
       padding-bottom: 20px;
       min-height: 110px;
       background-color: transparent;
+
       .item-name {
         font-size: 14px;
         font-weight: normal;
@@ -308,19 +312,30 @@ export default {
         align-items: center;
         margin-top: 26px;
         img {
-          height: 30px;
-          margin-right: 20px;
+          height: 25px;
+          margin-right: 15px;
         }
         span {
-          font-size: 14px;
+          font-size: 12px;
           font-family: 'Ubuntu', sans-serif !important;
           // margin-left: auto;
         }
       }
     }
+    .has-bg {
+      border-bottom: none;
+      background-image: url('@/assets/imgs/index/explore/bg.png');
+      background-position: center;
+      background-size: cover;
+      border-radius: 10px;
+      padding: 15px 10px;
+    }
     .active-hover:hover {
       background-color: transparent;
       color: #161617;
+      .item-name {
+        color: #161617;
+      }
       .item-tips {
         color: #161617;
         /deep/ a {

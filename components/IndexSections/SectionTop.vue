@@ -63,7 +63,8 @@
           cols="6"
           md="3"
           lg="3"
-          class="d-flex justify-space-between"
+          class="d-flex justify-center"
+          :class="{ 'justify-space-between': index == 0 }"
         >
           <div>
             <div class="d-flex align-center item-text">
@@ -111,7 +112,7 @@ export default {
           link: '',
         },
         {
-          name: 'Complute',
+          name: 'Computing',
           tips: 'General-purpose computing layers based on multi-chain integration',
           icon: require('@/assets/imgs/index/top/complute.png'),
           link: '',

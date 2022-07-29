@@ -30,7 +30,7 @@
         </v-row>
       </v-container>
     </div>
-    <v-divider class="hidden-sm-and-down mt-14"></v-divider>
+    <!-- <v-divider class="hidden-sm-and-down mt-14"></v-divider> -->
     <v-container class="hidden-sm-and-down mt-8">
       <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
         <v-col cols="12" md="4" lg="4">
@@ -251,7 +251,7 @@ export default {
               target: '_blank',
             },
             {
-              name: 'Blog',
+              name: 'Blogs',
               href: 'https://medium.com/4everland',
               target: '_blank',
             },

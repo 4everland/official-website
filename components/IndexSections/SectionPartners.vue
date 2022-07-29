@@ -10,9 +10,8 @@
           </v-col>
           <v-col cols="12" md="8" class="partner-tips">
             <div class="my-md-4">
-              Build a diversified WEB.3.0 technology partner as a necessary
-              integrated<br />
-              ecological service hosted and stored on 4EVERLAND
+              We have earned the trust of outstanding Web3.0 projects and are
+              working together to create a new Web3.0 world.
             </div>
             <!-- <div class="mt-4" style="color: #257eff">
               <nuxt-link to="/universe">
@@ -42,11 +41,12 @@
               @click="linkTo(item.website)"
             >
               <v-img
-                class="mr-2"
+                class="mr-2 rounded-circle"
                 contain
                 max-height="50"
                 max-width="50"
                 :src="item.logo"
+                style="background-color: #eee"
               ></v-img>
               <div class="partner-item-name">{{ item.name }}</div>
             </div>
