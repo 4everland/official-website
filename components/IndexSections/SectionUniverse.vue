@@ -78,7 +78,7 @@ export default {
           img: require('@/assets/imgs/index/universe/Relationlabs.png'),
         },
         {
-          name: 'EverPay',
+          name: 'everPay',
           img: require('@/assets/imgs/index/universe/Everpay.png'),
         },
         {

@@ -63,7 +63,7 @@ export default {
           name: 'GLOBAL NODES',
         },
         {
-          num: '99.9999%',
+          num: '99.99%',
           name: 'GUARANTEED UPTIME',
         },
         {
@@ -71,7 +71,7 @@ export default {
           name: 'PERFORMANCE BOOST',
         },
         {
-          num: '50000+',
+          num: '50,000+',
           name: 'DEVELOPERS',
         },
       ],

@@ -97,7 +97,11 @@
               <!---->
               <div class="time-line-bottom">
                 <v-row>
-                  <v-col cols="12" md="6">
+                  <v-col
+                    cols="12"
+                    md="6"
+                    class="d-flex align-center justify-md-center"
+                  >
                     <div
                       class="time-line-bottom-title"
                       v-html="newRoadmap[active].left"
@@ -238,7 +242,7 @@ export default {
       newRoadmap: [
         {
           title: 'V1 Quark',
-          left: 'V1 Quark<br/>(2021-2022)',
+          left: 'V1 Quark (2021-2022)',
           right: [
             'Our Genesis product completes the overall network architecture of the global node collaboration, provides content storage and global access acceleration services.',
           ],
@@ -290,7 +294,7 @@ export default {
         },
         {
           title: 'V2 Proton',
-          left: 'V2 Proton<br/>(2022-2023)',
+          left: 'V2 Proton (2022-2023)',
           right: [
             'we plan to open the underlying storage and network capabilities, by engaging and supporting more developers to build exclusive service platforms, and further expand commercialization capabilities.',
           ],
@@ -337,7 +341,7 @@ export default {
         },
         {
           title: 'V3 Atom',
-          left: 'V3 Atom<br/>(2023-2024)',
+          left: 'V3 Atom (2023-2024)',
           right: [
             'We planned to integrate and support more heterogeneous chains such as Ethereum, BSC, Solona, Polygon, and Filecoin, etc, to achieve inter-blockchain communication, multi-chain deployment, and other multi-scenario requirements. Finally obtain the capability of Web3.0 cloud computing',
           ],
