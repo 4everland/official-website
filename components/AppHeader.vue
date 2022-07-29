@@ -1,6 +1,14 @@
 <template>
   <div id="header">
-    <v-app-bar fixed app color="#FAFAFA" height="80">
+    <v-app-bar
+      fixed
+      app
+      flat
+      elevate-on-scroll
+      :elevation="4"
+      color="#FAFAFA"
+      height="80"
+    >
       <v-container class="d-flex align-center">
         <v-btn text color="transparent" to="/" class="always-active mr-8">
           <logo />
