@@ -296,7 +296,7 @@ export default {
   z-index: 99;
 }
 .nav-font {
-  font-family: 'PARaDOS', sans-serif !important;
+  font-family: 'Ubuntu-Blod', sans-serif !important;
 }
 .always-active {
   opacity: 1 !important;

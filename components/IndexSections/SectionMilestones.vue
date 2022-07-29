@@ -8,7 +8,7 @@
               <div class="text-title">MILESTONES</div>
             </div>
           </v-col>
-          <v-col cols="12" md="6" class="partner-tips">
+          <!-- <v-col cols="12" md="6" class="partner-tips">
             <div class="my-md-4">
               4EVERLAND is committing R&D resources to the Web3 ecosystem in the
               form of the following proposed technical contributions. At each
@@ -17,7 +17,7 @@
               community, 4EVERLAND has the ability to offer the most advance
               infrastructure service which can one-click access to web3.
             </div>
-          </v-col>
+          </v-col> -->
         </v-row>
       </v-container>
       <v-row class="mt-16 container-wrapper">
@@ -70,8 +70,20 @@
                     :ref="active == index ? 'isNow' : null"
                     @click="choose(index)"
                   >
-                    <div class="time-line-content-item-icon">
-                      <div class="time-line-content-item-icon-icon"></div>
+                    <div
+                      class="time-line-content-item-icon"
+                      :class="{ 'time-line-content-item-img': item.img }"
+                    >
+                      <v-img
+                        v-if="item.img"
+                        :src="item.img"
+                        contain
+                        class="time-line-content-item-img-img"
+                      ></v-img>
+                      <div
+                        v-else
+                        class="time-line-content-item-icon-icon"
+                      ></div>
                     </div>
                     <div class="time-line-content-item-info">
                       {{ item.title }}
@@ -86,14 +98,14 @@
               <div class="time-line-bottom">
                 <v-row>
                   <v-col cols="12" md="6">
-                    <div class="time-line-bottom-title">
-                      {{ newRoadmap[active].left }}
-                    </div>
+                    <div
+                      class="time-line-bottom-title"
+                      v-html="newRoadmap[active].left"
+                    ></div>
                   </v-col>
                   <v-col cols="12" md="6">
                     <div class="time-line-bottom-info">
                       <div v-for="(it, i) in newRoadmap[active].right" :key="i">
-                        <div>•</div>
                         <div>{{ it }}</div>
                       </div>
                     </div>
@@ -225,104 +237,111 @@ export default {
       ],
       newRoadmap: [
         {
-          title: 'V1',
-          left: 'V1 The Stone Age (2021-2022)',
-          right: [],
+          title: 'V1 Quark',
+          left: 'The Stone Age (2021-2022)',
+          right: [
+            'Our Genesis product completes the overall network architecture of the global node collaboration, provides content storage and global access acceleration services.',
+          ],
+          img: require(`@/assets/imgs/index/milestones/1.png`),
         },
         {
           title: '2021 Q1',
-          left: 'V1 The Stone Age (2021-2022)',
+          left: 'V1 Quark',
           right: [
-            'Market research and product prototype discussion',
-            'Product Design & Technology Development',
+            '• Market research and product prototype discussion',
+            '• Product Design & Technology Development',
           ],
         },
         {
           title: '2021 Q2',
-          left: 'V1 The Stone Age (2021-2022)',
+          left: 'V1 Quark',
           right: [
-            'Establish 4EVERLAND Foundation and technical community',
-            'Release V1 version of white paper, 4EVERLAND official website online',
+            '• Establish 4EVERLAND Foundation and technical community',
+            '• Release V1 version of white paper, 4EVERLAND official website online',
           ],
         },
         {
           title: '2021 Q3',
-          left: 'V1 The Stone Age (2021-2022)',
+          left: 'V1 Quark',
           right: [
-            'ALPHA Launch:4EVER-HOSTING is online, realizing Dweb hosting and other functions',
+            '• ALPHA Launch:4EVER-HOSTING is online, realizing Dweb hosting and other functions',
           ],
         },
         {
           title: '2021 Q4',
-          left: 'V1 The Stone Age (2021-2022)',
+          left: 'V1 Quark',
           right: [
-            'BETA Launch: Online gateway node, storage node, data statistics service',
+            '• BETA Launch: Online gateway node, storage node, data statistics service',
           ],
         },
         {
           title: '2022 Q1',
-          left: 'V1 The Stone Age (2021-2022)',
+          left: 'V1 Quark',
           right: [
-            'Online bidding and lending system, hold the creation node bidding',
+            '• Online bidding and lending system, hold the creation node bidding',
           ],
         },
         {
           title: '2022 Q2',
-          left: 'V1 The Stone Age (2021-2022)',
+          left: 'V1 Quark',
           right: [
-            'The main network is online, a data hosting network that realizes global node collaboration',
+            '• The main network is online, a data hosting network that realizes global node collaboration',
           ],
         },
         {
-          title: 'V2',
-          left: 'V2 Empower Web3.0 Developers (2022-2023)',
-          right: [],
+          title: 'V2 Proton',
+          left: 'Web3.0 Developers (2022-2023)',
+          right: [
+            'we plan to open the underlying storage and network capabilities, by engaging and supporting more developers to build exclusive service platforms, and further expand commercialization capabilities.',
+          ],
+          img: require(`@/assets/imgs/index/milestones/2.png`),
         },
         {
           title: '2022 Q3',
-          left: 'V2 Empower Web3.0 Developers (2022-2023)',
+          left: 'V2 Proton',
           right: [
-            'We launched the trusted 4EVERLAND node network',
-            'We also launched a multi-chain payment system, supporting ETH, BSC, Polygon, and other public chains',
-            'We now even provide online front-end verifiable solutions to deliver a more comprehensive decentralized front-end hosting services',
-            "We completed the integration with capabilities of Dfinity's ecosystem",
+            '• We launched the trusted 4EVERLAND node network',
+            '• We also launched a multi-chain payment system, supporting ETH, BSC, Polygon, and other public chains',
+            '• We now even provide online front-end verifiable solutions to deliver a more comprehensive decentralized front-end hosting services',
+            "• We completed the integration with capabilities of Dfinity's ecosystem",
           ],
         },
         {
           title: '2022 Q4',
-          left: 'V2 Empower Web3.0 Developers (2022-2023)',
+          left: 'V2 Proton',
           right: [
-            'We plan to complete the integration of at least 3 mainstream public chains',
-            "We plan to complete the integration with capabilities of Arweave's ecosystem",
-            'We plan to increase the product functions for Hosting and Bucket to meet the needs of developers facing different scenarios',
-            'We plan to provide open storage and network underlying capabilities, and also want to attract providers to build the upper-layer of commercial applications',
+            '• We plan to complete the integration of at least 3 mainstream public chains',
+            "• We plan to complete the integration with capabilities of Arweave's ecosystem",
+            '• We plan to increase the product functions for Hosting and Bucket to meet the needs of developers facing different scenarios',
+            '• We plan to provide open storage and network underlying capabilities, and also want to attract providers to build the upper-layer of commercial applications',
           ],
         },
         {
           title: '2023 Q1',
-          left: 'V2 Empower Web3.0 Developers (2022-2023)',
+          left: 'V2 Proton',
           right: [
-            'The 4EVERLAND node network will go online',
-            'We plan to open source all application layer codes for all community providers to build and use',
-            "We plan to complete the integration with capabilities of Filecoin's ecosystem",
-            'We plan to bring about more decentralized and powerful gateway capabilities with online (custom) dedicated gateways',
+            '• The 4EVERLAND node network will go online',
+            '• We plan to open source all application layer codes for all community providers to build and use',
+            "• We plan to complete the integration with capabilities of Filecoin's ecosystem",
+            '• We plan to bring about more decentralized and powerful gateway capabilities with online (custom) dedicated gateways',
           ],
         },
         {
           title: '2023 Q2',
-          left: 'V2 Empower Web3.0 Developers (2022-2023)',
+          left: 'V2 Proton',
           right: [
-            'We plan to launch the provider incentive model to motivate the community to build commercial applications',
-            'We plan to integrate more storage protocol capabilities',
-            'We plan to complete the integration of more public chain ecological capabilities and realize the interconnection of public chains and storage protocols',
+            '• We plan to launch the provider incentive model to motivate the community to build commercial applications',
+            '• We plan to integrate more storage protocol capabilities',
+            '• We plan to complete the integration of more public chain ecological capabilities and realize the interconnection of public chains and storage protocols',
           ],
         },
         {
-          title: 'V3',
-          left: 'V3 Atom: Cloud Computing of Web3.0 (2023-2024)',
+          title: 'V3 Atom',
+          left: 'Cloud Computing of Web3.0<br/>(2023-2024)',
           right: [
             'We planned to integrate and support more heterogeneous chains such as Ethereum, BSC, Solona, Polygon, and Filecoin, etc., to achieve inter-blockchain communication, multi-chain deployment, and other multi-scenario requirements. Finally obtain the capability of Web3.0 cloud computing',
           ],
+          img: require(`@/assets/imgs/index/milestones/3.png`),
         },
       ],
     }
@@ -604,6 +623,17 @@ export default {
             margin: auto;
           }
         }
+        .time-line-content-item-img {
+          width: 48px;
+          height: 48px;
+          margin-top: 14px;
+
+          .time-line-content-item-img-img {
+            width: 34px;
+            height: 34px;
+            margin: auto;
+          }
+        }
         .time-line-content-item-info {
           margin: 0 auto;
           text-align: center;
@@ -660,7 +690,7 @@ export default {
       }
       .time-line-top-content {
         .time-line-content-item {
-          flex-basis: 60px;
+          flex-basis: 70px;
           margin: 0 5px;
         }
         .time-line-content-item-active {

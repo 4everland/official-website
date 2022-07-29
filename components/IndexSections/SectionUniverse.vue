@@ -1,13 +1,12 @@
 <template>
   <div id="universe">
     <v-container>
-      <div class="universe-title">BE THE MOST DAZZLING UNIVERSE</div>
+      <div class="universe-title">Make a smooth leap from Web2.0 to Web3.0</div>
       <v-row>
         <v-col cols="12" md="6" lg="6">
           <div class="text-box">
             <div class="text-title">
-              ENDOW THE PROJECT WITH WEB.3.0 ECOLOGICAL CAPABULITIES ON
-              4EVERLAND
+              Utilizing 4EVERLAND to join Web3.0 Universe with them
             </div>
 
             <div style="margin-top: 72px" class="hidden-sm-and-down">

@@ -5,11 +5,12 @@
         <v-col :cols="12" :md="6">
           <div class="text-box">
             <div class="text-title">
-              Promote Web.3.0 with developers worldwidely
+              Efficient and stable Web3 infrastructure
             </div>
             <div class="text-tips">
-              4EVERLAND is committed to leading developers and projects<br />
-              around the world to inspire value in Web.3.0
+              4EVERLAND is committed to offering users a distributed,
+              high-efficiency, self-incentivized, and low-cost data hosting
+              network
             </div>
           </div>
           <div class="data-box">
@@ -58,11 +59,11 @@ export default {
     return {
       btnItem: [
         {
-          num: '100+',
+          num: '200+',
           name: 'GLOBAL NODE',
         },
         {
-          num: '10B+',
+          num: '99.9999%',
           name: 'GUARANTEED UPTIME',
         },
         {

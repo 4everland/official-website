@@ -1,10 +1,7 @@
 <template>
   <div id="help">
     <v-container>
-      <div class="universe-title">
-        4EVERLAND Can Help You Rebuild the Web's Foundation Layer and Transition
-        to a New and Unbiased Web 3.0.
-      </div>
+      <div class="universe-title">Why Choose 4EVERLAND？</div>
       <v-row>
         <v-col v-for="(item, index) in imgItem" :key="index" cols="6" md="3">
           <v-img
@@ -24,19 +21,19 @@ export default {
     return {
       imgItem: [
         {
-          tips: 'Write once </br> Run any blockchain',
+          tips: 'One-stop Dapps build solution',
           img: require('@/assets/imgs/index/help/help_1.png'),
         },
         {
-          tips: 'DApps can be created </br> without centralized components',
+          tips: 'Provide multiple ecological resources',
           img: require('@/assets/imgs/index/help/help_2.png'),
         },
         {
-          tips: 'Compatible with the traditional </br> development environment',
+          tips: 'Compatible with the traditional development environments',
           img: require('@/assets/imgs/index/help/help_3.png'),
         },
         {
-          tips: 'Provide multiple </br> ecological resources',
+          tips: 'Write once, Run any blockchain',
           img: require('@/assets/imgs/index/help/help_4.png'),
         },
       ],

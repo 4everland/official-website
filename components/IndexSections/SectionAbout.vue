@@ -1,7 +1,7 @@
 <template>
   <div id="about">
     <v-container class="about-box">
-      <v-row>
+      <v-row style="margin-bottom: 20px">
         <v-col cols="12" md="6" lg="6">
           <div class="text-box">
             <div class="text-title">What's is the 4EVERLAND?</div>
@@ -14,16 +14,13 @@
             </div>
           </div>
         </v-col>
-        <v-col :cols="12">
+        <v-col :cols="12" :md="9">
           <div class="btn-box">
-            <v-btn
-              outlined
-              tile
+            <span
               v-for="(item, index) in btnItem"
               :key="index"
-              :to="item.link"
               class="btn-item"
-              >{{ item.name }}</v-btn
+              >{{ item.name }}</span
             >
           </div>
         </v-col>
@@ -37,24 +34,22 @@ export default {
     return {
       btnItem: [
         {
-          name: 'Hosting',
-          link: '/hosting',
+          name: 'DWeb Hosting',
         },
         {
-          name: 'Bucket',
-          link: '/bucket',
+          name: 'IPFS/AR Storage',
         },
         {
-          name: 'Gateway',
-          link: '/ipfs',
+          name: 'Decentralized Gateway',
         },
         {
-          name: 'ENS',
-          link: '/ens',
+          name: 'General-purpose Computing',
         },
         {
-          name: 'SNS',
-          link: '/sns',
+          name: 'Data Services',
+        },
+        {
+          name: 'More...',
         },
       ],
     }
@@ -66,9 +61,10 @@ export default {
 </script>
 <style lang="less" scoped>
 #about {
-  height: 640px;
+  height: 580px;
   background-color: #f3e8fe;
   .about-box {
+    width: 100%;
     height: 100%;
     background-image: url('@/assets/imgs/index/about/about-bg.png');
     background-repeat: no-repeat;
@@ -83,7 +79,7 @@ export default {
         color: #161617;
         font-family: 'Ubuntu-Bold', sans-serif !important;
         font-weight: bold;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
       }
       .text-tips {
         font-size: 18px;
@@ -94,12 +90,17 @@ export default {
       }
     }
     .btn-box {
-      margin-top: 60px;
+      margin-top: 10px;
     }
     .btn-item {
-      width: 143px;
-      height: 25px;
+      display: inline-block;
+      min-width: 143px;
+      text-align: center;
+      // height: 25px;
       margin-right: 23px;
+      margin-top: 10px;
+      border: 1px solid #161617;
+      padding: 0 10px;
     }
   }
 }
@@ -125,13 +126,16 @@ export default {
         }
       }
       .btn-box {
-        margin-top: 30px;
+        margin-top: 10px;
       }
       .btn-item {
-        width: 100px;
-        height: 30px;
-        margin-right: 20px;
-        margin-bottom: 20px;
+        width: 48%;
+        font-size: 12px;
+        // height: 30px;
+        padding: 4px 0;
+        margin: 0 2px;
+        margin-bottom: 10px;
+        border-radius: 4px;
       }
     }
   }

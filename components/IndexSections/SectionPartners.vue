@@ -14,23 +14,24 @@
               integrated<br />
               ecological service hosted and stored on 4EVERLAND
             </div>
-            <div class="mt-4" style="color: #257eff">
+            <!-- <div class="mt-4" style="color: #257eff">
               <nuxt-link to="/universe">
                 <v-icon color="#257EFF" class="mr-6" size="32">
                   mdi-arrow-right </v-icon
                 >Explore the 4EVERLAND ecosystem</nuxt-link
               >
-            </div>
+            </div> -->
           </v-col>
         </v-row>
       </v-container>
-      <v-row class="mt-4 mt-md-16 container-wrapper">
+      <v-row class="mt-4 mt-md-8 container-wrapper">
         <happy-scroll color="rgba(5, 31, 48, 1)" size="8" resize hide-vertical>
           <v-col cols="12" class="partner-list">
             <div
               v-for="(item, index) in dappsList"
               :key="index"
               class="item-img-box"
+              @click="linkTo(item.website)"
             >
               <v-img
                 class="mr-2"
@@ -69,14 +70,13 @@ export default {
   methods: {
     async getDappsList() {
       const { data } = await this.$axios.get(
-        'https://eco.4everland.space/json/dapps.json'
+        'https://eco.4everland.space/json/partner.json'
       )
       const { list } = data
       this.dappsList = list
       this.isShow = true
     },
-    toIpfs(cid) {
-      const url = 'https://4everland.io/ipfs/' + cid
+    linkTo(url) {
       window.open(url)
     },
   },
@@ -135,11 +135,19 @@ export default {
         border-radius: 8px;
         margin: 4px;
         padding: 0 15px;
+        cursor: pointer;
       }
       .partner-item-name {
         font-size: 14px;
         font-family: 'Ubuntu', sans-serif !important;
         color: #051f30;
+      }
+      .item-img-box:hover {
+        background-color: #8272d1;
+        border: 1px solid #8272d1;
+        .partner-item-name {
+          color: #fff;
+        }
       }
     }
   }

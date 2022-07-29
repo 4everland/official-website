@@ -78,7 +78,6 @@ export default {
 }
 .let-start {
   width: 143px;
-  height: 24px !important;
   font-family: 'Ubuntu', sans-serif !important;
 }
 @media (max-width: 960px) {

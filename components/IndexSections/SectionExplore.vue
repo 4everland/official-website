@@ -3,33 +3,70 @@
     <div class="front">
       <v-container>
         <div class="universe-title">
-          Explore endless possibilities using products Designed for complex and
-          dynamic Web3.0.
+          Explore infinite possibilities with products designed for
+          sophisticated and dynamic Web 3.0
         </div>
         <v-row>
           <v-col
             v-for="(item, index) in imgItem"
             :key="index"
-            :cols="6"
+            :cols="12"
             :md="item.cols"
           >
-            <nuxt-link :to="item.link">
-              <div class="item">
-                <v-img
-                  v-if="item.img"
-                  :src="item.img"
-                  contain
-                  max-width="360px"
-                ></v-img>
-                <div class="item-name">{{ item.name }}</div>
-                <div class="item-box">
-                  <div class="item-tips" v-html="item.tips"></div>
-                  <v-btn icon disabled class="hidden-sm-and-down">
-                    <v-icon large color="#9097a0">mdi-chevron-right</v-icon>
-                  </v-btn>
-                </div>
-              </div>
-            </nuxt-link>
+            <div
+              class="item"
+              :class="{ 'active-hover': item.hover }"
+              @click="linkTo(item)"
+            >
+              <v-row>
+                <v-col :cols="item.childCols">
+                  <div class="item-conten">
+                    <div class="item-name">{{ item.name }}</div>
+                    <div class="item-box">
+                      <div class="item-tips">{{ item.tips }}</div>
+                    </div>
+                    <v-btn
+                      v-if="index <= 1"
+                      tile
+                      :to="item.link"
+                      class="try-free hidden-sm-and-down"
+                      >Try for free</v-btn
+                    >
+                  </div>
+                </v-col>
+                <v-col :cols="6">
+                  <div v-if="item.img">
+                    <v-img
+                      :src="item.img"
+                      contain
+                      :max-width="
+                        $vuetify.breakpoint.smAndDown ? '155px' : '100%'
+                      "
+                    ></v-img>
+                    <div class="item-img-box hidden-sm-and-down">
+                      <img
+                        v-for="(img, index) in item.imgs"
+                        :key="index"
+                        :src="img"
+                        contain
+                      />
+                      <span>More...</span>
+                    </div>
+                  </div></v-col
+                >
+                <v-col v-if="item.img" :cols="12">
+                  <div class="item-img-box hidden-md-and-up">
+                    <img
+                      v-for="(img, index) in item.imgs"
+                      :key="index"
+                      :src="img"
+                      contain
+                    />
+                    <span>More...</span>
+                  </div>
+                </v-col>
+              </v-row>
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -43,42 +80,70 @@ export default {
       imgItem: [
         {
           name: 'HOSTING',
-          tips: '4EVERLAND Hosting service can help deveploers to host<br/>Webs or Dapps on IPFS (ICP & Arweave coming soon).<br/>Users can quickly deploy websites to IPFS through a<br/>Github authorization or a Cli local template build.',
+          tips: '4EVERLAND Hosting service can help developers to host Webs or Dapps on multiple protocols such as IPFS and Arweave, etc. Users can swiftly deploy websites to Web3.0 by using Github authorization or a Cli local template build.',
           link: '/hosting',
           img: require('@/assets/imgs/index/explore/hosting.png'),
-          cols: 6,
+          imgs: [
+            require('@/assets/imgs/index/explore/IPFS.png'),
+            require('@/assets/imgs/index/explore/dfinity.png'),
+            require('@/assets/imgs/index/explore/Arweave.png'),
+          ],
+          cols: 12,
+          childCols: 6,
         },
         {
           name: 'BUCKET',
-          tips: 'BUCKET enables users to upload, store, and fetch files<br/>from the IPFS and Arweave in a secure, convenient,<br/>and efficient manner. It is also compatible with AWS S3<br/>application programming interface, CLI, and other upload methods.',
+          tips: "BUCKET enables users to upload, store, and fetch files from multiple protocols such as IPFS and Arweave in a secure, convenient, and efficient manner. Additionally, it's compatible with AWS S3 APIs, interface operations, CLI, and other upload methods.",
           link: '/bucket',
           img: require('@/assets/imgs/index/explore/bucket.png'),
-          cols: 6,
+          imgs: [
+            require('@/assets/imgs/index/explore/IPFS.png'),
+            require('@/assets/imgs/index/explore/Arweave.png'),
+            require('@/assets/imgs/index/explore/Filecoin.png'),
+          ],
+          cols: 12,
+          childCols: 6,
         },
         {
-          name: 'ENS',
-          tips: 'Host any websites by<br/>Ethereum Name Service (ENS)<br/>in a truly decentralized way on IPFS .',
-          link: '/ens',
+          name: 'Decentralized Gateway',
+          tips: '200+ globally distributed gateway nodes provide more efficient and faster web 3.0 access for global developers.',
+          herf: 'https://ipfs.4everland.io',
           cols: 4,
+          childCols: 12,
+          hover: true,
         },
         {
-          name: 'SNS',
-          tips: 'Host any websites by<br/>Solona Name Service (SNS)<br/>in a truly decentralized way on IPFS .',
-          link: '/sns',
+          name: 'Multiple On-chain Payments',
+          tips: '4EVERLAND supports payments using a variety of assets on as many chains as possible for the convenience of users from different ecologies.',
+          herf: 'https://dashboard.4everland.org',
           cols: 4,
+          childCols: 12,
+          hover: true,
         },
         {
-          name: 'GATEWAY',
-          tips: '4EVERLAND Gateway is dedicated<br/>to coalesce various Web3 protocols.',
-          link: '/ipfs',
+          name: 'More',
+          tips: 'Explore more data analytics, decentralized domains, and underlying computing features',
           cols: 4,
+          childCols: 12,
         },
       ],
     }
   },
   computed: {},
   mounted() {},
-  methods: {},
+  methods: {
+    linkTo(item) {
+      if (item.hover) {
+        window.open(item.herf)
+      }
+      console.log(this.$vuetify.breakpoint.smAndDown)
+      if (this.$vuetify.breakpoint.smAndDown) {
+        if (item.link) {
+          this.$router.push(item.link)
+        }
+      }
+    },
+  },
 }
 </script>
 <style lang="less" scoped>
@@ -98,7 +163,7 @@ export default {
     background-size: cover;
   }
   .universe-title {
-    max-width: 800px;
+    max-width: 900px;
     font-size: 36px;
     font-family: 'Ubuntu-Bold', sans-serif !important;
     font-weight: bold;
@@ -113,7 +178,14 @@ export default {
     padding: 24px 36px;
     min-height: 210px;
     background-color: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // cursor: pointer;
+    .item-conten {
+      flex: 1;
+    }
+
     .item-name {
       font-size: 18px;
       font-family: 'Ubuntu-Bold', sans-serif !important;
@@ -137,8 +209,36 @@ export default {
         }
       }
     }
+    .item-img-box {
+      display: flex;
+      align-items: center;
+      margin-top: 26px;
+      img {
+        height: 30px;
+        margin-right: 30px;
+      }
+      span {
+        font-size: 14px;
+        font-family: 'Ubuntu', sans-serif !important;
+        margin-left: auto;
+      }
+    }
+    .try-free {
+      width: 142px;
+      height: 30px;
+      background: #000;
+      color: #fff;
+      margin-top: 53px;
+      &:hover {
+        background: #fff;
+        color: #8272d1;
+      }
+    }
   }
-  .item:hover {
+  .active-hover {
+    cursor: pointer;
+  }
+  .active-hover:hover {
     background-color: #8272d1;
     color: #fff;
     .item-name {
@@ -194,7 +294,7 @@ export default {
         }
       }
     }
-    .item:hover {
+    .active-hover:hover {
       background-color: transparent;
       color: #161617;
       .item-tips {

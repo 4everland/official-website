@@ -4,13 +4,14 @@
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="text-box">
-            <div class="text-title">Build Fantastic <br />Web.3.0</div>
+            <div class="text-title">Decentralize Your <br />Website</div>
             <div class="text-tips">
-              Build Web3 infrastructure for millions developers and projects.
+              Build a Web3 application easily, efficiently, and cost-effectively
+              on 4EVERLAND
             </div>
             <div style="margin-top: 65px">
               <v-btn color="#000" tile class="white--text" :href="hosting_web"
-                >BUILD WEB3</v-btn
+                >Get started for free</v-btn
               >
             </div>
           </div>
@@ -51,7 +52,7 @@
               max-height="20"
               max-width="20"
               :src="item.icon"
-              class="mr-3"
+              class="mr-3 hidden-sm-and-down"
             ></v-img>
             <span>{{ item.name }}</span>
           </div>
@@ -69,27 +70,27 @@ export default {
     return {
       items: [
         {
+          name: 'Web3 Aggregator',
+          tips: ' A blockchain technology-powered, cloud computing platform for Web3.0',
+          icon: require('@/assets/imgs/index/top/web3.png'),
+          link: '',
+        },
+        {
           name: 'Storage',
-          tips: 'Powerful storage capability based on IPFS and Arweave',
+          tips: 'A powerful storage network that is compatible with IPFS, Arweave and more storage protocols',
           icon: require('@/assets/imgs/index/top/storage.png'),
           link: '',
         },
         {
           name: 'Complute',
-          tips: 'Fast, Modern and censorship-proof satisfied any Need',
+          tips: 'General-purpose computing layers based on multi-chain integration',
           icon: require('@/assets/imgs/index/top/complute.png'),
           link: '',
         },
         {
           name: 'Network',
-          tips: 'Trusted node network with no limitation,and powerful performance',
+          tips: 'Global acceleration network capabilities based on globally distributed gateway nodes',
           icon: require('@/assets/imgs/index/top/network.png'),
-          link: '',
-        },
-        {
-          name: 'Web3 Own',
-          tips: 'Own your web.3.0 upper-layer direction',
-          icon: require('@/assets/imgs/index/top/web3.png'),
           link: '',
         },
       ],
@@ -160,7 +161,7 @@ export default {
     background: rgb(167, 155, 234);
   }
   .item-text {
-    max-width: 135px;
+    max-width: 170px;
     border-bottom: 1px solid #161617;
     padding: 10px 0;
     font-family: 'Ubuntu-Bold', sans-serif !important;

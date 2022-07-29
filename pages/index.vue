@@ -7,8 +7,8 @@
     <section-explore />
     <section-globe />
     <section-Partners />
-    <section-new />
     <section-milestones />
+    <section-new />
   </div>
 </template>
 
