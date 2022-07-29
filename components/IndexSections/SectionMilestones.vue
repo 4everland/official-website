@@ -631,6 +631,7 @@ export default {
           width: 48px;
           height: 48px;
           margin-top: 14px;
+          margin-bottom: 22px;
 
           .time-line-content-item-img-img {
             width: 34px;
