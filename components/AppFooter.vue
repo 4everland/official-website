@@ -36,18 +36,27 @@
         <v-col cols="12" md="4" lg="4">
           <div class="ml-4 mb-4 text-h6">Join us</div>
           <div class="join-us">
-            <div v-for="link in links" :key="link.href" style="width: 40%">
+            <v-col
+              :cols="3"
+              v-for="link in links"
+              :key="link.href"
+              class="text-center"
+              style="margin: -10px 0"
+            >
               <v-btn
                 :href="link.href"
                 target="_blank"
-                color="#B1B6BB"
                 plain
                 text
+                icon
                 nofollow
+                class="text-center"
+                style="width: 24px"
               >
-                {{ link.name }}
+                <!-- {{ link.name }} -->
+                <v-img width="24" :src="link.icon"></v-img>
               </v-btn>
-            </div>
+            </v-col>
           </div>
         </v-col>
         <v-col cols="12" md="8" lg="8">
@@ -425,6 +434,7 @@ input:-ms-input-placeholder {
 .join-us {
   display: flex;
   flex-wrap: wrap;
+  max-width: 200px;
 }
 .v-btn {
   text-transform: none !important;
