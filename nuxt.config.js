@@ -34,7 +34,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://4everland.org/cover.png',
+        content: 'https://www.4everland.org/cover.png',
       },
       {
         hid: 'og:url',
@@ -60,7 +60,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://4everland.org/cover.png',
+        content: 'https://www.4everland.org/cover.png',
       },
     ],
     link: [
