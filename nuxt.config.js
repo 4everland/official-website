@@ -36,11 +36,32 @@ export default {
         name: 'twitter:image',
         content: 'https://4everland.org/cover.png',
       },
-      {
-        hid: 'twitter:domain',
-        name: 'twitter:domain',
-        content: '4everland.org',
-      },
+      // {
+      //   hid: 'og:url',
+      //   property: 'og:url',
+      //   content: 'https://4everland.org/',
+      // },
+      // {
+      //   hid: 'og:type',
+      //   property: 'og:type',
+      //   content: 'website',
+      // },
+      // {
+      //   hid: 'og:title',
+      //   property: 'og:title',
+      //   content: '4everland - A CLOUD COMPUTING PLATFORM OF WEB3.0',
+      // },
+      // {
+      //   hid: 'og:description',
+      //   property: 'og:description',
+      //   content:
+      //     '4EVERLAND is a Web 3.0 cloud computing platform that integrates storage, computing, and network core capabilities.',
+      // },
+      // {
+      //   hid: 'og:image',
+      //   property: 'og:image',
+      //   content: 'https://4everland.org/cover.png',
+      // },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
