@@ -291,7 +291,7 @@ export default {
         },
         {
           text: 'Community',
-          href: 'https://discord.com/invite/4everland',
+          href: 'http://discord.gg/4everland',
           target: '_blank',
         },
       ],

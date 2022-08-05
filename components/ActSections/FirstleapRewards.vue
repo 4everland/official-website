@@ -207,7 +207,7 @@ export default {
           title: 'Medium',
         },
         {
-          href: 'https://discord.com/invite/4everland',
+          href: 'http://discord.gg/4everland',
           title: 'Discord',
         },
         {

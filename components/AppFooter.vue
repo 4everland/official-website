@@ -207,7 +207,7 @@ export default {
         {
           name: 'Discord',
           icon: require('@/assets/imgs/footer/discord.png'),
-          href: 'https://discord.com/invite/4everland',
+          href: 'http://discord.gg/4everland',
         },
         {
           name: 'Email',
