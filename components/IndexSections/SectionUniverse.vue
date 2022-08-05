@@ -69,9 +69,13 @@ export default {
           name: 'REI',
           img: require('@/assets/imgs/index/universe/REI.png'),
         },
+        // {
+        //   name: 'Cryptoswap',
+        //   img: require('@/assets/imgs/index/universe/Cryptoswap.png'),
+        // },
         {
-          name: 'Cryptoswap',
-          img: require('@/assets/imgs/index/universe/Cryptoswap.png'),
+          name: 'SyncSwap',
+          img: require('@/assets/imgs/index/universe/SyncSwap.png'),
         },
         {
           name: 'Relationlabs',
@@ -101,9 +105,13 @@ export default {
           name: 'Gamedevs',
           img: require('@/assets/imgs/index/universe/Gamedevs.png'),
         },
+        // {
+        //   name: 'Celestial',
+        //   img: require('@/assets/imgs/index/universe/Celestial.png'),
+        // },
         {
-          name: 'Celestial',
-          img: require('@/assets/imgs/index/universe/Celestial.png'),
+          name: 'SPACE ID',
+          img: require('@/assets/imgs/index/universe/SPACEID.png'),
         },
         {
           name: 'Quest3',
