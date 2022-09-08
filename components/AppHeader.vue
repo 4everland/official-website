@@ -200,7 +200,7 @@ export default {
           childs: [
             {
               text: 'Hosting',
-              tips: 'Host websites or DApps on IPFS',
+              tips: 'Host websites or DApps on IPFS, Arweave and Dfinity',
               icon: require('@/assets/imgs/nav/hosting.png'),
               link: '/hosting',
             },
