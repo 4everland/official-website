@@ -283,11 +283,14 @@ export default {
             },
           ],
         },
-
         {
           text: 'Blogs',
           href: 'https://medium.com/4everland',
           target: '_blank',
+        },
+        {
+          text: 'Pricing',
+          link: '/price',
         },
         {
           text: 'Community',
@@ -305,6 +308,7 @@ export default {
 }
 .nav-font {
   font-family: 'Ubuntu-Blod', sans-serif !important;
+  font-weight: bold;
 }
 .always-active {
   opacity: 1 !important;
@@ -325,5 +329,11 @@ export default {
 }
 .tips {
   padding-right: 10px;
+}
+.v-menu__content {
+  max-width: 100%;
+  width: 100%;
+  top: 82px;
+  left: 0;
 }
 </style>

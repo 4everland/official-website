@@ -9,6 +9,7 @@
     <section-Partners />
     <section-milestones />
     <section-new />
+    <section-footer />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import SectionGlobe from '@/components/IndexSections/SectionGlobe.vue'
 import SectionPartners from '@/components/IndexSections/SectionPartners.vue'
 import SectionNew from '@/components/IndexSections/SectionNew.vue'
 import SectionMilestones from '@/components/IndexSections/SectionMilestones.vue'
+import SectionFooter from '@/components/IndexSections/SectionFooter.vue'
 
 export default {
   components: {
@@ -34,6 +36,7 @@ export default {
     SectionPartners,
     SectionNew,
     SectionMilestones,
+    SectionFooter,
   },
   mounted() {
     this.$nextTick(() => {

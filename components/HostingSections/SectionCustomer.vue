@@ -1,33 +1,75 @@
 <template>
-  <div class="home-block">
+  <div id="UseCases" class="home-block mt-16">
     <v-container>
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="block-titel">Use Cases</div>
         </v-col>
       </v-row>
-      <v-row class="swiper-box">
-        <swiper-cus></swiper-cus>
+      <v-row>
+        <v-col cols="12" md="4" lg="4" v-for="item in items" :key="item.name">
+          <div class="item-box">
+            <v-img :src="item.icon" max-width="48"></v-img>
+            <div class="item-name">{{ item.name }}</div>
+          </div>
+          <div class="item-tips">{{ item.tips }}</div>
+        </v-col>
       </v-row>
     </v-container>
   </div>
 </template>
 <script>
-import SwiperCus from './SwiperCus.vue'
 import '@/assets/styles/home.scss'
 export default {
-  components: {
-    SwiperCus,
-  },
   data() {
-    return {}
+    return {
+      items: [
+        {
+          name: 'UNISWAP',
+          tips: 'Deploy contracts and front-ends in a single click',
+          icon: require('@/assets/imgs/hosting/cases/uniswap.png'),
+        },
+        {
+          name: 'DogeCoin',
+          tips: 'No additional learning costs for development and deployment.',
+          icon: require('@/assets/imgs/hosting/cases/dogecoin.png'),
+        },
+        {
+          name: 'AAVE',
+          tips: 'Aave is a decentralized non-custodial liquidity protocol where users can participate as depositors or borrowers.',
+          icon: require('@/assets/imgs/hosting/cases/aava.png'),
+        },
+      ],
+    }
   },
 }
 </script>
-<style scoped>
-.swiper-box {
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 80px;
+<style scoped lang="less">
+#UseCases {
+  background: #faf8fd;
+  min-height: 428px;
+  display: flex;
+  align-items: center;
+  .item-box {
+    display: flex;
+    align-items: center;
+    .item-name {
+      width: 158px;
+      font-size: 23px;
+      font-family: 'Ubuntu-Bold', sans-serif;
+      font-weight: bold;
+      color: #000;
+      border-bottom: 2px solid #d8d8d8;
+      margin-left: 12px;
+    }
+  }
+  .item-tips {
+    width: 322px;
+    font-size: 14px;
+    font-family: 'Ubuntu-Medium', sans-serif;
+    font-weight: 500;
+    color: #000;
+    margin-top: 17px;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="home-block">
-    <v-container class="my-16">
+    <v-container class="my-16 py-16">
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="block-titel">
@@ -11,13 +11,10 @@
           cols="12"
           md="12"
           lg="12"
-          class="d-flex justify-center flex-wrap"
+          class="d-flex justify-space-between flex-wrap mt-16"
         >
-          <div v-for="item in list" :key="item.title" class="text-center pa-12">
-            <div class="img-box ma-auto mb-4">
-              <v-img :src="item.img" max-width="86" max-height="86"> </v-img>
-            </div>
-            <div class="frame-title text-h6">{{ item.title }}</div>
+          <div v-for="item in list" :key="item.title" class="text-center">
+            <v-img :src="item.img" max-width="161"> </v-img>
           </div>
         </v-col>
         <!-- <v-col cols="12" md="12" lg="12">
@@ -42,50 +39,28 @@ export default {
     return {
       list: [
         {
-          img: require('@/assets/imgs/index/vue.png'),
-          title: 'Vue',
+          img: require('@/assets/imgs/hosting/docker.png'),
         },
         {
-          img: require('@/assets/imgs/index/next.png'),
-          title: 'Next.js',
+          img: require('@/assets/imgs/hosting/gatsby.png'),
         },
         {
-          img: require('@/assets/imgs/index/gatsby.png'),
-          title: 'Gatsby',
+          img: require('@/assets/imgs/hosting/react.png'),
         },
         {
-          img: require('@/assets/imgs/index/nuxt.png'),
-          title: 'Nuxt.js',
+          img: require('@/assets/imgs/hosting/webflow.png'),
         },
         {
-          img: require('@/assets/imgs/index/angular.png'),
-          title: 'Angular',
+          img: require('@/assets/imgs/hosting/hugo.png'),
         },
         {
-          img: require('@/assets/imgs/index/react.png'),
-          title: 'React APP',
+          img: require('@/assets/imgs/hosting/next.png'),
+        },
+        {
+          img: require('@/assets/imgs/hosting/jekyll.png'),
         },
       ],
     }
   },
 }
 </script>
-<style scoped>
-.start-btn {
-  width: 300px;
-  height: 60px;
-  background: linear-gradient(-90deg, #ffb830, #e31313, #ff30f8);
-  font-size: 20px;
-  font-weight: bold;
-}
-.img-box {
-  width: 86px;
-  height: 86px;
-  line-height: 86px;
-  display: flex;
-  align-items: center;
-}
-.farme-titele {
-  color: #6c7789;
-}
-</style>

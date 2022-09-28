@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <div class="black py-16">
+    <!-- <div class="black py-16">
       <v-container class="align-center">
         <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
           <v-col cols="12">
@@ -8,7 +8,6 @@
               Stay up to date on developer updates for the 4EVERLAND
             </div>
             <div class="subscribe-input mt-12">
-              <!-- <div class="emain-title">E-mail</div> -->
               <input
                 v-model="email"
                 class="enter-email"
@@ -29,7 +28,7 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
+    </div> -->
     <!-- <v-divider class="hidden-sm-and-down mt-14"></v-divider> -->
     <v-container class="hidden-sm-and-down mt-8">
       <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
