@@ -5,8 +5,8 @@
         <v-col cols="12" md="12" lg="12">
           <div class="block-titel white--text">Usage cost calculator</div>
           <div class="block-text white--text">
-            Select a plan, choose a network, and get a transparent estimate of
-            your usage cost.
+            Select a monthly plan and get a transparent estimate of your usage
+            cost.
           </div>
         </v-col>
       </v-row>
@@ -67,7 +67,7 @@
                 target="_blank"
                 width="230"
                 height="45"
-                >Get started for free</v-btn
+                >Purchase</v-btn
               >
             </div>
           </div>
@@ -161,7 +161,7 @@ export default {
         case 2:
           price =
             Math.floor(
-              val * this.price.ipfsStorageUnitPrice * 60 * 60 * 24 * 365
+              val * this.price.ipfsStorageUnitPrice * 60 * 60 * 24 * 30
             ) / 1e18
           break
         case 3:

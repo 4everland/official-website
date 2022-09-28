@@ -29,7 +29,7 @@
               </tr>
               <tr>
                 <td>10GB+</td>
-                <td>8.5U/100G</td>
+                <td>$8.5/100G</td>
               </tr>
               <tr>
                 <td rowspan="2">Build minutes</td>
@@ -39,7 +39,7 @@
               </tr>
               <tr>
                 <td>100Min+</td>
-                <td>2U/100Min</td>
+                <td>$2/100Min</td>
               </tr>
               <tr>
                 <td rowspan="4">IPFS</td>
@@ -49,7 +49,7 @@
               </tr>
               <tr>
                 <td>5G+</td>
-                <td>2U/100G/Month</td>
+                <td>$2/100G/Month</td>
               </tr>
               <tr>
                 <td rowspan="2">Storage duration</td>
@@ -68,7 +68,7 @@
               </tr>
               <tr>
                 <td>100MB+</td>
-                <td>0.31U</td>
+                <td>$0.31</td>
               </tr>
             </table>
           </v-col>
