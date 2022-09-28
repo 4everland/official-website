@@ -63,7 +63,7 @@
               <v-btn
                 tile
                 class="start-btn"
-                :href="hosting_web"
+                href="https://dashboard.4everland.org/resource"
                 target="_blank"
                 width="230"
                 height="45"
@@ -153,21 +153,24 @@ export default {
       let price = 0
       switch (index) {
         case 0:
-          price = (val * this.price.trafficUnitPrice) / 1e18
+          price = Math.floor(val * this.price.trafficUnitPrice) / 1e18
           break
         case 1:
-          price = (val * this.price.buildTimeUnitPrice) / 1e18
+          price = Math.floor(val * this.price.buildTimeUnitPrice) / 1e18
           break
         case 2:
-          price = (val * this.price.ipfsStorageUnitPrice) / 1e18
+          price =
+            Math.floor(
+              val * this.price.ipfsStorageUnitPrice * 60 * 60 * 24 * 365
+            ) / 1e18
           break
         case 3:
-          price = (val * this.price.arStorageUnitPrice) / 1e18
+          price = Math.floor(val * this.price.arStorageUnitPrice) / 1e18
           break
         default:
           break
       }
-      price = Math.floor(price) / 100
+      // price = Math.floor(price) / 100
       this.priceList[index] = price
       this.countPrice = this.sum(this.priceList)
     },

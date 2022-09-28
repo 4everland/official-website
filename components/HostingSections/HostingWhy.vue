@@ -14,8 +14,8 @@
           <v-row>
             <v-col cols="6" md="4" v-for="item in list" :key="item.title">
               <div class="text-center">
-                <v-img :src="item.img" max-width="315" class="ma-auto"> </v-img>
-                <div class="Ubuntu-Bold mt-4" style="font-size: 18px">
+                <v-img :src="item.img" max-width="300" class="ma-auto"> </v-img>
+                <div class="Ubuntu-Bold mt-4" style="font-size: 20px">
                   {{ item.title }}
                 </div>
               </div>

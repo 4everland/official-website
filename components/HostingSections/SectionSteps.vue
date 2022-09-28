@@ -54,7 +54,7 @@
           </v-col>
           <v-col class="text-center mt-16" cols="12">
             <v-btn
-              href="https://docs.hosting.4everland.org/cli/"
+              href="https://docs.4everland.org/hosting-cli"
               target="_blank"
               tile
               class="usage-btn"
