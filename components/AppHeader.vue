@@ -120,7 +120,6 @@
           tile
           color="#000"
         >
-          <!-- <v-icon class="mr-2">{{ mdiWallet }}</v-icon> -->
           Login
           <v-icon class="ml-2">{{ mdiChevronRight }}</v-icon>
         </v-btn>
@@ -267,13 +266,13 @@ export default {
               icon: require('@/assets/imgs/nav/Grants.png'),
               link: '/grants',
             },
-            {
-              text: 'Bug Bounty',
-              tips: 'Get rewarded for finding bugs and exploits',
-              icon: require('@/assets/imgs/nav/Bug Bounty.png'),
-              href: 'https://dashboard.4everland.org/#/bug-bounty',
-              target: '_blank',
-            },
+            // {
+            //   text: 'Bug Bounty',
+            //   tips: 'Get rewarded for finding bugs and exploits',
+            //   icon: require('@/assets/imgs/nav/Bug Bounty.png'),
+            //   href: 'https://dashboard.4everland.org/#/bug-bounty',
+            //   target: '_blank',
+            // },
             {
               text: 'Dev Forum',
               tips: 'Join the forum and share your experience with more developers',

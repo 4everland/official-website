@@ -1,35 +1,5 @@
 <template>
   <div id="footer">
-    <!-- <div class="black py-16">
-      <v-container class="align-center">
-        <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
-          <v-col cols="12">
-            <div class="footer-titele font-weight-black">
-              Stay up to date on developer updates for the 4EVERLAND
-            </div>
-            <div class="subscribe-input mt-12">
-              <input
-                v-model="email"
-                class="enter-email"
-                type="email"
-                placeholder="E-mail"
-              />
-              <v-btn
-                :loading="loading"
-                class="text-body2 white--text"
-                color="#000"
-                tile
-                max-width="150"
-                height="24"
-                @click="subscribe"
-                >Subscribe</v-btn
-              >
-            </div>
-          </v-col>
-        </v-row>
-      </v-container>
-    </div> -->
-    <!-- <v-divider class="hidden-sm-and-down mt-14"></v-divider> -->
     <v-container class="hidden-sm-and-down mt-8">
       <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
         <v-col cols="12" md="4" lg="4">
@@ -278,11 +248,11 @@ export default {
               href: 'https://dashboard.4everland.org/',
               target: '_blank',
             },
-            {
-              name: 'Bug Bounty',
-              href: 'https://hosting.4everland.org/#/bug-bounty',
-              target: '_blank',
-            },
+            // {
+            //   name: 'Bug Bounty',
+            //   href: 'https://hosting.4everland.org/#/bug-bounty',
+            //   target: '_blank',
+            // },
             {
               name: 'Grants',
               to: '/grants',
