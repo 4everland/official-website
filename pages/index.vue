@@ -1,5 +1,32 @@
 <template>
   <div id="home">
+    <div class="top-alert">
+      <v-alert
+        v-model="alert"
+        close-text="Close Alert"
+        color="#e5e0fe"
+        dark
+        dismissible
+        dense
+        tile
+        max-width="100%"
+      >
+        <a
+          href="https://forms.gle/CrCVBoWFaA4V3RiB6"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="anima"
+        >
+          <v-icon color="#8272d1" dense class="mb-1 mr-2"
+            >mdi-volume-high</v-icon
+          >
+          4EVERLAND MSP I is now live! A $15k bonus and vouchers are included in
+          this 3-month program designed to empower Web3 developers and projects.
+          Apply today.
+        </a>
+      </v-alert>
+    </div>
+
     <section-top />
     <section-universe />
     <section-about />
@@ -38,6 +65,11 @@ export default {
     SectionMilestones,
     SectionFooter,
   },
+  data() {
+    return {
+      alert: true,
+    }
+  },
   mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
@@ -47,8 +79,46 @@ export default {
   methods: {},
 }
 </script>
-<style lang="scss" scoped>
+<style lang="less" scoped>
 #home {
-  overflow: hidden;
+  position: relative;
+  .top-alert {
+    position: sticky;
+    top: 80px;
+    z-index: 89;
+    text-align: center;
+    overflow: hidden;
+
+    /deep/ .v-alert__content {
+      overflow: hidden;
+    }
+    a {
+      display: inline-block;
+      color: #8272d1;
+      text-decoration: none;
+      font-family: 'Ubuntu', sans-serif !important;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .anima {
+    animation-name: move;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(200px - 100%), 0);
+  }
 }
 </style>

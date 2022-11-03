@@ -21,6 +21,7 @@
           transition="slide-y-transition"
           offset-y
           position
+          z-index="99"
         >
           <template #activator="{ on, attrs }">
             <v-btn
@@ -304,6 +305,7 @@ export default {
 <style scoped>
 #header {
   z-index: 99;
+  position: relative;
 }
 .nav-font {
   font-family: 'Ubuntu-Blod', sans-serif !important;

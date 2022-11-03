@@ -139,6 +139,8 @@ export default {
 #banner {
   min-height: 500px;
   position: relative;
+  overflow: hidden;
+
   .text-box {
     z-index: 2;
     position: relative;
