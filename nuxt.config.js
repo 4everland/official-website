@@ -49,7 +49,7 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: '4everland - A CLOUD COMPUTING PLATFORM OF WEB3.0',
+        content: '4EVERLAND - A CLOUD COMPUTING PLATFORM OF WEB3.0',
       },
       {
         hid: 'og:description',
