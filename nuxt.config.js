@@ -23,7 +23,7 @@ export default {
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: '4everland - A CLOUD COMPUTING PLATFORM OF WEB3.0',
+        content: '4EVERLAND - A CLOUD COMPUTING PLATFORM OF WEB3.0',
       },
       {
         hid: 'twitter:description',
