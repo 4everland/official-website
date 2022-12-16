@@ -6,8 +6,9 @@
           <v-col cols="12" md="4" class="tit-box">
             <div class="emp-title">Empowered Your Web.3.0 Development</div>
             <div class="emp-tips">
-              You can get a 4EVERLAND support plan by the 4EVERLAND Pro Program.
-              Come with us to make a significant contribution to web.3.0.
+              You can get a 4EVERLAND support plan from the 4EVERLAND Pro
+              Program. Come with us to make a significant contribution to
+              web.3.0.
             </div>
           </v-col>
           <v-col
@@ -18,10 +19,10 @@
             <div class="grant-item">
               <div class="item-title">Grants Program</div>
               <div class="item-tips">
-                4EVERLAND's Dev-Grants Program aims to ensure developers make
-                that smooth leap from Web 2.0 to Web 3.0 along with rapid
-                Web.3.0 development. We believe that your contributions, in the
-                long run, will receive huge values.
+                4EVERLAND's Dev-Grants Program aims to ensure developers make a
+                smooth leap from Web 2.0 to Web 3.0 along with rapid Web.3.0
+                development. We believe that your contribution, in the long run,
+                will receive huge value.
               </div>
               <v-btn
                 class="font-weight-bold mt-6"
@@ -42,9 +43,9 @@
               <div class="item-title">Contributor Program</div>
               <div class="item-tips">
                 4EVERLAND Community Contributor Program aims to encourage more
-                users to get involved in our community development! We see this
-                program to be a user-centered one. So, join us and build a super
-                Web3 community together!
+                users to get involved in our community development! This program
+                is user-centered, thus join us and build a super Web 3.0
+                community together!
               </div>
               <v-btn
                 class="font-weight-bold mt-6"

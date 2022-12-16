@@ -69,9 +69,9 @@
               Build the Next Unicorn
             </div>
             <div class="text-h5 desc text-left">
-              BUCKET was designed for developers. We offer APIs and SDKs that
-              will empower you whether you're building an app, an NFT
-              marketplace, or everything in between.
+              Bucket was designed for developers. Thus we provide APIs and SDKs
+              that empower you in building an application, an NFT marketplace,
+              or anything else.
             </div>
           </v-col>
         </v-row>
@@ -94,7 +94,7 @@ export default {
           img: require('@/assets/imgs/bucket/ntf2.png'),
           tit: 'Fast and reliable',
           content:
-            'Wait times are the worst part of any encounter. We ensure that NFTs are fast and reliable for everyone.',
+            'Waiting is the worst part of any platform. We ensure that NFTs with 4EVERLAND are fast and reliable for everyone.',
         },
         {
           img: require('@/assets/imgs/bucket/ntf3.png'),

@@ -7,9 +7,9 @@
             <div class="text-title">What is 4EVERLAND?</div>
             <div class="text-tips">
               4EVERLAND is a Web 3.0 cloud computing platform that integrates
-              storage, computing, and network core capabilities. It aims to help
-              the user to make a smooth leap from Web 2.0 to Web 3.0 and become
-              the infrastructure for millions of Web 3.0 developers and
+              storage, computing, and network as its core capabilities. It aims
+              to help users make a smooth leap from Web 2.0 to Web 3.0 and
+              become the infrastructure for millions of Web 3.0 developers and
               applications.
             </div>
           </div>

@@ -200,13 +200,13 @@ export default {
           childs: [
             {
               text: 'Hosting',
-              tips: 'Host websites or DApps on IPFS, Arweave and Dfinity',
+              tips: 'Host websites or Apps on IPFS, Arweave, and Dfinity',
               icon: require('@/assets/imgs/nav/hosting.png'),
               link: '/hosting',
             },
             {
               text: 'Bucket',
-              tips: 'Effortlessly upload & pin files to IPFS and Arweave',
+              tips: 'Upload, pin files to IPFS and Arweave',
               icon: require('@/assets/imgs/nav/bucket.png'),
               link: '/bucket',
             },
@@ -243,7 +243,7 @@ export default {
           childs: [
             {
               text: 'Universe',
-              tips: 'Projects Build on 4EVERLAND or Web3.0 tech',
+              tips: 'Project built on 4EVERLAND or Web 3.0 tech',
               icon: require('@/assets/imgs/nav/Universe.png'),
               link: '/universe',
             },
@@ -276,7 +276,7 @@ export default {
             // },
             {
               text: 'Dev Forum',
-              tips: 'Join the forum and share your experience with more developers',
+              tips: 'Join the forum and share your experience with other developers',
               icon: require('@/assets/imgs/nav/Dev Forum.png'),
               href: 'https://www.reddit.com/r/4everland/',
               target: '_blank',

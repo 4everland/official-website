@@ -47,15 +47,15 @@ export default {
           tag: 'IPFS',
           title: 'IPFS powers the distributed Web',
           content:
-            "With 4EVERLAND, your Websites or Applications will be automatically pinned to IPFS, a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.",
+            "With 4EVERLAND, your websites or applications will be automatically pinned to IPFS, a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open.",
           btn: 'Get started for free',
           img: require('@/assets/imgs/hosting/IPFS.png'),
         },
         {
           tag: 'Arweave',
-          title: 'Arweave makes information permanence sustainable',
+          title: 'Arweave makes information permanence real',
           content:
-            "Arweave allows us to remember and preserve valuable information, apps, and history indefinitely. 4EVERLAND enables the first permanent deployment of front-end pages on the Arweave network through Arseeding's integration.",
+            "Arweave allows us to collect and preserve valuable information, apps, and history indefinitely. 4EVERLAND enables the first permanent deployment of front-end pages on the Arweave network through Arseeding's integration.",
           btn: 'Get started for free',
           img: require('@/assets/imgs/hosting/Arweave.png'),
         },
@@ -63,7 +63,7 @@ export default {
           tag: 'Dfinity',
           title: 'Expanding the Superpowers of the Internet',
           content:
-            '4EVERLAND makes it as easy to host static front ends on Internet computer canisters as it is anywhere else. Create, update and manage your canisters automatically and deploy trustless projects on IC in seconds.',
+            '4EVERLAND simplifies hosting of static frontends on Internet computer canisters. Create, update and manage your canisters automatically and deploy trustless projects on IC in seconds.',
           btn: 'Get started for free',
           img: require('@/assets/imgs/hosting/Dfinity.png'),
         },

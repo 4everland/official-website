@@ -5,7 +5,8 @@
         <v-col cols="12" md="6">
           <div class="footer-title">See 4EVERLAND in action</div>
           <div class="footer-content">
-            Come be part of the next era of infinite possibles at 4EVERLAND
+            Come and be a part of the next era of infinite possibilities at
+            4EVERLAND
           </div>
           <div style="margin-top: 65px">
             <v-btn

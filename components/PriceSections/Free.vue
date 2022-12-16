@@ -16,8 +16,8 @@
           4EVERLAND offers a certain amount of free network bandwidth, build
           minutes, and storage space for each new user until free resources run
           out. Any excess resource consumption will be invoiced according to the
-          price details, and you can also customize individual purchases based
-          on resource consumption.
+          price details. You could also customize individual purchases based on
+          resource consumption.
         </div>
         <v-row>
           <v-col cols="12">

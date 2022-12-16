@@ -104,25 +104,25 @@ export default {
       items: [
         {
           name: 'Web3 Aggregator',
-          tips: ' A blockchain technology-powered, cloud computing platform for Web3.0',
+          tips: 'A blockchain technology-powered, Web 3.0 cloud computing platform',
           icon: require('@/assets/imgs/index/top/web3.png'),
           link: '',
         },
         {
           name: 'Storage',
-          tips: 'A powerful storage network that is compatible with IPFS, Arweave and more storage protocols',
+          tips: 'A holistic storage network compatible with IPFS, Arweave, and other storage protocols',
           icon: require('@/assets/imgs/index/top/storage.png'),
           link: '',
         },
         {
           name: 'Computing',
-          tips: 'General-purpose computing layers based on multi-chain integration',
+          tips: 'General-purpose computing layer based on multi-chain integration',
           icon: require('@/assets/imgs/index/top/complute.png'),
           link: '',
         },
         {
           name: 'Network',
-          tips: 'Global acceleration network capabilities based on globally distributed gateway nodes',
+          tips: 'Global acceleration network capability based on worldwide distributed gateway nodes',
           icon: require('@/assets/imgs/index/top/network.png'),
           link: '',
         },

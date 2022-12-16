@@ -9,16 +9,15 @@
           lg="7"
         >
           <div class="text-h4 font-weight-black" style="color: #132642">
-            Add ENS/SNS Domains to Sites on IPFS
+            Add ENS/SNS Domains to Websites on IPFS
           </div>
           <div
             class="text-h6 mt-12 font-weight-blod"
             style="max-width: 600px; color: #6c7789"
           >
-            You can host any websites in a truly decentralized way by using
-            decentralized domains on IPFS. This means your website will be
-            censorship-resistant, immutable, and in a decentralized network. And
-            also you can really control everything in the realm of web.3.0.
+            You can host any website in truly a decentralized way by using DNS
+            on IPFS. This means your website becomes censorship-resistant,
+            immutable, and hosted on a decentralized network.
           </div>
           <p class="mt-16">
             <v-btn

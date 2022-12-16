@@ -5,7 +5,7 @@
         <v-col cols="12" md="12" lg="12">
           <div class="block-titel">Network Support</div>
           <div class="block-text">
-            Polygon, Ethereum, Bsc are accepted by 4EVERLAND.
+            Polygon, Ethereum, BSC are accepted by 4EVERLAND.
           </div>
         </v-col>
         <v-col

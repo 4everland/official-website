@@ -14,7 +14,7 @@
           <v-tabs v-model="tab" background-color="transparent">
             <v-tab :key="0" class="Ubuntu-Bold">1. Connect your GitHub</v-tab>
             <v-tab :key="1" class="Ubuntu-Bold">2.Add your build setting</v-tab>
-            <v-tab :key="2" class="Ubuntu-Bold">3. Deploy your site</v-tab>
+            <v-tab :key="2" class="Ubuntu-Bold">3. Deploy you DWeb</v-tab>
           </v-tabs>
           <v-tabs-items v-model="tab" class="mt-16 mx-auto">
             <v-tab-item v-for="item in items" :key="item.img">

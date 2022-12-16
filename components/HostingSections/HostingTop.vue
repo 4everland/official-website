@@ -6,11 +6,11 @@
           <div class="text-box">
             <div class="tags">HOSTING</div>
             <div class="text-title">
-              Host websites or Apps on IPFS, Arweave and Dfinity
+              Host websites or Apps on IPFS, Arweave, and Dfinity
             </div>
             <div class="text-tips">
-              For hosting fast, effective, and web 3.0 censorship-proof Websites
-              or Apps, 4EVERLAND offers everything you need.
+              4EVERLAND offers everything you need to host fast and effective
+              Web 3.0 censorship-resistant websites or apps.
             </div>
             <div style="margin-top: 69px">
               <v-btn

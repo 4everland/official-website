@@ -20,10 +20,10 @@
               <div class="op-9 fz-14 ta-c lh-2 white--text">
                 <p>
                   4EVERLAND's Dev-Grants Program aims to ensure developers make
-                  that smooth leap from Web 2.0 to Web 3.0 along with helping in
+                  a smooth leap from Web 2.0 to Web 3.0 along with helping in
                   the growth and development of Web 3.0. We believe that all
-                  your contributions would greatly benefit Web 3.0's ecosystem
-                  in the long run providing support to many other promising
+                  your contributions would greatly benefit Web 3.0's ecosystem,
+                  in the long run, providing support to many other promising
                   developers and teams.
                 </p>
               </div>

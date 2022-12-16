@@ -5,12 +5,11 @@
         class="text-h4 font-weight-bold text-center mb-6"
         style="color: #132642"
       >
-        About InterPlantary File System(IPFS)
+        About InterPlanetary File System(IPFS)
       </div>
       <div class="text-h6 font-weight-bold text-center" style="color: #6c7789">
-        4EVERLAND has its own IPFS gateway which means it can allow you to
-        access those addresses over HTTP (Hypertext Transfer Protocol) on your
-        browser.
+        4EVERLAND has its own IPFS gateway, which gives you access to addresses
+        over HTTP on your browser.
       </div>
       <v-row class="mt-16">
         <v-col
@@ -50,7 +49,7 @@ export default {
         },
         {
           title: 'Why Choose to use IPFS?',
-          desc: 'Compared IPFS and HTTP. HTTP is a twenty-year-old technology and needs to be improved in order for the Internet to keep up with technology. IPFS allows for decreased latency, enabling us to utilize the higher memory densities and faster processing speeds that are continually being developed. It provides faster overall Internet speed, increased security, and the decentralization of virtual information.',
+          desc: 'Compared to IPFS, HTTP is a twenty-year-old technology that has to be improved to keep up with Internet evolution. IPFS allows enjoying decreased latency, enabling us to use the higher memory densities and faster processing speeds that are being developed. It provides faster Internet speed, increased security, and the decentralization of virtual information.',
           img: require('~/assets/imgs/ipfs/IPFS_03.png'),
         },
       ],

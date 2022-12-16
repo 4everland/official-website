@@ -88,7 +88,7 @@ export default {
       imgItem: [
         {
           name: 'DWeb Hosting',
-          tips: '4EVERLAND Hosting services can help developers to host Webs or Dapps on multiple protocols such as IPFS and Arweave, etc. Users can swiftly deploy websites to Web3.0 by using Github authorization or a Cli local template build.',
+          tips: '4EVERLAND Hosting Service helps developers host websites or DApps on multiple protocols such as IPFS, Arweave, etc. Users can deploy websites to Web 3.0 by using Github authorization or a Cli local template build.',
           link: '/hosting',
           img: require('@/assets/imgs/index/explore/hosting.png'),
           imgs: [
@@ -102,7 +102,7 @@ export default {
         },
         {
           name: 'Storage',
-          tips: "BUCKET enables users to upload, store, and fetch files from multiple protocols such as IPFS and Arweave in a secure, convenient, and efficient manner. Additionally, it's compatible with AWS S3 APIs, interface operations, CLI, and other upload methods.",
+          tips: "Bucket enables users to upload, store, and fetch files from multiple protocols such as IPFS and Arweave in a secure, convenient, and efficient manner. It's compatible with AWS S3 APIs, interface operations, CLI, and other upload methods.",
           link: '/bucket',
           img: require('@/assets/imgs/index/explore/bucket.png'),
           imgs: [
@@ -116,7 +116,7 @@ export default {
         },
         {
           name: 'Decentralized Gateway',
-          tips: '200+ globally distributed gateway nodes available to provide developers with more efficient and faster Web3.0 access.',
+          tips: '200+ globally distributed gateway nodes available to provide developers with more efficient and faster Web 3.0 access',
           herf: 'https://ipfs.4everland.io',
           cols: 4,
           childCols: 12,

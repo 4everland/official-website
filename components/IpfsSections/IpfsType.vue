@@ -35,12 +35,12 @@ export default {
       list: [
         {
           title: 'Public Gateway',
-          desc: 'You can use the gateway to access the IPFS content directly through your web browser without installation of any other software or plugins. Over 200 edge caching locations around world can make you get global acceleration. Each user can take advantage of our public gateway for free.',
+          desc: 'You can use the gateway to access the IPFS content through your web browser without the installation of any other software or plugins. Over 200 edge caching locations around the world can make you enjoy global acceleration. Each user can take advantage of our public gateway for free.',
           img: require('~/assets/imgs/ipfs/type_01.png'),
         },
         {
           title: 'Dedicated Gateway',
-          desc: 'Dedicated Gateways can be set as open or restricted. This means you can control whether just your pinned content on IPFS are accessible through the gateway, it offers the fastest global acceleration, provides a custom domain name and so on. Mentioned the features before, using dedicated gateways will help you to ease to use and make new marketplaces possible.',
+          desc: 'Dedicated Gateways can be set as open or restricted. It means you can control whether your pinned content on IPFS is accessible through the gateway. Dedicated Gateways offer the fastest global acceleration, and support custom domain names, etc.',
           img: require('~/assets/imgs/ipfs/type_02.png'),
         },
       ],

@@ -5,15 +5,14 @@
         class="text-h4 font-weight-bold text-center mb-6"
         style="color: #132642"
       >
-        Gather IPFS +decentralized domain on 4EVERLAND
+        Gather IPFS + decentralized domain on 4EVERLAND
       </div>
       <div class="text-h6 font-weight-bold text-center" style="color: #6c7789">
-        With 4EVERLAND you can use Ethereum Name Service domains and Solona Name
-        Service till now. You can easily point decentralized domain to your IPFS
-        site and have the content automatically update for future deployments.
-        It also can leverage the benefits of the Open Web in your websites and
-        applications. More decentralized domain will be applied in the following
-        time.
+        With 4EVERLAND services, you can enjoy Ethereum Name Service domains and
+        Solana Name Service. Sync your decentralized domain to the IPFS website
+        and get the content updated for future deployments. Implementation of
+        ENS and SNS into your DWeb and DApp can leverage the benefits of the
+        Open Web for your users.
       </div>
       <v-row class="mt-16">
         <v-col

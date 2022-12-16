@@ -21,15 +21,15 @@ export default {
     return {
       imgItem: [
         {
-          tips: 'One-stop solution for Dapps building',
+          tips: 'One-stop solution for DApps building',
           img: require('@/assets/imgs/index/help/help_1.png'),
         },
         {
-          tips: 'Provide multiple ecological resources',
+          tips: 'Provides resources of multiple ecosystems',
           img: require('@/assets/imgs/index/help/help_2.png'),
         },
         {
-          tips: 'Compatible with the traditional development environments',
+          tips: 'Compatible with traditional development environments',
           img: require('@/assets/imgs/index/help/help_3.png'),
         },
         {

@@ -5,7 +5,7 @@
         <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
           <v-col cols="12">
             <div class="footer-titele font-weight-black">
-              Stay up to date on developer updates for the 4EVERLAND
+              Stay up to date on developer updates from 4EVERLAND
             </div>
             <div class="subscribe-input mt-12">
               <!-- <div class="emain-title">E-mail</div> -->

@@ -260,8 +260,8 @@ export default {
           title: '2021 Q2',
           left: 'V1 Quark',
           right: [
-            '• Establish 4EVERLAND foundation and technical community',
-            '• Release V1 version of the white paper, 4EVERLAND official website online',
+            '• Establish 4EVERLAND foundation and technic community',
+            '• Release the V1 version of the white paper, 4EVERLAND official website online',
           ],
         },
         {
@@ -296,7 +296,7 @@ export default {
           title: 'V2 Proton',
           left: 'V2 Proton (2022-2023)',
           right: [
-            'we plan to open the underlying storage and network capabilities, by engaging and supporting more developers to build exclusive service platforms, and further expand commercialization capabilities.',
+            'We plan to open the underlying storage and network capabilities by engaging and supporting more developers to build exclusive service platforms and further expand commercialization capabilities.',
           ],
           img: require(`@/assets/imgs/index/milestones/2.png`),
         },
@@ -307,7 +307,7 @@ export default {
             '• Launch the trusted 4EVERLAND node network.',
             '• Launch a multi-chain payment system, supporting ETH, BSC, Polygon, and other public chains.',
             '• Provide online front-end verifiable solutions to deliver more comprehensive decentralized front-end hosting services.',
-            '• Complete the integration with capabilities of Dfinity’s ecosystem.',
+            '• Complete the integration with the capabilities of Dfinity’s ecosystem.',
           ],
         },
         {
@@ -315,7 +315,7 @@ export default {
           left: 'V2 Proton',
           right: [
             '• Complete the integration of at least 3 mainstream public chains.',
-            '• Deepen the integration with Arweave ecosystem.',
+            '• Deepen the integration with the Arweave ecosystem.',
             '• Enrich the functionality of Hosting and Bucket to meet the needs of developers facing different scenarios.',
             '• Provide open storage and network underlying capabilities. Attract providers to build the upper-layer of commercial applications.',
           ],
@@ -326,7 +326,7 @@ export default {
           right: [
             '• The 4EVERLAND node network will go online.',
             '• Open-source all application layer codes for all community providers to build and use.',
-            "• Complete the integration with capabilities of Filecoin's ecosystem.",
+            "• Complete the integration with the capabilities of Filecoin's ecosystem.",
             '• Bring about more decentralized and powerful gateway capabilities with online (custom) dedicated gateways.',
           ],
         },
@@ -343,7 +343,7 @@ export default {
           title: 'V3 Atom',
           left: 'V3 Atom (2023-2024)',
           right: [
-            'We planned to integrate and support more heterogeneous chains such as Ethereum, BSC, Solona, Polygon, and Filecoin, etc, to achieve inter-blockchain communication, multi-chain deployment, and other multi-scenario requirements. Finally obtain the capability of Web3.0 cloud computing',
+            'We are planning to integrate and support more heterogeneous chains such as Ethereum, BSC, Solona, Polygon, and Filecoin, etc, to implement inter-blockchain communication, multi-chain deployment, and other multi-scenario requirements. Finally, obtain the capability of Web 3.0 cloud computing.',
           ],
           img: require(`@/assets/imgs/index/milestones/3.png`),
         },

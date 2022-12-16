@@ -8,10 +8,9 @@
         Browse IPFS with 4EVERLAND Gateway
       </div>
       <div class="text-h6 font-weight-bold text-center" style="color: #6c7789">
-        4EVERLAND gateways offer global acceleration, custom domain, and SSL
-        certificate to chaise better performance,users will be benefit from the
-        4EVERLAND IPFS gateway by leveraging its geographically distributed
-        swarm network.
+        4EVERLAND Gateway offers global acceleration, custom domains, and SSL
+        certificates for better performance. Users can enjoy 4EVERLAND IPFS
+        gateway by leveraging its globally distributed SWARM network.
       </div>
       <v-row class="mt-16">
         <v-col
@@ -46,12 +45,12 @@ export default {
         },
         {
           title: 'Custom Domain',
-          desc: 'The dedicated IPFS gateway from 4EVERLAND comes with the option to add a custom domain. Custom domain names can help users prompt branding, it should be memorable and gain more added values.',
+          desc: '4EVERLAND Gateway supports custom domains. They advance branding and bring more value to a project.',
           img: require('~/assets/imgs/ipfs/browse_02.png'),
         },
         {
           title: 'SSL Certificate',
-          desc: 'SSL Certificate ensures that all communication between the browser and the website you are viewing is encrypted. And free auto-renewal is also provided by 4EVERLAND.',
+          desc: 'SSL Certificate ensures that all communication between a browser and a website you are viewing is encrypted. 4EVERLAND also provides free auto-renewal.',
           img: require('~/assets/imgs/ipfs/browse_03.png'),
         },
       ],
