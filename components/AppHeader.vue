@@ -219,7 +219,7 @@ export default {
             // },
             {
               text: 'IPFS Gateway',
-              tips: 'Decentralize your websites or applications further with an ENS Domain',
+              tips: 'Global distributed nodes for global acceleration and automatic allocation.',
               icon: require('@/assets/imgs/nav/IPFS Gateway.png'),
               link: '/ipfs',
             },

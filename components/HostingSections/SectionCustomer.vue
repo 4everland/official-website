@@ -26,12 +26,12 @@ export default {
       items: [
         {
           name: 'UNISWAP',
-          tips: 'Deploy contracts and front-ends in a single click',
+          tips: 'Uniswap is a cryptocurrency exchange which uses a decentralized network protocol.',
           icon: require('@/assets/imgs/hosting/cases/uniswap.png'),
         },
         {
           name: 'DogeCoin',
-          tips: 'No additional learning costs for development and deployment.',
+          tips: 'Dogecoin is an open-source peer-to-peer digital currency, favoured by Shiba Inus worldwide.',
           icon: require('@/assets/imgs/hosting/cases/dogecoin.png'),
         },
         {
