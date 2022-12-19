@@ -244,7 +244,7 @@ export default {
           title: 'V1 Quark',
           left: 'V1 Quark (2021-2022)',
           right: [
-            'Our Genesis product completes the overall network architecture of the global node collaboration, provides content storage and global access acceleration services.',
+            'Our Genesis product creates the network architecture of the global node collaboration, provides content storage and global acceleration service.',
           ],
           img: require(`@/assets/imgs/index/milestones/1.png`),
         },
@@ -316,18 +316,18 @@ export default {
           right: [
             '• Complete the integration of at least 3 mainstream public chains.',
             '• Deepen the integration with the Arweave ecosystem.',
-            '• Enrich the functionality of Hosting and Bucket to meet the needs of developers facing different scenarios.',
-            '• Provide open storage and network underlying capabilities. Attract providers to build the upper-layer of commercial applications.',
+            '• Enrich the functionality of Hosting and Bucket to meet the needs of developers facing different use cases.',
+            '• Provide open storage and networking capabilities. Attract providers to build the upper layer for commercial applications.',
           ],
         },
         {
           title: '2023 Q1',
           left: 'V2 Proton',
           right: [
-            '• The 4EVERLAND node network will go online.',
-            '• Open-source all application layer codes for all community providers to build and use.',
-            "• Complete the integration with the capabilities of Filecoin's ecosystem.",
-            '• Bring about more decentralized and powerful gateway capabilities with online (custom) dedicated gateways.',
+            '• The 4EVERLAND node network starts operating.',
+            '• Open-source application layer code to let the community providers use it and build their projects.',
+            "• Complete the integration with the capacities of Filecoin's ecosystem.",
+            '• Integrate more decentralized and powerful gateway capabilities with dedicated gateways.',
           ],
         },
         {

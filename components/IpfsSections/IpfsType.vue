@@ -5,7 +5,7 @@
         class="text-h4 font-weight-bold text-center mb-6"
         style="color: #132642"
       >
-        Types of 4EVERLAND Gateway
+        Types of 4EVERLAND Gateways
       </div>
       <v-row class="mt-16 d-flex justify-space-around">
         <v-col

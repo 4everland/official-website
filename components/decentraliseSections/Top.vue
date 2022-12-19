@@ -15,7 +15,7 @@
             class="text-h6 mt-12 font-weight-blod"
             style="max-width: 600px; color: #6c7789"
           >
-            You can host any website in truly a decentralized way by using DNS
+            You can host any website in a truly decentralized way by using DNS
             on IPFS. This means your website becomes censorship-resistant,
             immutable, and hosted on a decentralized network.
           </div>

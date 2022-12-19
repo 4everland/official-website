@@ -243,7 +243,7 @@ export default {
           childs: [
             {
               text: 'Universe',
-              tips: 'Project built on 4EVERLAND or Web 3.0 tech',
+              tips: 'Projects built on 4EVERLAND or Web 3.0 tech',
               icon: require('@/assets/imgs/nav/Universe.png'),
               link: '/universe',
             },

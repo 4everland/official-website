@@ -8,9 +8,9 @@
               Efficient and stable Web3.0 infrastructure
             </div>
             <div class="text-tips">
-              4EVERLAND is committed to offering users a distributed,
-              high-efficiency, self-incentivized, and low-cost data hosting
-              network
+              4EVERLAND is hard-working to empower users with a distributed,
+              high-efficient, self-incentivized, and low-cost data hosting
+              network.
             </div>
           </div>
           <div class="data-box">

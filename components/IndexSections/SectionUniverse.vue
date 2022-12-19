@@ -6,8 +6,7 @@
         <v-col cols="12" md="6" lg="6">
           <div class="text-box">
             <div class="text-title">
-              Use 4EVERLAND and join our Web 3.0 Universe fam with these
-              projects
+              Use 4EVERLAND and join our Web 3.0 Universe fam
             </div>
 
             <div style="margin-top: 72px" class="hidden-sm-and-down">

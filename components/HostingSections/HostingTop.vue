@@ -6,7 +6,7 @@
           <div class="text-box">
             <div class="tags">HOSTING</div>
             <div class="text-title">
-              Host websites or Apps on IPFS, Arweave, and Dfinity
+              Host Websites and Apps on IPFS, Arweave, or Dfinity
             </div>
             <div class="text-tips">
               4EVERLAND offers everything you need to host fast and effective
@@ -85,7 +85,7 @@ export default {
         },
         {
           name: 'Selective',
-          tips: 'Supporting multiple protocols and public chains on a single dashboard',
+          tips: 'Supports multiple protocols and public chains on a single dashboard',
           icon: require('@/assets/imgs/hosting/Selective.png'),
         },
       ],

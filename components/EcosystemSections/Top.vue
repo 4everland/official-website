@@ -5,7 +5,7 @@
       <v-container class="text-center">
         <div class="banner-title">Hello! Welcome to 4EVERLAND Universe!</div>
         <div class="banner-tips">
-          4EVERLAND's Universe is a portal to showcase projects, Web 3.0 tech
+          4EVERLAND Universe is a portal to showcase projects, Web 3.0 tech
           communities, tools, and products that have integrated 4EVERLAND.
         </div>
         <div class="btn-box">

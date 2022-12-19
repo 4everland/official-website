@@ -63,7 +63,7 @@ export default {
           tag: 'Dfinity',
           title: 'Expanding the Superpowers of the Internet',
           content:
-            '4EVERLAND simplifies hosting of static frontends on Internet computer canisters. Create, update and manage your canisters automatically and deploy trustless projects on IC in seconds.',
+            '4EVERLAND simplifies hosting of static frontends on Internet Computer canisters. Create, update and manage your canisters automatically and deploy trustless projects on IC in seconds.',
           btn: 'Get started for free',
           img: require('@/assets/imgs/hosting/Dfinity.png'),
         },

@@ -123,8 +123,8 @@ export default {
           hover: true,
         },
         {
-          name: 'Multiple On-chain Payments',
-          tips: '4EVERLAND supports payments using a variety of assets on as many chains as possible for the convenience of users from different ecologies.',
+          name: 'Payments on Multiple Chains',
+          tips: '4EVERLAND supports payments with assets on multiple chains for the greater convenience of users from different ecosystems.',
           herf: 'https://dashboard.4everland.org',
           cols: 4,
           childCols: 12,

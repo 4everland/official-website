@@ -5,7 +5,7 @@
         class="text-h4 font-weight-bold text-center mb-6"
         style="color: #132642"
       >
-        About InterPlanetary File System(IPFS)
+        About InterPlanetary File System (IPFS)
       </div>
       <div class="text-h6 font-weight-bold text-center" style="color: #6c7789">
         4EVERLAND has its own IPFS gateway, which gives you access to addresses

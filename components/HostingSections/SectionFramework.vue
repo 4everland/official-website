@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="block-titel">
-            Works for almost all sites&amp;popular frameworks
+            Works for almost all websites and popular frameworks.
           </div>
         </v-col>
         <v-col

@@ -4,11 +4,11 @@
       <v-container>
         <v-row class="grant-box">
           <v-col cols="12" md="4" class="tit-box">
-            <div class="emp-title">Empowered Your Web.3.0 Development</div>
+            <div class="emp-title">Empowered Your Web 3.0 Development</div>
             <div class="emp-tips">
-              You can get a 4EVERLAND support plan from the 4EVERLAND Pro
-              Program. Come with us to make a significant contribution to
-              web.3.0.
+              You can receive a 4EVERLAND support plan from the 4EVERLAND Pro
+              Program. Come with us to make a significant contribution to Web
+              3.0.
             </div>
           </v-col>
           <v-col

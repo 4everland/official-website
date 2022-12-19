@@ -28,9 +28,8 @@
           Upload & Pin Files to IPFS Smoothly
         </div>
         <div class="text-h5 desc">
-          Upload your files to IPFS smoothly with our UI, CLI, or SDK. The
-          built-in pinning orchestration in our platform makes uploading and
-          pinning files to IPFS a breeze.
+          Upload your files smoothly to IPFS with UI, CLI, or SDK. The built-in
+          pinning tool makes uploading and pinning to IPFS a breeze.
         </div>
         <v-row>
           <v-col v-for="item in imgs" :key="item.name" cols="12" md="4" lg="4">
@@ -139,6 +138,7 @@ export default {
   max-height: 250px;
 }
 .item-tit {
+  height: 80px;
   color: #484d72;
 }
 .item-content {

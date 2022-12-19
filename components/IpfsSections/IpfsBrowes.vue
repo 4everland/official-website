@@ -5,10 +5,10 @@
         class="text-h4 font-weight-bold text-center mb-6"
         style="color: #132642"
       >
-        Browse IPFS with 4EVERLAND Gateway
+        Browse IPFS with 4EVERLAND Gateways
       </div>
       <div class="text-h6 font-weight-bold text-center" style="color: #6c7789">
-        4EVERLAND Gateway offers global acceleration, custom domains, and SSL
+        4EVERLAND Gateways offers global acceleration, custom domains, and SSL
         certificates for better performance. Users can enjoy 4EVERLAND IPFS
         gateway by leveraging its globally distributed SWARM network.
       </div>
