@@ -238,6 +238,11 @@ export default {
               href: '/logo.zip',
               target: '_blank',
             },
+            {
+              name: 'Status',
+              href: 'https://4everland.statuspage.io/',
+              target: '_blank',
+            },
           ],
         },
         {
