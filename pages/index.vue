@@ -88,7 +88,7 @@ export default {
     z-index: 89;
     text-align: center;
     overflow: hidden;
-
+    display: none;
     /deep/ .v-alert__content {
       overflow: hidden;
     }
