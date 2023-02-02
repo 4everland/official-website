@@ -112,7 +112,7 @@
         class="copy-right"
         :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
       >
-        &copy; 2021 4EVERLAND, Inc
+        &copy; 2023 4EVERLAND, Inc
       </div>
     </v-container>
     <div v-show="subSuccessShow" class="sub-success">
