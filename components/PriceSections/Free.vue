@@ -31,8 +31,8 @@
               <tr>
                 <td>100GB/month</td>
                 <td>250Min/month</td>
-                <td>5GB</td>
-                <td>100MB</td>
+                <td>6GB-25GB</td>
+                <td>100MB-200MB</td>
               </tr>
             </table>
           </v-col>

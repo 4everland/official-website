@@ -5,7 +5,7 @@
         <v-col cols="12" md="12" lg="12">
           <div class="block-titel">Network Support</div>
           <div class="block-text">
-            Polygon, Ethereum, BSC are accepted by 4EVERLAND.
+            Polygon, Ethereum, BSC, Arbitrum are accepted by 4EVERLAND.
           </div>
         </v-col>
         <v-col
@@ -46,8 +46,11 @@ export default {
           img: require('@/assets/imgs/price/BSC.png'),
         },
         {
-          img: require('@/assets/imgs/price/More.png'),
+          img: require('@/assets/imgs/price/Arbitrum.png'),
         },
+        // {
+        //   img: require('@/assets/imgs/price/More.png'),
+        // },
       ],
     }
   },
