@@ -74,25 +74,18 @@ export default {
     async subscribe() {
       this.loading = true
       try {
-        const resp = await this.$axios.get(
-          `https://mailsubscribe.4everland.org/?email=${this.email}`
+        const resp = await this.$axios.post(
+          `https://mailsubscribe.4everland.org/contacts/email`,
+          {
+            email: this.email,
+          }
         )
         // eslint-disable-next-line no-console
-        // console.log(resp.data)
-        if (resp.data.status) {
-          if (resp.data.status === 'success' && resp.data.pending) {
-            this.subPendingShow = true
-          } else if (resp.data.status === 'success') {
-            this.subSuccessShow = true
-            setTimeout(() => {
-              this.subSuccessShow = false
-            }, 2500)
-          } else {
-            this.$dialog.error({
-              text: resp.data.detail?.title || 'Subscribe failed',
-              title: 'Error',
-            })
-          }
+        if (resp.data.code === 200) {
+          this.subSuccessShow = true
+          setTimeout(() => {
+            this.subSuccessShow = false
+          }, 2500)
         } else {
           this.$dialog.error({
             text: 'Subscribe failed',
@@ -100,6 +93,7 @@ export default {
           })
         }
       } catch (ex) {
+        console.log(ex)
         this.$dialog.error({
           text: ex.message,
           title: 'Error',
