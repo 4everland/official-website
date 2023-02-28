@@ -92,12 +92,18 @@ export default {
             title: 'Error',
           })
         }
-      } catch (ex) {
-        console.log(ex)
-        this.$dialog.error({
-          text: ex.message,
-          title: 'Error',
-        })
+      } catch (err) {
+        if (err.message === 'Request failed with status code 400') {
+          this.$dialog.error({
+            text: 'existent email',
+            title: 'Error',
+          })
+        } else {
+          this.$dialog.error({
+            text: err.message,
+            title: 'Error',
+          })
+        }
       } finally {
         this.loading = false
       }
