@@ -17,6 +17,7 @@
               />
               <v-btn
                 :loading="loading"
+                :disabled="disabled"
                 class="text-body2 white--text"
                 color="#000"
                 tile
@@ -86,14 +87,14 @@ export default {
           setTimeout(() => {
             this.subSuccessShow = false
           }, 2500)
-        } else if (resp.data.code === 400 || resp.data.code === 500) {
+        } else if (resp.data.code === 400) {
           this.$dialog.error({
-            text: resp.data.message,
+            text: 'The email has already subscribed.',
             title: 'Error',
           })
         } else {
           this.$dialog.error({
-            text: 'Subscribe failed',
+            text: 'Subscription failed, please try again later.',
             title: 'Error',
           })
         }
