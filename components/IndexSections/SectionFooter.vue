@@ -54,6 +54,10 @@
 </template>
 <script>
 import { mdiEmoticonHappyOutline } from '@mdi/js'
+// eslint-disable-next-line
+const Reg =
+  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
 export default {
   data() {
     return {
@@ -67,8 +71,7 @@ export default {
   },
   watch: {
     email(newVal) {
-      this.disabled =
-        !/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(newVal)
+      this.disabled = !Reg.test(newVal)
     },
   },
   methods: {
@@ -108,8 +111,7 @@ export default {
       }
     },
     emailChange() {
-      this.disabled =
-        !/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(this.email)
+      this.disabled = !Reg.test(this.email)
     },
   },
 }
