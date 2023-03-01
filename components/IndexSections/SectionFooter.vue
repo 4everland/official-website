@@ -86,6 +86,11 @@ export default {
           setTimeout(() => {
             this.subSuccessShow = false
           }, 2500)
+        } else if (resp.data.code === 400 || resp.data.code === 500) {
+          this.$dialog.error({
+            text: resp.data.message,
+            title: 'Error',
+          })
         } else {
           this.$dialog.error({
             text: 'Subscribe failed',
@@ -93,17 +98,10 @@ export default {
           })
         }
       } catch (err) {
-        if (err.message === 'Request failed with status code 400') {
-          this.$dialog.error({
-            text: 'existent email',
-            title: 'Error',
-          })
-        } else {
-          this.$dialog.error({
-            text: err.message,
-            title: 'Error',
-          })
-        }
+        this.$dialog.error({
+          text: err.message,
+          title: 'Error',
+        })
       } finally {
         this.loading = false
       }
