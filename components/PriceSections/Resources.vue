@@ -24,51 +24,44 @@
               <tr>
                 <td rowspan="2">Bandwidth</td>
                 <td rowspan="2">Bandwidth</td>
-                <td>100GB</td>
+                <td>0-100GB</td>
                 <td>Free/Month</td>
               </tr>
               <tr>
-                <td>10GB+</td>
+                <td>100GB+</td>
                 <td>$8.5/100G</td>
               </tr>
               <tr>
                 <td rowspan="2">Build minutes</td>
                 <td rowspan="2">Build minutes</td>
-                <td>250Min</td>
+                <td>0-250Min</td>
                 <td>Free/Month</td>
               </tr>
               <tr>
-                <td>100Min+</td>
+                <td>250Min+</td>
                 <td>$2/100Min</td>
               </tr>
               <tr>
-                <td rowspan="4">IPFS</td>
-                <td rowspan="2">Storage</td>
-                <td>5G</td>
-                <td>Free/12 Month</td>
-              </tr>
-              <tr>
-                <td>5G+</td>
+                <td rowspan="2">IPFS</td>
+                <td>Storage</td>
+                <td>1GB+</td>
                 <td>$2/100G/Month</td>
               </tr>
+
               <tr>
-                <td rowspan="2">Storage duration</td>
-                <td>12 Months</td>
-                <td>Free/12 Month</td>
-              </tr>
-              <tr>
-                <td>12 Months+</td>
+                <td>Storage duration</td>
+                <td>1 Months+</td>
                 <td>Settlement method</td>
               </tr>
               <tr>
                 <td rowspan="2">Arweave</td>
                 <td rowspan="2">Storage</td>
-                <td>100MB</td>
+                <td>0-100MB</td>
                 <td>Free</td>
               </tr>
               <tr>
                 <td>100MB+</td>
-                <td>$0.31</td>
+                <td>$0.81</td>
               </tr>
             </table>
           </v-col>
