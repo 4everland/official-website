@@ -1,7 +1,7 @@
 <template>
   <div id="ExploreSections">
     <v-container>
-      <div class="explore-box" v-show="isShow">
+      <div v-show="isShow" class="explore-box">
         <div class="explore-top">
           <div class="explore-top-title">Explore DApps</div>
           <div class="search-box">
@@ -173,7 +173,11 @@ export default {
         const indexOf = name.indexOf(val)
         const index = this.defaultType
         const type = this.typesList[index]
-        if (indexOf !== -1 && type === ele.type) {
+        if (this.defaultType === 'all') {
+          if (indexOf !== -1) {
+            arr.push(ele)
+          }
+        } else if (indexOf !== -1 && type === ele.type) {
           arr.push(ele)
         }
       })
