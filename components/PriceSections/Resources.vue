@@ -61,7 +61,7 @@
               </tr>
               <tr>
                 <td>100MB+</td>
-                <td>$0.81</td>
+                <td>$0.55</td>
               </tr>
             </table>
           </v-col>
