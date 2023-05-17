@@ -40,6 +40,13 @@
               <span class="nav-font">
                 {{ item.text }}
                 <v-icon v-if="item.childs">{{ mdiChevronDown }}</v-icon>
+                <v-img
+                  v-if="item.icon"
+                  class="hot-icon"
+                  max-height="16"
+                  max-width="16"
+                  :src="item.icon"
+                ></v-img>
               </span>
             </v-btn>
           </template>
@@ -301,6 +308,7 @@ export default {
           text: 'First Sowing',
           href: 'https://firstsowing.4everland.org/',
           target: '_blank',
+          icon: require('@/assets/imgs/nav/icon_rocket_24x24.png'),
         },
       ],
     }
@@ -315,6 +323,12 @@ export default {
 .nav-font {
   font-family: 'Ubuntu-Blod', sans-serif !important;
   font-weight: bold;
+  position: relative;
+}
+.hot-icon {
+  position: absolute;
+  right: -20px;
+  top: -2px;
 }
 .always-active {
   opacity: 1 !important;
