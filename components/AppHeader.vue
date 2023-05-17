@@ -297,6 +297,11 @@ export default {
           href: 'http://discord.gg/4everland',
           target: '_blank',
         },
+        {
+          text: 'First Sowing',
+          href: 'https://firstsowing.4everland.org/',
+          target: '_blank',
+        },
       ],
     }
   },
