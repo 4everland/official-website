@@ -288,6 +288,13 @@ export default {
               href: 'https://www.reddit.com/r/4everland/',
               target: '_blank',
             },
+            {
+              text: 'Template-a-thon 🔥',
+              tips: 'Join the Template-a-thon,  Share the 50,000,000 T-4EVER grant!',
+              icon: require('@/assets/imgs/nav/Template-a-thon.png'),
+              href: 'https://template.4everland.org/#/',
+              target: '_blank',
+            },
           ],
         },
         {
