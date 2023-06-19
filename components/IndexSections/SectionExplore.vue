@@ -66,11 +66,11 @@
                       :src="img"
                       contain
                     />
-                    <span>
+                    <!-- <span>
                       <v-icon color="#000" dense class="mr-2"
                         >mdi-dots-horizontal-circle-outline</v-icon
                       >More</span
-                    >
+                    > -->
                   </div>
                 </v-col>
               </v-row>
