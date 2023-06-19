@@ -45,24 +45,24 @@
                     ></v-img>
                     <div class="item-img-box hidden-sm-and-down">
                       <img
-                        v-for="(img, index) in item.imgs"
-                        :key="index"
+                        v-for="(img, i) in item.imgs"
+                        :key="i"
                         :src="img"
                         contain
                       />
-                      <span>
+                      <!-- <span>
                         <v-icon color="#000" class="mr-2"
                           >mdi-dots-horizontal-circle-outline</v-icon
                         >More</span
-                      >
+                      > -->
                     </div>
                   </div></v-col
                 >
                 <v-col v-if="item.img" :cols="12" class="hidden-md-and-up">
                   <div class="item-img-box hidden-md-and-up">
                     <img
-                      v-for="(img, index) in item.imgs"
-                      :key="index"
+                      v-for="(img, i) in item.imgs"
+                      :key="i"
                       :src="img"
                       contain
                     />
@@ -93,8 +93,9 @@ export default {
           img: require('@/assets/imgs/index/explore/hosting.png'),
           imgs: [
             require('@/assets/imgs/index/explore/IPFS.png'),
-            require('@/assets/imgs/index/explore/dfinity.png'),
             require('@/assets/imgs/index/explore/Arweave.png'),
+            require('@/assets/imgs/index/explore/BNBGreenfield.png'),
+            require('@/assets/imgs/index/explore/dfinity.png'),
             // require('@/assets/imgs/index/explore/more.png'),
           ],
           cols: 12,

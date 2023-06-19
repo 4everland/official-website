@@ -30,7 +30,7 @@
           resize
           hide-vertical
           :hide-horizontal="
-            !$vuetify.breakpoint.smAndDown && dappsList.length <= 15
+            !$vuetify.breakpoint.smAndDown && dappsList.length <= 16
           "
         >
           <v-col cols="12" class="partner-list">
@@ -130,7 +130,7 @@ export default {
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      height: 300px;
+      height: 380px;
       padding-left: calc(52vw - 1220px * 0.19) !important;
       padding-right: 20px;
       // overflow: scroll hidden;

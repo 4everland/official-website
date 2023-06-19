@@ -6,7 +6,8 @@
           <div class="text-box">
             <div class="tags">HOSTING</div>
             <div class="text-title">
-              Host Websites and Apps on IPFS, Arweave, or Dfinity
+              Host websites and Dapps on IPFS, Arweave, Dfinity, and BNB
+              Greenfield
             </div>
             <div class="text-tips">
               4EVERLAND offers everything you need to host fast and effective
@@ -28,7 +29,7 @@
           <div class="text-center">
             <v-img
               class="web-img"
-              :src="require('@/assets/imgs/hosting/top.png')"
+              :src="require('@/assets/imgs/hosting/top.jpg')"
             ></v-img>
           </div>
         </v-col>

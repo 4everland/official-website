@@ -67,6 +67,14 @@ export default {
           btn: 'Get started for free',
           img: require('@/assets/imgs/hosting/Dfinity.png'),
         },
+        {
+          tag: 'BNB Greenfield',
+          title: 'Reshaping Web3 data ownership with BNB Greenfield',
+          content:
+            "BNB Greenfield unleashes the power of decentralized technology on data ownership and the data economy. 4EVERLAND's innovative combination bestows users with enhanced control and security over their hosting data and transforms the manner by which we engage with the decentralized digital realm.",
+          btn: 'Get started for free',
+          img: require('@/assets/imgs/hosting/BNBGreenfield.png'),
+        },
       ],
     }
   },
@@ -83,12 +91,14 @@ export default {
     border-radius: 6px;
 
     .item-tag {
-      width: 62px;
+      min-width: 62px;
       height: 18px;
       background: #000;
       color: #fff;
       font-size: 11px;
       text-align: center;
+      display: inline-block;
+      padding: 0 20px;
     }
     .item-title {
       font-size: 31px;
