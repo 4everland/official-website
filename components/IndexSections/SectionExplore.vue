@@ -88,7 +88,7 @@ export default {
       imgItem: [
         {
           name: 'DWeb Hosting',
-          tips: '4EVERLAND Hosting Service helps developers host websites or DApps on multiple protocols such as IPFS, Arweave, etc. Users can deploy websites to Web 3.0 by using Github authorization or a Cli local template build.',
+          tips: '4EVERLAND Hosting Service helps developers host websites or DApps on multiple protocols such as IPFS, Arweave, BNB Greenfield, etc. Users can deploy websites to Web 3.0 by using Github authorization or a Cli local template build.',
           link: '/hosting',
           img: require('@/assets/imgs/index/explore/hosting.png'),
           imgs: [
