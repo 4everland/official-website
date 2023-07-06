@@ -54,8 +54,8 @@
 </template>
 <script>
 import { mdiEmoticonHappyOutline } from '@mdi/js'
-// eslint-disable-next-line
 const Reg =
+  // eslint-disable-next-line
   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 export default {
@@ -79,10 +79,7 @@ export default {
       this.loading = true
       try {
         const resp = await this.$axios.post(
-          `https://mailsubscribe.4everland.org/contacts/email`,
-          {
-            email: this.email,
-          }
+          `https://auth.foreverland.xyz/events/email-subscription?email=${this.email}`
         )
         // eslint-disable-next-line no-console
         if (resp.data.code === 200) {
