@@ -29,7 +29,7 @@
               </tr>
               <tr>
                 <td>100GB+</td>
-                <td>$8.5/100G</td>
+                <td>$10/100G</td>
               </tr>
               <tr>
                 <td rowspan="2">Build minutes</td>
@@ -39,13 +39,13 @@
               </tr>
               <tr>
                 <td>250Min+</td>
-                <td>$2/100Min</td>
+                <td>$3/100Min</td>
               </tr>
               <tr>
                 <td rowspan="2">IPFS</td>
                 <td>Storage</td>
                 <td>1GB+</td>
-                <td>$2/100G/Month</td>
+                <td>$8/100G/Month</td>
               </tr>
 
               <tr>
@@ -61,7 +61,7 @@
               </tr>
               <tr>
                 <td>100MB+</td>
-                <td>$0.55</td>
+                <td>≈$0.55</td>
               </tr>
             </table>
           </v-col>
