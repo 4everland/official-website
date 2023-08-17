@@ -7,93 +7,97 @@
       elevate-on-scroll
       :elevation="4"
       color="#fff"
-      height="80"
+      height="120"
     >
-      <v-container class="d-flex align-center">
-        <v-btn text color="transparent" to="/" class="always-active mr-8">
-          <logo />
-        </v-btn>
-        <v-menu
-          v-for="item in links"
-          :key="item.text"
-          bottom
-          rounded="0"
-          transition="slide-y-transition"
-          offset-y
-          position
-          z-index="99"
-        >
-          <template #activator="{ on, attrs }">
-            <v-btn
-              class="hidden-sm-and-down nav-btn text-subtitle-1"
-              plain
-              nuxt
-              replace
-              :height="80"
-              :to="item.link"
-              :href="item.href"
-              :target="item.target"
-              :ripple="false"
-              v-bind="attrs"
-              v-on="on"
-            >
-              <span class="nav-font">
-                {{ item.text }}
-                <v-icon v-if="item.childs">{{ mdiChevronDown }}</v-icon>
-                <v-img
-                  v-if="item.icon"
-                  class="hot-icon"
-                  max-height="16"
-                  max-width="16"
-                  :src="item.icon"
-                ></v-img>
-              </span>
-            </v-btn>
-          </template>
-          <div v-if="item.childs" class="white menu-down">
-            <v-container>
-              <v-row>
-                <v-col
-                  v-for="child in item.childs"
-                  :key="child.text"
-                  :cols="12"
-                  :md="6"
-                  :lg="6"
-                  :xl="6"
-                >
-                  <v-btn
-                    plain
-                    nuxt
-                    :height="60"
-                    replace
-                    :to="child.link"
-                    :href="child.href"
-                    :target="child.target"
-                    :ripple="false"
+      <div style="width: 100%; padding-top: 40px">
+        <app-top-tips />
+        <v-container class="d-flex align-center" style="height: 80px">
+          <v-btn text color="transparent" to="/" class="always-active mr-8">
+            <logo />
+          </v-btn>
+          <v-menu
+            v-for="item in links"
+            :key="item.text"
+            bottom
+            rounded="0"
+            transition="slide-y-transition"
+            offset-y
+            position
+            z-index="99"
+          >
+            <template #activator="{ on, attrs }">
+              <v-btn
+                class="hidden-sm-and-down nav-btn text-subtitle-1"
+                plain
+                nuxt
+                replace
+                :height="80"
+                :to="item.link"
+                :href="item.href"
+                :target="item.target"
+                :ripple="false"
+                v-bind="attrs"
+                v-on="on"
+              >
+                <span class="nav-font">
+                  {{ item.text }}
+                  <v-icon v-if="item.childs">{{ mdiChevronDown }}</v-icon>
+                  <v-img
+                    v-if="item.icon"
+                    class="hot-icon"
+                    max-height="16"
+                    max-width="16"
+                    :src="item.icon"
+                  ></v-img>
+                </span>
+              </v-btn>
+            </template>
+            <div v-if="item.childs" class="white menu-down">
+              <v-container>
+                <v-row>
+                  <v-col
+                    v-for="child in item.childs"
+                    :key="child.text"
+                    :cols="12"
+                    :md="6"
+                    :lg="6"
+                    :xl="6"
                   >
-                    <div class="d-flex align-center">
-                      <v-img
-                        max-height="34"
-                        max-width="34"
-                        :src="child.icon"
-                      ></v-img>
-                      <div class="ml-3 nav-font">
-                        <div class="nav-font text-subtitle-1 font-weight-bold">
-                          {{ child.text }}
-                        </div>
-                        <div
-                          class="nav-font caption grey-text text-lighten-1 tips"
-                        >
-                          {{ child.tips }}
+                    <v-btn
+                      plain
+                      nuxt
+                      :height="60"
+                      replace
+                      :to="child.link"
+                      :href="child.href"
+                      :target="child.target"
+                      :ripple="false"
+                    >
+                      <div class="d-flex align-center">
+                        <v-img
+                          max-height="34"
+                          max-width="34"
+                          :src="child.icon"
+                        ></v-img>
+                        <div class="ml-3 nav-font">
+                          <div
+                            class="nav-font text-subtitle-1 font-weight-bold"
+                          >
+                            {{ child.text }}
+                          </div>
+                          <div
+                            class="nav-font caption grey-text text-lighten-1 tips"
+                          >
+                            {{ child.tips }}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </v-btn>
-                </v-col>
-              </v-row>
-            </v-container>
-          </div>
-          <!-- <v-list v-if="item.childs">
+                    </v-btn>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </div>
+            <!-- <v-list v-if="item.childs">
             <v-list-item v-for="child in item.childs" :key="child.text">
               <v-btn
                 class="hidden-sm-and-down nav-btn"
@@ -110,28 +114,29 @@
               </v-btn>
             </v-list-item>
           </v-list> -->
-        </v-menu>
-        <v-spacer />
-        <v-btn
-          class="hidden-md-and-up"
-          text
-          icon
-          @click.stop="showDrawer = !showDrawer"
-        >
-          <v-icon>{{ mdiMenu }}</v-icon>
-        </v-btn>
-        <v-btn
-          :href="loginUrl"
-          target="_blank"
-          class="hidden-sm-and-down black white--text font-weight-bold"
-          outlined
-          tile
-          color="#000"
-        >
-          Login
-          <v-icon class="ml-2">{{ mdiChevronRight }}</v-icon>
-        </v-btn>
-      </v-container>
+          </v-menu>
+          <v-spacer />
+          <v-btn
+            class="hidden-md-and-up"
+            text
+            icon
+            @click.stop="showDrawer = !showDrawer"
+          >
+            <v-icon>{{ mdiMenu }}</v-icon>
+          </v-btn>
+          <v-btn
+            :href="loginUrl"
+            target="_blank"
+            class="hidden-sm-and-down black white--text font-weight-bold"
+            outlined
+            tile
+            color="#000"
+          >
+            Login
+            <v-icon class="ml-2">{{ mdiChevronRight }}</v-icon>
+          </v-btn>
+        </v-container>
+      </div>
     </v-app-bar>
     <v-navigation-drawer v-model="showDrawer" right temporary fixed>
       <v-list>
@@ -184,12 +189,13 @@ import {
   mdiWallet,
 } from '@mdi/js'
 import Logo from '../components/Logo.vue'
+import AppTopTips from './AppTopTips.vue'
 
 const LOGIN_URL = process.env.LOGIN_URL
 const DASHBOARD_HOST = process.env.DASHBOARD_HOST
 
 export default {
-  components: { Logo },
+  components: { Logo, AppTopTips },
   data() {
     return {
       mdiMenu,
@@ -333,6 +339,7 @@ export default {
   z-index: 99;
   position: relative;
 }
+
 .nav-font {
   font-family: 'Ubuntu-Blod', sans-serif !important;
   font-weight: bold;
