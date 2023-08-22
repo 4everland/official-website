@@ -37,7 +37,7 @@ export default {
 
   methods: {
     openNewPage() {
-      this.open('https://unleashar.4everland.org/')
+      window.open('https://unleashar.4everland.org/')
     },
   },
 }
