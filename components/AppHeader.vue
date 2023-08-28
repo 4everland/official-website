@@ -317,18 +317,18 @@ export default {
           href: 'http://discord.gg/4everland',
           target: '_blank',
         },
-        // {
-        //   text: 'First Sowing',
-        //   href: 'https://firstsowing.4everland.org/',
-        //   target: '_blank',
-        //   icon: require('@/assets/imgs/nav/icon_rocket_24x24.png'),
-        // },
         {
-          text: 'Unleash Arweave',
-          href: 'https://unleashar.4everland.org/',
+          text: 'First Sowing',
+          href: 'https://firstsowing.4everland.org/',
           target: '_blank',
-          icon: require('@/assets/imgs/nav/icon_hot.svg'),
+          icon: require('@/assets/imgs/nav/icon_rocket_24x24.png'),
         },
+        // {
+        //   text: 'Unleash Arweave',
+        //   href: 'https://unleashar.4everland.org/',
+        //   target: '_blank',
+        //   icon: require('@/assets/imgs/nav/icon_hot.svg'),
+        // },
       ],
     }
   },
