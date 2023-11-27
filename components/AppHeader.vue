@@ -310,7 +310,8 @@ export default {
         },
         {
           text: 'Pricing',
-          link: '/price',
+          href: 'https://docs.4everland.org/get-started/billing-and-pricing/pricing-model',
+          target: '_blank',
         },
         {
           text: 'Community',
