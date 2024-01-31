@@ -130,13 +130,18 @@ export default {
       this.defaultMobileType = types[0]
       const typeList = {}
       types.forEach((element) => {
-        typeList[element] = 0
+        if (element !== '') {
+          typeList[element] = 0
+        }
       })
       list.forEach((element) => {
-        typeList[element.type] += 1
+        if (element.type !== '') {
+          typeList[element.type] += 1
+        }
       })
       this.typeList = typeList
-      this.chooseType(types[0], 0)
+      // this.chooseType(types[0], 0)
+      this.showAll()
     },
     mobileChooseType(val) {
       this.chooseType(val)
@@ -144,7 +149,14 @@ export default {
     chooseType(key, index) {
       const arr = []
       this.dappsList.forEach((ele) => {
-        if (ele.type === key) {
+        if (Array.isArray(ele.type)) {
+          console.log(ele.type)
+          ele.type.forEach((i) => {
+            if (i === key) {
+              arr.push(ele)
+            }
+          })
+        } else if (ele.type === key) {
           arr.push(ele)
         }
       })
