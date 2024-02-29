@@ -76,6 +76,13 @@ export default {
         type: 'text/javascript',
         charset: 'utf-8',
       },
+      // Google Analytics Code
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-5LHZB7BHF0',
+        async: true,
+      },
+      // Import analitics.js file
+      { src: '/js/analitics.js' },
     ],
   },
 
@@ -86,7 +93,7 @@ export default {
   plugins: [
     'plugins/global',
     'plugins/extend',
-    { src: 'plugins/ga.js', ssr: false },
+    // { src: 'plugins/ga.js', ssr: false },
     { src: 'plugins/vue-swiper.js', ssr: false },
   ],
 
