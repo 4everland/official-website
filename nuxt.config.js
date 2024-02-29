@@ -82,7 +82,7 @@ export default {
         async: true,
       },
       // Import analitics.js file
-      { src: '/js/analitics.js' },
+      { src: '/js/analytics.js' },
     ],
   },
 
