@@ -78,7 +78,7 @@ export default {
       },
       // Google Analytics Code
       {
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-5LHZB7BHF0',
+        src: 'https://www.googletagmanager.com/gtag/js?id=GG-Z3J8V955T6',
         async: true,
       },
       // Import analitics.js file
