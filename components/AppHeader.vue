@@ -132,7 +132,7 @@
             tile
             color="#000"
           >
-            Login
+            Dashboard
             <v-icon class="ml-2">{{ mdiChevronRight }}</v-icon>
           </v-btn>
         </v-container>
@@ -344,6 +344,12 @@ export default {
         //   target: '_blank',
         //   icon: require('@/assets/imgs/nav/icon_hot.svg'),
         // },
+        {
+          text: 'Elite Quest',
+          href: 'https://dashboard.4everland.org/quest',
+          target: '_blank',
+          icon: require('@/assets/imgs/nav/icon_hot.svg'),
+        },
       ],
     }
   },
