@@ -264,7 +264,7 @@ export default {
             },
             {
               text: 'AI RPC',
-              tips: 'One-stop solution for accessingoptimal Al models',
+              tips: 'One-stop solution for accessing optimal Al models',
               icon: require('@/assets/imgs/nav/AI_RPC.png'),
               href: 'https://dashboard.4everland.org/ai-rpc',
               target: '_blank',
