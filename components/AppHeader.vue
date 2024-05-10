@@ -262,6 +262,13 @@ export default {
               href: 'https://docs.4everland.org/raas-beta/whats-rollups',
               target: '_blank',
             },
+            {
+              text: 'AI RPC',
+              tips: 'One-stop solution for accessingoptimal Al models',
+              icon: require('@/assets/imgs/nav/AI_RPC.png'),
+              href: 'https://dashboard.4everland.org/ai-rpc',
+              target: '_blank',
+            },
           ],
         },
         {
