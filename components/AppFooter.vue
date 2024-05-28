@@ -6,9 +6,9 @@
           <div class="ml-4 mb-4 text-h6">Join us</div>
           <div class="join-us">
             <v-col
-              :cols="3"
               v-for="link in links"
               :key="link.href"
+              :cols="3"
               class="text-center"
               style="margin: -10px 0"
             >
@@ -59,7 +59,7 @@
     </v-container>
     <v-container class="btn-box hidden-md-and-up">
       <v-menu offset-y>
-        <template v-slot:activator="{ on, attrs }">
+        <template #activator="{ on, attrs }">
           <v-btn outlined tile class="btn-item" v-bind="attrs" v-on="on"
             >Join us
             <v-icon right dark size="12"> mdi-plus </v-icon>
@@ -82,8 +82,8 @@
           </v-list-item>
         </v-list>
       </v-menu>
-      <v-menu offset-y v-for="(items, index) in project" :key="index">
-        <template v-slot:activator="{ on, attrs }">
+      <v-menu v-for="(items, index) in project" :key="index" offset-y>
+        <template #activator="{ on, attrs }">
           <v-btn outlined tile class="btn-item" v-bind="attrs" v-on="on"
             >{{ items.name }}
             <v-icon right dark size="12"> mdi-plus </v-icon>
@@ -176,7 +176,7 @@ export default {
         {
           name: 'Discord',
           icon: require('@/assets/imgs/footer/discord.png'),
-          href: 'http://discord.gg/4everland',
+          href: 'https://discord.com/invite/Cun2VpsdjF',
         },
         {
           name: 'Email',

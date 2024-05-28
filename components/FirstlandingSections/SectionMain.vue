@@ -155,7 +155,9 @@
           </div>
           <div class="font-16 mb-4 color-text">
             • Join 4EVERLAND
-            <a href="http://discord.gg/4everland" target="_blank">Discord</a>
+            <a href="https://discord.com/invite/Cun2VpsdjF" target="_blank"
+              >Discord</a
+            >
             to find solutions if you have problems using 4EVERLAND services and
             report any bugs related to 4EVERLAND will be rewarded in the '<a
               href="https://hosting.4everland.org/#/bug-bounty"
@@ -228,7 +230,7 @@ export default {
                   All projects that meet the deployment criteria will be eligible to win a share of the total token reward pool. This is calculated on individual project visits divided by the total number of visits across all projects.
                 </span>
                 <span class="d-block mb-1 font-italic">
-                  *Tokens are available to the developers who meet the deployment criteria up to an event total of 10 million. Maximum total for one (1) project is 100,000 4EVER tokens. 
+                  *Tokens are available to the developers who meet the deployment criteria up to an event total of 10 million. Maximum total for one (1) project is 100,000 4EVER tokens.
                 </span>
                 <span class="d-block mb-1 font-italic">
                  *Deployment criteria: You must connect  your domain in order to claim total user rewards.
@@ -237,25 +239,25 @@ export default {
         {
           img: require('~/assets/imgs/firstlanding/rules3.png'),
           html: `<span class="d-block mb-1">
-                You can win your share of 4EVER token rewards by simply following the 3 easy steps below to invite new developers to 4EVERLAND: 
+                You can win your share of 4EVER token rewards by simply following the 3 easy steps below to invite new developers to 4EVERLAND:
                 </span>
                 <span class="d-block mb-1">
-                  •	Email an invitation link to new developers to register from your authorized account 
+                  •	Email an invitation link to new developers to register from your authorized account
                 </span>
                 <span class="d-block mb-1">
-                  •	The invitee must click the invitation link and complete their registration to 4EVERLAND 
+                  •	The invitee must click the invitation link and complete their registration to 4EVERLAND
                 </span>
                 <span class="d-block mb-1">
-                 •	The invitee must also have a github account registered before 8th September and must deploy one or more projects as per the deployment criteria. 
+                 •	The invitee must also have a github account registered before 8th September and must deploy one or more projects as per the deployment criteria.
                 </span>
                 <span class="d-block mb-1 font-italic">
-                 *Reward count is based on a weighted average divided by the number of valid invitations during the event with the counted share of 10 million of 4EVER tokens at the end of the event. 
+                 *Reward count is based on a weighted average divided by the number of valid invitations during the event with the counted share of 10 million of 4EVER tokens at the end of the event.
                 </span>`,
         },
         {
           img: require('~/assets/imgs/firstlanding/rules4.png'),
           html: `<span class="d-block mb-1">
-                  20 million 4EVER sponsorship tokens will be available to qualified projects for their long term development. All 4EVERLAND HOSTING projects are welcome to apply for Development Grant. To be eligible for the Development Grant you will need to: 
+                  20 million 4EVER sponsorship tokens will be available to qualified projects for their long term development. All 4EVERLAND HOSTING projects are welcome to apply for Development Grant. To be eligible for the Development Grant you will need to:
                 </span>
                 <span class="d-block mb-1">
                   •	Connect your domain name to the project
@@ -267,7 +269,7 @@ export default {
                   •	 Fill this form: <a href="https://www.4everland.org/firstlanding/grants/" target="_blank" style="text-decoration: none;">https://www.4everland.org/firstlanding/grants/</a>
                 </span>
                 <span class="d-block mb-1 font-italic">
-                 *This event is valid until all rewards are given. Plagiarism and illegally copied project are not qualified for Grants. 
+                 *This event is valid until all rewards are given. Plagiarism and illegally copied project are not qualified for Grants.
                 </span>`,
         },
       ],
