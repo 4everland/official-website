@@ -112,7 +112,7 @@
         class="copy-right"
         :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
       >
-        &copy; 2023 4EVERLAND, Inc
+        &copy; 2024 4everland.org. All rights reserved.
       </div>
     </v-container>
     <div v-show="subSuccessShow" class="sub-success">
