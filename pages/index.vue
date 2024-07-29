@@ -27,7 +27,8 @@
       </v-alert>
     </div>
 
-    <section-top />
+    <section-one />
+    <section-three />
     <section-universe />
     <section-about />
     <section-help />
@@ -41,6 +42,8 @@
 </template>
 
 <script>
+import SectionOne from '@/components/IndexSections/SectionOne.vue'
+import SectionThree from '@/components/IndexSections/SectionThree.vue'
 import SectionTop from '@/components/IndexSections/SectionTop.vue'
 import SectionUniverse from '@/components/IndexSections/SectionUniverse.vue'
 import SectionAbout from '@/components/IndexSections/SectionAbout.vue'
@@ -54,6 +57,8 @@ import SectionFooter from '@/components/IndexSections/SectionFooter.vue'
 
 export default {
   components: {
+    SectionOne,
+    SectionThree,
     SectionTop,
     SectionUniverse,
     SectionAbout,
@@ -81,6 +86,7 @@ export default {
 </script>
 <style lang="less" scoped>
 #home {
+  background: #000;
   position: relative;
   .top-alert {
     position: sticky;
