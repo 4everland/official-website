@@ -1,15 +1,23 @@
 <template>
   <v-sheet dark class="logo-banner pa-2" style="overflow: hidden">
     <div ref="logoContainer" class="logo-container">
-      <div v-for="i in 2" :key="i" class="logo-row">
-        <v-icon v-for="j in 7" :key="`github-${i}-${j}`" large class="mx-4">
-          mdi-github
-        </v-icon>
+      <div class="logo-row">
         <v-img
-          v-for="j in 7"
-          :key="`vercel-${i}-${j}`"
+          v-for="j in 14"
+          :key="j"
           class="mx-4"
-          max-width="24"
+          width="84"
+          height="22"
+          :src="require('@/assets/imgs/index/newui/github_icon.png')"
+        />
+      </div>
+      <div class="logo-row">
+        <v-img
+          v-for="j in 14"
+          :key="j"
+          class="mx-4"
+          width="84"
+          height="22"
           :src="require('@/assets/imgs/index/newui/github_icon.png')"
         />
       </div>
@@ -59,11 +67,12 @@ export default {
 }
 
 .logo-container {
-  display: flex;
+  height: 120px;
   white-space: nowrap;
 }
 
 .logo-row {
+  height: 60px;
   display: flex;
   align-items: center;
 }

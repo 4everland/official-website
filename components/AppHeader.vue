@@ -4,21 +4,24 @@
       fixed
       app
       flat
+      dark
       elevate-on-scroll
       :elevation="4"
-      color="#fff"
-      height="120"
+      height="48"
+      color="#000"
     >
-      <div style="width: 100%; padding-top: 40px">
-        <app-top-tips />
-        <v-container class="d-flex align-center" style="height: 80px">
+      <div style="width: 100%; padding-top: 0">
+        <v-container class="d-flex align-center" style="height: 22px">
           <v-btn text color="transparent" to="/" class="always-active mr-8">
-            <logo />
+            <v-img
+              :src="require('@/assets/imgs/index/newui/logo-new.svg')"
+            ></v-img>
           </v-btn>
           <v-menu
             v-for="item in links"
             :key="item.text"
             bottom
+            dark
             rounded="0"
             transition="slide-y-transition"
             offset-y
@@ -31,7 +34,7 @@
                 plain
                 nuxt
                 replace
-                :height="80"
+                :height="48"
                 :to="item.link"
                 :href="item.href"
                 :target="item.target"
@@ -52,49 +55,53 @@
                 </span>
               </v-btn>
             </template>
-            <div v-if="item.childs" class="white menu-down">
+            <div v-if="item.childs" class="menu-down">
               <v-container>
-                <v-row>
-                  <v-col
-                    v-for="child in item.childs"
-                    :key="child.text"
-                    :cols="12"
-                    :md="6"
-                    :lg="6"
-                    :xl="6"
-                  >
-                    <v-btn
-                      plain
-                      nuxt
-                      :height="60"
-                      replace
-                      :to="child.link"
-                      :href="child.href"
-                      :target="child.target"
-                      :ripple="false"
+                <v-card class="menu-card">
+                  <v-row>
+                    <v-col
+                      v-for="child in item.childs"
+                      :key="child.text"
+                      :cols="12"
+                      :md="6"
+                      :lg="6"
+                      :xl="6"
                     >
-                      <div class="d-flex align-center">
-                        <v-img
-                          max-height="34"
-                          max-width="34"
-                          :src="child.icon"
-                        ></v-img>
-                        <div class="ml-3 nav-font">
-                          <div
-                            class="nav-font text-subtitle-1 font-weight-bold"
-                          >
-                            {{ child.text }}
-                          </div>
-                          <div
-                            class="nav-font caption grey-text text-lighten-1 tips"
-                          >
-                            {{ child.tips }}
+                      <v-btn
+                        class="nav_sub_btn d-flex justify-left"
+                        nuxt
+                        :height="80"
+                        :width="'100%'"
+                        replace
+                        :to="child.link"
+                        :href="child.href"
+                        :target="child.target"
+                        :ripple="false"
+                      >
+                        <div class="d-flex align-center">
+                          <v-img
+                            class="mr-2"
+                            max-height="34"
+                            max-width="34"
+                            :src="child.icon"
+                          ></v-img>
+                          <div class="nav-font">
+                            <div
+                              class="nav-font text-subtitle-1 font-weight-bold"
+                            >
+                              {{ child.text }}
+                            </div>
+                            <div
+                              class="nav-font text-lighten-1 caption grey-text tips"
+                            >
+                              {{ child.tips }}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </v-btn>
-                  </v-col>
-                </v-row>
+                      </v-btn>
+                    </v-col>
+                  </v-row>
+                </v-card>
               </v-container>
             </div>
             <!-- <v-list v-if="item.childs">
@@ -132,7 +139,7 @@
             tile
             color="#000"
           >
-            Dashboard
+            Get Started
             <v-icon class="ml-2">{{ mdiChevronRight }}</v-icon>
           </v-btn>
         </v-container>
@@ -334,11 +341,11 @@ export default {
           href: 'https://docs.4everland.org/get-started/billing-and-pricing/pricing-model',
           target: '_blank',
         },
-        {
-          text: 'Community',
-          href: 'https://discord.com/invite/Cun2VpsdjF',
-          target: '_blank',
-        },
+        // {
+        //   text: 'Community',
+        //   href: 'https://discord.com/invite/Cun2VpsdjF',
+        //   target: '_blank',
+        // },
         //  {
         //    text: 'First Sowing',
         //    href: 'https://firstsowing.4everland.org/',
@@ -351,12 +358,12 @@ export default {
         //   target: '_blank',
         //   icon: require('@/assets/imgs/nav/icon_hot.svg'),
         // },
-        {
-          text: 'Elite Quest',
-          href: 'https://dashboard.4everland.org/quest',
-          target: '_blank',
-          icon: require('@/assets/imgs/nav/icon_hot.svg'),
-        },
+        // {
+        //   text: 'Elite Quest',
+        //   href: 'https://dashboard.4everland.org/quest',
+        //   target: '_blank',
+        //   icon: require('@/assets/imgs/nav/icon_hot.svg'),
+        // },
       ],
     }
   },
@@ -369,14 +376,28 @@ export default {
 }
 
 .nav-font {
-  font-family: 'Ubuntu-Blod', sans-serif !important;
+  font-family: Inter, Arial, sans-serif;
   font-weight: bold;
   position: relative;
+}
+.text-subtitle-1 {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+.caption {
+  font-family: Inter, Arial, sans-serif !important;
+  font-size: 12px;
+  font-weight: 400;
 }
 .hot-icon {
   position: absolute;
   right: -20px;
   top: -2px;
+}
+.nav-btn {
+  word-wrap: break-word;
+  white-space: normal;
 }
 .always-active {
   opacity: 1 !important;
@@ -390,17 +411,39 @@ export default {
 }
 /deep/ .nav-btn .v-btn__content {
   opacity: 1 !important;
+  display: inline-block;
+  flex: auto;
+}
+/deep/ .v-btn.v-btn--has-bg {
+  background-color: transparent !important;
+}
+.menu-card {
+  background: #121536 !important;
+}
+.nav_sub_btn {
+  width: 100%;
+  flex: auto;
+  box-shadow: none;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.nav_sub_btn:hover {
+  color: #101828;
+  background-color: #fff !important;
+}
+/deep/ .nav_sub_btn .v-btn__content {
+  flex: auto;
+  justify-content: left;
+  word-wrap: break-word;
+  white-space: normal;
 }
 .menu-down {
-  width: 100%;
   min-height: 180px;
 }
 .tips {
   padding-right: 10px;
 }
 .v-menu__content {
-  max-width: 100%;
-  width: 100%;
   top: 82px;
   left: 0;
 }

@@ -94,6 +94,7 @@ export default {
 #home {
   background: #000;
   position: relative;
+  font-family: Inter, Arial, sans-serif;
   .top-alert {
     position: sticky;
     top: 80px;
