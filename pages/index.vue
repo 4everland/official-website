@@ -31,6 +31,7 @@
     <section-three />
     <section-structure />
     <section-service />
+    <section-build />
     <section-universe />
     <section-about />
     <section-help />
@@ -48,6 +49,7 @@ import SectionOne from '@/components/IndexSections/SectionOne.vue'
 import SectionThree from '@/components/IndexSections/SectionThree.vue'
 import SectionStructure from '@/components/IndexSections/SectionStructure.vue'
 import SectionService from '@/components/IndexSections/SectionService.vue'
+import SectionBuild from '@/components/IndexSections/SectionBuild.vue'
 import SectionTop from '@/components/IndexSections/SectionTop.vue'
 import SectionUniverse from '@/components/IndexSections/SectionUniverse.vue'
 import SectionAbout from '@/components/IndexSections/SectionAbout.vue'
@@ -65,6 +67,7 @@ export default {
     SectionThree,
     SectionStructure,
     SectionService,
+    SectionBuild,
     SectionTop,
     SectionUniverse,
     SectionAbout,
