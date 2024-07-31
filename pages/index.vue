@@ -28,6 +28,7 @@
     </div>
 
     <section-one />
+    <section-two />
     <section-three />
     <section-structure />
     <section-service />
@@ -46,6 +47,7 @@
 
 <script>
 import SectionOne from '@/components/IndexSections/SectionOne.vue'
+import SectionTwo from '@/components/IndexSections/SectionTwo.vue'
 import SectionThree from '@/components/IndexSections/SectionThree.vue'
 import SectionStructure from '@/components/IndexSections/SectionStructure.vue'
 import SectionService from '@/components/IndexSections/SectionService.vue'
@@ -64,6 +66,7 @@ import SectionFooter from '@/components/IndexSections/SectionFooter.vue'
 export default {
   components: {
     SectionOne,
+    SectionTwo,
     SectionThree,
     SectionStructure,
     SectionService,
