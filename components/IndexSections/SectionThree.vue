@@ -27,10 +27,15 @@
             </div>
           </v-col>
           <v-col align="right">
-            <v-btn color="#6172F3" rounded large dark class="mr-3">
+            <v-btn color="#6172F3" class="white--text mt-8 start-btn">
               Get Started
               <div class="right-icon">
-                <v-icon>mdi-arrow-right</v-icon>
+                <v-img
+                  class="join_button_icon"
+                  :src="
+                    require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
+                  "
+                ></v-img>
               </div>
             </v-btn>
           </v-col>
@@ -167,14 +172,27 @@ export default {
   padding: 64px 80px;
   max-width: 100%;
 }
+.v-btn {
+  justify-content: flex-end !important;
+}
+.start-btn {
+  width: 203px;
+  padding: 24px 0 !important;
+  border-radius: 48px;
+  font-weight: bold;
+}
 .right-icon {
-  height: 36px;
-  width: 36px;
-  color: black;
-  margin-left: 18px;
-  line-height: 36px;
-  border-radius: 18px;
+  padding: 7px;
+  border-radius: 20px;
   background-color: #fff;
+  margin-left: 24px;
+  margin-right: 8px;
+}
+.join_button_icon {
+  width: 24px;
+  height: 24px;
+  max-width: 24px;
+  text-align: center;
 }
 .carousel-container {
   position: relative;

@@ -12,14 +12,21 @@
     </v-row>
     <v-row justify="center">
       <div
-        v-for="(service, index) in services.slice(0, 4)"
-        :key="index"
+        v-for="service in services.slice(0, 4)"
+        :key="service.id"
         class="text-center list-first"
       >
-        <v-card>
+        <v-card
+          @mouseover="service.isHover = true"
+          @mouseleave="service.isHover = false"
+        >
           <v-row align="center" class="pl-8">
             <div>
-              <v-img :src="service.icon" width="100" class="mb-4"></v-img>
+              <v-img
+                :src="service.isHover ? service.hoverIcon : service.icon"
+                width="100"
+                class="mb-4"
+              ></v-img>
             </div>
             <p class="ml-1 white--text">{{ service.title }}</p>
           </v-row>
@@ -27,14 +34,22 @@
       </div>
       <v-row>
         <v-col
-          v-for="(service, index) in services.slice(4, 9)"
-          :key="index"
+          v-for="service in services.slice(4, 9)"
+          :key="service.id"
           class="text-center"
         >
-          <v-card max-width="344">
+          <v-card
+            max-width="344"
+            @mouseover="service.isHover = true"
+            @mouseleave="service.isHover = false"
+          >
             <v-row align="center" class="pl-8">
               <div>
-                <v-img :src="service.icon" width="100" class="mb-4"></v-img>
+                <v-img
+                  :src="service.isHover ? service.hoverIcon : service.icon"
+                  width="100"
+                  class="mb-4"
+                ></v-img>
               </div>
               <p class="ml-2 white--text">{{ service.title }}</p>
             </v-row>
@@ -42,14 +57,22 @@
         </v-col>
       </v-row>
       <div
-        v-for="(service, index) in services.slice(9)"
-        :key="index"
+        v-for="service in services.slice(9)"
+        :key="service.id"
         class="text-center list-first"
       >
-        <v-card max-width="344">
+        <v-card
+          max-width="344"
+          @mouseover="service.isHover = true"
+          @mouseleave="service.isHover = false"
+        >
           <v-row align="center" class="pl-8">
             <div>
-              <v-img :src="service.icon" width="100" class="mb-4"></v-img>
+              <v-img
+                :src="service.isHover ? service.hoverIcon : service.icon"
+                width="100"
+                class="mb-4"
+              ></v-img>
             </div>
             <p class="ml-2 white--text">{{ service.title }}</p>
           </v-row>
@@ -65,69 +88,95 @@ export default {
   data: () => ({
     services: [
       {
+        id: 1,
         icon: require('@/assets/imgs/service/polygon.png'),
         title: 'Polygon',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        id: 2,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'BSC',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        id: 3,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'Ethereum',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        id: 4,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'opBNB',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        i: 5,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'Arbitrum',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        id: 6,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'zkSync Era',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        id: 7,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'Optimism',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        id: 8,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'everPay',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        id: 9,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'Scroll',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        id: 10,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'Blast',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        id: 11,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'Taiko',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        id: 12,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'Zksync Lite',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
       {
+        id: 13,
         icon: require('@/assets/imgs/service/polygon.png'),
-        title: 'Polygon',
+        title: 'More...',
         hoverIcon: require('@/assets/imgs/service/hover/polygon.png'),
+        isHover: false,
       },
     ],
     // hoverStates: Array(this.services.length).fill(false),

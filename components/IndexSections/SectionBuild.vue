@@ -7,15 +7,29 @@
         </h2>
       </v-col>
     </v-row>
-    <v-row justify="center" class="mt-16">
+    <v-row justify="center">
       <v-col cols="12">
-        <div class="text-center mb-12">
-          <v-btn @click="previousSlide" color="primary" class="mr-2">
-            Previous
+        <div class="text-right mb-12">
+          <v-btn
+            color="primary"
+            class="mr-2 slide-icon"
+            :disabled="!canPreviousSlide"
+            @click="previousSlide"
+          >
+            <v-icon class="disabled-icon">mdi-chevron-left</v-icon>
           </v-btn>
-          <v-btn @click="nextSlide" color="primary">Next</v-btn>
+          <v-btn
+            color="primary"
+            class="slide-icon"
+            :disabled="!canNextSlide"
+            @click="nextSlide"
+          >
+            <v-icon :class="{ 'disabled-icon': canNextSlide }"
+              >mdi-chevron-right</v-icon
+            ></v-btn
+          >
         </div>
-        <v-carousel :show-arrows="false" v-model="currentIndex" hide-delimiters>
+        <v-carousel v-model="currentIndex" :show-arrows="false" hide-delimiters>
           <v-carousel-item v-for="(item, index) in items" :key="index">
             <v-row>
               <v-col
@@ -26,8 +40,11 @@
                 ]"
                 :key="cardIndex"
               >
-                <v-card class="mb-16" :class="`card-${cardIndex}`">
-                  <v-row justify="space-between" align="center">
+                <v-card
+                  class="mb-16 card-transition"
+                  :class="`card-${cardIndex}`"
+                >
+                  <v-row class="px-3" justify="space-between" align="center">
                     <div class="title">
                       <v-img :src="card.image" width="60"></v-img>
                       <h3 class="ml-2 white--text">{{ card.title }}</h3>
@@ -102,20 +119,21 @@ export default {
     currentX: 0,
     isDragging: false,
   }),
-
+  computed: {
+    canPreviousSlide() {
+      return this.currentIndex > 0
+    },
+    canNextSlide() {
+      return this.currentIndex < this.items.length - 3
+    },
+  },
   methods: {
     nextSlide() {
       this.currentIndex = (this.currentIndex + 1) % this.items.length
-      if (this.currentIndex === 0) {
-        this.currentIndex = 3
-      }
     },
     previousSlide() {
       this.currentIndex =
         (this.currentIndex - 1 + this.items.length) % this.items.length
-      if (this.currentIndex === 3) {
-        this.currentIndex = 0
-      }
     },
   },
 }
@@ -182,5 +200,19 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+.slide-icon {
+  height: 52px !important;
+  width: 52px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #121536 0%, #06090f 100%);
+  border: 1px solid #ffffff40 !important;
+}
+.disabled-icon {
+  color: red;
+  opacity: 0.5;
+}
+.card-transition {
+  transition: transform 0.5s;
 }
 </style>
