@@ -2,10 +2,10 @@
   <v-container fluid class="build-container">
     <v-row justify="center" align="center">
       <v-col cols="12">
-        <h4 class="white--text building-title font-weight-bold">
+        <h4 class="white--text building-title font-weight-bold pt-16">
           THE MOMENTUM IS BUILDING
         </h4>
-        <div class="building-subtitle">
+        <div class="building-subtitle pb-5">
           Sharing our progress through data insights.
         </div>
         <div class="research-radar-wrapper">
@@ -23,6 +23,58 @@
               width="160"
               :src="require('@/assets/imgs/index/newui/radar_logo.png')"
             ></v-img>
+            <div class="radar_search_item_wrap">
+              <div class="radar_search_item_gateway">
+                <v-img
+                  class="gateway_img"
+                  width="24"
+                  :src="
+                    require('@/assets/imgs/index/newui/radarItem/gateway.png')
+                  "
+                ></v-img>
+              </div>
+              <div class="radar_search_item_storage">
+                <v-img
+                  class="storage_img"
+                  width="24"
+                  :src="
+                    require('@/assets/imgs/index/newui/radarItem/storage.png')
+                  "
+                ></v-img>
+              </div>
+              <div class="radar_search_item_hosting">
+                <v-img
+                  class="storage_img"
+                  width="24"
+                  :src="
+                    require('@/assets/imgs/index/newui/radarItem/hosting.png')
+                  "
+                ></v-img>
+              </div>
+              <div class="radar_search_item_rpc">
+                <v-img
+                  class="storage_img"
+                  width="24"
+                  :src="require('@/assets/imgs/index/newui/radarItem/rpc.png')"
+                ></v-img>
+              </div>
+              <div class="radar_search_item_raas">
+                <v-img
+                  class="storage_img"
+                  width="24"
+                  :src="require('@/assets/imgs/index/newui/radarItem/raas.png')"
+                ></v-img>
+              </div>
+              <div class="radar_search_item_airpc">
+                <v-img
+                  class="storage_img"
+                  width="24"
+                  :src="
+                    require('@/assets/imgs/index/newui/radarItem/airpc.png')
+                  "
+                ></v-img>
+              </div>
+            </div>
           </div>
         </div>
         <div class="build-item-wrap">
@@ -79,20 +131,11 @@ export default {
 <style lang="less" scoped>
 .build-container {
   position: relative;
-  height: 851px;
+  height: 935px;
   overflow: hidden;
 }
 .sectionContent {
   font-family: Inter, Arial, sans-serif;
-}
-.build-card {
-  background: #212121;
-  border-radius: 12px;
-  padding: 24px;
-  margin-top: 24px;
-  .text-h6 {
-    color: #fff;
-  }
 }
 .building-title {
   font-size: 48px;
@@ -104,11 +147,6 @@ export default {
 .research-radar-wrapper {
   display: flex;
   justify-content: center;
-}
-.text-building-item {
-  font-size: 32px;
-  color: #fff;
-  font-weight: bold;
 }
 .research-radar {
   height: 890px;
@@ -147,11 +185,128 @@ export default {
 }
 .build-item-wrap {
   height: 291px;
+  left: 50%;
   position: absolute;
-  bottom: 0;
+  top: 100%;
+  transform: translate(-50%, -291px);
   width: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, #000 100%);
   z-index: 1;
-  padding-top: 50px;
+  padding-top: 85px;
+}
+.build-card {
+  background: #00000080;
+  border: 1px solid #ffffff26;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 24px;
+  .text-h6 {
+    color: #fff;
+  }
+}
+.build-card:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(180deg, rgba(18, 21, 54, 0) 0%, #121536 100%);
+}
+.build-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -8px);
+  width: 2px;
+  height: 16px;
+  border-left: 2px solid #a4bcfd;
+}
+.build-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -8px);
+  width: 2px;
+  height: 16px;
+  border-right: 2px solid #a4bcfd;
+}
+.text-building-item {
+  font-size: 32px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.radar_search_item_gateway {
+  position: absolute;
+  top: 278px;
+  left: 165px;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+}
+.radar_search_item_storage {
+  position: absolute;
+  top: 232px;
+  left: 316px;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+}
+.radar_search_item_hosting {
+  position: absolute;
+  top: 43px;
+  left: 435px;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+}
+.radar_search_item_rpc {
+  position: absolute;
+  top: 232px;
+  left: 552px;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+}
+.radar_search_item_raas {
+  position: absolute;
+  top: 278px;
+  left: 704px;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+  box-shadow: inset 0 0 6px 4px #ed78ff0a, inset 0 0 8px #787bff0f,
+    inset 0 0 4px #787bff0a;
+}
+.radar_search_item_airpc {
+  position: absolute;
+  top: 434px;
+  left: 667px;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+}
+.radar_item_active {
+  animation: researchRadarItem 3s calc(6 * 0.01s) cubic-bezier(0.6, 0.6, 0, 1) 1;
+}
+
+@keyframes researchRadarItem {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50%,
+  75% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.2);
+  }
 }
 </style>

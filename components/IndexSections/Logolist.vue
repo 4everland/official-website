@@ -1,24 +1,28 @@
 <template>
   <v-sheet dark class="logo-banner pa-2" style="overflow: hidden">
-    <div ref="logoContainer" class="logo-container">
-      <div class="logo-row">
+    <div class="logo-container">
+      <div ref="logoContainer" class="logo-row">
         <v-img
-          v-for="j in 14"
-          :key="j"
+          v-for="item in logoList1"
+          :key="item.alt"
           class="mx-4"
-          width="84"
-          height="22"
-          :src="require('@/assets/imgs/index/newui/github_icon.png')"
+          :width="item.width"
+          :height="item.height"
+          :src="item.src"
+          contain
         />
       </div>
-      <div class="logo-row">
+    </div>
+    <div class="logo-container2">
+      <div ref="logoContainer2" class="logo-row">
         <v-img
-          v-for="j in 14"
-          :key="j"
+          v-for="item in logoList2"
+          :key="item.alt"
           class="mx-4"
-          width="84"
-          height="22"
-          :src="require('@/assets/imgs/index/newui/github_icon.png')"
+          :width="item.width"
+          :height="item.height"
+          :src="item.src"
+          contain
         />
       </div>
     </div>
@@ -29,9 +33,159 @@
 export default {
   data: () => ({
     animationId: null,
+    animationId1: null,
+    logoList1: [
+      {
+        src: require('@/assets/imgs/index/newui/logo/arweave.png'),
+        alt: 'arweave',
+        width: 155,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/fenbushi.png'),
+        alt: 'fenbushi',
+        width: 116,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/forward.png'),
+        alt: 'forward',
+        width: 87,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/bixin.png'),
+        alt: 'bixin',
+        width: 123,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/waterdrip.png'),
+        alt: 'waterdrip',
+        width: 72,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/BingVentures.png'),
+        alt: 'BingVentures',
+        width: 87,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/fbg.png'),
+        alt: 'fbg',
+        width: 79,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/Web3com.png'),
+        alt: 'Web3com',
+        width: 113,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/MintVentures.png'),
+        alt: 'MintVentures',
+        width: 69,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/ArweaveSCP.png'),
+        alt: 'ArweaveSCP',
+        width: 104,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/hillstone.png'),
+        alt: 'hillstone',
+        width: 108,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/gts-logo-white.png'),
+        alt: 'GTS',
+        width: 51,
+        height: 24,
+      },
+    ],
+    logoList2: [
+      {
+        src: require('@/assets/imgs/index/newui/logo/snapshot.png'),
+        alt: 'snapshot',
+        width: 103,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/SyncSwap.png'),
+        alt: 'SyncSwap',
+        width: 86,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/taiko.png'),
+        alt: 'taiko',
+        width: 81,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/Astar_White.png'),
+        alt: 'Astar',
+        width: 69,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/Linear.png'),
+        alt: 'Linear',
+        width: 87,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/venus.png'),
+        alt: 'venus',
+        width: 106,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/Hey.png'),
+        alt: 'fbg',
+        width: 61,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/tape.png'),
+        alt: 'Web3com',
+        width: 91,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/RSS3.png'),
+        alt: 'RSS3',
+        width: 86,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/MDEX.png'),
+        alt: 'MDEX',
+        width: 124,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/bella.png'),
+        alt: 'bella',
+        width: 71,
+        height: 24,
+      },
+      {
+        src: require('@/assets/imgs/index/newui/logo/ever.png'),
+        alt: 'ever',
+        width: 67,
+        height: 24,
+      },
+    ],
   }),
   mounted() {
     this.startAnimation()
+    this.startAnimation1()
   },
   beforeDestroy() {
     this.stopAnimation()
@@ -52,9 +206,27 @@ export default {
 
       this.animationId = requestAnimationFrame(animate)
     },
+    startAnimation1() {
+      const container = this.$refs.logoContainer2
+      let position = 0
+
+      const animate = () => {
+        position += 1
+        if (position >= container.offsetWidth / 3) {
+          position = 0
+        }
+        container.style.transform = `translateX(${position}px)`
+        this.animationId = requestAnimationFrame(animate)
+      }
+
+      this.animationId1 = requestAnimationFrame(animate)
+    },
     stopAnimation() {
       if (this.animationId) {
         cancelAnimationFrame(this.animationId)
+      }
+      if (this.animationId1) {
+        cancelAnimationFrame(this.animationId1)
       }
     },
   },
@@ -67,7 +239,7 @@ export default {
 }
 
 .logo-container {
-  height: 120px;
+  height: 60px;
   white-space: nowrap;
 }
 
@@ -83,5 +255,11 @@ export default {
 
 .v-img {
   filter: invert(1);
+}
+
+.logo-container2 {
+  display: flex;
+  justify-content: flex-end;
+  white-space: nowrap;
 }
 </style>

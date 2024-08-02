@@ -42,7 +42,7 @@
                 v-bind="attrs"
                 v-on="on"
               >
-                <span class="nav-font">
+                <span class="nav-font menu_text">
                   {{ item.text }}
                   <v-icon v-if="item.childs">{{ mdiChevronDown }}</v-icon>
                   <v-img
@@ -374,7 +374,9 @@ export default {
   z-index: 99;
   position: relative;
 }
-
+.menu_text {
+  font-size: 14px;
+}
 .nav-font {
   font-family: Inter, Arial, sans-serif;
   font-weight: bold;

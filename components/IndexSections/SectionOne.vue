@@ -12,10 +12,10 @@
                 4EVERLAND delivers robust, scalable, and secure Web3 solutions:
               </div>
               <div class="d-flex justify-center mb-16">
-                <div
-                  class="text-tips-button d-flex align-center justify-center"
-                >
-                  Dapp Hosting
+                <div class="btn-tips-wrap">
+                  <div class="text-tips-button" :class="currentclass">
+                    <div style="padding-left: 15px">{{ current }}</div>
+                  </div>
                 </div>
               </div>
               <div class="text-center pt-8 mb-16">
@@ -45,6 +45,9 @@
                 :src="require('@/assets/imgs/index/newui/union1.png')"
               ></v-img>
             </div>
+            <div>
+              <star-rise></star-rise>
+            </div>
           </div>
         </v-col>
       </v-row>
@@ -55,20 +58,44 @@
   </div>
 </template>
 <script>
+import StarRise from '@/components/IndexSections/StarRise.vue'
 import Logolist from '@/components/IndexSections/Logolist.vue'
 
 export default {
   components: {
+    StarRise,
     Logolist,
   },
   data() {
     return {
       model: 0,
+      labels: ['DWeb Hosting', 'Storage', 'Gateway', 'RPC', 'RaaS', 'AIRPC'],
+      current: '',
+      activeIndex: 0,
+      currentclass: '',
     }
   },
-  computed: {},
-  mounted() {},
-  methods: {},
+  mounted() {
+    this.showLabel()
+  },
+  methods: {
+    showLabel() {
+      let nextIndex = 0
+
+      setInterval(() => {
+        nextIndex = this.activeIndex + 1
+        if (nextIndex > this.labels.length - 1) {
+          nextIndex = 0
+        }
+        this.currentclass = 'exitActive'
+        setTimeout(() => {
+          this.currentclass = 'enterActive'
+          this.current = this.labels[this.activeIndex]
+          this.activeIndex = nextIndex
+        }, 500)
+      }, 3000)
+    },
+  },
 }
 </script>
 <style lang="less" scoped>
@@ -118,12 +145,17 @@ export default {
         margin: 20px auto 10px;
         color: rgba(255, 255, 255, 0.75);
       }
-      .text-tips-button {
+      .btn-tips-wrap {
         width: 184px;
+      }
+      .text-tips-button {
+        max-width: 184px;
+        overflow: hidden;
         height: 48px;
+        line-height: 48px;
         color: #fff;
         font-size: 24px;
-        text-align: center;
+        text-align: left;
         border-left: 4px solid #6172f3;
         font-weight: 700;
         background: linear-gradient(
@@ -225,5 +257,22 @@ export default {
       }
     }
   }
+}
+.enter {
+  width: 0;
+}
+
+.enterActive {
+  width: 100%;
+  transition: width 0.5s ease 0.15s;
+}
+
+.exit {
+  width: 100%;
+}
+
+.exitActive {
+  width: 0;
+  transition: width 0.5s ease 0.15s;
 }
 </style>

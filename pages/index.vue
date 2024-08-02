@@ -35,14 +35,6 @@
     <section-build />
     <section-join />
     <section-receive />
-    <section-universe />
-    <section-about />
-    <section-help />
-    <section-explore />
-    <section-globe />
-    <section-Partners />
-    <section-milestones />
-    <section-new />
     <section-footer />
   </div>
 </template>
