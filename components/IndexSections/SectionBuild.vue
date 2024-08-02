@@ -8,7 +8,7 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col cols="12">
+      <!-- <v-col cols="12">
         <div class="text-right mb-12">
           <v-btn
             color="primary"
@@ -28,42 +28,111 @@
               >mdi-chevron-right</v-icon
             ></v-btn
           >
-        </div>
-        <v-carousel v-model="currentIndex" :show-arrows="false" hide-delimiters>
-          <v-carousel-item v-for="(item, index) in items" :key="index">
-            <v-row>
-              <v-col
-                v-for="(card, cardIndex) in [
-                  items[currentIndex],
-                  items[(currentIndex + 1) % items.length],
-                  items[(currentIndex + 2) % items.length],
-                ]"
-                :key="cardIndex"
-              >
-                <v-card
-                  class="mb-16 card-transition"
-                  :class="`card-${cardIndex}`"
+        </div> -->
+      <!-- <div class="overflow-x-auto">
+          <v-carousel
+            v-model="currentIndex"
+            :show-arrows="false"
+            hide-delimiters
+          >
+            <v-carousel-item v-for="(item, index) in items" :key="index">
+              <v-row>
+                <v-col
+                  v-for="(card, cardIndex) in [
+                    items[currentIndex],
+                    items[(currentIndex + 1) % items.length],
+                    items[(currentIndex + 2) % items.length],
+                  ]"
+                  :key="cardIndex"
                 >
-                  <v-row class="px-3" justify="space-between" align="center">
-                    <div class="title">
-                      <v-img :src="card.image" width="60"></v-img>
-                      <h3 class="ml-2 white--text">{{ card.title }}</h3>
-                    </div>
-                    <div>
-                      <v-btn color="#6172F3" class="right-icon">
-                        <v-icon>mdi-arrow-right</v-icon>
-                      </v-btn>
-                    </div>
-                  </v-row>
-                  <v-divider class="mt-12 mb-12" />
+                  <v-card
+                    class="mb-16 card-transition"
+                    :class="`card-${cardIndex}`"
+                  >
+                    <v-row class="px-3" justify="space-between" align="center">
+                      <div class="title">
+                        <v-img :src="card.image" width="60"></v-img>
+                        <h3 class="ml-2 white--text">{{ card.title }}</h3>
+                      </div>
+                      <div>
+                        <v-btn color="#6172F3" class="right-icon">
+                          <v-icon>mdi-arrow-right</v-icon>
+                        </v-btn>
+                      </div>
+                    </v-row>
+                    <v-divider class="mt-12 mb-12" />
+                    <p class="white--text">
+                      {{ card.description }}
+                    </p>
+                  </v-card>
+                </v-col>
+              </v-row>
+            </v-carousel-item>
+          </v-carousel>
+        </div> -->
+      <!-- </v-col> -->
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12">
+        <div class="text-right mb-12">
+          <v-btn
+            color="primary"
+            class="mr-2 slide-icon"
+            @click="scrollCards('left')"
+          >
+            <v-icon>mdi-chevron-left</v-icon>
+          </v-btn>
+          <v-btn
+            color="primary"
+            class="slide-icon"
+            @click="scrollCards('right')"
+          >
+            <v-icon>mdi-chevron-right</v-icon>
+          </v-btn>
+        </div>
+        <div class="build-card">
+          <div
+            v-for="(card, index) in items"
+            :key="index"
+            class="mr-5 card-item"
+          >
+            <v-card
+              class="mb-6"
+              :class="`card-${index}`"
+              :style="{
+                transform: `translateX(-${currentCardIndex * cardWidth}px)`,
+              }"
+            >
+              <div>
+                <v-row
+                  class="card-header"
+                  justify="space-between"
+                  align="center"
+                >
+                  <div class="title">
+                    <v-img
+                      :src="card.image"
+                      class="logo-header"
+                      width="52"
+                    ></v-img>
+                    <h3 class="ml-4 white--text">{{ card.title }}</h3>
+                  </div>
+                  <div>
+                    <v-btn class="right-icon">
+                      <v-icon>mdi-arrow-right</v-icon>
+                    </v-btn>
+                  </div>
+                </v-row>
+                <v-divider class="mt-12" />
+                <div class="background-image mt-7">
                   <p class="white--text">
                     {{ card.description }}
                   </p>
-                </v-card>
-              </v-col>
-            </v-row>
-          </v-carousel-item>
-        </v-carousel>
+                </div>
+              </div>
+            </v-card>
+          </div>
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -73,67 +142,86 @@
 export default {
   name: 'SectionBuild',
   data: () => ({
-    currentIndex: 0,
     items: [
       {
         id: 1,
-        image: require('@/assets/imgs/footer/telegram.png'),
+        image: require('@/assets/imgs/case/logo/logo_snapshot.png'),
         title: 'Snapshot',
         description:
           'Snapshot is a decentralized voting platform that empowers blockchain communities to make transparent and efficient collective decisions. By integrating with 4EVERLAND’s S3-compatible decentralized storage solutions, Snapshot ensures secure and reliable storage of voting data.',
       },
       {
         id: 2,
-        image: 'https://via.placeholder.com/150',
-        title: 'Liquity',
+        image: require('@/assets/imgs/case/logo/logo_syncswap.png'),
+        title: 'Syncswap',
         description:
           'Liquify is an innovative DeFi platform that allows users to leverage their digital assets without losing ownership. Utilizing 4EVERLAND’s decentralized front-end deployment, Liquify can offer a resilient and streamlined user interface.',
       },
       {
         id: 3,
-        image: 'https://via.placeholder.com/150',
-        title: 'Optopia',
+        image: require('@/assets/imgs/case/logo/logo_taiko.png'),
+        title: 'Taiko',
         description:
-          'Optopia is an innovative Layer 2 blockchain platform compatible with the Ethereum Virtual Machine (EVM). By leveraging 4EVERLAND’s Rollup-as-a-Service (RaaS) solution, Optopia effectively deploys high-performance, EVM-compatible Layer 2 solutions to scale decentralized AI applications.',
+          'Taiko harnesses the power of our gateway to swiftly accelerate content distribution, while leveraging decentralized storage to empower their projects cost-effectively and conveniently.',
       },
       {
         id: 4,
-        image: 'https://via.placeholder.com/150',
-        title: 'Card 4',
-        description: 'This is the fourth card.',
+        image: require('@/assets/imgs/case/logo/logo_hey.png'),
+        title: 'Hey',
+        description:
+          'Hey.xyz capitalizes on our IPFS dedicated gateway to achieve highly resilient, secure, and decentralized distribution of user-generated content.',
       },
       {
         id: 5,
-        image: 'https://via.placeholder.com/150',
-        title: 'Card 5',
-        description: 'This is the fifth card.',
+        image: require('@/assets/imgs/case/logo/logo_tape.png'),
+        title: 'Tape',
+        description:
+          'Tape utilizes the 4EVERLAND gateway to accelerate content distribution and enhance user experience by maintaining high standards of accessibility and performance.',
       },
       {
         id: 6,
-        image: 'https://via.placeholder.com/150',
-        title: 'Card 6',
-        description: 'This is the sixth card.',
+        image: require('@/assets/imgs/case/logo/logo_optopia.png'),
+        title: 'Optopia',
+        description:
+          'Optopia is an innovative Layer 2 blockchain platform compatible with the Ethereum Virtual Machine (EVM). By leveraging 4EVERLAND’s Rollup-as-a-Service (RaaS) solution, Optopia effectively deploys high-performance, EVM-compatible Layer 2 solutions to scale decentralized AI applications.',
       },
     ],
     startX: 0,
     currentX: 0,
     isDragging: false,
+    currentIndex: 0,
+    currentCardIndex: 0, // 当前显示的卡片索引
+    cardWidth: 400, // 假设每个卡片的宽度为300px
+    numCardsToShow: 3,
   }),
   computed: {
-    canPreviousSlide() {
-      return this.currentIndex > 0
-    },
-    canNextSlide() {
-      return this.currentIndex < this.items.length - 3
-    },
+    // canPreviousSlide() {
+    //   return this.currentIndex > 0
+    // },
+    // canNextSlide() {
+    //   return this.currentIndex < this.items.length - 3
+    // },
+    // visibleCards() {
+    //   return this.items.slice(this.currentIndex, this.currentIndex + 3)
+    // },
   },
   methods: {
-    nextSlide() {
-      this.currentIndex = (this.currentIndex + 1) % this.items.length
-    },
-    previousSlide() {
-      this.currentIndex =
-        (this.currentIndex - 1 + this.items.length) % this.items.length
+    // nextSlide() {
+    //   this.currentIndex = (this.currentIndex + 1) % this.items.length
+    // },
+    // previousSlide() {
+    //   this.currentIndex =
+    //     (this.currentIndex - 1 + this.items.length) % this.items.length
+    // },
+    scrollCards(direction) {
+      if (direction === 'left' && this.currentCardIndex > 0) {
+        this.currentCardIndex--
+      } else if (
+        direction === 'right' &&
+        this.currentCardIndex < this.items.length - this.numCardsToShow
+      ) {
+        this.currentCardIndex++
+      }
     },
   },
 }
@@ -144,15 +232,9 @@ export default {
   padding: 64px 80px;
   max-width: 100%;
 }
-.build-color {
-  background-color: lightgreen !important;
-  max-width: 100%;
-  width: 200%;
-}
 .v-card {
-  padding: 64px 20px 0 20px;
+  border: 1px solid #ffffff40;
   border-radius: 24px !important;
-  height: 500px;
 }
 .right-icon {
   height: 36px;
@@ -166,34 +248,196 @@ export default {
 .v-btn:not(.v-btn--round).v-size--default {
   min-width: 36px !important;
 }
+.build-card {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.card-item {
+  flex: 0 0 auto;
+  width: 400px;
+}
+.card-header {
+  padding: 53px 32px 0 32px;
+}
+.logo-header {
+  border-radius: 16px;
+}
+.background-image {
+  padding: 20px;
+}
+.v-divider {
+  margin: 0 20px;
+}
 .card-0 {
-  border: 1px solid #ffffff40;
   background: linear-gradient(171.12deg, #1c1b20 -27.03%, #757186 150.2%);
+  background-size: cover;
+  background-position: right bottom;
+  height: 560px;
+  .background-image {
+    border-radius: 24px;
+    background: url('@/assets/imgs/case/background/snapshot.png');
+    height: 400px;
+    background-size: cover;
+    background-position: center bottom;
+  }
+  .right-icon {
+    border: 1px solid #f2f4f740;
+    background: linear-gradient(
+      180deg,
+      rgba(164, 188, 253, 0) 0%,
+      rgba(164, 188, 253, 0.5) 100%
+    );
+  }
 }
 .card-1 {
-  border: 1px solid #ffffff40;
   background: linear-gradient(
       159.24deg,
-      rgba(133, 113, 227, 0.75) 2.47%,
-      rgba(74, 188, 236, 0.75) 65.59%
+      rgba(111, 134, 231, 0.75) 2.47%,
+      rgba(187, 155, 250, 0.75) 65.59%
     ),
     radial-gradient(
       42.82% 61.79% at 50% 25.8%,
-      rgba(15, 225, 248, 0.15) 0%,
-      rgba(15, 225, 248, 0) 100%
+      rgba(247, 242, 255, 0.25) 0%,
+      rgba(247, 242, 255, 0) 100%
     );
+  background-size: cover;
+  background-position: right bottom;
+  height: 560px;
+  .background-image {
+    border-radius: 24px;
+    background: url('@/assets/imgs/case/background/syncswap.png');
+    height: 400px;
+    background-size: cover;
+    background-position: center bottom;
+  }
   .right-icon {
-    border: 1px solid #e0eaff80;
-    background: linear-gradient(168.46deg, #4abcec -20.13%, #8571e3 83.92%);
+    border: 1px solid #f2f4f740;
+    background: linear-gradient(
+      180deg,
+      rgba(164, 188, 253, 0) 0%,
+      rgba(164, 188, 253, 0.5) 100%
+    );
   }
 }
 .card-2 {
-  border: 1px solid #ffffff40;
-  background: linear-gradient(171.12deg, #1c1b20 -27.03%, #757186 150.2%);
+  background: linear-gradient(
+      159.24deg,
+      rgba(9, 10, 18, 0.75) 2.47%,
+      rgba(187, 21, 125, 0.75) 65.59%
+    ),
+    radial-gradient(
+      42.82% 61.79% at 50% 25.8%,
+      rgba(114, 172, 182, 0.25) 0%,
+      rgba(114, 172, 182, 0) 100%
+    );
+  background-size: cover;
+  background-position: right bottom;
+  height: 560px;
+  .background-image {
+    border-radius: 24px;
+    background: url('@/assets/imgs/case/background/taiko.png');
+    height: 400px;
+    background-size: cover;
+    background-position: center bottom;
+  }
+  .right-icon {
+    border: 1px solid #e0eaff80;
+    background: linear-gradient(
+      180deg,
+      rgba(164, 188, 253, 0) 0%,
+      rgba(164, 188, 253, 0.5) 100%
+    );
+  }
 }
 .card-3 {
-  border: 1px solid #ffffff40;
-  background: linear-gradient(168.46deg, #4abcec -20.13%, #8571e3 83.92%);
+  background: linear-gradient(
+      158.1deg,
+      rgba(120, 194, 255, 0.75) 3.95%,
+      rgba(87, 95, 213, 0.75) 33.9%,
+      rgba(188, 73, 129, 0.75) 60.94%,
+      rgba(253, 76, 93, 0.75) 81.42%
+    ),
+    radial-gradient(
+      42.82% 61.79% at 50% 25.8%,
+      rgba(199, 215, 254, 0.15) 0%,
+      rgba(199, 215, 254, 0) 100%
+    );
+  background-size: cover;
+  background-position: right bottom;
+  height: 560px;
+  .background-image {
+    border-radius: 24px;
+    background: url('@/assets/imgs/case/background/hey.png');
+    height: 400px;
+    background-size: cover;
+    background-position: center bottom;
+  }
+  .right-icon {
+    border: 1px solid #e0eaff80;
+    background: linear-gradient(
+      180deg,
+      rgba(164, 188, 253, 0) 0%,
+      rgba(164, 188, 253, 0.5) 100%
+    );
+  }
+}
+.card-4 {
+  background: linear-gradient(
+      158.22deg,
+      rgba(4, 140, 209, 0.75) 2.57%,
+      rgba(57, 196, 255, 0.75) 52.67%
+    ),
+    radial-gradient(
+      42.82% 61.79% at 50% 25.8%,
+      rgba(195, 228, 205, 0.15) 0%,
+      rgba(195, 228, 205, 0) 100%
+    );
+  background-size: cover;
+  background-position: right bottom;
+  height: 560px;
+  .background-image {
+    border-radius: 24px;
+    background: url('@/assets/imgs/case/background/Tape.png');
+    height: 400px;
+    background-size: cover;
+    background-position: center bottom;
+  }
+  .right-icon {
+    border: 1px solid #e0eaff80;
+    background: linear-gradient(
+      180deg,
+      rgba(164, 188, 253, 0) 0%,
+      rgba(164, 188, 253, 0.5) 100%
+    );
+  }
+}
+.card-5 {
+  background: linear-gradient(159.57deg, #130004 -74.18%, #1c1b20 63.09%),
+    radial-gradient(
+      42.82% 61.79% at 50% 25.8%,
+      rgba(255, 26, 45, 0.15) 0%,
+      rgba(255, 26, 45, 0) 100%
+    );
+  background-size: cover;
+  background-position: right bottom;
+  height: 560px;
+  .background-image {
+    border-radius: 24px;
+    background: url('@/assets/imgs/case/background/Optopia.png');
+    height: 400px;
+    background-size: cover;
+    background-position: center bottom;
+  }
+  .right-icon {
+    border: 1px solid #e0eaff80;
+    background: linear-gradient(
+      180deg,
+      rgba(164, 188, 253, 0) 0%,
+      rgba(164, 188, 253, 0.5) 100%
+    );
+  }
 }
 
 .title {
@@ -212,7 +456,8 @@ export default {
   color: red;
   opacity: 0.5;
 }
-.card-transition {
-  transition: transform 0.5s;
+.overflow-x-auto {
+  overflow-x: auto;
+  white-space: nowrap;
 }
 </style>

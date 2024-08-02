@@ -2,9 +2,9 @@
   <v-container fluid class="main-container">
     <v-row justify="center" align="center" class="text-left">
       <v-col cols="12">
-        <h2 class="white--text text-h2 font-weight-bold">
+        <h3 class="white--text text-h3 font-weight-bold">
           4EVERLAND IS IN A STATE OF GENERAL AVAILABILITY
-        </h2>
+        </h3>
         <p class="white--text text-subtitle-1 mt-4">
           Offering comprehensive services to support & drive your innovation
           forward.
@@ -22,7 +22,6 @@
                 :key="i"
                 class="carousel-delimiter"
                 :class="{ active: i === currentIndex }"
-                @click="goToSlide(i)"
               ></div>
             </div>
           </v-col>

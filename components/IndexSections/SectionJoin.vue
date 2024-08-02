@@ -5,28 +5,30 @@
         <h2 class="white--text text-h2 font-weight-bold">JUMP RIGHT IN</h2>
       </v-col>
     </v-row>
-    <v-row justify="center" align="center" class="mt-10">
-      <v-col>
-        <p class="white--text get-start">
-          Whether you're an individual eager to explore 4EVERLAND's offerings or
-          a developer ready to innovate with our platform, there's no better
-          time than now to get started.
-        </p>
-        <div class="text-right">
-          <v-btn color="#6172F3" class="white--text mt-8 start-btn">
-            Get Started
-            <div class="right-icon">
-              <v-img
-                class="join_button_icon"
-                :src="
-                  require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
-                "
-              ></v-img>
-            </div>
-          </v-btn>
-        </div>
-      </v-col>
-    </v-row>
+    <div class="mt-10 background-image">
+      <v-row justify="center" align="center">
+        <v-col>
+          <p class="white--text get-start">
+            Whether you're an individual eager to explore 4EVERLAND's offerings
+            or a developer ready to innovate with our platform, there's no
+            better time than now to get started.
+          </p>
+          <div class="text-right">
+            <v-btn color="#6172F3" class="white--text mt-16 start-btn">
+              Get Started
+              <div class="right-icon">
+                <v-img
+                  class="join_button_icon"
+                  :src="
+                    require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
+                  "
+                ></v-img>
+              </div>
+            </v-btn>
+          </div>
+        </v-col>
+      </v-row>
+    </div>
   </v-container>
 </template>
 
@@ -41,6 +43,13 @@ export default {
 .main-container {
   padding: 64px 80px;
   max-width: 100%;
+}
+.background-image {
+  height: 400px;
+  background-image: url('@/assets/imgs/network/join-banner.png');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 40px;
 }
 .get-start {
   width: 66%;
