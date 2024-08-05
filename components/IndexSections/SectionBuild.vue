@@ -8,71 +8,6 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <!-- <v-col cols="12">
-        <div class="text-right mb-12">
-          <v-btn
-            color="primary"
-            class="mr-2 slide-icon"
-            :disabled="!canPreviousSlide"
-            @click="previousSlide"
-          >
-            <v-icon class="disabled-icon">mdi-chevron-left</v-icon>
-          </v-btn>
-          <v-btn
-            color="primary"
-            class="slide-icon"
-            :disabled="!canNextSlide"
-            @click="nextSlide"
-          >
-            <v-icon :class="{ 'disabled-icon': canNextSlide }"
-              >mdi-chevron-right</v-icon
-            ></v-btn
-          >
-        </div> -->
-      <!-- <div class="overflow-x-auto">
-          <v-carousel
-            v-model="currentIndex"
-            :show-arrows="false"
-            hide-delimiters
-          >
-            <v-carousel-item v-for="(item, index) in items" :key="index">
-              <v-row>
-                <v-col
-                  v-for="(card, cardIndex) in [
-                    items[currentIndex],
-                    items[(currentIndex + 1) % items.length],
-                    items[(currentIndex + 2) % items.length],
-                  ]"
-                  :key="cardIndex"
-                >
-                  <v-card
-                    class="mb-16 card-transition"
-                    :class="`card-${cardIndex}`"
-                  >
-                    <v-row class="px-3" justify="space-between" align="center">
-                      <div class="title">
-                        <v-img :src="card.image" width="60"></v-img>
-                        <h3 class="ml-2 white--text">{{ card.title }}</h3>
-                      </div>
-                      <div>
-                        <v-btn color="#6172F3" class="right-icon">
-                          <v-icon>mdi-arrow-right</v-icon>
-                        </v-btn>
-                      </div>
-                    </v-row>
-                    <v-divider class="mt-12 mb-12" />
-                    <p class="white--text">
-                      {{ card.description }}
-                    </p>
-                  </v-card>
-                </v-col>
-              </v-row>
-            </v-carousel-item>
-          </v-carousel>
-        </div> -->
-      <!-- </v-col> -->
-    </v-row>
-    <v-row justify="center">
       <v-col cols="12">
         <div class="text-right mb-12">
           <v-btn
@@ -190,31 +125,13 @@ export default {
     currentX: 0,
     isDragging: false,
     currentIndex: 0,
-    currentCardIndex: 0, // 当前显示的卡片索引
-    cardWidth: 400, // 假设每个卡片的宽度为300px
+    currentCardIndex: 0,
+    cardWidth: 400,
     numCardsToShow: 3,
   }),
-  computed: {
-    // canPreviousSlide() {
-    //   return this.currentIndex > 0
-    // },
-    // canNextSlide() {
-    //   return this.currentIndex < this.items.length - 3
-    // },
-    // visibleCards() {
-    //   return this.items.slice(this.currentIndex, this.currentIndex + 3)
-    // },
-  },
   methods: {
-    // nextSlide() {
-    //   this.currentIndex = (this.currentIndex + 1) % this.items.length
-    // },
-    // previousSlide() {
-    //   this.currentIndex =
-    //     (this.currentIndex - 1 + this.items.length) % this.items.length
-    // },
     scrollCards(direction) {
-      if (direction === 'left' && this.currentCardIndex > 0) {
+      if (direction === 'left' && this.currentCardIndex >= 0) {
         this.currentCardIndex--
       } else if (
         direction === 'right' &&
