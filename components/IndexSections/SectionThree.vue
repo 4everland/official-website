@@ -1,5 +1,11 @@
 <template>
-  <v-container fluid class="main-container">
+  <v-container
+    fluid
+    class="main-container"
+    :style="{
+      backgroundImage: 'url(' + services[currentIndex].background + ')',
+    }"
+  >
     <v-row class="carousel-container">
       <v-col>
         <v-row justify="center" align="center" class="text-left">
@@ -71,7 +77,9 @@
                     </p>
                   </v-col>
                   <v-col align="right">
-                    <v-img :src="item.img" width="600"></v-img>
+                    <div>
+                      <v-img :src="item.img" class="item-img"></v-img>
+                    </div>
                   </v-col>
                 </v-row>
               </div>
@@ -97,6 +105,7 @@ export default {
         img: require('@/assets/imgs/forward/showcase/hosting.png'),
         background: require('@/assets/imgs/forward/background/background_hosting.png'),
       },
+
       {
         icon: require('@/assets/imgs/forward/icon/Storage.svg'),
         title: 'Dapp Hosting',
@@ -159,6 +168,9 @@ export default {
 .main-container {
   padding: 64px 80px;
   max-width: 100%;
+  height: 800px;
+  background-size: cover;
+  background-position: center bottom;
 }
 
 .carousel-item-background {
@@ -174,6 +186,9 @@ export default {
   padding: 24px 0 !important;
   border-radius: 48px;
   font-weight: bold;
+}
+.item-img {
+  width: 600px;
 }
 .right-icon {
   padding: 7px;
@@ -219,11 +234,15 @@ p {
 }
 @media (max-width: 960px) {
   .main-container {
-    padding: 64px 0;
+    padding: 64px 10px;
+    height: 1200px;
   }
   .carousel-delimiters {
     max-width: 100%;
     width: 200%;
+  }
+  .item-img {
+    width: 100%;
   }
 }
 </style>
