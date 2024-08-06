@@ -112,7 +112,6 @@ export default {
       this.$refs.bannerVideo.style.transform = `translateY(${
         -scrollPercent * 50
       }px)`
-      console.log(scrollPercent)
       if (scrollPercent > 2.5) {
         this.$refs.logoWrap.style.position = 'relative'
       } else {

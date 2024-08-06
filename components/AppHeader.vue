@@ -380,14 +380,12 @@ export default {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
       const delta = currentScrollPosition - this.lastScrollPosition
-      console.log(delta)
       if (delta > 0) {
         this.fixed = false
       } else {
         this.fixed = true
       }
       this.lastScrollPosition = currentScrollPosition
-      console.log(this.fixed)
     },
   },
 }
