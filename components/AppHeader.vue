@@ -2,15 +2,18 @@
   <div id="header">
     <v-app-bar
       fixed
+      hide-on-scroll
       app
       flat
       dark
       elevate-on-scroll
       :elevation="4"
-      height="48"
       color="#000"
     >
-      <div style="width: 100%; padding-top: 0">
+      <div
+        style="width: 100%; padding-top: 0"
+        class="headerContainer d-flex align-center"
+      >
         <v-container class="d-flex align-center" style="height: 22px">
           <v-btn text color="transparent" to="/" class="always-active mr-8">
             <v-img
@@ -205,6 +208,8 @@ export default {
   components: { Logo, AppTopTips },
   data() {
     return {
+      lastScrollPosition: 0,
+      fixed: true,
       mdiMenu,
       mdiGithub,
       mdiChevronDown,
@@ -367,6 +372,24 @@ export default {
       ],
     }
   },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop
+      const delta = currentScrollPosition - this.lastScrollPosition
+      console.log(delta)
+      if (delta > 0) {
+        this.fixed = false
+      } else {
+        this.fixed = true
+      }
+      this.lastScrollPosition = currentScrollPosition
+      console.log(this.fixed)
+    },
+  },
 }
 </script>
 <style scoped>
@@ -374,6 +397,13 @@ export default {
   z-index: 99;
   position: relative;
 }
+.headerContainer {
+  border: 1px solid #ffffff40;
+  border-radius: 24px;
+  height: 48px;
+  background-color: #000;
+}
+
 .menu_text {
   font-size: 14px;
 }
@@ -419,6 +449,9 @@ export default {
 /deep/ .v-btn.v-btn--has-bg {
   background-color: transparent !important;
 }
+/deep/ .v-main {
+  padding-top: 0;
+}
 .menu-card {
   background: #121536 !important;
 }
@@ -446,7 +479,6 @@ export default {
   padding-right: 10px;
 }
 .v-menu__content {
-  top: 82px;
   left: 0;
 }
 </style>

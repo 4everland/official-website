@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/v-slot-style -->
 <template>
   <v-container fluid class="build-container">
     <v-row justify="center" align="center">
@@ -25,54 +26,89 @@
             ></v-img>
             <div class="radar_search_item_wrap">
               <div class="radar_search_item_gateway">
-                <v-img
-                  class="gateway_img"
-                  width="24"
-                  :src="
-                    require('@/assets/imgs/index/newui/radarItem/gateway.png')
-                  "
-                ></v-img>
+                <div class="radius_bg d-flex align-center justify-center">
+                  <v-img
+                    contain
+                    class="gateway_img"
+                    width="24"
+                    height="24"
+                    justify="center"
+                    :src="
+                      require('@/assets/imgs/index/newui/radarItem/gateway.png')
+                    "
+                  ></v-img>
+                </div>
+                <span class="tips"> Gateway </span>
               </div>
               <div class="radar_search_item_storage">
-                <v-img
-                  class="storage_img"
-                  width="24"
-                  :src="
-                    require('@/assets/imgs/index/newui/radarItem/storage.png')
-                  "
-                ></v-img>
+                <div class="radius_bg d-flex align-center justify-center">
+                  <v-img
+                    contain
+                    class="storage_img"
+                    width="24"
+                    height="24"
+                    :src="
+                      require('@/assets/imgs/index/newui/radarItem/storage.png')
+                    "
+                  ></v-img>
+                </div>
+                <span class="tips"> Storage </span>
               </div>
               <div class="radar_search_item_hosting">
-                <v-img
-                  class="storage_img"
-                  width="24"
-                  :src="
-                    require('@/assets/imgs/index/newui/radarItem/hosting.png')
-                  "
-                ></v-img>
+                <div class="radius_bg d-flex align-center justify-center">
+                  <v-img
+                    contain
+                    class="storage_img"
+                    width="24"
+                    height="24"
+                    :src="
+                      require('@/assets/imgs/index/newui/radarItem/hosting.png')
+                    "
+                  ></v-img>
+                </div>
+                <span class="tips"> DWeb Hosting </span>
               </div>
               <div class="radar_search_item_rpc">
-                <v-img
-                  class="storage_img"
-                  width="24"
-                  :src="require('@/assets/imgs/index/newui/radarItem/rpc.png')"
-                ></v-img>
+                <div class="radius_bg d-flex align-center justify-center">
+                  <v-img
+                    contain
+                    class="storage_img"
+                    width="24"
+                    height="24"
+                    :src="
+                      require('@/assets/imgs/index/newui/radarItem/rpc.png')
+                    "
+                  ></v-img>
+                </div>
+                <span class="tips"> RPC </span>
               </div>
               <div class="radar_search_item_raas">
-                <v-img
-                  class="storage_img"
-                  width="24"
-                  :src="require('@/assets/imgs/index/newui/radarItem/raas.png')"
-                ></v-img>
+                <div class="radius_bg d-flex align-center justify-center">
+                  <v-img
+                    contain
+                    class="storage_img"
+                    width="24"
+                    height="24"
+                    :src="
+                      require('@/assets/imgs/index/newui/radarItem/raas.png')
+                    "
+                  ></v-img>
+                </div>
+                <span class="tips"> RaaS </span>
               </div>
               <div class="radar_search_item_airpc">
-                <v-img
-                  class="storage_img"
-                  width="24"
-                  :src="
-                    require('@/assets/imgs/index/newui/radarItem/airpc.png')
-                  "
-                ></v-img>
+                <div class="radius_bg d-flex align-center justify-center">
+                  <v-img
+                    contain
+                    class="storage_img"
+                    width="24"
+                    height="24"
+                    :src="
+                      require('@/assets/imgs/index/newui/radarItem/airpc.png')
+                    "
+                  ></v-img>
+                </div>
+                <span class="tips"> Gateway </span>
               </div>
             </div>
           </div>
@@ -171,7 +207,7 @@ export default {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 160px;
-    z-index: 100;
+    z-index: 10;
   }
   @keyframes researchRadarRotate {
     0% {
@@ -233,56 +269,105 @@ export default {
   color: #fff;
   font-weight: bold;
 }
+.tooltip_bg {
+  background: linear-gradient(87.49deg, #00c6fb 7.23%, #005bea 100%);
+}
 
+.tips {
+  position: absolute;
+  top: -27px;
+  left: -82px;
+  width: 75px;
+  height: 25px;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px 8px 2px 8px;
+  background: linear-gradient(87.49deg, #00c6fb 7.23%, #005bea 100%);
+}
+.radius_bg {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px 0 #c7d7fe80;
+}
 .radar_search_item_gateway {
   position: absolute;
-  top: 278px;
-  left: 165px;
-  width: 100px;
-  height: 100px;
-  z-index: 100;
+  top: 270px;
+  left: 157px;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  .tips {
+    position: absolute;
+    top: -27px;
+    left: -82px;
+    width: 75px;
+    height: 25px;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px 8px 2px 8px;
+    background: linear-gradient(87.49deg, #00c6fb 7.23%, #005bea 100%);
+  }
 }
 .radar_search_item_storage {
   position: absolute;
-  top: 232px;
-  left: 316px;
+  top: 223px;
+  left: 310px;
   width: 100px;
   height: 100px;
-  z-index: 100;
+  z-index: 10;
 }
 .radar_search_item_hosting {
   position: absolute;
-  top: 43px;
-  left: 435px;
+  top: 35px;
+  left: 427px;
   width: 100px;
   height: 100px;
-  z-index: 100;
+  z-index: 10;
+  .tips {
+    left: 30px;
+    width: 111px;
+    border-radius: 8px 8px 8px 2px;
+  }
 }
 .radar_search_item_rpc {
   position: absolute;
-  top: 232px;
-  left: 552px;
+  top: 223px;
+  left: 544px;
   width: 100px;
   height: 100px;
-  z-index: 100;
+  z-index: 10;
+  .tips {
+    left: 30px;
+    width: 45px;
+    border-radius: 8px 8px 8px 2px;
+  }
 }
 .radar_search_item_raas {
   position: absolute;
-  top: 278px;
-  left: 704px;
+  top: 269px;
+  left: 697px;
   width: 100px;
   height: 100px;
-  z-index: 100;
-  box-shadow: inset 0 0 6px 4px #ed78ff0a, inset 0 0 8px #787bff0f,
-    inset 0 0 4px #787bff0a;
+  z-index: 10;
+  .tips {
+    left: 30px;
+    width: 50px;
+    border-radius: 8px 8px 8px 2px;
+  }
 }
 .radar_search_item_airpc {
   position: absolute;
-  top: 434px;
-  left: 667px;
+  top: 426px;
+  left: 660px;
   width: 100px;
   height: 100px;
-  z-index: 100;
+  z-index: 10;
+  .tips {
+    left: 30px;
+    width: 62px;
+    border-radius: 8px 8px 8px 2px;
+  }
 }
 .radar_item_active {
   animation: researchRadarItem 3s calc(6 * 0.01s) cubic-bezier(0.6, 0.6, 0, 1) 1;

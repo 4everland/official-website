@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-lone-template -->
 <template>
   <div id="banner">
-    <v-container class="my-4 my-md-16">
+    <v-container class="my-3 mt-md-16 mb-md-5">
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="topSectionMain">
@@ -39,11 +39,14 @@
                 </v-btn>
               </div>
             </div>
-            <div class="text-center banner">
-              <v-img
-                class="banner-bg"
-                :src="require('@/assets/imgs/index/newui/union1.png')"
-              ></v-img>
+            <div
+              id="bannerVideo"
+              ref="bannerVideo"
+              class="text-center bannervideo"
+            >
+              <video-play
+                video-src="https://static.4everland.org/4EVERLogo_Animation.webm"
+              ></video-play>
             </div>
             <div>
               <star-rise></star-rise>
@@ -52,7 +55,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <div>
+    <div ref="logoWrap" class="logoWrap">
       <Logolist></Logolist>
     </div>
   </div>
@@ -60,11 +63,13 @@
 <script>
 import StarRise from '@/components/IndexSections/StarRise.vue'
 import Logolist from '@/components/IndexSections/Logolist.vue'
+import VideoPlay from '@/components/IndexSections/VideoPlay.vue'
 
 export default {
   components: {
     StarRise,
     Logolist,
+    VideoPlay,
   },
   data() {
     return {
@@ -77,6 +82,10 @@ export default {
   },
   mounted() {
     this.showLabel()
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     showLabel() {
@@ -94,6 +103,21 @@ export default {
           this.activeIndex = nextIndex
         }, 500)
       }, 3000)
+    },
+    handleScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      const bannerHeight = document.getElementById('banner').offsetHeight
+      const scrollHeight = document.documentElement.scrollHeight
+      const scrollPercent = (scrollTop / (scrollHeight - bannerHeight)) * 100
+      this.$refs.bannerVideo.style.transform = `translateY(${
+        -scrollPercent * 50
+      }px)`
+      console.log(scrollPercent)
+      if (scrollPercent > 1.2) {
+        this.$refs.logoWrap.style.position = 'relative'
+      } else {
+        this.$refs.logoWrap.style.position = 'fixed'
+      }
     },
   },
 }
@@ -200,11 +224,11 @@ export default {
         word-break: break-word;
       }
     }
-    .banner {
+    .bannervideo {
       width: 100%;
       height: 100%;
       position: absolute;
-      top: 40%;
+      top: 50%;
       left: 0;
       z-index: 1;
     }
@@ -232,6 +256,10 @@ export default {
     font-size: 11px;
     max-width: 220px;
   }
+}
+.logoWrap {
+  position: fixed;
+  z-index: 10;
 }
 
 @media (max-width: 960px) {
