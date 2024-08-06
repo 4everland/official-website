@@ -1,7 +1,7 @@
 <template>
-  <div id="footer">
-    <v-container class="hidden-sm-and-down mt-8">
-      <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
+  <div id="footer" dark>
+    <v-container dark class="hidden-sm-and-down mt-8">
+      <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }" dark>
         <v-col cols="12" md="4" lg="4">
           <div class="ml-4 mb-4 text-h6">Join us</div>
           <div class="join-us">
@@ -90,7 +90,7 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item v-for="(item, index) in items.list" :key="index">
+          <v-list-item v-for="(item, index1) in items.list" :key="index1">
             <v-list-item-title>
               <v-btn
                 :to="item.to"
@@ -334,6 +334,7 @@ export default {
 <style scoped>
 #footer {
   padding-top: 0;
+  background-color: #000;
 }
 .footer-titele {
   font-size: 23px;
@@ -441,6 +442,9 @@ input:-ms-input-placeholder {
 /deep/.v-btn--plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover)
   .v-btn__content {
   opacity: 1;
+}
+.text-h6 {
+  color: #fff;
 }
 
 @media (max-width: 960px) {

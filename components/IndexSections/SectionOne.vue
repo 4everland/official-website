@@ -113,7 +113,7 @@ export default {
         -scrollPercent * 50
       }px)`
       console.log(scrollPercent)
-      if (scrollPercent > 1.2) {
+      if (scrollPercent > 2.5) {
         this.$refs.logoWrap.style.position = 'relative'
       } else {
         this.$refs.logoWrap.style.position = 'fixed'
@@ -124,7 +124,7 @@ export default {
 </script>
 <style lang="less" scoped>
 #banner {
-  min-height: 350px;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
   .topSectionMain {
@@ -259,6 +259,8 @@ export default {
 }
 .logoWrap {
   position: fixed;
+  left: 0;
+  bottom: 0;
   z-index: 10;
 }
 

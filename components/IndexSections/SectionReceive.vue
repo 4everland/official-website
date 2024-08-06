@@ -19,15 +19,26 @@
           </div>
           <v-col cols="12" md="6">
             <v-text-field
+              v-model="email"
+              dark
               label="Your Email"
               variant="solo"
               hide-details
               single-line
+              type="email"
               class="white-label"
             ></v-text-field>
           </v-col>
           <v-col>
-            <v-btn color="#6172F3"> Subscribe </v-btn>
+            <v-btn
+              dark
+              color="#6172F3"
+              :loading="loading"
+              :disabled="disabled"
+              @click="subscribe"
+            >
+              Subscribe
+            </v-btn>
           </v-col>
           <!-- </v-row> -->
         </div>
@@ -38,12 +49,64 @@
 </template>
 
 <script>
+import { mdiEmoticonHappyOutline } from '@mdi/js'
+const Reg =
+  // eslint-disable-next-line
+  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 export default {
-  name: 'NetworkStructure',
-  data: () => ({
-    inputValue: '',
-  }),
-  methods: {},
+  data() {
+    return {
+      email: '',
+      loading: false,
+      disabled: true,
+      subSuccessShow: false,
+      subPendingShow: false,
+      mdiEmoticonHappyOutline,
+    }
+  },
+  watch: {
+    email(newVal) {
+      this.disabled = !Reg.test(newVal)
+    },
+  },
+  methods: {
+    async subscribe() {
+      this.loading = true
+      try {
+        const resp = await this.$axios.post(
+          `https://auth.foreverland.xyz/events/email-subscription?email=${this.email}`
+        )
+        // eslint-disable-next-line no-console
+        if (resp.data.code === 200) {
+          this.subSuccessShow = true
+          setTimeout(() => {
+            this.subSuccessShow = false
+          }, 2500)
+        } else if (resp.data.code === 400) {
+          this.$dialog.error({
+            text: 'The email has already subscribed.',
+            title: 'Error',
+          })
+        } else {
+          this.$dialog.error({
+            text: 'Subscription failed, please try again later.',
+            title: 'Error',
+          })
+        }
+      } catch (err) {
+        this.$dialog.error({
+          text: err.message,
+          title: 'Error',
+        })
+      } finally {
+        this.loading = false
+      }
+    },
+    emailChange() {
+      this.disabled = !Reg.test(this.email)
+    },
+  },
 }
 </script>
 
@@ -71,6 +134,35 @@ export default {
 }
 .white-label .v-label {
   color: white !important;
+}
+/deep/ .white-label input {
+  border: none !important;
+}
+/deep/ .white-label .v-input__slot::before {
+  border: none !important;
+}
+
+.white-label input:hover,
+.white-label input:focus,
+.white-label input:active {
+  outline: none;
+  border: none !important;
+}
+
+/deep/ .v-text-field > .v-input__control > .v-input__slot::after {
+  transition: none;
+  border: none !important;
+}
+/deep/
+  .v-text-field.v-input--is-focused
+  > .v-input__control
+  > .v-input__slot::after {
+  border: none !important;
+}
+
+/deep/.v-btn--plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover)
+  .v-btn__content {
+  opacity: 1;
 }
 @media (max-width: 960px) {
   .email-input {

@@ -1,7 +1,7 @@
 <template>
   <v-sheet dark class="logo-banner pa-2" style="overflow: hidden">
-    <div class="logo-container">
-      <div ref="logoContainer" class="logo-row">
+    <div id="logoContainer1" class="logo-container d-flex">
+      <div ref="logoContainer" class="logo-row d-flex list1">
         <v-img
           v-for="item in logoList1"
           :key="item.alt"
@@ -12,12 +12,34 @@
           contain
         />
       </div>
+      <div ref="logoContainer" class="logo-row d-flex list2">
+        <v-img
+          v-for="item in logoList1"
+          :key="`logo-copy-${item.alt}`"
+          class="mx-4"
+          :width="item.width"
+          :height="item.height"
+          :src="item.src"
+          contain
+        />
+      </div>
     </div>
-    <div class="logo-container2">
-      <div ref="logoContainer2" class="logo-row">
+    <div id="logoContainer2" class="logo-container2 d-flex">
+      <div ref="logoContainer2" class="logo-row d-flex list1">
         <v-img
           v-for="item in logoList2"
           :key="item.alt"
+          class="mx-4"
+          :width="item.width"
+          :height="item.height"
+          :src="item.src"
+          contain
+        />
+      </div>
+      <div ref="logoContainer2" class="logo-row d-flex list2">
+        <v-img
+          v-for="item in logoList2"
+          :key="`logo-copy-${item.alt}`"
           class="mx-4"
           :width="item.width"
           :height="item.height"
@@ -184,13 +206,29 @@ export default {
     ],
   }),
   mounted() {
-    this.startAnimation()
-    this.startAnimation1()
+    // this.startAnimation2()
+    // this.startAnimation1()
   },
   beforeDestroy() {
     this.stopAnimation()
   },
   methods: {
+    startAnimation2() {
+      const container = this.$refs.logoContainer
+      let position = 0
+      const speed = 1 // 调整滚动速度
+
+      const animate = () => {
+        position -= speed
+        if (position <= -container.offsetWidth / 2) {
+          position = 0
+        }
+        container.style.transform = `translateX(${position}px)`
+        this.animationId = requestAnimationFrame(animate)
+      }
+
+      this.animationId = requestAnimationFrame(animate)
+    },
     startAnimation() {
       const container = this.$refs.logoContainer
       let position = 0
@@ -234,10 +272,6 @@ export default {
 </script>
 
 <style scoped>
-.logo-banner {
-  background-color: #0d1117 !important;
-}
-
 .logo-container {
   height: 60px;
   white-space: nowrap;
@@ -249,17 +283,77 @@ export default {
   align-items: center;
 }
 
-.v-icon {
-  color: white;
-}
-
-.v-img {
-  filter: invert(1);
-}
-
-.logo-container2 {
+#logoContainer1 .list1 {
+  animation: styles_animate-1 140s linear infinite;
+  animation-delay: -140s;
   display: flex;
-  justify-content: flex-end;
-  white-space: nowrap;
+  align-items: center;
+  flex-shrink: 0;
+  will-change: transform;
+}
+#logoContainer1 .list2 {
+  animation: styles_animate-2 140s linear infinite;
+  animation-delay: -70s;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  will-change: transform;
+}
+
+@keyframes styles_animate-1 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes styles_animate-2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+#logoContainer2 .list1 {
+  animation: styles_animate-11 140s linear infinite;
+  animation-delay: -140s;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  will-change: transform;
+}
+#logoContainer2 .list2 {
+  animation: styles_animate-22 140s linear infinite;
+  animation-delay: -70s;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  will-change: transform;
+}
+
+@keyframes styles_animate-11 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes styles_animate-22 {
+  0% {
+    transform: translateX(-200%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 </style>
