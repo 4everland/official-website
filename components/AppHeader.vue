@@ -1,15 +1,6 @@
 <template>
   <div id="header">
-    <v-app-bar
-      fixed
-      hide-on-scroll
-      app
-      flat
-      dark
-      elevate-on-scroll
-      :elevation="4"
-      color="#000"
-    >
+    <v-app-bar fixed hide-on-scroll app flat dark>
       <div
         style="width: 100%; padding-top: 0"
         class="headerContainer d-flex align-center"
@@ -138,13 +129,11 @@
           <v-btn
             :href="loginUrl"
             target="_blank"
-            class="hidden-sm-and-down black white--text font-weight-bold"
-            outlined
-            tile
+            class="header-menu-start hidden-sm-and-down font-weight-bold"
+            rounded
             color="#000"
           >
             Get Started
-            <v-icon class="ml-2">{{ mdiChevronRight }}</v-icon>
           </v-btn>
         </v-container>
       </div>
@@ -394,6 +383,9 @@ export default {
   height: 48px;
   background-color: #000;
 }
+/deep/ .theme--dark.v-app-bar.v-toolbar.v-sheet {
+  background-color: transparent;
+}
 .divider {
   height: 3px;
   background: linear-gradient(90deg, #fda9ff -0.02%, #039cff 99.98%);
@@ -444,9 +436,6 @@ export default {
 /deep/ .v-btn.v-btn--has-bg {
   background-color: transparent !important;
 }
-/deep/ .v-main {
-  padding-top: 0;
-}
 .menu-card {
   padding: 28px 20px;
   background: #121536 !important;
@@ -476,5 +465,21 @@ export default {
 }
 .v-menu__content {
   left: 0;
+}
+/deep/ .v-btn.v-btn--has-bg.header-menu-start {
+  background-color: #fff !important;
+}
+.header-menu-start {
+  width: 126px;
+  height: 32px;
+  padding: 8px 24px 8px 24px;
+  border-radius: 48px;
+  color: #000;
+  background-color: #fff !important;
+}
+/deep/ .header-menu-start .v-btn__content {
+  color: #101828;
+  font-family: Inter, Arial, sans-serif !important;
+  font-weight: 400;
 }
 </style>

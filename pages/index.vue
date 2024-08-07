@@ -91,6 +91,11 @@ export default {
   methods: {},
 }
 </script>
+<style lang="less">
+.v-main {
+  background-color: #000;
+}
+</style>
 <style lang="less" scoped>
 #home {
   background: #000;
@@ -114,6 +119,9 @@ export default {
       white-space: nowrap;
     }
   }
+}
+/deep/ .v-main {
+  padding-top: 0 !important;
 }
 
 @media (max-width: 960px) {

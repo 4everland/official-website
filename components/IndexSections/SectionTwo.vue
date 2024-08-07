@@ -3,11 +3,13 @@
   <v-container fluid class="build-container">
     <v-row justify="center" align="center">
       <v-col cols="12">
-        <h4 class="white--text building-title font-weight-bold pt-16">
-          Pioneering Web3 Evolution
-        </h4>
-        <div class="building-subtitle pb-5">
-          Accelerating innovation with our unrivaled suite of services
+        <div class="pion_title">
+          <h4 class="white--text building-title font-weight-bold pt-16">
+            Pioneering Web3 Evolution
+          </h4>
+          <div class="building-subtitle pb-5">
+            Accelerating innovation with our unrivaled suite of services
+          </div>
         </div>
         <div class="research-radar-wrapper">
           <div class="research-radar">
@@ -173,6 +175,10 @@ export default {
   position: relative;
   height: 935px;
   overflow: hidden;
+}
+.pion_title {
+  position: sticky;
+  top: 0;
 }
 .sectionContent {
   font-family: Inter, Arial, sans-serif;

@@ -58,15 +58,15 @@
                 video-src="https://static.4everland.org/4EVERLogo_Animation.webm"
               ></video-play>
             </div>
-            <div>
-              <star-rise></star-rise>
-            </div>
           </div>
         </v-col>
       </v-row>
     </v-container>
     <div ref="logoWrap" class="logoWrap">
       <Logolist></Logolist>
+    </div>
+    <div>
+      <star-rise></star-rise>
     </div>
   </div>
 </template>
@@ -133,9 +133,10 @@ export default {
 </script>
 <style lang="less" scoped>
 #banner {
-  min-height: 100vh;
+  min-height: 108vh;
   position: relative;
   overflow: hidden;
+  background-color: #000;
   .topSectionMain {
     position: relative;
     z-index: 1;
@@ -269,7 +270,7 @@ export default {
 .logoWrap {
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: -60px;
   z-index: 10;
 }
 

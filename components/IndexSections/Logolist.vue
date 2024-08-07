@@ -272,6 +272,9 @@ export default {
 </script>
 
 <style scoped>
+.logo-banner {
+  background: linear-gradient(180deg, #121536 0%, #000 100%);
+}
 .logo-container {
   height: 60px;
   white-space: nowrap;

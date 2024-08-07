@@ -2,9 +2,9 @@
   <div class="widget">
     <div class="shape-star">
       <div class="rising-stars rising-stars-visible">
-        <div style="height: 1px; width: 1px"></div>
-        <div style="height: 2px; width: 2px"></div>
-        <div style="height: 1px; width: 1px"></div>
+        <div style="height: 5px; width: 5px"></div>
+        <div style="height: 3px; width: 3px"></div>
+        <div style="height: 4px; width: 4px"></div>
       </div>
     </div>
   </div>

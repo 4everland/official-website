@@ -1,7 +1,7 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
   <div class="video-container">
-    <video ref="videoPlayer" :class="{ 'pause': isPaused }" muted>
+    <video ref="videoPlayer" :class="{ 'pause': isPaused }" muted loop>
       <source :src="videoSrc" type="video/mp4" />
     </video>
   </div>
