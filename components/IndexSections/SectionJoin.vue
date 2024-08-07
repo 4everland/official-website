@@ -14,7 +14,12 @@
             better time than now to get started
           </p>
           <div class="text-right">
-            <v-btn color="#6172F3" class="white--text mt-16 start-btn">
+            <v-btn
+              color="#6172F3"
+              href="https://dashboard.4everland.org/"
+              target="_blank"
+              class="white--text mt-16 start-btn"
+            >
               Get Started
               <div class="right-icon">
                 <v-img

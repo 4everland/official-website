@@ -108,7 +108,7 @@
                     "
                   ></v-img>
                 </div>
-                <span class="tips"> Gateway </span>
+                <span class="tips"> AI RPC</span>
               </div>
             </div>
           </div>

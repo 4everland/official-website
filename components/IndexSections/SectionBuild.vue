@@ -5,6 +5,9 @@
         <h2 class="white--text header-title font-weight-bold">
           TOP WEB3 PROJECTS ARE BUILDING WITH US
         </h2>
+        <p class="white--text text-subtitle-1 mt-4">
+          Numerous projects have harnessed the charm of our diverse solutions
+        </p>
       </v-col>
     </v-row>
     <v-row justify="center">
