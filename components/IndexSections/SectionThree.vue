@@ -32,7 +32,12 @@
             </div>
           </v-col>
           <v-col align="right">
-            <v-btn color="#6172F3" class="white--text mt-8 start-btn">
+            <v-btn
+              color="#6172F3"
+              href="https://dashboard.4everland.org/"
+              target="_blank"
+              class="white--text mt-8 start-btn"
+            >
               Get Started
               <div class="right-icon">
                 <v-img
