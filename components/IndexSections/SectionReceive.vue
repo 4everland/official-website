@@ -4,7 +4,7 @@
     <v-row justify="center" align="center" class="text-left mt-6 mb-6">
       <v-col cols="12" sm="6">
         <h6 class="white--text text-h6 font-weight-bold">
-          Receive transmissions
+          Sign up for our newsletter
         </h6>
         <p class="white--text mt-4">
           Join 300,000+ builders and stay up to date with our latest updates and
@@ -17,7 +17,7 @@
           <div>
             <v-icon color="#FFF">mdi-email-outline </v-icon>
           </div>
-          <v-col cols="12" md="6">
+          <v-col class="subscribe-btn">
             <v-text-field
               v-model="email"
               dark
@@ -28,8 +28,6 @@
               type="email"
               class="white-label"
             ></v-text-field>
-          </v-col>
-          <v-col>
             <v-btn
               dark
               color="#6172F3"
@@ -40,6 +38,9 @@
               Subscribe
             </v-btn>
           </v-col>
+          <!-- <v-col>
+
+          </v-col> -->
           <!-- </v-row> -->
         </div>
       </v-col>
@@ -52,7 +53,7 @@
 import { mdiEmoticonHappyOutline } from '@mdi/js'
 const Reg =
   // eslint-disable-next-line
-  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 export default {
   data() {
@@ -135,6 +136,11 @@ export default {
 .white-label .v-label {
   color: white !important;
 }
+.subscribe-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 /deep/ .white-label input {
   border: none !important;
 }
@@ -160,13 +166,17 @@ export default {
   border: none !important;
 }
 
-/deep/.v-btn--plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover)
+/* /deep/.v-btn--plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover)
   .v-btn__content {
   opacity: 1;
-}
+} */
 @media (max-width: 960px) {
   .email-input {
     width: 100%;
+  }
+
+  .main-container {
+    padding: 64px 20px;
   }
 }
 </style>

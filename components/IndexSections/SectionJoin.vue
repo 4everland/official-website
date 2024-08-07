@@ -2,7 +2,7 @@
   <v-container fluid class="main-container">
     <v-row justify="center" align="center" class="text-left">
       <v-col cols="12">
-        <h2 class="white--text text-h2 font-weight-bold">JUMP RIGHT IN</h2>
+        <h2 class="white--text header-title font-weight-bold">JUMP RIGHT IN</h2>
       </v-col>
     </v-row>
     <div class="mt-10 background-image">
@@ -11,7 +11,7 @@
           <p class="white--text get-start">
             Whether you're an individual eager to explore 4EVERLAND's offerings
             or a developer ready to innovate with our platform, there's no
-            better time than now to get started.
+            better time than now to get started
           </p>
           <div class="text-right">
             <v-btn color="#6172F3" class="white--text mt-16 start-btn">
@@ -51,6 +51,9 @@ export default {
   background-position: center;
   padding: 100px 40px;
 }
+.header-title {
+  font-size: 48px;
+}
 .get-start {
   width: 66%;
 }
@@ -77,6 +80,9 @@ export default {
   text-align: center;
 }
 @media (max-width: 960px) {
+  .main-container {
+    padding: 64px 20px;
+  }
   .get-start {
     width: 100%;
   }

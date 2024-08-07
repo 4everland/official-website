@@ -61,6 +61,7 @@
             <div v-if="item.childs" class="menu-down">
               <v-container>
                 <v-card class="menu-card">
+                  <div class="divider"></div>
                   <v-row>
                     <v-col
                       v-for="child in item.childs"
@@ -81,7 +82,7 @@
                         :target="child.target"
                         :ripple="false"
                       >
-                        <div class="d-flex align-center">
+                        <div class="d-flex align-center text-left">
                           <v-img
                             class="mr-2"
                             max-height="34"
@@ -224,16 +225,17 @@ export default {
           link: '',
           childs: [
             {
-              text: 'Hosting',
-              tips: 'Host websites and Dapps on IPFS, Arweave, Dfinity, and BNB Greenfield',
-              icon: require('@/assets/imgs/nav/hosting.png'),
-              link: '/hosting',
+              text: 'DWeb Hosting',
+              tips: 'Deploy your websites and DApps in seconds. ',
+              icon: require('@/assets/imgs/forward/icon/hosting.svg'),
+              href: 'https://docs.4everland.org/hositng/what-is-hosting',
             },
             {
-              text: 'Bucket',
-              tips: 'Upload, pin files to IPFS and Arweave',
-              icon: require('@/assets/imgs/nav/bucket.png'),
-              link: '/bucket',
+              text: 'Storage',
+              tips: 'Seamlessly upload, manage, and fetch files to decentralized protocols.',
+              icon: require('@/assets/imgs/forward/icon/Storage.svg'),
+              href: 'https://docs.4everland.org/storage/bucket',
+              target: '_blank',
             },
             // {
             //   text: 'Explorer',
@@ -243,10 +245,11 @@ export default {
             //   target: '_blank',
             // },
             {
-              text: 'IPFS Gateway',
-              tips: 'Global distributed nodes for global acceleration and automatic allocation.',
-              icon: require('@/assets/imgs/nav/IPFS Gateway.png'),
-              link: '/ipfs',
+              text: 'Gateway',
+              tips: 'Globally distributed nodes for global acceleration and automatic resource allocation.',
+              icon: require('@/assets/imgs/forward/icon/Gateway.svg'),
+              href: 'https://docs.4everland.org/gateways/ipfs-gateway',
+              target: '_blank',
             },
             // {
             //   text: 'ENS Domain',
@@ -262,23 +265,23 @@ export default {
             // },
             {
               text: 'RPC',
-              tips: 'Smoothly interact with Web3 across multiple chains',
-              icon: require('@/assets/imgs/nav/rpc.png'),
+              tips: 'Facilitate seamless interactions with Web3 across multiple blockchain networks.',
+              icon: require('@/assets/imgs/forward/icon/RPC.svg'),
               href: 'https://docs.4everland.org/rpc-beta/guides',
               target: '_blank',
             },
             {
               text: 'RaaS',
-              tips: 'Deploy Layer2 seamlessly without code',
-              icon: require('@/assets/imgs/nav/rollup.png'),
+              tips: 'Deploy Layer 2 blockchains effortlessly without any coding required.',
+              icon: require('@/assets/imgs/forward/icon/RaaS.svg'),
               href: 'https://docs.4everland.org/raas-beta/whats-rollups',
               target: '_blank',
             },
             {
               text: 'AI RPC',
-              tips: 'One-stop solution for accessing optimal Al models',
-              icon: require('@/assets/imgs/nav/AI_RPC.png'),
-              href: 'https://dashboard.4everland.org/ai-rpc',
+              tips: 'Easily get access to 100+ AI LLMs through a unified interface.',
+              icon: require('@/assets/imgs/forward/icon/AI.svg'),
+              href: 'https://docs.4everland.org/ai/ai-rpc',
               target: '_blank',
             },
           ],
@@ -288,30 +291,20 @@ export default {
           link: '',
           childs: [
             {
-              text: 'Universe',
-              tips: 'Projects built on 4EVERLAND or Web 3.0 tech',
-              icon: require('@/assets/imgs/nav/Universe.png'),
-              link: '/universe',
+              text: 'Ecosystem',
+              tips: 'Projects built with 4EVERLAND or Web 3.0 tech',
             },
             {
-              text: 'Docs',
-              tips: 'Read the 4EVERLAND docs and get started on 4EVERLAND',
-              icon: require('@/assets/imgs/nav/Docs.png'),
-              href: 'https://docs.4everland.org/',
+              text: 'Template a thon',
+              tips: 'Join the Template-a-thon, and Share the 50,000,000 T4EVER grant!',
+              href: 'https://template.4everland.org/#/',
               target: '_blank',
             },
             {
-              text: 'Litepaper',
-              tips: 'Read the 4EVERLAND litepaper and discover the scope of the project',
-              icon: require('@/assets/imgs/nav/Litepaper.png'),
-              href: 'https://static.4everland.org/4everland-litepaper.pdf',
+              text: 'Blogs',
+              tips: 'Stay updated with the latest posts, feature updates, and insightful articles',
+              href: 'https://medium.com/4everland',
               target: '_blank',
-            },
-            {
-              text: 'Grants',
-              tips: 'Contribute to 4EVERLAND and get rewarded',
-              icon: require('@/assets/imgs/nav/Grants.png'),
-              link: '/grants',
             },
             // {
             //   text: 'Bug Bounty',
@@ -320,30 +313,30 @@ export default {
             //   href: 'https://dashboard.4everland.org/#/bug-bounty',
             //   target: '_blank',
             // },
-            {
-              text: 'Dev Forum',
-              tips: 'Join the forum and share your experience with other developers',
-              icon: require('@/assets/imgs/nav/Dev Forum.png'),
-              href: 'https://www.reddit.com/r/4everland/',
-              target: '_blank',
-            },
-            {
-              text: 'Template-a-thon 🔥',
-              tips: 'Join the Template-a-thon,  Share the 50,000,000 T-4EVER grant!',
-              icon: require('@/assets/imgs/nav/Template-a-thon.png'),
-              href: 'https://template.4everland.org/#/',
-              target: '_blank',
-            },
+            // {
+            //   text: 'Dev Forum',
+            //   tips: 'Join the forum and share your experience with other developers',
+            //   icon: require('@/assets/imgs/nav/Dev Forum.png'),
+            //   href: 'https://www.reddit.com/r/4everland/',
+            //   target: '_blank',
+            // },
+            // {
+            //   text: 'Template-a-thon 🔥',
+            //   tips: 'Join the Template-a-thon,  Share the 50,000,000 T-4EVER grant!',
+            //   icon: require('@/assets/imgs/nav/Template-a-thon.png'),
+            //   href: 'https://template.4everland.org/#/',
+            //   target: '_blank',
+            // },
           ],
         },
         {
-          text: 'Blogs',
+          text: 'Docs',
           href: 'https://medium.com/4everland',
           target: '_blank',
         },
         {
           text: 'Pricing',
-          href: 'https://docs.4everland.org/get-started/billing-and-pricing/pricing-model',
+          href: 'https://docs.4everland.org/get-started/billing-and-pricing',
           target: '_blank',
         },
         // {
@@ -401,7 +394,11 @@ export default {
   height: 48px;
   background-color: #000;
 }
-
+.divider {
+  height: 3px;
+  background: linear-gradient(90deg, #fda9ff -0.02%, #039cff 99.98%);
+  margin: 0 20px;
+}
 .menu_text {
   font-size: 14px;
 }
@@ -451,6 +448,7 @@ export default {
   padding-top: 0;
 }
 .menu-card {
+  padding: 28px 20px;
   background: #121536 !important;
 }
 .nav_sub_btn {

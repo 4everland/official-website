@@ -4,10 +4,10 @@
     <v-row justify="center" align="center">
       <v-col cols="12">
         <h4 class="white--text building-title font-weight-bold pt-16">
-          THE MOMENTUM IS BUILDING
+          Pioneering Web3 Evolution
         </h4>
         <div class="building-subtitle pb-5">
-          Sharing our progress through data insights.
+          Accelerating innovation with our unrivaled suite of services
         </div>
         <div class="research-radar-wrapper">
           <div class="research-radar">
@@ -115,30 +115,34 @@
         </div>
         <div class="build-item-wrap">
           <v-row>
-            <v-col cols="3">
+            <v-col class="item-nowrap">
               <v-card class="pa-6 build-card" dark>
-                <div class="text-building-item font-weight-bold">300,000+</div>
+                <div class="text-building-item font-weight-bold">200+</div>
+                <p class="text-h6 mt-4">Providers</p>
+              </v-card>
+            </v-col>
+            <v-col>
+              <v-card class="pa-6 build-card" dark>
+                <div class="text-building-item font-weight-bold">27x</div>
+                <p class="text-h6 mt-4">Build Speed</p>
+              </v-card>
+            </v-col>
+            <v-col>
+              <v-card class="pa-6 build-card" dark>
+                <div class="text-building-item font-weight-bold">6x</div>
+                <p class="text-h6 mt-4">Cost Saving</p>
+              </v-card>
+            </v-col>
+            <v-col>
+              <v-card class="pa-6 build-card" dark>
+                <div class="text-building-item font-weight-bold">300, 000+</div>
                 <p class="text-h6 mt-4">Developers</p>
               </v-card>
             </v-col>
-            <v-col cols="3">
+            <v-col>
               <v-card class="pa-6 build-card" dark>
-                <div class="text-building-item font-weight-bold">150,000+</div>
+                <div class="text-building-item font-weight-bold">180, 000+</div>
                 <p class="text-h6 mt-4">Dapps</p>
-              </v-card>
-            </v-col>
-            <v-col cols="3">
-              <v-card class="pa-6 build-card" dark>
-                <div class="text-building-item font-weight-bold">
-                  270,000,000+
-                </div>
-                <p class="text-h6 mt-4">Files</p>
-              </v-card>
-            </v-col>
-            <v-col cols="3">
-              <v-card class="pa-6 build-card" dark>
-                <div class="text-building-item font-weight-bold">200,000+</div>
-                <p class="text-h6 mt-4">Buckets</p>
               </v-card>
             </v-col>
           </v-row>

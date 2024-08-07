@@ -10,16 +10,16 @@
       <v-col>
         <v-row justify="center" align="center" class="text-left">
           <v-col cols="12">
-            <h3 class="white--text text-h3 font-weight-bold">
-              GET STARTED WITH 4EVERLAND
+            <h3 class="white--text header-title font-weight-bold">
+              Get A FULLY PERSONALIZED EXPERIENCE ON 4EVERLAND
             </h3>
             <p class="white--text text-subtitle-1 mt-4">
-              Offering comprehensive services, including DWeb Hosting, Storage,
-              Gateway, RPC, RaaS, and AI RPC.
+              Immerse yourself in the full suite of Web3 services: Dweb Hosting,
+              Storage, Gateway, RPC, RaaS, and AI RPC.
             </p>
           </v-col>
         </v-row>
-        <v-row justify="space-between" class="pl-2 mt-12">
+        <v-row justify="space-between" class="pl-2 mt-10">
           <v-col>
             <div class="carousel-delimiters">
               <div
@@ -47,7 +47,6 @@
         </v-row>
         <v-carousel
           class="mt-8"
-          height="400"
           hide-delimiters
           cycle
           :show-arrows="false"
@@ -55,34 +54,30 @@
           @change="onCarouselChange"
         >
           <v-carousel-item v-for="(item, i) in services" :key="i">
-            <v-sheet height="100%" class="carousel-sheet">
-              <div class="d-flex fill-height justify-center">
-                <v-row>
-                  <v-col>
-                    <v-row class="mt-4 mb-4" align="center">
-                      <div>
-                        <v-img
-                          class="ml-4 mr-2"
-                          :src="item.icon"
-                          width="20"
-                        ></v-img>
-                      </div>
-                      <p class="mb-0">{{ item.title }}</p>
-                    </v-row>
-                    <h3 class="white--text text-h3 font-weight-bold">
-                      {{ item.description }}
-                    </h3>
-                    <p class="white--text text-subtitle-1 mt-4">
-                      {{ item.text }}
-                    </p>
-                  </v-col>
-                  <v-col align="right">
+            <v-sheet class="carousel-sheet">
+              <!-- <div class="d-flex justify-center"> -->
+              <v-row>
+                <v-col>
+                  <div class="mt-4 mb-4 d-flex justify-start">
                     <div>
-                      <v-img :src="item.img" class="item-img"></v-img>
+                      <v-img class="mr-2" :src="item.icon" width="20"></v-img>
                     </div>
-                  </v-col>
-                </v-row>
-              </div>
+                    <p class="mb-0">{{ item.title }}</p>
+                  </div>
+                  <h3 class="white--text description font-weight-bold">
+                    {{ item.description }}
+                  </h3>
+                  <p class="white--text text-subtitle-1 mt-4">
+                    {{ item.text }}
+                  </p>
+                </v-col>
+                <v-col>
+                  <div>
+                    <v-img :src="item.img" class="item-img"></v-img>
+                  </div>
+                </v-col>
+              </v-row>
+              <!-- </div> -->
             </v-sheet>
           </v-carousel-item>
         </v-carousel>
@@ -97,18 +92,17 @@ export default {
   data: () => ({
     services: [
       {
-        icon: require('@/assets/imgs/forward/icon/AI.svg'),
-        title: 'Dapp Hosting',
+        icon: require('@/assets/imgs/forward/icon/hosting.svg'),
+        title: 'DWeb Hosting',
         description:
           'Scalable, Secure, and Efficient Decentralized Hosting Solution',
-        text: 'Effortlessly build, deploy, and host decentralized websites and apps on IPFS, Arweave, Dfinity, or BNB Greenfield in minutes.',
+        text: 'Effortlessly build, deploy, and host decentralized websites and apps on IPFS, Arweave, Dfinity, or BNB Greenfield in seconds.',
         img: require('@/assets/imgs/forward/showcase/hosting.png'),
         background: require('@/assets/imgs/forward/background/background_hosting.png'),
       },
-
       {
         icon: require('@/assets/imgs/forward/icon/Storage.svg'),
-        title: 'Dapp Hosting',
+        title: 'Storage',
         description: 'Effortlessly Upload & Pin Files to IPFS and Arweave',
         text: 'Use our UI, CLI, or SDK to easily decentralize your files. Our built-in pinning orchestration makes the process of uploading and pinning files to IPFS and Arweave seamless.',
         img: require('@/assets/imgs/forward/showcase/storage.png'),
@@ -118,8 +112,8 @@ export default {
         icon: require('@/assets/imgs/forward/icon/Gateway.svg'),
         title: 'Gateway',
         description:
-          'SEnhanced Speed, Reliability, and Automatic Resource Allocation',
-        text: 'The 4EVERLAND gateway leverages globally distributed nodes to facilitate seamless access to decentralized networks like IPFS, Arweave, ICP, and BNB Greenfield.',
+          'Enhanced Speed, Reliability, and Automatic Resource Allocation',
+        text: 'The 4EVERLAND gateway leverages globally distributed nodes to facilitate seamless access to decentralized networks like IPFS, Arweave, Dfinity, and BNB Greenfield.',
         img: require('@/assets/imgs/forward/showcase/gateway.png'),
         background: require('@/assets/imgs/forward/background/background_gateway.png'),
       },
@@ -136,8 +130,8 @@ export default {
         icon: require('@/assets/imgs/forward/icon/RaaS.svg'),
         title: 'RaaS',
         description:
-          'Customizable Rollup Solutions for enhanced blockchain scalability',
-        text: 'Custimize your Layer2 blockchain with 4EVERLAND RaaS (Rollup as a Service).',
+          'Customizable Rollup Solutions for Enhanced Blockchain scalability',
+        text: 'Customize your Layer2 blockchain with 4EVERLAND Rollup as a Service (RaaS).',
         img: require('@/assets/imgs/forward/showcase/raas.png'),
         background: require('@/assets/imgs/forward/background/background_raas.png'),
       },
@@ -146,7 +140,7 @@ export default {
         title: 'AI RPC',
         description:
           'A Streamlined Interface to Leverage Diverse Large Language Models',
-        text: 'A unified interface for 100+ LLMs, enabling you to explore, compare, and select models and pricing options tailored to your specific needs.',
+        text: ' A unified interface for 100+ LLMs, enabling to explore, compare, and select models and pricing options tailored to your specific needs.',
         img: require('@/assets/imgs/forward/showcase/ai.png'),
         background: require('@/assets/imgs/forward/background/background_ai.png'),
       },
@@ -168,15 +162,12 @@ export default {
 .main-container {
   padding: 64px 80px;
   max-width: 100%;
-  height: 800px;
+  height: 820px;
   background-size: cover;
   background-position: center bottom;
 }
-
-.carousel-item-background {
-  width: 100%;
-  padding: 64px 80px;
-  background-size: contain;
+.header-title {
+  font-size: 48px;
 }
 .v-btn {
   justify-content: flex-end !important;
@@ -209,6 +200,9 @@ export default {
 .carousel-sheet {
   background-color: transparent !important;
 }
+.description {
+  font-size: 24px;
+}
 .carousel-delimiters {
   display: flex;
   justify-content: center;
@@ -222,7 +216,6 @@ export default {
   margin: 0 4px;
   cursor: pointer;
 }
-
 .carousel-delimiter.active {
   background-color: #fff;
 }
@@ -234,15 +227,18 @@ p {
 }
 @media (max-width: 960px) {
   .main-container {
-    padding: 64px 10px;
+    padding: 60px 20px;
     height: 1200px;
+  }
+  .header-title {
+    font-size: 30px;
   }
   .carousel-delimiters {
     max-width: 100%;
     width: 200%;
   }
   .item-img {
-    width: 100%;
+    width: 340px;
   }
 }
 </style>

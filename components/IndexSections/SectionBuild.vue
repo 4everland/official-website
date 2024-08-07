@@ -2,7 +2,7 @@
   <v-container fluid class="main-container">
     <v-row justify="center" align="center" class="text-left">
       <v-col cols="12">
-        <h2 class="white--text text-h3 font-weight-bold">
+        <h2 class="white--text header-title font-weight-bold">
           TOP WEB3 PROJECTS ARE BUILDING WITH US
         </h2>
       </v-col>
@@ -53,7 +53,7 @@
                     <h3 class="ml-4 white--text">{{ card.title }}</h3>
                   </div>
                   <div>
-                    <v-btn class="right-icon">
+                    <v-btn :href="card.link" target="_blank" class="right-icon">
                       <v-icon>mdi-arrow-right</v-icon>
                     </v-btn>
                   </div>
@@ -83,42 +83,48 @@ export default {
         image: require('@/assets/imgs/case/logo/logo_snapshot.png'),
         title: 'Snapshot',
         description:
-          'Snapshot is a decentralized voting platform that empowers blockchain communities to make transparent and efficient collective decisions. By integrating with 4EVERLAND’s S3-compatible decentralized storage solutions, Snapshot ensures secure and reliable storage of voting data.',
+          'Through integrating our S3-compatible decentralized storage solution, Snapshot has achieved secure and reliable decentralized storage of its voting data.',
+        link: 'https://medium.com/4everland/4everland-case-study-enhancing-snapshot-with-decentralized-storage-solutions-b08a53f1386a',
       },
       {
         id: 2,
-        image: require('@/assets/imgs/case/logo/logo_syncswap.png'),
-        title: 'Syncswap',
-        description:
-          'Liquify is an innovative DeFi platform that allows users to leverage their digital assets without losing ownership. Utilizing 4EVERLAND’s decentralized front-end deployment, Liquify can offer a resilient and streamlined user interface.',
-      },
-      {
-        id: 3,
         image: require('@/assets/imgs/case/logo/logo_taiko.png'),
         title: 'Taiko',
         description:
-          'Taiko harnesses the power of our gateway to swiftly accelerate content distribution, while leveraging decentralized storage to empower their projects cost-effectively and conveniently.',
+          'Taiko harnesses the power of our gateway to swiftly accelerate content distribution while leveraging decentralized storage to empower their projects cost-effectively and conveniently.',
+        link: '',
+      },
+      {
+        id: 3,
+        image: require('@/assets/imgs/case/logo/logo_syncswap.png'),
+        title: 'Syncswap',
+        description:
+          'Syncswap employs our DWeb Hosting service to realize decentralized front-end deployment, ensuring users can access the resilient and seamless interface.',
+        link: '',
       },
       {
         id: 4,
         image: require('@/assets/imgs/case/logo/logo_hey.png'),
-        title: 'Hey',
+        title: 'Hey.xyz',
         description:
-          'Hey.xyz capitalizes on our IPFS dedicated gateway to achieve highly resilient, secure, and decentralized distribution of user-generated content.',
+          'Hey.xyz capitalizes on our IPFS storage to enable decentralized storage of user-generated content, ensuring high resilience and security.',
+        link: '',
       },
       {
         id: 5,
         image: require('@/assets/imgs/case/logo/logo_tape.png'),
         title: 'Tape',
         description:
-          'Tape utilizes the 4EVERLAND gateway to accelerate content distribution and enhance user experience by maintaining high standards of accessibility and performance.',
+          'Tape utilizes our IPFS storage to decentralize user-generated data while also enhancing resilience and security measures to improve the overall user experience.',
+        link: '',
       },
       {
         id: 6,
         image: require('@/assets/imgs/case/logo/logo_optopia.png'),
         title: 'Optopia',
         description:
-          'Optopia is an innovative Layer 2 blockchain platform compatible with the Ethereum Virtual Machine (EVM). By leveraging 4EVERLAND’s Rollup-as-a-Service (RaaS) solution, Optopia effectively deploys high-performance, EVM-compatible Layer 2 solutions to scale decentralized AI applications.',
+          'Optopia leverages 4EVERLAND RaaS to efficiently deploy high-performance, EVM-compatible Layer 2 solutions for scaling decentralized AI applications.',
+        link: 'https://medium.com/4everland/case-study-optopia-ai-8cf9031acf84',
       },
     ],
     startX: 0,
@@ -148,6 +154,9 @@ export default {
 .main-container {
   padding: 64px 80px;
   max-width: 100%;
+}
+.header-title {
+  font-size: 48px;
 }
 .v-card {
   border: 1px solid #ffffff40;
@@ -376,5 +385,13 @@ export default {
 .overflow-x-auto {
   overflow-x: auto;
   white-space: nowrap;
+}
+@media (max-width: 960px) {
+  .main-container {
+    padding: 64px 20px;
+  }
+  .card-item {
+    width: 320px;
+  }
 }
 </style>

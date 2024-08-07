@@ -3,10 +3,10 @@
     <v-row justify="center" align="center" class="text-left">
       <v-col cols="12">
         <h3 class="white--text text-h3 font-weight-bold">
-          SUPPORTING MULTIPLE BLOCKCHAIN ECOSYSTEMS
+          Embracing Multiple Blockchain Ecosystems
         </h3>
         <p class="white--text text-subtitle-1 mt-4">
-          Offering decentralized storage, cloud computing, RPC, and more.
+          Provide full-service solutions for an elevated experience.
         </p>
       </v-col>
     </v-row>
@@ -50,20 +50,19 @@
         </v-row>
       </v-col>
     </v-row>
-    <v-row v-else justify="center">
+    <v-row v-else justify="space-between" class="row-card">
       <v-col
         v-for="service in services"
         :key="service.id"
-        cols="12"
-        sm="6"
-        class="text-center"
+        cols="6"
+        class="text-center ecosystems-card"
       >
-        <v-card max-width="344">
-          <v-row align="center" class="pl-8">
+        <v-card>
+          <v-row class="mr-1" justify="center" align="center">
             <div>
-              <v-img :src="service.icon" width="100" class="mb-4"></v-img>
+              <v-img :src="service.icon" width="56" class="mt-3"></v-img>
             </div>
-            <p class="ml-2 white--text">{{ service.title }}</p>
+            <p class="mt-6 white--text">{{ service.title }}</p>
           </v-row>
         </v-card>
       </v-col>
@@ -183,9 +182,19 @@ export default {
     0 0 8px 0 rgba(97, 114, 243, 0.502);
 }
 @media (max-width: 960px) {
+  .main-container {
+    padding: 64px 20px;
+  }
   .v-card {
-    height: 100px;
+    height: 80px;
     width: 167px;
+  }
+  .row-card {
+    padding-right: 12px !important;
+  }
+  .ecosystems-card {
+    padding-top: 0 !important;
+    padding-right: 0 !important;
   }
 }
 </style>

@@ -9,7 +9,7 @@
               <div class="text-title">A Web3 Cloud</div>
               <div class="text-title2">Computing Platform</div>
               <div class="text-tips">
-                4EVERLAND delivers robust, scalable, and secure Web3 solutions:
+                Offering a full-service solution for building Web3 DApps
               </div>
               <div class="d-flex justify-center mb-16">
                 <div class="btn-tips-wrap">
@@ -19,8 +19,13 @@
                 </div>
               </div>
               <div class="text-center pt-8 mb-16">
-                <v-btn rounded class="btn_join mx-2" :href="hosting_web">
-                  Join Free Trial Now
+                <v-btn
+                  rounded
+                  class="btn_join mx-2"
+                  href="https://dashboard.4everland.org/"
+                  target="_blank"
+                >
+                  Get Started for Free
                   <template>
                     <span class="join_button_icon_span d-flex justify-center">
                       <span class="d-flex align-center justify-center">
@@ -34,7 +39,12 @@
                     </span>
                   </template>
                 </v-btn>
-                <v-btn rounded class="btn-read mx-2" :href="hosting_web">
+                <v-btn
+                  rounded
+                  class="btn-read mx-2"
+                  href="https://docs.4everland.org/"
+                  target="_blank"
+                >
                   Read Docs
                 </v-btn>
               </div>
