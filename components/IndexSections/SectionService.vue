@@ -1,78 +1,89 @@
 <template>
-  <v-container fluid class="main-container">
-    <v-row justify="center" align="center" class="text-left">
-      <v-col cols="12">
-        <h3 class="white--text text-h3 font-weight-bold">
-          Embracing Multiple Blockchain Ecosystems
-        </h3>
-        <p class="white--text text-subtitle-1 mt-4">
-          Provide full-service solutions for an elevated experience.
-        </p>
-      </v-col>
-    </v-row>
-    <v-row v-if="$vuetify.breakpoint.lgAndUp" justify="center">
-      <v-col cols="12" md="10">
-        <v-row justify="center">
-          <v-col
-            v-for="service in services.slice(0, 7)"
-            :key="service.id"
-            cols="12"
-            sm="3"
-            class="text-center"
-          >
-            <v-card max-width="344">
-              <v-row align="center" class="pl-8">
-                <div>
-                  <v-img :src="service.icon" width="100" class="mb-4"></v-img>
-                </div>
-                <p class="ml-2 white--text">{{ service.title }}</p>
-              </v-row>
-            </v-card>
-          </v-col>
-        </v-row>
-        <v-row justify="center">
-          <v-col
-            v-for="service in services.slice(7)"
-            :key="service.id"
-            cols="12"
-            sm="3"
-            class="text-center"
-          >
-            <v-card max-width="344">
-              <v-row align="center" class="pl-8">
-                <div>
-                  <v-img :src="service.icon" width="100" class="mb-4"></v-img>
-                </div>
-                <p class="ml-2 white--text">{{ service.title }}</p>
-              </v-row>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
-    <v-row v-else justify="space-between" class="row-card">
-      <v-col
-        v-for="service in services"
-        :key="service.id"
-        cols="6"
-        class="text-center ecosystems-card"
-      >
-        <v-card>
-          <v-row class="mr-1" justify="center" align="center">
-            <div>
-              <v-img :src="service.icon" width="56" class="mt-3"></v-img>
-            </div>
-            <p class="mt-6 white--text">{{ service.title }}</p>
+  <div>
+    <v-container fluid class="main-container">
+      <v-row justify="center" align="center" class="text-left">
+        <v-col cols="12">
+          <h3 class="white--text text-h3 font-weight-bold">
+            Embracing Multiple Blockchain Ecosystems
+          </h3>
+          <p class="white--text text-subtitle-1 mt-4">
+            Provide full-service solutions for an elevated experience.
+          </p>
+        </v-col>
+      </v-row>
+      <v-row v-if="$vuetify.breakpoint.lgAndUp" justify="center">
+        <v-col cols="12" md="10">
+          <v-row justify="center">
+            <v-col
+              v-for="service in services.slice(0, 7)"
+              :key="service.id"
+              cols="12"
+              sm="3"
+              class="text-center"
+            >
+              <v-card max-width="344">
+                <v-row align="center" class="pl-8">
+                  <div>
+                    <v-img :src="service.icon" width="100" class="mb-4"></v-img>
+                  </div>
+                  <p class="ml-2 white--text">{{ service.title }}</p>
+                </v-row>
+              </v-card>
+            </v-col>
           </v-row>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+          <v-row justify="center">
+            <v-col
+              v-for="service in services.slice(7)"
+              :key="service.id"
+              cols="12"
+              sm="3"
+              class="text-center"
+            >
+              <v-card max-width="344">
+                <v-row align="center" class="pl-8">
+                  <div>
+                    <v-img :src="service.icon" width="100" class="mb-4"></v-img>
+                  </div>
+                  <p class="ml-2 white--text">{{ service.title }}</p>
+                </v-row>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+      <v-row v-else justify="space-between" class="row-card">
+        <v-col
+          v-for="service in services"
+          :key="service.id"
+          cols="6"
+          class="text-center ecosystems-card"
+        >
+          <v-card>
+            <v-row class="mr-1" justify="center" align="center">
+              <div>
+                <v-img :src="service.icon" width="56" class="mt-3"></v-img>
+              </div>
+              <p class="mt-6 white--text">{{ service.title }}</p>
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+      <div class="bottom-img"></div>
+    </v-container>
+    <!-- <div>
+      <star-rise></star-rise>
+    </div> -->
+  </div>
 </template>
 
 <script>
+import StarRise from '@/components/IndexSections/StarRise.vue'
+
 export default {
   name: 'Service',
+  components: {
+    StarRise,
+  },
   data: () => ({
     services: [
       {
@@ -166,6 +177,14 @@ export default {
 .list-first {
   margin-right: 24px;
 }
+.bottom-img {
+  margin-top: 100px;
+  background: url('@/assets/imgs/forward/line.png');
+  height: 28px;
+  width: 100%;
+  background-size: cover;
+  background-position: center bottom;
+}
 .v-card {
   height: 100px;
   width: 240px;
@@ -180,6 +199,21 @@ export default {
   box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.1529) inset,
     0 -2px 4px 0 rgba(45, 50, 130, 0.502) inset,
     0 0 8px 0 rgba(97, 114, 243, 0.502);
+  cursor: pointer;
+}
+@keyframes starRise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
 }
 @media (max-width: 960px) {
   .main-container {
@@ -195,6 +229,12 @@ export default {
   .ecosystems-card {
     padding-top: 0 !important;
     padding-right: 0 !important;
+  }
+}
+@media (min-width: 1440px) {
+  .main-container {
+    margin: 0 auto;
+    width: 1440px;
   }
 }
 </style>

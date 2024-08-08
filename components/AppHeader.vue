@@ -5,7 +5,10 @@
         style="width: 100%; padding-top: 0"
         class="headerContainer d-flex align-center"
       >
-        <v-container class="d-flex align-center" style="height: 22px">
+        <v-container
+          class="d-flex align-center"
+          style="height: 22px; max-width: 100%"
+        >
           <v-btn text color="transparent" to="/" class="always-active mr-8">
             <v-img
               :src="require('@/assets/imgs/index/newui/logo-new.svg')"
@@ -21,6 +24,7 @@
             offset-y
             position
             z-index="99"
+            open-on-hover
           >
             <template #activator="{ on, attrs }">
               <v-btn
@@ -118,23 +122,57 @@
           </v-list> -->
           </v-menu>
           <v-spacer />
-          <v-btn
-            class="hidden-md-and-up"
-            text
-            icon
-            @click.stop="showDrawer = !showDrawer"
-          >
-            <v-icon>{{ mdiMenu }}</v-icon>
-          </v-btn>
-          <v-btn
-            :href="loginUrl"
-            target="_blank"
-            class="header-menu-start hidden-sm-and-down font-weight-bold"
-            rounded
-            color="#000"
-          >
-            Get Started
-          </v-btn>
+          <div class="d-flex align-center">
+            <v-btn
+              href="https://twitter.com/4everland_org"
+              target="_blank"
+              plain
+              text
+              icon
+              nofollow
+              class="text-center"
+              style="width: 32px"
+            >
+              <v-img
+                width="32"
+                :src="require('@/assets/imgs/footer/twitter.svg')"
+              ></v-img>
+            </v-btn>
+            <v-btn
+              href="https://discord.com/invite/Cun2VpsdjF"
+              target="_blank"
+              plain
+              text
+              icon
+              nofollow
+              class="text-center"
+              style="width: 32px"
+            >
+              <v-img
+                width="32"
+                :src="require('@/assets/imgs/footer/discord.svg')"
+              ></v-img>
+            </v-btn>
+            <div class="d-flex align-center ml-2">
+              <v-btn
+                class="hidden-md-and-up"
+                text
+                icon
+                @click.stop="showDrawer = !showDrawer"
+              >
+                <v-icon>{{ mdiMenu }}</v-icon>
+              </v-btn>
+              <v-btn
+                :href="loginUrl"
+                target="_blank"
+                class="header-menu-start hidden-sm-and-down font-weight-bold"
+                rounded
+                color="#000"
+              >
+                Get Started
+              </v-btn>
+            </div>
+          </div>
         </v-container>
       </div>
     </v-app-bar>
@@ -218,6 +256,7 @@ export default {
               tips: 'Deploy your websites and DApps in seconds. ',
               icon: require('@/assets/imgs/forward/icon/hosting.svg'),
               href: 'https://docs.4everland.org/hositng/what-is-hosting',
+              target: '_blank',
             },
             {
               text: 'Storage',
@@ -398,6 +437,7 @@ export default {
   font-family: Inter, Arial, sans-serif;
   font-weight: bold;
   position: relative;
+  width: 240px;
 }
 .text-subtitle-1 {
   font-family: Inter, Arial, sans-serif;
@@ -437,6 +477,7 @@ export default {
   background-color: transparent !important;
 }
 .menu-card {
+  width: 648px;
   padding: 28px 20px;
   background: #121536 !important;
 }

@@ -246,4 +246,13 @@ p {
     width: 340px;
   }
 }
+@media (min-width: 1441px) {
+  .main-container {
+    height: 1200px;
+  }
+  .carousel-container {
+    margin: 0 auto;
+    width: 1280px;
+  }
+}
 </style>

@@ -28,47 +28,53 @@
             <v-icon>mdi-chevron-right</v-icon>
           </v-btn>
         </div>
-        <div class="build-card">
-          <div
-            v-for="(card, index) in items"
-            :key="index"
-            class="mr-5 card-item"
-          >
-            <v-card
-              class="mb-6"
-              :class="`card-${index}`"
-              :style="{
-                transform: `translateX(-${currentCardIndex * cardWidth}px)`,
-              }"
+        <div class="card-shadow">
+          <div class="build-card">
+            <div
+              v-for="(card, index) in items"
+              :key="index"
+              class="mr-5 card-item"
             >
-              <div>
-                <v-row
-                  class="card-header"
-                  justify="space-between"
-                  align="center"
-                >
-                  <div class="title">
-                    <v-img
-                      :src="card.image"
-                      class="logo-header"
-                      width="52"
-                    ></v-img>
-                    <h3 class="ml-4 white--text">{{ card.title }}</h3>
+              <v-card
+                class="mb-6"
+                :class="`card-${index}`"
+                :style="{
+                  transform: `translateX(-${currentCardIndex * cardWidth}px)`,
+                }"
+              >
+                <div>
+                  <v-row
+                    class="card-header"
+                    justify="space-between"
+                    align="center"
+                  >
+                    <div class="title">
+                      <v-img
+                        :src="card.image"
+                        class="logo-header"
+                        width="52"
+                      ></v-img>
+                      <h3 class="ml-4 white--text">{{ card.title }}</h3>
+                    </div>
+                    <div>
+                      <v-btn
+                        :href="card.link"
+                        target="_blank"
+                        class="right-icon"
+                      >
+                        <v-icon>mdi-arrow-right</v-icon>
+                      </v-btn>
+                    </div>
+                  </v-row>
+                  <v-divider class="mt-12" />
+                  <div class="background-image mt-7">
+                    <p class="white--text">
+                      {{ card.description }}
+                    </p>
                   </div>
-                  <div>
-                    <v-btn :href="card.link" target="_blank" class="right-icon">
-                      <v-icon>mdi-arrow-right</v-icon>
-                    </v-btn>
-                  </div>
-                </v-row>
-                <v-divider class="mt-12" />
-                <div class="background-image mt-7">
-                  <p class="white--text">
-                    {{ card.description }}
-                  </p>
                 </div>
-              </div>
-            </v-card>
+              </v-card>
+            </div>
           </div>
         </div>
       </v-col>
@@ -389,12 +395,34 @@ export default {
   overflow-x: auto;
   white-space: nowrap;
 }
+
+// .card-shadow {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// .card-shadow::after {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 120px;
+//   background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+//   z-index: 5;
+// }
 @media (max-width: 960px) {
   .main-container {
     padding: 64px 20px;
   }
   .card-item {
     width: 320px;
+  }
+}
+@media (min-width: 1440px) {
+  .main-container {
+    margin: 0 auto;
+    width: 1440px;
   }
 }
 </style>

@@ -12,7 +12,7 @@
         </p>
       </v-col>
     </v-row>
-    <div class="mt-10">
+    <div class="mt-10 bottom-img">
       <v-img :src="require('@/assets/imgs/network/Structure.png')"></v-img>
     </div>
   </v-container>
@@ -34,12 +34,24 @@ export default {
 .header-title {
   font-size: 48px;
 }
+.bottom-img {
+  background: url('@/assets/imgs/forward/Grid.png');
+  width: 100%;
+  background-size: cover;
+  background-position: center bottom;
+}
 @media (max-width: 960px) {
   .main-container {
     padding: 64px 20px;
   }
   .header-title {
     font-size: 44px;
+  }
+}
+@media (min-width: 1440px) {
+  .main-container {
+    margin: 0 auto;
+    width: 1440px;
   }
 }
 </style>

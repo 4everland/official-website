@@ -165,11 +165,10 @@ export default {
   > .v-input__slot::after {
   border: none !important;
 }
-
-/* /deep/.v-btn--plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover)
+/deep/.v-btn--plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover)
   .v-btn__content {
   opacity: 1;
-} */
+}
 @media (max-width: 960px) {
   .email-input {
     width: 100%;
@@ -177,6 +176,12 @@ export default {
 
   .main-container {
     padding: 64px 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .main-container {
+    margin: 0 auto;
+    width: 1440px;
   }
 }
 </style>

@@ -3,7 +3,12 @@
     <v-container dark class="hidden-sm-and-down mt-8">
       <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }" dark>
         <v-col cols="12" md="4" lg="4">
-          <div class="ml-4 mb-4 text-h6">Join us</div>
+          <div class="mb-16">
+            <v-img
+              :src="require('@/assets/imgs/index/newui/logo-new.svg')"
+              width="225px"
+            ></v-img>
+          </div>
           <div class="join-us">
             <v-col
               v-for="link in links"
@@ -149,44 +154,45 @@ export default {
       mdiEmoticonHappyOutline,
       links: [
         {
-          name: 'GitHub',
-          icon: require('@/assets/imgs/footer/github.png'),
-          href: 'https://github.com/4everland',
-        },
-        {
-          name: 'Twitter',
-          icon: require('@/assets/imgs/footer/twitter.png'),
-          href: 'https://twitter.com/4everland_org',
-        },
-        {
           name: 'Telegram',
-          icon: require('@/assets/imgs/footer/telegram.png'),
+          icon: require('@/assets/imgs/footer/telegram.svg'),
           href: 'https://t.me/org_4everland',
         },
         {
+          name: 'Discord',
+          icon: require('@/assets/imgs/footer/discord.svg'),
+          href: 'https://discord.com/invite/Cun2VpsdjF',
+        },
+        {
+          name: 'Twitter',
+          icon: require('@/assets/imgs/footer/twitter.svg'),
+          href: 'https://twitter.com/4everland_org',
+        },
+        {
+          name: 'Youtube',
+          icon: require('@/assets/imgs/footer/youtube.svg'),
+          href: 'https://www.youtube.com/channel/UC9gDft8jnTt_1yrtLfsUq0w',
+        },
+        {
+          name: 'GitHub',
+          icon: require('@/assets/imgs/footer/github.svg'),
+          href: 'https://github.com/4everland',
+        },
+
+        {
           name: 'Reddit',
-          icon: require('@/assets/imgs/footer/reddit.png'),
+          icon: require('@/assets/imgs/footer/reddit.svg'),
           href: 'https://www.reddit.com/r/4everland/',
         },
         {
           name: 'Medium',
-          icon: require('@/assets/imgs/footer/medium.png'),
+          icon: require('@/assets/imgs/footer/medium.svg'),
           href: 'https://4everland.medium.com/',
         },
         {
-          name: 'Discord',
-          icon: require('@/assets/imgs/footer/discord.png'),
-          href: 'https://discord.com/invite/Cun2VpsdjF',
-        },
-        {
           name: 'Email',
-          icon: require('@/assets/imgs/footer/email.png'),
+          icon: require('@/assets/imgs/footer/email.svg'),
           href: 'mailto:contact@4everland.org',
-        },
-        {
-          name: 'Youtube',
-          icon: require('@/assets/imgs/footer/youtube.png'),
-          href: 'https://www.youtube.com/channel/UC9gDft8jnTt_1yrtLfsUq0w',
         },
       ],
       project: [
