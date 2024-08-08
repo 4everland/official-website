@@ -95,6 +95,12 @@ export default {
 .v-main {
   background-color: #000;
 }
+html {
+  background-color: #000;
+}
+body {
+  background-color: #000;
+}
 </style>
 <style lang="less" scoped>
 #home {
