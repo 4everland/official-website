@@ -1,153 +1,159 @@
 <!-- eslint-disable vue/v-slot-style -->
 <template>
-  <v-container fluid class="build-container">
-    <v-row justify="center" align="center">
+  <v-container id="pionWrap" fluid class="build-container pt-16">
+    <v-row align="center">
       <v-col cols="12">
-        <div class="pion_title">
-          <h4 class="white--text building-title font-weight-bold pt-16">
+        <div ref="pionTitle" class="pion_title">
+          <h4 class="white--text building-title font-weight-bold">
             Pioneering Web3 Evolution
           </h4>
           <div class="building-subtitle pb-5">
             Accelerating innovation with our unrivaled suite of services
           </div>
         </div>
-        <div class="research-radar-wrapper">
-          <div class="research-radar">
-            <v-img
-              class="radarbg"
-              :src="require('@/assets/imgs/index/newui/radarbg.png')"
-            ></v-img>
-            <v-img
-              class="radar_search"
-              :src="require('@/assets/imgs/index/newui/radar1.png')"
-            ></v-img>
-            <v-img
-              class="radar_icon"
-              width="160"
-              :src="require('@/assets/imgs/index/newui/radar_logo.png')"
-            ></v-img>
-            <div class="radar_search_item_wrap">
-              <div class="radar_search_item_gateway">
-                <div class="radius_bg d-flex align-center justify-center">
-                  <v-img
-                    contain
-                    class="gateway_img"
-                    width="24"
-                    height="24"
-                    justify="center"
-                    :src="
-                      require('@/assets/imgs/index/newui/radarItem/gateway.png')
-                    "
-                  ></v-img>
+        <div class="pion_content">
+          <div class="research-radar-wrapper">
+            <div class="research-radar">
+              <v-img
+                class="radarbg"
+                :src="require('@/assets/imgs/index/newui/radarbg.png')"
+              ></v-img>
+              <v-img
+                class="radar_search"
+                :src="require('@/assets/imgs/index/newui/radar1.png')"
+              ></v-img>
+              <v-img
+                class="radar_icon"
+                width="160"
+                :src="require('@/assets/imgs/index/newui/radar_logo.png')"
+              ></v-img>
+              <div class="radar_search_item_wrap">
+                <div class="radar_search_item_gateway">
+                  <div class="radius_bg d-flex align-center justify-center">
+                    <v-img
+                      contain
+                      class="gateway_img"
+                      width="24"
+                      height="24"
+                      justify="center"
+                      :src="
+                        require('@/assets/imgs/index/newui/radarItem/gateway.png')
+                      "
+                    ></v-img>
+                  </div>
+                  <span class="tips"> Gateway </span>
                 </div>
-                <span class="tips"> Gateway </span>
-              </div>
-              <div class="radar_search_item_storage">
-                <div class="radius_bg d-flex align-center justify-center">
-                  <v-img
-                    contain
-                    class="storage_img"
-                    width="24"
-                    height="24"
-                    :src="
-                      require('@/assets/imgs/index/newui/radarItem/storage.png')
-                    "
-                  ></v-img>
+                <div class="radar_search_item_storage">
+                  <div class="radius_bg d-flex align-center justify-center">
+                    <v-img
+                      contain
+                      class="storage_img"
+                      width="24"
+                      height="24"
+                      :src="
+                        require('@/assets/imgs/index/newui/radarItem/storage.png')
+                      "
+                    ></v-img>
+                  </div>
+                  <span class="tips"> Storage </span>
                 </div>
-                <span class="tips"> Storage </span>
-              </div>
-              <div class="radar_search_item_hosting">
-                <div class="radius_bg d-flex align-center justify-center">
-                  <v-img
-                    contain
-                    class="storage_img"
-                    width="24"
-                    height="24"
-                    :src="
-                      require('@/assets/imgs/index/newui/radarItem/hosting.png')
-                    "
-                  ></v-img>
+                <div class="radar_search_item_hosting">
+                  <div class="radius_bg d-flex align-center justify-center">
+                    <v-img
+                      contain
+                      class="storage_img"
+                      width="24"
+                      height="24"
+                      :src="
+                        require('@/assets/imgs/index/newui/radarItem/hosting.png')
+                      "
+                    ></v-img>
+                  </div>
+                  <span class="tips"> DWeb Hosting </span>
                 </div>
-                <span class="tips"> DWeb Hosting </span>
-              </div>
-              <div class="radar_search_item_rpc">
-                <div class="radius_bg d-flex align-center justify-center">
-                  <v-img
-                    contain
-                    class="storage_img"
-                    width="24"
-                    height="24"
-                    :src="
-                      require('@/assets/imgs/index/newui/radarItem/rpc.png')
-                    "
-                  ></v-img>
+                <div class="radar_search_item_rpc">
+                  <div class="radius_bg d-flex align-center justify-center">
+                    <v-img
+                      contain
+                      class="storage_img"
+                      width="24"
+                      height="24"
+                      :src="
+                        require('@/assets/imgs/index/newui/radarItem/rpc.png')
+                      "
+                    ></v-img>
+                  </div>
+                  <span class="tips"> RPC </span>
                 </div>
-                <span class="tips"> RPC </span>
-              </div>
-              <div class="radar_search_item_raas">
-                <div class="radius_bg d-flex align-center justify-center">
-                  <v-img
-                    contain
-                    class="storage_img"
-                    width="24"
-                    height="24"
-                    :src="
-                      require('@/assets/imgs/index/newui/radarItem/raas.png')
-                    "
-                  ></v-img>
+                <div class="radar_search_item_raas">
+                  <div class="radius_bg d-flex align-center justify-center">
+                    <v-img
+                      contain
+                      class="storage_img"
+                      width="24"
+                      height="24"
+                      :src="
+                        require('@/assets/imgs/index/newui/radarItem/raas.png')
+                      "
+                    ></v-img>
+                  </div>
+                  <span class="tips"> RaaS </span>
                 </div>
-                <span class="tips"> RaaS </span>
-              </div>
-              <div class="radar_search_item_airpc">
-                <div class="radius_bg d-flex align-center justify-center">
-                  <v-img
-                    contain
-                    class="storage_img"
-                    width="24"
-                    height="24"
-                    :src="
-                      require('@/assets/imgs/index/newui/radarItem/airpc.png')
-                    "
-                  ></v-img>
+                <div class="radar_search_item_airpc">
+                  <div class="radius_bg d-flex align-center justify-center">
+                    <v-img
+                      contain
+                      class="storage_img"
+                      width="24"
+                      height="24"
+                      :src="
+                        require('@/assets/imgs/index/newui/radarItem/airpc.png')
+                      "
+                    ></v-img>
+                  </div>
+                  <span class="tips"> AI RPC</span>
                 </div>
-                <span class="tips"> AI RPC</span>
               </div>
             </div>
           </div>
-        </div>
-        <div class="build-item-wrap">
-          <v-row>
-            <v-col class="item-nowrap">
-              <v-card class="pa-6 build-card" dark>
-                <div class="text-building-item font-weight-bold">200+</div>
-                <p class="text-h6 mt-4">Providers</p>
-              </v-card>
-            </v-col>
-            <v-col>
-              <v-card class="pa-6 build-card" dark>
-                <div class="text-building-item font-weight-bold">27x</div>
-                <p class="text-h6 mt-4">Build Speed</p>
-              </v-card>
-            </v-col>
-            <v-col>
-              <v-card class="pa-6 build-card" dark>
-                <div class="text-building-item font-weight-bold">6x</div>
-                <p class="text-h6 mt-4">Cost Saving</p>
-              </v-card>
-            </v-col>
-            <v-col>
-              <v-card class="pa-6 build-card" dark>
-                <div class="text-building-item font-weight-bold">300, 000+</div>
-                <p class="text-h6 mt-4">Developers</p>
-              </v-card>
-            </v-col>
-            <v-col>
-              <v-card class="pa-6 build-card" dark>
-                <div class="text-building-item font-weight-bold">180, 000+</div>
-                <p class="text-h6 mt-4">Dapps</p>
-              </v-card>
-            </v-col>
-          </v-row>
+          <div class="build-item-wrap">
+            <v-row>
+              <v-col class="item-nowrap">
+                <v-card class="pa-6 build-card" dark>
+                  <div class="text-building-item font-weight-bold">200+</div>
+                  <p class="text-h6 mt-4">Providers</p>
+                </v-card>
+              </v-col>
+              <v-col>
+                <v-card class="pa-6 build-card" dark>
+                  <div class="text-building-item font-weight-bold">27x</div>
+                  <p class="text-h6 mt-4">Build Speed</p>
+                </v-card>
+              </v-col>
+              <v-col>
+                <v-card class="pa-6 build-card" dark>
+                  <div class="text-building-item font-weight-bold">6x</div>
+                  <p class="text-h6 mt-4">Cost Saving</p>
+                </v-card>
+              </v-col>
+              <v-col>
+                <v-card class="pa-6 build-card" dark>
+                  <div class="text-building-item font-weight-bold">
+                    300, 000+
+                  </div>
+                  <p class="text-h6 mt-4">Developers</p>
+                </v-card>
+              </v-col>
+              <v-col>
+                <v-card class="pa-6 build-card" dark>
+                  <div class="text-building-item font-weight-bold">
+                    180, 000+
+                  </div>
+                  <p class="text-h6 mt-4">Dapps</p>
+                </v-card>
+              </v-col>
+            </v-row>
+          </div>
         </div>
       </v-col>
     </v-row>
@@ -166,20 +172,36 @@ export default {
     }
   },
   computed: {},
-  mounted() {},
-  methods: {},
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      const pionWrap = document.getElementById('pionWrap').offsetHeight
+      console.log(pionWrap, scrollTop)
+
+      const diffpercent = 1 - (scrollTop - pionWrap) / 100
+      if (diffpercent <= 1) {
+        this.$refs.pionTitle.style.transform = `scale(${diffpercent})`
+      } else {
+        this.$refs.pionTitle.style.transform = `scale(1)`
+      }
+      if (pionWrap + 100 < scrollTop) {
+        this.$refs.pionTitle.style.position = 'relative'
+      } else {
+        this.$refs.pionTitle.style.position = 'sticky'
+      }
+    },
+  },
 }
 </script>
 <style lang="less" scoped>
 .build-container {
   position: relative;
-  height: 935px;
-  overflow: hidden;
+  height: 125vh;
 }
-.pion_title {
-  position: sticky;
-  top: 0;
-}
+
 .sectionContent {
   font-family: Inter, Arial, sans-serif;
 }
@@ -189,6 +211,16 @@ export default {
 .building-subtitle {
   font-size: 20px;
   color: #fff;
+}
+.pion_title {
+  position: sticky;
+  top: 0;
+  transform-origin: left;
+}
+.pion_content {
+  position: relative;
+  height: 800px;
+  overflow: hidden;
 }
 .research-radar-wrapper {
   display: flex;
@@ -230,10 +262,10 @@ export default {
   }
 }
 .build-item-wrap {
-  height: 291px;
+  height: 445px;
   left: 50%;
   position: absolute;
-  top: 100%;
+  top: 737px;
   transform: translate(-50%, -291px);
   width: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, #000 100%);

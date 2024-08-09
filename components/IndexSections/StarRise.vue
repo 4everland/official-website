@@ -52,7 +52,7 @@
 }
 
 .widget .shape-star .rising-stars {
-  opacity: 0.7;
+  opacity: 0.2;
   pointer-events: none;
 }
 

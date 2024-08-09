@@ -241,6 +241,7 @@ export default {
       top: 50%;
       left: 0;
       z-index: 1;
+      min-height: 80vh;
     }
   }
   .item-list {
