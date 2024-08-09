@@ -35,13 +35,7 @@
               :key="index"
               class="mr-5 card-item"
             >
-              <v-card
-                class="mb-6"
-                :class="`card-${index}`"
-                :style="{
-                  transform: `translateX(-${currentCardIndex * cardWidth}px)`,
-                }"
-              >
+              <v-card class="mb-6" :class="`card-${index}`">
                 <div>
                   <v-row
                     class="card-header"
@@ -136,23 +130,25 @@ export default {
         link: 'https://medium.com/4everland/case-study-optopia-ai-8cf9031acf84',
       },
     ],
-    startX: 0,
-    currentX: 0,
-    isDragging: false,
     currentIndex: 0,
-    currentCardIndex: 0,
     cardWidth: 400,
-    numCardsToShow: 3,
   }),
   methods: {
     scrollCards(direction) {
-      if (direction === 'left' && this.currentCardIndex >= 0) {
-        this.currentCardIndex--
-      } else if (
-        direction === 'right' &&
-        this.currentCardIndex < this.items.length - this.numCardsToShow
-      ) {
-        this.currentCardIndex++
+      const container = this.$el.querySelector('.build-card')
+      const cards = container.querySelectorAll('.card-item')
+      const scrollAmount = this.cardWidth
+
+      if (direction === 'left') {
+        container.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth',
+        })
+      } else if (direction === 'right' && this.currentIndex < cards.length) {
+        container.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth',
+        })
       }
     },
   },
@@ -192,6 +188,7 @@ export default {
 .card-item {
   flex: 0 0 auto;
   width: 400px;
+  scroll-snap-align: end;
 }
 .card-header {
   padding: 53px 32px 0 32px;
@@ -395,22 +392,6 @@ export default {
   overflow-x: auto;
   white-space: nowrap;
 }
-
-// .card-shadow {
-//   position: relative;
-//   overflow: hidden;
-// }
-
-// .card-shadow::after {
-//   content: '';
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   width: 120px;
-//   background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
-//   z-index: 5;
-// }
 @media (max-width: 960px) {
   .main-container {
     padding: 64px 20px;
@@ -419,10 +400,29 @@ export default {
     width: 320px;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .main-container {
     margin: 0 auto;
     width: 1440px;
+  }
+  .card-shadow {
+    position: relative;
+  }
+  .card-shadow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
   }
 }
 </style>
