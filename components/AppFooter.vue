@@ -25,10 +25,10 @@
                 icon
                 nofollow
                 class="text-center"
-                style="width: 24px"
+                style="width: 40px"
               >
                 <!-- {{ link.name }} -->
-                <v-img width="24" :src="link.icon"></v-img>
+                <v-img width="40" :src="link.icon"></v-img>
               </v-btn>
             </v-col>
           </div>

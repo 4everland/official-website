@@ -2,9 +2,9 @@
   <div class="widget">
     <div class="shape-star">
       <div class="rising-stars rising-stars-visible">
-        <div style="height: 5px; width: 5px"></div>
+        <div style="height: 2px; width: 2px"></div>
         <div style="height: 3px; width: 3px"></div>
-        <div style="height: 4px; width: 4px"></div>
+        <div style="height: 2px; width: 2px"></div>
       </div>
     </div>
   </div>
@@ -54,7 +54,7 @@
 }
 
 .widget .shape-star .rising-stars {
-  opacity: 0.2;
+  opacity: 0.6;
   pointer-events: none;
 }
 
@@ -326,7 +326,7 @@
     1547px 679px #fff, 852px 1216px #fff, 83px 1818px #fff, 1240px 1423px #fff,
     1122px 1475px #fff, 418px 230px #fff, 1989px 1326px #fff, 1828px 1633px #fff,
     1412px 373px #fff, 685px 1113px #fff, 1909px 1468px #fff;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .widget .shape-star .rising-stars div:nth-child(3) {
@@ -458,6 +458,6 @@
     156px 1975px #fff, 1828px 1156px #fff, 319px 242px #fff, 1657px 83px #fff,
     682px 879px #fff, 1293px 1716px #fff, 1561px 739px #fff, 1365px 927px #fff,
     1753px 812px #fff;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 </style>

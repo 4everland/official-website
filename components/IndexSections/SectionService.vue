@@ -68,7 +68,9 @@
           </v-card>
         </v-col>
       </v-row>
-      <div class="bottom-img"></div>
+      <div class="bottom-img">
+        <starrise-small id="starRise"></starrise-small>
+      </div>
     </v-container>
     <!-- <div>
       <star-rise></star-rise>
@@ -77,12 +79,12 @@
 </template>
 
 <script>
-import StarRise from '@/components/IndexSections/StarRise.vue'
+import StarriseSmall from '@/components/IndexSections/StarriseSmall.vue'
 
 export default {
   name: 'Service',
   components: {
-    StarRise,
+    StarriseSmall,
   },
   data: () => ({
     services: [
@@ -177,7 +179,15 @@ export default {
 .list-first {
   margin-right: 24px;
 }
+#starRise {
+  left: 50%;
+  height: 100px;
+  width: 400px;
+  margin: -100px 0 0 -200px;
+  position: absolute;
+}
 .bottom-img {
+  position: relative;
   margin-top: 100px;
   background: url('@/assets/imgs/forward/line.png');
   height: 28px;

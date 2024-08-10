@@ -8,10 +8,10 @@
             <div class="text-box">
               <div class="text-title">A Web3 Cloud</div>
               <div class="text-title2">Computing Platform</div>
-              <div class="text-tips">
-                Offering a full-service solution for building Web3 DApps
-              </div>
-              <div class="d-flex justify-center mb-16">
+              <div class="d-flex justify-center align-center mb-16">
+                <div class="text-tips">
+                  Offering a full-service solution for building Web3 DApps
+                </div>
                 <div class="btn-tips-wrap">
                   <div class="text-tips-button" :class="currentclass">
                     <div style="padding-left: 15px">{{ current }}</div>
@@ -62,7 +62,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <div ref="logoWrap" class="logoWrap">
+    <div id="logoWrap" ref="logoWrap" class="logoWrap">
       <Logolist></Logolist>
     </div>
     <div>
@@ -93,6 +93,7 @@ export default {
   mounted() {
     this.showLabel()
     window.addEventListener('scroll', this.handleScroll)
+    this.handleScroll()
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
@@ -119,13 +120,28 @@ export default {
       const bannerHeight = document.getElementById('banner').offsetHeight
       const scrollHeight = document.documentElement.scrollHeight
       const scrollPercent = (scrollTop / (scrollHeight - bannerHeight)) * 100
+      const top = this.$refs.logoWrap.getBoundingClientRect().top
       this.$refs.bannerVideo.style.transform = `translateY(${
-        -scrollPercent * 50
+        -scrollPercent * 100
       }px)`
       if (scrollPercent > 2.5) {
-        this.$refs.logoWrap.style.position = 'relative'
+        if (top <= 0) {
+          this.$refs.logoWrap.style.position = 'fixed'
+          this.$refs.logoWrap.style.top = '0px'
+          this.$refs.logoWrap.style.bottom = 'unset'
+          if (bannerHeight - 120 > scrollTop) {
+            this.$refs.logoWrap.style.position = 'relative'
+          }
+          if (bannerHeight + 200 < scrollTop) {
+            this.$refs.logoWrap.style.position = 'relative'
+          }
+        } else {
+          this.$refs.logoWrap.style.position = 'relative'
+        }
       } else {
         this.$refs.logoWrap.style.position = 'fixed'
+        this.$refs.logoWrap.style.bottom = '-60px'
+        this.$refs.logoWrap.style.top = 'unset'
       }
     },
   },
@@ -176,11 +192,11 @@ export default {
       .text-tips {
         font-size: 20px;
         text-align: center;
-        margin: 20px auto 10px;
         color: rgba(255, 255, 255, 0.75);
       }
       .btn-tips-wrap {
         width: 184px;
+        padding-left: 10px;
       }
       .text-tips-button {
         max-width: 184px;
@@ -272,7 +288,7 @@ export default {
   position: fixed;
   left: 0;
   bottom: -60px;
-  z-index: 10;
+  z-index: 90;
 }
 
 @media (max-width: 960px) {

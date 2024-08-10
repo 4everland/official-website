@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div id="home" @scroll.prevent="handleScroll">
     <div class="top-alert">
       <v-alert
         v-model="alert"
@@ -88,7 +88,17 @@ export default {
       setTimeout(() => this.$nuxt.$loading.finish(), 1000)
     })
   },
-  methods: {},
+  methods: {
+    handleScroll(event) {
+      // if (!this.canScroll &&!this.conditionMet) {
+      event.preventDefault()
+      return false
+      // } else {
+      //   // 满足条件时的正常滚动处理
+      //   console.log('满足条件，可以滚动');
+      // }
+    },
+  },
 }
 </script>
 <style lang="less">

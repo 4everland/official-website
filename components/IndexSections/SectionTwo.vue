@@ -172,28 +172,8 @@ export default {
     }
   },
   computed: {},
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  methods: {
-    handleScroll() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-      const pionWrap = document.getElementById('pionWrap').offsetHeight
-      console.log(pionWrap, scrollTop)
-
-      const diffpercent = 1 - (scrollTop - pionWrap) / 100
-      if (diffpercent <= 1) {
-        this.$refs.pionTitle.style.transform = `scale(${diffpercent})`
-      } else {
-        this.$refs.pionTitle.style.transform = `scale(1)`
-      }
-      if (pionWrap + 100 < scrollTop) {
-        this.$refs.pionTitle.style.position = 'relative'
-      } else {
-        this.$refs.pionTitle.style.position = 'sticky'
-      }
-    },
-  },
+  mounted() {},
+  methods: {},
 }
 </script>
 <style lang="less" scoped>
@@ -211,11 +191,6 @@ export default {
 .building-subtitle {
   font-size: 20px;
   color: #fff;
-}
-.pion_title {
-  position: sticky;
-  top: 0;
-  transform-origin: left;
 }
 .pion_content {
   position: relative;
@@ -283,6 +258,8 @@ export default {
   }
 }
 .build-card:hover {
+  border: 1px solid #c7d7fe;
+  box-shadow: 0 0 8px 0 #6172f380;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     linear-gradient(180deg, rgba(18, 21, 54, 0) 0%, #121536 100%);
 }

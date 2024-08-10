@@ -1,10 +1,13 @@
 <template>
   <v-container
+    id="slideWrap"
+    ref="slideWrap"
     fluid
     class="main-container"
     :style="{
       backgroundImage: 'url(' + services[currentIndex].background + ')',
     }"
+    @scroll.prevent="handleScroll"
   >
     <v-row class="carousel-container">
       <v-col>
@@ -19,7 +22,7 @@
             </p>
           </v-col>
         </v-row>
-        <v-row justify="space-between" class="pl-2 mt-10">
+        <v-row justify="space-between" class="pl-2 align-center">
           <v-col>
             <div class="carousel-delimiters">
               <div
@@ -36,7 +39,7 @@
               color="#6172F3"
               href="https://dashboard.4everland.org/"
               target="_blank"
-              class="white--text mt-8 start-btn"
+              class="white--text start-btn"
             >
               Get Started
               <div class="right-icon">
@@ -53,7 +56,7 @@
         <v-carousel
           class="mt-8"
           hide-delimiters
-          cycle
+          vertical
           :show-arrows="false"
           :value="currentIndex"
           @change="onCarouselChange"
@@ -93,7 +96,6 @@
 
 <script>
 export default {
-  name: '4EverLandServices',
   data: () => ({
     services: [
       {
@@ -151,13 +153,73 @@ export default {
       },
     ],
     currentIndex: 0,
+    startHeight: 0,
+    lastScrollPosition: 0,
+    timer: null,
   }),
+  mounted() {
+    window.addEventListener('scroll', this.debouncedHandleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.debouncedHandleScroll)
+  },
   methods: {
     changeSlide(index) {
       this.currentIndex = index
     },
     onCarouselChange(index) {
       this.currentIndex = index
+    },
+    debouncedHandleScroll() {
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+      this.timer = setTimeout(() => {
+        this.handleScroll()
+        this.timer = null
+      }, 10)
+    },
+    handleScroll(event) {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      const top = this.$refs.slideWrap.getBoundingClientRect().top
+      const delta = scrollTop - this.lastScrollPosition
+      console.log('top', top)
+      // scroll up
+      if (delta > 0) {
+        if (top <= 0 && top >= -10) {
+          if (!this.startHeight) {
+            this.startHeight = scrollTop
+          }
+          if (scrollTop - this.startHeight > 20) {
+            if (this.currentIndex + 1 < 6) {
+              this.changeSlide(this.currentIndex + 1)
+              console.log('currentIndex', this.currentIndex)
+              this.startHeight = scrollTop
+            } else {
+              this.$refs.slideWrap.style.position = 'relative'
+            }
+          }
+        }
+      } else {
+        // scroll down
+        // eslint-disable-next-line no-lonely-if
+        console.log(delta)
+        console.log(this.startHeight - scrollTop)
+        if (top <= 80 && top >= -20) {
+          this.$refs.slideWrap.style.position = 'sticky'
+          if (this.startHeight - scrollTop > 20) {
+            if (this.currentIndex - 1 >= 0) {
+              this.changeSlide(this.currentIndex - 1)
+              console.log('currentIndex', this.currentIndex)
+              this.startHeight = scrollTop
+            } else {
+              this.$refs.slideWrap.style.position = 'sticky'
+            }
+          }
+        }
+      }
+      this.lastScrollPosition = scrollTop
+      return false
     },
   },
 }
@@ -170,6 +232,8 @@ export default {
   height: 820px;
   background-size: cover;
   background-position: center bottom;
+  position: sticky;
+  top: 0;
 }
 .header-title {
   font-size: 48px;
@@ -211,7 +275,6 @@ export default {
 .carousel-delimiters {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
 }
 .carousel-delimiter {
   width: 120px;
