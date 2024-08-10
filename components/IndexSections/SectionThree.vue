@@ -183,7 +183,6 @@ export default {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       const top = this.$refs.slideWrap.getBoundingClientRect().top
       const delta = scrollTop - this.lastScrollPosition
-      console.log('top', top)
       // scroll up
       if (delta > 0) {
         if (top <= 0 && top >= -10) {
@@ -193,7 +192,6 @@ export default {
           if (scrollTop - this.startHeight > 20) {
             if (this.currentIndex + 1 < 6) {
               this.changeSlide(this.currentIndex + 1)
-              console.log('currentIndex', this.currentIndex)
               this.startHeight = scrollTop
             } else {
               this.$refs.slideWrap.style.position = 'relative'
@@ -203,14 +201,11 @@ export default {
       } else {
         // scroll down
         // eslint-disable-next-line no-lonely-if
-        console.log(delta)
-        console.log(this.startHeight - scrollTop)
         if (top <= 80 && top >= -20) {
           this.$refs.slideWrap.style.position = 'sticky'
           if (this.startHeight - scrollTop > 20) {
             if (this.currentIndex - 1 >= 0) {
               this.changeSlide(this.currentIndex - 1)
-              console.log('currentIndex', this.currentIndex)
               this.startHeight = scrollTop
             } else {
               this.$refs.slideWrap.style.position = 'sticky'
