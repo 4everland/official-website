@@ -74,7 +74,6 @@ export default {
 .video-container video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .video-container video.paused {
