@@ -29,7 +29,6 @@ export default {
 .main-container {
   padding: 64px 80px;
   max-width: 100%;
-  min-height: 100vh;
 }
 .header-title {
   font-size: 48px;

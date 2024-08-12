@@ -169,7 +169,6 @@ export default {
 .main-container {
   padding: 64px 80px;
   max-width: 100%;
-  min-height: 100vh;
 }
 .service-list {
   display: flex;

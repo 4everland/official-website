@@ -200,24 +200,34 @@ export default {
           name: 'Products',
           list: [
             {
-              name: 'Hosting',
-              to: '/hosting',
+              name: 'DWeb Hosting',
+              href: 'https://docs.4everland.org/hositng/what-is-hosting',
+              target: '_blank',
             },
             {
-              name: 'Bucket',
-              to: '/bucket',
+              name: 'Storage',
+              href: 'https://docs.4everland.org/storage/bucket',
+              target: '_blank',
             },
             {
-              name: 'ENS Domain',
-              to: '/ens',
+              name: 'Gateway',
+              href: 'https://docs.4everland.org/gateways/ipfs-gateway',
+              target: '_blank',
             },
             {
-              name: 'SNS Domain',
-              to: '/sns',
+              name: 'RPC',
+              href: 'https://docs.4everland.org/rpc/guides',
+              target: '_blank',
             },
             {
-              name: 'IPFS Gateway',
-              to: '/ipfs',
+              name: 'RaaS',
+              href: 'https://docs.4everland.org/raas-beta/whats-rollups',
+              target: '_blank',
+            },
+            {
+              name: 'AI RPC',
+              href: 'https://docs.4everland.org/ai/ai-rpc',
+              target: '_blank',
             },
           ],
         },
@@ -241,7 +251,7 @@ export default {
             },
             {
               name: 'Brand Resources',
-              href: '/logo.zip',
+              href: 'https://www.4everland.org/logo.zip',
               target: '_blank',
             },
             {
@@ -265,8 +275,9 @@ export default {
             //   target: '_blank',
             // },
             {
-              name: 'Grants',
-              to: '/grants',
+              name: 'Template a thon',
+              href: 'https://template.4everland.org/#/',
+              target: '_blank',
             },
           ],
         },

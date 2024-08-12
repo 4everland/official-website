@@ -1,34 +1,35 @@
 <template>
   <v-container fluid class="main-container">
-    <v-row justify="center" align="center" class="text-left">
-      <v-col cols="12">
-        <h2 class="white--text header-title font-weight-bold">
-          TOP WEB3 PROJECTS ARE BUILDING WITH US
-        </h2>
-        <p class="white--text text-subtitle-1 mt-4">
-          Numerous projects have harnessed the charm of our diverse solutions
-        </p>
-      </v-col>
-    </v-row>
     <v-row justify="center">
       <v-col cols="12">
-        <div class="text-right mb-12">
-          <v-btn
-            color="primary"
-            class="mr-2 slide-icon"
-            @click="scrollCards('left')"
-          >
-            <v-icon>mdi-chevron-left</v-icon>
-          </v-btn>
-          <v-btn
-            color="primary"
-            class="slide-icon"
-            @click="scrollCards('right')"
-          >
-            <v-icon>mdi-chevron-right</v-icon>
-          </v-btn>
+        <div class="d-flex text-left align-center">
+          <div>
+            <h2 class="white--text header-title font-weight-bold">
+              TOP WEB3 PROJECTS ARE BUILDING WITH US
+            </h2>
+            <p class="white--text text-subtitle-1">
+              Numerous projects have harnessed the charm of our diverse
+              solutions
+            </p>
+          </div>
+          <div class="text-right mb-10 ml-12">
+            <v-btn
+              color="primary"
+              class="mr-2 slide-icon"
+              @click="scrollCards('left')"
+            >
+              <v-icon>mdi-chevron-left</v-icon>
+            </v-btn>
+            <v-btn
+              color="primary"
+              class="slide-icon"
+              @click="scrollCards('right')"
+            >
+              <v-icon>mdi-chevron-right</v-icon>
+            </v-btn>
+          </div>
         </div>
-        <div class="card-shadow">
+        <div class="card-shadow mt-6">
           <div class="build-card">
             <div
               v-for="(card, index) in items"
