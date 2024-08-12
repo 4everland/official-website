@@ -94,6 +94,10 @@ export default {
     this.showLabel()
     window.addEventListener('scroll', this.handleScroll)
     this.handleScroll()
+    setTimeout(() => {
+      window.scrollTo(0, 0)
+      this.timer = null
+    }, 100)
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)

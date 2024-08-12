@@ -24,6 +24,7 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
+    this.playVideo()
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
@@ -40,10 +41,6 @@ export default {
       }
 
       this.lastScrollPosition = currentScrollPosition
-
-      if (delta === 0) {
-        this.pauseVideo()
-      }
     },
     playVideo() {
       this.$refs.videoPlayer.play()

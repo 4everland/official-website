@@ -298,15 +298,20 @@ export default {
   left: -82px;
   width: 75px;
   height: 25px;
+  font-size: 14px;
   color: #fff;
   text-align: center;
+  line-height: 120%;
   border-radius: 8px 8px 2px 8px;
+  padding: 4px 8px 4px 8px;
   background: linear-gradient(87.49deg, #00c6fb 7.23%, #005bea 100%);
 }
 .radius_bg {
   width: 40px;
   height: 40px;
   border-radius: 20px;
+  background: #121535;
+  border: 1px solid #3538cd;
   box-shadow: 0 0 8px 0 #c7d7fe80;
 }
 .radar_search_item_gateway {
@@ -384,7 +389,7 @@ export default {
   z-index: 10;
   .tips {
     left: 30px;
-    width: 62px;
+    width: 64px;
     border-radius: 8px 8px 8px 2px;
   }
 }
