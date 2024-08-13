@@ -153,6 +153,7 @@ export default {
 </script>
 <style lang="less" scoped>
 #banner {
+  min-height: 84vh;
   position: relative;
   overflow: hidden;
   background-color: #000;
