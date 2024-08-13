@@ -36,7 +36,12 @@
               :key="index"
               class="mr-5 card-item"
             >
-              <v-card class="mb-6" :class="`card-${index}`">
+              <v-card
+                :href="card.link"
+                target="_blank"
+                class="mb-6"
+                :class="`card-${index}`"
+              >
                 <div>
                   <v-row
                     class="card-header"
@@ -96,7 +101,7 @@ export default {
         title: 'Taiko',
         description:
           'Taiko harnesses the power of our gateway to swiftly accelerate content distribution while leveraging decentralized storage to empower their projects cost-effectively and conveniently.',
-        link: '',
+        link: 'https://taiko.xyz/',
       },
       {
         id: 3,
@@ -104,7 +109,7 @@ export default {
         title: 'Syncswap',
         description:
           'Syncswap employs our DWeb Hosting service to realize decentralized front-end deployment, ensuring users can access the resilient and seamless interface.',
-        link: '',
+        link: 'https://syncswap.xyz/intro',
       },
       {
         id: 4,
@@ -112,7 +117,7 @@ export default {
         title: 'Hey.xyz',
         description:
           'Hey.xyz capitalizes on our IPFS storage to enable decentralized storage of user-generated content, ensuring high resilience and security.',
-        link: '',
+        link: 'https://hey.xyz/',
       },
       {
         id: 5,
@@ -120,7 +125,7 @@ export default {
         title: 'Tape',
         description:
           'Tape utilizes our IPFS storage to decentralize user-generated data while also enhancing resilience and security measures to improve the overall user experience.',
-        link: '',
+        link: 'https://tape.xyz/',
       },
       {
         id: 6,

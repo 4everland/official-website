@@ -179,7 +179,8 @@ export default {
 <style lang="less" scoped>
 .build-container {
   position: relative;
-  height: 125vh;
+
+  // height: 125vh;
 }
 
 .sectionContent {

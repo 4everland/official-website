@@ -153,7 +153,6 @@ export default {
 </script>
 <style lang="less" scoped>
 #banner {
-  min-height: 108vh;
   position: relative;
   overflow: hidden;
   background-color: #000;
@@ -199,11 +198,11 @@ export default {
         color: rgba(255, 255, 255, 0.75);
       }
       .btn-tips-wrap {
-        width: 184px;
+        width: 240px;
         padding-left: 10px;
       }
       .text-tips-button {
-        max-width: 184px;
+        max-width: 240px;
         overflow: hidden;
         height: 48px;
         line-height: 48px;

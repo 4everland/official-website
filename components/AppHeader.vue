@@ -1,6 +1,6 @@
 <template>
   <div id="header">
-    <v-app-bar fixed hide-on-scroll app flat dark>
+    <v-app-bar fixed hide-on-scroll app flat dark class="app-bar">
       <div
         style="width: 100%; padding-top: 0"
         class="headerContainer d-flex align-center"
@@ -321,6 +321,7 @@ export default {
             {
               text: 'Ecosystem',
               tips: 'Projects built with 4EVERLAND or Web 3.0 tech',
+              link: '/universe',
             },
             {
               text: 'Template a thon',
@@ -412,9 +413,13 @@ export default {
 }
 </script>
 <style scoped>
+.app-bar {
+  background-color: transparent;
+}
 #header {
   z-index: 99;
   position: relative;
+  background-color: #000;
 }
 .headerContainer {
   border: 1px solid #ffffff40;
@@ -500,6 +505,7 @@ export default {
 }
 .menu-down {
   min-height: 180px;
+  background: #121536 !important;
 }
 .tips {
   padding-right: 10px;
