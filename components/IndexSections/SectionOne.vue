@@ -128,7 +128,6 @@ export default {
       this.$refs.bannerVideo.style.transform = `translateY(${
         -scrollPercent * 100
       }px)`
-      console.log('top', top)
       if (scrollPercent > 2.5) {
         if (top <= 0) {
           this.$refs.logoWrap.style.position = 'fixed'

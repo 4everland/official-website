@@ -155,10 +155,13 @@ export default {
     currentIndex: 0,
     startHeight: 0,
     lastScrollPosition: 0,
+    lastPosition: 0,
     timer: null,
+    slideWrapTop: 0,
   }),
   mounted() {
     window.addEventListener('scroll', this.debouncedHandleScroll)
+    this.slideWrapTop = this.$refs.slideWrap.getBoundingClientRect().top
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.debouncedHandleScroll)
@@ -184,37 +187,40 @@ export default {
       const top = this.$refs.slideWrap.getBoundingClientRect().top
       const delta = scrollTop - this.lastScrollPosition
       // scroll up
-      if (delta > 0) {
+      if (delta > 0 && top != null) {
         if (top <= 0 && top >= -10) {
           if (!this.startHeight) {
             this.startHeight = scrollTop
           }
-          if (scrollTop - this.startHeight > 20) {
+          if (scrollTop - this.startHeight > 100) {
             if (this.currentIndex + 1 < 6) {
               this.changeSlide(this.currentIndex + 1)
               this.startHeight = scrollTop
+              // eslint-disable-next-line eqeqeq
             } else {
               this.$refs.slideWrap.style.position = 'relative'
+              this.$refs.slideWrap.style.height = '120vh'
             }
           }
         }
       } else {
         // scroll down
         // eslint-disable-next-line no-lonely-if
-        if (top <= 80 && top >= -20) {
+        if (top <= 180 && top >= -20) {
           this.$refs.slideWrap.style.position = 'sticky'
-          if (this.startHeight - scrollTop > 20) {
+          if (this.startHeight - scrollTop > 100) {
             if (this.currentIndex - 1 >= 0) {
               this.changeSlide(this.currentIndex - 1)
               this.startHeight = scrollTop
             } else {
               this.$refs.slideWrap.style.position = 'sticky'
+              this.$refs.slideWrap.style.height = '140vh'
             }
           }
         }
       }
       this.lastScrollPosition = scrollTop
-      return false
+      // })
     },
   },
 }
@@ -224,7 +230,7 @@ export default {
 .main-container {
   padding: 64px 80px;
   max-width: 100%;
-  height: 820px;
+  height: 140vh;
   background-size: cover;
   background-position: center bottom;
   position: sticky;
