@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-lone-template -->
 <template>
-  <div id="banner">
-    <v-container class="my-3 mt-md-16 mb-md-5">
+  <div id="banner" class="pt-xl-16">
+    <v-container class="my-3 mt-md-16 mb-md-5 pt-xl-16 pb-xl-16">
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="topSectionMain">
@@ -128,16 +128,23 @@ export default {
       this.$refs.bannerVideo.style.transform = `translateY(${
         -scrollPercent * 100
       }px)`
+      console.log('top', top)
       if (scrollPercent > 2.5) {
         if (top <= 0) {
           this.$refs.logoWrap.style.position = 'fixed'
           this.$refs.logoWrap.style.top = '0px'
           this.$refs.logoWrap.style.bottom = 'unset'
-          if (bannerHeight - 120 > scrollTop) {
-            this.$refs.logoWrap.style.position = 'relative'
-          }
-          if (bannerHeight + 200 < scrollTop) {
-            this.$refs.logoWrap.style.position = 'relative'
+          if (bannerHeight > 1000) {
+            if (bannerHeight < scrollTop) {
+              this.$refs.logoWrap.style.position = 'relative'
+            }
+          } else {
+            if (bannerHeight - 120 > scrollTop) {
+              this.$refs.logoWrap.style.position = 'relative'
+            }
+            if (bannerHeight + 200 < scrollTop) {
+              this.$refs.logoWrap.style.position = 'relative'
+            }
           }
         } else {
           this.$refs.logoWrap.style.position = 'relative'
@@ -153,7 +160,7 @@ export default {
 </script>
 <style lang="less" scoped>
 #banner {
-  min-height: 84vh;
+  min-height: 108vh;
   position: relative;
   overflow: hidden;
   background-color: #000;
@@ -315,6 +322,18 @@ export default {
       margin-top: 50px;
       .mobile-item-one {
         border-bottom: 2px solid #8272d1;
+      }
+    }
+  }
+}
+
+@media (min-width: 1904px) {
+  #banner {
+    min-height: 95vh !important;
+    padding-top: 120px !important;
+    .topSectionMain {
+      .bannervideo {
+        top: 40px;
       }
     }
   }
