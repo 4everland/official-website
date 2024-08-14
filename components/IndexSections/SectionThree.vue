@@ -312,7 +312,7 @@ p {
 }
 @media (min-width: 1441px) {
   .main-container {
-    height: 1200px;
+    height: 140vh;
   }
   .carousel-container {
     margin: 0 auto;
