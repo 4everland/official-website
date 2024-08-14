@@ -300,11 +300,13 @@ export default {
             font-size: 18px;
             font-weight: bold;
             margin-top: 17px;
+            color: #fff;
           }
           .dapps-desc {
             min-height: 92px;
             font-size: 16px;
             color: #fff;
+            opacity: 0.7;
             overflow: hidden;
             display: -webkit-box;
             text-overflow: ellipsis;

@@ -1,17 +1,14 @@
 <template>
   <div id="ecosystem">
-    <eco-top />
     <eco-explore />
   </div>
 </template>
 
 <script>
-import ecoTop from '@/components/EcosystemSections/Top.vue'
 import ecoExplore from '@/components/EcosystemSections/Explore.vue'
 
 export default {
   components: {
-    ecoTop,
     ecoExplore,
   },
   data() {

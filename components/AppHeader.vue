@@ -415,6 +415,7 @@ export default {
 <style scoped>
 .app-bar {
   background-color: transparent;
+  margin-top: 16px !important;
 }
 #header {
   z-index: 99;
@@ -505,7 +506,7 @@ export default {
 }
 .menu-down {
   min-height: 180px;
-  background: #121536 !important;
+  background: transparent !important;
 }
 .tips {
   padding-right: 10px;

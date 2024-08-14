@@ -16,6 +16,7 @@
             <v-btn
               color="primary"
               class="mr-2 slide-icon"
+              :disabled="isDisabled"
               @click="scrollCards('left')"
             >
               <v-icon>mdi-chevron-left</v-icon>
@@ -23,6 +24,7 @@
             <v-btn
               color="primary"
               class="slide-icon"
+              :disabled="isDisabled"
               @click="scrollCards('right')"
             >
               <v-icon>mdi-chevron-right</v-icon>
@@ -138,6 +140,7 @@ export default {
     ],
     currentIndex: 0,
     cardWidth: 400,
+    isDisabled: false,
   }),
   methods: {
     scrollCards(direction) {
@@ -150,11 +153,15 @@ export default {
           left: -scrollAmount,
           behavior: 'smooth',
         })
+        this.currentIndex--
+        console.log('left', this.currentIndex)
       } else if (direction === 'right' && this.currentIndex < cards.length) {
         container.scrollBy({
           left: scrollAmount,
           behavior: 'smooth',
         })
+        this.currentIndex++
+        console.log('right', this.currentIndex)
       }
     },
   },
@@ -377,7 +384,46 @@ export default {
     );
   }
 }
+.v-card:hover {
+  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.8);
+  border-color: rgba(0, 0, 0, 0.2);
+  .right-icon {
+    border: 1px solid #fff;
+  }
+}
+.card-shadow {
+  position: relative;
+}
 
+.card-shadow::before,
+.card-shadow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 1;
+}
+
+.card-shadow::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.card-shadow::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
 .title {
   display: flex;
   justify-content: flex-start;
@@ -410,25 +456,6 @@ export default {
   .main-container {
     margin: 0 auto;
     width: 1440px;
-  }
-  .card-shadow {
-    position: relative;
-  }
-  .card-shadow::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(
-      to left,
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.5) 50%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    z-index: 1;
   }
 }
 </style>
