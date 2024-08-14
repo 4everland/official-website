@@ -1,12 +1,16 @@
 <template>
   <div id="footer" dark>
-    <v-container dark class="hidden-sm-and-down mt-8">
-      <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }" dark>
+    <v-container dark class="mt-4">
+      <v-row
+        :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
+        dark
+        justify="space-between"
+      >
         <v-col cols="12" md="4" lg="4">
           <div class="mb-16">
             <v-img
               :src="require('@/assets/imgs/index/newui/logo-new.svg')"
-              width="225px"
+              width="227px"
             ></v-img>
           </div>
           <div class="join-us">
@@ -43,13 +47,14 @@
               md="3"
               class="d-flex flex-column"
             >
-              <div class="ml-4 mb-4 text-h6">{{ item.name }}</div>
+              <div class="ml-4 mb-4 text-h6 link-name">{{ item.name }}</div>
               <div v-for="link in item.list" :key="link.name">
                 <v-btn
                   :to="link.to"
                   :href="link.href"
                   :target="link.target"
-                  color="#B1B6BB"
+                  color="#98A2B3"
+                  class="link-name"
                   plain
                   text
                   nofollow
@@ -113,6 +118,7 @@
       </v-menu>
     </v-container>
     <v-container>
+      <v-divider class="divider" />
       <div
         class="copy-right"
         :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
@@ -353,7 +359,18 @@ export default {
   padding-top: 0;
   background-color: #000;
 }
-.footer-titele {
+.container {
+  max-width: 1440px;
+  margin-left: 64px !important;
+  margin-right: 64px !important;
+}
+.divider {
+  background-color: #666 !important;
+}
+.link-name {
+  font-family: Inter, Arial, sans-serif !important;
+}
+.footer-title {
   font-size: 23px;
   color: #fff;
   text-align: center;
@@ -485,6 +502,12 @@ input:-ms-input-placeholder {
     border-radius: 4px;
     font-size: 12px;
     margin: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px !important;
+    margin: 0 auto !important;
   }
 }
 </style>
