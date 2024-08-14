@@ -36,8 +36,6 @@ export default {
       const delta = currentScrollPosition - this.lastScrollPosition
       if (delta > 0) {
         this.playVideo()
-      } else {
-        this.rewindVideo()
       }
 
       this.lastScrollPosition = currentScrollPosition

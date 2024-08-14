@@ -65,7 +65,7 @@
     <div id="logoWrap" ref="logoWrap" class="logoWrap">
       <Logolist></Logolist>
     </div>
-    <div>
+    <div id="starRise" ref="starRise" class="starRiseWrap">
       <star-rise></star-rise>
     </div>
   </div>
@@ -126,6 +126,9 @@ export default {
       const scrollPercent = (scrollTop / (scrollHeight - bannerHeight)) * 100
       const top = this.$refs.logoWrap.getBoundingClientRect().top
       this.$refs.bannerVideo.style.transform = `translateY(${
+        -scrollPercent * 100
+      }px)`
+      this.$refs.starRise.style.transform = `translateY(${
         -scrollPercent * 100
       }px)`
       if (scrollPercent > 2.5) {
@@ -300,6 +303,12 @@ export default {
   bottom: -60px;
   z-index: 90;
 }
+.starRiseWrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
 
 @media (max-width: 960px) {
   #banner {
@@ -327,6 +336,9 @@ export default {
 }
 
 @media (min-width: 1904px) {
+  .container {
+    max-width: 100% !important;
+  }
   #banner {
     min-height: 95vh !important;
     padding-top: 120px !important;
