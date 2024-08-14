@@ -11,9 +11,8 @@
           news.
         </p>
       </v-col>
-      <v-col cols="12" sm="6" class="text-right">
+      <v-col cols="12" sm="6" class="d-flex justify-end">
         <div class="email-input pl-4 pr-2">
-          <!-- <v-row align="center"> -->
           <div>
             <v-icon color="#FFF">mdi-email-outline </v-icon>
           </div>
@@ -38,10 +37,6 @@
               Subscribe
             </v-btn>
           </v-col>
-          <!-- <v-col>
-
-          </v-col> -->
-          <!-- </v-row> -->
         </div>
       </v-col>
     </v-row>
@@ -113,7 +108,7 @@ export default {
 
 <style scoped>
 .main-container {
-  padding: 64px 80px;
+  padding: 64px 80px 20px 80px;
   max-width: 100%;
 }
 .email-input {

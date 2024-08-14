@@ -135,7 +135,7 @@
             >
               <v-img
                 width="32"
-                :src="require('@/assets/imgs/footer/twitter.svg')"
+                :src="require('@/assets/imgs/footer/twitter-header.svg')"
               ></v-img>
             </v-btn>
             <v-btn
@@ -150,7 +150,7 @@
             >
               <v-img
                 width="32"
-                :src="require('@/assets/imgs/footer/discord.svg')"
+                :src="require('@/assets/imgs/footer/discord-header.svg')"
               ></v-img>
             </v-btn>
             <div class="d-flex align-center ml-2">
@@ -528,5 +528,11 @@ export default {
   color: #101828;
   font-family: Inter, Arial, sans-serif !important;
   font-weight: 400;
+}
+@media (min-width: 1440px) {
+  .app-bar {
+    margin: 0 auto;
+    width: 1440px;
+  }
 }
 </style>
