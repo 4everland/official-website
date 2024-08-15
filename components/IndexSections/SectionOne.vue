@@ -1,11 +1,11 @@
 <!-- eslint-disable vue/no-lone-template -->
 <template>
   <div id="banner" class="pt-xl-16">
-    <v-container class="my-3 mt-md-16 mb-md-5 pt-xl-16 pb-xl-16">
+    <v-container class="">
       <v-row>
         <v-col cols="12" md="12" lg="12">
-          <div class="topSectionMain">
-            <div class="text-box">
+          <div class="topSectionMain d-flex justify-center align-center">
+            <div ref="topTextBox" class="text-box">
               <div class="text-title">A Web3 Cloud</div>
               <div class="text-title2">Computing Platform</div>
               <div class="d-flex justify-center align-center mb-16">
@@ -49,19 +49,15 @@
                 </v-btn>
               </div>
             </div>
-            <div
-              id="bannerVideo"
-              ref="bannerVideo"
-              class="text-center bannervideo"
-            >
-              <video-play
-                video-src="https://static.4everland.org/4EVERLogo_Animation.webm"
-              ></video-play>
-            </div>
           </div>
         </v-col>
       </v-row>
     </v-container>
+    <div id="bannerVideo" ref="bannerVideo" class="text-center bannervideo">
+      <video-play
+        video-src="https://static.4everland.org/4EVERLogo_Animation.webm"
+      ></video-play>
+    </div>
     <div id="logoWrap" ref="logoWrap" class="logoWrap">
       <Logolist></Logolist>
     </div>
@@ -98,6 +94,9 @@ export default {
       window.scrollTo(0, 0)
       this.timer = null
     }, 100)
+    const topTextBoxHeight = this.$refs.topTextBox.getBoundingClientRect().top
+    console.log(topTextBoxHeight)
+    this.$refs.topTextBox.style.top = topTextBoxHeight + 'px'
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
@@ -124,36 +123,18 @@ export default {
       const bannerHeight = document.getElementById('banner').offsetHeight
       const scrollHeight = document.documentElement.scrollHeight
       const scrollPercent = (scrollTop / (scrollHeight - bannerHeight)) * 100
-      const top = this.$refs.logoWrap.getBoundingClientRect().top
       this.$refs.bannerVideo.style.transform = `translateY(${
         -scrollPercent * 100
       }px)`
       this.$refs.starRise.style.transform = `translateY(${
         -scrollPercent * 100
       }px)`
-      if (scrollPercent > 2.5) {
-        if (top <= 0) {
-          this.$refs.logoWrap.style.position = 'fixed'
-          this.$refs.logoWrap.style.top = '0px'
-          this.$refs.logoWrap.style.bottom = 'unset'
-          if (bannerHeight > 1000) {
-            if (bannerHeight < scrollTop) {
-              this.$refs.logoWrap.style.position = 'relative'
-            }
-          } else {
-            if (bannerHeight - 120 > scrollTop) {
-              this.$refs.logoWrap.style.position = 'relative'
-            }
-            if (bannerHeight + 200 < scrollTop) {
-              this.$refs.logoWrap.style.position = 'relative'
-            }
-          }
-        } else {
-          this.$refs.logoWrap.style.position = 'relative'
-        }
+
+      if (scrollPercent * 100 > bannerHeight / 2 - 230) {
+        this.$refs.logoWrap.style.position = 'relative'
       } else {
         this.$refs.logoWrap.style.position = 'fixed'
-        this.$refs.logoWrap.style.bottom = '-60px'
+        this.$refs.logoWrap.style.bottom = '0px'
         this.$refs.logoWrap.style.top = 'unset'
       }
     },
@@ -162,17 +143,17 @@ export default {
 </script>
 <style lang="less" scoped>
 #banner {
-  min-height: 108vh;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
   background-color: #000;
+  margin-bottom: 100px;
   .topSectionMain {
     position: relative;
     z-index: 1;
-    margin-top: 50px;
+    height: 100vh;
     .text-box {
       z-index: 2;
-      position: relative;
+      position: sticky;
       .text-title {
         font-size: 72px;
         line-height: 100%;
@@ -263,15 +244,6 @@ export default {
         word-break: break-word;
       }
     }
-    .bannervideo {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      z-index: 1;
-      min-height: 80vh;
-    }
   }
   .item-list {
     margin-top: 160px;
@@ -297,10 +269,20 @@ export default {
     max-width: 220px;
   }
 }
+.bannervideo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  margin-top: -80px;
+  z-index: 0;
+}
 .logoWrap {
   position: fixed;
   left: 0;
-  bottom: -60px;
+  bottom: 0;
   z-index: 90;
 }
 .starRiseWrap {
@@ -340,8 +322,6 @@ export default {
     max-width: 100% !important;
   }
   #banner {
-    min-height: 95vh !important;
-    padding-top: 120px !important;
     .topSectionMain {
       .bannervideo {
         top: 40px;

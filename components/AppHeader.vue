@@ -412,6 +412,11 @@ export default {
   },
 }
 </script>
+<style>
+.v-main {
+  padding: 0 !important;
+}
+</style>
 <style scoped>
 .app-bar {
   background-color: transparent;

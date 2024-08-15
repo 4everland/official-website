@@ -24,30 +24,6 @@
         />
       </div>
     </div>
-    <div id="logoContainer2" class="logo-container2 d-flex">
-      <div ref="logoContainer2" class="logo-row d-flex list1">
-        <v-img
-          v-for="item in logoList2"
-          :key="item.alt"
-          class="mx-4"
-          :width="item.width"
-          :height="item.height"
-          :src="item.src"
-          contain
-        />
-      </div>
-      <div ref="logoContainer2" class="logo-row d-flex list2">
-        <v-img
-          v-for="item in logoList2"
-          :key="`logo-copy-${item.alt}`"
-          class="mx-4"
-          :width="item.width"
-          :height="item.height"
-          :src="item.src"
-          contain
-        />
-      </div>
-    </div>
   </v-sheet>
 </template>
 
@@ -129,8 +105,6 @@ export default {
         width: 51,
         height: 24,
       },
-    ],
-    logoList2: [
       {
         src: require('@/assets/imgs/index/newui/logo/snapshot.png'),
         alt: 'snapshot',
@@ -244,27 +218,9 @@ export default {
 
       this.animationId = requestAnimationFrame(animate)
     },
-    startAnimation1() {
-      const container = this.$refs.logoContainer2
-      let position = 0
-
-      const animate = () => {
-        position += 1
-        if (position >= container.offsetWidth / 3) {
-          position = 0
-        }
-        container.style.transform = `translateX(${position}px)`
-        this.animationId = requestAnimationFrame(animate)
-      }
-
-      this.animationId1 = requestAnimationFrame(animate)
-    },
     stopAnimation() {
       if (this.animationId) {
         cancelAnimationFrame(this.animationId)
-      }
-      if (this.animationId1) {
-        cancelAnimationFrame(this.animationId1)
       }
     },
   },
