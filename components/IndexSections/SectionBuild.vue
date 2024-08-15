@@ -2,7 +2,7 @@
   <v-container fluid class="main-container">
     <v-row justify="center">
       <v-col cols="12">
-        <div class="d-flex text-left align-center">
+        <v-row class="d-flex text-left align-center">
           <div>
             <h2 class="white--text header-title font-weight-bold">
               TOP WEB3 PROJECTS ARE BUILDING WITH US
@@ -12,11 +12,11 @@
               solutions
             </p>
           </div>
-          <div class="text-right mb-10 ml-12">
+          <div class="text-right mb-10 ml-14">
             <v-btn
               color="primary"
               class="mr-2 slide-icon"
-              :disabled="isDisabled"
+              :disabled="isLeftDisabled"
               @click="scrollCards('left')"
             >
               <v-icon>mdi-chevron-left</v-icon>
@@ -24,13 +24,13 @@
             <v-btn
               color="primary"
               class="slide-icon"
-              :disabled="isDisabled"
+              :disabled="isRightDisabled"
               @click="scrollCards('right')"
             >
               <v-icon>mdi-chevron-right</v-icon>
             </v-btn>
           </div>
-        </div>
+        </v-row>
         <div class="card-shadow mt-6">
           <div class="build-card">
             <div
@@ -140,28 +140,50 @@ export default {
     ],
     currentIndex: 0,
     cardWidth: 400,
-    isDisabled: false,
+    isLeftDisabled: true,
+    isRightDisabled: false,
+    firstVisibleIndex: 0,
+    lastVisibleIndex: 0,
   }),
+  mounted() {
+    const container = this.$el.querySelector('.build-card')
+    const cards = container.querySelectorAll('.card-item')
+    container.addEventListener('scroll', () => {
+      const cardWidth = cards[0].offsetWidth
+      this.firstVisibleIndex = Math.floor(container.scrollLeft / cardWidth)
+      const visibleCardsCount = Math.floor(container.offsetWidth / cardWidth)
+      this.lastVisibleIndex = this.firstVisibleIndex + visibleCardsCount - 1
+
+      console.log('First', this.firstVisibleIndex)
+      console.log('Last', this.lastVisibleIndex)
+      if (this.firstVisibleIndex !== 0) {
+        this.isLeftDisabled = false
+      } else {
+        this.isLeftDisabled = true
+      }
+      if (this.lastVisibleIndex === 5) {
+        this.isRightDisabled = true
+      } else {
+        this.isRightDisabled = false
+      }
+    })
+  },
   methods: {
     scrollCards(direction) {
       const container = this.$el.querySelector('.build-card')
-      const cards = container.querySelectorAll('.card-item')
       const scrollAmount = this.cardWidth
-
       if (direction === 'left') {
         container.scrollBy({
           left: -scrollAmount,
           behavior: 'smooth',
         })
-        this.currentIndex--
-        console.log('left', this.currentIndex)
-      } else if (direction === 'right' && this.currentIndex < cards.length) {
+        console.log('left', scrollAmount)
+      } else if (direction === 'right') {
         container.scrollBy({
           left: scrollAmount,
           behavior: 'smooth',
         })
-        this.currentIndex++
-        console.log('right', this.currentIndex)
+        console.log('right', scrollAmount)
       }
     },
   },
@@ -450,6 +472,10 @@ export default {
   }
   .card-item {
     width: 320px;
+  }
+  .card-shadow::before,
+  .card-shadow::after {
+    display: none;
   }
 }
 @media (min-width: 1441px) {

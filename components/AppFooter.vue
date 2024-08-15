@@ -482,6 +482,10 @@ input:-ms-input-placeholder {
 }
 
 @media (max-width: 960px) {
+  .container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
   .subscribe-input {
     padding: 0 14px;
     height: 44px;

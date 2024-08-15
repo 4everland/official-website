@@ -51,6 +51,7 @@ export default {
 }
 .background-image {
   height: 400px;
+  width: 1280px;
   background-image: url('@/assets/imgs/network/join-banner.png');
   background-size: cover;
   background-position: center;
@@ -90,6 +91,14 @@ export default {
   }
   .get-start {
     width: 100%;
+  }
+  .background-image {
+    height: 480px;
+    width: 343px;
+    background-image: url('@/assets/imgs/network/join-small.png');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 40px;
   }
 }
 @media (min-width: 1440px) {
