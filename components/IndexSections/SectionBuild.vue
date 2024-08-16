@@ -7,7 +7,7 @@
             <h2 class="white--text header-title font-weight-bold">
               TOP WEB3 PROJECTS ARE BUILDING WITH US
             </h2>
-            <p class="white--text text-subtitle-1">
+            <p class="p-text text-subtitle-1">
               Numerous projects have harnessed the charm of our diverse
               solutions
             </p>
@@ -197,6 +197,10 @@ export default {
 }
 .header-title {
   font-size: 48px;
+}
+.p-text {
+  color: white;
+  opacity: 0.7;
 }
 .v-card {
   border: 1px solid #ffffff40;
@@ -458,9 +462,10 @@ export default {
   background: linear-gradient(180deg, #121536 0%, #06090f 100%);
   border: 1px solid #ffffff40 !important;
 }
-.disabled-icon {
-  color: red;
-  opacity: 0.5;
+.theme--light.v-btn.v-btn--disabled.v-btn--has-bg {
+  .v-icon {
+    color: rgb(56, 57, 70) !important;
+  }
 }
 .overflow-x-auto {
   overflow-x: auto;

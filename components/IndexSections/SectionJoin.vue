@@ -94,7 +94,7 @@ export default {
   }
   .background-image {
     height: 480px;
-    width: 343px;
+    width: 100%;
     background-image: url('@/assets/imgs/network/join-small.png');
     background-size: cover;
     background-position: center;

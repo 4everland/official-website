@@ -179,10 +179,11 @@ export default {
 <style lang="less" scoped>
 .build-container {
   position: relative;
-
-  // height: 125vh;
 }
-
+.p-text {
+  color: white;
+  opacity: 0.7;
+}
 .sectionContent {
   font-family: Inter, Arial, sans-serif;
 }
@@ -192,6 +193,7 @@ export default {
 .building-subtitle {
   font-size: 20px;
   color: #fff;
+  opacity: 0.7;
 }
 .pion_content {
   position: relative;

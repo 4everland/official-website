@@ -16,7 +16,7 @@
             <h3 class="white--text header-title font-weight-bold">
               Get A FULLY PERSONALIZED EXPERIENCE ON 4EVERLAND
             </h3>
-            <p class="white--text text-subtitle-1 mt-4">
+            <p class="p-text text-subtitle-1 mt-4">
               Immerse yourself in the full suite of Web3 services: Dweb Hosting,
               Storage, Gateway, RPC, RaaS, and AI RPC.
             </p>
@@ -75,7 +75,7 @@
                   <h3 class="white--text description font-weight-bold">
                     {{ item.description }}
                   </h3>
-                  <p class="white--text text-subtitle-1 mt-4">
+                  <p class="p-text text-subtitle-1 mt-4">
                     {{ item.text }}
                   </p>
                 </v-col>
@@ -235,6 +235,10 @@ export default {
   background-position: center bottom;
   position: sticky;
   top: 0;
+}
+.p-text {
+  color: white;
+  opacity: 0.7;
 }
 .header-title {
   font-size: 48px;

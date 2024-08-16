@@ -6,7 +6,7 @@
         <h6 class="white--text text-h6 font-weight-bold">
           Sign up for our newsletter
         </h6>
-        <p class="white--text mt-4">
+        <p class="mt-4 p-text">
           Join 300,000+ builders and stay up to date with our latest updates and
           news.
         </p>
@@ -124,6 +124,10 @@ export default {
   margin-top: 0 !important;
   padding: 0 !important;
 }
+.p-text {
+  color: white;
+  opacity: 0.7;
+}
 .v-btn {
   color: #fff;
   border-radius: 20px;
@@ -168,7 +172,6 @@ export default {
   .email-input {
     width: 100%;
   }
-
   .main-container {
     padding: 64px 20px;
   }

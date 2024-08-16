@@ -6,7 +6,7 @@
           <h3 class="white--text text-h3 font-weight-bold">
             Embracing Multiple Blockchain Ecosystems
           </h3>
-          <p class="white--text text-subtitle-1 mt-4">
+          <p class="p-text text-subtitle-1 mt-4">
             Provide full-service solutions for an elevated experience.
           </p>
         </v-col>
@@ -169,6 +169,10 @@ export default {
 .main-container {
   padding: 64px 80px;
   max-width: 100%;
+}
+.p-text {
+  color: white;
+  opacity: 0.7;
 }
 .service-list {
   display: flex;
