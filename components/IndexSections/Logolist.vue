@@ -143,13 +143,13 @@ export default {
       },
       {
         src: require('@/assets/imgs/index/newui/logo/Hey.png'),
-        alt: 'fbg',
+        alt: 'hey',
         width: 61,
         height: 24,
       },
       {
         src: require('@/assets/imgs/index/newui/logo/tape.png'),
-        alt: 'Web3com',
+        alt: 'tape',
         width: 91,
         height: 24,
       },
