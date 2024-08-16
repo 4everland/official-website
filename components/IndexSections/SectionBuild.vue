@@ -485,7 +485,9 @@ export default {
     display: none;
   }
   .scroll-btn {
-    margin-left: 0 !important;
+    width: 100%;
+    text-align: right !important;
+    margin-right: 16px;
   }
 }
 @media (min-width: 1441px) {

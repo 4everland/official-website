@@ -301,7 +301,7 @@ p {
 @media (max-width: 960px) {
   .main-container {
     padding: 60px 20px;
-    height: 1200px;
+    height: 148vh !important;
   }
   .header-title {
     font-size: 30px;
