@@ -4,7 +4,7 @@
       <v-row justify="center" align="center" class="text-left">
         <v-col cols="12">
           <h3 class="white--text text-h3 font-weight-bold">
-            Embracing Multiple Blockchain Ecosystems
+            EMBRACING MULTIPLE BLOCKCHAIN ECOSYSTEMS
           </h3>
           <p class="p-text text-subtitle-1 mt-4">
             Provide full-service solutions for an elevated experience.
@@ -72,9 +72,6 @@
         <starrise-small id="starRise"></starrise-small>
       </div>
     </v-container>
-    <!-- <div>
-      <star-rise></star-rise>
-    </div> -->
   </div>
 </template>
 
@@ -242,6 +239,9 @@ export default {
   .ecosystems-card {
     padding-top: 0 !important;
     padding-right: 0 !important;
+  }
+  #starRise {
+    width: 100%;
   }
 }
 @media (min-width: 1440px) {

@@ -5,7 +5,7 @@
       <v-col cols="12">
         <div ref="pionTitle" class="pion_title">
           <h4 class="white--text building-title font-weight-bold">
-            Pioneering Web3 Evolution
+            PIONEERING WEB3 EVOLUTION
           </h4>
           <div class="building-subtitle pb-5">
             Accelerating innovation with our unrivaled suite of services
@@ -117,8 +117,8 @@
             </div>
           </div>
           <div class="build-item-wrap">
-            <v-row>
-              <v-col class="item-nowrap">
+            <v-row class="item-nowrap">
+              <v-col>
                 <v-card class="pa-6 build-card" dark>
                   <div class="text-building-item font-weight-bold">200+</div>
                   <p class="text-h6 mt-4">Providers</p>
@@ -419,6 +419,15 @@ export default {
   to {
     opacity: 0;
     transform: scale(1.2);
+  }
+}
+
+@media (max-width: 960px) {
+  .pion_content {
+    height: 1620px !important;
+  }
+  .item-nowrap {
+    flex-direction: column;
   }
 }
 </style>

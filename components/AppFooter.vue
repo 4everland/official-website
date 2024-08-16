@@ -6,11 +6,12 @@
         dark
         justify="space-between"
       >
-        <v-col cols="12" md="4" lg="4">
-          <div class="mb-16">
+        <v-col cols="12" md="4" lg="4" class="text-center">
+          <div class="title-icon">
             <v-img
               :src="require('@/assets/imgs/index/newui/logo-new.svg')"
               width="227px"
+              class="title-img"
             ></v-img>
           </div>
           <div class="join-us">
@@ -37,7 +38,7 @@
             </v-col>
           </div>
         </v-col>
-        <v-col cols="12" md="8" lg="8">
+        <v-col cols="12" md="8" lg="8" class="text-left">
           <v-row>
             <v-col
               v-for="item in project"
@@ -445,6 +446,9 @@ input:-ms-input-placeholder {
   flex-wrap: wrap;
   max-width: 200px;
 }
+.title-icon {
+  margin-bottom: 64px;
+}
 .v-btn {
   text-transform: none !important;
 }
@@ -473,6 +477,7 @@ input:-ms-input-placeholder {
   margin: auto;
   padding: 20px;
 }
+
 /deep/.v-btn--plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover)
   .v-btn__content {
   opacity: 1;
@@ -506,6 +511,17 @@ input:-ms-input-placeholder {
     border-radius: 4px;
     font-size: 12px;
     margin: 10px;
+  }
+  .join-us {
+    max-width: 320px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .title-img {
+    margin: 0 auto;
+  }
+  .title-icon {
+    margin-bottom: 48px;
   }
 }
 @media (min-width: 1440px) {

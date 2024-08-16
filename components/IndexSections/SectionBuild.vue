@@ -12,7 +12,7 @@
               solutions
             </p>
           </div>
-          <div class="text-right mb-10 ml-14">
+          <div class="text-right scroll-btn">
             <v-btn
               color="primary"
               class="mr-2 slide-icon"
@@ -471,6 +471,10 @@ export default {
   overflow-x: auto;
   white-space: nowrap;
 }
+.scroll-btn {
+  margin-left: 56px;
+  margin-bottom: 40px;
+}
 @media (max-width: 960px) {
   .main-container {
     padding: 64px 20px;
@@ -481,6 +485,9 @@ export default {
   .card-shadow::before,
   .card-shadow::after {
     display: none;
+  }
+  .scroll-btn {
+    margin-left: 0 !important;
   }
 }
 @media (min-width: 1441px) {

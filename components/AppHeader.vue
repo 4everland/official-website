@@ -3,13 +3,13 @@
     <v-app-bar fixed hide-on-scroll app flat dark class="app-bar">
       <div
         style="width: 100%; padding-top: 0"
-        class="headerContainer d-flex align-center"
+        class="headerContainer d-flex align-center mt-4"
       >
         <v-container
           class="d-flex align-center"
           style="height: 22px; max-width: 100%"
         >
-          <v-btn text color="transparent" to="/" class="always-active mr-8">
+          <v-btn text color="transparent" to="/" class="always-active">
             <v-img
               :src="require('@/assets/imgs/index/newui/logo-new.svg')"
             ></v-img>
@@ -420,7 +420,6 @@ export default {
 <style scoped>
 .app-bar {
   background-color: transparent;
-  margin-top: 16px !important;
 }
 #header {
   z-index: 99;

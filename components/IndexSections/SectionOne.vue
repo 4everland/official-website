@@ -315,6 +315,9 @@ export default {
       }
     }
   }
+  .btn-read {
+    margin-top: 20px;
+  }
 }
 
 @media (min-width: 1904px) {

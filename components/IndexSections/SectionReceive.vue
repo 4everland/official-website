@@ -173,7 +173,7 @@ export default {
     width: 100%;
   }
   .main-container {
-    padding: 64px 20px;
+    padding: 64px 20px 40px 20px;
   }
 }
 @media (min-width: 1440px) {
