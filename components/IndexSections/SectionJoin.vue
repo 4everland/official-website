@@ -13,7 +13,7 @@
             or a developer ready to innovate with our platform, there's no
             better time than now to get started
           </p>
-          <div class="text-right">
+          <div class="get-btn">
             <v-btn
               color="#6172F3"
               href="https://dashboard.4everland.org/"
@@ -85,6 +85,9 @@ export default {
   max-width: 24px;
   text-align: center;
 }
+.get-btn {
+  text-align: right;
+}
 @media (max-width: 960px) {
   .main-container {
     padding: 64px 20px;
@@ -99,6 +102,11 @@ export default {
     background-size: cover;
     background-position: center;
     padding: 100px 40px;
+    border: 1px solid #ffffff40;
+    border-radius: 24px;
+  }
+  .get-btn {
+    text-align: center;
   }
 }
 @media (min-width: 1440px) {

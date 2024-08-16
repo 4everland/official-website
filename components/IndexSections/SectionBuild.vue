@@ -154,8 +154,6 @@ export default {
       const visibleCardsCount = Math.floor(container.offsetWidth / cardWidth)
       this.lastVisibleIndex = this.firstVisibleIndex + visibleCardsCount - 1
 
-      console.log('First', this.firstVisibleIndex)
-      console.log('Last', this.lastVisibleIndex)
       if (this.firstVisibleIndex !== 0) {
         this.isLeftDisabled = false
       } else {

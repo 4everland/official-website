@@ -118,7 +118,7 @@
         </v-list>
       </v-menu>
     </v-container>
-    <v-container>
+    <v-container class="copy">
       <v-divider class="divider" />
       <div
         class="copy-right"
@@ -522,6 +522,9 @@ input:-ms-input-placeholder {
   }
   .title-icon {
     margin-bottom: 48px;
+  }
+  .copy {
+    margin-top: -172px !important;
   }
 }
 @media (min-width: 1440px) {
