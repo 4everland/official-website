@@ -84,10 +84,13 @@ export default {
       current: '',
       activeIndex: 0,
       currentclass: '',
+      bannerHeight: 0,
+      lastScrollPosition: 0,
     }
   },
   mounted() {
     this.showLabel()
+    this.bannerHeight = document.getElementById('banner').offsetHeight
     window.addEventListener('scroll', this.handleScroll)
     this.handleScroll()
     setTimeout(() => {
@@ -95,7 +98,6 @@ export default {
       this.timer = null
     }, 100)
     const topTextBoxHeight = this.$refs.topTextBox.getBoundingClientRect().top
-    console.log(topTextBoxHeight)
     this.$refs.topTextBox.style.top = topTextBoxHeight + 'px'
   },
   beforeDestroy() {
@@ -118,25 +120,47 @@ export default {
         }, 500)
       }, 3000)
     },
+    onScroll(event) {
+      this.$vuetify.goTo('#pionWrap', {
+        duration: 300,
+        offset: 0,
+        easing: 'easeInOutCubic',
+      })
+    },
+    getElementBottomRelativeToViewportBottom(element) {
+      const rect = element.getBoundingClientRect()
+      return window.innerHeight - rect.bottom
+    },
     handleScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-      const bannerHeight = document.getElementById('banner').offsetHeight
       const scrollHeight = document.documentElement.scrollHeight
-      const scrollPercent = (scrollTop / (scrollHeight - bannerHeight)) * 100
+      const scrollPercent =
+        (scrollTop / (scrollHeight - this.bannerHeight)) * 100
       this.$refs.bannerVideo.style.transform = `translateY(${
         -scrollPercent * 100
       }px)`
       this.$refs.starRise.style.transform = `translateY(${
         -scrollPercent * 100
       }px)`
-
-      if (scrollPercent * 100 > bannerHeight / 2 - 230) {
+      const bottom = this.getElementBottomRelativeToViewportBottom(
+        document.getElementById('banner')
+      )
+      const delta = scrollTop - this.lastScrollPosition
+      // if(bottom == 150)
+      if (scrollPercent * 100 > this.bannerHeight / 2 - 230) {
         this.$refs.logoWrap.style.position = 'relative'
+        // eslint-disable-next-line no-undef
+        if (delta > 0) {
+          if (bottom > 150 && bottom < 160) {
+            this.onScroll()
+          }
+        }
       } else {
         this.$refs.logoWrap.style.position = 'fixed'
         this.$refs.logoWrap.style.bottom = '0px'
         this.$refs.logoWrap.style.top = 'unset'
       }
+      this.lastScrollPosition = scrollTop
     },
   },
 }

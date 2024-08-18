@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/v-slot-style -->
 <template>
-  <v-container id="pionWrap" fluid class="build-container pt-16">
+  <v-container id="pionWrap" ref="pionWrap" fluid class="build-container pt-16">
     <v-row align="center">
       <v-col cols="12">
         <div ref="pionTitle" class="pion_title">
@@ -169,16 +169,66 @@ export default {
         { value: '270,000,000+', label: 'Files' },
         { value: '200,000+', label: 'Buckets' },
       ],
+      scrolling: false,
     }
   },
   computed: {},
-  mounted() {},
-  methods: {},
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    onScroll(event) {
+      this.scrolling = true
+      this.$vuetify.goTo('#slideWrap', {
+        duration: 300,
+        offset: -70,
+        easing: 'easeInOutCubic',
+      })
+      setTimeout(() => {
+        this.scrolling = false
+      }, 500)
+    },
+    getElementBottomRelativeToViewportBottom(element) {
+      const rect = element.getBoundingClientRect()
+      return window.innerHeight - rect.bottom
+    },
+    handleScroll(event) {
+      if (this.scrolling) {
+        return
+      }
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      const top = document
+        .getElementById('pionWrap')
+        .getBoundingClientRect().top
+      const delta = scrollTop - this.lastScrollPosition
+      const bottomToTop = this.getElementBottomRelativeToViewportBottom(
+        document.getElementById('pionWrap')
+      )
+      const bottom = document
+        .getElementById('pionWrap')
+        .getBoundingClientRect().bottom
+      // scroll up
+      const pionWrapHeight = document.getElementById('pionWrap').offsetHeight
+
+      if (delta > 0 && top != null) {
+        if (pionWrapHeight >= window.innerHeight) {
+          if (top <= 0 && bottomToTop > 0 && bottom >= 0) {
+            this.onScroll()
+          }
+        } else if (top <= 0) {
+          this.onScroll()
+        }
+      }
+      this.lastScrollPosition = scrollTop
+      // })
+    },
+  },
 }
 </script>
 <style lang="less" scoped>
 .build-container {
   position: relative;
+  min-height: 100vh;
 }
 .p-text {
   color: white;

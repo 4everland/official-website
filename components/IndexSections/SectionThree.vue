@@ -14,7 +14,7 @@
         <v-row justify="center" align="center" class="text-left">
           <v-col cols="12">
             <h3 class="white--text header-title font-weight-bold">
-              Get A FULLY PERSONALIZED EXPERIENCE ON 4EVERLAND
+              Get A FULLY PERSONALIZED EXPERIENCE
             </h3>
             <p class="p-text text-subtitle-1 mt-4">
               Immerse yourself in the full suite of Web3 services: Dweb Hosting,
@@ -161,7 +161,9 @@ export default {
   }),
   mounted() {
     window.addEventListener('scroll', this.debouncedHandleScroll)
-    this.slideWrapTop = this.$refs.slideWrap.getBoundingClientRect().top
+    this.slideWrapTop = document
+      .getElementById('slideWrap')
+      .getBoundingClientRect().top
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.debouncedHandleScroll)
@@ -182,24 +184,47 @@ export default {
         this.timer = null
       }, 10)
     },
+    onScroll(event) {
+      this.$vuetify.goTo('#structure', {
+        duration: 300,
+        offset: -70,
+        easing: 'easeInOutCubic',
+      })
+    },
     handleScroll(event) {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-      const top = this.$refs.slideWrap.getBoundingClientRect().top
+      const top = document
+        .getElementById('slideWrap')
+        .getBoundingClientRect().top
+      const structureTop = document
+        .getElementById('structure')
+        .getBoundingClientRect().top
       const delta = scrollTop - this.lastScrollPosition
+      if (delta < 0) {
+        if (structureTop > 10 && structureTop < 30) {
+          this.$vuetify.goTo('#slideWrap', {
+            duration: 300,
+            offset: 0,
+            easing: 'easeInOutCubic',
+          })
+        }
+      }
       // scroll up
       if (delta > 0 && top != null) {
         if (top <= 0 && top >= -10) {
           if (!this.startHeight) {
             this.startHeight = scrollTop
           }
-          if (scrollTop - this.startHeight > 100) {
+          if (scrollTop - this.startHeight > 150) {
             if (this.currentIndex + 1 < 6) {
               this.changeSlide(this.currentIndex + 1)
               this.startHeight = scrollTop
               // eslint-disable-next-line eqeqeq
             } else {
               this.$refs.slideWrap.style.position = 'relative'
-              this.$refs.slideWrap.style.height = '120vh'
+              this.$refs.slideWrap.style.height = '200vh'
+              this.slideWrapTop = scrollTop
+              this.onScroll()
             }
           }
         }
@@ -208,13 +233,13 @@ export default {
         // eslint-disable-next-line no-lonely-if
         if (top <= 180 && top >= -20) {
           this.$refs.slideWrap.style.position = 'sticky'
-          if (this.startHeight - scrollTop > 100) {
+          if (this.startHeight - scrollTop > 150) {
             if (this.currentIndex - 1 >= 0) {
               this.changeSlide(this.currentIndex - 1)
               this.startHeight = scrollTop
             } else {
               this.$refs.slideWrap.style.position = 'sticky'
-              this.$refs.slideWrap.style.height = '140vh'
+              this.$refs.slideWrap.style.height = '200vh'
             }
           }
         }
@@ -230,7 +255,7 @@ export default {
 .main-container {
   padding: 64px 80px;
   max-width: 100%;
-  height: 140vh;
+  height: 200vh;
   background-size: cover;
   background-position: center bottom;
   position: sticky;
@@ -301,7 +326,7 @@ p {
 @media (max-width: 960px) {
   .main-container {
     padding: 60px 20px;
-    height: 148vh !important;
+    height: 200vh !important;
   }
   .header-title {
     font-size: 30px;
@@ -316,7 +341,7 @@ p {
 }
 @media (min-width: 1441px) {
   .main-container {
-    height: 140vh;
+    height: 200vh;
   }
   .carousel-container {
     margin: 0 auto;

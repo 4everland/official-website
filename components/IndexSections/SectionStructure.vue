@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="main-container">
+  <v-container id="structure" fluid class="main-container">
     <v-row justify="center" align="center" class="text-left">
       <v-col cols="12">
         <h4 class="white--text header-title font-weight-bold">
