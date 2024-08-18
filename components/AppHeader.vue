@@ -177,7 +177,7 @@
       </div>
     </v-app-bar>
     <v-navigation-drawer v-model="showDrawer" right temporary fixed>
-      <v-list>
+      <v-list dark>
         <template v-for="item in links">
           <v-list-group v-if="item.childs" :key="item.text" no-action>
             <template #activator>
@@ -193,7 +193,7 @@
             >
               <v-list-item-title class="d-flex align-center">
                 <img class="mr-2" :src="child.icon" alt="" width="20" />
-                <span>
+                <span class="text-white">
                   {{ child.text }}
                 </span>
               </v-list-item-title>
@@ -533,6 +533,13 @@ export default {
   color: #101828;
   font-family: Inter, Arial, sans-serif !important;
   font-weight: 400;
+}
+.v-navigation-drawer {
+  background-color: #000 !important;
+}
+.text-white {
+  color: #fff !important;
+  opacity: 0.7;
 }
 @media (min-width: 1440px) {
   .app-bar {
