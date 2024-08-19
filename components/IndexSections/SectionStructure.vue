@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 .main-container {
-  padding: 64px 80px;
+  padding: 160px 80px 100px 80px;
   max-width: 100%;
 }
 .p-text {
