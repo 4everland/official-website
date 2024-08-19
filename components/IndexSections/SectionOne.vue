@@ -86,6 +86,7 @@ export default {
       currentclass: '',
       bannerHeight: 0,
       lastScrollPosition: 0,
+      scrolling: false,
     }
   },
   mounted() {
@@ -121,17 +122,24 @@ export default {
       }, 3000)
     },
     onScroll(event) {
+      this.scrolling = true
       this.$vuetify.goTo('#pionWrap', {
         duration: 300,
         offset: 0,
         easing: 'easeInOutCubic',
       })
+      setTimeout(() => {
+        this.scrolling = false
+      }, 500)
     },
     getElementBottomRelativeToViewportBottom(element) {
       const rect = element.getBoundingClientRect()
       return window.innerHeight - rect.bottom
     },
     handleScroll() {
+      if (this.scrolling) {
+        return
+      }
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       const scrollHeight = document.documentElement.scrollHeight
       const scrollPercent =
@@ -145,13 +153,16 @@ export default {
       const bottom = this.getElementBottomRelativeToViewportBottom(
         document.getElementById('banner')
       )
+      const bottomToHeight = document
+        .getElementById('banner')
+        .getBoundingClientRect().bottom
       const delta = scrollTop - this.lastScrollPosition
       // if(bottom == 150)
       if (scrollPercent * 100 > this.bannerHeight / 2 - 230) {
         this.$refs.logoWrap.style.position = 'relative'
         // eslint-disable-next-line no-undef
         if (delta > 0) {
-          if (bottom > 150 && bottom < 160) {
+          if (bottom > 150 && bottomToHeight > 0) {
             this.onScroll()
           }
         }

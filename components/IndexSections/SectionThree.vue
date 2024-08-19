@@ -22,7 +22,7 @@
             </p>
           </v-col>
         </v-row>
-        <v-row justify="space-between" class="pl-2 align-center">
+        <v-row justify="space-between" class="pl-2 align-center pt-xl-16">
           <v-col>
             <div class="carousel-delimiters">
               <div
@@ -54,7 +54,7 @@
           </v-col>
         </v-row>
         <v-carousel
-          class="mt-8"
+          class="mt-8 mt-xl-16 carousel-wrap"
           hide-delimiters
           vertical
           :show-arrows="false"
@@ -215,7 +215,7 @@ export default {
           if (!this.startHeight) {
             this.startHeight = scrollTop
           }
-          if (scrollTop - this.startHeight > 150) {
+          if (scrollTop - this.startHeight > 200) {
             if (this.currentIndex + 1 < 6) {
               this.changeSlide(this.currentIndex + 1)
               this.startHeight = scrollTop
@@ -233,7 +233,7 @@ export default {
         // eslint-disable-next-line no-lonely-if
         if (top <= 180 && top >= -20) {
           this.$refs.slideWrap.style.position = 'sticky'
-          if (this.startHeight - scrollTop > 150) {
+          if (this.startHeight - scrollTop > 200) {
             if (this.currentIndex - 1 >= 0) {
               this.changeSlide(this.currentIndex - 1)
               this.startHeight = scrollTop
@@ -346,6 +346,9 @@ p {
   .carousel-container {
     margin: 0 auto;
     width: 1280px;
+  }
+  .carousel-wrap {
+    margin-top: 150px !important;
   }
 }
 </style>
