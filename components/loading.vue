@@ -1,5 +1,5 @@
 <template>
-  <div class="loading-page" v-if="loading">
+  <div v-if="loading" class="loading-page">
     <div class="logo-box">
       <img src="@/assets/imgs/loading/logo.png" alt="" class="logo" />
       <span class="logo-mask"></span>
@@ -33,8 +33,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 1);
-  background-image: url('@/assets/imgs/loading/bg.png');
+  background: rgba(0, 0, 0, 1);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
