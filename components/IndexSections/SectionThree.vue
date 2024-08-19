@@ -222,7 +222,7 @@ export default {
               // eslint-disable-next-line eqeqeq
             } else {
               this.$refs.slideWrap.style.position = 'relative'
-              this.$refs.slideWrap.style.height = '200vh'
+              this.$refs.slideWrap.style.height = '300vh'
               this.slideWrapTop = scrollTop
               this.onScroll()
             }
@@ -239,7 +239,7 @@ export default {
               this.startHeight = scrollTop
             } else {
               this.$refs.slideWrap.style.position = 'sticky'
-              this.$refs.slideWrap.style.height = '200vh'
+              this.$refs.slideWrap.style.height = '300vh'
             }
           }
         }
@@ -255,7 +255,7 @@ export default {
 .main-container {
   padding: 64px 80px;
   max-width: 100%;
-  height: 200vh;
+  height: 300vh;
   background-size: cover;
   background-position: center bottom;
   position: sticky;
