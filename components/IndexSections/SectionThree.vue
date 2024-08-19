@@ -158,6 +158,7 @@ export default {
     lastPosition: 0,
     timer: null,
     slideWrapTop: 0,
+    scrolling: false,
   }),
   mounted() {
     window.addEventListener('scroll', this.debouncedHandleScroll)
@@ -202,11 +203,16 @@ export default {
       const delta = scrollTop - this.lastScrollPosition
       if (delta < 0) {
         if (structureTop > 10 && structureTop < 30) {
-          this.$vuetify.goTo('#slideWrap', {
+          this.scrolling = true
+          this.$vuetify.goTo(this.slideWrapTop, {
             duration: 300,
             offset: 0,
             easing: 'easeInOutCubic',
           })
+          setTimeout(() => {
+            this.scrolling = false
+            this.$refs.slideWrap.style.position = 'sticky'
+          }, 500)
         }
       }
       // scroll up
@@ -231,11 +237,13 @@ export default {
       } else {
         // scroll down
         // eslint-disable-next-line no-lonely-if
-        if (top <= 180 && top >= -20) {
+        if (top <= 150 && top >= -20) {
           this.$refs.slideWrap.style.position = 'sticky'
           if (this.startHeight - scrollTop > 200) {
             if (this.currentIndex - 1 >= 0) {
-              this.changeSlide(this.currentIndex - 1)
+              if (!this.scrolling) {
+                this.changeSlide(this.currentIndex - 1)
+              }
               this.startHeight = scrollTop
             } else {
               this.$refs.slideWrap.style.position = 'sticky'
