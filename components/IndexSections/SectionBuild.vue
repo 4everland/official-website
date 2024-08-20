@@ -190,11 +190,14 @@ export default {
 
 <style lang="scss" scoped>
 .main-container {
-  padding: 100px 80px;
+  padding: 180px 80px 100px 80px;
   max-width: 100%;
 }
 .header-title {
   font-size: 48px;
+}
+.text-subtitle-1 {
+  font-family: Inter, Arial, sans-serif !important;
 }
 .p-text {
   color: white;

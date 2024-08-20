@@ -38,6 +38,7 @@ export default {
   font-size: 48px;
 }
 .bottom-img {
+  padding-bottom: 80px;
   background: url('@/assets/imgs/forward/Grid.png');
   width: 100%;
   background-size: cover;

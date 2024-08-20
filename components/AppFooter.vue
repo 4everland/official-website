@@ -119,7 +119,7 @@
       </v-menu>
     </v-container>
     <v-container class="copy">
-      <v-divider class="divider" />
+      <v-divider color="#474747" />
       <div
         class="copy-right"
         :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
@@ -362,11 +362,10 @@ export default {
 }
 .container {
   max-width: 1440px;
-  margin-left: 64px !important;
-  margin-right: 64px !important;
-}
-.divider {
-  background-color: #666 !important;
+  margin-left: 68px !important;
+  margin-right: 68px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 .link-name {
   font-family: Inter, Arial, sans-serif !important;
