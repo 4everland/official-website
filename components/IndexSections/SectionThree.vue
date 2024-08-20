@@ -286,7 +286,8 @@ export default {
   padding: 64px 80px;
   max-width: 100%;
   height: 300vh;
-  background-position: center top;
+  background-size: cover;
+  background-position: right bottom;
   position: sticky;
   top: 0;
 }
@@ -371,6 +372,8 @@ p {
 @media (min-width: 1441px) {
   .main-container {
     height: 300vh;
+    background-size: unset;
+    background-position: center top;
   }
   .carousel-container {
     margin: 0 auto;
