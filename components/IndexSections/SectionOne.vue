@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-lone-template -->
 <template>
   <div id="banner" class="pt-xl-16">
-    <v-container class="">
+    <v-container class="bannerContainer">
       <v-row>
         <v-col cols="12" md="12" lg="12">
           <div class="topSectionMain d-flex justify-center align-center">
@@ -82,13 +82,21 @@ export default {
   data() {
     return {
       model: 0,
-      labels: ['DWeb Hosting', 'Storage', 'Gateway', 'RPC', 'RaaS', 'AIRPC'],
+      labels: [
+        'DWeb Hosting',
+        'Storage',
+        'Gateway',
+        'RPC',
+        'RaaS',
+        'AI Solution',
+      ],
       current: '',
       activeIndex: 0,
       currentclass: '',
       bannerHeight: 0,
       lastScrollPosition: 0,
       scrolling: false,
+      topTextBoxBottom: 0,
     }
   },
   mounted() {
@@ -102,14 +110,21 @@ export default {
     }, 100)
     const topTextBoxHeight = this.$refs.topTextBox.getBoundingClientRect().top
     this.$refs.topTextBox.style.top = topTextBoxHeight + 'px'
+    this.topTextBoxBottom = this.getElementBottomRelativeToViewportBottom(
+      this.$refs.topTextBox
+    )
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     showLabel() {
-      let nextIndex = 0
-
+      let nextIndex = 1
+      setTimeout(() => {
+        this.currentclass = 'enterActive'
+        this.current = this.labels[this.activeIndex]
+        this.activeIndex = nextIndex
+      }, 50)
       setInterval(() => {
         nextIndex = this.activeIndex + 1
         if (nextIndex > this.labels.length - 1) {
@@ -183,7 +198,7 @@ export default {
   min-height: 100vh;
   position: relative;
   background-color: #000;
-  margin-bottom: 100px;
+  margin-bottom: 250px;
   .topSectionMain {
     position: relative;
     z-index: 1;

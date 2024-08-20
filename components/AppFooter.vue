@@ -213,7 +213,7 @@ export default {
               target: '_blank',
             },
             {
-              name: 'AI RPC',
+              name: 'AI Solution',
               href: 'https://docs.4everland.org/ai/ai-rpc',
               target: '_blank',
             },
@@ -222,16 +222,6 @@ export default {
         {
           name: 'Resources',
           list: [
-            {
-              name: 'Documentation',
-              href: 'https://docs.4everland.org/',
-              target: '_blank',
-            },
-            {
-              name: 'Litepaper',
-              href: 'https://static.4everland.org/4everland-litepaper.pdf',
-              target: '_blank',
-            },
             {
               name: 'Blogs',
               href: 'https://medium.com/4everland',
@@ -265,6 +255,16 @@ export default {
             {
               name: 'Template a thon',
               href: 'https://template.4everland.org/#/',
+              target: '_blank',
+            },
+            {
+              name: 'Documentation',
+              href: 'https://docs.4everland.org/',
+              target: '_blank',
+            },
+            {
+              name: '4EVER Network',
+              href: 'https://link.medium.com/N8xx2jigdMb',
               target: '_blank',
             },
           ],

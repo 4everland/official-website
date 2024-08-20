@@ -1,95 +1,95 @@
 <template>
-  <v-container
-    id="slideWrap"
-    ref="slideWrap"
-    fluid
-    class="main-container"
-    :style="{
-      backgroundImage: 'url(' + services[currentIndex].background + ')',
-    }"
-  >
-    <v-row class="carousel-container">
-      <v-col>
-        <v-row justify="center" align="center" class="text-left">
-          <v-col cols="12">
-            <h3 class="white--text header-title font-weight-bold">
-              Get A FULLY PERSONALIZED EXPERIENCE
-            </h3>
-            <p class="p-text text-subtitle-1 mt-4">
-              Immerse yourself in the full suite of Web3 services: Dweb Hosting,
-              Storage, Gateway, RPC, RaaS, and AI RPC.
-            </p>
-          </v-col>
-        </v-row>
-        <v-row justify="space-between" class="pl-2 align-center pt-xl-16">
-          <v-col>
-            <div class="carousel-delimiters">
-              <div
-                v-for="(item, i) in services"
-                :key="i"
-                class="carousel-delimiter"
-                :class="{ active: i === currentIndex }"
-                @click="changeSlide(i)"
-              ></div>
-            </div>
-          </v-col>
-          <v-col align="right">
-            <v-btn
-              color="#6172F3"
-              href="https://dashboard.4everland.org/"
-              target="_blank"
-              class="white--text start-btn"
-            >
-              Get Started
-              <div class="right-icon">
-                <v-img
-                  class="join_button_icon"
-                  :src="
-                    require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
-                  "
-                ></v-img>
+  <v-container id="slideWrap" ref="slideWrap" fluid class="main-container">
+    <div
+      id="mainContent"
+      class="main-content"
+      :style="{
+        backgroundImage: 'url(' + services[currentIndex].background + ')',
+      }"
+    >
+      <v-row class="carousel-container">
+        <v-col>
+          <v-row justify="center" align="center" class="text-left">
+            <v-col cols="12">
+              <h3 class="white--text header-title font-weight-bold">
+                Get A FULLY PERSONALIZED EXPERIENCE
+              </h3>
+              <p class="p-text text-subtitle-1 mt-4">
+                Immerse yourself in the full suite of Web3 services: Dweb
+                Hosting,Storage, Gateway, RPC, RaaS, and AI Solution.
+              </p>
+            </v-col>
+          </v-row>
+          <v-row justify="space-between" class="pl-2 align-center pt-xl-16">
+            <v-col>
+              <div class="carousel-delimiters">
+                <div
+                  v-for="(item, i) in services"
+                  :key="i"
+                  class="carousel-delimiter"
+                  :class="{ active: i === currentIndex }"
+                  @click="changeSlide(i)"
+                ></div>
               </div>
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-carousel
-          class="mt-8 mt-xl-16 carousel-wrap"
-          hide-delimiters
-          vertical
-          :show-arrows="false"
-          :value="currentIndex"
-          @change="onCarouselChange"
-        >
-          <v-carousel-item v-for="(item, i) in services" :key="i">
-            <v-sheet class="carousel-sheet">
-              <!-- <div class="d-flex justify-center"> -->
-              <v-row>
-                <v-col>
-                  <div class="mt-4 mb-4 d-flex justify-start">
-                    <div>
-                      <v-img class="mr-2" :src="item.icon" width="20"></v-img>
+            </v-col>
+            <v-col align="right">
+              <v-btn
+                color="#6172F3"
+                href="https://dashboard.4everland.org/"
+                target="_blank"
+                class="white--text start-btn"
+              >
+                Get Started
+                <div class="right-icon">
+                  <v-img
+                    class="join_button_icon"
+                    :src="
+                      require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
+                    "
+                  ></v-img>
+                </div>
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-carousel
+            class="mt-8 mt-xl-16 carousel-wrap"
+            hide-delimiters
+            vertical
+            :show-arrows="false"
+            :value="currentIndex"
+            @change="onCarouselChange"
+          >
+            <v-carousel-item v-for="(item, i) in services" :key="i">
+              <v-sheet class="carousel-sheet">
+                <!-- <div class="d-flex justify-center"> -->
+                <v-row>
+                  <v-col>
+                    <div class="mt-4 mb-4 d-flex justify-start">
+                      <div>
+                        <v-img class="mr-2" :src="item.icon" width="20"></v-img>
+                      </div>
+                      <p class="mb-0">{{ item.title }}</p>
                     </div>
-                    <p class="mb-0">{{ item.title }}</p>
-                  </div>
-                  <h3 class="white--text description font-weight-bold">
-                    {{ item.description }}
-                  </h3>
-                  <p class="p-text text-subtitle-1 mt-4">
-                    {{ item.text }}
-                  </p>
-                </v-col>
-                <v-col>
-                  <div>
-                    <v-img :src="item.img" class="item-img"></v-img>
-                  </div>
-                </v-col>
-              </v-row>
-              <!-- </div> -->
-            </v-sheet>
-          </v-carousel-item>
-        </v-carousel>
-      </v-col>
-    </v-row>
+                    <h3 class="white--text description font-weight-bold">
+                      {{ item.description }}
+                    </h3>
+                    <p class="p-text text-subtitle-1 mt-4">
+                      {{ item.text }}
+                    </p>
+                  </v-col>
+                  <v-col>
+                    <div>
+                      <v-img :src="item.img" class="item-img"></v-img>
+                    </div>
+                  </v-col>
+                </v-row>
+                <!-- </div> -->
+              </v-sheet>
+            </v-carousel-item>
+          </v-carousel>
+        </v-col>
+      </v-row>
+    </div>
   </v-container>
 </template>
 
@@ -143,7 +143,7 @@ export default {
       },
       {
         icon: require('@/assets/imgs/forward/icon/AI.svg'),
-        title: 'AI RPC',
+        title: 'AI Solution',
         description:
           'A Streamlined Interface to Leverage Diverse Large Language Models',
         text: ' A unified interface for 100+ LLMs, enabling to explore, compare, and select models and pricing options tailored to your specific needs.',
@@ -202,6 +202,10 @@ export default {
         this.scrolling = false
       }, 500)
     },
+    getElementBottomRelativeToViewportBottom(element) {
+      const rect = element.getBoundingClientRect()
+      return window.innerHeight - rect.bottom
+    },
     handleScroll(event) {
       if (this.scrolling) return
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
@@ -241,17 +245,24 @@ export default {
           if (!this.startHeight) {
             this.startHeight = scrollTop
           }
-          if (scrollTop - this.startHeight > 200) {
+          if (scrollTop - this.startHeight > 600) {
             if (this.currentIndex + 1 < 6) {
               this.changeSlide(this.currentIndex + 1)
               this.startHeight = scrollTop
               // eslint-disable-next-line eqeqeq
             } else {
               this.$refs.slideWrap.style.position = 'relative'
-              this.$refs.slideWrap.style.height = '300vh'
               this.slideWrapTop = scrollTop
               this.onScroll()
             }
+          }
+          const bottomMain = this.getElementBottomRelativeToViewportBottom(
+            document.getElementById('mainContent')
+          )
+          if (bottomMain > 0) {
+            this.$refs.slideWrap.style.position = 'relative'
+            this.slideWrapTop = scrollTop
+            this.onScroll()
           }
         }
       } else {
@@ -259,7 +270,7 @@ export default {
         // eslint-disable-next-line no-lonely-if
         if (top < 80 && top >= -20) {
           this.$refs.slideWrap.style.position = 'sticky'
-          if (this.startHeight - scrollTop > 200) {
+          if (this.startHeight - scrollTop > 600) {
             if (this.currentIndex - 1 >= 0) {
               if (!this.scrolling) {
                 this.changeSlide(this.currentIndex - 1)
@@ -267,7 +278,6 @@ export default {
               this.startHeight = scrollTop
             } else {
               this.$refs.slideWrap.style.position = 'sticky'
-              this.$refs.slideWrap.style.height = '300vh'
             }
           }
         } else if (top > 50) {
@@ -283,13 +293,18 @@ export default {
 
 <style scoped>
 .main-container {
-  padding: 64px 80px;
   max-width: 100%;
-  height: 300vh;
-  background-size: cover;
-  background-position: right bottom;
+  height: 800vh;
+  padding: 0;
   position: sticky;
   top: 0;
+}
+.main-content {
+  padding: 64px 80px;
+  max-width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: right bottom;
 }
 .p-text {
   color: white;
@@ -306,6 +321,7 @@ export default {
   padding: 24px 0 !important;
   border-radius: 48px;
   font-weight: bold;
+  margin-right: 15px;
 }
 .item-img {
   width: 600px;
@@ -356,7 +372,7 @@ p {
 @media (max-width: 960px) {
   .main-container {
     padding: 60px 20px;
-    height: 200vh !important;
+    height: 800vh !important;
   }
   .header-title {
     font-size: 30px;
@@ -371,9 +387,7 @@ p {
 }
 @media (min-width: 1441px) {
   .main-container {
-    height: 300vh;
-    background-size: unset;
-    background-position: center top;
+    height: 800vh;
   }
   .carousel-container {
     margin: 0 auto;

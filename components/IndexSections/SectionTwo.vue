@@ -3,7 +3,7 @@
   <v-container id="pionWrap" ref="pionWrap" fluid class="build-container pt-16">
     <v-row align="center">
       <v-col cols="12">
-        <div ref="pionTitle" class="pion_title">
+        <div ref="pionTitle" class="pion_title pb-16">
           <h4 class="white--text building-title font-weight-bold">
             PIONEERING WEB3 EVOLUTION
           </h4>
@@ -111,7 +111,7 @@
                       "
                     ></v-img>
                   </div>
-                  <span class="tips"> AI RPC</span>
+                  <span class="tips"> AI Solution</span>
                 </div>
               </div>
             </div>
@@ -228,7 +228,7 @@ export default {
 <style lang="less" scoped>
 .build-container {
   position: relative;
-  min-height: 100vh;
+  min-height: 160vh;
 }
 .p-text {
   color: white;
@@ -442,7 +442,7 @@ export default {
   z-index: 10;
   .tips {
     left: 30px;
-    width: 64px;
+    width: 90px;
     border-radius: 8px 8px 8px 2px;
   }
 }
