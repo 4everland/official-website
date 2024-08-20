@@ -369,6 +369,15 @@ p {
 .host-icon div {
   margin: 0 10px;
 }
+@media (max-width: 480px) {
+  .main-container {
+    padding: 20px 0 !important;
+  }
+  .main-content {
+    padding: 10px 20px;
+    height: 100vh;
+  }
+}
 @media (max-width: 960px) {
   .main-container {
     padding: 60px 20px;
