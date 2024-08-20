@@ -49,7 +49,7 @@ export default {
     padding: 64px 20px;
   }
   .header-title {
-    font-size: 44px;
+    font-size: 32px;
   }
 }
 @media (min-width: 1440px) {

@@ -8,7 +8,9 @@
             <div ref="topTextBox" class="text-box">
               <div class="text-title">A Web3 Cloud</div>
               <div class="text-title2">Computing Platform</div>
-              <div class="d-flex justify-center align-center mb-16">
+              <div
+                class="d-flex justify-center align-center mb-16 current-flex"
+              >
                 <div class="text-tips">
                   Offering a full-service solution for building Web3 DApps
                 </div>
@@ -331,9 +333,12 @@ export default {
   #banner {
     .text-box {
       .text-title {
-        font-size: 28px;
+        font-size: 40px !important;
         line-height: unset;
         font-weight: normal;
+      }
+      .text-title2 {
+        font-size: 40px !important;
       }
       .text-tips {
         font-size: 12px;
@@ -351,6 +356,12 @@ export default {
     }
   }
   .btn-read {
+    margin-top: 20px;
+  }
+  .current-flex {
+    flex-direction: column !important;
+  }
+  .btn-tips-wrap {
     margin-top: 20px;
   }
 }

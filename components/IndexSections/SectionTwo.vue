@@ -479,5 +479,8 @@ export default {
   .item-nowrap {
     flex-direction: column;
   }
+  .building-title {
+    font-size: 32px;
+  }
 }
 </style>

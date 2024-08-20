@@ -2,7 +2,7 @@
   <v-container fluid class="main-container">
     <v-row justify="center">
       <v-col cols="12">
-        <v-row class="d-flex text-left align-center">
+        <v-row class="d-flex text-left align-center title">
           <div>
             <h2 class="white--text header-title font-weight-bold">
               TOP WEB3 PROJECTS ARE BUILDING WITH US
@@ -491,6 +491,12 @@ export default {
     width: 100%;
     text-align: right !important;
     margin-right: 16px;
+  }
+  .title {
+    padding-left: 12px;
+  }
+  .header-title {
+    font-size: 32px;
   }
 }
 @media (min-width: 1441px) {

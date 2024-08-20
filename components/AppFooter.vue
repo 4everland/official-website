@@ -69,7 +69,7 @@
       </v-row>
     </v-container>
     <v-container class="btn-box hidden-md-and-up">
-      <v-menu offset-y>
+      <!-- <v-menu offset-y>
         <template #activator="{ on, attrs }">
           <v-btn outlined tile class="btn-item" v-bind="attrs" v-on="on"
             >Join us
@@ -92,8 +92,8 @@
             </v-list-item-title>
           </v-list-item>
         </v-list>
-      </v-menu>
-      <v-menu v-for="(items, index) in project" :key="index" offset-y>
+      </v-menu> -->
+      <!-- <v-menu v-for="(items, index) in project" :key="index" offset-y>
         <template #activator="{ on, attrs }">
           <v-btn outlined tile class="btn-item" v-bind="attrs" v-on="on"
             >{{ items.name }}
@@ -116,7 +116,7 @@
             </v-list-item-title>
           </v-list-item>
         </v-list>
-      </v-menu>
+      </v-menu> -->
     </v-container>
     <v-container class="copy">
       <v-divider color="#474747" />
@@ -127,25 +127,6 @@
         &copy; 2024 4everland.org. All rights reserved.
       </div>
     </v-container>
-    <div v-show="subSuccessShow" class="sub-success">
-      <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
-      <span class="ml-4">Thank you for subscription.</span>
-    </div>
-    <div v-show="subPendingShow" class="sub-success">
-      <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
-      <span class="ml-4"
-        >We have sent a subscription confirmation email. To complete the
-        subscription process, please click the confirmation link.</span
-      >
-      <div style="flex-basis: 100%">
-        <v-btn
-          color="#2b85fb"
-          class="white--text"
-          @click="subPendingShow = false"
-          >ok</v-btn
-        >
-      </div>
-    </div>
   </div>
 </template>
 <script>
@@ -521,9 +502,6 @@ input:-ms-input-placeholder {
   }
   .title-icon {
     margin-bottom: 48px;
-  }
-  .copy {
-    margin-top: -172px !important;
   }
 }
 @media (min-width: 1440px) {

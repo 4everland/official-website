@@ -108,6 +108,9 @@ export default {
   .get-btn {
     text-align: center;
   }
+  .header-title {
+    font-size: 32px;
+  }
 }
 @media (min-width: 1440px) {
   .main-container {

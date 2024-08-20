@@ -250,6 +250,9 @@ export default {
   #starRise {
     width: 100%;
   }
+  .header-title {
+    font-size: 32px;
+  }
 }
 @media (min-width: 1440px) {
   .main-container {
