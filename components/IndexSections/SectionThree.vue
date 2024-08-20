@@ -7,7 +7,6 @@
     :style="{
       backgroundImage: 'url(' + services[currentIndex].background + ')',
     }"
-    @scroll.prevent="handleScroll"
   >
     <v-row class="carousel-container">
       <v-col>
@@ -183,7 +182,7 @@ export default {
       this.timer = setTimeout(() => {
         this.handleScroll()
         this.timer = null
-      }, 10)
+      }, 0)
     },
     onScroll(event) {
       this.$vuetify.goTo('#structure', {
@@ -192,27 +191,48 @@ export default {
         easing: 'easeInOutCubic',
       })
     },
+    onScrollToSectionTwo(event) {
+      this.scrolling = true
+      this.$vuetify.goTo('#pionWrap', {
+        duration: 300,
+        offset: 0,
+        easing: 'easeInOutCubic',
+      })
+      setTimeout(() => {
+        this.scrolling = false
+      }, 500)
+    },
     handleScroll(event) {
+      if (this.scrolling) return
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       const top = document
         .getElementById('slideWrap')
         .getBoundingClientRect().top
-      const structureTop = document
-        .getElementById('structure')
-        .getBoundingClientRect().top
+      const slideWrapBottom = document
+        .getElementById('slideWrap')
+        .getBoundingClientRect().bottom
       const delta = scrollTop - this.lastScrollPosition
+      if (top > 100 || slideWrapBottom < -100) return
       if (delta < 0) {
-        if (structureTop > 10 && structureTop < 30) {
+        const structureTop = document
+          .getElementById('structure')
+          .getBoundingClientRect().top
+        if (structureTop > 0 && structureTop < 200) {
           this.scrolling = true
+          if (!this.slideWrapTop) {
+            this.slideWrapTop = document
+              .getElementById('slideWrap')
+              .getBoundingClientRect().top
+          }
           this.$vuetify.goTo(this.slideWrapTop, {
-            duration: 300,
+            duration: 100,
             offset: 0,
             easing: 'easeInOutCubic',
           })
           setTimeout(() => {
             this.scrolling = false
             this.$refs.slideWrap.style.position = 'sticky'
-          }, 500)
+          }, 100)
         }
       }
       // scroll up
@@ -237,7 +257,7 @@ export default {
       } else {
         // scroll down
         // eslint-disable-next-line no-lonely-if
-        if (top <= 150 && top >= -20) {
+        if (top < 80 && top >= -20) {
           this.$refs.slideWrap.style.position = 'sticky'
           if (this.startHeight - scrollTop > 200) {
             if (this.currentIndex - 1 >= 0) {
@@ -250,6 +270,8 @@ export default {
               this.$refs.slideWrap.style.height = '300vh'
             }
           }
+        } else if (top > 50) {
+          this.onScrollToSectionTwo()
         }
       }
       this.lastScrollPosition = scrollTop
@@ -264,8 +286,7 @@ export default {
   padding: 64px 80px;
   max-width: 100%;
   height: 300vh;
-  background-size: cover;
-  background-position: center bottom;
+  background-position: center top;
   position: sticky;
   top: 0;
 }
@@ -349,11 +370,12 @@ p {
 }
 @media (min-width: 1441px) {
   .main-container {
-    height: 200vh;
+    height: 300vh;
   }
   .carousel-container {
     margin: 0 auto;
     width: 1280px;
+    margin-top: 100px;
   }
   .carousel-wrap {
     margin-top: 150px !important;
