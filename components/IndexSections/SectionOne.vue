@@ -359,7 +359,6 @@ export default {
       }
       .text-tips {
         font-size: 12px;
-        max-width: 208px;
       }
     }
     .banner {
@@ -373,6 +372,7 @@ export default {
     }
   }
   .btn-read {
+    width: 272px !important;
     margin-top: 20px;
   }
   .current-flex {

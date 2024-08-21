@@ -29,6 +29,7 @@
             <template #activator="{ on, attrs }">
               <v-btn
                 class="hidden-sm-and-down nav-btn text-subtitle-1"
+                :class="`btn-${item.id}`"
                 plain
                 nuxt
                 replace
@@ -46,14 +47,18 @@
                   <v-img
                     v-if="item.icon"
                     class="hot-icon"
-                    max-height="16"
-                    max-width="16"
+                    max-height="20"
+                    max-width="20"
                     :src="item.icon"
                   ></v-img>
                 </span>
               </v-btn>
             </template>
-            <div v-if="item.childs" class="menu-down">
+            <div
+              v-if="item.childs"
+              class="menu-down"
+              :class="`card-${item.id}`"
+            >
               <v-container>
                 <v-card class="menu-card">
                   <div class="divider"></div>
@@ -79,7 +84,7 @@
                       >
                         <div class="d-flex align-center text-left">
                           <v-img
-                            class="mr-2"
+                            class="mr-2 boost-icon"
                             max-height="34"
                             max-width="34"
                             :src="child.icon"
@@ -124,6 +129,21 @@
           <v-spacer />
           <div class="d-flex align-center">
             <v-btn
+              href="https://t.me/org_4everland"
+              target="_blank"
+              plain
+              text
+              icon
+              nofollow
+              class="text-center mr-1"
+              style="width: 20px"
+            >
+              <v-img
+                width="20"
+                :src="require('@/assets/imgs/footer/telegram-header.svg')"
+              ></v-img>
+            </v-btn>
+            <v-btn
               href="https://twitter.com/4everland_org"
               target="_blank"
               plain
@@ -145,7 +165,7 @@
               text
               icon
               nofollow
-              class="text-center"
+              class="text-center header-btn"
               style="width: 32px"
             >
               <v-img
@@ -153,7 +173,7 @@
                 :src="require('@/assets/imgs/footer/discord-header.svg')"
               ></v-img>
             </v-btn>
-            <div class="d-flex align-center ml-2">
+            <div class="d-flex align-center">
               <v-btn
                 class="hidden-md-and-up"
                 text
@@ -338,30 +358,9 @@ export default {
             {
               text: '4EVER Network',
               tips: 'Integrate advanced dePINs and resources to empower developers',
-              href: 'https://link.medium.com/N8xx2jigdMb',
+              href: 'https://docs.4everland.org/depin/4ever-network',
               target: '_blank',
             },
-            // {
-            //   text: 'Bug Bounty',
-            //   tips: 'Get rewarded for finding bugs and exploits',
-            //   icon: require('@/assets/imgs/nav/Bug Bounty.png'),
-            //   href: 'https://dashboard.4everland.org/#/bug-bounty',
-            //   target: '_blank',
-            // },
-            // {
-            //   text: 'Dev Forum',
-            //   tips: 'Join the forum and share your experience with other developers',
-            //   icon: require('@/assets/imgs/nav/Dev Forum.png'),
-            //   href: 'https://www.reddit.com/r/4everland/',
-            //   target: '_blank',
-            // },
-            // {
-            //   text: 'Template-a-thon 🔥',
-            //   tips: 'Join the Template-a-thon,  Share the 50,000,000 T-4EVER grant!',
-            //   icon: require('@/assets/imgs/nav/Template-a-thon.png'),
-            //   href: 'https://template.4everland.org/#/',
-            //   target: '_blank',
-            // },
           ],
         },
         {
@@ -375,27 +374,24 @@ export default {
           target: '_blank',
         },
         // {
-        //   text: 'Community',
-        //   href: 'https://discord.com/invite/Cun2VpsdjF',
-        //   target: '_blank',
-        // },
-        //  {
-        //    text: 'First Sowing',
-        //    href: 'https://firstsowing.4everland.org/',
-        //    target: '_blank',
-        //    icon: require('@/assets/imgs/nav/icon_rocket_24x24.png'),
-        //  },
-        // {
-        //   text: 'Unleash Arweave',
-        //   href: 'https://unleashar.4everland.org/',
-        //   target: '_blank',
-        //   icon: require('@/assets/imgs/nav/icon_hot.svg'),
-        // },
-        // {
-        //   text: 'Elite Quest',
-        //   href: 'https://dashboard.4everland.org/quest',
-        //   target: '_blank',
-        //   icon: require('@/assets/imgs/nav/icon_hot.svg'),
+        //   id: '3',
+        //   text: '4EVER Boost',
+        //   link: '',
+        //   icon: require('@/assets/imgs/forward/boost.png'),
+        //   childs: [
+        //     {
+        //       text: 'Webpage',
+        //       icon: require('@/assets/imgs/forward/icon/webpage.svg'),
+        //       href: 'https://dashboard.4everland.org/',
+        //       target: '_blank',
+        //     },
+        //     {
+        //       text: 'Telegram MiniApp',
+        //       icon: require('@/assets/imgs/footer/telegram.svg'),
+        //       href: 'https://t.me/tg_4everland_bot/start',
+        //       target: '_blank',
+        //     },
+        //   ],
         // },
       ],
     }
@@ -467,7 +463,7 @@ export default {
 }
 .hot-icon {
   position: absolute;
-  right: -20px;
+  left: -24px;
   top: -2px;
 }
 .nav-btn {
@@ -497,6 +493,26 @@ export default {
   padding: 28px 20px;
   background: #121536 !important;
 }
+.card-3 .menu-card {
+  width: 440px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.card-3 .nav-font {
+  width: 162px;
+}
+.card-3 .divider {
+  margin: 0 !important;
+}
+.card-3 .icon-hover {
+  padding-left: 20px;
+}
+.btn-3 {
+  margin-left: 20px;
+}
+.header-btn {
+  margin-right: 12px;
+}
 .nav_sub_btn {
   width: 100%;
   flex: auto;
@@ -507,6 +523,9 @@ export default {
 .nav_sub_btn:hover {
   color: #101828;
   background-color: #fff !important;
+}
+.card-3 .boost-icon {
+  margin-left: 20px;
 }
 /deep/ .nav_sub_btn .v-btn__content {
   flex: auto;
@@ -546,6 +565,14 @@ export default {
 .text-white {
   color: #fff !important;
   opacity: 0.7;
+}
+@media (max-width: 960px) {
+  .header-btn {
+    margin-right: -8px;
+  }
+  .headerContainer {
+    margin-top: -8px !important;
+  }
 }
 @media (min-width: 1440px) {
   .app-bar {

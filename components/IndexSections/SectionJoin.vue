@@ -58,7 +58,7 @@ export default {
   padding: 100px 40px;
 }
 .header-title {
-  font-size: 48px;
+  font-size: 44px;
 }
 .get-start {
   width: 66%;

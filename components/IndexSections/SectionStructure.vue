@@ -5,7 +5,7 @@
         <h4 class="white--text header-title font-weight-bold">
           THE ROBUST DEPIN NETWORK POWERS APPLICATIONS
         </h4>
-        <p class="p-text get-start">
+        <p class="p-text get-start mt-1">
           We integrated DePINs and protocols to offer robust underlying
           capabilities, encompassing decentralized computing, storage, network,
           and more.
@@ -35,7 +35,7 @@ export default {
   opacity: 0.7;
 }
 .header-title {
-  font-size: 48px;
+  font-size: 44px;
 }
 .bottom-img {
   padding-bottom: 80px;

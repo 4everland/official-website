@@ -238,7 +238,7 @@ export default {
   font-family: Inter, Arial, sans-serif;
 }
 .building-title {
-  font-size: 48px;
+  font-size: 44px;
 }
 .building-subtitle {
   font-size: 20px;
@@ -478,9 +478,13 @@ export default {
   }
   .item-nowrap {
     flex-direction: column;
+    margin-top: 24px;
   }
   .building-title {
     font-size: 32px;
+  }
+  .build-card {
+    margin-top: 0;
   }
 }
 @media (min-width: 1904px) {

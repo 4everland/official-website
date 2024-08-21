@@ -2,12 +2,14 @@
   <v-container fluid class="main-container">
     <v-row justify="center">
       <v-col cols="12">
-        <v-row class="d-flex text-left align-center title">
+        <v-row
+          class="d-flex text-left align-center title justify-space-between"
+        >
           <div>
             <h2 class="white--text header-title font-weight-bold">
               TOP WEB3 PROJECTS ARE BUILDING WITH US
             </h2>
-            <p class="p-text text-subtitle-1">
+            <p class="p-text text-subtitle-1 mt-5">
               Numerous projects have harnessed the charm of our diverse
               solutions
             </p>
@@ -194,7 +196,7 @@ export default {
   max-width: 100%;
 }
 .header-title {
-  font-size: 48px;
+  font-size: 44px;
 }
 .text-subtitle-1 {
   font-family: Inter, Arial, sans-serif !important;

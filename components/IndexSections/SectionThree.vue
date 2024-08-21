@@ -14,7 +14,7 @@
               <h3 class="white--text header-title font-weight-bold">
                 Get A FULLY PERSONALIZED EXPERIENCE
               </h3>
-              <p class="p-text text-subtitle-1 mt-4">
+              <p class="p-text text-subtitle-1 mt-1">
                 Immerse yourself in the full suite of Web3 services: Dweb
                 Hosting,Storage, Gateway, RPC, RaaS, and AI Solution.
               </p>
@@ -64,7 +64,7 @@
                 <!-- <div class="d-flex justify-center"> -->
                 <v-row>
                   <v-col>
-                    <div class="mt-4 mb-4 d-flex justify-start">
+                    <div class="item-icon mt-4 mb-4 d-flex justify-start">
                       <div>
                         <v-img class="mr-2" :src="item.icon" width="20"></v-img>
                       </div>
@@ -77,7 +77,7 @@
                       {{ item.text }}
                     </p>
                   </v-col>
-                  <v-col>
+                  <v-col class="col-item-img">
                     <div>
                       <v-img :src="item.img" class="item-img"></v-img>
                     </div>
@@ -314,7 +314,7 @@ export default {
   opacity: 0.7;
 }
 .header-title {
-  font-size: 48px;
+  font-size: 44px;
 }
 .v-btn {
   justify-content: flex-end !important;
@@ -388,13 +388,32 @@ p {
   }
   .header-title {
     font-size: 30px;
+    line-height: 32px;
   }
   .carousel-delimiters {
     max-width: 100%;
     width: 200%;
   }
+  .col-item-img {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
   .item-img {
     width: 340px;
+  }
+  .item-icon {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .description {
+    line-height: 28px;
+  }
+  .text-subtitle-1 {
+    line-height: 20px;
+    margin-bottom: 0 !important;
+  }
+  .carousel-wrap {
+    margin-top: 0 !important;
   }
 }
 @media (min-width: 1441px) {
