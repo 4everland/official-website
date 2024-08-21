@@ -181,7 +181,7 @@ export default {
       this.scrolling = true
       this.$vuetify.goTo('#slideWrap', {
         duration: 300,
-        offset: -70,
+        offset: -60,
         easing: 'easeInOutCubic',
       })
       setTimeout(() => {
@@ -209,10 +209,10 @@ export default {
         .getBoundingClientRect().bottom
       // scroll up
       const pionWrapHeight = document.getElementById('pionWrap').offsetHeight
-
+      // console.log('bottomToTop', bottomToTop, bottom)
       if (delta > 0 && top != null) {
         if (pionWrapHeight >= window.innerHeight) {
-          if (top <= 0 && bottomToTop > 0 && bottom >= 0) {
+          if (top <= 0 && bottomToTop > 0 && bottom >= -50) {
             this.onScroll()
           }
         } else if (top <= 0) {
