@@ -24,7 +24,7 @@
             offset-y
             position
             z-index="99"
-            close-on-content-click
+            open-on-hover
           >
             <template #activator="{ on, attrs }">
               <v-btn
