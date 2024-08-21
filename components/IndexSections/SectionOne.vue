@@ -101,7 +101,7 @@ export default {
   },
   mounted() {
     this.showLabel()
-    this.bannerHeight = document.getElementById('banner').offsetHeight
+    this.bannerHeight = document.getElementById('banner').offsetHeight + 76
     window.addEventListener('scroll', this.handleScroll)
     this.handleScroll()
     setTimeout(() => {
@@ -167,15 +167,17 @@ export default {
       this.$refs.starRise.style.transform = `translateY(${
         -scrollPercent * 100
       }px)`
+      // banner bottom to screen bottom
       const bottom = this.getElementBottomRelativeToViewportBottom(
         document.getElementById('banner')
       )
+      // banner bottom to screen top
       const bottomToHeight = document
         .getElementById('banner')
         .getBoundingClientRect().bottom
       const delta = scrollTop - this.lastScrollPosition
       // if(bottom == 150)
-      if (scrollPercent * 100 > this.bannerHeight / 2 - 230) {
+      if (scrollPercent * 100 > this.bannerHeight / 2 - 330) {
         this.$refs.logoWrap.style.position = 'relative'
         // eslint-disable-next-line no-undef
         if (delta > 0) {
@@ -195,7 +197,7 @@ export default {
 </script>
 <style lang="less" scoped>
 #banner {
-  min-height: 100vh;
+  min-height: 120vh;
   position: relative;
   background-color: #000;
   margin-bottom: 250px;
@@ -325,7 +327,7 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 0;
   bottom: 0;
   margin-top: -80px;
@@ -386,6 +388,7 @@ export default {
     max-width: 100% !important;
   }
   #banner {
+    margin-bottom: 30vh;
     .topSectionMain {
       .bannervideo {
         top: 40px;

@@ -483,4 +483,10 @@ export default {
     font-size: 32px;
   }
 }
+@media (min-width: 1904px) {
+  .build-container {
+    min-height: 120vh;
+    padding-top: 20vh !important;
+  }
+}
 </style>

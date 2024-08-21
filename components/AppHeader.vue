@@ -335,6 +335,12 @@ export default {
               href: 'https://medium.com/4everland',
               target: '_blank',
             },
+            {
+              text: '4EVER Network',
+              tips: 'Integrate advanced dePINs and resources to empower developers',
+              href: 'https://link.medium.com/N8xx2jigdMb',
+              target: '_blank',
+            },
             // {
             //   text: 'Bug Bounty',
             //   tips: 'Get rewarded for finding bugs and exploits',

@@ -209,12 +209,15 @@ export default {
     handleScroll(event) {
       if (this.scrolling) return
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      // slideWrap top to screen top position
       const top = document
         .getElementById('slideWrap')
         .getBoundingClientRect().top
+      // slideWrap bottom to screen top position
       const slideWrapBottom = document
         .getElementById('slideWrap')
         .getBoundingClientRect().bottom
+      // screen scroll distance
       const delta = scrollTop - this.lastScrollPosition
       if (top > 100 || slideWrapBottom < -100) return
       if (delta < 0) {
