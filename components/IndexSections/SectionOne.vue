@@ -382,7 +382,11 @@ export default {
     margin-top: 20px;
   }
 }
-
+@media (max-width: 480px) {
+  .bannervideo {
+    top: 0;
+  }
+}
 @media (min-width: 1904px) {
   .container {
     max-width: 100% !important;

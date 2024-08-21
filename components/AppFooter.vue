@@ -433,7 +433,7 @@ input:-ms-input-placeholder {
   text-transform: none !important;
 }
 .copy-right {
-  padding: 30px 0;
+  padding: 30px 80px;
   text-align: right;
   color: #b1b6bb;
 }
