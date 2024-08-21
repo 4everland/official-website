@@ -158,12 +158,14 @@ export default {
     timer: null,
     slideWrapTop: 0,
     scrolling: false,
+    slideHeight: 0,
   }),
   mounted() {
     window.addEventListener('scroll', this.debouncedHandleScroll)
     this.slideWrapTop = document
       .getElementById('slideWrap')
       .getBoundingClientRect().top
+    this.slideHeight = document.getElementById('slideWrap').offsetHeight
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.debouncedHandleScroll)
@@ -182,14 +184,18 @@ export default {
       this.timer = setTimeout(() => {
         this.handleScroll()
         this.timer = null
-      }, 0)
+      }, 5)
     },
     onScroll(event) {
+      this.scrolling = true
       this.$vuetify.goTo('#structure', {
         duration: 300,
         offset: -70,
         easing: 'easeInOutCubic',
       })
+      setTimeout(() => {
+        this.scrolling = false
+      }, 500)
     },
     onScrollToSectionTwo(event) {
       this.scrolling = true
@@ -201,6 +207,23 @@ export default {
       setTimeout(() => {
         this.scrolling = false
       }, 500)
+    },
+    scrollToSectionThree(event) {
+      this.scrolling = true
+      if (!this.slideWrapTop) {
+        this.slideWrapTop = document
+          .getElementById('slideWrap')
+          .getBoundingClientRect().top
+      }
+      this.$vuetify.goTo(this.slideWrapTop, {
+        duration: 100,
+        offset: 0,
+        easing: 'easeInOutCubic',
+      })
+      setTimeout(() => {
+        this.scrolling = false
+        this.$refs.slideWrap.style.position = 'sticky'
+      }, 100)
     },
     getElementBottomRelativeToViewportBottom(element) {
       const rect = element.getBoundingClientRect()
@@ -220,6 +243,9 @@ export default {
       // screen scroll distance
       const delta = scrollTop - this.lastScrollPosition
       if (top > 100 || slideWrapBottom < -100) return
+      if (!this.lastPosition) {
+        this.lastPosition = scrollTop + 4000
+      }
       if (delta < 0) {
         const structureTop = document
           .getElementById('structure')
@@ -231,7 +257,7 @@ export default {
               .getElementById('slideWrap')
               .getBoundingClientRect().top
           }
-          this.$vuetify.goTo(this.slideWrapTop, {
+          this.$vuetify.goTo(this.lastPosition, {
             duration: 100,
             offset: 0,
             easing: 'easeInOutCubic',
@@ -244,7 +270,7 @@ export default {
       }
       // scroll up
       if (delta > 0 && top != null) {
-        if (top <= 0 && top >= -10) {
+        if (top <= 0 && top >= Number(`-${this.slideHeight}`)) {
           if (!this.startHeight) {
             this.startHeight = scrollTop
           }
@@ -254,6 +280,14 @@ export default {
               this.startHeight = scrollTop
               // eslint-disable-next-line eqeqeq
             } else {
+              this.$refs.slideWrap.style.position = 'relative'
+              this.slideWrapTop = scrollTop
+              this.onScroll()
+            }
+            const bottomMain = this.getElementBottomRelativeToViewportBottom(
+              document.getElementById('mainContent')
+            )
+            if (bottomMain > 0) {
               this.$refs.slideWrap.style.position = 'relative'
               this.slideWrapTop = scrollTop
               this.onScroll()
@@ -297,7 +331,7 @@ export default {
 <style scoped>
 .main-container {
   max-width: 100%;
-  height: 800vh;
+  height: 900vh;
   padding: 0;
   position: sticky;
   top: 0;
@@ -384,7 +418,7 @@ p {
 @media (max-width: 960px) {
   .main-container {
     padding: 60px 20px;
-    height: 800vh !important;
+    height: 900vh !important;
   }
   .header-title {
     font-size: 30px;
@@ -418,7 +452,7 @@ p {
 }
 @media (min-width: 1441px) {
   .main-container {
-    height: 800vh;
+    height: 900vh;
   }
   .carousel-container {
     margin: 0 auto;

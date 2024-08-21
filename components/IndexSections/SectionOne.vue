@@ -106,13 +106,13 @@ export default {
     this.handleScroll()
     setTimeout(() => {
       window.scrollTo(0, 0)
+      const topTextBoxHeight = this.$refs.topTextBox.getBoundingClientRect().top
+      this.$refs.topTextBox.style.top = topTextBoxHeight + 'px'
+      this.topTextBoxBottom = this.getElementBottomRelativeToViewportBottom(
+        this.$refs.topTextBox
+      )
       this.timer = null
     }, 100)
-    const topTextBoxHeight = this.$refs.topTextBox.getBoundingClientRect().top
-    this.$refs.topTextBox.style.top = topTextBoxHeight + 'px'
-    this.topTextBoxBottom = this.getElementBottomRelativeToViewportBottom(
-      this.$refs.topTextBox
-    )
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
