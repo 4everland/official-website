@@ -14,7 +14,7 @@
               <h3 class="white--text header-title font-weight-bold">
                 Get A FULLY PERSONALIZED EXPERIENCE
               </h3>
-              <p class="p-text text-subtitle-1 mt-1 py-8">
+              <p class="p-text text-subtitle mt-1 py-8">
                 Immerse yourself in the full suite of Web3 services: Dweb
                 Hosting,Storage, Gateway, RPC, RaaS, and AI Solution.
               </p>
@@ -382,9 +382,13 @@ export default {
 .carousel-sheet {
   background-color: transparent !important;
 }
-.text-subtitle-1 {
+.text-subtitle {
   line-height: 20px;
   font-size: 20px !important;
+  margin-bottom: 0 !important;
+}
+.text-subtitle-1 {
+  line-height: 20px;
   margin-bottom: 0 !important;
 }
 .description {
