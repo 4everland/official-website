@@ -3,7 +3,7 @@
     <v-app-bar fixed hide-on-scroll app flat dark class="app-bar">
       <div
         style="width: 100%; padding-top: 0"
-        class="headerContainer d-flex align-center mt-4"
+        class="headerContainer d-flex align-center"
       >
         <v-container
           class="d-flex align-center"
@@ -422,6 +422,7 @@ export default {
 <style scoped>
 .app-bar {
   background-color: transparent;
+  margin-top: 8px !important;
 }
 #header {
   z-index: 99;
@@ -570,8 +571,8 @@ export default {
   .header-btn {
     margin-right: -8px;
   }
-  .headerContainer {
-    margin-top: -8px !important;
+  .app-bar {
+    margin-top: 5px !important;
   }
 }
 @media (min-width: 1440px) {
