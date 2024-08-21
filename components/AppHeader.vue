@@ -357,7 +357,7 @@ export default {
             },
             {
               text: '4EVER Network',
-              tips: 'Integrate advanced dePINs and resources to empower developers',
+              tips: 'Integrate advanced DePINs and resources to empower developers',
               href: 'https://docs.4everland.org/depin/4ever-network',
               target: '_blank',
             },
@@ -365,7 +365,7 @@ export default {
         },
         {
           text: 'Docs',
-          href: 'https://medium.com/4everland',
+          href: 'https://docs.4everland.org/',
           target: '_blank',
         },
         {

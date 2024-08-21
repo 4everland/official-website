@@ -14,7 +14,7 @@
               <h3 class="white--text header-title font-weight-bold">
                 Get A FULLY PERSONALIZED EXPERIENCE
               </h3>
-              <p class="p-text text-subtitle-1 mt-1">
+              <p class="p-text text-subtitle-1 mt-1 py-8">
                 Immerse yourself in the full suite of Web3 services: Dweb
                 Hosting,Storage, Gateway, RPC, RaaS, and AI Solution.
               </p>

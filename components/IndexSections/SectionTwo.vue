@@ -7,7 +7,7 @@
           <h4 class="white--text building-title font-weight-bold">
             PIONEERING WEB3 EVOLUTION
           </h4>
-          <div class="building-subtitle pb-5">
+          <div class="building-subtitle py-8">
             Accelerating innovation with our unrivaled suite of services
           </div>
         </div>

@@ -9,7 +9,7 @@
             <h2 class="white--text header-title font-weight-bold">
               TOP WEB3 PROJECTS ARE BUILDING WITH US
             </h2>
-            <p class="p-text text-subtitle-1 mt-5">
+            <p class="p-text text-subtitle-1 mt-5 py-8">
               Numerous projects have harnessed the charm of our diverse
               solutions
             </p>

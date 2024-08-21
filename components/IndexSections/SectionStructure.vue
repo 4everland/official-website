@@ -5,7 +5,7 @@
         <h4 class="white--text header-title font-weight-bold">
           THE ROBUST DEPIN NETWORK POWERS APPLICATIONS
         </h4>
-        <p class="p-text get-start mt-1">
+        <p class="p-text get-start mt-1 py-8">
           We integrated DePINs and protocols to offer robust underlying
           capabilities, encompassing decentralized computing, storage, network,
           and more.

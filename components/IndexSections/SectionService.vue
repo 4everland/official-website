@@ -6,7 +6,7 @@
           <h3 class="white--text header-title font-weight-bold">
             EMBRACING MULTIPLE BLOCKCHAIN ECOSYSTEMS
           </h3>
-          <p class="p-text text-subtitle-1 mt-1">
+          <p class="p-text text-subtitle-1 mt-1 py-8">
             Provide full-service solutions for an elevated experience.
           </p>
         </v-col>
