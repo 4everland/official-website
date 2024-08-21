@@ -382,6 +382,11 @@ export default {
 .carousel-sheet {
   background-color: transparent !important;
 }
+.text-subtitle-1 {
+  line-height: 20px;
+  font-size: 20px !important;
+  margin-bottom: 0 !important;
+}
 .description {
   font-size: 24px;
 }

@@ -24,7 +24,7 @@
             offset-y
             position
             z-index="99"
-            open-on-hover
+            close-on-content-click
           >
             <template #activator="{ on, attrs }">
               <v-btn
@@ -441,7 +441,7 @@ export default {
 .divider {
   height: 3px;
   background: linear-gradient(90deg, #fda9ff -0.02%, #039cff 99.98%);
-  margin: 0 20px;
+  margin: 0 20px 10px;
 }
 .menu_text {
   font-size: 14px;

@@ -172,6 +172,7 @@ export default {
   font-family: Inter, Arial, sans-serif;
 }
 .text-subtitle-1 {
+  font-size: 20px !important;
   font-family: Inter, Arial, sans-serif !important;
 }
 .p-text {

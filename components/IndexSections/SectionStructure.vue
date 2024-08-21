@@ -33,6 +33,7 @@ export default {
 .p-text {
   color: white;
   opacity: 0.7;
+  font-size: 20px;
 }
 .header-title {
   font-size: 44px;

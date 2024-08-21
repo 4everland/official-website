@@ -200,6 +200,7 @@ export default {
 }
 .text-subtitle-1 {
   font-family: Inter, Arial, sans-serif !important;
+  font-size: 20px !important;
 }
 .p-text {
   color: white;
