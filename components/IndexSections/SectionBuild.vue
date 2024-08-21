@@ -429,7 +429,7 @@ export default {
   content: '';
   position: absolute;
   top: 0;
-  width: 200px;
+  width: 100px;
   height: 100%;
   z-index: 1;
 }
@@ -438,8 +438,8 @@ export default {
   left: 0;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
     rgba(0, 0, 0, 0) 100%
   );
 }
@@ -448,8 +448,8 @@ export default {
   right: 0;
   background: linear-gradient(
     to left,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
     rgba(0, 0, 0, 0) 100%
   );
 }
