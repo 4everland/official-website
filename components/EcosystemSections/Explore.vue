@@ -5,11 +5,12 @@
         <div class="explore-top">
           <div class="explore-top-title">Explore DApps</div>
           <div class="search-box">
-            <v-icon size="20px"> mdi-magnify </v-icon>
+            <v-icon size="20px" color="#98a2b3"> mdi-magnify </v-icon>
             <input
               v-model="searchText"
               type="text"
               placeholder="Search DApps"
+              class="custom-placeholder"
               @input="search"
             />
           </div>
@@ -215,17 +216,16 @@ export default {
       width: 100%;
       height: 68px;
       padding: 0 15px;
-      border: 1px solid #eeeef2;
+      border: 1px solid #f2f4f740;
       &-title {
         font-size: 28px;
         font-weight: bold;
-        color: #292934;
-        font-family: 'BookmanOldStyle-Bold', sans-serif !important;
+        color: #fff;
       }
       .search-box {
         width: 300px;
         height: 45px;
-        border: 1px solid #eeeef2;
+        border: 1px solid #f2f4f740;
         display: flex;
         align-items: center;
         padding: 0 20px;
@@ -248,9 +248,9 @@ export default {
         max-width: 240px;
         margin-right: -1px;
         &-item {
-          border-left: 1px solid #eeeef2;
-          border-right: 1px solid #eeeef2;
-          border-bottom: 1px solid #eeeef2;
+          border-left: 1px solid #f2f4f740;
+          border-right: 1px solid #f2f4f740;
+          border-bottom: 1px solid #f2f4f740;
           display: flex;
           justify-content: space-between;
           padding: 26px 16px;
@@ -258,13 +258,12 @@ export default {
           position: relative;
           cursor: pointer;
           &:first-child {
-            border-top: 1px solid #eeeef2;
+            border-top: 1px solid #f2f4f740;
           }
 
           &-type {
             font-weight: bold;
-            color: #525272;
-            font-family: 'Ubuntu', sans-serif !important;
+            color: #98a2b3;
           }
           &-num {
             color: #5d606c;
@@ -274,7 +273,7 @@ export default {
               content: '';
               width: 4px;
               height: 26px;
-              background: #452c92;
+              background: #6172f3;
               position: absolute;
               left: 0;
               top: 0;
@@ -282,7 +281,7 @@ export default {
               margin: auto;
             }
             .explore-menu-item-type {
-              color: #452c92;
+              color: #6172f3;
             }
           }
         }
@@ -295,34 +294,34 @@ export default {
       .explore-list {
         width: 100%;
         &-item {
-          border: 1px solid #eeeef2;
+          border: 1px solid #f2f4f740;
           padding: 30px;
           .dapps-name {
             font-size: 18px;
             font-weight: bold;
             margin-top: 17px;
-            font-family: 'BookmanOldStyle-Bold', sans-serif !important;
+            color: #fff;
           }
           .dapps-desc {
             min-height: 92px;
             font-size: 16px;
-            color: #5d606c;
+            color: #fff;
+            opacity: 0.7;
             overflow: hidden;
             display: -webkit-box;
             text-overflow: ellipsis;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 4;
             margin-top: 23px;
-            font-family: 'Ubuntu', sans-serif !important;
           }
           .dapps-more {
             font-size: 14px;
-            color: #452c92;
+            color: #6172f3;
             margin-top: 27px;
             a {
               text-decoration: none;
               font-size: 14px;
-              color: #452c92;
+              color: #6172f3;
             }
           }
           .dapps-footer {
@@ -333,11 +332,11 @@ export default {
                 min-width: 56px;
                 height: 24px;
                 line-height: 24px;
-                background: #ebebf0;
+                background: #c7d7fe;
                 border-radius: 10px;
                 text-align: center;
                 font-size: 11px;
-                color: #132642;
+                color: #6172f3;
                 margin-right: 12px;
                 margin-bottom: 12px;
                 padding: 0 16px;

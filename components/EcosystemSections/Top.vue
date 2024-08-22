@@ -11,7 +11,7 @@
         <div class="btn-box">
           <v-btn
             class="top-btn white--text font-weight-bold ma-2"
-            color="#452C92"
+            color="#6172F3"
             rounded
             :large="$vuetify.breakpoint.mdAndDown"
             :x-large="$vuetify.breakpoint.xlOnly"
@@ -22,7 +22,7 @@
           <v-btn
             class="top-btn font-weight-bold ma-2"
             outlined
-            color="#452C92"
+            color="#6172F3"
             rounded
             :large="$vuetify.breakpoint.mdAndDown"
             :x-large="$vuetify.breakpoint.xlOnly"
@@ -48,6 +48,7 @@ export default {
 <style lang="less" scoped>
 .ecosystem-banner {
   position: relative;
+  top: -64px;
   .banner-box {
     width: 100%;
     height: 100%;
@@ -59,7 +60,6 @@ export default {
       font-size: 34px;
       font-weight: bold;
       color: #000;
-      font-family: 'BookmanOldStyle-Bold', sans-serif !important;
     }
     .banner-tips {
       max-width: 600px;
@@ -68,11 +68,9 @@ export default {
       font-size: 18px;
       font-weight: 400;
       color: #132642;
-      font-family: 'Ubuntu', sans-serif !important;
     }
     .btn-box {
       margin-top: 69px;
-      font-family: 'Ubuntu', sans-serif !important;
       text-align: center;
     }
   }

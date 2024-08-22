@@ -1,9 +1,19 @@
 <template>
-  <div id="footer">
-    <v-container class="hidden-sm-and-down mt-8">
-      <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
-        <v-col cols="12" md="4" lg="4">
-          <div class="ml-4 mb-4 text-h6">Join us</div>
+  <div id="footer" dark>
+    <v-container dark class="mt-4">
+      <v-row
+        :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
+        dark
+        justify="space-between"
+      >
+        <v-col cols="12" md="4" lg="4" class="text-center">
+          <div class="title-icon">
+            <v-img
+              :src="require('@/assets/imgs/index/newui/logo-new.svg')"
+              width="227px"
+              class="title-img"
+            ></v-img>
+          </div>
           <div class="join-us">
             <v-col
               v-for="link in links"
@@ -20,15 +30,15 @@
                 icon
                 nofollow
                 class="text-center"
-                style="width: 24px"
+                style="width: 40px"
               >
                 <!-- {{ link.name }} -->
-                <v-img width="24" :src="link.icon"></v-img>
+                <v-img width="40" :src="link.icon"></v-img>
               </v-btn>
             </v-col>
           </div>
         </v-col>
-        <v-col cols="12" md="8" lg="8">
+        <v-col cols="12" md="8" lg="8" class="text-left">
           <v-row>
             <v-col
               v-for="item in project"
@@ -38,13 +48,14 @@
               md="3"
               class="d-flex flex-column"
             >
-              <div class="ml-4 mb-4 text-h6">{{ item.name }}</div>
+              <div class="ml-4 mb-4 text-h6 link-name">{{ item.name }}</div>
               <div v-for="link in item.list" :key="link.name">
                 <v-btn
                   :to="link.to"
                   :href="link.href"
                   :target="link.target"
-                  color="#B1B6BB"
+                  color="#98A2B3"
+                  class="link-name"
                   plain
                   text
                   nofollow
@@ -58,7 +69,7 @@
       </v-row>
     </v-container>
     <v-container class="btn-box hidden-md-and-up">
-      <v-menu offset-y>
+      <!-- <v-menu offset-y>
         <template #activator="{ on, attrs }">
           <v-btn outlined tile class="btn-item" v-bind="attrs" v-on="on"
             >Join us
@@ -81,8 +92,8 @@
             </v-list-item-title>
           </v-list-item>
         </v-list>
-      </v-menu>
-      <v-menu v-for="(items, index) in project" :key="index" offset-y>
+      </v-menu> -->
+      <!-- <v-menu v-for="(items, index) in project" :key="index" offset-y>
         <template #activator="{ on, attrs }">
           <v-btn outlined tile class="btn-item" v-bind="attrs" v-on="on"
             >{{ items.name }}
@@ -90,7 +101,7 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item v-for="(item, index) in items.list" :key="index">
+          <v-list-item v-for="(item, index1) in items.list" :key="index1">
             <v-list-item-title>
               <v-btn
                 :to="item.to"
@@ -105,9 +116,10 @@
             </v-list-item-title>
           </v-list-item>
         </v-list>
-      </v-menu>
+      </v-menu> -->
     </v-container>
-    <v-container>
+    <v-container class="copy">
+      <v-divider color="#474747" />
       <div
         class="copy-right"
         :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
@@ -115,25 +127,6 @@
         &copy; 2024 4everland.org. All rights reserved.
       </div>
     </v-container>
-    <div v-show="subSuccessShow" class="sub-success">
-      <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
-      <span class="ml-4">Thank you for subscription.</span>
-    </div>
-    <div v-show="subPendingShow" class="sub-success">
-      <v-icon color="#2B85FB" size="64">{{ mdiEmoticonHappyOutline }}</v-icon>
-      <span class="ml-4"
-        >We have sent a subscription confirmation email. To complete the
-        subscription process, please click the confirmation link.</span
-      >
-      <div style="flex-basis: 100%">
-        <v-btn
-          color="#2b85fb"
-          class="white--text"
-          @click="subPendingShow = false"
-          >ok</v-btn
-        >
-      </div>
-    </div>
   </div>
 </template>
 <script>
@@ -149,44 +142,45 @@ export default {
       mdiEmoticonHappyOutline,
       links: [
         {
-          name: 'GitHub',
-          icon: require('@/assets/imgs/footer/github.png'),
-          href: 'https://github.com/4everland',
-        },
-        {
-          name: 'Twitter',
-          icon: require('@/assets/imgs/footer/twitter.png'),
-          href: 'https://twitter.com/4everland_org',
-        },
-        {
           name: 'Telegram',
-          icon: require('@/assets/imgs/footer/telegram.png'),
+          icon: require('@/assets/imgs/footer/telegram.svg'),
           href: 'https://t.me/org_4everland',
         },
         {
+          name: 'Discord',
+          icon: require('@/assets/imgs/footer/discord.svg'),
+          href: 'https://discord.com/invite/Cun2VpsdjF',
+        },
+        {
+          name: 'Twitter',
+          icon: require('@/assets/imgs/footer/twitter.svg'),
+          href: 'https://twitter.com/4everland_org',
+        },
+        {
+          name: 'Youtube',
+          icon: require('@/assets/imgs/footer/youtube.svg'),
+          href: 'https://www.youtube.com/channel/UC9gDft8jnTt_1yrtLfsUq0w',
+        },
+        {
+          name: 'GitHub',
+          icon: require('@/assets/imgs/footer/github.svg'),
+          href: 'https://github.com/4everland',
+        },
+
+        {
           name: 'Reddit',
-          icon: require('@/assets/imgs/footer/reddit.png'),
+          icon: require('@/assets/imgs/footer/reddit.svg'),
           href: 'https://www.reddit.com/r/4everland/',
         },
         {
           name: 'Medium',
-          icon: require('@/assets/imgs/footer/medium.png'),
+          icon: require('@/assets/imgs/footer/medium.svg'),
           href: 'https://4everland.medium.com/',
         },
         {
-          name: 'Discord',
-          icon: require('@/assets/imgs/footer/discord.png'),
-          href: 'https://discord.com/invite/Cun2VpsdjF',
-        },
-        {
           name: 'Email',
-          icon: require('@/assets/imgs/footer/email.png'),
+          icon: require('@/assets/imgs/footer/email.svg'),
           href: 'mailto:contact@4everland.org',
-        },
-        {
-          name: 'Youtube',
-          icon: require('@/assets/imgs/footer/youtube.png'),
-          href: 'https://www.youtube.com/channel/UC9gDft8jnTt_1yrtLfsUq0w',
         },
       ],
       project: [
@@ -194,24 +188,34 @@ export default {
           name: 'Products',
           list: [
             {
-              name: 'Hosting',
-              to: '/hosting',
+              name: 'DWeb Hosting',
+              href: 'https://docs.4everland.org/hositng/what-is-hosting',
+              target: '_blank',
             },
             {
-              name: 'Bucket',
-              to: '/bucket',
+              name: 'Storage',
+              href: 'https://docs.4everland.org/storage/bucket',
+              target: '_blank',
             },
             {
-              name: 'ENS Domain',
-              to: '/ens',
+              name: 'Gateway',
+              href: 'https://docs.4everland.org/gateways/ipfs-gateway',
+              target: '_blank',
             },
             {
-              name: 'SNS Domain',
-              to: '/sns',
+              name: 'RPC',
+              href: 'https://docs.4everland.org/rpc/guides',
+              target: '_blank',
             },
             {
-              name: 'IPFS Gateway',
-              to: '/ipfs',
+              name: 'RaaS',
+              href: 'https://docs.4everland.org/raas-beta/whats-rollups',
+              target: '_blank',
+            },
+            {
+              name: 'AI Solution',
+              href: 'https://docs.4everland.org/ai/ai-rpc',
+              target: '_blank',
             },
           ],
         },
@@ -219,23 +223,13 @@ export default {
           name: 'Resources',
           list: [
             {
-              name: 'Documentation',
-              href: 'https://docs.4everland.org/',
-              target: '_blank',
-            },
-            {
-              name: 'Litepaper',
-              href: 'https://static.4everland.org/4everland-litepaper.pdf',
-              target: '_blank',
-            },
-            {
               name: 'Blogs',
               href: 'https://medium.com/4everland',
               target: '_blank',
             },
             {
               name: 'Brand Resources',
-              href: '/logo.zip',
+              href: 'https://www.4everland.org/logo.zip',
               target: '_blank',
             },
             {
@@ -259,8 +253,19 @@ export default {
             //   target: '_blank',
             // },
             {
-              name: 'Grants',
-              to: '/grants',
+              name: 'Template a thon',
+              href: 'https://template.4everland.org/#/',
+              target: '_blank',
+            },
+            {
+              name: 'Documentation',
+              href: 'https://docs.4everland.org/',
+              target: '_blank',
+            },
+            {
+              name: '4EVER Network',
+              href: 'https://link.medium.com/N8xx2jigdMb',
+              target: '_blank',
             },
           ],
         },
@@ -334,8 +339,19 @@ export default {
 <style scoped>
 #footer {
   padding-top: 0;
+  background-color: #000;
 }
-.footer-titele {
+.container {
+  max-width: 1440px;
+  margin-left: 68px !important;
+  margin-right: 68px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.link-name {
+  font-family: Inter, Arial, sans-serif !important;
+}
+.footer-title {
   font-size: 23px;
   color: #fff;
   text-align: center;
@@ -410,11 +426,14 @@ input:-ms-input-placeholder {
   flex-wrap: wrap;
   max-width: 200px;
 }
+.title-icon {
+  margin-bottom: 64px;
+}
 .v-btn {
   text-transform: none !important;
 }
 .copy-right {
-  padding: 30px 0;
+  padding: 30px 80px;
   text-align: right;
   color: #b1b6bb;
 }
@@ -438,12 +457,20 @@ input:-ms-input-placeholder {
   margin: auto;
   padding: 20px;
 }
+
 /deep/.v-btn--plain:not(.v-btn--active):not(.v-btn--loading):not(:focus):not(:hover)
   .v-btn__content {
   opacity: 1;
 }
+.text-h6 {
+  color: #fff;
+}
 
 @media (max-width: 960px) {
+  .container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
   .subscribe-input {
     padding: 0 14px;
     height: 44px;
@@ -464,6 +491,23 @@ input:-ms-input-placeholder {
     border-radius: 4px;
     font-size: 12px;
     margin: 10px;
+  }
+  .join-us {
+    max-width: 320px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .title-img {
+    margin: 0 auto;
+  }
+  .title-icon {
+    margin-bottom: 48px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px !important;
+    margin: 0 auto !important;
   }
 }
 </style>

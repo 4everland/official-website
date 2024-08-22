@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div id="home" @scroll.prevent="handleScroll">
     <div class="top-alert">
       <v-alert
         v-model="alert"
@@ -27,20 +27,26 @@
       </v-alert>
     </div>
 
-    <section-top />
-    <section-universe />
-    <section-about />
-    <section-help />
-    <section-explore />
-    <section-globe />
-    <section-Partners />
-    <section-milestones />
-    <section-new />
-    <section-footer />
+    <section-one />
+    <section-two />
+    <section-three />
+    <section-structure />
+    <section-service />
+    <section-build />
+    <section-join />
+    <section-receive />
   </div>
 </template>
 
 <script>
+import SectionOne from '@/components/IndexSections/SectionOne.vue'
+import SectionTwo from '@/components/IndexSections/SectionTwo.vue'
+import SectionThree from '@/components/IndexSections/SectionThree.vue'
+import SectionStructure from '@/components/IndexSections/SectionStructure.vue'
+import SectionService from '@/components/IndexSections/SectionService.vue'
+import SectionBuild from '@/components/IndexSections/SectionBuild.vue'
+import SectionJoin from '@/components/IndexSections/SectionJoin.vue'
+import SectionReceive from '@/components/IndexSections/SectionReceive.vue'
 import SectionTop from '@/components/IndexSections/SectionTop.vue'
 import SectionUniverse from '@/components/IndexSections/SectionUniverse.vue'
 import SectionAbout from '@/components/IndexSections/SectionAbout.vue'
@@ -50,10 +56,17 @@ import SectionGlobe from '@/components/IndexSections/SectionGlobe.vue'
 import SectionPartners from '@/components/IndexSections/SectionPartners.vue'
 import SectionNew from '@/components/IndexSections/SectionNew.vue'
 import SectionMilestones from '@/components/IndexSections/SectionMilestones.vue'
-import SectionFooter from '@/components/IndexSections/SectionFooter.vue'
 
 export default {
   components: {
+    SectionOne,
+    SectionTwo,
+    SectionThree,
+    SectionStructure,
+    SectionService,
+    SectionBuild,
+    SectionJoin,
+    SectionReceive,
     SectionTop,
     SectionUniverse,
     SectionAbout,
@@ -63,7 +76,6 @@ export default {
     SectionPartners,
     SectionNew,
     SectionMilestones,
-    SectionFooter,
   },
   data() {
     return {
@@ -76,12 +88,35 @@ export default {
       setTimeout(() => this.$nuxt.$loading.finish(), 1000)
     })
   },
-  methods: {},
+  methods: {
+    handleScroll(event) {
+      // if (!this.canScroll &&!this.conditionMet) {
+      event.preventDefault()
+      return false
+      // } else {
+      //   // 满足条件时的正常滚动处理
+      //   console.log('满足条件，可以滚动');
+      // }
+    },
+  },
 }
 </script>
+<style lang="less">
+.v-main {
+  background-color: #000;
+}
+html {
+  background-color: #000;
+}
+body {
+  background-color: #000;
+}
+</style>
 <style lang="less" scoped>
 #home {
+  background: #000;
   position: relative;
+  font-family: Inter, Arial, sans-serif;
   .top-alert {
     position: sticky;
     top: 80px;
@@ -100,6 +135,9 @@ export default {
       white-space: nowrap;
     }
   }
+}
+/deep/ .v-main {
+  padding-top: 0 !important;
 }
 
 @media (max-width: 960px) {

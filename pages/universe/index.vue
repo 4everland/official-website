@@ -1,21 +1,15 @@
 <template>
   <div id="ecosystem">
-    <eco-top />
     <eco-explore />
-    <eco-grant />
   </div>
 </template>
 
 <script>
-import ecoTop from '@/components/EcosystemSections/Top.vue'
 import ecoExplore from '@/components/EcosystemSections/Explore.vue'
-import ecoGrant from '@/components/EcosystemSections/Grant.vue'
 
 export default {
   components: {
-    ecoTop,
     ecoExplore,
-    ecoGrant,
   },
   data() {
     return {
@@ -40,6 +34,7 @@ export default {
 </script>
 <style scoped>
 #ecosystem {
-  background-color: #fff;
+  background-color: #000;
+  font-family: Inter, Arial, sans-serif;
 }
 </style>

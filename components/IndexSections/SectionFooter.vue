@@ -1,5 +1,5 @@
 <template>
-  <div id="footer">
+  <div id="footer" dark>
     <div class="black py-16">
       <v-container class="align-center">
         <v-row :class="{ 'text-center': $vuetify.breakpoint.smAndDown }">
