@@ -373,26 +373,26 @@ export default {
           href: 'https://docs.4everland.org/get-started/billing-and-pricing',
           target: '_blank',
         },
-        // {
-        //   id: '3',
-        //   text: '4EVER Boost',
-        //   link: '',
-        //   icon: require('@/assets/imgs/forward/boost.png'),
-        //   childs: [
-        //     {
-        //       text: 'Webpage',
-        //       icon: require('@/assets/imgs/forward/icon/webpage.svg'),
-        //       href: 'https://dashboard.4everland.org/',
-        //       target: '_blank',
-        //     },
-        //     {
-        //       text: 'Telegram MiniApp',
-        //       icon: require('@/assets/imgs/footer/telegram.svg'),
-        //       href: 'https://t.me/tg_4everland_bot/start',
-        //       target: '_blank',
-        //     },
-        //   ],
-        // },
+        {
+          id: '3',
+          text: '4EVER Boost',
+          link: '',
+          icon: require('@/assets/imgs/forward/boost.png'),
+          childs: [
+            {
+              text: 'Webpage',
+              icon: require('@/assets/imgs/forward/icon/webpage.svg'),
+              href: 'https://dashboard.4everland.org/boost',
+              target: '_blank',
+            },
+            {
+              text: 'Telegram MiniApp',
+              icon: require('@/assets/imgs/footer/telegram.svg'),
+              href: 'https://t.me/tg_4everland_bot/start',
+              target: '_blank',
+            },
+          ],
+        },
       ],
     }
   },
