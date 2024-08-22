@@ -11,7 +11,7 @@
           <p class="white--text get-start">
             Whether you're an individual eager to explore 4EVERLAND's offerings
             or a developer ready to innovate with our platform, there's no
-            better time than now to get started
+            better time than now to get started.
           </p>
           <div class="get-btn">
             <v-btn
