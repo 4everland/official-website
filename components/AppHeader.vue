@@ -572,7 +572,7 @@ export default {
     margin-right: -8px;
   }
   .app-bar {
-    margin-top: 5px !important;
+    margin-top: 4px !important;
   }
 }
 @media (min-width: 1440px) {

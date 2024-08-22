@@ -7,7 +7,7 @@
           <h4 class="white--text building-title font-weight-bold">
             PIONEERING WEB3 EVOLUTION
           </h4>
-          <div class="building-subtitle py-8">
+          <div class="building-subtitle py-5">
             Accelerating innovation with our unrivaled suite of services
           </div>
         </div>
@@ -305,7 +305,7 @@ export default {
   border: 1px solid #ffffff26;
   border-radius: 12px;
   padding: 24px;
-  margin-top: 24px;
+  margin-top: 52px;
   .text-h6 {
     color: #fff;
   }
@@ -481,10 +481,13 @@ export default {
     margin-top: 24px;
   }
   .building-title {
-    font-size: 32px;
+    font-size: 24px;
   }
   .build-card {
     margin-top: 0;
+  }
+  .building-subtitle {
+    font-size: 14px;
   }
 }
 @media (min-width: 1904px) {

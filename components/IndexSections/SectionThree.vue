@@ -14,14 +14,17 @@
               <h3 class="white--text header-title font-weight-bold">
                 Get A FULLY PERSONALIZED EXPERIENCE
               </h3>
-              <p class="p-text text-subtitle mt-1 py-8">
+              <p class="p-text text-subtitle mt-1 py-5">
                 Immerse yourself in the full suite of Web3 services: Dweb
                 Hosting,Storage, Gateway, RPC, RaaS, and AI Solution.
               </p>
             </v-col>
           </v-row>
-          <v-row justify="space-between" class="pl-2 align-center pt-xl-16">
-            <v-col>
+          <v-row
+            justify="space-between"
+            class="pl-2 align-center pt-xl-16 mt-5 mb-14 delimiters-start"
+          >
+            <v-col class="delimiters-left">
               <div class="carousel-delimiters">
                 <div
                   v-for="(item, i) in services"
@@ -32,7 +35,7 @@
                 ></div>
               </div>
             </v-col>
-            <v-col align="right">
+            <v-col align="right" class="btn-center">
               <v-btn
                 color="#6172F3"
                 href="https://dashboard.4everland.org/"
@@ -63,7 +66,7 @@
               <v-sheet class="carousel-sheet">
                 <!-- <div class="d-flex justify-center"> -->
                 <v-row>
-                  <v-col>
+                  <v-col class="text-title">
                     <div class="item-icon mt-4 mb-4 d-flex justify-start">
                       <div>
                         <v-img class="mr-2" :src="item.icon" width="20"></v-img>
@@ -360,8 +363,15 @@ export default {
   font-weight: bold;
   margin-right: 15px;
 }
+.col-item-img {
+  padding-right: 0;
+}
 .item-img {
   width: 600px;
+  margin-left: 20px !important;
+}
+.delimiters-left {
+  padding-left: 0;
 }
 .right-icon {
   padding: 7px;
@@ -392,7 +402,8 @@ export default {
   margin-bottom: 0 !important;
 }
 .description {
-  font-size: 24px;
+  font-size: 32px;
+  line-height: 32px;
 }
 .carousel-delimiters {
   display: flex;
@@ -415,6 +426,9 @@ p {
 .host-icon div {
   margin: 0 10px;
 }
+.text-title {
+  padding-top: 40px;
+}
 @media (max-width: 480px) {
   .main-container {
     padding: 20px 0 !important;
@@ -430,33 +444,61 @@ p {
     height: 900vh !important;
   }
   .header-title {
-    font-size: 30px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 30px;
   }
   .carousel-delimiters {
     max-width: 100%;
     width: 200%;
   }
+  .delimiters-left {
+    padding-left: 0;
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
   .col-item-img {
-    margin-top: 0 !important;
+    margin-top: 20px !important;
     padding-top: 0 !important;
+    padding-right: 0 !important;
   }
   .item-img {
     width: 340px;
+    margin-left: 0 !important;
   }
   .item-icon {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
   }
   .description {
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 20px;
   }
   .text-subtitle-1 {
-    line-height: 20px;
+    line-height: 18px;
+    font-size: 12px !important;
     margin-bottom: 0 !important;
+    margin-top: 12px !important;
+  }
+  .text-subtitle {
+    font-size: 14px !important;
+    padding: 6px 0 !important;
+  }
+  .text-title {
+    padding: 0 12px !important;
   }
   .carousel-wrap {
     margin-top: 0 !important;
+  }
+  .delimiters-start {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  .btn-center {
+    display: flex;
+    align-items: center !important;
+  }
+  .start-btn {
+    margin: 0 auto;
   }
 }
 @media (min-width: 1441px) {

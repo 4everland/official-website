@@ -109,7 +109,7 @@ export default {
     text-align: center;
   }
   .header-title {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 @media (min-width: 1440px) {

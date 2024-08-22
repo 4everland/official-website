@@ -6,7 +6,7 @@
           <h3 class="white--text header-title font-weight-bold">
             EMBRACING MULTIPLE BLOCKCHAIN ECOSYSTEMS
           </h3>
-          <p class="p-text text-subtitle-1 mt-1 py-8">
+          <p class="p-text text-subtitle-1 mt-1 py-5">
             Provide full-service solutions for an elevated experience.
           </p>
         </v-col>
@@ -252,7 +252,10 @@ export default {
     width: 100%;
   }
   .header-title {
-    font-size: 32px;
+    font-size: 24px;
+  }
+  .text-subtitle-1 {
+    font-size: 14px !important;
   }
 }
 @media (min-width: 1440px) {

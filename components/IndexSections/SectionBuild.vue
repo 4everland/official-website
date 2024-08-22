@@ -9,7 +9,7 @@
             <h2 class="white--text header-title font-weight-bold">
               TOP WEB3 PROJECTS ARE BUILDING WITH US
             </h2>
-            <p class="p-text text-subtitle-1 mt-5 py-8">
+            <p class="p-text text-subtitle-1 mt-5 py-5">
               Numerous projects have harnessed the charm of our diverse
               solutions
             </p>
@@ -499,7 +499,10 @@ export default {
     padding-left: 12px;
   }
   .header-title {
-    font-size: 32px;
+    font-size: 24px;
+  }
+  .text-subtitle-1 {
+    font-size: 14px !important;
   }
 }
 @media (min-width: 1441px) {

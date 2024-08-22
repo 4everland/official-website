@@ -353,9 +353,11 @@ export default {
         font-size: 40px !important;
         line-height: unset;
         font-weight: normal;
+        margin-bottom: 0 !important;
       }
       .text-title2 {
         font-size: 40px !important;
+        margin-bottom: 0 !important;
       }
       .text-tips {
         font-size: 12px;
@@ -376,6 +378,7 @@ export default {
     margin-top: 20px;
   }
   .current-flex {
+    margin-bottom: 20px !important;
     flex-direction: column !important;
   }
   .btn-tips-wrap {
