@@ -69,7 +69,12 @@
                   <v-col class="text-title">
                     <div class="item-icon mt-4 mb-4 d-flex justify-start">
                       <div>
-                        <v-img class="mr-2" :src="item.icon" width="20"></v-img>
+                        <v-img
+                          class="mr-2"
+                          :src="item.icon"
+                          width="20"
+                          height="20"
+                        ></v-img>
                       </div>
                       <p class="mb-0">{{ item.title }}</p>
                     </div>
