@@ -465,7 +465,7 @@ export default {
 .hot-icon {
   position: absolute;
   left: -24px;
-  top: -2px;
+  top: -1px;
 }
 .nav-btn {
   word-wrap: break-word;
@@ -501,9 +501,6 @@ export default {
 }
 .card-3 .nav-font {
   width: 162px;
-}
-.card-3 .divider {
-  margin: 0 !important;
 }
 .card-3 .icon-hover {
   padding-left: 20px;

@@ -266,7 +266,7 @@ export default {
     );
   }
 }
-.card-1 {
+.card-2 {
   background: linear-gradient(
       159.24deg,
       rgba(111, 134, 231, 0.75) 2.47%,
@@ -296,7 +296,7 @@ export default {
     );
   }
 }
-.card-2 {
+.card-1 {
   background: linear-gradient(
       159.24deg,
       rgba(9, 10, 18, 0.75) 2.47%,
