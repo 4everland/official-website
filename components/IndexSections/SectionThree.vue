@@ -320,6 +320,27 @@ export default {
               this.$refs.slideWrap.style.position = 'sticky'
             }
           }
+        } else if (top > Number(`-${this.slideHeight}`)) {
+          const bottomMain = this.getElementBottomRelativeToViewportBottom(
+            document.getElementById('mainContent')
+          )
+          if (bottomMain > 0) {
+            this.scrolling = true
+            if (!this.slideWrapTop) {
+              this.slideWrapTop = document
+                .getElementById('slideWrap')
+                .getBoundingClientRect().top
+            }
+            this.$vuetify.goTo(this.lastPosition, {
+              duration: 100,
+              offset: 0,
+              easing: 'easeInOutCubic',
+            })
+            setTimeout(() => {
+              this.scrolling = false
+              this.$refs.slideWrap.style.position = 'sticky'
+            }, 100)
+          }
         } else if (top > 50) {
           this.onScrollToSectionTwo()
         }
