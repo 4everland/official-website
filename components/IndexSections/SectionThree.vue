@@ -144,7 +144,7 @@ export default {
         icon: require('@/assets/imgs/forward/icon/RaaS.svg'),
         title: 'RaaS',
         description:
-          'Customizable Rollup Solutions for Enhanced Blockchain scalability',
+          'Customizable Rollup Solutions for Enhanced Blockchain Scalability',
         text: 'Customize your Layer2 blockchain with 4EVERLAND Rollup as a Service (RaaS).',
         img: require('@/assets/imgs/forward/showcase/raas.png'),
         background: require('@/assets/imgs/forward/background/background_raas.png'),

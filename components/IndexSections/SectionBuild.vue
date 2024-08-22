@@ -11,7 +11,7 @@
             </h2>
             <p class="p-text text-subtitle-1 mt-5 py-5">
               Numerous projects have harnessed the charm of our diverse
-              solutions
+              solutions.
             </p>
           </div>
           <div class="text-right scroll-btn">

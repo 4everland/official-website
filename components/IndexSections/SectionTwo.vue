@@ -8,7 +8,7 @@
             PIONEERING WEB3 EVOLUTION
           </h4>
           <div class="building-subtitle py-5">
-            Accelerating innovation with our unrivaled suite of services
+            Accelerating innovation with our unrivaled suite of services.
           </div>
         </div>
         <div class="pion_content">

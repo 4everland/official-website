@@ -66,6 +66,18 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '64x64',
+        href: '/icons/64x64-icon.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '512x512',
+        href: '/icons/512x512-icon.png',
+      },
+      {
         rel: 'stylesheet',
         href: '/css/materialdesignicons.min.css',
       },
