@@ -101,7 +101,7 @@ export default {
     setTimeout(() => {
       window.scrollTo(0, 0)
       const topTextBoxHeight = this.$refs.topTextBox.getBoundingClientRect().top
-      this.$refs.topTextBox.style.top = topTextBoxHeight + 'px'
+      this.$refs.topTextBox.style.top = topTextBoxHeight + 40 + 'px'
       this.topTextBoxBottom = this.getElementBottomRelativeToViewportBottom(
         this.$refs.topTextBox
       )
@@ -317,8 +317,8 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
-  height: 80px;
-  padding: 0 25px;
+  height: 76px;
+  padding: 0 0;
   background-color: var(--base-900);
   overflow: hidden;
   pointer-events: none;
