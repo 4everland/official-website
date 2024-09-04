@@ -1,68 +1,62 @@
 <!-- eslint-disable vue/no-lone-template -->
 <template>
   <div id="banner" class="pt-xl-16">
-    <v-container class="bannerContainer">
-      <v-row>
-        <v-col cols="12" md="12" lg="12">
-          <div class="topSectionMain d-flex justify-center align-center">
-            <div ref="topTextBox" class="text-box">
-              <div class="text-title">A Web3 Cloud</div>
-              <div class="text-title2">Computing Platform</div>
-              <div
-                class="d-flex justify-center align-center mb-16 current-flex"
-              >
-                <div class="text-tips">
-                  Offering a full-service solution for building Web3 DApps
-                </div>
-                <div class="btn-tips-wrap">
-                  <div class="text-tips-button" :class="currentclass">
-                    <div style="padding-left: 15px">{{ current }}</div>
-                  </div>
-                </div>
-              </div>
-              <div class="text-center pt-8 mb-16">
-                <v-btn
-                  rounded
-                  class="btn_join mx-2"
-                  href="https://dashboard.4everland.org/"
-                  target="_blank"
-                >
-                  Get Started for Free
-                  <template>
-                    <span class="join_button_icon_span d-flex justify-center">
-                      <span class="d-flex align-center justify-center">
-                        <v-img
-                          class="join_button_icon"
-                          :src="
-                            require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
-                          "
-                        ></v-img>
-                      </span>
-                    </span>
-                  </template>
-                </v-btn>
-                <v-btn
-                  rounded
-                  class="btn-read mx-2"
-                  href="https://docs.4everland.org/"
-                  target="_blank"
-                >
-                  Read Docs
-                </v-btn>
-              </div>
+    <!-- <v-container class="bannerContainer"> -->
+    <div class="topSectionMain d-flex justify-center align-center">
+      <div ref="topTextBox" class="text-box">
+        <div class="text-title">A Web3 Cloud</div>
+        <div class="text-title2">Computing Platform</div>
+        <div class="d-flex justify-center align-center mb-16 current-flex">
+          <div class="text-tips">
+            Offering a full-service solution for building Web3 DApps
+          </div>
+          <div class="btn-tips-wrap">
+            <div class="text-tips-button" :class="currentclass">
+              <div style="padding-left: 15px">{{ current }}</div>
             </div>
           </div>
-        </v-col>
-      </v-row>
-    </v-container>
-    <div id="bannerVideo" ref="bannerVideo" class="text-center bannervideo">
-      <video-play
-        video-src="https://static.4everland.org/4EVERLogo_Animation.webm"
-      ></video-play>
+        </div>
+        <div class="text-center pt-8 mb-16">
+          <v-btn
+            rounded
+            class="btn_join mx-2"
+            href="https://dashboard.4everland.org/"
+            target="_blank"
+          >
+            Get Started for Free
+            <template>
+              <span class="join_button_icon_span d-flex justify-center">
+                <span class="d-flex align-center justify-center">
+                  <v-img
+                    class="join_button_icon"
+                    :src="
+                      require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
+                    "
+                  ></v-img>
+                </span>
+              </span>
+            </template>
+          </v-btn>
+          <v-btn
+            rounded
+            class="btn-read mx-2"
+            href="https://docs.4everland.org/"
+            target="_blank"
+          >
+            Read Docs
+          </v-btn>
+        </div>
+      </div>
+      <div id="logoWrap" ref="logoWrap" class="logoWrap">
+        <Logolist></Logolist>
+      </div>
+      <div id="bannerVideo" ref="bannerVideo" class="text-center bannervideo">
+        <video-play
+          video-src="https://static.4everland.org/4EVERLogo_Animation.webm"
+        ></video-play>
+      </div>
     </div>
-    <div id="logoWrap" ref="logoWrap" class="logoWrap">
-      <Logolist></Logolist>
-    </div>
+    <!-- </v-container> -->
     <div id="starRise" ref="starRise" class="starRiseWrap">
       <star-rise></star-rise>
     </div>
@@ -107,7 +101,7 @@ export default {
     setTimeout(() => {
       window.scrollTo(0, 0)
       const topTextBoxHeight = this.$refs.topTextBox.getBoundingClientRect().top
-      this.$refs.topTextBox.style.top = topTextBoxHeight + 'px'
+      this.$refs.topTextBox.style.top = topTextBoxHeight + 40 + 'px'
       this.topTextBoxBottom = this.getElementBottomRelativeToViewportBottom(
         this.$refs.topTextBox
       )
@@ -162,49 +156,32 @@ export default {
       const scrollPercent =
         (scrollTop / (scrollHeight - this.bannerHeight)) * 100
       this.$refs.bannerVideo.style.transform = `translateY(${
-        -scrollPercent * 100
+        -scrollPercent * 60
       }px)`
-      this.$refs.starRise.style.transform = `translateY(${
-        -scrollPercent * 100
-      }px)`
-      // banner bottom to screen bottom
-      const bottom = this.getElementBottomRelativeToViewportBottom(
-        document.getElementById('banner')
-      )
-      // banner bottom to screen top
-      const bottomToHeight = document
-        .getElementById('banner')
-        .getBoundingClientRect().bottom
-      const delta = scrollTop - this.lastScrollPosition
-      // if(bottom == 150)
-      if (scrollPercent * 100 > this.bannerHeight / 2 - 330) {
-        this.$refs.logoWrap.style.position = 'relative'
-        // eslint-disable-next-line no-undef
-        if (delta > 0) {
-          if (bottom > 150 && bottomToHeight > 0) {
-            this.onScroll()
-          }
-        }
-      } else {
-        this.$refs.logoWrap.style.position = 'fixed'
-        this.$refs.logoWrap.style.bottom = '0px'
-        this.$refs.logoWrap.style.top = 'unset'
-      }
-      this.lastScrollPosition = scrollTop
     },
   },
 }
 </script>
 <style lang="less" scoped>
 #banner {
-  min-height: 120vh;
+  height: 190vh;
   position: relative;
   background-color: #000;
-  margin-bottom: 250px;
   .topSectionMain {
-    position: relative;
-    z-index: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    justify-content: center;
+    left: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 80px;
+    position: sticky;
+    transition: padding-top var(--slow-duration) var(--base-easing-out);
+    top: 0;
+    z-index: 10;
+    width: 100%;
     .text-box {
       z-index: 2;
       position: sticky;
@@ -324,20 +301,28 @@ export default {
   }
 }
 .bannervideo {
-  width: 100%;
+  display: block;
   height: 100%;
-  position: absolute;
-  top: 35%;
   left: 0;
-  bottom: 0;
-  margin-top: -80px;
+  overflow: hidden;
+  position: absolute;
+  top: 42%;
+  width: 100%;
   z-index: 0;
 }
 .logoWrap {
-  position: fixed;
-  left: 0;
+  position: absolute;
   bottom: 0;
-  z-index: 90;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 76px;
+  padding: 0 0;
+  background-color: var(--base-900);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
 }
 .starRiseWrap {
   width: 100%;
@@ -393,14 +378,6 @@ export default {
 @media (min-width: 1904px) {
   .container {
     max-width: 100% !important;
-  }
-  #banner {
-    margin-bottom: 30vh;
-    .topSectionMain {
-      .bannervideo {
-        top: 40px;
-      }
-    }
   }
 }
 .enter {
