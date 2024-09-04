@@ -381,13 +381,13 @@ export default {
           childs: [
             {
               text: 'Webpage',
-              icon: require('@/assets/imgs/forward/webpage.png'),
+              icon: require('@/assets/imgs/forward/icon/webpage.svg'),
               href: 'https://dashboard.4everland.org/boost',
               target: '_blank',
             },
             {
               text: 'Telegram MiniApp',
-              icon: require('@/assets/imgs/forward/telegram.png'),
+              icon: require('@/assets/imgs/footer/telegram.svg'),
               href: 'https://t.me/tg_4everland_bot/start',
               target: '_blank',
             },
@@ -495,7 +495,7 @@ export default {
   background: #121536 !important;
 }
 .card-3 .menu-card {
-  width: 500px;
+  width: 440px;
   padding-left: 30px;
   padding-right: 30px;
 }
