@@ -207,6 +207,9 @@ export default {
 #ExploreSections {
   position: relative;
   padding-top: 71px;
+  .custom-placeholder {
+    color: #fff;
+  }
   .explore-box {
     position: relative;
     .explore-top {
