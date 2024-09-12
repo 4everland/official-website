@@ -540,6 +540,7 @@ export default {
 }
 .v-menu__content {
   left: 0;
+  box-shadow: none;
 }
 /deep/ .v-btn.v-btn--has-bg.header-menu-start {
   background-color: #fff !important;
