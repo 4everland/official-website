@@ -105,7 +105,7 @@ export default {
         title: 'Taiko',
         description:
           'Taiko harnesses the power of our gateway to swiftly accelerate content distribution while leveraging decentralized storage to empower their projects cost-effectively and conveniently.',
-        link: 'https://taiko.xyz/',
+        link: 'https://link.medium.com/evgcq05fAMb',
       },
       {
         id: 3,
@@ -113,7 +113,7 @@ export default {
         title: 'Syncswap',
         description:
           'Syncswap employs our DWeb Hosting service to realize decentralized front-end deployment, ensuring users can access the resilient and seamless interface.',
-        link: 'https://syncswap.xyz/intro',
+        link: 'https://link.medium.com/qBzHfp8fAMb',
       },
       {
         id: 4,
@@ -129,7 +129,7 @@ export default {
         title: 'Tape',
         description:
           'Tape utilizes our IPFS storage to decentralize user-generated data while also enhancing resilience and security measures to improve the overall user experience.',
-        link: 'https://tape.xyz/',
+        link: 'https://link.medium.com/WsGp3mvTLMb',
       },
       {
         id: 6,
