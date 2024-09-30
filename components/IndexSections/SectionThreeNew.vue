@@ -443,7 +443,7 @@ export default {
     window.addEventListener('scroll', this.debouncedHandleScroll)
     window.addEventListener('resize', this.handleResize)
     this.slideListWrapTop = document.getElementById('slideWrap').offsetTop
-    console.log('slideListWrapTop', this.slideListWrapTop)
+    // console.log('slideListWrapTop', this.slideListWrapTop)
     // this.slideWrapTop = document
     //   .getElementById('slideWrap')
     //   .getBoundingClientRect().top
