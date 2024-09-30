@@ -29,7 +29,7 @@
 
     <section-one />
     <section-two />
-    <section-three />
+    <section-three-new />
     <section-structure />
     <section-service />
     <section-build />
@@ -56,11 +56,13 @@ import SectionGlobe from '@/components/IndexSections/SectionGlobe.vue'
 import SectionPartners from '@/components/IndexSections/SectionPartners.vue'
 import SectionNew from '@/components/IndexSections/SectionNew.vue'
 import SectionMilestones from '@/components/IndexSections/SectionMilestones.vue'
+import SectionThreeNew from '@/components/IndexSections/SectionThreeNew.vue'
 
 export default {
   components: {
     SectionOne,
     SectionTwo,
+    SectionThreeNew,
     SectionThree,
     SectionStructure,
     SectionService,
