@@ -41,7 +41,6 @@
 <script>
 import SectionOne from '@/components/IndexSections/SectionOne.vue'
 import SectionTwo from '@/components/IndexSections/SectionTwo.vue'
-import SectionThree from '@/components/IndexSections/SectionThree.vue'
 import SectionStructure from '@/components/IndexSections/SectionStructure.vue'
 import SectionService from '@/components/IndexSections/SectionService.vue'
 import SectionBuild from '@/components/IndexSections/SectionBuild.vue'
@@ -63,7 +62,6 @@ export default {
     SectionOne,
     SectionTwo,
     SectionThreeNew,
-    SectionThree,
     SectionStructure,
     SectionService,
     SectionBuild,

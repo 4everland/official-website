@@ -64,6 +64,24 @@
                 </div>
               </div>
             </v-col>
+            <v-col align="right" class="btn-center">
+              <v-btn
+                color="#6172F3"
+                href="https://dashboard.4everland.org/"
+                target="_blank"
+                class="white--text start-btn"
+              >
+                Get Started
+                <div class="right-icon">
+                  <v-img
+                    class="join_button_icon"
+                    :src="
+                      require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
+                    "
+                  ></v-img>
+                </div>
+              </v-btn>
+            </v-col>
           </v-row>
         </div>
       </div>
@@ -108,22 +126,6 @@
                     and apps on IPFS, Arweave, Dfinity, or BNB Greenfield in
                     seconds.
                   </p>
-                  <v-btn
-                    color="#6172F3"
-                    href="https://dashboard.4everland.org/"
-                    target="_blank"
-                    class="white--text start-btn"
-                  >
-                    Get Started
-                    <div class="right-icon">
-                      <v-img
-                        class="join_button_icon"
-                        :src="
-                          require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
-                        "
-                      ></v-img>
-                    </div>
-                  </v-btn>
                 </v-col>
                 <v-col class="col-item-img">
                   <div>
@@ -168,22 +170,6 @@
                     Our built-in pinning orchestration makes the process of
                     uploading and pinning files to IPFS and Arweave seamless.
                   </p>
-                  <v-btn
-                    color="#6172F3"
-                    href="https://dashboard.4everland.org/"
-                    target="_blank"
-                    class="white--text start-btn"
-                  >
-                    Get Started
-                    <div class="right-icon">
-                      <v-img
-                        class="join_button_icon"
-                        :src="
-                          require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
-                        "
-                      ></v-img>
-                    </div>
-                  </v-btn>
                 </v-col>
                 <v-col class="col-item-img">
                   <div>
@@ -230,22 +216,6 @@
                     to facilitate seamless access to decentralized networks like
                     IPFS, Arweave, Dfinity, and BNB Greenfield.
                   </p>
-                  <v-btn
-                    color="#6172F3"
-                    href="https://dashboard.4everland.org/"
-                    target="_blank"
-                    class="white--text start-btn"
-                  >
-                    Get Started
-                    <div class="right-icon">
-                      <v-img
-                        class="join_button_icon"
-                        :src="
-                          require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
-                        "
-                      ></v-img>
-                    </div>
-                  </v-btn>
                 </v-col>
                 <v-col class="col-item-img">
                   <div>
@@ -291,22 +261,6 @@
                     call (RPC) services for seamless interaction with diverse
                     blockchain networks.
                   </p>
-                  <v-btn
-                    color="#6172F3"
-                    href="https://dashboard.4everland.org/"
-                    target="_blank"
-                    class="white--text start-btn"
-                  >
-                    Get Started
-                    <div class="right-icon">
-                      <v-img
-                        class="join_button_icon"
-                        :src="
-                          require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
-                        "
-                      ></v-img>
-                    </div>
-                  </v-btn>
                 </v-col>
                 <v-col class="col-item-img">
                   <div>
@@ -349,22 +303,6 @@
                     Customize your Layer2 blockchain with 4EVERLAND Rollup as a
                     Service (RaaS).
                   </p>
-                  <v-btn
-                    color="#6172F3"
-                    href="https://dashboard.4everland.org/"
-                    target="_blank"
-                    class="white--text start-btn"
-                  >
-                    Get Started
-                    <div class="right-icon">
-                      <v-img
-                        class="join_button_icon"
-                        :src="
-                          require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
-                        "
-                      ></v-img>
-                    </div>
-                  </v-btn>
                 </v-col>
                 <v-col class="col-item-img">
                   <div>
@@ -408,22 +346,6 @@
                     compare, and select models and pricing options tailored to
                     your specific needs.
                   </p>
-                  <v-btn
-                    color="#6172F3"
-                    href="https://dashboard.4everland.org/"
-                    target="_blank"
-                    class="white--text start-btn"
-                  >
-                    Get Started
-                    <div class="right-icon">
-                      <v-img
-                        class="join_button_icon"
-                        :src="
-                          require('@/assets/imgs/index/newui/arrow-narrow-right.svg')
-                        "
-                      ></v-img>
-                    </div>
-                  </v-btn>
                 </v-col>
                 <v-col class="col-item-img">
                   <div>
@@ -519,6 +441,7 @@ export default {
   }),
   mounted() {
     window.addEventListener('scroll', this.debouncedHandleScroll)
+    window.addEventListener('resize', this.handleResize)
     this.slideListWrapTop = document.getElementById('slideWrap').offsetTop
     console.log('slideListWrapTop', this.slideListWrapTop)
     // this.slideWrapTop = document
@@ -532,6 +455,12 @@ export default {
     window.removeEventListener('scroll', this.debouncedHandleScroll)
   },
   methods: {
+    handleResize() {
+      this.slideListWrapTop = document.getElementById('slideWrap').offsetTop
+      this.slideHeight = this.roundToHundred(
+        document.getElementById('slideWrap').offsetHeight / 7
+      )
+    },
     roundToHundred(number) {
       return Math.floor(number / 100) * 100
     },
@@ -602,8 +531,6 @@ export default {
       //   ((scrollTop - this.slideListWrapTop) * 100) / 1500 + '%'
       const scrollHeight = scrollTop - this.slideListWrapTop
 
-      console.log('scrollHeight', scrollHeight)
-      console.log('slideHeight', this.slideHeight)
       if (scrollHeight > this.slideHeight) {
         this.$refs.slideDelimiters0.style.width = '100%'
       } else {
@@ -741,6 +668,7 @@ export default {
   padding: 0;
   position: relative;
   top: 0;
+  z-index: 1;
 }
 .main-content {
   padding: 64px 80px;
@@ -776,6 +704,7 @@ export default {
 }
 .delimiters-left {
   padding-left: 0;
+  flex: 2;
 }
 .right-icon {
   padding: 7px;
@@ -918,6 +847,7 @@ p {
   width: 0%;
   border-radius: 2px;
 }
+
 .slideListWrap {
   height: 100vh;
   left: 0;
@@ -925,7 +855,7 @@ p {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1;
 }
 .slideTopContent {
   width: 100%;
@@ -943,18 +873,13 @@ p {
   margin: 0 auto;
 }
 
-.styles_slideList_wrap,
-.styles_slides__asOS8 {
+.styles_slideList_wrap {
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 1;
-}
-
-.styles_slideList_wrap {
-  list-style-type: none;
 }
 
 .styles_slide_item {
@@ -980,10 +905,10 @@ p {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 296px;
+  top: 350px;
   width: 100%;
   transition: opacity 250ms cubic-bezier(0.33, 1, 0.68, 1);
-  z-index: 10;
+  z-index: 102;
 }
 .styles_slideContent_wrap.styles_isActive_content {
   opacity: 1;
@@ -1021,8 +946,8 @@ p {
   transform-origin: 50% 50%;
   transition: transform 500ms cubic-bezier(0.33, 1, 0.68, 1);
   transform: translateY(0%) scale(100%, 100%);
+  z-index: 90;
 }
-
 .styles_slideBgInner.styles_isVisible {
   transform: none;
   transition: transform 1000ms 500ms cubic-bezier(0.33, 1, 0.68, 1);
@@ -1074,6 +999,22 @@ p {
   }
   .styles_slideContent_wrap {
     top: 360px;
+  }
+}
+@media (min-width: 1900px) {
+  .main-container {
+    height: 1000vh;
+  }
+  .carousel-container {
+    margin: 0 auto;
+    width: 1280px;
+    margin-top: 100px;
+  }
+  .carousel-wrap {
+    margin-top: 150px !important;
+  }
+  .styles_slideContent_wrap {
+    top: 460px;
   }
 }
 </style>

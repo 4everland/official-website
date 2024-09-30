@@ -174,7 +174,7 @@ export default {
   },
   computed: {},
   mounted() {
-    window.addEventListener('scroll', this.handleScroll)
+    // window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
     onScroll(event) {
