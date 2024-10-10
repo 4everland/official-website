@@ -228,7 +228,7 @@ export default {
 <style lang="less" scoped>
 .build-container {
   position: relative;
-  min-height: 160vh;
+  min-height: 140vh;
 }
 .p-text {
   color: white;

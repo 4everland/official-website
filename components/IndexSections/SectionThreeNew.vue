@@ -20,47 +20,59 @@
           >
             <v-col class="delimiters-left">
               <div class="carousel-delimiters">
-                <div class="carousel-delimiter">
-                  <span
-                    ref="slideDelimiters0"
-                    class="style_bar_inner"
-                    style="width: 0%"
-                  ></span>
+                <div class="carousel-delimiter" @click="goto(0)">
+                  <span class="style_bar_outer">
+                    <span
+                      ref="slideDelimiters0"
+                      class="style_bar_inner"
+                      style="width: 0%"
+                    ></span>
+                  </span>
                 </div>
-                <div class="carousel-delimiter">
-                  <span
-                    ref="slideDelimiters1"
-                    class="style_bar_inner"
-                    style="width: 0%"
-                  ></span>
+                <div class="carousel-delimiter" @click="goto(1)">
+                  <span class="style_bar_outer">
+                    <span
+                      ref="slideDelimiters1"
+                      class="style_bar_inner"
+                      style="width: 0%"
+                    ></span>
+                  </span>
                 </div>
-                <div class="carousel-delimiter">
-                  <span
-                    ref="slideDelimiters2"
-                    class="style_bar_inner"
-                    style="width: 0%"
-                  ></span>
+                <div class="carousel-delimiter" @click="goto(2)">
+                  <span class="style_bar_outer">
+                    <span
+                      ref="slideDelimiters2"
+                      class="style_bar_inner"
+                      style="width: 0%"
+                    ></span>
+                  </span>
                 </div>
-                <div class="carousel-delimiter">
-                  <span
-                    ref="slideDelimiters3"
-                    class="style_bar_inner"
-                    style="width: 0%"
-                  ></span>
+                <div class="carousel-delimiter" @click="goto(3)">
+                  <span class="style_bar_outer">
+                    <span
+                      ref="slideDelimiters3"
+                      class="style_bar_inner"
+                      style="width: 0%"
+                    ></span>
+                  </span>
                 </div>
-                <div class="carousel-delimiter">
-                  <span
-                    ref="slideDelimiters4"
-                    class="style_bar_inner"
-                    style="width: 0%"
-                  ></span>
+                <div class="carousel-delimiter" @click="goto(4)">
+                  <span class="style_bar_outer">
+                    <span
+                      ref="slideDelimiters4"
+                      class="style_bar_inner"
+                      style="width: 0%"
+                    ></span>
+                  </span>
                 </div>
-                <div class="carousel-delimiter">
-                  <span
-                    ref="slideDelimiters5"
-                    class="style_bar_inner"
-                    style="width: 0%"
-                  ></span>
+                <div class="carousel-delimiter" @click="goto(5)">
+                  <span class="style_bar_outer">
+                    <span
+                      ref="slideDelimiters5"
+                      class="style_bar_inner"
+                      style="width: 0%"
+                    ></span>
+                  </span>
                 </div>
               </div>
             </v-col>
@@ -105,7 +117,7 @@
           >
             <v-container>
               <v-row>
-                <v-col class="text-title">
+                <v-col class="text-title styles_content_outer">
                   <div class="item-icon mt-4 mb-4 d-flex justify-start">
                     <div>
                       <v-img
@@ -150,7 +162,7 @@
           <div ref="slideContent2" class="styles_slideContent_wrap">
             <v-container>
               <v-row>
-                <v-col class="text-title">
+                <v-col class="text-title styles_content_outer">
                   <div class="item-icon mt-4 mb-4 d-flex justify-start">
                     <div>
                       <v-img
@@ -195,7 +207,7 @@
           <div ref="slideContent3" class="styles_slideContent_wrap">
             <v-container>
               <v-row>
-                <v-col class="text-title">
+                <v-col class="text-title styles_content_outer">
                   <div class="item-icon mt-4 mb-4 d-flex justify-start">
                     <div>
                       <v-img
@@ -240,7 +252,7 @@
           <div ref="slideContent4" class="styles_slideContent_wrap">
             <v-container>
               <v-row>
-                <v-col class="text-title">
+                <v-col class="text-title styles_content_outer">
                   <div class="item-icon mt-4 mb-4 d-flex justify-start">
                     <div>
                       <v-img
@@ -283,7 +295,7 @@
           <div ref="slideContent5" class="styles_slideContent_wrap">
             <v-container>
               <v-row>
-                <v-col class="text-title">
+                <v-col class="text-title styles_content_outer">
                   <div class="item-icon mt-4 mb-4 d-flex justify-start">
                     <div>
                       <v-img
@@ -318,14 +330,14 @@
           </div>
         </div>
         <!-- slide6 -->
-        <div ref="slide6" class="styles_slide_item styles_gateway">
-          <div ref="slide61" class="styles_slideBg_animate styles_gateway">
-            <div ref="slide62" class="styles_slideBgInner styles_gateway"></div>
+        <div ref="slide6" class="styles_slide_item styles_ai">
+          <div ref="slide61" class="styles_slideBg_animate styles_ai">
+            <div ref="slide62" class="styles_slideBgInner styles_ai"></div>
           </div>
           <div ref="slideContent6" class="styles_slideContent_wrap">
             <v-container>
               <v-row>
-                <v-col class="text-title">
+                <v-col class="text-title styles_content_outer">
                   <div class="item-icon mt-4 mb-4 d-flex justify-start">
                     <div>
                       <v-img
@@ -438,6 +450,7 @@ export default {
     scrolling: false,
     slideHeight: 0,
     slideListWrapTop: 0,
+    currentSlideIndex: 0,
   }),
   mounted() {
     window.addEventListener('scroll', this.debouncedHandleScroll)
@@ -462,7 +475,7 @@ export default {
       )
     },
     roundToHundred(number) {
-      return Math.floor(number / 100) * 100
+      return number // Math.floor(number / 100) * 100
     },
     changeSlide(index) {
       this.currentIndex = index
@@ -477,46 +490,42 @@ export default {
       this.timer = setTimeout(() => {
         this.handleScroll()
         this.timer = null
-      }, 5)
+      }, 0)
     },
-    onScroll(event) {
-      this.scrolling = true
-      this.$vuetify.goTo('#structure', {
-        duration: 300,
-        offset: -70,
-        easing: 'easeInOutCubic',
-      })
-      setTimeout(() => {
-        this.scrolling = false
-      }, 500)
-    },
-    onScrollToSectionTwo(event) {
-      this.scrolling = true
-      this.$vuetify.goTo('#pionWrap', {
-        duration: 300,
-        offset: 0,
-        easing: 'easeInOutCubic',
-      })
-      setTimeout(() => {
-        this.scrolling = false
-      }, 500)
-    },
-    scrollToSectionThree(event) {
-      this.scrolling = true
-      if (!this.slideWrapTop) {
-        this.slideWrapTop = document
-          .getElementById('slideWrap')
-          .getBoundingClientRect().top
+    goto(position) {
+      this.$vuetify.goTo(
+        this.slideListWrapTop + this.slideHeight * position + 150,
+        {
+          duration: 0,
+          offset: 0,
+          easing: 'easeInOutCubic',
+        }
+      )
+      if (this.timer) {
+        clearTimeout(this.timer)
       }
-      this.$vuetify.goTo(this.slideWrapTop, {
-        duration: 100,
-        offset: 0,
-        easing: 'easeInOutCubic',
-      })
-      setTimeout(() => {
-        this.scrolling = false
-        this.$refs.slideWrap.style.position = 'sticky'
-      }, 100)
+      this.timer = setTimeout(() => {
+        this.handleScroll()
+        this.timer = null
+      }, 20)
+      for (let i = 0; i < position; i++) {
+        this.$refs[`slide${i + 1}`].classList.add('styles_isVisible')
+        this.$refs[`slide${i + 1}1`].classList.add('styles_isVisible')
+        this.$refs[`slide${i + 1}2`].classList.add('styles_isVisible')
+      }
+      for (let i = 5; i > position; i--) {
+        this.$refs[`slide${i + 1}`].classList.remove('styles_isVisible')
+        this.$refs[`slide${i + 1}1`].classList.remove('styles_isVisible')
+        this.$refs[`slide${i + 1}2`].classList.remove('styles_isVisible')
+      }
+      for (let i = 0; i < 6; i++) {
+        this.$refs[`slideContent${i + 1}`].classList.remove(
+          'styles_isActive_content'
+        )
+        this.$refs[`slideContent${position + 1}`].classList.add(
+          'styles_isActive_content'
+        )
+      }
     },
     getElementBottomRelativeToViewportBottom(element) {
       const rect = element.getBoundingClientRect()
@@ -586,6 +595,7 @@ export default {
         this.$refs.slide22.classList.remove('styles_isVisible')
         this.$refs.slideContent1.classList.add('styles_isActive_content')
         this.$refs.slideContent2.classList.remove('styles_isActive_content')
+        this.currentSlideIndex = 0
       } else if (
         scrollTop - this.slideListWrapTop > this.slideHeight &&
         scrollTop - this.slideListWrapTop <= this.slideHeight * 2
@@ -599,6 +609,7 @@ export default {
         this.$refs.slideContent2.classList.add('styles_isActive_content')
         this.$refs.slideContent1.classList.remove('styles_isActive_content')
         this.$refs.slideContent3.classList.remove('styles_isActive_content')
+        this.currentSlideIndex = 1
       } else if (
         scrollTop - this.slideListWrapTop > this.slideHeight * 2 &&
         scrollTop - this.slideListWrapTop <= this.slideHeight * 3
@@ -612,6 +623,7 @@ export default {
         this.$refs.slideContent3.classList.add('styles_isActive_content')
         this.$refs.slideContent2.classList.remove('styles_isActive_content')
         this.$refs.slideContent4.classList.remove('styles_isActive_content')
+        this.currentSlideIndex = 2
       } else if (
         scrollTop - this.slideListWrapTop > this.slideHeight * 3 &&
         scrollTop - this.slideListWrapTop <= this.slideHeight * 4
@@ -625,6 +637,7 @@ export default {
         this.$refs.slideContent4.classList.add('styles_isActive_content')
         this.$refs.slideContent3.classList.remove('styles_isActive_content')
         this.$refs.slideContent5.classList.remove('styles_isActive_content')
+        this.currentSlideIndex = 3
       } else if (
         scrollTop - this.slideListWrapTop > this.slideHeight * 4 &&
         scrollTop - this.slideListWrapTop <= this.slideHeight * 5
@@ -638,6 +651,7 @@ export default {
         this.$refs.slideContent5.classList.add('styles_isActive_content')
         this.$refs.slideContent4.classList.remove('styles_isActive_content')
         this.$refs.slideContent6.classList.remove('styles_isActive_content')
+        this.currentSlideIndex = 4
       } else if (
         scrollTop - this.slideListWrapTop > this.slideHeight * 5 &&
         scrollTop - this.slideListWrapTop <= this.slideHeight * 6
@@ -647,12 +661,14 @@ export default {
         this.$refs.slide62.classList.add('styles_isVisible')
         this.$refs.slideContent6.classList.add('styles_isActive_content')
         this.$refs.slideContent5.classList.remove('styles_isActive_content')
+        this.currentSlideIndex = 5
       } else if (scrollTop - this.slideListWrapTop < 0) {
         this.$refs.slide2.classList.remove('styles_isVisible')
         this.$refs.slide21.classList.remove('styles_isVisible')
         this.$refs.slide22.classList.remove('styles_isVisible')
         this.$refs.slideContent2.classList.remove('styles_isActive_content')
         this.$refs.slideContent1.classList.add('styles_isActive_content')
+        this.currentSlideIndex = 0
       } else if (scrollTop - this.slideListWrapTop > this.slideHeight * 6) {
         this.$refs.slideContent1.classList.remove('styles_isActive_content')
       }
@@ -741,6 +757,7 @@ export default {
 .carousel-delimiters {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .carousel-delimiter {
   width: 20%;
@@ -751,6 +768,41 @@ export default {
   cursor: pointer;
   position: relative;
 }
+.carousel-delimiter:hover {
+  height: 12px;
+  border-radius: 12px;
+  background-color: #30384a;
+  margin: 0 4px;
+}
+
+.style_bar_outer {
+  display: block;
+  height: 4px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-delimiter:hover .style_bar_outer {
+  height: 12px;
+  border-radius: 12px;
+}
+
+.style_bar_inner {
+  bottom: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  width: 0%;
+  border-radius: 2px;
+}
+
+.carousel-delimiter:hover .style_bar_inner {
+  border-radius: 12px;
+}
+
 .carousel-delimiter.active {
   background-color: #fff;
 }
@@ -836,18 +888,6 @@ p {
   }
 }
 
-.style_bar_inner {
-  bottom: 0;
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  background-color: #fff;
-  width: 0%;
-  border-radius: 2px;
-}
-
 .slideListWrap {
   height: 100vh;
   left: 0;
@@ -884,6 +924,22 @@ p {
 
 .styles_slide_item {
   pointer-events: none;
+}
+
+.styles_content_outer {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: transform 1000ms cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 1000ms cubic-bezier(0.65, 0, 0.35, 1);
+  visibility: hidden;
+}
+
+.styles_isActive_content .styles_content_outer {
+  opacity: 1;
+  transform: none;
+  transition: transform 1000ms cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 1000ms cubic-bezier(0.65, 0, 0.35, 1);
+  visibility: visible;
 }
 
 .styles_slideBg_animate,
@@ -998,7 +1054,7 @@ p {
     margin-top: 150px !important;
   }
   .styles_slideContent_wrap {
-    top: 360px;
+    top: 390px;
   }
 }
 @media (min-width: 1900px) {
