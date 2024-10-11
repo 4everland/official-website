@@ -29,6 +29,12 @@
               ></v-img>
               <div class="radar_search_item_wrap">
                 <div class="radar_search_item_gateway">
+                  <div class="radius_bgWrap d-flex align-center justify-center">
+                    <div
+                      ref="radarItem1"
+                      class="radius_bg2 d-flex align-center justify-center"
+                    ></div>
+                  </div>
                   <div class="radius_bg d-flex align-center justify-center">
                     <v-img
                       contain
@@ -44,6 +50,12 @@
                   <span class="tips"> Gateway </span>
                 </div>
                 <div class="radar_search_item_storage">
+                  <div class="radius_bgWrap d-flex align-center justify-center">
+                    <div
+                      ref="radarItem2"
+                      class="radius_bg2 d-flex align-center justify-center"
+                    ></div>
+                  </div>
                   <div class="radius_bg d-flex align-center justify-center">
                     <v-img
                       contain
@@ -58,6 +70,12 @@
                   <span class="tips"> Storage </span>
                 </div>
                 <div class="radar_search_item_hosting">
+                  <div class="radius_bgWrap d-flex align-center justify-center">
+                    <div
+                      ref="radarItem3"
+                      class="radius_bg2 d-flex align-center justify-center"
+                    ></div>
+                  </div>
                   <div class="radius_bg d-flex align-center justify-center">
                     <v-img
                       contain
@@ -72,6 +90,12 @@
                   <span class="tips"> DWeb Hosting </span>
                 </div>
                 <div class="radar_search_item_rpc">
+                  <div class="radius_bgWrap d-flex align-center justify-center">
+                    <div
+                      ref="radarItem4"
+                      class="radius_bg2 d-flex align-center justify-center"
+                    ></div>
+                  </div>
                   <div class="radius_bg d-flex align-center justify-center">
                     <v-img
                       contain
@@ -86,6 +110,12 @@
                   <span class="tips"> RPC </span>
                 </div>
                 <div class="radar_search_item_raas">
+                  <div class="radius_bgWrap d-flex align-center justify-center">
+                    <div
+                      ref="radarItem5"
+                      class="radius_bg2 d-flex align-center justify-center"
+                    ></div>
+                  </div>
                   <div class="radius_bg d-flex align-center justify-center">
                     <v-img
                       contain
@@ -100,6 +130,12 @@
                   <span class="tips"> RaaS </span>
                 </div>
                 <div class="radar_search_item_airpc">
+                  <div class="radius_bgWrap d-flex align-center justify-center">
+                    <div
+                      ref="radarItem6"
+                      class="radius_bg2 d-flex align-center justify-center"
+                    ></div>
+                  </div>
                   <div class="radius_bg d-flex align-center justify-center">
                     <v-img
                       contain
@@ -174,9 +210,100 @@ export default {
   },
   computed: {},
   mounted() {
-    // window.addEventListener('scroll', this.handleScroll)
+    this.init()
   },
   methods: {
+    init() {
+      this.init1()
+      this.init2()
+      this.init3()
+      this.init4()
+      this.init5()
+      this.init6()
+    },
+    async init1() {
+      await this.sleep(3300)
+      this.$refs.radarItem1.classList.add('radar_item_active')
+      setTimeout(() => {
+        this.$refs.radarItem1.classList.remove('radar_item_active')
+      }, 4000)
+      setInterval(() => {
+        this.$refs.radarItem1.classList.add('radar_item_active')
+        setTimeout(() => {
+          this.$refs.radarItem1.classList.remove('radar_item_active')
+        }, 4000)
+      }, 10000)
+    },
+    async init2() {
+      await this.sleep(4133)
+      this.$refs.radarItem2.classList.add('radar_item_active')
+      setTimeout(() => {
+        this.$refs.radarItem2.classList.remove('radar_item_active')
+      }, 4000)
+      setInterval(() => {
+        this.$refs.radarItem2.classList.add('radar_item_active')
+        setTimeout(() => {
+          this.$refs.radarItem2.classList.remove('radar_item_active')
+        }, 4000)
+      }, 10000)
+    },
+    async init3() {
+      await this.sleep(4966)
+      this.$refs.radarItem3.classList.add('radar_item_active')
+      setTimeout(() => {
+        this.$refs.radarItem3.classList.remove('radar_item_active')
+      }, 4000)
+      setInterval(() => {
+        this.$refs.radarItem3.classList.add('radar_item_active')
+        setTimeout(() => {
+          this.$refs.radarItem3.classList.remove('radar_item_active')
+        }, 4000)
+      }, 10000)
+    },
+    async init4() {
+      await this.sleep(5799)
+      this.$refs.radarItem4.classList.add('radar_item_active')
+      setTimeout(() => {
+        this.$refs.radarItem4.classList.remove('radar_item_active')
+      }, 4000)
+      setInterval(() => {
+        this.$refs.radarItem4.classList.add('radar_item_active')
+        setTimeout(() => {
+          this.$refs.radarItem4.classList.remove('radar_item_active')
+        }, 4000)
+      }, 10000)
+    },
+    async init5() {
+      await this.sleep(6632)
+      this.$refs.radarItem5.classList.add('radar_item_active')
+      setTimeout(() => {
+        this.$refs.radarItem5.classList.remove('radar_item_active')
+      }, 4000)
+      setInterval(() => {
+        this.$refs.radarItem5.classList.add('radar_item_active')
+        setTimeout(() => {
+          this.$refs.radarItem5.classList.remove('radar_item_active')
+        }, 4000)
+      }, 10000)
+    },
+    async init6() {
+      await this.sleep(7265)
+      this.$refs.radarItem6.classList.add('radar_item_active')
+      setTimeout(() => {
+        this.$refs.radarItem6.classList.remove('radar_item_active')
+      }, 4000)
+      setInterval(() => {
+        this.$refs.radarItem6.classList.add('radar_item_active')
+        setTimeout(() => {
+          this.$refs.radarItem6.classList.remove('radar_item_active')
+        }, 4000)
+      }, 10000)
+    },
+    sleep(timestamp) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, timestamp)
+      })
+    },
     onScroll(event) {
       this.scrolling = true
       this.$vuetify.goTo('#slideWrap', {
@@ -191,36 +318,6 @@ export default {
     getElementBottomRelativeToViewportBottom(element) {
       const rect = element.getBoundingClientRect()
       return window.innerHeight - rect.bottom
-    },
-    handleScroll(event) {
-      if (this.scrolling) {
-        return
-      }
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-      const top = document
-        .getElementById('pionWrap')
-        .getBoundingClientRect().top
-      const delta = scrollTop - this.lastScrollPosition
-      const bottomToTop = this.getElementBottomRelativeToViewportBottom(
-        document.getElementById('pionWrap')
-      )
-      const bottom = document
-        .getElementById('pionWrap')
-        .getBoundingClientRect().bottom
-      // scroll up
-      const pionWrapHeight = document.getElementById('pionWrap').offsetHeight
-      // console.log('bottomToTop', bottomToTop, bottom)
-      if (delta > 0 && top != null) {
-        if (pionWrapHeight >= window.innerHeight) {
-          if (top <= 0 && bottomToTop > 0 && bottom >= -50) {
-            this.onScroll()
-          }
-        } else if (top <= 0) {
-          this.onScroll()
-        }
-      }
-      this.lastScrollPosition = scrollTop
-      // })
     },
   },
 }
@@ -359,6 +456,32 @@ export default {
   padding: 4px 8px 4px 8px;
   background: linear-gradient(87.49deg, #00c6fb 7.23%, #005bea 100%);
 }
+.radius_bg2 {
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+  background: #121535;
+  box-shadow: 0 0 28px 0 #c7d7fe60;
+  opacity: 0;
+}
+.radius_bg2_active {
+  border-radius: 30px;
+  background: #121535;
+  transition: box-shadow 4s ease;
+  box-shadow: 0 0 18px 0 #c7d7fe60;
+  animation: radiusBoxShadow 4s linear;
+}
+@keyframes radiusBoxShadow {
+  0% {
+    box-shadow: 0 0 18px 0 #c7d7fe60;
+  }
+  80% {
+    box-shadow: 0 0 38px 0 #c7d7fe60;
+  }
+  to {
+    box-shadow: 0 0 48px 0 #c7d7fe60;
+  }
+}
 .radius_bg {
   width: 40px;
   height: 40px;
@@ -367,17 +490,26 @@ export default {
   border: 1px solid #3538cd;
   box-shadow: 0 0 8px 0 #c7d7fe80;
 }
+.radius_bgWrap {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
 .radar_search_item_gateway {
   position: absolute;
   top: 270px;
-  left: 157px;
+  left: 160px;
   width: 40px;
   height: 40px;
   z-index: 10;
   .tips {
     position: absolute;
-    top: -27px;
-    left: -82px;
+    top: -25px;
+    left: -84px;
     width: 75px;
     height: 25px;
     color: #fff;
@@ -390,16 +522,16 @@ export default {
   position: absolute;
   top: 223px;
   left: 310px;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   z-index: 10;
 }
 .radar_search_item_hosting {
   position: absolute;
   top: 35px;
   left: 427px;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   z-index: 10;
   .tips {
     left: 30px;
@@ -411,8 +543,8 @@ export default {
   position: absolute;
   top: 223px;
   left: 544px;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   z-index: 10;
   .tips {
     left: 30px;
@@ -424,11 +556,11 @@ export default {
   position: absolute;
   top: 269px;
   left: 697px;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   z-index: 10;
   .tips {
-    left: 30px;
+    left: 40px;
     width: 50px;
     border-radius: 8px 8px 8px 2px;
   }
@@ -437,17 +569,17 @@ export default {
   position: absolute;
   top: 426px;
   left: 660px;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   z-index: 10;
   .tips {
-    left: 30px;
+    left: 43px;
     width: 90px;
     border-radius: 8px 8px 8px 2px;
   }
 }
 .radar_item_active {
-  animation: researchRadarItem 3s calc(6 * 0.01s) cubic-bezier(0.6, 0.6, 0, 1) 1;
+  animation: researchRadarItem 2s cubic-bezier(0.6, 0.6, 0, 1);
 }
 
 @keyframes researchRadarItem {
@@ -460,15 +592,18 @@ export default {
     opacity: 1;
   }
 
-  50%,
-  75% {
+  50% {
     opacity: 1;
     transform: scale(1);
+  }
+  75% {
+    opacity: 0.4;
+    transform: scale(1.25);
   }
 
   to {
     opacity: 0;
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
 }
 
