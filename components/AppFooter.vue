@@ -144,7 +144,7 @@ export default {
         {
           name: 'Telegram',
           icon: require('@/assets/imgs/footer/telegram.svg'),
-          href: 'https://t.me/org_4everland',
+          href: 'https://t.me/Announcements4EVERLAND',
         },
         {
           name: 'Discord',
@@ -215,6 +215,11 @@ export default {
             {
               name: 'AI Solution',
               href: 'https://docs.4everland.org/ai/ai-rpc',
+              target: '_blank',
+            },
+            {
+              name: 'TG Mini App',
+              href: 'https://t.me/tg_4everland_bot',
               target: '_blank',
             },
           ],
