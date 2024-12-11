@@ -393,6 +393,12 @@ export default {
             },
           ],
         },
+        {
+          text: 'Airdrop Query',
+          icon: require('@/assets/imgs/forward/airdrop.png'),
+          href: 'https://dashboard.4everland.org/boost',
+          target: '_blank',
+        },
       ],
     }
   },
