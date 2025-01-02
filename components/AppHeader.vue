@@ -332,6 +332,18 @@ export default {
               href: 'https://docs.4everland.org/ai/ai-rpc',
               target: '_blank',
             },
+            {
+              text: '4EVER Boost',
+              tips: 'Join our mining journey and maximize rewards by engaging with Storage, Computing, and Network nodes.',
+              icon: require('@/assets/imgs/nav/icon_boost.png'),
+              link: 'https://dashboard.4everland.org/boost',
+            },
+            {
+              text: 'Telegram MiniApp',
+              tips: 'Discover project mining opportunities and earn points/tokens on an on-stop aggregator platform.',
+              icon: require('@/assets/imgs/nav/icon_tg_mini.png'),
+              link: 'https://t.me/tg_4everland_bot/start',
+            },
           ],
         },
         {
@@ -374,24 +386,10 @@ export default {
           target: '_blank',
         },
         {
-          id: '3',
-          text: '4EVER Boost',
-          link: '',
-          icon: require('@/assets/imgs/forward/boost.png'),
-          childs: [
-            {
-              text: 'Webpage',
-              icon: require('@/assets/imgs/forward/webpage.png'),
-              href: 'https://dashboard.4everland.org/boost',
-              target: '_blank',
-            },
-            {
-              text: 'Telegram MiniApp',
-              icon: require('@/assets/imgs/forward/telegram.png'),
-              href: 'https://t.me/tg_4everland_bot/start',
-              target: '_blank',
-            },
-          ],
+          text: 'Staking',
+          href: 'https://dashboard.4everland.org/boost',
+          icon: require('@/assets/imgs/nav/icon_staking.png'),
+          target: '_blank',
         },
         {
           text: 'Airdrop',
