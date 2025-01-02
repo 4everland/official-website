@@ -29,7 +29,7 @@
             <template #activator="{ on, attrs }">
               <v-btn
                 class="hidden-sm-and-down nav-btn text-subtitle-1"
-                :class="`btn-${item.id}`"
+                :class="item.class"
                 plain
                 nuxt
                 replace
@@ -398,18 +398,21 @@ export default {
           text: 'Pricing',
           href: 'https://docs.4everland.org/get-started/billing-and-pricing',
           target: '_blank',
+          class: 'menu_item',
         },
         {
           text: 'Staking',
           href: 'https://dashboard.4everland.org/boost',
           icon: require('@/assets/imgs/nav/icon_staking.png'),
           target: '_blank',
+          class: 'menu_item',
           flagNew: true,
         },
         {
           text: 'Airdrop',
           icon: require('@/assets/imgs/forward/airdrop.png'),
           href: 'https://dashboard.4everland.org/boost',
+          class: 'menu_item',
           target: '_blank',
         },
       ],
@@ -612,5 +615,8 @@ export default {
   position: absolute;
   left: 60px;
   top: 0;
+}
+.menu_item {
+  min-width: 105px !important;
 }
 </style>
