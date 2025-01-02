@@ -43,6 +43,12 @@
               >
                 <span class="nav-font menu_text">
                   {{ item.text }}
+                  <img
+                    v-if="item.flagNew"
+                    src="@/assets/imgs/nav/icon_new.png"
+                    width="24"
+                    class="newIcon"
+                  />
                   <v-icon v-if="item.childs">{{ mdiChevronDown }}</v-icon>
                   <v-img
                     v-if="item.icon"
@@ -201,7 +207,9 @@
         <template v-for="item in links">
           <v-list-group v-if="item.childs" :key="item.text" no-action>
             <template #activator>
-              <v-list-item-title>{{ item.text }}</v-list-item-title>
+              <v-list-item-title>
+                {{ item.text }}
+              </v-list-item-title>
             </template>
             <v-list-item
               v-for="child in item.childs"
@@ -227,9 +235,15 @@
             :href="item.href"
             :target="item.target"
           >
-            <v-list-item-title>
+            <v-list-item-title class="list-item-title-wrap">
               <span>
                 {{ item.text }}
+                <img
+                  v-if="item.flagNew"
+                  src="@/assets/imgs/nav/icon_new.png"
+                  width="24"
+                  class="newIconMobile"
+                />
               </span>
             </v-list-item-title>
           </v-list-item>
@@ -390,6 +404,7 @@ export default {
           href: 'https://dashboard.4everland.org/boost',
           icon: require('@/assets/imgs/nav/icon_staking.png'),
           target: '_blank',
+          flagNew: true,
         },
         {
           text: 'Airdrop',
@@ -474,6 +489,12 @@ export default {
 .nav-btn {
   word-wrap: break-word;
   white-space: normal;
+  position: relative;
+}
+.newIcon {
+  position: absolute;
+  right: -10px;
+  top: -6px;
 }
 .always-active {
   opacity: 1 !important;
@@ -541,6 +562,7 @@ export default {
 }
 .tips {
   padding-right: 10px;
+  line-height: 140% !important;
 }
 .v-menu__content {
   left: 0;
@@ -582,5 +604,13 @@ export default {
     margin: 0 auto;
     width: 1440px;
   }
+}
+.list-item-title-wrap {
+  position: relative;
+}
+.newIconMobile {
+  position: absolute;
+  left: 60px;
+  top: 0;
 }
 </style>
