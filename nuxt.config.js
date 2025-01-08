@@ -62,6 +62,16 @@ export default {
         property: 'og:image',
         content: 'https://www.4everland.org/cover.gif',
       },
+      {
+        hid: 'shortcut-icon',
+        property: 'shortcut-icon',
+        content: 'https://static.4everland.org/wicon512.png',
+      },
+      {
+        hid: 'apple-touch-icon',
+        property: 'apple-touch-icon',
+        content: 'https://static.4everland.org/wicon512.png',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -73,6 +83,13 @@ export default {
       },
       {
         rel: 'icon',
+        type: 'image/png',
+        sizes: '512x512',
+        href: 'https://static.4everland.org/wicon512.png',
+      },
+      {
+        hid: 'apple-touch-icon',
+        rel: 'apple-touch-icon',
         type: 'image/png',
         sizes: '512x512',
         href: 'https://static.4everland.org/wicon512.png',
