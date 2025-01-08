@@ -75,7 +75,7 @@ export default {
         rel: 'icon',
         type: 'image/png',
         sizes: '512x512',
-        href: '/icons/512x512-icon.png',
+        href: 'https://static.4everland.org/wicon512.png',
       },
       {
         rel: 'stylesheet',
