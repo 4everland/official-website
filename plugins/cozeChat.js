@@ -14,7 +14,7 @@ export default function ({ app }, inject) {
           bot_id: '7455307600716906503',
         },
         componentProps: {
-          title: '4everland AI',
+          title: '4EVERLAND AI',
         },
         ui: {
           base: { 
