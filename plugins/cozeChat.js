@@ -18,7 +18,7 @@ export default function ({ app }, inject) {
         },
         ui: {
           base: { 
-            icon: 'https://static.4everland.org/icon_4ever_rounded.png', 
+            icon: 'https://static.4everland.org/Ask-AI.png', 
             layout: 'pc', 
             lang: 'en',
             zIndex: 1000, 
