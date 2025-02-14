@@ -9,8 +9,8 @@
                 Get A FULLY PERSONALIZED EXPERIENCE
               </h3>
               <p class="p-text text-subtitle mt-1 py-5">
-                Immerse yourself in the full suite of Web3 services: Dweb
-                Hosting,Storage, Gateway, RPC, RaaS, and AI Solution.
+                Immerse yourself in the full suite of Web3 services: AI
+                Solution, Dweb, Hosting,Storage, Gateway, RPC, and RaaS.
               </p>
             </v-col>
           </v-row>
@@ -98,21 +98,65 @@
         </div>
       </div>
       <div class="styles_slideList_wrap">
+        <!-- slide1 -->
+        <div ref="slide1" class="styles_slide_item styles_ai">
+          <div ref="slide11" class="styles_slideBg_animate styles_ai">
+            <div ref="slide12" class="styles_slideBgInner styles_ai"></div>
+          </div>
+          <div ref="slideContent1" class="styles_slideContent_wrap">
+            <v-container>
+              <v-row>
+                <v-col class="text-title styles_content_outer">
+                  <div class="item-icon mt-4 mb-4 d-flex justify-start">
+                    <div>
+                      <v-img
+                        class="mr-2"
+                        :src="require('@/assets/imgs/forward/icon/AI.svg')"
+                        width="20"
+                        height="20"
+                      ></v-img>
+                    </div>
+                    <p class="mb-0">AI Solution</p>
+                  </div>
+                  <h3 class="white--text description font-weight-bold">
+                    A Streamlined Interface to Leverage Diverse Large Language
+                    Models
+                  </h3>
+                  <p class="p-text text-subtitle-1 mt-4">
+                    A unified interface for 100+ LLMs, enabling to explore,
+                    compare, and select models and pricing options tailored to
+                    your specific needs.
+                  </p>
+                </v-col>
+                <v-col class="col-item-img">
+                  <div>
+                    <v-img
+                      :src="require('@/assets/imgs/forward/showcase/ai.png')"
+                      class="item-img"
+                    >
+                    </v-img>
+                  </div>
+                </v-col>
+              </v-row>
+            </v-container>
+          </div>
+        </div>
+        <!-- slide2 -->
         <div
-          ref="slide1"
+          ref="slide2"
           class="styles_slide_item styles_hosting_item styles_isVisible"
         >
           <div
-            ref="slide11"
+            ref="slide21"
             class="styles_slideBg_animate styles_hosting_item styles_isVisible"
           >
             <div
-              ref="slide12"
+              ref="slide22"
               class="styles_slideBgInner styles_hosting_item styles_isVisible"
             ></div>
           </div>
           <div
-            ref="slideContent1"
+            ref="slideContent2"
             class="styles_slideContent_wrap styles_isActive_content"
           >
             <v-container>
@@ -154,12 +198,12 @@
             </v-container>
           </div>
         </div>
-        <!-- slide2 -->
-        <div ref="slide2" class="styles_slide_item styles_storage">
-          <div ref="slide21" class="styles_slideBg_animate styles_storage">
-            <div ref="slide22" class="styles_slideBgInner styles_storage"></div>
+        <!-- slide3 -->
+        <div ref="slide3" class="styles_slide_item styles_storage">
+          <div ref="slide31" class="styles_slideBg_animate styles_storage">
+            <div ref="slide32" class="styles_slideBgInner styles_storage"></div>
           </div>
-          <div ref="slideContent2" class="styles_slideContent_wrap">
+          <div ref="slideContent3" class="styles_slideContent_wrap">
             <v-container>
               <v-row>
                 <v-col class="text-title styles_content_outer">
@@ -199,12 +243,12 @@
           </div>
         </div>
 
-        <!-- slide3 -->
-        <div ref="slide3" class="styles_slide_item styles_gateway">
-          <div ref="slide31" class="styles_slideBg_animate styles_gateway">
-            <div ref="slide32" class="styles_slideBgInner styles_gateway"></div>
+        <!-- slide4 -->
+        <div ref="slide4" class="styles_slide_item styles_gateway">
+          <div ref="slide41" class="styles_slideBg_animate styles_gateway">
+            <div ref="slide42" class="styles_slideBgInner styles_gateway"></div>
           </div>
-          <div ref="slideContent3" class="styles_slideContent_wrap">
+          <div ref="slideContent4" class="styles_slideContent_wrap">
             <v-container>
               <v-row>
                 <v-col class="text-title styles_content_outer">
@@ -244,12 +288,12 @@
             </v-container>
           </div>
         </div>
-        <!-- slide4 -->
-        <div ref="slide4" class="styles_slide_item styles_rpc">
-          <div ref="slide41" class="styles_slideBg_animate styles_rpc">
-            <div ref="slide42" class="styles_slideBgInner styles_rpc"></div>
+        <!-- slide5 -->
+        <div ref="slide5" class="styles_slide_item styles_rpc">
+          <div ref="slide51" class="styles_slideBg_animate styles_rpc">
+            <div ref="slide52" class="styles_slideBgInner styles_rpc"></div>
           </div>
-          <div ref="slideContent4" class="styles_slideContent_wrap">
+          <div ref="slideContent5" class="styles_slideContent_wrap">
             <v-container>
               <v-row>
                 <v-col class="text-title styles_content_outer">
@@ -287,12 +331,12 @@
             </v-container>
           </div>
         </div>
-        <!-- slide5 -->
-        <div ref="slide5" class="styles_slide_item styles_raas">
-          <div ref="slide51" class="styles_slideBg_animate styles_raas">
-            <div ref="slide52" class="styles_slideBgInner styles_raas"></div>
+        <!-- slide6 -->
+        <div ref="slide6" class="styles_slide_item styles_raas">
+          <div ref="slide61" class="styles_slideBg_animate styles_raas">
+            <div ref="slide62" class="styles_slideBgInner styles_raas"></div>
           </div>
-          <div ref="slideContent5" class="styles_slideContent_wrap">
+          <div ref="slideContent6" class="styles_slideContent_wrap">
             <v-container>
               <v-row>
                 <v-col class="text-title styles_content_outer">
@@ -329,49 +373,6 @@
             </v-container>
           </div>
         </div>
-        <!-- slide6 -->
-        <div ref="slide6" class="styles_slide_item styles_ai">
-          <div ref="slide61" class="styles_slideBg_animate styles_ai">
-            <div ref="slide62" class="styles_slideBgInner styles_ai"></div>
-          </div>
-          <div ref="slideContent6" class="styles_slideContent_wrap">
-            <v-container>
-              <v-row>
-                <v-col class="text-title styles_content_outer">
-                  <div class="item-icon mt-4 mb-4 d-flex justify-start">
-                    <div>
-                      <v-img
-                        class="mr-2"
-                        :src="require('@/assets/imgs/forward/icon/AI.svg')"
-                        width="20"
-                        height="20"
-                      ></v-img>
-                    </div>
-                    <p class="mb-0">AI Solution</p>
-                  </div>
-                  <h3 class="white--text description font-weight-bold">
-                    A Streamlined Interface to Leverage Diverse Large Language
-                    Models
-                  </h3>
-                  <p class="p-text text-subtitle-1 mt-4">
-                    A unified interface for 100+ LLMs, enabling to explore,
-                    compare, and select models and pricing options tailored to
-                    your specific needs.
-                  </p>
-                </v-col>
-                <v-col class="col-item-img">
-                  <div>
-                    <v-img
-                      :src="require('@/assets/imgs/forward/showcase/ai.png')"
-                      class="item-img"
-                    >
-                    </v-img>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-container>
-          </div>
-        </div>
       </div>
     </div>
   </v-container>
@@ -381,6 +382,16 @@
 export default {
   data: () => ({
     services: [
+      {
+        icon: require('@/assets/imgs/forward/icon/AI.svg'),
+        title: 'AI Solution',
+        description:
+          'A Streamlined Interface to Leverage Diverse Large Language Models',
+        text: ' A unified interface for 100+ LLMs, enabling to explore, compare, and select models and pricing options tailored to your specific needs.',
+        img: require('@/assets/imgs/forward/showcase/ai.png'),
+        background: require('@/assets/imgs/forward/background/background_ai.png'),
+        width: '0%',
+      },
       {
         icon: require('@/assets/imgs/forward/icon/hosting.svg'),
         title: 'DWeb Hosting',
@@ -428,16 +439,6 @@ export default {
         text: 'Customize your Layer2 blockchain with 4EVERLAND Rollup as a Service (RaaS).',
         img: require('@/assets/imgs/forward/showcase/raas.png'),
         background: require('@/assets/imgs/forward/background/background_raas.png'),
-        width: '0%',
-      },
-      {
-        icon: require('@/assets/imgs/forward/icon/AI.svg'),
-        title: 'AI Solution',
-        description:
-          'A Streamlined Interface to Leverage Diverse Large Language Models',
-        text: ' A unified interface for 100+ LLMs, enabling to explore, compare, and select models and pricing options tailored to your specific needs.',
-        img: require('@/assets/imgs/forward/showcase/ai.png'),
-        background: require('@/assets/imgs/forward/background/background_ai.png'),
         width: '0%',
       },
     ],
