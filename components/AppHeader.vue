@@ -419,7 +419,7 @@ export default {
         {
           text: 'Airdrop',
           icon: require('@/assets/imgs/forward/airdrop.png'),
-          href: 'https://dashboard.4everland.org/boost',
+          href: 'https://dashboard.4everland.org/boost/airdrop',
           class: 'menu_item',
           target: '_blank',
         },
