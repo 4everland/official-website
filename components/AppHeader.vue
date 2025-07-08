@@ -416,13 +416,6 @@ export default {
           class: 'menu_item',
           flagNew: true,
         },
-        {
-          text: 'Airdrop',
-          icon: require('@/assets/imgs/forward/airdrop.png'),
-          href: 'https://dashboard.4everland.org/boost/airdrop',
-          class: 'menu_item',
-          target: '_blank',
-        },
       ],
     }
   },
