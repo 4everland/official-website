@@ -34,7 +34,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://booster.4everland.store/depinbanner.jpeg',
+        content: 'https://booster.4everland.store/newbanner.png',
       },
       {
         hid: 'og:url',
@@ -60,7 +60,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://booster.4everland.store/depinbanner.jpeg',
+        content: 'https://booster.4everland.store/newbanner.png',
       },
       {
         hid: 'shortcut-icon',
