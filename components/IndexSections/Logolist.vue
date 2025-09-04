@@ -3,8 +3,8 @@
     <div id="logoContainer1" class="logo-container d-flex">
       <div ref="logoContainer" class="logo-row d-flex list1">
         <v-img
-          v-for="(item, index) in logoList1"
-          :key="index"
+          v-for="item in logoList1"
+          :key="item.alt"
           class="mx-4"
           :width="item.width"
           :height="item.height"
@@ -14,8 +14,8 @@
       </div>
       <div ref="logoContainer" class="logo-row d-flex list2">
         <v-img
-          v-for="(item, index) in logoList1"
-          :key="`logo-copy-${index}`"
+          v-for="item in logoList1"
+          :key="`logo-copy-${item.alt}`"
           class="mx-4"
           :width="item.width"
           :height="item.height"
