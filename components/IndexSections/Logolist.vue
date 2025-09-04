@@ -180,14 +180,14 @@ export default {
       {
         src: require('@/assets/imgs/index/newui/logo/gate.png'),
         alt: 'gate',
-        width: 52,
-        height: 24,
+        width: 64,
+        height: 30,
       },
       {
         src: require('@/assets/imgs/index/newui/logo/MEXC.svg'),
         alt: 'MEXC',
-        width: 140,
-        height: 21,
+        width: 110,
+        height: 16,
       },
       {
         src: require('@/assets/imgs/index/newui/logo/bingx.svg'),
