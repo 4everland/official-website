@@ -2,26 +2,37 @@
   <v-sheet dark class="logo-banner pa-2" style="overflow: hidden">
     <div id="logoContainer1" class="logo-container d-flex">
       <div ref="logoContainer" class="logo-row d-flex list1">
-        <v-img
+        <a
           v-for="item in logoList1"
           :key="item.alt"
-          class="mx-4"
-          :width="item.width"
-          :height="item.height"
-          :src="item.src"
-          contain
-        />
+          :href="item.url"
+          target="_blank"
+        >
+          <v-img
+            class="mx-4"
+            :width="item.width"
+            :height="item.height"
+            :src="item.src"
+            contain
+          />
+        </a>
       </div>
       <div ref="logoContainer" class="logo-row d-flex list2">
-        <v-img
+        <a
           v-for="item in logoList1"
-          :key="`logo-copy-${item.alt}`"
-          class="mx-4"
-          :width="item.width"
-          :height="item.height"
-          :src="item.src"
-          contain
-        />
+          :key="`logo-a-cop-${item.alt}`"
+          :href="item.url"
+          target="_blank"
+        >
+          <v-img
+            :key="`logo-copy-${item.alt}`"
+            class="mx-4"
+            :width="item.width"
+            :height="item.height"
+            :src="item.src"
+            contain
+          />
+        </a>
       </div>
     </div>
   </v-sheet>
@@ -188,6 +199,7 @@ export default {
         alt: 'MEXC',
         width: 110,
         height: 16,
+        url: 'https://www.mexc.com/price/4EVER',
       },
       {
         src: require('@/assets/imgs/index/newui/logo/bingx.svg'),

@@ -69,6 +69,8 @@ export default {
 .video-container video {
   width: 100%;
   height: 100%;
+  z-index: 0;
+  position: relative;
 }
 
 .video-container video.paused {

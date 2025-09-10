@@ -55,11 +55,11 @@
           video-src="https://static.4everland.org/4EVERLogo_Animation.webm"
         ></video-play>
       </div>
+      <div id="starRise" ref="starRise" class="starRiseWrap">
+        <star-rise></star-rise>
+      </div>
     </div>
     <!-- </v-container> -->
-    <div id="starRise" ref="starRise" class="starRiseWrap">
-      <star-rise></star-rise>
-    </div>
   </div>
 </template>
 <script>
@@ -180,7 +180,6 @@ export default {
     position: sticky;
     transition: padding-top var(--slow-duration) var(--base-easing-out);
     top: 0;
-    z-index: 10;
     width: 100%;
     .text-box {
       z-index: 2;
@@ -321,14 +320,14 @@ export default {
   padding: 0 0;
   background-color: var(--base-900);
   overflow: hidden;
-  pointer-events: none;
-  z-index: 1;
+  z-index: 10;
 }
 .starRiseWrap {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
+  z-index: 0;
 }
 
 @media (max-width: 960px) {
