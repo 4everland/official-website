@@ -32,6 +32,7 @@
     <section-three-new />
     <section-structure />
     <section-service />
+    <section-govern />
     <section-build />
     <section-join />
     <section-receive />
@@ -56,6 +57,7 @@ import SectionPartners from '@/components/IndexSections/SectionPartners.vue'
 import SectionNew from '@/components/IndexSections/SectionNew.vue'
 import SectionMilestones from '@/components/IndexSections/SectionMilestones.vue'
 import SectionThreeNew from '@/components/IndexSections/SectionThreeNew.vue'
+import SectionGovern from '@/components/IndexSections/SectionGovern.vue'
 
 export default {
   components: {
@@ -65,6 +67,7 @@ export default {
     SectionStructure,
     SectionService,
     SectionBuild,
+    SectionGovern,
     SectionJoin,
     SectionReceive,
     SectionTop,
