@@ -173,11 +173,10 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin-top: -72px;
+  margin-top: -64px;
 }
-
 .right-item {
-  margin-top: 30px;
+  margin-top: 42px;
 }
 .service-item {
   position: relative;
