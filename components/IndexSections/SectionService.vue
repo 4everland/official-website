@@ -164,7 +164,7 @@ export default {
 
 <style scoped>
 .main-container {
-  padding: 100px 80px;
+  padding: 100px 80px 0 80px;
   max-width: 100%;
 }
 .header-title {

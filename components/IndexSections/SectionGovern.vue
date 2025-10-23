@@ -5,7 +5,7 @@
         <v-row justify="center" align="center" class="text-left">
           <v-col cols="12">
             <h3 class="white--text header-title font-weight-bold">
-              POWER THE DECENTRAlIZED CLOUD
+              POWER THE DECENTRALIZED CLOUD
             </h3>
             <p class="p-text text-subtitle-1 mt-1 py-5">
               Use $4EVER for Governance, Services, and Staking Across the
@@ -13,9 +13,10 @@
               <a
                 href="https://docs.4everland.org/get-started/tokenomics"
                 target="_blank"
+                class="read-more"
               >
-                Read more!</a
-              >
+                Read more!
+              </a>
             </p>
           </v-col>
         </v-row>
@@ -142,7 +143,7 @@ export default {
   background-size: cover;
 }
 .main-content {
-  padding: 100px 80px;
+  padding: 120px 4px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -162,8 +163,8 @@ export default {
   width: 100%;
   height: 250px;
   background-image: url('@/assets/imgs/governance/get.png');
-  background-position: center 70%;
-  background-size: 130%;
+  background-position: center 50%;
+  background-size: 126%;
 }
 .get-text {
   font-size: 40px;
@@ -173,7 +174,7 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin-top: -64px;
+  margin-top: -48px;
 }
 .right-item {
   margin-top: 42px;
@@ -185,11 +186,12 @@ export default {
   background: rgba(1, 5, 19, 0.5);
   box-shadow: 0 0 16px 0 rgba(224, 234, 255, 0.25) inset;
   padding: 20px 40px;
-  height: 65px;
+  height: 67px;
   margin-left: 40px;
 }
 .service-item.on-hover {
   cursor: pointer;
+  border: 1px solid #6c798d;
   box-shadow: 0 0 12px 0 rgba(164, 188, 253, 0.5),
     0 0 32px 0 rgba(164, 188, 253, 0.25),
     0 0 16px 0 rgba(224, 234, 255, 0.5) inset;
@@ -212,6 +214,12 @@ export default {
 }
 .right-icon--active {
   background: #6172f3;
+}
+.read-more {
+  text-decoration: none;
+  border-bottom: 1px solid #b2ddff;
+  padding-bottom: 2px;
+  color: #b2ddff;
 }
 @media (max-width: 960px) {
   .main-container {
@@ -238,7 +246,10 @@ export default {
     height: 280px;
     background-image: url('@/assets/imgs/governance/get.png');
     background-position: center 70%;
-    background-size: 130%;
+    background-size: 120%;
+  }
+  .get-text {
+    margin-top: -72px;
   }
 }
 </style>

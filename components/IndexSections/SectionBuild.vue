@@ -192,7 +192,7 @@ export default {
 
 <style lang="scss" scoped>
 .main-container {
-  padding: 180px 80px 100px 80px;
+  padding: 40px 80px 100px 80px;
   max-width: 100%;
 }
 .header-title {
