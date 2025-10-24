@@ -126,6 +126,12 @@ export default {
       },
     ],
   }),
+  mounted() {
+    this.list.forEach((item) => {
+      const img = new Image()
+      img.src = item.icon2
+    })
+  },
   methods: {
     goLink(url) {
       if (!url) return
