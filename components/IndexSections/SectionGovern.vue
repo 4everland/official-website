@@ -7,7 +7,7 @@
             <h3 class="white--text header-title font-weight-bold">
               POWER THE DECENTRALIZED CLOUD
             </h3>
-            <p class="p-text text-subtitle-1 mt-1 py-5">
+            <p class="p-text text-subtitle-1 py-3">
               Use $4EVER for Governance, Services, and Staking Across the
               Network.
               <a
@@ -90,18 +90,18 @@ export default {
   data: () => ({
     list: [
       {
-        icon: require('@/assets/imgs/governance/mexc-1.svg'),
-        icon2: require('@/assets/imgs/governance/mexc-2.svg'),
-        iconHeight: 20,
-        hover: false,
-        link: 'https://promote.mexc.com/b/FVRCBEZH',
-      },
-      {
         icon: require('@/assets/imgs/governance/gate-1.svg'),
         icon2: require('@/assets/imgs/governance/gate-2.svg'),
         iconHeight: 24,
         hover: false,
         link: 'https://www.gate.com/share/FVRCBEZH',
+      },
+      {
+        icon: require('@/assets/imgs/governance/mexc-1.svg'),
+        icon2: require('@/assets/imgs/governance/mexc-2.svg'),
+        iconHeight: 20,
+        hover: false,
+        link: 'https://promote.mexc.com/b/FVRCBEZH',
       },
       {
         icon: require('@/assets/imgs/governance/bingx-1.svg'),
