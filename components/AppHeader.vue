@@ -339,13 +339,13 @@ export default {
               href: 'https://docs.4everland.org/raas-beta/whats-rollups',
               target: '_blank',
             },
-            {
-              text: 'AI RPC',
-              tips: 'Easily get access to 100+ AI LLMs through a unified interface.',
-              icon: require('@/assets/imgs/forward/icon/AI.svg'),
-              href: 'https://docs.4everland.org/ai/ai-rpc',
-              target: '_blank',
-            },
+            // {
+            //   text: 'AI RPC',
+            //   tips: 'Easily get access to 100+ AI LLMs through a unified interface.',
+            //   icon: require('@/assets/imgs/forward/icon/AI.svg'),
+            //   href: 'https://docs.4everland.org/ai/ai-rpc',
+            //   target: '_blank',
+            // },
             {
               text: '4EVER Boost',
               tips: 'Join our mining journey and maximize rewards by engaging with Storage, Computing, and Network nodes.',

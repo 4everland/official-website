@@ -122,7 +122,7 @@ export default {
   plugins: [
     'plugins/global',
     'plugins/extend',
-    { src: 'plugins/cozeChat.js', mode: 'client' },
+    // { src: 'plugins/cozeChat.js', mode: 'client' },
     // { src: 'plugins/ga.js', ssr: false },
     { src: 'plugins/vue-swiper.js', ssr: false },
   ],
